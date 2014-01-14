@@ -6,7 +6,7 @@ Calculating the mandelbrot set and rendering it to the frame buffer in realtime
 
 Host side:
 
-* Controlling and synchronizing 16x eCores to parallelizing the calculation.
+* Controlling and synchronizing 16x eCores to parallelize the calculation.
 * Detecting the physical address of the frame buffer and telling it to the eCores.
 
 Device(Epiphany) side:
