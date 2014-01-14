@@ -4,6 +4,7 @@ Community created example Parallella projects.
 
 ## Contents
 
+* mandelbrot/ - Calculating the mandelbrot set and rendering it to the frame buffer in realtime
 
 ## Contributing
 
