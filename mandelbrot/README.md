@@ -25,6 +25,8 @@ System requirements:
 
 Download and unzip,
 
+Switch to TTY by pressing Ctrl + Alt + F2, then login. (Return to X Window: Ctrl + Alt + F7)
+
 ``% cd THE_PATH``
 
 ``% make``
