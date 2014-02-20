@@ -1,13 +1,16 @@
-# Mandelbrot
+# BLOBUBSKA
 
-Calculating the mandelbrot set and rendering it to the frame buffer in realtime
+A Realtime Raytracing Visual Music Generator
+
+[Demo Video](http://youtu.be/RHTZ3CLOlqw)
 
 ## Implementation
 
 Host side:
 
-* Controlling and synchronizing 16x eCores to parallelize the calculation.
+* Controlling and synchronizing 16x eCores to parallelize the raytracing.
 * Detecting the physical address of the frame buffer and telling it to the eCores.
+* Generating random music
 
 Device(Epiphany) side:
 
@@ -23,21 +26,23 @@ System requirements:
 * Official Ubuntu and X environment
 * Epiphany SDK 5 or later
 
-Download and unzip,
+Install dependent packages:
+
+``sudo apt-get install libfluidsynth-dev fluidsynth fluid-soundfont-gm alsa-base alsa-utils libasound2-plugins``
 
 Switch to TTY by pressing Ctrl + Alt + F2, then login. (Return to X Window: Ctrl + Alt + F7)
 
-``% cd THE_PATH``
+``cd blobubska/src``
 
-``% make``
+``make``
 
 ## Usage
 
-``% ./run.sh``
+``./run.sh``
 
 ## License
 
-BSD 3-clause License
+BSD 3-Clause license
 
 ## Author
 
