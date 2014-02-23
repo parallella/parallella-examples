@@ -264,17 +264,20 @@ int main(int argc, char ** argv)
   static rt_context_t rtx;
   memset((void *)&rtx, 0, sizeof(rtx));
 
+  int width = msg.fbinfo.xres_virtual;
+  int height = msg.fbinfo.yres_virtual;
   rtx.objnum = OBJNUM;
   rtx.light.pos = vec3_set(-4.0f, 8.0f, 2.0f);
   rtx.light.col = vec3_set(1.0f, 1.0f, 1.0f);
   rtx.eye = vec3_set(0.0f, 0.0f, -7.0f);
-  rtx.swidth = 10.0f;
+  rtx.swidth = 10.0f * (float)width / (float)height;
   rtx.sheight = 10.0f;
-  rtx.width = 512;
-  rtx.height = 512;
-  rtx.xoff = 512;
+  rtx.xdiv = 1;
+  rtx.width = width / (rtx.xdiv * SCALE);
+  rtx.height =  height / SCALE;
+  rtx.xoff = 0;
   rtx.yoff = 0;
-  rtx.ax = rtx.swidth / (float)rtx.width;
+  rtx.ax = rtx.swidth / (float)rtx.width / (float)rtx.xdiv;
   rtx.ayc = rtx.sheight / (float)rtx.height;
   rtx.ay = rtx.sheight / (float)rtx.height * (float)(ROWS * COLS);
 
