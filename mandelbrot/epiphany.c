@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2013, Shodruky Rhyammer
+Copyright (c) 2013-2014, Shodruky Rhyammer
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
@@ -37,10 +37,16 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define PAGE_SIZE 0x2000
 #define CX -0.6510976f
 #define CY 0.4920654f
-#define MAXI 255
+#define MAXI 64
 #define ROWS 4
 #define COLS 4
 #define BPP 4
+
+typedef struct
+{
+  float x;
+  float y;
+} center_t;
 
 int main(void)
 {
@@ -55,12 +61,24 @@ int main(void)
   volatile msg_block_t *msg = (msg_block_t *)BUF_ADDRESS;
   float zoom = 5.0f;
   float zf = 0.97f;
-  unsigned int xres = 512;
-  unsigned int yres = 512;
-  unsigned int xoff = 480;
-  unsigned int yoff = 32;
+  unsigned int xres = msg->fbinfo.xres_virtual / SCALE;
+  xres = (xres > 1920) ? 1920 : xres;
+  unsigned int yres = msg->fbinfo.yres_virtual / SCALE;
+  unsigned int xoff = 0;
+  unsigned int yoff = 0;
   float resx = 2.0f / (float)xres;
   float resy = 2.0f / (float)yres;
+  float aspect = resy / resx;
+  center_t center[] = {
+    {-1.7919611f, 0.0f},
+    {-1.2963551f, 0.4418516f},
+    {-0.4003391f, 0.6823806f},
+    { 0.2802601f,-0.0081061f},
+    {-0.4910717f,-0.6303451f},
+    {-0.8011453f, 0.18482280f},
+  };
+  unsigned int points = (sizeof(center) / sizeof(center_t)) - 1;
+  unsigned int point = 0;
   while (1)
   {
     msg->msg_d2h[core].coreid = coreid;
@@ -68,12 +86,14 @@ int main(void)
     frame++;
     __asm__ __volatile__ ("trap 4");
     unsigned int x, y;
-    float z0x = resx * zoom;
+    float z0x = resx * zoom * aspect;
     float z0y = resy * zoom;
-    float zx = CX - zoom;
-    float zy = CY - zoom;
+    float zx = center[point].x - zoom * aspect;
+    float zy = center[point].y - zoom;
     for (y = 0; y < yres; y += cores)
     {
+      char *src = (char *)(PAGE_OFFSET + page * PAGE_SIZE);
+      unsigned int *pixel = (unsigned int *)src;
       for (x = 0; x < xres; x++)
       {
         float x0 = (float)x * z0x + zx;
@@ -95,14 +115,38 @@ int main(void)
         }
 
         float color = (i >= MAXI) ? 0.0f : (float)i;
-        *(unsigned int *)(PAGE_OFFSET + page * PAGE_SIZE + x * BPP) = (unsigned int)(color * color * color * color);
+        uint32_t col2 = (uint32_t)(color * color * color * color);
+        *pixel = col2;
+#if SCALE > 1
+        *(pixel + 1) = col2;
+#endif
+#if SCALE > 3
+        *(pixel + 2) = col2;
+        *(pixel + 3) = col2;
+#endif
+        pixel += SCALE;
       }
-      e_dma_copy((char *)(msg->fbinfo.smem_start + xoff * BPP + (y + core + yoff) * msg->fbinfo.line_length), (char *)(PAGE_OFFSET + page * PAGE_SIZE), xres * BPP);
+      char *dst = (char *)(msg->fbinfo.smem_start + xoff * BPP + ((y + core) * SCALE + yoff) * msg->fbinfo.line_length);
+      uint32_t size = xres * BPP * SCALE;
+      unsigned int i;
+      for (i = 0; i < SCALE; i++)
+      {
+        e_dma_copy(dst + i * msg->fbinfo.line_length, src, size);
+      }
       page = page ^ 1;
     }
     zoom *= zf;
-    zf = (zoom < 0.00002f) ? 1.0417f : zf;
-    zf = (zoom > 5.0f) ? 0.96f : zf;
+    zf = (zoom < 0.0001f) ? 1.111111f : zf;
+    if (zoom > 4.0f)
+    {
+      zf = 0.9f;
+      point++;
+      if (point > points)
+      {
+        point = 0;
+      }
+      //p = (p > points) ? 0 : p;
+    }
   }
   return 0;
 }

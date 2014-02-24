@@ -202,7 +202,7 @@ int main(int argc, char ** argv)
     0, 4, 5, 6, 8, 9, 11, 14, 15, 16, 17, 19, 24,
     25, 26, 30, 40, 42, 46, 48, 51, 52, 56, 57, 60,
     61, 63, 64, 65, 68, 69, 70, 73, 88, 89, 91, 93,
-    94, 95, 98, 99, 103, 104, 110, 
+    94, 95, 98, 99, 103, 104, 110,
   };
   uint32_t insts = sizeof(instruments) / sizeof(uint32_t);
 
@@ -330,7 +330,7 @@ int main(int argc, char ** argv)
   float next_note_time = get_elapsed(time_start) + 3.0f;
   float next_scale_time = get_elapsed(time_start) + 15.0f + randf() * 15.0f;
   float time_now = get_elapsed(time_start);
-  float time_quit = time_now + 3600.0f;
+  float time_quit = time_now + 36000.0f;
   uint32_t retry_count = 0;
   uint32_t counter = 0;
   float time_prev = 0.0f;
