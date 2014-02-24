@@ -1,7 +1,7 @@
 ESDK=$(EPIPHANY_HOME)
 ELIBS=$(ESDK)/tools/host/lib
 EINCS=$(ESDK)/tools/host/include
-ELDF=$(ESDK)/bsps/current/fast.ldf
+ELDF=$(ESDK)/bsps/current/internal.ldf
 EXES=main epiphany.srec
 OBJS=epiphany.elf
 

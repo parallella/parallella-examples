@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2013, Shodruky Rhyammer
+Copyright (c) 2013-2014, Shodruky Rhyammer
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
@@ -32,20 +32,22 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <stdint.h>
 
 #define CORES 16
-#define CACHELINE 32
+#define ALIGN8 8
+// SCALE: 1, 2, or 4
+#define SCALE 2
 
-typedef struct __attribute__((aligned(CACHELINE)))
+typedef struct __attribute__((aligned(ALIGN8)))
 {
   uint32_t value;
   uint32_t coreid;
 } msg_dev2host_t;
 
-typedef struct __attribute__((aligned(CACHELINE)))
+typedef struct __attribute__((aligned(ALIGN8)))
 {
   uint32_t value;
 } msg_host2dev_t;
 
-typedef struct __attribute__((aligned(CACHELINE)))
+typedef struct __attribute__((aligned(ALIGN8)))
 {
   uint32_t smem_start;
   uint32_t smem_len;

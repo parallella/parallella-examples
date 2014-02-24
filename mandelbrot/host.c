@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2013, Shodruky Rhyammer
+Copyright (c) 2013-2014, Shodruky Rhyammer
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
@@ -47,7 +47,15 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define FBDEV "/dev/fb0"
 #define ROWS 4
 #define COLS 4
-#define FRAMES 700
+#define FRAMES 2000000
+
+static inline void nano_wait(uint32_t sec, uint32_t nsec)
+{
+  struct timespec ts;
+  ts.tv_sec = sec;
+  ts.tv_nsec = nsec;
+  nanosleep(&ts, NULL);
+}
 
 int main(int argc, char *argv[])
 {
@@ -67,26 +75,26 @@ int main(int argc, char *argv[])
     if (ioctl(fb, FBIOGET_FSCREENINFO, &fbfsi) == 0)
     {
       msg.fbinfo.smem_start = fbfsi.smem_start;
-      printf("smem_start: %x\n", msg.fbinfo.smem_start);
+      //printf("smem_start: %x\n", msg.fbinfo.smem_start);
       msg.fbinfo.smem_len = fbfsi.smem_len;
-      printf("smem_len: %d\n", msg.fbinfo.smem_len);
+      //printf("smem_len: %d\n", msg.fbinfo.smem_len);
       msg.fbinfo.line_length = fbfsi.line_length;
-      printf("line_length: %d\n", msg.fbinfo.line_length);
+      //printf("line_length: %d\n", msg.fbinfo.line_length);
     }
     if (ioctl(fb, FBIOGET_VSCREENINFO, &fbvsi) == 0)
     {
       msg.fbinfo.xres = fbvsi.xres;
-      printf("xres: %d\n", msg.fbinfo.xres);
+      //printf("xres: %d\n", msg.fbinfo.xres);
       msg.fbinfo.yres = fbvsi.yres;
-      printf("yres: %d\n", msg.fbinfo.yres);
+      //printf("yres: %d\n", msg.fbinfo.yres);
       msg.fbinfo.xres_virtual = fbvsi.xres_virtual;
-      printf("xres_virtual: %d\n", msg.fbinfo.xres_virtual);
+      //printf("xres_virtual: %d\n", msg.fbinfo.xres_virtual);
       msg.fbinfo.yres_virtual = fbvsi.yres_virtual;
-      printf("yres_virtual: %d\n", msg.fbinfo.yres_virtual);
+      //printf("yres_virtual: %d\n", msg.fbinfo.yres_virtual);
       msg.fbinfo.xoffset = fbvsi.xoffset;
-      printf("xoffset: %d\n", msg.fbinfo.xoffset);
+      //printf("xoffset: %d\n", msg.fbinfo.xoffset);
       msg.fbinfo.yoffset = fbvsi.yoffset;
-      printf("yoffset: %d\n", msg.fbinfo.yoffset);
+      //printf("yoffset: %d\n", msg.fbinfo.yoffset);
       msg.fbinfo.bits_per_pixel = fbvsi.bits_per_pixel;
     }
     close(fb);
@@ -115,7 +123,7 @@ int main(int argc, char *argv[])
     }
   }
 
-  usleep(100000);
+  nano_wait(0, 100000000);
   clock_gettime(CLOCK_REALTIME, &time);
   time0 = time.tv_sec + time.tv_nsec * 1.0e-9;
 
@@ -135,7 +143,7 @@ int main(int argc, char *argv[])
           {
             break;
           }
-          usleep(1000);
+          nano_wait(0, 1000000);
         }
         vhost[core] = vepiphany[core];
         vcoreid = msg.msg_d2h[core].coreid;
@@ -158,8 +166,8 @@ int main(int argc, char *argv[])
 
   clock_gettime(CLOCK_REALTIME, &time);
   time1 = time.tv_sec + time.tv_nsec * 1.0e-9;
-  printf("frames: %d\n", FRAMES);
-  printf("time: %f sec\n", time1 - time0);
+  //printf("frames: %d\n", FRAMES);
+  //printf("time: %f sec\n", time1 - time0);
 
   e_close(&edev);
   e_free(&emem);
