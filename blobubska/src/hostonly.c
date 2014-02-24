@@ -43,7 +43,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #define EPSILON 0.0001f
 #define NOHIT 0xffffffff
-#define FARDIST 1.0e+18
+#define FARDIST 1.0e+18f
 #define MAXREF 4
 #define TRUE 1
 #define FALSE 0
@@ -205,7 +205,8 @@ void render(msg_block_t *msg, rt_context_t *rtx, uint32_t *frame_buffer)
   unsigned int y;
   for (y = 0; y < rtx->height; y++)
   {
-    pixel = frame_buffer + (y + rtx->yoff) * msg->fbinfo.line_length / sizeof(uint32_t) + rtx->xoff;
+    uint32_t *src = frame_buffer + (y * SCALE + rtx->yoff) * msg->fbinfo.line_length / sizeof(uint32_t) + rtx->xoff;
+    pixel = src;
     float sx = rtx->swidth * -0.5f;
     unsigned int x;
     for (x = 0; x < rtx->width; x++)
@@ -269,9 +270,28 @@ void render(msg_block_t *msg, rt_context_t *rtx, uint32_t *frame_buffer)
         }
       }
       col = vec3_min(vec3_max(col, 0.0f), 1.0f);
-      *pixel = 0xff000000 + ((unsigned int)(col.x * 255.0f) << 16) + ((unsigned int)(col.y * 255.0f) << 8) + (unsigned int)(col.z * 255.0f);
-      pixel++;
+      uint32_t col2 = 0xff000000 + ((unsigned int)(col.x * 255.0f) << 16) + ((unsigned int)(col.y * 255.0f) << 8) + (unsigned int)(col.z * 255.0f);
+      *pixel = col2;
+#if SCALE > 1
+      *(pixel + 1) = col2;
+#endif
+#if SCALE > 3
+      *(pixel + 2) = col2;
+      *(pixel + 3) = col2;
+#endif
+      pixel += SCALE;
       sx += rtx->ax;
+    }
+    uint32_t size = rtx->width * SCALE;
+    unsigned int i;
+    for (i = 1; i < SCALE; i++)
+    {
+      uint32_t *dst = src + i * msg->fbinfo.line_length / sizeof(uint32_t);
+      unsigned int j;
+      for (j = 0; j < size; j++)
+      {
+        dst[j] = src[j];
+      }
     }
     sy -= rtx->ay;
   }
@@ -358,15 +378,17 @@ int main(int argc, char ** argv)
   static rt_context_t rtx;
   memset((void *)&rtx, 0, sizeof(rtx));
 
+  int width = msg.fbinfo.xres_virtual;
+  int height = msg.fbinfo.yres_virtual;
   rtx.objnum = OBJNUM;
   rtx.light.pos = vec3_set(-4.0f, 8.0f, 2.0f);
   rtx.light.col = vec3_set(1.0f, 1.0f, 1.0f);
   rtx.eye = vec3_set(0.0f, 0.0f, -7.0f);
-  rtx.swidth = 10.0f;
+  rtx.swidth = 10.0f * (float)width / (float)height;
   rtx.sheight = 10.0f;
-  rtx.width = 512;
-  rtx.height = 512;
-  rtx.xoff = 512;
+  rtx.width = width / SCALE;
+  rtx.height = height / SCALE;
+  rtx.xoff = 0;
   rtx.yoff = 0;
   rtx.ax = rtx.swidth / (float)rtx.width;
   rtx.ayc = rtx.sheight / (float)rtx.height;

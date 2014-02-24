@@ -33,6 +33,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define OBJNUM 9
 #define CORES 16
 #define ALIGN8 8
+// SCALE: 1, 2, or 4
+#define SCALE 2
 
 typedef struct __attribute__((aligned(ALIGN8)))
 {
@@ -120,6 +122,7 @@ typedef struct __attribute__((aligned(ALIGN8)))
   uint32_t height;
   uint32_t xoff;
   uint32_t yoff;
+  uint32_t xdiv;
   uint32_t objnum;
   float dist;
   int32_t hit;

@@ -34,7 +34,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define BPP 4
 #define EPSILON 0.0001f
 #define NOHIT 0xffffffff
-#define FARDIST 1.0e+18
+#define FARDIST 1.0e+18f
 #define TRUE 1
 #define FALSE 0
 
@@ -133,79 +133,97 @@ int main(void)
     unsigned int y;
     for (y = 0; y < rtx.height; y += cores)
     {
-      pixel = (unsigned int *)(PAGE_OFFSET + page * PAGE_SIZE);
       float sx = rtx.swidth * -0.5f;
-      unsigned int x;
-      for (x = 0; x < rtx.width; x++)
+      unsigned int xl;
+      for (xl = 0; xl < rtx.xdiv; xl++)
       {
-        rtx.ray.pos = rtx.eye;
-        rtx.ray.dir = normalize(vec3_sub(vec3_set(sx, sy, 0.0f), rtx.eye));
-        vec3_t col = vec3_set(0.0f, 0.0f, 0.0f);
-        unsigned int j;
-        for (j = 0; j < MAXREF; j++)
+        char *src = (char *)(PAGE_OFFSET + page * PAGE_SIZE);
+        pixel = (unsigned int *)src;
+        unsigned int x;
+        for (x = 0; x < rtx.width; x++)
         {
-          trace_ray(&rtx);
-          if (rtx.hit != NOHIT)
+          rtx.ray.pos = rtx.eye;
+          rtx.ray.dir = normalize(vec3_sub(vec3_set(sx, sy, 0.0f), rtx.eye));
+          vec3_t col = vec3_set(0.0f, 0.0f, 0.0f);
+          unsigned int j;
+          for (j = 0; j < MAXREF; j++)
           {
-            vec3_t p, n;
-            ray_t next;
-            p = vec3_add(rtx.ray.pos, vec3_scale(rtx.ray.dir, rtx.dist));
-            switch (rtx.obj[rtx.hit].type)
+            trace_ray(&rtx);
+            if (rtx.hit != NOHIT)
             {
-              case SPHERE:
-                n = normalize(vec3_sub(p, rtx.obj[rtx.hit].pos));
+              vec3_t p, n;
+              ray_t next;
+              p = vec3_add(rtx.ray.pos, vec3_scale(rtx.ray.dir, rtx.dist));
+              switch (rtx.obj[rtx.hit].type)
+              {
+                case SPHERE:
+                  n = normalize(vec3_sub(p, rtx.obj[rtx.hit].pos));
+                  break;
+                case PLANE:
+                  n = rtx.obj[rtx.hit].norm;
+                  break;
+                default:
+                  break;
+              }
+              next.pos = vec3_add(p, vec3_scale(n, EPSILON));
+              vec3_t lv = vec3_sub(rtx.light.pos, p);
+              vec3_t l = normalize(lv);
+              next.dir = rtx.ray.dir;
+              int prev_hit_index = rtx.hit;
+              vec3_t hit_obj_col = rtx.obj[rtx.hit].col;
+              float diffuse = dot(n, l);
+              float specular = dot(rtx.ray.dir, vec3_sub(l, vec3_scale(n, 2.0f * diffuse)));
+              diffuse = max(diffuse, 0.0f);
+              specular = max(specular, 0.0f);
+              specular = power_spec(specular);
+              float s1 = 1.0f;
+              float s2 = 1.0f;
+              if (rtx.obj[rtx.hit].flag_shadow)
+              {
+                rtx.ray.dir = l;
+                rtx.ray.pos = next.pos;
+                trace_ray(&rtx);
+                int shadow = (rtx.dist < norm(lv));
+                s1 = shadow ? 0.5f : s1;
+                s2 = shadow ? 0.0f : s2;
+              }
+              col = vec3_add(col, vec3_add(vec3_scale(rtx.light.col, specular * s2), vec3_scale(hit_obj_col, diffuse * s1)));
+              if (!rtx.obj[prev_hit_index].flag_refrect)
+              {
                 break;
-              case PLANE:
-                n = rtx.obj[rtx.hit].norm;
-                break;
-              default:
-                break;
-            }
-            next.pos = vec3_add(p, vec3_scale(n, EPSILON));
-            vec3_t lv = vec3_sub(rtx.light.pos, p);
-            vec3_t l = normalize(lv);
-            next.dir = rtx.ray.dir;
-            int prev_hit_index = rtx.hit;
-            vec3_t hit_obj_col = rtx.obj[rtx.hit].col;
-            float diffuse = dot(n, l);
-            float specular = dot(rtx.ray.dir, vec3_sub(l, vec3_scale(n, 2.0f * diffuse)));
-            diffuse = max(diffuse, 0.0f);
-            specular = max(specular, 0.0f);
-            specular = power_spec(specular);
-            float s1 = 1.0f;
-            float s2 = 1.0f;
-            if (rtx.obj[rtx.hit].flag_shadow)
-            {
-              rtx.ray.dir = l;
+              }
+              rtx.ray.dir = vec3_sub(next.dir, vec3_scale(n, dot(next.dir, n) * 2.0f));
               rtx.ray.pos = next.pos;
-              trace_ray(&rtx);
-              int shadow = (rtx.dist < norm(lv));
-              s1 = shadow ? 0.5f : s1;
-              s2 = shadow ? 0.0f : s2;
             }
-            col = vec3_add(col, vec3_add(vec3_scale(rtx.light.col, specular * s2), vec3_scale(hit_obj_col, diffuse * s1)));
-            if (!rtx.obj[prev_hit_index].flag_refrect)
+            else
             {
               break;
             }
-            rtx.ray.dir = vec3_sub(next.dir, vec3_scale(n, dot(next.dir, n) * 2.0f));
-            rtx.ray.pos = next.pos;
           }
-          else
-          {
-            break;
-          }
+          col = vec3_min(vec3_max(col, 0.0f), 1.0f);
+          uint32_t col2 = 0xff000000 + ((unsigned int)(col.x * 255.0f) << 16) + ((unsigned int)(col.y * 255.0f) << 8) + (unsigned int)(col.z * 255.0f);
+          *pixel = col2;
+#if SCALE > 1
+          *(pixel + 1) = col2;
+#endif
+#if SCALE > 3
+          *(pixel + 2) = col2;
+          *(pixel + 3) = col2;
+#endif
+          pixel += SCALE;
+          sx += rtx.ax;
         }
-        col = vec3_min(vec3_max(col, 0.0f), 1.0f);
-        *pixel = 0xff000000 + ((unsigned int)(col.x * 255.0f) << 16) + ((unsigned int)(col.y * 255.0f) << 8) + (unsigned int)(col.z * 255.0f);
-        pixel++;
-        sx += rtx.ax;
+        char *dst = (char *)(msg.fbinfo.smem_start + (rtx.xoff + xl * rtx.width * SCALE) * BPP + ((y + core) * SCALE + rtx.yoff) * msg.fbinfo.line_length);
+        uint32_t size = rtx.width * BPP * SCALE;
+        unsigned int i;
+        for (i = 0; i < SCALE; i++)
+        {
+          e_dma_copy(dst + i * msg.fbinfo.line_length, src, size);
+        }
+        page = page ^ 1;
       }
-      e_dma_copy((char *)(msg.fbinfo.smem_start + rtx.xoff * BPP + (y + core + rtx.yoff) * msg.fbinfo.line_length), (char *)(PAGE_OFFSET + page * PAGE_SIZE), rtx.width * BPP);
-      page = page ^ 1;
       sy -= rtx.ay;
     }
-
   }
   return 0;
 }
