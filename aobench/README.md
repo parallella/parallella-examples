@@ -1,8 +1,8 @@
-# aobench on Parallella
+# aobench
 
-aobench on Parallella.
+[aobench](http://code.google.com/p/aobench/) on Parallella.
 
-![aobench](/img/aobench_parallella.png)
+![aobench](/aobench/img/aobench_parallella.png)
 
 Youtube
 
@@ -31,7 +31,7 @@ epiphany core doesn't have division, sqrt, etc in HW, thus we have to provide (a
 
 ## Author
 
-Syoyo Fujita(syoyo@lighttransport.com)
+[Syoyo Fujita](mailto:syoyo@lighttransport.com)
 
 ## License
 
