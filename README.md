@@ -4,7 +4,9 @@ Community created example Parallella projects.
 
 ## Contents
 
-* mandelbrot/ - Calculating the mandelbrot set and rendering it to the frame buffer in realtime
+* aobench/ - A small ambient occlusion renderer for benchmarking real world floating-point performance
+* blobubska/ -  A real-time ray tracing visual music generator
+* mandelbrot/ - Calculating the mandelbrot set and rendering it to the frame buffer in real-time
 
 ## Contributing
 
