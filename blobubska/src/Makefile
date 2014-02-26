@@ -9,7 +9,7 @@ OBJS=epiphany.elf
 
 all: $(EXES)
 
-main: host.c common.h
+main: host.c common.h keymap.h
 	gcc $(CFLAGA) host.c -o main -I $(EINCS) -L $(ELIBS) -le-hal -lrt -lfluidsynth
 
 hostonly: hostonly.c common.h

@@ -40,7 +40,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <time.h>
 #include <e-hal.h>
 #include <fluidsynth.h>
+#include <linux/input.h>
 #include "common.h"
+#include "keymap.h"
 
 #define TRUE 1
 #define FALSE 0
@@ -55,8 +57,11 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define BUF_OFFSET 0x01000000
 #define MAXCORES 16
 #define FBDEV "/dev/fb0"
+#define EVDEV "/dev/input/event0"
 #define ROWS 4
 #define COLS 4
+#define MODE_AUTO 0
+#define MODE_PLAY 1
 
 typedef struct
 {
@@ -71,6 +76,28 @@ typedef struct
   fluid_synth_t *f_synth;
   fluid_audio_driver_t *f_adriver;
 } seq_context_t;
+
+static uint32_t notes[SCALE_PATTERN][NOTES_SIZE];
+static uint32_t scales[SCALE_PATTERN][SCALE_SIZE] = {
+  {0,4,7,9,},
+  {0,5,7,9,},
+  {2,4,7,11,},
+  {2,5,7,9,},
+  {2,5,7,11,},
+  {0,2,4,7,},
+  {0,2,5,7,},
+  {0,2,5,9,},
+};
+static uint32_t instruments[] = {
+  0, 4, 5, 6, 8, 9, 11, 14, 15, 16, 17, 19, 24,
+  25, 26, 30, 40, 42, 46, 48, 51, 52, 56, 57, 60,
+  61, 63, 64, 65, 68, 69, 70, 73, 88, 89, 91, 93,
+  94, 95, 98, 99, 103, 104, 110,
+};
+static uint32_t insts = sizeof(instruments) / sizeof(uint32_t);
+static seq_context_t seq;
+static rt_context_t rtx;
+static uint32_t scale = 0;
 
 static inline float get_elapsed(struct timespec ts_start)
 {
@@ -180,6 +207,18 @@ void release_epiphany(ep_context_t *e)
   e_finalize();
 }
 
+void obj_note_on(uint32_t note)
+{
+  uint32_t e = rtx.curobj + 1;
+  rtx.obj[e].pos = vec3_set(randf()*8.0f-4.0f, randf()*6.0f-1.0f, randf()*8.0+0.0f);
+  rtx.obj[e].col = vec3_set(randf(), randf(), randf());
+  rtx.obj[e].spd = vec3_set(randf()*0.1f-0.05f,randf()*0.1f-0.05f,randf()*0.1f-0.05f);
+  note_off(&seq, 0, rtx.obj[e].note);
+  rtx.obj[e].note = notes[scale][note];
+  note_on(&seq, 0, rtx.obj[e].note, 127 - rtx.obj[e].note);
+  rtx.curobj = ((rtx.curobj + 1) % (rtx.objnum - 1));
+}
+
 int main(int argc, char ** argv)
 {
   ep_context_t ep_context;
@@ -187,24 +226,7 @@ int main(int argc, char ** argv)
   memset((void *)&msg, 0, sizeof(msg));
   struct timespec time;
   double time0, time1;
-  uint32_t notes[SCALE_PATTERN][NOTES_SIZE];
-  uint32_t scales[SCALE_PATTERN][SCALE_SIZE] = {
-    {0,4,7,9,},
-    {0,5,7,9,},
-    {2,4,7,11,},
-    {2,5,7,9,},
-    {2,5,7,11,},
-    {0,2,4,7,},
-    {0,2,5,7,},
-    {0,2,5,9,},
-  };
-  uint32_t instruments[] = {
-    0, 4, 5, 6, 8, 9, 11, 14, 15, 16, 17, 19, 24,
-    25, 26, 30, 40, 42, 46, 48, 51, 52, 56, 57, 60,
-    61, 63, 64, 65, 68, 69, 70, 73, 88, 89, 91, 93,
-    94, 95, 98, 99, 103, 104, 110,
-  };
-  uint32_t insts = sizeof(instruments) / sizeof(uint32_t);
+  uint32_t mode = MODE_AUTO;
 
   int fb = open(FBDEV, O_RDWR);
   if (fb > 0)
@@ -252,8 +274,6 @@ int main(int argc, char ** argv)
   clock_gettime(CLOCK_MONOTONIC_RAW, &time_start);
   srand((uint32_t)time_start.tv_nsec);
 
-  seq_context_t seq;
-
   if (open_sequencer(&seq) == FALSE)
   {
     exit(EXIT_FAILURE);
@@ -261,7 +281,6 @@ int main(int argc, char ** argv)
   program_change(&seq, 0, 48);
   control_change(&seq, 0, 91, 127);
 
-  static rt_context_t rtx;
   memset((void *)&rtx, 0, sizeof(rtx));
 
   int width = msg.fbinfo.xres_virtual;
@@ -280,6 +299,7 @@ int main(int argc, char ** argv)
   rtx.ax = rtx.swidth / (float)rtx.width / (float)rtx.xdiv;
   rtx.ayc = rtx.sheight / (float)rtx.height;
   rtx.ay = rtx.sheight / (float)rtx.height * (float)(ROWS * COLS);
+  rtx.curobj = 1;
 
   uint32_t i, j;
   for (i = 0; i < SCALE_PATTERN; i++)
@@ -325,8 +345,6 @@ int main(int argc, char ** argv)
     }
   }
 
-  uint32_t scale = 0;
-  uint32_t curobj = 0;
   float next_note_time = get_elapsed(time_start) + 3.0f;
   float next_scale_time = get_elapsed(time_start) + 15.0f + randf() * 15.0f;
   float time_now = get_elapsed(time_start);
@@ -334,6 +352,9 @@ int main(int argc, char ** argv)
   uint32_t retry_count = 0;
   uint32_t counter = 0;
   float time_prev = 0.0f;
+  int evdev;
+  evdev = open(EVDEV, O_RDONLY | O_NONBLOCK);
+
   while(time_now < time_quit)
   {
     for (row = 0; row < ROWS; row++)
@@ -388,26 +409,88 @@ int main(int argc, char ** argv)
       rtx.obj[e].pos = vec3_add(rtx.obj[e].pos, rtx.obj[e].spd);
     }
     time_now = get_elapsed(time_start);
-    if (time_now > next_note_time)
+    if (mode == MODE_AUTO)
     {
-      e = (curobj % (rtx.objnum - 1)) + 1;
-      rtx.obj[e].pos = vec3_set(randf()*8.0f-4.0f, randf()*6.0f-1.0f, randf()*8.0+0.0f);
-      rtx.obj[e].col = vec3_set(randf(), randf(), randf());
-      rtx.obj[e].spd = vec3_set(randf()*0.1f-0.05f,randf()*0.1f-0.05f,randf()*0.1f-0.05f);
-      note_off(&seq, 0, rtx.obj[e].note);
-      rtx.obj[e].note = notes[scale][(uint32_t)(randf() * 17.0f) + 12];
-      note_on(&seq, 0, rtx.obj[e].note, 127 - rtx.obj[e].note);
-      curobj++;
-      float len = (randf() + 0.5f);
-      next_note_time = time_now + len * len * len;
+      if (time_now > next_note_time)
+      {
+        obj_note_on((uint32_t)(randf() * 17.0f) + 12);
+        float len = (randf() + 0.5f);
+        next_note_time = time_now + len * len * len;
+      }
+      if (time_now > next_scale_time)
+      {
+        scale = (uint32_t)(randf() * (float)SCALE_PATTERN);
+        program_change(&seq, 0, instruments[(uint32_t)(randf() * ((float)insts + 0.99f))]);
+        rtx.obj[0].col = vec3_set(randf(), randf(), randf());
+        rtx.light.pos = vec3_set(randf() * 8.0f - 4.0f, 8.0f, randf() * 4.0f);
+        next_scale_time = time_now + (randf() + 0.1f) * 40.0f;
+      }
     }
-    if (time_now > next_scale_time)
+    struct input_event event;
+    ssize_t readbytes;
+    float len;
+    while (1)
     {
-      scale = (uint32_t)(randf() * (float)SCALE_PATTERN);
-      program_change(&seq, 0, instruments[(uint32_t)(randf() * ((float)insts + 0.99f))]);
-      rtx.obj[0].col = vec3_set(randf(), randf(), randf());
-      rtx.light.pos = vec3_set(randf() * 8.0f - 4.0f, 8.0f, randf() * 4.0f);
-      next_scale_time = time_now + (randf() + 0.1f) * 40.0f;
+      readbytes = read(evdev, &event, sizeof(event));
+      if (readbytes < 1)
+      {
+        break;
+      }
+      
+      if (readbytes == sizeof(event))
+      {
+        switch (event.type)
+        {
+          case EV_KEY:
+            if ((event.value == 1) && (mode == MODE_PLAY))
+            {
+              if (event.code < 0x100)
+              {
+                if (keymap[event.code] < 0x10)
+                {
+                  scale = keymap[event.code] % SCALE_PATTERN;
+                  rtx.obj[0].col = vec3_set(randf(), randf(), randf());
+                }
+                else if (keymap[event.code] < 0x30)
+                {
+                  obj_note_on(keymap[event.code] - 4);
+                }
+                else if (keymap[event.code] < 0x40)
+                {
+                  program_change(&seq, 0, instruments[keymap[event.code] - 0x30]);
+                  rtx.light.pos = vec3_set(randf() * 8.0f - 4.0f, 8.0f, randf() * 4.0f);
+                }
+                else if (keymap[event.code] == 0x80)
+                {
+                  unsigned int i;
+                  for (i = 1; i < rtx.objnum; i++)
+                  {
+                    rtx.obj[i].pos = vec3_set(0.0f, -100.0f, 0.0f);
+                    rtx.obj[i].spd = vec3_set(0.0f, 0.0f, 0.0f);
+                    note_off(&seq, 0, rtx.obj[i].note);
+                  }
+                }
+              }
+            }
+            switch (event.code)
+            {
+              case KEY_ESC:
+                time_quit = time_now;
+                break;
+              case KEY_ENTER:
+                if (event.value == 1)
+                {
+                  mode = (mode == MODE_AUTO) ? MODE_PLAY : MODE_AUTO;
+                }
+                break;
+              default:
+                break;
+            }
+            break;
+          default:
+            break;
+        }
+      }
     }
 
     // render
@@ -429,6 +512,7 @@ int main(int argc, char ** argv)
     }
   }
 
+  close(evdev);
   close_sequencer(&seq);
   release_epiphany(&ep_context);
   return 0;
