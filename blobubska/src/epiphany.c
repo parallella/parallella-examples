@@ -202,6 +202,12 @@ int main(void)
           }
           col = vec3_min(vec3_max(col, 0.0f), 1.0f);
           uint32_t col2 = 0xff000000 + ((unsigned int)(col.x * 255.0f) << 16) + ((unsigned int)(col.y * 255.0f) << 8) + (unsigned int)(col.z * 255.0f);
+          unsigned int k;
+          for (k = 0; k < SCALE; k++)
+          {
+            *(pixel + k) = col2;
+          }
+/*
           *pixel = col2;
 #if SCALE > 1
           *(pixel + 1) = col2;
@@ -210,6 +216,7 @@ int main(void)
           *(pixel + 2) = col2;
           *(pixel + 3) = col2;
 #endif
+*/
           pixel += SCALE;
           sx += rtx.ax;
         }

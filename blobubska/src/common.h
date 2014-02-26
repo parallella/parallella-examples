@@ -126,6 +126,7 @@ typedef struct __attribute__((aligned(ALIGN8)))
   uint32_t objnum;
   float dist;
   int32_t hit;
+  uint32_t curobj;
 } rt_context_t;
 
 static inline float min(float a, float b)

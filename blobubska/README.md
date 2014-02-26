@@ -22,8 +22,8 @@ Device(Epiphany) side:
 
 System requirements:
 
-* Parallella board Gen 1.1 or later
-* Official Ubuntu and X environment
+* [Parallella board Gen 1.1 or later](http://www.parallella.org/)
+* Parallella Official Ubuntu
 * Epiphany SDK 5 or later
 
 Install dependent packages:
@@ -39,6 +39,22 @@ Switch to TTY by pressing Ctrl + Alt + F2, then login. (Return to X Window: Ctrl
 ## Usage
 
 ``./run.sh``
+
+Quit: Escape Key
+
+Mode switching (Generator Mode <-> Play Mode): Enter Key
+
+(Play Mode)
+
+Note:
+Q W E ... I O P
+A S D ... J K L
+
+Scale change: 1 - 8
+
+Instrument Change: Z X C ... B N M
+
+All note off: Space Key
 
 ## License
 
