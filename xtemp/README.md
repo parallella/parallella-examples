@@ -14,7 +14,7 @@ capture ADC measurements
 
 * Uses basic Xlib to create a graphical window with the temperature history
 
-* Captures the 'q' key to quit, or just close the window
+* Captures the 'q' key to quit, or just close the window.
 
 ## Building
 
@@ -39,5 +39,5 @@ BSD 3-clause License
 
 ## Author
 
-[Fred Huettig](Fred@Adapteva.com)
+[Fred Huettig](mailto:Fred@Adapteva.com)
 
