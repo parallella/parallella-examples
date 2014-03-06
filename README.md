@@ -5,8 +5,9 @@ Community created example Parallella projects.
 ## Contents
 
 * aobench/ - A small ambient occlusion renderer for benchmarking real world floating-point performance
-* blobubska/ -  A real-time ray tracing visual music generator
+* blobubska/ - A real-time ray tracing visual music generator
 * mandelbrot/ - Calculating the mandelbrot set and rendering it to the frame buffer in real-time
+* xtemp/ - Reads the XADC on-chip temperature measurement for the Zynq chip, and displays the results as a graph
 
 ## Contributing
 
