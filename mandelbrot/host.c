@@ -111,18 +111,17 @@ int main(int argc, char *argv[])
   unsigned int vhost[MAXCORES];
   e_open(&edev, 0, 0, ROWS, COLS);
   e_write(&emem, 0, 0, 0, &msg, sizeof(msg));
+  e_reset_group(&edev);
+  e_load_group("epiphany.srec", &edev, 0, 0, ROWS, COLS, E_TRUE);
   for (row = 0; row < ROWS; row++)
   {
     for (col = 0; col < COLS; col++)
     {
       unsigned int core = row * COLS + col;
-      e_reset_core(&edev, row, col);
       vepiphany[core] = 0;
       vhost[core] = 0;
-      e_load("epiphany.srec", &edev, row, col, E_TRUE);
     }
   }
-
   nano_wait(0, 100000000);
   clock_gettime(CLOCK_REALTIME, &time);
   time0 = time.tv_sec + time.tv_nsec * 1.0e-9;
