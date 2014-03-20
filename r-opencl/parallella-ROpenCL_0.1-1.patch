@@ -1,0 +1,30 @@
+diff -ruNp ROpenCL//src/createContext.cpp ROpenCL1//src/createContext.cpp
+--- ROpenCL//src/createContext.cpp      2012-03-01 18:33:41.000000000 +0000
++++ ROpenCL1//src/createContext.cpp     2013-06-11 17:25:51.614739313 +0000
+@@ -31,9 +31,9 @@ SEXP getPlatformName(SEXP sPlatformID){
+ SEXP getDeviceIDs(SEXP sPlatformID){
+     Rcpp::XPtr<cl_platform_id> platformID(sPlatformID);
+     cl_uint num_devices = 0;
+-    clGetDeviceIDs(*platformID, CL_DEVICE_TYPE_GPU, 0, 0, &num_devices);
++    clGetDeviceIDs(*platformID, CL_DEVICE_TYPE_ALL, 0, 0, &num_devices);
+     std::vector<cl_device_id> devices(num_devices);
+-    clGetDeviceIDs(*platformID, CL_DEVICE_TYPE_GPU, num_devices, devices.empty() ? NULL : &devices.front(), &num_devices);
++    clGetDeviceIDs(*platformID, CL_DEVICE_TYPE_ALL, num_devices, devices.empty() ? NULL : &devices.front(), &num_devices);
+     //for each platform in platforms add its pointer to the return list
+     Rcpp::List result(devices.size());
+     for (int i=0; i<devices.size(); i++){
+diff -ruNp ROpenCL//src/Makevars ROpenCL1//src/Makevars
+--- ROpenCL//src/Makevars       2012-03-01 18:33:41.000000000 +0000
++++ ROpenCL1//src/Makevars      2013-06-13 20:38:37.554603712 +0000
+@@ -1,7 +1,9 @@
+ ## Use the R_HOME indirection to support installations of multiple R version
+-PKG_CPPFLAGS += -I../inst/include/
++
++## Parallella: make sure the COPRTHR OpenCL implementation by browndeer is used.
++PKG_CPPFLAGS += -I/usr/local/browndeer/include 
+ PKG_LIBS = `$(R_HOME)/bin/Rscript -e "Rcpp:::LdFlags()"`
+-PKG_LIBS += -L/usr/local/cuda/lib64 -L/usr/local/cuda/lib -lOpenCL
++PKG_LIBS += -L/usr/local/browndeer/lib -locl
+
+ ## As an alternative, one can also add this code in a file 'configure'
+ ##
