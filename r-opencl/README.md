@@ -33,7 +33,7 @@ $ tar xzvf R-3.0.3.tar.gz
 $ cd R*
 ```
 
-Configured for a headless (no X11 display output) R.
+Configure for a headless (no X11 display output) R.
 
 ```bash
 $ ./configure --with-x=no
@@ -59,7 +59,7 @@ R> install.packages("Rcpp")
 R> quit()
 ```
 
-Download extract the ROpenCL package sources.
+Download and extract the ROpenCL package sources.
 
 ```bash
 $ wget http://repos.openanalytics.eu/src/contrib/ROpenCL_0.1-1.tar.gz
@@ -84,6 +84,7 @@ Test that we can now access the Epiphany from R.
 
 ```bash
 $ sudo su
+$ R
 ```
 
 ```R
@@ -162,8 +163,8 @@ GPL v3
 
 ## Authors
 
-Original how-to posts ([Installing R](http://forums.parallella.org/viewtopic.php?f=39&t=367), [accessing Epiphany pt.1](http://forums.parallella.org/viewtopic.php?f=39&t=368), [accessing Epiphany pt.2](http://forums.parallella.org/viewtopic.php?f=39&t=373) and ROpenCL pacth courtesy of Soren Wilkening a.ka. Censix).
+Original how-to posts ([installing R](http://forums.parallella.org/viewtopic.php?f=39&t=367), [accessing Epiphany pt.1](http://forums.parallella.org/viewtopic.php?f=39&t=368), [accessing Epiphany pt.2](http://forums.parallella.org/viewtopic.php?f=39&t=373)) and ROpenCL patch contributed by Soren Wilkening a.ka. Censix.
 
-R OpenCL kernel, Willem Ligtenberg.
+R OpenCL kernel copyright Willem Ligtenberg.
 
 Added to the parallella-examples repository by Andrew Back.
