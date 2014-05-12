@@ -18,7 +18,7 @@ To submit a project for inclusion:
 
 1. Fork this repository
 2. Create a new sub-directory 
-3. Add your project files and ensure the headers state GPL or BSD license
+3. Add your project files and ensure the headers state GPL, BSD, MIT, or Apache license
 4. Add a README.md file (see the .skeleton directory for a template)
 5. Submit a pull request
 
@@ -26,4 +26,4 @@ To submit a project for inclusion:
 
 * The project must build, run and serve as a useful example
 * Basic documentation must be included, e.g. dependencies, building and use
-* Only GPLv3 and BSD 3-clause licensed code will be accepted
+* Only GPL (v2 or later), BSD, Apache, and MIT licensed code will be accepted
