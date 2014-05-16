@@ -8,7 +8,10 @@ Community created example Parallella projects.
 * blobubska/ - A real-time ray tracing visual music generator
 * mandelbrot/ - Calculating the mandelbrot set and rendering it to the frame buffer in real-time
 * r-opencl/ - Vector addition from within the R programming language via OpenCL
-* xtemp/ - Reads on-chip temperature for the Zynq chip and displays the results as a graph
+
+### Moved
+
+* xtemp/ - this is now in the [parallella-utils repository](https://github.com/parallella/parallella-utils).
 
 ## Contributing
 
