@@ -1,6 +1,14 @@
 # John the Ripper with Parallella support
 
-## Epiphany
+[John the Ripper](http://www.openwall.com/john/) is a fast password cracker, currently available for many flavors of Unix, Windows, DOS, BeOS, and OpenVMS. Its primary purpose is to detect weak Unix passwords. Besides several crypt(3) password hash types most commonly found on various Unix systems, supported out of the box are Windows LM hashes, plus lots of other hashes and ciphers in the community-enhanced version.
+
+## Implementation
+
+This release has supported added for the Parallella board, with implementation of bcrypt on the Epiphany accelerator and in the Zynq programmable logic.
+
+## Building and usage
+
+### Epiphany
 
 For Epiphany support:
 ```bash
@@ -12,10 +20,9 @@ To test bcrypt on Epiphany run:
 $ sudo -E LD_LIBRARY_PATH=$LD_LIBRARY_PATH ./john -te -form=bcrypt-parallella
 ```
 
+### Zynq-7020
 
-## Zynq-7020
-
-Zynq bitstreams do not have Epiphany support. 
+Note that the Zynq PL bitstreams do not have Epiphany support!
 
 For Zynq support:
 ```bash
@@ -37,3 +44,13 @@ Due to ZedBoard power issues (suspecting voltage drop), designs with multiple bc
 To test other bitstream (src/fpga/bcrypt_70instances.bit.bin), change the line #define BF_Nmin 60 in BF_std.h into #define BF_Nmin 70 and recompile.
 
 Slower but reliable code (with bitstream) can be found in src/fpga/JohnTheRipper_Zynq_reliable.tar.gz
+
+## License
+
+GPL v2
+
+## Authors
+
+Parallella support contributed by Katja Malvoni.
+
+John the Ripper copyright Solar Designer et al. For details see the file doc/CREDITS.

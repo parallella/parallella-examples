@@ -6,6 +6,7 @@ Community created example Parallella projects.
 
 * aobench/ - A small ambient occlusion renderer for benchmarking real world floating-point performance
 * blobubska/ - A real-time ray tracing visual music generator
+* john/ - John the Ripper password cracker with Parallella support
 * mandelbrot/ - Calculating the mandelbrot set and rendering it to the frame buffer in real-time
 * r-opencl/ - Vector addition from within the R programming language via OpenCL
 
