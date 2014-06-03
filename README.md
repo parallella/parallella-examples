@@ -8,6 +8,7 @@ Community created example Parallella projects.
 * blobubska/ - A real-time ray tracing visual music generator
 * john/ - John the Ripper password cracker with Parallella support
 * mandelbrot/ - Calculating the mandelbrot set and rendering it to the frame buffer in real-time
+* para-para/ -  Example that shows how to run a simple "hello world" app with OpenMP, MPI and OpenCL
 * r-opencl/ - Vector addition from within the R programming language via OpenCL
 
 ### Moved
