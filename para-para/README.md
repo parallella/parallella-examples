@@ -5,8 +5,6 @@ Parallella using three popular frameworks: OpenMP, MPI, OpenCL
 
 ## Pre-requisites
 
-This example requires that OpenCL and MPI packages are installed. The Parallella Ubuntu image comes with theses packagaes pre-installed. Alternatively, the packages can be installed as shown below
-
 System requirements:
 
 * Ubuntu 14.04
@@ -14,6 +12,8 @@ System requirements:
 * Epiphany SDK 5 or later installed
 * Coprthr 1.6 installed per instructions below
 * openMPI installed per instructions below
+
+This example requires that OpenCL and MPI packages are installed. The Parallella Ubuntu image comes with theses packagaes pre-installed. Alternatively, the packages can be installed as shown below
 
 OpenCL:
 ```
