@@ -75,7 +75,7 @@ sudo make install
 ## Building
 
 
-``$ build.sh``
+``$ ./build.sh``
 
 ## Usage
 
