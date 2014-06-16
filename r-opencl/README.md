@@ -88,16 +88,21 @@ $ R
 ```
 
 ```R
-R> p <- getPlatformIDs()
-R> d <- getDeviceIDs(p[[1]]) 
-R> d
+> p <- getPlatformIDs()
+coprthr-1.6.0 (Freewill)
+> d <- getDeviceIDs(p[[1]])
+> d
 [[1]]
-<pointer: 0x60a738>
+<pointer: 0x224548>
+
+[[2]]
+<pointer: 0x5bdea0>
 ```
 
 ## Usage
 
-We can now run OpenCL code on the Epiphany. The vector addition example that follows was provided by [Willem Ligtenberg](http://openanalytics.eu), author of the ROpenCL package.
+We can now run OpenCL code on the Epiphany. The code above returns two devices. The first ( d[[1]] ) is always the ARM host, the second ( d[[2]] ) is always the Epiphany. Make sure that you deploy your kernel to the second device.
+The vector addition example that follows was provided by [Willem Ligtenberg](http://openanalytics.eu), author of the ROpenCL package.
 
 To create a kernel paste the following at the R prompt.
 
@@ -105,8 +110,8 @@ To create a kernel paste the following at the R prompt.
 require(ROpenCL)   
 p <- getPlatformIDs()
 d <- getDeviceIDs(p[[1]]) 
-context <- createContext(d[[1]]) 
-queue <- createCommandQueue(context, d[[1]])
+context <- createContext(d[[2]])               # d[[2]] is the Epiphany!
+queue <- createCommandQueue(context, d[[2]])   # d[[2]] is the Epiphany!
    
 a <- seq(256)/10
 b <- seq(256)
