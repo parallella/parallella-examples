@@ -31,7 +31,7 @@ $ make linux-arm32le-neon
 
 To load bitstream (src/fpga/bcrypt_60instances.bit.bin) on Zynq FPGA execute following commands as root:
 ```bash
-$ mknod /dev/xdevcfg c 259 0 > /dev/null
+$ mknod /dev/xdevcfg c 250 0 > /dev/null
 $ cat bcrypt_60instances.bit.bin > /dev/xdevcfg
 ```
 
