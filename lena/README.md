@@ -1,4 +1,4 @@
-# Image processing example that uses the DevIL library to filter noise
+# Image processing example that filters noise
 
 This program demonstrates the use of the Epiphany on the Parallella computer for image processing. The package includes a noise-imposed image, "lenna.jpg". By default, the program loads this image, and filters the high-frequency noise, generating a clean file "lenna.lpf.jpg". For reference, the resulting image is "lenna.lpf.ref.jpg".
 
