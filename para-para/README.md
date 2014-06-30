@@ -13,7 +13,7 @@ System requirements:
 * Coprthr 1.6 installed per instructions below
 * openMPI installed per instructions below
 
-This example requires that OpenCL and MPI packages are installed. The Parallella Ubuntu image comes with theses packagaes pre-installed. Alternatively, the packages can be installed as shown below
+This example requires that OpenCL and MPI packages are installed. The Parallella Ubuntu image comes with theses packagaes pre-installed. We rhighly recommend using the latest pre-packaged image available at downloads.parallella.org. Alternatively, the packages can also be installed as shown below:
 
 OpenCL:
 ```
@@ -27,7 +27,7 @@ cd ../
 
 ###Libevent prerequisite
 wget github.com/downloads/libevent/libevent/libevent-2.0.18-stable.tar.gz
-tar -zxvf libevent-2.0.18-stable.tar.g
+tar -zxvf libevent-2.0.18-stable.tar.gz
 cd libevent-2.0.18-stable
 ./configure
 sudo make install
@@ -65,7 +65,7 @@ MPI:
 wget http://www.open-mpi.org/software/ompi/v1.8/downloads/openmpi-1.8.1.tar.gz
 tar -zxvf openmpi-1.8.1.tar.gz
 cd openmpi-1.8.1
-./configure --prefix=~/usr \
+./configure --prefix=/usr/local \
             --enable-mpirun-prefix-by-default \
             --enable-static 
 make all
