@@ -76,6 +76,8 @@ Copy, Paste and Save
     # ATTR{product}=="Xbox NUI Motor"
     SUBSYSTEM=="usb", ATTR{idVendor}=="045e", ATTR{idProduct}=="02bf", MODE="0666"
 
+Reboot
+
     sync
 
     sudo reboot
