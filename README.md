@@ -7,6 +7,7 @@ Community created example Parallella projects.
 * aobench/ - A small ambient occlusion renderer for benchmarking real world floating-point performance
 * blobubska/ - A real-time ray tracing visual music generator
 * john/ - John the Ripper password cracker with Parallella support
+* kinect_test - Program for MS Kinect that uses Epiphany to colorize, scale and render
 * lena/ - Image processing example that uses the DevIL library to filter noise
 * mandelbrot/ - Calculating the mandelbrot set and rendering it to the frame buffer in real-time
 * para-para/ -  Example that shows how to run a simple "hello world" app with OpenMP, MPI and OpenCL
