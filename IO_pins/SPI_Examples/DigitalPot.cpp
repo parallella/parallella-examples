@@ -33,14 +33,23 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
   DigitalPot.cpp
 
-  Test of the Parallella bit-bang'in SPI library.  Requires a connection 
-    to an external SPI device, for example through the Porcupine board.
-    Allows any combination of read & write to one device
+  Example of the Parallella bit-bang'in SPI library by using it to write to a digital pot. Uses Porcupine breakout board to break out gpio and PMOD connector. An 8 bit digital POT is connected through PMOD connector (SPI), see IC data sheet (http://datasheets.maximintegrated.com/en/ds/MAX5487-MAX5489.pdf).
+  Program lets user select value to write to pot (0-255), then select which of the two pots to write to (a or b). Finally, he or she is prompted to choose whether to save the value in the pots EEPROM (so it will remember it after the next power cycle). 
+  For a more simple example of using the digital pot, see DigitalPotLEDFade.cpp
+
+  Running:
+  sudo ./DigitaPot
+
 
   Build:
   gcc -o DigitalPot DigitalPot.cpp para_spi.cpp para_gpio.cpp para_gpio.c -lstdc++ -Wall
 
   Notes:
+  Requires the para_spi class, which also requires the para_gpio library. Both can be found in parallella-utils Github here: https://github.com/parallella/parallella-utils. 
+
+IMPORTANT: AS OF 11/26/14 THE CURRENT PARALLELLA MASTER REPOSITORY DOES NOT HAVE THE UPDATED SPI LIBRARY THAT PATCHES THE BUG WHEN COMMUNICATING WITH SPI DEVICES THAT READ ON THE SECOND CLOCK EDGE. 
+UNTIL THESE CHANGES GET INCORPORATED INTO THE MASTER REPO, THIS PROGRAM WILL NOT WORK. INSTEAD, PLEASE USE MY UPDATED VERSION, WHICH CAN BE FOUND HERE: https://github.com/wizard97/parallella-utils.
+
 
 */
 
@@ -53,7 +62,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "para_spi.h"
 
 
-int get_input(bool* potA, bool* writeNV, int* val);
+int get_input(bool* potA, bool* writeNV, int* val); //function for getting users input
 
 
 int main() {
@@ -62,14 +71,15 @@ int main() {
   unsigned rval=0;
 
 
-  CParaSpi  spi;
+  CParaSpi spi; //create SPI object
 
   printf("Digital Pot SPI Example\n");
   printf("Initializing object...\n");
 
-  spi.SetMode(1, 1, 0); //(nCPOL, nCPHA, nEPOL)
+  spi.SetMode(1, 1, 0); //(nCPOL, nCPHA, nEPOL) Set the proper SPI mode for the digital pot
 
   res = spi.AssignPins(57, 55, 56, 54); //(nCLK, nMOSI, nMISO, nSS)
+  //nCPOL = Idle Clock Polarity (1 or 0)      nCPHA = Clock Phase (0=first edge  1=second edge)      nEPOL= Slave Enable Polarity (1 or 0)
   
   if(res) {
     fprintf(stderr, "spi.AssignPins returned %d", res);
@@ -90,24 +100,24 @@ if(res) break;
 
 if (WPotA)
 {
-Wval = Wval + 0x100; 
+Wval = Wval + 0x100; //add the write hex value if writing to pot A
 }
-else Wval = Wval + 0x200 ;
+else Wval = Wval + 0x200 ; //add the write hex value if writing to pot B
 
-if (NVWrite) Wval = Wval + 0x1000;
+if (NVWrite) Wval = Wval + 0x1000; //if writing to EEPROM, add correct hex value to the two byte message
 
 
-      res = spi.Xfer(16, (unsigned int)Wval, &rval);
+      res = spi.Xfer(16, (unsigned int)Wval, &rval); //transfer the message (16 bits/2 bytes)
       if(res) {
-	fprintf(stderr, "Xfer() returned %d, exiting\n", res);
+	fprintf(stderr, "Xfer() returned %d, exiting\n", res); //print what was sent
 return res;
       }
 
-      printf("Sent 0x%08X, Rcvd 0x%08X\n\n", Wval, rval);
+      printf("Sent 0x%08X, Rcvd 0x%08X\n\n", Wval, rval); //print what was recieved back
   
 }
   // done:
-  printf("Closing\n");
+  printf("Closing\n"); 
   spi.Close();
 
   return 0;
@@ -117,7 +127,7 @@ return res;
 int get_input(bool* potA, bool* writeNV, int* val)
 {
 	char * result;
-	char stringInput[100];
+	char stringInput[100]; //input buffer
 	char input;
 	int write_val;
 	  printf("Enter 'q' to quit.\n\n");

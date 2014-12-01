@@ -33,11 +33,14 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
   DigitalPotLEDFade.cpp
 
-  Simple example of the Parallella bit-bang'in SPI library by using it to fade an LED. Uses Porcupine breakout board to break out gpio and PMOD connector. An 8 bit digital POT is connected, see data sheet (http://datasheets.maximintegrated.com/en/ds/MAX5487-MAX5489.pdf).
-  5V is put across channel A, and an LED is connected from the wiper to Gnd. No series resistor is necessary to protect the LED, since the wiper has 200 ohms of resistance. Each loop is calculated to take about 5 seconds to fade the LED high then low.
+  Simple example of the Parallella bit-bang'in SPI library by using it to fade an LED. Uses Porcupine breakout board to break out gpio and PMOD connector. An 8 bit digital POT is connected through PMOD connector (SPI), see IC data sheet (http://datasheets.maximintegrated.com/en/ds/MAX5487-MAX5489.pdf).
+  5V is put across channel A pot, and an LED is connected from the wiper to Gnd. No series resistor is necessary to protect the LED, since the wiper has 200 ohms of resistance. Each loop is calculated to take about 5 seconds to fade the LED high then low.
 
   Build:
   gcc -o DigitalPotLEDFade DigitalPotLEDFade.cpp para_spi.cpp para_gpio.cpp para_gpio.c -lstdc++ -Wall
+
+  Running:
+  sudo ./DigitalPotLEDFade
 
   Notes:
 
