@@ -118,13 +118,13 @@ return res;
 }
   // done:
   printf("Closing\n"); 
-  spi.Close();
+  spi.Close(); //close the connection
 
   return 0;
 }
 
 
-int get_input(bool* potA, bool* writeNV, int* val)
+int get_input(bool* potA, bool* writeNV, int* val) //returns 0 if succesful
 {
 	char * result;
 	char stringInput[100]; //input buffer
