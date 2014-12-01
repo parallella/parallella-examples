@@ -22,13 +22,15 @@ System requirements:
 
 Download required libraries:
 
-    The GPIO and SPI library can be found here: https://github.com/parallella/parallella-utils.
+* [The GPIO and SPI library](https://github.com/parallella/parallella-utils.)
 
-NOTE: AS OF 11/26/14 THE CURRENT PARALLELLA MASTER REPOSITORY DOES NOT HAVE THE UPDATED SPI LIBRARY THAT PATCHES THE BUG WHEN COMMUNICATING WITH SPI DEVICES THAT READ ON THE SECOND CLOCK EDGE. 
-UNTIL THESE CHANGES GET INCORPORATED INTO THE MASTER REPO, THESE EXAMPLE PROGRAMS WILL NOT WORK. INSTEAD, PLEASE USE MY UPDATED VERSION, WHICH CAN BE FOUND HERE: https://github.com/wizard97/parallella-utils.
+NOTE: As of 11/26/14 the current Parallella master repository does not have the updated SPI library that patches the bug when communicating with SPI devices that read on the second clock edge. 
+Until these changes get incorporated into the master repo, these example programs will not work. instead, please use my updated version, which can be found [here](https://github.com/wizard97/parallella-utils.)
+
 
 Compiling Code (assuming ProgramName.cpp is in the same directory as the parallella-utils you downlaoded earlier)
-	$ gcc -o [OutputName] [ProgramName].cpp para_spi.cpp para_gpio.cpp para_gpio.c -lstdc++ -Wall
+```bash
+$ gcc -o [OutputName] [ProgramName].cpp para_spi.cpp para_gpio.cpp para_gpio.c -lstdc++ -Wall
 
 
 ##Usage
@@ -36,7 +38,8 @@ Compiling Code (assuming ProgramName.cpp is in the same directory as the paralle
 * See comments at the beginning of each example for explanation on what each program does, what perepheral it is using, and how to connect it.
 
 * Program must be run with root shell to access IO pins, run with:
-	$ sudo ./[ProgramName]
+```bash
+$ sudo ./[ProgramName]
 
 
 Feel free to email me with any questions
