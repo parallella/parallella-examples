@@ -24,11 +24,11 @@ Download required libraries:
 
     The GPIO and SPI library can be found here: https://github.com/parallella/parallella-utils.
 
-    NOTE: AS OF 11/26/14 THE CURRENT PARALLELLA MASTER REPOSITORY DOES NOT HAVE THE UPDATED SPI LIBRARY THAT PATCHES THE BUG WHEN COMMUNICATING WITH SPI DEVICES THAT READ ON THE SECOND CLOCK EDGE. 
+NOTE: AS OF 11/26/14 THE CURRENT PARALLELLA MASTER REPOSITORY DOES NOT HAVE THE UPDATED SPI LIBRARY THAT PATCHES THE BUG WHEN COMMUNICATING WITH SPI DEVICES THAT READ ON THE SECOND CLOCK EDGE. 
 UNTIL THESE CHANGES GET INCORPORATED INTO THE MASTER REPO, THESE EXAMPLE PROGRAMS WILL NOT WORK. INSTEAD, PLEASE USE MY UPDATED VERSION, WHICH CAN BE FOUND HERE: https://github.com/wizard97/parallella-utils.
 
 Compiling Code (assuming ProgramName.cpp is in the same directory as the parallella-utils you downlaoded earlier)
-$ gcc -o [OutputName] [ProgramName].cpp para_spi.cpp para_gpio.cpp para_gpio.c -lstdc++ -Wall
+	$ gcc -o [OutputName] [ProgramName].cpp para_spi.cpp para_gpio.cpp para_gpio.c -lstdc++ -Wall
 
 
 ##Usage
@@ -36,7 +36,7 @@ $ gcc -o [OutputName] [ProgramName].cpp para_spi.cpp para_gpio.cpp para_gpio.c -
 * See comments at the beginning of each example for explanation on what each program does, what perepheral it is using, and how to connect it.
 
 * Program must be run with root shell to access IO pins, run with:
-$ sudo ./[ProgramName]
+	$ sudo ./[ProgramName]
 
 
 Feel free to email me with any questions
