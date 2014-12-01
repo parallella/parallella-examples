@@ -31,7 +31,7 @@ Until these changes get incorporated into the master repo, these example program
 Compiling Code (assuming ProgramName.cpp is in the same directory as the parallella-utils you downlaoded earlier)
 ```bash
 $ gcc -o [OutputName] [ProgramName].cpp para_spi.cpp para_gpio.cpp para_gpio.c -lstdc++ -Wall
-```bash
+```
 
 ##Usage
 
@@ -40,7 +40,7 @@ $ gcc -o [OutputName] [ProgramName].cpp para_spi.cpp para_gpio.cpp para_gpio.c -
 * Program must be run with root shell to access IO pins, run with:
 ```bash
 $ sudo ./[ProgramName]
-```bash
+```
 
 Feel free to email me with any questions
 
