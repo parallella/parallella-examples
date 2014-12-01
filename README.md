@@ -6,7 +6,7 @@ Community created example Parallella projects.
 
 * aobench/ - A small ambient occlusion renderer for benchmarking real world floating-point performance
 * blobubska/ - A real-time ray tracing visual music generator
-* IO_pins/ - Example programs for using the Parallella's IO Pins, examples include GPIO writes/reads, Bit Banged SPI, and I2C
+* digital-pot/ - Program an 8-bit digital pot and use it to fade an LED
 * john/ - John the Ripper password cracker with Parallella support
 * kinect_test - Program for MS Kinect that uses Epiphany to colorize, scale and render
 * lena/ - Image processing example that uses the DevIL library to filter noise
