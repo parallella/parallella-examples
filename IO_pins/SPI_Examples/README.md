@@ -1,4 +1,4 @@
-# Parallella SPI Bit Bang Library examples
+# Parallella SPI Bit Bang Library Examples
 
 ## Demo Video
 
@@ -25,7 +25,7 @@ Download required libraries:
 * [The GPIO and SPI library](https://github.com/parallella/parallella-utils.)
 
 NOTE: As of 11/26/14 the current Parallella master repository does not have the updated SPI library that patches the bug when communicating with SPI devices that read on the second clock edge. 
-Until these changes get incorporated into the master repo, these example programs will not work. instead, please use my updated version, which can be found [here](https://github.com/wizard97/parallella-utils.)
+Until these changes get incorporated into the master repo, these example programs will not work. Instead, please use my updated version, which can be found [here](https://github.com/wizard97/parallella-utils.)
 
 
 Compiling Code (assuming ProgramName.cpp is in the same directory as the parallella-utils you downlaoded earlier)
