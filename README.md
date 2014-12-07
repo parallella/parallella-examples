@@ -4,6 +4,7 @@ Community created example Parallella projects.
 
 ## Contents
 
+* DAC-WaveGen - Generate different frequency sine and sawtooth waves using an I2C DAC
 * aobench/ - A small ambient occlusion renderer for benchmarking real world floating-point performance
 * blobubska/ - A real-time ray tracing visual music generator
 * digital-pot/ - Program an 8-bit digital pot and use it to fade an LED
