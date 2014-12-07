@@ -1,4 +1,4 @@
-# Parallella I2C Signal Generator DAC Example
+# Parallella I2C DAC Signal Generator
 
 ## Demo Video
 
@@ -37,8 +37,8 @@ Required/Suggested Materials:
 
 * Parallella Porcupine Board (or some way to break out I2C SDA and SCL pins)
 * 12 bit DAC (http://datasheets.maximintegrated.com/en/ds/MAX5825PMB1.pdf)
-* Female Header jumpers to connect DAC to Parallella
-* Something to Look at Waveform: Oscilloscope, Computer Soundcard, Small Speaker, LED, etc... 
+* Female header jumpers to connect DAC to Parallella
+* Something to look at waveform: Oscilloscope, Computer Soundcard, Small Speaker, LED, etc... 
 
 Important note:
 Do not directly connect the DAC output to a speaker/pair of headphones. Due to the nature of DAC's the signal has a 2.5V DC offset, that could easily damage your speakers/headphones. If you wish to safely connect the output to such devices, a coupling capacitor in series with the output must be used to block any DC voltage (this will shift the center of the waveform back to 0V). Due to the low frequency of the output, a larger electrolytic capactor should be used, so it doesn't act too much like a high pass filter and attenuate the signal. Hook the positive lead of the capacitor to the DAC ouput and the GND lead to the input of your speakers/headphones. To pick a proper size capacitor, the reactance introduced by the coupling capacitor can be calculated with X = 1/(2*pi*f*C), where x is  (ohms), f is signal frequency (hz), and C is capacitance (Farads). The lower the input impedance of your load is, the larger the coupling capacitor must be.
@@ -58,6 +58,9 @@ $ sudo ./DAC-WaveGen
 ```
 * Adjust frequency by changing steps per quarter period.
 * For those of you who play an instrument, just by coincidence, selecting a sine wave with 1 step per quarter period will produce a crude sine wave at ~587Hz (an almost perfect D Natural)
+
+
+* See the pics folder for oscilloscope pictures!
 
 Feel free to email me with any questions
 
