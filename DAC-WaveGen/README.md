@@ -9,7 +9,7 @@ Work in Progress
 
 * This is a I2C DAC signal generator example using the Parallella's built in hardware I2C support through the Linux I2C driver. It can generate either a sawtooth waveform or sine wave. 
 
-* User can select how many steps for each wave, which will increase the percision (at the expense of frequency). Using the least amount of steps (1 step per quarter period), waveforms max out around 600Hz. 
+* User can select how many steps for each wave, which will increase the precision (at the expense of frequency). Using the least amount of steps (1 step per quarter period), waveforms max out around 600Hz. 
 
 * The Porcupine breakout board breaks out the Parallella's SDA and SCL I2C lines. A 12 bit MAXIM Integrated PMOD 8 channel digital DAC is used in this example (http://datasheets.maximintegrated.com/en/ds/MAX5825PMB1.pdf).
 Note, this is an 8 channel DAC, but only channel 0 is used.
@@ -21,7 +21,7 @@ ADC Connections:
 * SDA: Parallella's I2C SDA
 * GND: Parallella's Ground
 * REF: Tied to your analog reference, in this example it's tied to VDD (5V)
-* DAC0: Signal Output (To Oscilliscope or load)
+* DAC0: Signal Output (To Oscilloscope or load)
 
 * Note: To learn more about using I2C with Linux or learn about more advanced features, look [here](http://elinux.org/Interfacing_with_I2C_Devices).
 
@@ -41,7 +41,7 @@ Required/Suggested Materials:
 * Something to look at waveform: Oscilloscope, Computer Soundcard, Small Speaker, LED, etc... 
 
 Important note:
-Do not directly connect the DAC output to a speaker/pair of headphones. Due to the nature of DAC's the signal has a 2.5V DC offset, that could easily damage your speakers/headphones. If you wish to safely connect the output to such devices, a coupling capacitor in series with the output must be used to block any DC voltage (this will shift the center of the waveform back to 0V). Due to the low frequency of the output, a larger electrolytic capactor should be used, so it doesn't act too much like a high pass filter and attenuate the signal. Hook the positive lead of the capacitor to the DAC ouput and the GND lead to the input of your speakers/headphones. To pick a proper size capacitor, the reactance introduced by the coupling capacitor can be calculated with X = 1/(2*pi*f*C), where x is  (ohms), f is signal frequency (hz), and C is capacitance (Farads). The lower the input impedance of your load is, the larger the coupling capacitor must be.
+Do not directly connect the DAC output to a speaker/pair of headphones. Due to the nature of DAC's the signal has a 2.5V DC offset, that could easily damage your speakers/headphones. If you wish to safely connect the output to such devices, a coupling capacitor in series with the output must be used to block any DC voltage (this will shift the center of the waveform back to 0V). Due to the low frequency of the output, a larger electrolytic capacitor should be used, so it doesn't act too much like a high pass filter and attenuate the signal. Hook the positive lead of the capacitor to the DAC output and the GND lead to the input of your speakers/headphones. To pick a proper size capacitor, the reactance introduced by the coupling capacitor can be calculated with X = 1/(2*pi*f*C), where x is  (ohms), f is signal frequency (Hz), and C is capacitance (Farads). The lower the input impedance of your load is, the larger the coupling capacitor must be.
 
 
 Compile with:

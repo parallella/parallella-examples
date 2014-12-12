@@ -34,7 +34,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   DAC_WaveGen.c
 
   This is a I2C DAC signal generator example using the Parallella's built in hardware I2C support through the Linux I2C driver. It can generate either a sawtooth waveform or sine wave. 
-  User can select how many steps for each wave, which will increase the percision (at the expense of frequency). Using the least amount of steps, waveforms max out around 600Hz. 
+  User can select how many steps for each wave, which will increase the precision (at the expense of frequency). Using the least amount of steps, waveforms max out around 600Hz. 
   The Porcupine breakout board breaks out the Parallella's SDA and SCL I2C lines. A 12 bit MAXIM Integrated PMOD 8 channel digital DAC is used in this example (http://datasheets.maximintegrated.com/en/ds/MAX5825PMB1.pdf).
   Note, this is an 8 channel DAC, but only channel 0 is used. Connected according to the following pinout:
 
@@ -44,7 +44,7 @@ ADC Connections:
   SDA: Parallella's I2C SDA
   GND: Parallella's Ground
   REF: Tied to your analog reference, in this example it's tied to VDD (5V)
-  DAC0: Signal Output (To Oscilliscope or load)
+  DAC0: Signal Output (To Oscilloscope or load)
 
   
   Build:
@@ -93,7 +93,7 @@ int main() {
 
 
 int Q_Steps, P_Steps, end;
-int * SinArray;         //pointer to dynamically allocated array that will hold all sin values to reduce the number of repetative sin function calls
+int * SinArray;         //pointer to dynamically allocated array that will hold all sine values to reduce the number of repetative sine function calls
 char input[25];
 char choice; //a=sin wave   b=sawtooth
 char buf[10] = {0};
@@ -134,7 +134,7 @@ P_Steps = 4*Q_Steps; //4 times as many steps in period than in quarter period
 
 
 
-//Save the proper Sin waveform values into dynamically array acording to user's earlier choice into 
+//Save the proper sine waveform values into dynamically array acording to user's earlier choice into 
 
 switch(choice)
 {
@@ -144,7 +144,7 @@ SinArray = (int*)malloc((P_Steps-1)*sizeof(int)); //allocate the proper size arr
 
 for (int i=0; i < P_Steps; i++)
 {
-SinArray[i] = 2047*sin(((2*PI)/P_Steps)*i) +2048; //sin dilation and translation to translate amplitude and period to match our DAC's range
+SinArray[i] = 2047*sin(((2*PI)/P_Steps)*i) +2048; //sine dilation and translation to transform sine wave to match our DAC's range
 }
 
 
