@@ -4,7 +4,7 @@ Community created example Parallella projects.
 
 ## Contents
 
-* DAC-WaveGen/ - Generate different frequency sine and sawtooth waves using an I2C DAC
+* dac-wavegen/ - Generate different frequency sine and sawtooth waves using an I2C DAC
 * aobench/ - A small ambient occlusion renderer for benchmarking real world floating-point performance
 * blobubska/ - A real-time ray tracing visual music generator
 * digital-pot/ - Program an 8-bit digital pot and use it to fade an LED
@@ -14,10 +14,6 @@ Community created example Parallella projects.
 * mandelbrot/ - Calculating the mandelbrot set and rendering it to the frame buffer in real-time
 * para-para/ -  Example that shows how to run a simple "hello world" app with OpenMP, MPI and OpenCL
 * r-opencl/ - Vector addition from within the R programming language via OpenCL
-
-### Moved
-
-* xtemp/ - this is now in the [parallella-utils repository](https://github.com/parallella/parallella-utils).
 
 ## Contributing
 
