@@ -3,18 +3,18 @@
 Community created example Parallella projects.
 
 ## Contents
-
-* dac-wavegen - A sine and sawtooth waveform generator using an I2C DAC
-* aobench     - An ambient occlusion renderer 
-* blobubska   - A real-time ray tracing visual music generator
-* digital-pot - Fading an LED using an 8-bit digital potentiometer
-* john        - John the Ripper password cracker with Parallella support
-* kinect_test - Kinect demo that uses Epiphany to colorize, scale and render
-* lena        - 2D FFT based filter on famous Lena image running on Epiphany
-* mandelbrot  - A real time Mandelbrot zoomer
-* para-para   - Simple "hello world" apps in OpenMP, MPI and OpenCL
-* r-opencl    - An example showing R with OpenCL running on Parallella
-
+```
+* dac-wavegen/ - A sine and sawtooth waveform generator using an I2C DAC
+* aobench/     - An ambient occlusion renderer 
+* blobubska/   - A real-time ray tracing visual music generator
+* digital-pot/ - Fading an LED using an 8-bit digital potentiometer
+* john/        - John the Ripper password cracker with Parallella support
+* kinect_test/ - Kinect demo that uses Epiphany to colorize, scale and render
+* lena/        - 2D FFT based filter on famous Lena image running on Epiphany
+* mandelbrot/  - A real time Mandelbrot zoomer
+* para-para/   - Simple "hello world" apps in OpenMP, MPI and OpenCL
+* r-opencl/    - An example showing R with OpenCL running on Parallella
+```
 ## Contributing
 
 Contributions to this repository are welcomed.
