@@ -4,16 +4,16 @@ Community created example Parallella projects.
 
 ## Contents
 
-* dac-wavegen/ - Generate different frequency sine and sawtooth waves using an I2C DAC
-* aobench/ - A small ambient occlusion renderer for benchmarking real world floating-point performance
-* blobubska/ - A real-time ray tracing visual music generator
-* digital-pot/ - Program an 8-bit digital pot and use it to fade an LED
-* john/ - John the Ripper password cracker with Parallella support
-* kinect_test - Program for MS Kinect that uses Epiphany to colorize, scale and render
-* lena/ - Image processing example that uses the DevIL library to filter noise
-* mandelbrot/ - Calculating the mandelbrot set and rendering it to the frame buffer in real-time
-* para-para/ -  Example that shows how to run a simple "hello world" app with OpenMP, MPI and OpenCL
-* r-opencl/ - Vector addition from within the R programming language via OpenCL
+* dac-wavegen - A sine and sawtooth waveform generator using an I2C DAC
+* aobench     - An ambient occlusion renderer 
+* blobubska   - A real-time ray tracing visual music generator
+* digital-pot - Fading an LED using an 8-bit digital potentiometer
+* john        - John the Ripper password cracker with Parallella support
+* kinect_test - Kinect demo that uses Epiphany to colorize, scale and render
+* lena        - 2D FFT based filter on famous Lena image running on Epiphany
+* mandelbrot  - A real time Mandelbrot zoomer
+* para-para   - Simple "hello world" apps in OpenMP, MPI and OpenCL
+* r-opencl    - An example showing R with OpenCL running on Parallella
 
 ## Contributing
 
@@ -23,7 +23,7 @@ To submit a project for inclusion:
 
 1. Fork this repository
 2. Create a new sub-directory 
-3. Add your project files and ensure the headers state GPL, BSD, MIT, or Apache license
+3. Add your project files with the appropriate license clearly stated
 4. Add a README.md file (see the .skeleton directory for a template)
 5. Submit a pull request
 
