@@ -31,7 +31,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 /*
 
-  DAC_WaveGen.c
+  dac-wavegen.c
 
   This is a I2C DAC signal generator example using the Parallella's built in hardware I2C support through the Linux I2C driver. It can generate either a sawtooth waveform or sine wave. 
   User can select how many steps for each wave, which will increase the precision (at the expense of frequency). Using the least amount of steps, waveforms max out around 600Hz. 
@@ -48,10 +48,10 @@ ADC Connections:
 
   
   Build:
-    gcc -std=c99 DAC-WaveGen.c -o DAC-WaveGen -lm
+    gcc -std=c99 dac-wavegen.c -o dac-wavegen -lm
 
   Running:
-  sudo ./DAC-WaveGen
+  sudo ./dac-wavegen
 
   Notes:
 
