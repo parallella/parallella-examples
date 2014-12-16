@@ -37,7 +37,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   5V is put across channel A pot, and an LED is connected from the wiper to Gnd. No series resistor is necessary to protect the LED, since the wiper has 200 ohms of resistance. Each loop is calculated to take about 5 seconds to fade the LED high then low.
 
   Build:
-  gcc -o DigitalPotLEDFade DigitalPotLEDFade.cpp para_spi.cpp para_gpio.cpp para_gpio.c -lstdc++ -Wall
+  gcc -o digital-pot-ledfade digital-pot-ledfade.cpp para_spi.cpp para_gpio.cpp para_gpio.c -lstdc++ -Wall
 
   Running:
   sudo ./DigitalPotLEDFade

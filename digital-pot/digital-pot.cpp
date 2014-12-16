@@ -42,7 +42,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
   Build:
-  gcc -o DigitalPot DigitalPot.cpp para_spi.cpp para_gpio.cpp para_gpio.c -lstdc++ -Wall
+  gcc -o digital-pot digital-pot.cpp para_spi.cpp para_gpio.cpp para_gpio.c -lstdc++ -Wall
 
   Notes:
   Requires the para_spi class, which also requires the para_gpio library. Both can be found in parallella-utils Github here: https://github.com/parallella/parallella-utils. 
