@@ -24,7 +24,7 @@ System requirements:
 
 * [Parallella board Gen 1.1 or later](http://www.parallella.org/)
 * Parallella Official Ubuntu
-* Parallella Porcupine Board (or some way to break out IO pins)
+* [Parallella Porcupine Board](http://www.digikey.com/product-detail/en/ACC1600-01/1554-1003-ND/5048176) (or some way to break out IO pins)
 
 
 Download required libraries:
