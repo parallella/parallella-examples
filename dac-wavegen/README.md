@@ -2,7 +2,7 @@
 
 ## Demo Video
 
-Work in Progress
+[Finally finished Youtube tutorial!](http://youtu.be/146GBR_I6ko)
 
 ## Implementation
 
@@ -42,7 +42,7 @@ System requirements:
 
 Required/Suggested Materials:
 
-* Parallella Porcupine Board (or some way to break out I2C SDA and SCL pins)
+* [Parallella Porcupine Board](http://www.digikey.com/product-detail/en/ACC1600-01/1554-1003-ND/5048176) (or some way to break out IO pins)
 * 12 bit DAC (http://datasheets.maximintegrated.com/en/ds/MAX5825PMB1.pdf)
 * Female header jumpers to connect DAC to Parallella
 * Something to look at waveform: Oscilloscope, Computer Soundcard, Small  
