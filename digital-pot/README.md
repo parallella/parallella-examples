@@ -2,7 +2,7 @@
 
 ## Demo Video/Tutorial
 
-[YouTube](https://www.youtube.com/watch?v=4iSA1yNHykU)
+[Watch on YouTube!](https://www.youtube.com/watch?v=4iSA1yNHykU)
 
 ## Implementation
 
