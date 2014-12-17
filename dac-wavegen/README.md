@@ -2,7 +2,7 @@
 
 ## Demo Video
 
-Work in Progress
+[Tutorial now available on YouTube!](http://youtu.be/146GBR_I6ko)
 
 ## Implementation
 
