@@ -1,9 +1,14 @@
-# Web Server Root Directory, put in /var/www/html/ after installing LAMP server.
+# Web Server Root Directory
 
 
-I did not design this. Instead I found this free HTML template, and modified it with some PHP. The rest of this document is from the original creator.
+##Put in /var/www/html/ after installing the LAMP server.
 
 
+**Note: I did not design this. Instead I found this free HTML template, and modified it with some PHP. The rest of this document is from the original creator.**
+
+
+
+##Original Readme
 # [Start Bootstrap](http://startbootstrap.com/) - [3 Col Portfolio](http://startbootstrap.com/template-overviews/3-col-portfolio/)
 
 [3 Col Portfolio](http://startbootstrap.com/template-overviews/3-col-portfolio/) is a three column portfolio template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
