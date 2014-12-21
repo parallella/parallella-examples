@@ -76,12 +76,12 @@ $ sudo apt-get install libtiff4-dev libjpeg-dev libjasper-dev libpng12-dev
 $ sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
 ```
 
-**We probably don't need all this, but better to be safe than sorry:**
+We probably don't need all this, but better to be safe than sorry:
 ```bash
 $ sudo apt-get -qq install build-essential checkinstall cmake pkg-config yasm libjpeg-dev libjasper-dev libavcodec-dev libavformat-dev libswscale-dev libdc1394-22-dev libxine-dev libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev libv4l-dev python-dev python-numpy libtbb-dev libqt4-dev libmp3lame-dev libopencore-amrnb-dev libopencore-amrwb-dev libtheora-dev libvorbis-dev libxvidcore-dev x264 v4l-utils
 ```
 
-**Now lets download the source code and build. Warning: this will take forever (3+ hours to build):**
+Now lets download the source code and build. Warning: this will take forever (3+ hours to build):
 ```bash
 $ cd ~/Desktop
 $ git clone https://github.com/Itseez/opencv.git
@@ -95,7 +95,7 @@ $ sudo ldconfig
 
 ### Installing OpenSSL:
 
-**Now onto OpenSSL, which we need for sending emails:**
+Now onto OpenSSL, which we need for sending emails:
 ```bash
 $ sudo apt-get install libssl-dev openssl
 ```
@@ -103,7 +103,7 @@ $ sudo apt-get install libssl-dev openssl
 ### Setting up LAMP:
 
 
-**Finally, set up our LAMP server with:**
+Finally, set up our LAMP server with:
 ```bash
 $ sudo apt-get install lamp-server^
 ```
@@ -159,7 +159,7 @@ sudo ./motion smtp.gmail.com 465 linaroparallella parallellapass linaroparallell
 ```
 
 
-**Important Note: **
+**Important Note:**
 * With gmail, it will not work unless you tell gmail to allow less secure Apps to connect.
 * You can configure that [here](https://www.google.com/settings/security/lesssecureapps).
 
