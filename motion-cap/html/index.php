@@ -16,20 +16,6 @@ $ignored = array('.', '..', '.svn', '.htaccess');
     arsort($files);
     $files = array_keys($files);
 
-// $newest_file = $files[0];
-
-
-//$filecount = preg_replace("/[^0-9]/","", $newest_file);
-
-/*
-$files = glob($directory . '*.jpg');
-
-if ($files != false)
-{
-    $filecount = count($files);
-
-}
-*/
 
 $date_array = array();
 
@@ -84,7 +70,6 @@ echo($files[$num]);
 
 }
 
-//http://www.sitepoint.com/working-with-files-in-php/
 
 
 ?>
