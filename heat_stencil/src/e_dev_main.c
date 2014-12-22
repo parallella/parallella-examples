@@ -18,7 +18,7 @@
    <http://www.gnu.org/licenses/>.
 
 Description:
-   This is the device side code for the heat stencil. It reads the input grid
+   This is the device side code for the heat stencil. It receives the input grid
    from the host and performs a 5-point stencil operation (10 flops per grid point)
    with boundary grid points being transferred to neighbouring cores in each iteration.
    The program runs for a fixed number of iterations.
