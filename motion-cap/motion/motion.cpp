@@ -55,11 +55,14 @@ int email(int picNum, char server[], int port, char username[], char pass[], cha
 
 int main(int argc, char *argv[]) {
 
-if (argc != 7)
+if (argc != 7 && argc != 1)
 {
 
-printf("Usage: sudo ./motion <SSL SMTP Server Address> <Port> <Username> <Pass> <Sender Address> <Recipient Address>\n");
+printf("Usage:\n\n");
+printf("With Email: sudo ./motion <SSL SMTP Server Address> <Port> <Username> <Pass> <Sender Address> <Recipient Address>\n");
 printf("Ex: sudo ./motion smtp.gmail.com 465 linaroparallella parallellapass linaroparallella@gmail.com aaronwisner@gmail.com\n\n");
+
+printf("Without Email: sudo ./motion\n\n");
 return 0;
 }
 
@@ -120,13 +123,23 @@ printf("Motion Detected!\n");
 	}
 	else printf("Image %d Captured!\n", picNum);
 
+	if (argc == 7)
+	{
   if(email(picNum, argv[1], atoi(argv[2]), argv[3], argv[4], argv[5], argv[6]) != 0)
   {
   printf("Error sending email!\n\n");
   return(1);
   }
   else printf("Email Sent!\n\n");
+}
 
+//if not sending emails
+else 
+  {
+    printf("\n");
+    //cant have it take to many pictures at once
+    usleep(500000);
+    }
 picNum++;
 
   //set off alarm

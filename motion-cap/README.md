@@ -38,7 +38,7 @@ Work in Progress.
 **Hardware Connections:**
 
 * GPIO 0: Output to alarm/transistor for alarm 
-* GPIO 1: Input from motion sensor. Make sure input is at a max of 2.5V, make a voltage divider if neccisary. Since motion sensor is at 5V, two 1K resitors should suffice.
+* GPIO 1: Input from motion sensor. Make sure input is at a max of 2.5V, make a voltage divider if neccisary. Since motion sensor outputs 3.3V, a 1K and 3.3K resitor as a divider should suffice.
 * GND: Connected to motion sensor GND, and alarm GND
 * 50: This pin is on connector J2 on the porcupine breakout board, it should be 5V. Connect this to VCC on your motion sensor.
 * USB: Plug in OTG cable and connect webcam. Make sure camera is detected by seeing if /dev/video0 exists.
@@ -147,15 +147,21 @@ You will see a few warning messages (not from my code, from the SMTP client code
 You should have an executable in ~/Desktop/parallella-examples/motion-cap/motion/ called "motion".
 
 
-**Run the program like this:**
+**If you done want to send an email, run the program like this:**
 ```bash
-sudo ./motion <SSL SMTP Server Address> <Port for SSL> <Username> <Pass> <Sender Address> <Recipient Address>
+$ sudo ./motion
+```
+
+
+**To send the picture to an email also, run the program like this:**
+```bash
+$ sudo ./motion <SSL SMTP Server Address> <Port for SSL> <Username> <Pass> <Sender Address> <Recipient Address>
 ```
 
 
 For example, I created a gmail acount for my Parallella to use. It will send emails to my email (aaronwisner@gmail.com)
 ```bash
-sudo ./motion smtp.gmail.com 465 linaroparallella parallellapass linaroparallella@gmail.com aaronwisner@gmail.com
+$ sudo ./motion smtp.gmail.com 465 linaroparallella parallellapass linaroparallella@gmail.com aaronwisner@gmail.com
 ```
 
 
