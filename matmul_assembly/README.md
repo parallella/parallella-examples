@@ -13,7 +13,7 @@ Host side:
 Device side:
 * Reads the operand matrices from the shared memory and distributes it among all the device side cores
 * Per-core matrix multiplication code written in hand-tuned assembly code using the Epiphany Instruction set
-* Cannon's algorithm is used for allocation of blocks of operand matrices to the cores and are rotated around rows and columns of cores
+* Cannon's algorithm is used for allocation of blocks of operand matrices to the cores and the blocks are rotated around rows and columns of cores
 * For block sizes less than 32 x 32, double buffering is used. For blocks of size 32 x 32, an alternate buffering scheme is implemented due to limited per-core memory
 
 Further details of implementation can be found in: http://arxiv.org/abs/1410.8772
