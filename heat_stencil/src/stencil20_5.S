@@ -4,7 +4,7 @@
 ; implements a 20xN stencil code, using a "stride" of 5 clocks per register access
 ; does a 5-point "star" using FMADDs to maximise Flop counts.
 ;
-; written by Robert (bob) Edwards, Oct 2013
+; written by Robert (bob) Edwards <bob@cs.anu.edu.au>, Oct 2013
 ; Licence: GPL V3
 ;
 ; regs:

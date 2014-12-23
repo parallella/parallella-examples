@@ -1,6 +1,8 @@
 /*
    matmul_main.c
-   Contributed by: Anish Varghese
+   Copyright (C) 2012 Adapteva, Inc.
+   Contributed by Yaniv Sapir <yaniv@adapteva.com>, Aug 2013
+   Modified by: Anish Varghese <anish.varghese@anu.edu.au>, May 2014
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by

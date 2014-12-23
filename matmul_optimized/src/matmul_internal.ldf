@@ -2,8 +2,8 @@
   matmul-64_internal.ldf
 
   Copyright (C) 2012 Adapteva, Inc.
-  Contributed by Yaniv Sapir <yaniv@adapteva.com>
-  Contributed by Anish Varghese, 2014
+  Contributed by Yaniv Sapir <yaniv@adapteva.com>, Aug 2013
+  Modified by Anish Varghese <anish.varghese@anu.edu.au>, May 2014
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -143,13 +143,6 @@ SECTIONS
    /* .section_core 0x7000 : {*.o(section_core)} */
    .section_core 0x2000 : {*.o(section_core)}
    .section_core_db1 0x3000 : {*.o(section_core_db1)}
-   .section_data_4000 0x4000 : {*.o(section_data_4000)}
-   .section_data_4800 0x4800 : {*.o(section_data_4800)}
-   .section_data_5000 0x5000 : {*.o(section_data_5000)}
-   .section_data_5800 0x5800 : {*.o(section_data_5800)}
-   .section_data_6000 0x6000 : {*.o(section_data_6000)}
-   .section_data_6800 0x6800 : {*.o(section_data_6800)}
-   .section_data_7000 0x7000 : {*.o(section_data_7000)}
 }
 
 SECTIONS
@@ -413,7 +406,7 @@ SECTIONS
   .gnu.attributes 0 : { KEEP (*(.gnu.attributes)) }
 
   /**/
-  PROVIDE (__stack_start_ = 0x3ff0);
+  PROVIDE (__stack_start_ = 0x2ff0);
   /*PROVIDE (__stack_start_ = ORIGIN(INTERNAL_RAM) + LENGTH(INTERNAL_RAM) - 0x10);*/
   .stack __stack_start_ : { ___stack = .; *(.stack) }
   PROVIDE (___heap_start = ORIGIN(EXTERNAL_DRAM_1) + __HEAP_SIZE_FOR_CORE_ * __CORE_NUM_);

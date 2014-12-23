@@ -1,7 +1,8 @@
 /*
    e_dev_main.c
 
-   Contributed by Anish Varghese, Bob Edwards
+   Contributed by Anish Varghese <anish.varghese@anu.edu.au>, Bob Edwards <bob@cs.anu.edu.au>
+                  Oct 2013
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by

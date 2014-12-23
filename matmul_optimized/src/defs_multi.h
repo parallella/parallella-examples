@@ -1,4 +1,9 @@
-//Configure parameters for multicore matmul
+/*Copyright (C) 2012 Adapteva, Inc.
+  Contributed by Yaniv Sapir <yaniv@adapteva.com>, Aug 2013
+  Modified by: Anish Varghese <anish.varghese@anu.edu.au>, May 2014
+
+  Configure parameters for multicore matmul
+*/
 
 #define CLOCK 600
 

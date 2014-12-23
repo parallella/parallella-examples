@@ -1,5 +1,6 @@
 ; Per-core Matrix multiplication
-; Author: Anish Varghese
+; Author: Anish Varghese <anish.varghese@anu.edu.au>, May 2014
+; License: GPL v3
 ; r0: pointer to A;
 ; r1: pointer to B;
 ; r2: pointer to C;
