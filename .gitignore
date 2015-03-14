@@ -1,0 +1,22 @@
+######################
+# Compiled binaries
+*.elf
+*.o
+*.e
+*.d
+
+######################
+# Loader files
+*.srec
+
+######################
+# Emacs/vim/gedit backup files
+*~
+.#*
+.*.swp
+.*.swo
+
+#######################
+# Log files
+*.log
+
