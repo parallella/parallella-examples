@@ -13,8 +13,9 @@ Build with: ./build.sh
 
 Single test: ./run.sh 
 
-Range of tests: ./run.sh <min trailing zeros> <max trailing zeros>
-e.g. "./run.sh 1200 1249" will run 50 tests, with each test searching for 
+Range of tests: 
+    ./run.sh <min trailing zeros> <max trailing zeros>
+For example, "./run.sh 1200 1209" will run 10 tests, each test searching for 
 primes one bit longer than the last.
 
 ## Notes
