@@ -23,11 +23,14 @@ Contributions to this repository are welcomed.
 
 To submit a project for inclusion:
 
-1. Fork this repository
-2. Create a new sub-directory 
+1. Fork this repository to your personal github account using the 'fork' button above
+2. Clone your 'parallella-examples' fork to a local computer using 'git clone'
+2. Create a new sub-directory at the root of the repo 
 3. Add your project files with the appropriate license clearly stated
 4. Add a README.md file (see the .skeleton directory for a template)
-5. Submit a pull request
+5. Use git add-->git commit-->git push to add changes to your fork of 'parallella-examples' 
+6. Submit a pull request by clicking the 'pull request' button on YOUR github 'parallella-examples' repo.
+
 
 ### Note
 
