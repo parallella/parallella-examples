@@ -9,7 +9,7 @@ ELDF=${ESDK}/bsps/current/internal.ldf
 export PATH=/usr/local/browndeer/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/browndeer/lib:/usr/local/lib:$LD_LIBRARY_PATH
 
-MPICC=/usr/local/bin/mpicc
+MPICC=/opt/openmpi/bin/mpicc
 
 # Build OpenMP
 gcc src/hello-openmp.c -fopenmp -o hello-openmp.elf
