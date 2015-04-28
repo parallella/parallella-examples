@@ -11,7 +11,7 @@ echo -------------------------
 
 #MPI
 echo -------------------------
-echo Running OpenMP Example
+echo Running MPI Example
 echo -------------------------
 $MPIRUN -np 4 --host $HOST ./hello-mpi.elf
 
