@@ -1,5 +1,4 @@
-/* mpi_fft2d_tfunc.c
- *
+/*
  * Copyright (c) 2015 Brown Deer Technology, LLC.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");

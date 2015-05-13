@@ -1,5 +1,4 @@
-/* mpi_fft2d_host.c
- *
+/*
  * Copyright (c) 2015 Brown Deer Technology, LLC.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -87,7 +86,7 @@ int main()
 	/* compile thread function */
 	char* log = 0;
 	coprthr_program_t prg 
-		= coprthr_cc_read_bin("./mpi_fft2d_tfunc.cbin.3.e32",0);
+		= coprthr_cc_read_bin(DEVICE_BINARY,0);
 
 	if (!prg) {
 		printf("Error reading target binary. Check file permissions\n");
