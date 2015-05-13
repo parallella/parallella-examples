@@ -17,8 +17,11 @@ all: $(TARGET)
 .SUFFIXES: .c .o .x
 
 mpi_fft2d_tfunc.cbin.3.e32: mpi_fft2d_tfunc.c
-	clcc --coprthr-cc -mtarget=e32 -D__link_mpi__ --dump-bin -I. $(DEFS) \
+	clcc --coprthr-cc -mtarget=e32 -D__link_mpi__ --dump-bin \
+	-I. -I/opt/adapteva/esdk/tools/e-gnu/epiphany-elf/include $(DEFS) \
 	-DCOPRTHR_MPI_COMPAT mpi_fft2d_tfunc.c
+	# clcc1 bug workaround.
+	chmod 644 $@
 
 mpi_fft2d_host.x: mpi_fft2d_host.o
 	$(CC) -o mpi_fft2d_host.x mpi_fft2d_host.o $(LIBS)
