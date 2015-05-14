@@ -3,7 +3,7 @@
 CCFLAGS += -O2 $(DEFS)
 
 INCS = -I. -I/usr/local/browndeer/include -I/usr/local/browndeer/include/coprthr
-LIBS = -L/usr/local/browndeer/lib -lcoprthr -lcoprthrcc -lm
+LIBS = -L/usr/local/browndeer/lib -lcoprthr -lcoprthrcc -lm -ljpeg
 
 DEVICE_BINARY = device.cbin.3.e32
 
@@ -25,8 +25,8 @@ device.cbin.3.e32: device.c
 	# clcc1 bug workaround.
 	chmod 644 $@
 
-host: host.o
-	$(CC) -o $@ $< $(LIBS)
+host: host.o jpeg.o
+	$(CC) -o $@ $^ $(LIBS)
 
 .c.o:
 	$(CC) $(CCFLAGS) $(DEFS) $(INCS) -c $<
