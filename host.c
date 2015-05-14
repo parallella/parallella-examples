@@ -25,6 +25,7 @@
 #include <sys/time.h>
 #include <math.h>
 #include <complex.h>
+#include <stdbool.h>
 typedef float complex cfloat;
 
 #include "coprthr.h"
@@ -37,6 +38,9 @@ typedef float complex cfloat;
 #define MSIZE 7
 
 #define frand() ((float)rand()/(float)RAND_MAX)
+
+float *jpeg_file_to_grayscale(char *path, int *width, int *height);
+bool grayscale_to_jpeg_file(float *bitmap, int width, int height, char *path);
 
 void generate_wn( 
 	unsigned int n, unsigned int m, int sign, 
@@ -74,6 +78,15 @@ int main()
 
 	unsigned int n = NSIZE;
 	unsigned int m = MSIZE;
+
+	int width, height;
+
+	float *bitmap;
+
+	bitmap = jpeg_file_to_grayscale("test.in.jpg", &width, &height);
+	if (!bitmap) {
+		exit(1);
+	}
 
 	/* open device for threads */
 	int dd = coprthr_dopen(COPRTHR_DEVICE_E32,COPRTHR_O_THREAD);
@@ -118,9 +131,7 @@ int main()
 
 	/* initialize data */
 	for(i=0; i<n*n; i++) {
-		float tmpr = frand();
-		float tmpi = frand();
-		data1[i] = tmpr + tmpi * I;
+		data1[i] = bitmap[i];
 		data2[i] = 0.0f;
 		data3[i] = 0.0f;
 	}
@@ -169,12 +180,14 @@ int main()
 		COPRTHR_E_WAIT);
 
 
+#if 0
 	for(i=0; i<n*n; i++) {
 		printf("%d:\t(%f %f)\t(%f %f)\t(%f %f)\n",i,
 			crealf(data1[i]),cimagf(data1[i]),
 			crealf(data2[i]),cimagf(data2[i]),
 			crealf(data3[i]),cimagf(data3[i]) );
 	}
+#endif
 
 
 	double time_fwd = t1.tv_sec-t0.tv_sec + 1e-6*(t1.tv_usec - t0.tv_usec);
@@ -183,4 +196,26 @@ int main()
 
 	/* clean up */
 	coprthr_dclose(dd);
+
+	/* Save output */
+
+	/* Save FFT image */
+	for(i=0; i<n*n; i++) {
+		bitmap[i] = cabsf(data2[i]);
+	}
+	if (!grayscale_to_jpeg_file(bitmap, width, height, "test.fft.jpg")) {
+		free(bitmap);
+		exit(2);
+	}
+
+	/* Save Inverse FFT image */
+	for(i=0; i<n*n; i++) {
+		bitmap[i] = cabsf(data3[i]);
+	}
+	if (!grayscale_to_jpeg_file(bitmap, width, height, "test.inv.jpg")) {
+		free(bitmap);
+		exit(2);
+	}
+
+	free(bitmap);
 }
