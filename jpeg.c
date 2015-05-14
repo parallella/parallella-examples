@@ -9,6 +9,7 @@
 #include <errno.h>
 #include <string.h>
 #include <fcntl.h>
+#include <math.h>
 
 #include <jpeglib.h>
 
@@ -69,7 +70,7 @@ static inline bool from_float(struct jpeg_compress_struct *cinfo,
 
 	for (i = 0; i < nbufs; i++) {
 		for (j = 0; j < cinfo->image_width; j++)
-			bufs[i][j] = (uint8_t) (*in++ * factor);
+			bufs[i][j] = (uint8_t) roundf((*in++ * factor));
 	}
 	return true;
 }
