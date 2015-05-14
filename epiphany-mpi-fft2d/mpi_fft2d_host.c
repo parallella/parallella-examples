@@ -88,6 +88,12 @@ int main()
 	char* log = 0;
 	coprthr_program_t prg 
 		= coprthr_cc_read_bin("./mpi_fft2d_tfunc.cbin.3.e32",0);
+
+	if (!prg) {
+		printf("Error reading target binary. Check file permissions\n");
+		exit(1);
+	}
+
 	coprthr_sym_t thr = coprthr_getsym(prg,"my_thread");
 	printf("%p %p\n",prg,thr);
 
