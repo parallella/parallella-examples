@@ -7,7 +7,7 @@ LIBS = -L/usr/local/browndeer/lib -lcoprthr -lcoprthrcc -lm -ljpeg
 
 DEVICE_BINARY = device.cbin.3.e32
 
-TARGET = host $(DEVICE_BINARY)
+TARGET = host $(DEVICE_BINARY) libfft-demo.so
 
 DEFS = -DMPI_BUF_SIZE=128 -DDEVICE_BINARY=\"$(DEVICE_BINARY)\"
 
@@ -25,8 +25,12 @@ device.cbin.3.e32: device.c
 	# clcc1 bug workaround.
 	chmod 644 $@
 
-host: host.o jpeg.o
-	$(CC) -o $@ $^ $(LIBS)
+host: host.c jpeg.c
+	$(CC) $(CCFLAGS) $(DEFS) $(INCS) $^ -o $@ $(LIBS)
+
+libfft-demo.so: host.c jpeg.c
+	$(CC) -fvisibility=hidden -shared -fPIC $(CCFLAGS) $(DEFS) $(INCS) $^ \
+		-o $@ $(LIBS)
 
 .c.o:
 	$(CC) $(CCFLAGS) $(DEFS) $(INCS) -c $<

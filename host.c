@@ -40,9 +40,13 @@ typedef float complex cfloat;
 #define frand() ((float)rand()/(float)RAND_MAX)
 
 float *jpeg_file_to_grayscale(char *path, int *width, int *height);
+float *jpeg_to_grayscale(void *jpeg, size_t jpeg_size, int *width, int *height);
 bool grayscale_to_jpeg_file(float *bitmap, int width, int height, char *path);
 
-void generate_wn( 
+static cfloat *wn_fwd = NULL;
+static cfloat *wn_inv = NULL;
+
+static void generate_wn_( 
 	unsigned int n, unsigned int m, int sign, 
 	float* cc, float* ss, cfloat* wn 
 ) {
@@ -63,6 +67,44 @@ void generate_wn(
    }
 }
 
+static void free_wn()
+{
+	free(wn_fwd);
+	free(wn_inv);
+
+	wn_fwd = wn_inv = NULL;
+}
+
+static void generate_wn(unsigned int n, unsigned int m)
+{
+	int i;
+	float *cc, *ss;
+
+	if (wn_fwd)
+		return;
+
+	/* Allocate sin and cos tables on stack (they're small) */
+	cc = (float *) alloca(16 * sizeof(float));
+	ss = (float *) alloca(16 * sizeof(float));
+
+	wn_fwd = (cfloat *) malloc(n * sizeof(cfloat));
+	wn_inv = (cfloat *) malloc(n * sizeof(cfloat));
+
+	/* Free wn coeffs on exit */
+	atexit(free_wn);
+
+	/* initialize cos/sin table */
+	for(i = 0; i < 16; i++) {
+		cc[i] = (float)cos( 2.0 * M_PI / pow(2.0,(double)i) );
+		ss[i] = - (float)sin( 2.0 * M_PI / pow(2.0,(double)i) );
+		printf("%2.16f %2.16f\n",cc[i],ss[i]);
+	}
+
+	/* Generate WN coeffs */
+	generate_wn_( n, m, +1, cc, ss, wn_fwd);
+	generate_wn_( n, m, -1, cc, ss, wn_inv);
+}
+
 struct my_args {
 	unsigned int n;
 	unsigned int m;
@@ -71,56 +113,52 @@ struct my_args {
 	cfloat* data2;
 };
 
-int main()
+bool xcorr(float *A, float *B, int width, int height, float *retval)
 {
-	int i,j,k;
-	struct timeval t0,t1,t2,t3;
+	int i, j, k;
+	struct timeval t0, t1, t2, t3;
 
 	unsigned int n = NSIZE;
 	unsigned int m = MSIZE;
 
-	int width, height;
+	float A_mean = 0, B_mean = 0;	/* Means */
 
-	/* Bitmap A and B */
-	float *A, *B;
-	float A_mean = 0, B_mean = 0;
+	int dd;				/* Device descriptor */
+	coprthr_program_t prg;		/* COPRTHR device program */
+	coprthr_sym_t thr;		/* Thread function symbol */
 
-	A = jpeg_file_to_grayscale("A.jpg", &width, &height);
-	if (!A) {
-		exit(1);
+	if (width != NSIZE || height != NSIZE) {
+		fprintf(stderr, "ERROR: Width and height must be %d\n", MSIZE);
+		return false;
 	}
 
-	B = jpeg_file_to_grayscale("B.jpg", &width, &height);
-	if (!B) {
-		exit(1);
-	}
 
 	/* open device for threads */
-	int dd = coprthr_dopen(COPRTHR_DEVICE_E32,COPRTHR_O_THREAD);
-	printf("dd=%d\n",dd); fflush(stdout);
-	if (dd<0) {
-		printf("device open failed\n");
-		exit(-1);
+	dd = coprthr_dopen(COPRTHR_DEVICE_E32,COPRTHR_O_THREAD);
+	if (dd < 0 ) {
+		fprintf(stderr, "Device open failed: %d\n", dd);
+		return false;
 	}
 
 	/* compile thread function */
-	char* log = 0;
-	coprthr_program_t prg 
-		= coprthr_cc_read_bin(DEVICE_BINARY,0);
-
+	prg = coprthr_cc_read_bin(DEVICE_BINARY, 0);
 	if (!prg) {
-		printf("Error reading target binary. Check file permissions\n");
-		exit(1);
+		fprintf(stderr,
+			"Error reading target binary %s. Check file permissions\n",
+			DEVICE_BINARY);
+		/* Clean up ? */
+		return false;
 	}
 
-	coprthr_sym_t thr = coprthr_getsym(prg,"my_thread");
-	printf("%p %p\n",prg,thr);
+	thr = coprthr_getsym(prg,"my_thread");
+	if (!thr) {
+		fprintf(stderr,
+			"ERROR: Could not find symbol in device binary.\n");
+		/* Cleanup? */
+		return false;
+	}
 
 	/* allocate memory on host */
-	float* cc = (float*)malloc(16*sizeof(float));
-	float* ss = (float*)malloc(16*sizeof(float));
-	cfloat* wn_fwd = (cfloat*)malloc(n*sizeof(cfloat));
-	cfloat* wn_inv = (cfloat*)malloc(n*sizeof(cfloat));
 	cfloat* A_cbitmap = (cfloat*)malloc(n*n*sizeof(cfloat));
 	cfloat* A_fft = (cfloat*)malloc(n*n*sizeof(cfloat));
 	cfloat* B_fft = (cfloat*)malloc(n*n*sizeof(cfloat));
@@ -128,17 +166,8 @@ int main()
 	cfloat* C = (cfloat*)malloc(n*n*sizeof(cfloat));
 	cfloat* B_cbitmap = (cfloat*)malloc(n*n*sizeof(cfloat));
 
-	/* initialize cos/sin table */
-	for(i=0;i<16;i++) {
-		cc[i] = (float)cos( 2.0 * M_PI / pow(2.0,(double)i) );
-		ss[i] = - (float)sin( 2.0 * M_PI / pow(2.0,(double)i) );
-		printf("%2.16f %2.16f\n",cc[i],ss[i]);
-	}
-
-	/* initialize wn coefficients */
-	generate_wn( n, m, +1, cc, ss, wn_fwd);
-	generate_wn( n, m, -1, cc, ss, wn_inv);
-
+	/* Generate WN coeffs */
+	generate_wn(n, m);
 
 	/* Calculate means */
 	for (i = 0; i < n * n; i++) {
@@ -157,11 +186,10 @@ int main()
 #endif
 
 	/* initialize data */
-	for(i = 0; i < n * n; i++) {
+	for (i = 0; i < n * n; i++) {
 		A_cbitmap[i] = A[i];
 		B_cbitmap[i] = B[i];
 	}
-
 
 	/* allocate memory on device */
 	coprthr_mem_t wn_mem = coprthr_dmalloc(dd,n*sizeof(cfloat),0);
@@ -174,7 +202,7 @@ int main()
 	coprthr_dwrite(dd,A_mem,0, A_cbitmap,n*n*sizeof(cfloat),COPRTHR_E_WAIT);
 
 	/* Calculate FFT for image A */
-	struct my_args args_fwd = {
+	struct my_args args_a_fft = {
 		.n = n, .m = m,
 		.inverse = 0,
 		.wn = coprthr_memptr(wn_mem,0),
@@ -182,7 +210,7 @@ int main()
 	};
 
 	gettimeofday(&t0,0);
-	coprthr_mpiexec( dd, NPROCS, thr, &args_fwd, sizeof(struct my_args),0 );
+	coprthr_mpiexec(dd, NPROCS, thr, &args_a_fft, sizeof(args_a_fft), 0);
 	gettimeofday(&t1,0);
 
 	/* read back data from memory on device */
@@ -200,7 +228,7 @@ int main()
 	};
 
 	gettimeofday(&t2,0);
-	coprthr_mpiexec( dd, NPROCS, thr, &args_b_fft, sizeof(struct my_args),0 );
+	coprthr_mpiexec(dd, NPROCS, thr, &args_b_fft, sizeof(args_b_fft), 0);
 	gettimeofday(&t3,0);
 
 	coprthr_dread(dd,B_mem,0,B_fft,n*n*sizeof(cfloat),
@@ -227,16 +255,13 @@ int main()
 		.data2 = coprthr_memptr(C_mem,0)
 	};
 
-	coprthr_mpiexec( dd, NPROCS, thr, &args_c_inv, sizeof(struct my_args),0 );
+	coprthr_mpiexec(dd, NPROCS, thr, &args_c_inv, sizeof(args_c_inv), 0);
 
 	coprthr_dread(dd,C_mem,0,C,n*n*sizeof(cfloat), COPRTHR_E_WAIT);
 
 	double time_fwd = t1.tv_sec-t0.tv_sec + 1e-6*(t1.tv_usec - t0.tv_usec);
 	double time_inv = t3.tv_sec-t2.tv_sec + 1e-6*(t3.tv_usec - t2.tv_usec);
 	printf("mpiexec time: forward %f sec inverse %f sec\n", time_fwd,time_inv);
-
-	/* clean up */
-	coprthr_dclose(dd);
 
 	/* Save output */
 
@@ -278,5 +303,109 @@ int main()
 	printf("factor = %f\n", factor);
 	printf("correlation = %f\n", C_sum / factor);
 
+	/* clean up */
+	coprthr_dclose(dd);
+
+	/* Not pretty, from coprthr code, but at least we're only leaking
+	 * ~3kb now (compared to 70kb) ... */
+	free(prg->bin);
+	free(prg);
+	free(thr->arg_off);
+	free(thr->arg_buf);
+	free(thr);
+
+	free(A_cbitmap);
+	free(A_fft);
+	free(B_fft);
+	free(C_fft);
+	free(C);
+	free(B_cbitmap);
+
+	*retval = C_sum / factor;
+
+	return true;
+}
+
+/* Returns true on success */
+__attribute__ ((visibility ("default")))
+bool calculateXCorr(uint8_t *jpeg1, size_t jpeg1_size,
+		    uint8_t *jpeg2, size_t jpeg2_size,
+		    float *corr)
+{
+	bool ret = true;
+	float *A, *B;
+	int width, height;
+
+	A = jpeg_to_grayscale(jpeg1, jpeg1_size, &width, &height);
+	if (!A) {
+		ret = false;
+		goto out;
+	}
+
+	B = jpeg_to_grayscale(jpeg2, jpeg2_size, &width, &height);
+	if (!B) {
+		ret = false;
+		goto free_A;
+	}
+
+	if (!xcorr(A, B, width, height, corr)) {
+		fprintf(stderr, "ERROR: xcorr failed\n");
+		ret = false;
+	}
+
+	free(B);
+free_A:
 	free(A);
+out:
+	return ret;
+}
+
+int main(int argc, char *argv[])
+{
+	int ret = 0;
+	char *file1 = "A.jpg";
+	char *file2 = "B.jpg";
+	float *A = NULL, *B = NULL;
+	int width, height;
+	float corr = 0;
+
+	if (argc > 1)
+		file1 = argv[1];
+
+	if (argc > 2)
+		file1 = argv[2];
+
+	A = jpeg_file_to_grayscale(file1, &width, &height);
+	if (!A) {
+		ret = 1;
+		goto out;
+	}
+
+	B = jpeg_file_to_grayscale(file2, &width, &height);
+	if (!B) {
+		ret = 2;
+		goto free_A;
+	}
+
+	if (!xcorr(A, B, width, height, &corr)) {
+		fprintf(stderr, "ERROR: xcorr failed\n");
+		ret = 3;
+	}
+
+	printf("correlation: %f\n", corr);
+
+	if (!xcorr(A, B, width, height, &corr)) {
+		fprintf(stderr, "ERROR: xcorr failed\n");
+		ret = 3;
+	}
+
+	printf("correlation: %f\n", corr);
+
+
+free_B:
+	free(B);
+free_A:
+	free(A);
+out:
+	return ret;
 }
