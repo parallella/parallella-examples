@@ -1,5 +1,12 @@
 #Parallella FFT cross-correlation demo
 
+##TODO
+
+* Do calculations on device.
+* Use FFT to calculate correlation.
+* Don't reinitialize COPRTHR on every call to xcorr().
+
+
 ##Generate data set
 Labeled Faces in the Wild
 
@@ -12,7 +19,7 @@ find . -type f -exec mogrify -gravity southwest -background black \
 	-extent 256x256 -resize 128x128 -colorspace Gray '{}' ';'
 ```
 
-##Build program
+##Build program and library
 
 ```
 make
