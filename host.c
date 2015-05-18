@@ -128,7 +128,7 @@ bool xcorr(float *A, float *B, int width, int height, float *retval)
 	coprthr_sym_t thr;		/* Thread function symbol */
 
 	if (width != NSIZE || height != NSIZE) {
-		fprintf(stderr, "ERROR: Width and height must be %d\n", MSIZE);
+		fprintf(stderr, "ERROR: Width and height must be %d\n", NSIZE);
 		return false;
 	}
 
