@@ -81,10 +81,17 @@ int main()
 
 	int width, height;
 
-	float *bitmap;
+	/* Bitmap A and B */
+	float *A, *B;
+	float A_mean = 0, B_mean = 0;
 
-	bitmap = jpeg_file_to_grayscale("test.in.jpg", &width, &height);
-	if (!bitmap) {
+	A = jpeg_file_to_grayscale("A.jpg", &width, &height);
+	if (!A) {
+		exit(1);
+	}
+
+	B = jpeg_file_to_grayscale("B.jpg", &width, &height);
+	if (!B) {
 		exit(1);
 	}
 
@@ -114,9 +121,12 @@ int main()
 	float* ss = (float*)malloc(16*sizeof(float));
 	cfloat* wn_fwd = (cfloat*)malloc(n*sizeof(cfloat));
 	cfloat* wn_inv = (cfloat*)malloc(n*sizeof(cfloat));
-	cfloat* data1 = (cfloat*)malloc(n*n*sizeof(cfloat));
-	cfloat* data2 = (cfloat*)malloc(n*n*sizeof(cfloat));
-	cfloat* data3 = (cfloat*)malloc(n*n*sizeof(cfloat));
+	cfloat* A_cbitmap = (cfloat*)malloc(n*n*sizeof(cfloat));
+	cfloat* A_fft = (cfloat*)malloc(n*n*sizeof(cfloat));
+	cfloat* B_fft = (cfloat*)malloc(n*n*sizeof(cfloat));
+	cfloat* C_fft = (cfloat*)malloc(n*n*sizeof(cfloat));
+	cfloat* C = (cfloat*)malloc(n*n*sizeof(cfloat));
+	cfloat* B_cbitmap = (cfloat*)malloc(n*n*sizeof(cfloat));
 
 	/* initialize cos/sin table */
 	for(i=0;i<16;i++) {
@@ -129,28 +139,46 @@ int main()
 	generate_wn( n, m, +1, cc, ss, wn_fwd);
 	generate_wn( n, m, -1, cc, ss, wn_inv);
 
+
+	/* Calculate means */
+	for (i = 0; i < n * n; i++) {
+		A_mean = (A_mean * (i + 0.0f) + A[i]) / (i + 1.0f);
+		B_mean = (B_mean * (i + 0.0f) + B[i]) / (i + 1.0f);
+	}
+
+#if 1
+	/* Should we do this ??? */
+
+	/* Normalize (yes this is naive) */
+	for(i = 0; i < n * n; i++) {
+		A[i] -= A_mean;
+		B[i] -= B_mean;
+	}
+#endif
+
 	/* initialize data */
-	for(i=0; i<n*n; i++) {
-		data1[i] = bitmap[i];
-		data2[i] = 0.0f;
-		data3[i] = 0.0f;
+	for(i = 0; i < n * n; i++) {
+		A_cbitmap[i] = A[i];
+		B_cbitmap[i] = B[i];
 	}
 
 
 	/* allocate memory on device */
 	coprthr_mem_t wn_mem = coprthr_dmalloc(dd,n*sizeof(cfloat),0);
-	coprthr_mem_t data2_mem = coprthr_dmalloc(dd,n*n*sizeof(cfloat),0);
+	coprthr_mem_t A_mem = coprthr_dmalloc(dd,n*n*sizeof(cfloat),0);
+	coprthr_mem_t B_mem = coprthr_dmalloc(dd,n*n*sizeof(cfloat),0);
+	coprthr_mem_t C_mem = coprthr_dmalloc(dd,n*n*sizeof(cfloat),0);
 
 	/* copy memory to device */
 	coprthr_dwrite(dd,wn_mem,0,wn_fwd,n*sizeof(cfloat),COPRTHR_E_WAIT);
-	coprthr_dwrite(dd,data2_mem,0,data1,n*n*sizeof(cfloat),COPRTHR_E_WAIT);
+	coprthr_dwrite(dd,A_mem,0, A_cbitmap,n*n*sizeof(cfloat),COPRTHR_E_WAIT);
 
-	/* execute parallel calculation */
+	/* Calculate FFT for image A */
 	struct my_args args_fwd = {
 		.n = n, .m = m,
 		.inverse = 0,
 		.wn = coprthr_memptr(wn_mem,0),
-		.data2 = coprthr_memptr(data2_mem,0)
+		.data2 = coprthr_memptr(A_mem,0)
 	};
 
 	gettimeofday(&t0,0);
@@ -158,37 +186,50 @@ int main()
 	gettimeofday(&t1,0);
 
 	/* read back data from memory on device */
-	coprthr_dread(dd,data2_mem,0,data2,n*n*sizeof(cfloat),
-		COPRTHR_E_WAIT);
+	coprthr_dread(dd, A_mem,0, A_fft,n*n*sizeof(cfloat), COPRTHR_E_WAIT);
 
-	coprthr_dwrite(dd,wn_mem,0,wn_inv,n*sizeof(cfloat),COPRTHR_E_WAIT);
-	coprthr_dwrite(dd,data2_mem,0,data2,n*n*sizeof(cfloat),COPRTHR_E_WAIT);
+	coprthr_dwrite(dd,wn_mem,0,wn_fwd,n*sizeof(cfloat),COPRTHR_E_WAIT);
+	coprthr_dwrite(dd, B_mem,0, B_cbitmap,n*n*sizeof(cfloat),COPRTHR_E_WAIT);
 
-	/* execute parallel calculation */
-	struct my_args args_inv = {
+	/* Calculate FFT for bitmap B */
+	struct my_args args_b_fft = {
 		.n = n, .m = m,
-		.inverse = 1,
+		.inverse = 0,
 		.wn = coprthr_memptr(wn_mem,0),
-		.data2 = coprthr_memptr(data2_mem,0)
+		.data2 = coprthr_memptr(B_mem,0)
 	};
 
 	gettimeofday(&t2,0);
-	coprthr_mpiexec( dd, NPROCS, thr, &args_inv, sizeof(struct my_args),0 );
+	coprthr_mpiexec( dd, NPROCS, thr, &args_b_fft, sizeof(struct my_args),0 );
 	gettimeofday(&t3,0);
 
-	coprthr_dread(dd,data2_mem,0,data3,n*n*sizeof(cfloat),
+	coprthr_dread(dd,B_mem,0,B_fft,n*n*sizeof(cfloat),
 		COPRTHR_E_WAIT);
 
-
-#if 0
-	for(i=0; i<n*n; i++) {
-		printf("%d:\t(%f %f)\t(%f %f)\t(%f %f)\n",i,
-			crealf(data1[i]),cimagf(data1[i]),
-			crealf(data2[i]),cimagf(data2[i]),
-			crealf(data3[i]),cimagf(data3[i]) );
+	/* Calculate conjugate for B (on host(!)) */
+	for (i = 0; i < n * n; i++) {
+		B_fft[i] = conjf(B_fft[i]);
 	}
-#endif
 
+	/* C_fft = Element wise A_fft x B_fft(conjugate) (on host(!)) */
+	for (i = 0; i < n * n; i++)
+		C_fft[i] = A_fft[i] * B_fft[i];
+
+	/* C = ifft(C_fft) */
+	coprthr_dwrite(dd,wn_mem,0,wn_inv,n*sizeof(cfloat),COPRTHR_E_WAIT);
+	coprthr_dwrite(dd, C_mem,0, C_fft,n*n*sizeof(cfloat),COPRTHR_E_WAIT);
+
+	/* Calculate inv FFT for bitmap C */
+	struct my_args args_c_inv = {
+		.n = n, .m = m,
+		.inverse = 1,
+		.wn = coprthr_memptr(wn_mem,0),
+		.data2 = coprthr_memptr(C_mem,0)
+	};
+
+	coprthr_mpiexec( dd, NPROCS, thr, &args_c_inv, sizeof(struct my_args),0 );
+
+	coprthr_dread(dd,C_mem,0,C,n*n*sizeof(cfloat), COPRTHR_E_WAIT);
 
 	double time_fwd = t1.tv_sec-t0.tv_sec + 1e-6*(t1.tv_usec - t0.tv_usec);
 	double time_inv = t3.tv_sec-t2.tv_sec + 1e-6*(t3.tv_usec - t2.tv_usec);
@@ -199,23 +240,43 @@ int main()
 
 	/* Save output */
 
-	/* Save FFT image */
+	/* Save A FFT bitmap */
 	for(i=0; i<n*n; i++) {
-		bitmap[i] = cabsf(data2[i]);
+		A[i] = cabsf(A_fft[i]);
 	}
-	if (!grayscale_to_jpeg_file(bitmap, width, height, "test.fft.jpg")) {
-		free(bitmap);
+	if (!grayscale_to_jpeg_file(A, width, height, "A.fft.jpg")) {
+		free(A);
 		exit(2);
 	}
 
-	/* Save Inverse FFT image */
+	/* Save B FFT bitmap */
 	for(i=0; i<n*n; i++) {
-		bitmap[i] = cabsf(data3[i]);
+		B[i] = cabsf(B_fft[i]);
 	}
-	if (!grayscale_to_jpeg_file(bitmap, width, height, "test.inv.jpg")) {
-		free(bitmap);
+	if (!grayscale_to_jpeg_file(B, width, height, "B.fft.jpg")) {
+		free(A);
 		exit(2);
 	}
 
-	free(bitmap);
+	float C_sum = 0, C_mean = 0, A_diff = 0, B_diff = 0;
+	for (i = 0; i < n*n; i++) {
+#if 0
+		C_sum += cabsf(C[i]);
+		C_mean = (C_mean * (i + 0.0f) + cabsf(C[i])) / (i + 1.0f);
+
+#else
+		C_sum += (A[i] - A_mean) * (B[i] - B_mean);
+#endif
+		A_diff += powf(A[i] - A_mean, 2.0f);
+		B_diff += powf(B[i] - B_mean, 2.0f);
+	}
+
+	printf("A_mean = %f\n", A_mean);
+	printf("C_sum = %f\n", C_sum);
+	printf("C_mean = %f\n", C_mean);
+	float factor = sqrt(A_diff*B_diff);
+	printf("factor = %f\n", factor);
+	printf("correlation = %f\n", C_sum / factor);
+
+	free(A);
 }
