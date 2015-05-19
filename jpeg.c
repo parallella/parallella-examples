@@ -44,6 +44,16 @@ static inline bool to_float(struct jpeg_decompress_struct *cinfo,
 	return true;
 }
 
+static inline float in_range(const float min, const float max, const float val)
+{
+	if (val < min)
+		return min;
+	if (val > max)
+		return max;
+
+	return val;
+}
+
 /* Convert from grayscale float
  *
  * Assumes 8-bit grayscale output data
@@ -69,8 +79,10 @@ static inline bool from_float(struct jpeg_compress_struct *cinfo,
 	in = bitmap + line * cinfo->image_width;
 
 	for (i = 0; i < nbufs; i++) {
-		for (j = 0; j < cinfo->image_width; j++)
-			bufs[i][j] = (uint8_t) roundf((*in++ * factor));
+		for (j = 0; j < cinfo->image_width; j++) {
+			bufs[i][j] = (uint8_t)
+				roundf(factor * in_range(0.0f, 1.0f, *in++));
+		}
 	}
 	return true;
 }
