@@ -263,26 +263,6 @@ bool xcorr(float *A, float *B, int width, int height, float *retval)
 	double time_inv = t3.tv_sec-t2.tv_sec + 1e-6*(t3.tv_usec - t2.tv_usec);
 	printf("mpiexec time: forward %f sec inverse %f sec\n", time_fwd,time_inv);
 
-	/* Save output */
-
-	/* Save A FFT bitmap */
-	for(i=0; i<n*n; i++) {
-		A[i] = cabsf(A_fft[i]);
-	}
-	if (!grayscale_to_jpeg_file(A, width, height, "A.fft.jpg")) {
-		free(A);
-		exit(2);
-	}
-
-	/* Save B FFT bitmap */
-	for(i=0; i<n*n; i++) {
-		B[i] = cabsf(B_fft[i]);
-	}
-	if (!grayscale_to_jpeg_file(B, width, height, "B.fft.jpg")) {
-		free(A);
-		exit(2);
-	}
-
 	float C_sum = 0, C_mean = 0, A_diff = 0, B_diff = 0;
 	for (i = 0; i < n*n; i++) {
 #if 0
@@ -393,14 +373,6 @@ int main(int argc, char *argv[])
 	}
 
 	printf("correlation: %f\n", corr);
-
-	if (!xcorr(A, B, width, height, &corr)) {
-		fprintf(stderr, "ERROR: xcorr failed\n");
-		ret = 3;
-	}
-
-	printf("correlation: %f\n", corr);
-
 
 free_B:
 	free(B);
