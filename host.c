@@ -69,19 +69,21 @@ static void generate_wn_(
 
 static void free_wn()
 {
-	free(wn_fwd);
-	free(wn_inv);
+	if (wn_fwd)
+		free(wn_fwd);
+	if (wn_inv)
+		free(wn_inv);
 
 	wn_fwd = wn_inv = NULL;
 }
 
-static void generate_wn(unsigned int n, unsigned int m)
+static bool generate_wn(unsigned int n, unsigned int m)
 {
 	int i;
 	float *cc, *ss;
 
 	if (wn_fwd)
-		return;
+		return true;
 
 	/* Allocate sin and cos tables on stack (they're small) */
 	cc = (float *) alloca(16 * sizeof(float));
@@ -89,6 +91,10 @@ static void generate_wn(unsigned int n, unsigned int m)
 
 	wn_fwd = (cfloat *) malloc(n * sizeof(cfloat));
 	wn_inv = (cfloat *) malloc(n * sizeof(cfloat));
+	if (!wn_fwd || !wn_inv) {
+		free_wn();
+		return false;
+	}
 
 	/* Free wn coeffs on exit */
 	atexit(free_wn);
@@ -97,12 +103,13 @@ static void generate_wn(unsigned int n, unsigned int m)
 	for(i = 0; i < 16; i++) {
 		cc[i] = (float)cos( 2.0 * M_PI / pow(2.0,(double)i) );
 		ss[i] = - (float)sin( 2.0 * M_PI / pow(2.0,(double)i) );
-		printf("%2.16f %2.16f\n",cc[i],ss[i]);
 	}
 
 	/* Generate WN coeffs */
 	generate_wn_( n, m, +1, cc, ss, wn_fwd);
 	generate_wn_( n, m, -1, cc, ss, wn_inv);
+
+	return true;
 }
 
 struct my_args {
@@ -113,82 +120,101 @@ struct my_args {
 	cfloat* data2;
 };
 
-bool xcorr(float *A, float *B, int width, int height, float *retval)
+bool xcorr(float *A, float *B, int width, int height, float *out_corr)
 {
-	int i, j, k;
+	int i, j;
 	struct timeval t0, t1, t2, t3;
+
+	bool retval = true;
 
 	unsigned int n = NSIZE;
 	unsigned int m = MSIZE;
 
 	float A_mean = 0, B_mean = 0;	/* Means */
+	float correlation;
 
-	int dd;				/* Device descriptor */
-	coprthr_program_t prg;		/* COPRTHR device program */
-	coprthr_sym_t thr;		/* Thread function symbol */
+	/* Intermediate matrices */
+	cfloat *A_cbitmap, *B_cbitmap, *A_fft, *B_fft, *C_fft, *C;
 
-	if (width != NSIZE || height != NSIZE) {
-		fprintf(stderr, "ERROR: Width and height must be %d\n", NSIZE);
+	int dd = -1;			/* Device descriptor */
+	coprthr_program_t prg = NULL;	/* COPRTHR device program */
+	coprthr_sym_t thr = NULL;	/* Thread function symbol */
+
+	/* Current device algo can only support up to 128x128 including
+	 * zero padding. */
+	if (width > NSIZE / 2 || height > NSIZE / 2) {
+		fprintf(stderr,
+			"ERROR: Input image dimensions must not exceed %dx%d\n",
+			NSIZE / 2, NSIZE / 2);
 		return false;
 	}
 
+	/* Generate WN coeffs */
+	if (!generate_wn(n, m)) {
+		fprintf(stderr,
+			"ERROR: Failed generating wn coeffs.\n");
+
+		return false;
+	}
+
+	/* Allocate zeroed memory on host */
+	A_cbitmap	= (cfloat *) calloc(n * n, sizeof(cfloat));
+	B_cbitmap	= (cfloat *) calloc(n * n, sizeof(cfloat));
+	A_fft		= (cfloat *) calloc(n * n, sizeof(cfloat));
+	B_fft		= (cfloat *) calloc(n * n, sizeof(cfloat));
+	C_fft		= (cfloat *) calloc(n * n, sizeof(cfloat));
+	C		= (cfloat *) calloc(n * n, sizeof(cfloat));
+	if (!A_cbitmap || !B_cbitmap || !A_fft || !B_fft || !C_fft || !C) {
+		fprintf(stderr,
+			"ERROR: Failed allocating memory.\n");
+
+		retval = false;
+		goto out;
+	}
 
 	/* open device for threads */
 	dd = coprthr_dopen(COPRTHR_DEVICE_E32,COPRTHR_O_THREAD);
 	if (dd < 0 ) {
-		fprintf(stderr, "Device open failed: %d\n", dd);
-		return false;
+		fprintf(stderr, "ERROR: Device open failed: %d\n", dd);
+
+		retval = false;
+		goto out;
 	}
 
-	/* compile thread function */
+	/* Read device binary */
 	prg = coprthr_cc_read_bin(DEVICE_BINARY, 0);
 	if (!prg) {
 		fprintf(stderr,
-			"Error reading target binary %s. Check file permissions\n",
+			"ERROR: Failed reading device binary %s. Check file permissions\n",
 			DEVICE_BINARY);
-		/* Clean up ? */
-		return false;
+
+		retval = false;
+		goto out;
 	}
 
+	/* Get handle to thread function */
 	thr = coprthr_getsym(prg,"my_thread");
 	if (!thr) {
 		fprintf(stderr,
 			"ERROR: Could not find symbol in device binary.\n");
-		/* Cleanup? */
-		return false;
+
+		retval = false;
+		goto out;
 	}
 
-	/* allocate memory on host */
-	cfloat* A_cbitmap = (cfloat*)malloc(n*n*sizeof(cfloat));
-	cfloat* A_fft = (cfloat*)malloc(n*n*sizeof(cfloat));
-	cfloat* B_fft = (cfloat*)malloc(n*n*sizeof(cfloat));
-	cfloat* C_fft = (cfloat*)malloc(n*n*sizeof(cfloat));
-	cfloat* C = (cfloat*)malloc(n*n*sizeof(cfloat));
-	cfloat* B_cbitmap = (cfloat*)malloc(n*n*sizeof(cfloat));
-
-	/* Generate WN coeffs */
-	generate_wn(n, m);
 
 	/* Calculate means */
-	for (i = 0; i < n * n; i++) {
+	for (i = 0; i < width * height; i++) {
 		A_mean = (A_mean * (i + 0.0f) + A[i]) / (i + 1.0f);
 		B_mean = (B_mean * (i + 0.0f) + B[i]) / (i + 1.0f);
 	}
 
-#if 1
-	/* Should we do this ??? */
-
-	/* Normalize (yes this is naive) */
-	for(i = 0; i < n * n; i++) {
-		A[i] -= A_mean;
-		B[i] -= B_mean;
-	}
-#endif
-
-	/* initialize data */
-	for (i = 0; i < n * n; i++) {
-		A_cbitmap[i] = A[i];
-		B_cbitmap[i] = B[i];
+	/* Initialize data w/ DC component removed */
+	for (i = 0; i < width; i++) {
+		for (j = 0; j < height; j++) {
+			A_cbitmap[i * n + j] = A[i * width + j] - A_mean;
+			B_cbitmap[i * n + j] = B[i * width + j] - B_mean;
+		}
 	}
 
 	/* allocate memory on device */
@@ -234,14 +260,9 @@ bool xcorr(float *A, float *B, int width, int height, float *retval)
 	coprthr_dread(dd,B_mem,0,B_fft,n*n*sizeof(cfloat),
 		COPRTHR_E_WAIT);
 
-	/* Calculate conjugate for B (on host(!)) */
-	for (i = 0; i < n * n; i++) {
-		B_fft[i] = conjf(B_fft[i]);
-	}
-
 	/* C_fft = Element wise A_fft x B_fft(conjugate) (on host(!)) */
 	for (i = 0; i < n * n; i++)
-		C_fft[i] = A_fft[i] * B_fft[i];
+		C_fft[i] = A_fft[i] * conjf(B_fft[i]);
 
 	/* C = ifft(C_fft) */
 	coprthr_dwrite(dd,wn_mem,0,wn_inv,n*sizeof(cfloat),COPRTHR_E_WAIT);
@@ -263,47 +284,50 @@ bool xcorr(float *A, float *B, int width, int height, float *retval)
 	double time_inv = t3.tv_sec-t2.tv_sec + 1e-6*(t3.tv_usec - t2.tv_usec);
 	printf("mpiexec time: forward %f sec inverse %f sec\n", time_fwd,time_inv);
 
-	float C_sum = 0, C_mean = 0, A_diff = 0, B_diff = 0;
-	for (i = 0; i < n*n; i++) {
-#if 0
-		C_sum += cabsf(C[i]);
-		C_mean = (C_mean * (i + 0.0f) + cabsf(C[i])) / (i + 1.0f);
-
-#else
-		C_sum += (A[i] - A_mean) * (B[i] - B_mean);
-#endif
-		A_diff += powf(A[i] - A_mean, 2.0f);
-		B_diff += powf(B[i] - B_mean, 2.0f);
+	/* TODO: Is the max always @0 ??? */
+	for (i = 0, correlation = crealf(C[0]); i < n * n; i++) {
+		if (crealf(C[i]) > correlation)
+			correlation = crealf(C[i]);
 	}
 
 	printf("A_mean = %f\n", A_mean);
-	printf("C_sum = %f\n", C_sum);
-	printf("C_mean = %f\n", C_mean);
-	float factor = sqrt(A_diff*B_diff);
-	printf("factor = %f\n", factor);
-	printf("correlation = %f\n", C_sum / factor);
+	printf("B_mean = %f\n", B_mean);
+	printf("correlation = %f\n", correlation);
 
-	/* clean up */
-	coprthr_dclose(dd);
+	*out_corr = correlation;
+
+out:
+
+	if (dd > -1)
+		coprthr_dclose(dd);
 
 	/* Not pretty, from coprthr code, but at least we're only leaking
 	 * ~3kb now (compared to 70kb) ... */
-	free(prg->bin);
-	free(prg);
-	free(thr->arg_off);
-	free(thr->arg_buf);
-	free(thr);
+	if (prg) {
+		free(prg->bin);
+		free(prg);
+	}
 
-	free(A_cbitmap);
-	free(A_fft);
-	free(B_fft);
-	free(C_fft);
-	free(C);
-	free(B_cbitmap);
+	if (thr) {
+		free(thr->arg_off);
+		free(thr->arg_buf);
+		free(thr);
+	}
 
-	*retval = C_sum / factor;
+	if (A_cbitmap)
+		free(A_cbitmap);
+	if (B_cbitmap)
+		free(B_cbitmap);
+	if (A_fft)
+		free(A_fft);
+	if (B_fft)
+		free(B_fft);
+	if (C_fft)
+		free(C_fft);
+	if (C)
+		free(C);
 
-	return true;
+	return retval;
 }
 
 /* Returns true on success */
@@ -374,7 +398,6 @@ int main(int argc, char *argv[])
 
 	printf("correlation: %f\n", corr);
 
-free_B:
 	free(B);
 free_A:
 	free(A);
