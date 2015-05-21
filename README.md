@@ -28,6 +28,14 @@ find . -type f -exec mogrify -gravity southwest -background black \
 Use this repo (epiphany-stable-1.6 branch):  
 https://github.com/olajep/coprthr
 
+```
+./configure --enable-epiphany
+make
+sudo make install
+```
+
+This will install COPRTHR to `/usr/local/browndeer`
+
 ###COPRTHR-MPI
 Binary here:  
 http://www.browndeertechnology.com/code/bdt-libcoprthr_mpi-preview.tgz  
