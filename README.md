@@ -5,6 +5,7 @@
 * Do calculations on device.
 * Use FFT to calculate correlation.
 * Don't reinitialize COPRTHR on every call to xcorr().
+* ??? jpeg: Remove hack that scales images down to < 64x64 (?)
 
 
 ##Generate data set

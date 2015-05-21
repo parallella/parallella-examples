@@ -93,7 +93,7 @@ static inline bool from_float(struct jpeg_compress_struct *cinfo,
  */
 float *jpeg_to_grayscale(void *jpeg, size_t jpeg_size, int *width, int *height)
 {
-	int ret, line = 0;
+	int ret, denom, line = 0;
 	float *bitmap;
 	uint8_t *buf, *bufs[1];
 	bool decompress_fail = false;
@@ -113,6 +113,15 @@ float *jpeg_to_grayscale(void *jpeg, size_t jpeg_size, int *width, int *height)
 	}
 
 	cinfo.out_color_space = JCS_GRAYSCALE;
+
+	/* HACK: Scale image to max 64x64 (so it fits in Epiphany mem incl.
+	 * zero padding...) */
+	for (denom = 1;
+	     cinfo.image_width / denom > 64 || cinfo.image_height / denom > 64;
+	     denom *= 2)
+		;
+	cinfo.scale_num = 1;
+	cinfo.scale_denom = denom;
 
 	if (!jpeg_start_decompress(&cinfo)) {
 		fprintf(stderr, "%s:%s: jpeg_start_decompress() failed\n",
