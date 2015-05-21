@@ -1,6 +1,6 @@
 # Makefile for compiling the MPI 2D FFT code for Epiphany
 
-CCFLAGS += -O2 $(DEFS)
+CFLAGS += -O2 $(DEFS)
 
 INCS = -I. -I/usr/local/browndeer/include -I/usr/local/browndeer/include/coprthr
 LIBS = -L/usr/local/browndeer/lib -lcoprthr -lcoprthrcc -lm -ljpeg
@@ -26,14 +26,14 @@ device.cbin.3.e32: device.c
 	chmod 644 $@
 
 host: host.c jpeg.c
-	$(CC) $(CCFLAGS) $(DEFS) $(INCS) $^ -o $@ $(LIBS)
+	$(CC) $(CFLAGS) $(DEFS) $(INCS) $^ -o $@ $(LIBS)
 
 libfft-demo.so: host.c jpeg.c
-	$(CC) -fvisibility=hidden -shared -fPIC $(CCFLAGS) $(DEFS) $(INCS) $^ \
+	$(CC) -fvisibility=hidden -shared -fPIC $(CFLAGS) $(DEFS) $(INCS) $^ \
 		-o $@ $(LIBS)
 
 .c.o:
-	$(CC) $(CCFLAGS) $(DEFS) $(INCS) -c $<
+	$(CC) $(CFLAGS) $(DEFS) $(INCS) -c $<
 
 clean: $(SUBDIRS)
 	rm -f *.o $(TARGET)
