@@ -176,7 +176,6 @@ float *jpeg_to_grayscale(void *jpeg, size_t jpeg_size, int *width, int *height)
 void *grayscale_to_jpeg(float *bitmap, int width, int height,
 			unsigned long *jpeg_size)
 {
-	unsigned char *stride;
 	uint8_t *buf, *bufs[1];
 	uint8_t *jpeg;
 	int line;
@@ -230,7 +229,6 @@ void *grayscale_to_jpeg(float *bitmap, int width, int height,
 bool grayscale_to_jpeg_file(float *bitmap, int width, int height, char *path)
 {
 	int fd;
-	struct stat file_stat;
 	size_t i;
 	ssize_t count;
 	uint8_t *jpeg = NULL;
