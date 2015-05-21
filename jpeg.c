@@ -96,7 +96,7 @@ float *jpeg_to_grayscale(void *jpeg, size_t jpeg_size, int *width, int *height)
 	int ret, line = 0;
 	float *bitmap;
 	uint8_t *buf, *bufs[1];
-	bool convert_fail = false;
+	bool decompress_fail = false;
 
 	struct jpeg_decompress_struct cinfo;
 	struct jpeg_error_mgr jerr;
@@ -114,7 +114,11 @@ float *jpeg_to_grayscale(void *jpeg, size_t jpeg_size, int *width, int *height)
 
 	cinfo.out_color_space = JCS_GRAYSCALE;
 
-	jpeg_start_decompress(&cinfo);
+	if (!jpeg_start_decompress(&cinfo)) {
+		fprintf(stderr, "%s:%s: jpeg_start_decompress() failed\n",
+			__FILE__, __func__);
+		return NULL;
+	}
 
 	*width = cinfo.output_width;
 	*height = cinfo.output_height;
@@ -125,9 +129,18 @@ float *jpeg_to_grayscale(void *jpeg, size_t jpeg_size, int *width, int *height)
 	bufs[0] = buf;
 
 	while (cinfo.output_scanline < cinfo.output_height) {
-		jpeg_read_scanlines(&cinfo, bufs, 1);
+
+		/* We're only reading one scanline at a time so this should
+		 * always be true */
+		if (jpeg_read_scanlines(&cinfo, bufs, 1) != 1) {
+			fprintf(stderr, "%s:%s: jpeg_read_scanlines() failed\n",
+				__FILE__, __func__);
+			decompress_fail = true;
+			break;
+		}
+
 		if (!to_float(&cinfo, bufs, 1, bitmap, line)) {
-			convert_fail = true;
+			decompress_fail = true;
 			break;
 		}
 		line++;
@@ -139,7 +152,7 @@ float *jpeg_to_grayscale(void *jpeg, size_t jpeg_size, int *width, int *height)
 
 	free(buf);
 
-	if (convert_fail) {
+	if (decompress_fail) {
 		free(bitmap);
 		bitmap = NULL;
 	}
