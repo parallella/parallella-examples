@@ -41,6 +41,8 @@ libfft-demo-$(IMPL).so: main.c $(IMPL).c jpeg.c
 		-o $@ $(LIBS)
 
 clean:
-	rm -f *.o $(TARGET) $(TARGET_coprthr) $(TARGET_fftw)
+	rm -f *.o test-coprthr test-fftw \
+	    libfft-demo-coprthr.so libfft-demo-fftw.so \
+	    $(TARGET_coprthr) $(TARGET_fftw)
 
 distclean: clean
