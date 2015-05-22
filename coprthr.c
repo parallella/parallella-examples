@@ -30,8 +30,14 @@
 #include <coprthr.h>
 #include <coprthr_cc.h>
 #include <coprthr_thread.h>
-#include <coprthr_mpi.h>
 #include <coprthr_sched.h>
+
+/* Use repo header */
+#include "coprthr_mpi.h"
+/* ... and check that we have the right header */
+#ifndef __coprthr_mpi_fft
+#error Wrong MPI header got included
+#endif
 
 #include "demo.h"
 

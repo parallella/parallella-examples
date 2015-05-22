@@ -18,6 +18,9 @@
 #ifndef __coprthr_mpi
 #define __coprthr_mpi
 
+/* Hack so fft-demo knows it included the right header */
+#define __coprthr_mpi_fft
+
 #include <coprthr.h>
 
 #if defined(__coprthr_device__)
@@ -192,14 +195,22 @@ int MPI_Sendrecv_replace( void* buf, int count, MPI_Datatype datatype,
 
 #else
 
+#ifndef __free
+#define __free free
+#endif
+
 int coprthr_mpiexec( 
 	int dd, unsigned int nthr, 
 	coprthr_sym_t thrfunc, void* parg, size_t argsz,
 	int flag 
 )
 {
+        coprthr_event_t ev;
+
 	coprthr_mem_t argmem = coprthr_dmalloc(dd,argsz,0);
-	coprthr_dwrite(dd,argmem,0,parg,argsz,COPRTHR_E_NOW);
+	ev = coprthr_dwrite(dd,argmem,0,parg,argsz,COPRTHR_E_NOW);
+	__coprthr_free_event(ev);
+        free(ev);
 	coprthr_attr_t attr;
 	coprthr_td_t td;
 	void* status;
@@ -207,9 +218,12 @@ int coprthr_mpiexec(
 	coprthr_attr_setdetachstate(&attr,COPRTHR_CREATE_JOINABLE);
 	coprthr_attr_setdevice(&attr,dd);
 	coprthr_ncreate( nthr, &td, &attr, thrfunc, (void*)&argmem );
+	/* TODO: td seems to leak too */
 	coprthr_attr_destroy( &attr);
 	coprthr_join(td,&status);
-	coprthr_dread(dd,argmem,0,parg,argsz,COPRTHR_E_NOW);
+	ev = coprthr_dread(dd,argmem,0,parg,argsz,COPRTHR_E_NOW);
+	__coprthr_free_event(ev);
+	free(ev);
 	coprthr_dfree(dd,argmem);
 }
 
