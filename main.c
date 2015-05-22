@@ -21,8 +21,6 @@ bool calculateXCorr(uint8_t *jpeg1, size_t jpeg1_size,
 	float *A, *B;
 	int width, height;
 
-	int i;
-
 	if (!initialized) {
 		if (!fftimpl_init()) {
 			fprintf(stderr,
@@ -44,13 +42,10 @@ bool calculateXCorr(uint8_t *jpeg1, size_t jpeg1_size,
 		goto free_A;
 	}
 
-	for (i = 0; i < 1000; i++) {
-		printf("i=%d\n", i);
 
-		if (!fftimpl_xcorr(A, B, width, height, corr)) {
-			fprintf(stderr, "ERROR: xcorr failed\n");
-			ret = false;
-		}
+	if (!fftimpl_xcorr(A, B, width, height, corr)) {
+		fprintf(stderr, "ERROR: xcorr failed\n");
+		ret = false;
 	}
 
 	free(B);
@@ -68,8 +63,6 @@ int main(int argc, char *argv[])
 	float *A = NULL, *B = NULL;
 	int width, height;
 	float corr = 0;
-
-	int i;
 
 	if (!initialized) {
 		if (!fftimpl_init()) {
