@@ -6,6 +6,7 @@
 * Use FFT to calculate correlation.
 * Don't reinitialize COPRTHR on every call to xcorr().
 * ??? jpeg: Remove hack that scales images down to < 64x64 (?)
+* FFTW implementation
 
 
 ##Generate data set
@@ -38,5 +39,20 @@ https://www.parallella.org/2015/04/09/threaded-mpi-for-the-epiphany-architecture
 ##Build program and library
 
 ```
-make
+make IMPL=coprthr
+```
+or (TODO)  
+```
+make IMPL=fftw
+```
+
+This will generate a test program `test-IMPL` and a shared library
+`libfft-demo-IMPL.so`. If you want to build for both targets, run once for
+each implementation.
+
+The library exports this xcorr function:
+```c
+bool calculateXCorr(uint8_t *jpeg1, size_t jpeg1_size,
+		    uint8_t *jpeg2, size_t jpeg2_size,
+		    float *corr)
 ```

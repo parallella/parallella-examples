@@ -1,22 +1,30 @@
 # Makefile for compiling the MPI 2D FFT code for Epiphany
 
-CFLAGS += -O2 $(DEFS)
+# Which implementation, either coprthr or fftw (TODO)
+# If you want to build both you have to run make twice.
+IMPL ?= coprthr
 
-INCS = -I. -I/usr/local/browndeer/include -I/usr/local/browndeer/include/coprthr
-LIBS = -L/usr/local/browndeer/lib -lcoprthr -lcoprthrcc -lm -ljpeg
+INCS_coprthr	= -I. -I/usr/local/browndeer/include \
+		  -I/usr/local/browndeer/include/coprthr
+LIBS_coprthr	= -L/usr/local/browndeer/lib -lcoprthr -lcoprthrcc
+TARGET_coprthr	= device.cbin.3.e32
+DEFS_coprthr	= -DMPI_BUF_SIZE=128 -DDEVICE_BINARY=\"$(TARGET_coprthr)\"
 
-DEVICE_BINARY = device.cbin.3.e32
+LIBS		= -lm -ljpeg
+CFLAGS		= -O2
+INCS		= -I.
+DEFS		=
+TARGET		= test-$(IMPL) libfft-demo-$(IMPL).so
 
-TARGET = host $(DEVICE_BINARY) libfft-demo.so
-
-DEFS = -DMPI_BUF_SIZE=128 -DDEVICE_BINARY=\"$(DEVICE_BINARY)\"
+LIBS		+= $(LIBS_$(IMPL))
+CFLAGS		+= $(CFLAGS_$(IMPL))
+INCS		+= $(INCS_$(IMPL))
+DEFS		+= $(DEFS_$(IMPL))
+TARGET		+= $(TARGET_$(IMPL))
 
 all: $(TARGET)
 
-.PHONY: clean install uninstall $(SUBDIRS)
-
-.SUFFIXES:
-.SUFFIXES: .c .o .x
+.PHONY: clean install uninstall
 
 device.cbin.3.e32: device.c
 	clcc --coprthr-cc -mtarget=e32 -D__link_mpi__ --dump-bin \
@@ -25,17 +33,14 @@ device.cbin.3.e32: device.c
 	# clcc1 bug workaround.
 	chmod 644 $@
 
-host: host.c jpeg.c
+test-$(IMPL): main.c $(IMPL).c jpeg.c
 	$(CC) $(CFLAGS) $(DEFS) $(INCS) $^ -o $@ $(LIBS)
 
-libfft-demo.so: host.c jpeg.c
+libfft-demo-$(IMPL).so: main.c $(IMPL).c jpeg.c
 	$(CC) -fvisibility=hidden -shared -fPIC $(CFLAGS) $(DEFS) $(INCS) $^ \
 		-o $@ $(LIBS)
 
-.c.o:
-	$(CC) $(CFLAGS) $(DEFS) $(INCS) -c $<
-
-clean: $(SUBDIRS)
-	rm -f *.o $(TARGET)
+clean:
+	rm -f *.o $(TARGET) $(TARGET_coprthr) $(TARGET_fftw)
 
 distclean: clean
