@@ -10,6 +10,8 @@ LIBS_coprthr	= -L/usr/local/browndeer/lib -lcoprthr -lcoprthrcc
 TARGET_coprthr	= device.cbin.3.e32
 DEFS_coprthr	= -DMPI_BUF_SIZE=128 -DDEVICE_BINARY=\"$(TARGET_coprthr)\"
 
+LIBS_fftw	= -lfftw3f
+
 LIBS		= -lm -ljpeg
 CFLAGS		= -O2
 INCS		= -I.
