@@ -26,7 +26,7 @@ find . -type f -exec mogrify -gravity southwest -background black \
 ###libjpeg
 
 ###COPRTHR
-Use this repo (epiphany-stable-1.6 branch):  
+Use this repo (parallellocalypse branch):  
 https://github.com/olajep/coprthr
 
 ```
