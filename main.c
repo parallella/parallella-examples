@@ -77,7 +77,7 @@ int main(int argc, char *argv[])
 		file1 = argv[1];
 
 	if (argc > 2)
-		file1 = argv[2];
+		file2 = argv[2];
 
 	A = jpeg_file_to_grayscale(file1, &width, &height);
 	if (!A) {
@@ -96,7 +96,7 @@ int main(int argc, char *argv[])
 		ret = 3;
 	}
 
-	printf("correlation: %f\n", corr);
+	printf("%f,%s,%s\n", corr, file1, file2);
 
 	free(B);
 free_A:
