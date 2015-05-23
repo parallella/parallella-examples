@@ -208,7 +208,6 @@ static bool allocate_bufs()
 
 bool fftimpl_init()
 {
-	printf("fftimpl:init\n");
 	if (GLOB.initialized)
 		return true;
 
@@ -400,17 +399,15 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 
 	double time_fwd = t1.tv_sec-t0.tv_sec + 1e-6*(t1.tv_usec - t0.tv_usec);
 	double time_inv = t3.tv_sec-t2.tv_sec + 1e-6*(t3.tv_usec - t2.tv_usec);
+#if 0
 	printf("mpiexec time: forward %f sec inverse %f sec\n", time_fwd,time_inv);
+#endif
 
 	/* TODO: Is the max always @0 ??? */
 	for (i = 0, correlation = FLT_MIN; i < n * n; i++) {
 		if (crealf(C[i]) > correlation)
 			correlation = crealf(C[i]);
 	}
-
-	printf("A_mean = %f\n", A_mean);
-	printf("B_mean = %f\n", B_mean);
-	printf("correlation = %f\n", correlation);
 
 	*out_corr = correlation;
 

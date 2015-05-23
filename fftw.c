@@ -184,10 +184,6 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 	/* Normalize correlation */
 	correlation /= ((float) NSIZE * NSIZE);
 
-	printf("A_mean = %f\n", A_mean);
-	printf("B_mean = %f\n", B_mean);
-	printf("correlation = %f\n", correlation);
-
 	*out_corr = correlation;
 
 	return true;
