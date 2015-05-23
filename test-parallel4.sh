@@ -49,17 +49,19 @@ fi
 tmpdir=$(mktemp -d)
 
 find $dir -type f -iname "*.jpg" | sort > $tmpdir/all
-split -n l/2 --numeric-suffixes=1 --suffix-length=1 $tmpdir/all $tmpdir/set
+split -n l/4 --numeric-suffixes=1 --suffix-length=1 $tmpdir/all $tmpdir/set
 
 echo Starting. No output until program finishes. Stay tuned... >/dev/stderr
 
 $EXEPATH/test-dataset-fftw $ref $tmpdir/set1 > $tmpdir/out1.txt &
-$EXEPATH/test-dataset-fftw $ref $tmpdir/set2 > $tmpdir/out2.txt
+$EXEPATH/test-dataset-fftw $ref $tmpdir/set2 > $tmpdir/out2.txt &
+$EXEPATH/test-dataset-fftw $ref $tmpdir/set3 > $tmpdir/out3.txt &
+$EXEPATH/test-dataset-fftw $ref $tmpdir/set4 > $tmpdir/out4.txt
 
 wait
 
 echo Correlation,ImageA,ImageB
 test_one $ref $ref
-cat $tmpdir/out1.txt $tmpdir/out2.txt
+cat $tmpdir/out1.txt $tmpdir/out2.txt $tmpdir/out3.txt $tmpdir/out4.txt
 
 rm -rf $tmpdir
