@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <complex.h> /* Use C99 complex type */
 #include <fftw3.h>
+#include <float.h>
 
 #include "demo.h"
 
@@ -175,7 +176,7 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 	fftwf_execute(GLOB.C_inv);
 
 	/* TODO: Is the max always @0 ??? */
-	for (i = 0, correlation = crealf(GLOB.C[0]); i < NSIZE * NSIZE; i++) {
+	for (i = 0, correlation = FLT_MIN; i < NSIZE * NSIZE; i++) {
 		if (crealf(GLOB.C[i]) > correlation)
 			correlation = crealf(GLOB.C[i]);
 	}

@@ -25,6 +25,7 @@
 #include <sys/time.h>
 #include <math.h>
 #include <complex.h>
+#include <float.h>
 #include <stdbool.h>
 
 #include <coprthr.h>
@@ -402,7 +403,7 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 	printf("mpiexec time: forward %f sec inverse %f sec\n", time_fwd,time_inv);
 
 	/* TODO: Is the max always @0 ??? */
-	for (i = 0, correlation = crealf(C[0]); i < n * n; i++) {
+	for (i = 0, correlation = FLT_MIN; i < n * n; i++) {
 		if (crealf(C[i]) > correlation)
 			correlation = crealf(C[i]);
 	}
