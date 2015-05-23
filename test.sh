@@ -23,6 +23,11 @@ if ! [ -e $EXEPATH/test-fftw ]; then
 	exit 1
 fi
 
+if ! [ -e $EXEPATH/test-dataset-fftw ]; then
+	echo "You need to 'make IMPL=fftw'"
+	exit 1
+fi
+
 [ $# = 2 ] || usage
 
 ref=$1
@@ -38,11 +43,12 @@ if ! [ -d $dir ]; then
 	exit 1
 fi
 
-all=$(find $dir -type f -iname "*jpg" | sort) || exit 1
+
+tmpfile=$(mktemp)
+find $dir -type f -iname "*.jpg" | sort > $tmpfile
 
 echo Correlation,ImageA,ImageB
 test_one $ref $ref
-for f in $all; do
-	test_one $ref $f
-done
+$EXEPATH/test-dataset-fftw $ref $tmpfile
 
+rm $tmpfile
