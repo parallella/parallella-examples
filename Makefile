@@ -16,7 +16,7 @@ LIBS		= -lm -ljpeg
 CFLAGS		= -O2
 INCS		= -I.
 DEFS		=
-TARGET		= test-$(IMPL) libfft-demo-$(IMPL).so
+TARGET		= test-$(IMPL) test-dataset-$(IMPL) libfft-demo-$(IMPL).so
 
 LIBS		+= $(LIBS_$(IMPL))
 CFLAGS		+= $(CFLAGS_$(IMPL))
@@ -38,12 +38,16 @@ device.cbin.3.e32: device.c
 test-$(IMPL): main.c $(IMPL).c jpeg.c
 	$(CC) $(CFLAGS) $(DEFS) $(INCS) $^ -o $@ $(LIBS)
 
+test-dataset-$(IMPL): test-dataset.c $(IMPL).c jpeg.c
+	$(CC) $(CFLAGS) $(DEFS) $(INCS) $^ -o $@ $(LIBS)
+
 libfft-demo-$(IMPL).so: main.c $(IMPL).c jpeg.c
 	$(CC) -fvisibility=hidden -shared -fPIC $(CFLAGS) $(DEFS) $(INCS) $^ \
 		-o $@ $(LIBS)
 
 clean:
 	rm -f *.o test-coprthr test-fftw \
+	    test-dataset-coprthr test-dataset-fftw \
 	    libfft-demo-coprthr.so libfft-demo-fftw.so \
 	    $(TARGET_coprthr) $(TARGET_fftw)
 
