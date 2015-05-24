@@ -269,9 +269,6 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 
 	bool retval = true;
 
-	unsigned int n = NSIZE;
-	unsigned int m = MSIZE;
-
 	float A_mean = 0, B_mean = 0;	/* Means */
 	float correlation;
 
@@ -291,12 +288,12 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 	}
 
 	/* Allocate zeroed memory on host */
-	A_cbitmap	= (cfloat *) calloc(n * n, sizeof(cfloat));
-	B_cbitmap	= (cfloat *) calloc(n * n, sizeof(cfloat));
-	A_fft		= (cfloat *) calloc(n * n, sizeof(cfloat));
-	B_fft		= (cfloat *) calloc(n * n, sizeof(cfloat));
-	C_fft		= (cfloat *) calloc(n * n, sizeof(cfloat));
-	C		= (cfloat *) calloc(n * n, sizeof(cfloat));
+	A_cbitmap	= (cfloat *) calloc(NSIZE * NSIZE, sizeof(cfloat));
+	B_cbitmap	= (cfloat *) calloc(NSIZE * NSIZE, sizeof(cfloat));
+	A_fft		= (cfloat *) calloc(NSIZE * NSIZE, sizeof(cfloat));
+	B_fft		= (cfloat *) calloc(NSIZE * NSIZE, sizeof(cfloat));
+	C_fft		= (cfloat *) calloc(NSIZE * NSIZE, sizeof(cfloat));
+	C		= (cfloat *) calloc(NSIZE * NSIZE, sizeof(cfloat));
 	if (!A_cbitmap || !B_cbitmap || !A_fft || !B_fft || !C_fft || !C) {
 		fprintf(stderr,
 			"ERROR: Failed allocating memory.\n");
@@ -314,23 +311,23 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 	/* Initialize data w/ DC component removed */
 	for (i = 0; i < width; i++) {
 		for (j = 0; j < height; j++) {
-			A_cbitmap[i * n + j] = A[i * width + j] - A_mean;
-			B_cbitmap[i * n + j] = B[i * width + j] - B_mean;
+			A_cbitmap[i * NSIZE + j] = A[i * width + j] - A_mean;
+			B_cbitmap[i * NSIZE + j] = B[i * width + j] - B_mean;
 		}
 	}
 
 	/* copy memory to device */
 	ev = coprthr_dwrite(GLOB.coprthr_dd, GLOB.wn_mem, 0, GLOB.wn_fwd,
-			    n * sizeof(cfloat), COPRTHR_E_WAIT);
+			    NSIZE * sizeof(cfloat), COPRTHR_E_WAIT);
 	__free_event(ev);
 
 	ev = coprthr_dwrite(GLOB.coprthr_dd, GLOB.A_mem, 0, A_cbitmap,
-			    n * n* sizeof(cfloat), COPRTHR_E_WAIT);
+			    NSIZE * NSIZE * sizeof(cfloat), COPRTHR_E_WAIT);
 	__free_event(ev);
 
 	/* Calculate FFT for image A */
 	struct my_args args_a_fft = {
-		.n = n, .m = m,
+		.n = NSIZE, .m = MSIZE,
 		.inverse = 0,
 		.wn = coprthr_memptr(GLOB.wn_mem, 0),
 		.data2 = coprthr_memptr(GLOB.A_mem, 0)
@@ -343,19 +340,19 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 
 	/* read back data from memory on device */
 	ev = coprthr_dread(GLOB.coprthr_dd, GLOB.A_mem, 0, A_fft,
-			   n *n * sizeof(cfloat), COPRTHR_E_WAIT);
+			   NSIZE * NSIZE * sizeof(cfloat), COPRTHR_E_WAIT);
 	__free_event(ev);
 
 	ev = coprthr_dwrite(GLOB.coprthr_dd, GLOB.wn_mem, 0, GLOB.wn_fwd,
-			    n * sizeof(cfloat), COPRTHR_E_WAIT);
+			    NSIZE * sizeof(cfloat), COPRTHR_E_WAIT);
 	__free_event(ev);
 	ev = coprthr_dwrite(GLOB.coprthr_dd, GLOB.B_mem, 0, B_cbitmap,
-			    n * n * sizeof(cfloat), COPRTHR_E_WAIT);
+			    NSIZE * NSIZE * sizeof(cfloat), COPRTHR_E_WAIT);
 	__free_event(ev);
 
 	/* Calculate FFT for bitmap B */
 	struct my_args args_b_fft = {
-		.n = n, .m = m,
+		.n = NSIZE, .m = MSIZE,
 		.inverse = 0,
 		.wn = coprthr_memptr(GLOB.wn_mem, 0),
 		.data2 = coprthr_memptr(GLOB.B_mem, 0)
@@ -367,24 +364,24 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 	gettimeofday(&t3,0);
 
 	ev = coprthr_dread(GLOB.coprthr_dd, GLOB.B_mem, 0, B_fft,
-			   n * n * sizeof(cfloat), COPRTHR_E_WAIT);
+			   NSIZE * NSIZE * sizeof(cfloat), COPRTHR_E_WAIT);
 	__free_event(ev);
 
 	/* C_fft = Element wise A_fft x B_fft(conjugate) (on host(!)) */
-	for (i = 0; i < n * n; i++)
+	for (i = 0; i < NSIZE * NSIZE; i++)
 		C_fft[i] = A_fft[i] * conjf(B_fft[i]);
 
 	/* C = ifft(C_fft) */
 	ev = coprthr_dwrite(GLOB.coprthr_dd, GLOB.wn_mem, 0, GLOB.wn_inv,
-			    n * sizeof(cfloat), COPRTHR_E_WAIT);
+			    NSIZE * sizeof(cfloat), COPRTHR_E_WAIT);
 	__free_event(ev);
 	ev = coprthr_dwrite(GLOB.coprthr_dd, GLOB.C_mem, 0, C_fft,
-			    n * n * sizeof(cfloat),COPRTHR_E_WAIT);
+			    NSIZE * NSIZE * sizeof(cfloat),COPRTHR_E_WAIT);
 	__free_event(ev);
 
 	/* Calculate inv FFT for bitmap C */
 	struct my_args args_c_inv = {
-		.n = n, .m = m,
+		.n = NSIZE, .m = MSIZE,
 		.inverse = 1,
 		.wn = coprthr_memptr(GLOB.wn_mem,0),
 		.data2 = coprthr_memptr(GLOB.C_mem,0)
@@ -394,7 +391,7 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 			sizeof(args_c_inv), 0);
 
 	ev = coprthr_dread(GLOB.coprthr_dd, GLOB.C_mem, 0, C,
-			   n * n * sizeof(cfloat), COPRTHR_E_WAIT);
+			   NSIZE * NSIZE * sizeof(cfloat), COPRTHR_E_WAIT);
 	__free_event(ev);
 
 	double time_fwd = t1.tv_sec-t0.tv_sec + 1e-6*(t1.tv_usec - t0.tv_usec);
@@ -404,7 +401,7 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 #endif
 
 	/* TODO: Is the max always @0 ??? */
-	for (i = 0, correlation = FLT_MIN; i < n * n; i++) {
+	for (i = 0, correlation = FLT_MIN; i < NSIZE * NSIZE; i++) {
 		if (crealf(C[i]) > correlation)
 			correlation = crealf(C[i]);
 	}
