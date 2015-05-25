@@ -68,9 +68,11 @@ struct {
 	coprthr_sym_t coprthr_fn;	/* Thread function symbol */
 	coprthr_mem_t wm_fwd_mem;
 	coprthr_mem_t wm_bwd_mem;
-	coprthr_mem_t A_mem;
-	coprthr_mem_t B_mem;
-	coprthr_mem_t C_mem;
+	coprthr_mem_t ref_bmp_mem;
+	coprthr_mem_t bmps_mem;
+	coprthr_mem_t ref_fft_mem;
+	coprthr_mem_t tmp_fft_mem; /* Do we need this ? */
+	coprthr_mem_t C_mem; /* Remove ? */
 
 } GLOB = {
 	.initialized = false,
@@ -81,8 +83,10 @@ struct {
 	.coprthr_fn = NULL,
 	.wm_fwd_mem = NULL,
 	.wm_bwd_mem = NULL,
-	.A_mem = NULL,
-	.B_mem = NULL,
+	.ref_bmp_mem = NULL,
+	.bmps_mem = NULL,
+	.ref_fft_mem = NULL,
+	.tmp_fft_mem = NULL,
 	.C_mem = NULL,
 
 };
@@ -195,8 +199,12 @@ static bool allocate_bufs()
 	/* allocate memory on device */
 	GLOB.wm_fwd_mem	= coprthr_dmalloc(GLOB.coprthr_dd, wn_sz, 0);
 	GLOB.wm_bwd_mem	= coprthr_dmalloc(GLOB.coprthr_dd, wn_sz, 0);
-	GLOB.A_mem	= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz, 0);
-	GLOB.B_mem	= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz, 0);
+	GLOB.ref_bmp_mem= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz, 0);
+	/* TODO: Larger */
+	GLOB.bmps_mem	= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz, 0);
+	GLOB.ref_fft_mem= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz, 0);
+	GLOB.tmp_fft_mem= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz, 0);
+	GLOB.C_mem	= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz, 0);
 	GLOB.C_mem	= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz, 0);
 
 	return true;
@@ -321,81 +329,35 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 	__free_event(ev);
 
 
-	/* Copy A to device */
-	ev = coprthr_dwrite(GLOB.coprthr_dd, GLOB.A_mem, 0, A_cbitmap,
+	/* Copy A (reference image) to device */
+	ev = coprthr_dwrite(GLOB.coprthr_dd, GLOB.ref_bmp_mem, 0, A_cbitmap,
 			    NSIZE * NSIZE * sizeof(cfloat), COPRTHR_E_WAIT);
 	__free_event(ev);
 
-	/* Copy B to device */
-	ev = coprthr_dwrite(GLOB.coprthr_dd, GLOB.B_mem, 0, B_cbitmap,
+	/* Copy B to device. TODO: More images. */
+	ev = coprthr_dwrite(GLOB.coprthr_dd, GLOB.bmps_mem, 0, B_cbitmap,
 			    NSIZE * NSIZE * sizeof(cfloat), COPRTHR_E_WAIT);
 	__free_event(ev);
 
 	/* Calculate FFT for image A */
-	struct my_args args_a_fft = {
+	struct my_args args_xcorr = {
 		.n		= NSIZE,
 		.m		= MSIZE,
-		.inverse	= 0,
 		.wn_fwd		= (__e_ptr(cfloat)) coprthr_memptr(GLOB.wm_fwd_mem, 0),
 		.wn_bwd		= (__e_ptr(cfloat)) coprthr_memptr(GLOB.wm_bwd_mem,0),
-		.ref_bitmap	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.A_mem, 0),
-		.bitmaps	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.A_mem, 0)
+		.ref_bitmap	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.ref_bmp_mem, 0),
+		.bitmaps	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.bmps_mem, 0),
+		.ref_fft	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.ref_fft_mem, 0),
+		.tmp_fft	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.tmp_fft_mem, 0),
 	};
 
 	gettimeofday(&t0,0);
-	coprthr_mpiexec(GLOB.coprthr_dd, NPROCS, GLOB.coprthr_fn, &args_a_fft,
-			sizeof(args_a_fft), 0);
+	coprthr_mpiexec(GLOB.coprthr_dd, NPROCS, GLOB.coprthr_fn, &args_xcorr,
+			sizeof(args_xcorr), 0);
 	gettimeofday(&t1,0);
 
 	/* read back data from memory on device */
-	ev = coprthr_dread(GLOB.coprthr_dd, GLOB.A_mem, 0, A_fft,
-			   NSIZE * NSIZE * sizeof(cfloat), COPRTHR_E_WAIT);
-	__free_event(ev);
-
-	/* Calculate FFT for bitmap B */
-	struct my_args args_b_fft = {
-		.n		= NSIZE,
-		.m		= MSIZE,
-		.inverse	= 0,
-		.wn_fwd		= (__e_ptr(cfloat)) coprthr_memptr(GLOB.wm_fwd_mem, 0),
-		.wn_bwd		= (__e_ptr(cfloat)) coprthr_memptr(GLOB.wm_bwd_mem,0),
-		.ref_bitmap	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.B_mem, 0),
-		.bitmaps	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.A_mem, 0)
-	};
-
-	gettimeofday(&t2,0);
-	coprthr_mpiexec(GLOB.coprthr_dd, NPROCS, GLOB.coprthr_fn, &args_b_fft,
-			sizeof(args_b_fft), 0);
-	gettimeofday(&t3,0);
-
-	ev = coprthr_dread(GLOB.coprthr_dd, GLOB.B_mem, 0, B_fft,
-			   NSIZE * NSIZE * sizeof(cfloat), COPRTHR_E_WAIT);
-	__free_event(ev);
-
-	/* C_fft = Element wise A_fft x B_fft(conjugate) (on host(!)) */
-	for (i = 0; i < NSIZE * NSIZE; i++)
-		C_fft[i] = A_fft[i] * conjf(B_fft[i]);
-
-	/* C = ifft(C_fft) */
-	ev = coprthr_dwrite(GLOB.coprthr_dd, GLOB.C_mem, 0, C_fft,
-			    NSIZE * NSIZE * sizeof(cfloat),COPRTHR_E_WAIT);
-	__free_event(ev);
-
-	/* Calculate inv FFT for bitmap C */
-	struct my_args args_c_inv = {
-		.n		= NSIZE,
-		.m		= MSIZE,
-		.inverse	= 1,
-		.wn_fwd		= (__e_ptr(cfloat)) coprthr_memptr(GLOB.wm_fwd_mem,0),
-		.wn_bwd		= (__e_ptr(cfloat)) coprthr_memptr(GLOB.wm_bwd_mem,0),
-		.ref_bitmap	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.C_mem,0),
-		.bitmaps	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.A_mem, 0)
-	};
-
-	coprthr_mpiexec(GLOB.coprthr_dd, NPROCS, GLOB.coprthr_fn, &args_c_inv,
-			sizeof(args_c_inv), 0);
-
-	ev = coprthr_dread(GLOB.coprthr_dd, GLOB.C_mem, 0, C,
+	ev = coprthr_dread(GLOB.coprthr_dd, GLOB.ref_bmp_mem, 0, A_fft,
 			   NSIZE * NSIZE * sizeof(cfloat), COPRTHR_E_WAIT);
 	__free_event(ev);
 
@@ -407,8 +369,8 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 
 	/* TODO: Is the max always @0 ??? */
 	for (i = 0, correlation = FLT_MIN; i < NSIZE * NSIZE; i++) {
-		if (crealf(C[i]) > correlation)
-			correlation = crealf(C[i]);
+		if (crealf(A_fft[i]) > correlation)
+			correlation = crealf(A_fft[i]);
 	}
 
 	/* Normalize correlation */

@@ -194,8 +194,9 @@ my_thread (void *p) {
 
 	cfloat *g_wn_fwd = args.wn_fwd;
 	cfloat *g_wn_bwd = args.wn_bwd;
-	cfloat *g_ref_bmp = args.ref_bitmap;
-	cfloat *g_cmp_bmp = args.bitmaps; /* TODO: First */
+
+	/* TODO: First image now */
+	cfloat *g_cmp_bmp = args.bitmaps;
 
 	int i,j,k,l;
 	int row;
@@ -236,23 +237,62 @@ my_thread (void *p) {
 
 	cfloat* wn_fwd = (cfloat *) coprthr_tls_sbrk(wn_sz);
 	cfloat* wn_bwd = (cfloat *) coprthr_tls_sbrk(wn_sz);
-	cfloat* l_ref_bmp = (cfloat *) coprthr_tls_sbrk(l_fft_sz);
-	/* Won't fit so need a different strategy here ... */
-	//cfloat* l_cmp_bmp = (cfloat*)coprthr_tls_sbrk(l_fft_sz);
+	cfloat* l_tmp_fft  = (cfloat *) coprthr_tls_sbrk(l_fft_sz);
 
+	/* Copy wn coeffs to local mem */
 	e_dma_copy(wn_fwd, g_wn_fwd, wn_sz);
 	e_dma_copy(wn_bwd, g_wn_bwd, wn_sz);
-	e_dma_copy(l_ref_bmp, g_ref_bmp + myrank * nlocal * args.n, l_fft_sz);
-	/* Won't fit so need a different strategy here ... */
-	//e_dma_copy(l_cmp_bmp, g_cmp_bmp + myrank * nlocal * n, l_fft_sz);
 
-	/* TODO: Rename / remove */
-	cfloat *wn_now = args.inverse ? wn_fwd : wn_bwd;
+	/* Copy IMG A (reference image) to local memory */
+	e_dma_copy(l_tmp_fft, args.ref_bitmap + myrank * nlocal * args.n,
+		   l_fft_sz);
 
-	fft2d(comm, nprocs, myrank, nlocal, args.n, args.m, brp, wn_now,
-	      l_ref_bmp);
+	/* TODO: normalize(l_tmp_fft) */
 
-	e_dma_copy(g_ref_bmp + myrank * nlocal * args.n, l_ref_bmp, l_fft_sz);
+	// FFT IMG A
+	fft2d(comm, nprocs, myrank, nlocal, args.n, args.m, brp, wn_fwd,
+	      l_tmp_fft);
+	e_dma_copy(args.ref_fft + myrank * nlocal * args.n, l_tmp_fft,
+		   l_fft_sz);
+
+	// FFT IMG B
+	e_dma_copy(l_tmp_fft, g_cmp_bmp + myrank * nlocal * args.n, l_fft_sz);
+	fft2d(comm, nprocs, myrank, nlocal, args.n, args.m, brp, wn_fwd,
+	      l_tmp_fft);
+
+	// tmp = A * conj(B)
+
+	/* Not enough core SRAM to store two FFTs + code ...
+	 * So we resort to copying in smaller chunks of ref FFT...
+	 * It is possible to get the number of iterations down to 4 if you patch
+	 * COPRTHR to use -Os instead of -O3 when compiling this code.
+	 *
+	 * TODO: Investigate if we can get rid of this (fit two FFTs in mem)
+	 * or at least get the number of iterations down.
+	 */
+	size_t small_iters = 8;
+	size_t n_small = args.n * nlocal / small_iters;
+	size_t sz_small = n_small * sizeof(cfloat);
+	cfloat *l_ref_fft  = (cfloat *) coprthr_tls_sbrk(sz_small);
+
+	for (i = 0; i < small_iters; i++) {
+		e_dma_copy(l_ref_fft,
+			   args.ref_fft + myrank * nlocal * args.n + i * n_small,
+			   sz_small);
+
+		for (j = 0; j < n_small; j++) {
+			l_tmp_fft[i * n_small + j] =
+				l_ref_fft[j] * conjf(l_tmp_fft[i * n_small + j]);
+		}
+	}
+
+	/* IFFT() */
+	fft2d(comm, nprocs, myrank, nlocal, args.n, args.m, brp, wn_bwd,
+	      l_tmp_fft);
+
+	// TODO: Calculate max on device ...
+	e_dma_copy(args.ref_bitmap + myrank * nlocal * args.n, l_tmp_fft,
+		   l_fft_sz);
 
 	coprthr_tls_brk(memfree);
 

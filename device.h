@@ -35,9 +35,6 @@ struct my_args {
 	uint32_t n;
 	uint32_t m;
 
-	/* TODO remove */
-	uint32_t inverse;
-
 	__e_ptr(_X_cfloat) wn_fwd;
 	__e_ptr(_X_cfloat) wn_bwd;
 
@@ -48,12 +45,11 @@ struct my_args {
 
         /* Buffers */
 	__e_ptr(_X_cfloat) ref_fft;
-	__e_ptr(_X_cfloat) fft;
+
+	__e_ptr(_X_cfloat) tmp_fft;
 
 	/* Where we should store the results */
 	__e_ptr(float) results;
-
-	uint32_t _pad1;
 } __attribute__((packed));
 
 #undef _X_cfloat
