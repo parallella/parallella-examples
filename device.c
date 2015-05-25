@@ -151,6 +151,40 @@ void corner_turn(
 
 }
 
+void fft2d(void *comm, int nprocs, int rank, unsigned int nlocal,
+	   unsigned int n, unsigned int m, uint16_t *brp, void *p_wn,
+	   void *p_signal)
+{
+	cfloat *s;
+	unsigned int row;
+
+	//// bit-reversal swap in-place
+	for(s = (cfloat *) p_signal, row = 0; row < nlocal; row++, s += n) {
+		bitreverse_swap(brp, s);
+	}
+
+	for(s = (cfloat *) p_signal, row=0; row < nlocal; row++, s += n) {
+		fft_r2_dit(n, m, p_wn, s);
+	}
+
+	//// corner turn
+	corner_turn(nprocs, rank, p_signal, n, nlocal, comm);
+
+	//// bit-reversal swap in-place
+	for(s = (cfloat *) p_signal, row=0; row < nlocal; row++, s += n) {
+		bitreverse_swap(brp, s);
+	}
+
+	//// forward FFT
+	for(s = (cfloat *) p_signal, row=0; row < nlocal; row++, s += n) {
+		fft_r2_dit(n, m, p_wn, s);
+	}
+
+	//// corner turn
+	corner_turn(nprocs, rank, p_signal, n, nlocal, comm);
+}
+
+
 /* TODO: xcorr_batch */
 __kernel void
 my_thread (void *p) {
@@ -212,53 +246,16 @@ my_thread (void *p) {
 	/* Won't fit so need a different strategy here ... */
 	//e_dma_copy(l_cmp_bmp, g_cmp_bmp + myrank * nlocal * n, l_fft_sz);
 
-	//////////////////////////////
-
-	//// bit-reversal swap in-place
-	cfloat* data = l_ref_bmp;
-	data = l_ref_bmp;
-	for(row=0; row < nlocal; row++, data += args.n) {
-		bitreverse_swap(brp, data);
-	}
-
-
 	/* TODO: Rename / remove */
 	cfloat *wn_now = args.inverse ? wn_fwd : wn_bwd;
 
-	//// forward FFT
-	data = l_ref_bmp;
-	for(row=0; row < nlocal; row++, data += args.n) {
-		fft_r2_dit(args.n, args.m, wn_now, data );
-	}
-
-	//// corner turn
-	corner_turn(nprocs, myrank, l_ref_bmp, args.n, nlocal, comm);
-
-
-	//// bit-reversal swap in-place
-	data = l_ref_bmp;
-	for(row=0; row < nlocal; row++, data += args.n) {
-		bitreverse_swap(brp, data);
-	}
-
-	//// forward FFT
-	data = l_ref_bmp;
-	for(row=0; row < nlocal; row++, data += args.n) {
-		fft_r2_dit(args.n, args.m, wn_now, data);
-	}
-
-	//// corner turn
-	corner_turn(nprocs, myrank, l_ref_bmp, args.n, nlocal, comm);
-
-
-
-	//////////////////////////////
+	fft2d(comm, nprocs, myrank, nlocal, args.n, args.m, brp, wn_now,
+	      l_ref_bmp);
 
 	e_dma_copy(g_ref_bmp + myrank * nlocal * args.n, l_ref_bmp, l_fft_sz);
 
 	coprthr_tls_brk(memfree);
 
 	MPI_Finalize();
-
 }
 
