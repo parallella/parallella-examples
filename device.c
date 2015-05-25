@@ -19,27 +19,52 @@
 
 /* DAR */
 
-
-#include <coprthr.h>
-#include <coprthr_mpi.h>
 #include <complex.h>
 #define cfloat float complex
+#include <string.h>
+#if 0
+#include <stdint.h>
+#else
+/* Workaround: Including stdint result in clcc1 segfault, oh and typedefs
+ * won't work either ... */
+#define uint8_t		unsigned char
+#define uint16_t	unsigned short
+#define uint32_t	unsigned int
+#define uint64_t	unsigned long long
 
-void bitreverse_swap( short* brp, void* p_data )
+#define int8_t		char
+#define int16_t		short
+#define int32_t		int
+#define int64_t		long long
+
+#define uintptr_t	unsigned int
+#endif
+
+#include <coprthr.h>
+
+/* Use repo version. Doesn't matter for device code right now though */
+#include "coprthr_mpi.h"
+
+/* struct my_args */
+#include "device.h"
+
+void bitreverse_swap(uint16_t * const brp, void *p_data)
 {
-	cfloat* data = (cfloat*)p_data;
+	uint16_t i, j;
+	int k;
 
-	int k=0;
-	while( brp[k] ) {
-		int i = brp[k++];
-		int j = brp[k++];
+        cfloat *data = (cfloat *) p_data;
+
+	for (k=0; brp[k]; ) {
+		i = brp[k++];
+		j = brp[k++];
 		cfloat tmp = data[i];
 		data[i] = data[j];
 		data[j] = tmp;
 	}
 }
 
-void fft_r2_dit( unsigned int n, unsigned int m, void* p_wn, void* p_data )
+void fft_r2_dit(unsigned int n, unsigned int m, void* p_wn, void* p_data )
 {
 	cfloat* wn = (cfloat*)p_wn;
 	cfloat* data = (cfloat*)p_data;
@@ -88,8 +113,8 @@ void corner_turn(
 		cfloat* src = data + ct*nlocal;
 		cfloat* dst = buf2;
 		for(i=0;i<nlocal;i++) {
-			long long* psrc = (long long*)src;
-			long long* pdst = (long long*)dst;
+			uint64_t *psrc = (uint64_t *)src;
+			uint64_t *pdst = (uint64_t *)dst;
 			for(j=0; j<nlocal; j+=4) {
 				*(pdst++) = *(psrc++);
 				*(pdst++) = *(psrc++);
@@ -126,53 +151,48 @@ void corner_turn(
 
 }
 
-
-
-typedef struct { 
-	unsigned int n;
-	unsigned int m;
-	int inverse;
-	cfloat* wn; 
-	cfloat* data2; 
-} my_args_t;
-
+/* TODO: xcorr_batch */
 __kernel void
-my_thread( void* p) {
+my_thread (void *p) {
+	struct my_args args;
 
-	my_args_t* pargs = (my_args_t*)p;
+        memcpy(&args, p, sizeof(args));
 
-	unsigned int n = pargs->n;
-	unsigned int m = pargs->m;
-	int inverse = pargs->inverse;
-	cfloat* g_wn = pargs->wn;
-	cfloat* g_data2 = pargs->data2;
+	cfloat *g_wn_fwd = args.wn_fwd;
+	cfloat *g_wn_bwd = args.wn_bwd;
+	cfloat *g_ref_bmp = args.ref_bitmap;
+	cfloat *g_cmp_bmp = args.bitmaps; /* TODO: First */
 
 	int i,j,k,l;
 	int row;
 
-	int mask = (1 << m) - 1;
+	int mask = (1 << args.m) - 1;
 
 	int nprocs;
 	int myrank;
 
-	MPI_Init(0,MPI_BUF_SIZE);
+	MPI_Init(0, MPI_BUF_SIZE);
 
 	MPI_Comm comm = MPI_COMM_THREAD;
 
 	MPI_Comm_size(comm, &nprocs);
 	MPI_Comm_rank(comm, &myrank);
 
-	size_t nlocal = n/nprocs;
+	size_t nlocal = args.n / nprocs;
 
-	void* memfree = coprthr_tls_sbrk(0);
+	size_t wn_sz		= args.n * sizeof(cfloat);
+	size_t brp_sz		= 2 * args.n * sizeof(uint16_t);
+	size_t l_fft_sz		= nlocal * args.n * sizeof(cfloat);
 
-	short* brp = (short*)coprthr_tls_sbrk(n*2*sizeof(short));
-	for(i=0;i<n*2;i++) brp[i] = 0;
-	k=0;
-	for(i=0; i<n; i++) {
+	void *memfree = coprthr_tls_sbrk(0);
+
+	uint16_t *brp = (uint16_t *) coprthr_tls_sbrk(brp_sz);
+        memset(brp, 0, brp_sz);
+
+	for(i = 0, k = 0; i < args.n; i++) {
 		int x = i;
 		int y = 0;
-		for(j=0; j<m; j++)
+		for(j=0; j < args.m; j++)
 			y = (y << 1) | ((x >> j) & 1);
 		if (x < y) {
 			brp[k++] = x;
@@ -180,64 +200,61 @@ my_thread( void* p) {
 		}
 	}
 
-	cfloat* wn = (cfloat*)coprthr_tls_sbrk(n*sizeof(cfloat));
-	cfloat* data2 = (cfloat*)coprthr_tls_sbrk(nlocal*n*sizeof(cfloat));
+	cfloat* wn_fwd = (cfloat *) coprthr_tls_sbrk(wn_sz);
+	cfloat* wn_bwd = (cfloat *) coprthr_tls_sbrk(wn_sz);
+	cfloat* l_ref_bmp = (cfloat *) coprthr_tls_sbrk(l_fft_sz);
+	/* Won't fit so need a different strategy here ... */
+	//cfloat* l_cmp_bmp = (cfloat*)coprthr_tls_sbrk(l_fft_sz);
 
-	e_dma_copy(wn,g_wn,n*sizeof(cfloat));
-	e_dma_copy(data2,g_data2+myrank*nlocal*n,nlocal*n*sizeof(cfloat));
+	e_dma_copy(wn_fwd, g_wn_fwd, wn_sz);
+	e_dma_copy(wn_bwd, g_wn_bwd, wn_sz);
+	e_dma_copy(l_ref_bmp, g_ref_bmp + myrank * nlocal * args.n, l_fft_sz);
+	/* Won't fit so need a different strategy here ... */
+	//e_dma_copy(l_cmp_bmp, g_cmp_bmp + myrank * nlocal * n, l_fft_sz);
 
 	//////////////////////////////
 
 	//// bit-reversal swap in-place
-	cfloat* data = data2;
-	data = data2;
-	for(row=0; row<nlocal; row++, data+=n) {
-		bitreverse_swap(brp,data);
+	cfloat* data = l_ref_bmp;
+	data = l_ref_bmp;
+	for(row=0; row < nlocal; row++, data += args.n) {
+		bitreverse_swap(brp, data);
 	}
 
 
+	/* TODO: Rename / remove */
+	cfloat *wn_now = args.inverse ? wn_fwd : wn_bwd;
+
 	//// forward FFT
-	data = data2;
-	for(row=0; row<nlocal; row++, data+=n) {
-		fft_r2_dit( n, m, wn, data );
+	data = l_ref_bmp;
+	for(row=0; row < nlocal; row++, data += args.n) {
+		fft_r2_dit(args.n, args.m, wn_now, data );
 	}
 
 	//// corner turn
-	corner_turn( nprocs, myrank, data2, n, nlocal, comm);
+	corner_turn(nprocs, myrank, l_ref_bmp, args.n, nlocal, comm);
 
 
 	//// bit-reversal swap in-place
-	data = data2;
-	for(row=0; row<nlocal; row++, data+=n) {
-		bitreverse_swap(brp,data);
+	data = l_ref_bmp;
+	for(row=0; row < nlocal; row++, data += args.n) {
+		bitreverse_swap(brp, data);
 	}
 
 	//// forward FFT
-	data = data2;
-	for(row=0; row<nlocal; row++, data+=n) {
-		fft_r2_dit(n, m, wn,data);
+	data = l_ref_bmp;
+	for(row=0; row < nlocal; row++, data += args.n) {
+		fft_r2_dit(args.n, args.m, wn_now, data);
 	}
 
 	//// corner turn
-	corner_turn( nprocs, myrank, data2, n, nlocal, comm);
+	corner_turn(nprocs, myrank, l_ref_bmp, args.n, nlocal, comm);
 
 
-	/// rescale if inverse
-	float inv_n2 = 1.0f / ((float)n*n);
-
-	if (inverse) {
-		cfloat* pdata = data2;
-		for(i=0; i<nlocal*n; i+=4) {
-			*(pdata++) *= inv_n2;
-			*(pdata++) *= inv_n2;
-			*(pdata++) *= inv_n2;
-			*(pdata++) *= inv_n2;
-		}
-	}
 
 	//////////////////////////////
 
-	e_dma_copy(g_data2+myrank*nlocal*n,data2,nlocal*n*sizeof(cfloat));
+	e_dma_copy(g_ref_bmp + myrank * nlocal * args.n, l_ref_bmp, l_fft_sz);
 
 	coprthr_tls_brk(memfree);
 
