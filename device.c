@@ -414,9 +414,6 @@ my_thread (void *p) {
 		args.results[0] = max;
 	}
 
-	e_dma_copy(args.ref_bitmap + myrank * nlocal * args.n, l_tmp_fft,
-		   l_fft_sz);
-
 	coprthr_tls_brk(memfree);
 
 	MPI_Finalize();
