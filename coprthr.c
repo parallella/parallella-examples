@@ -72,6 +72,7 @@ struct {
 	coprthr_mem_t bmps_mem;
 	coprthr_mem_t ref_fft_mem;
 	coprthr_mem_t tmp_fft_mem; /* Do we need this ? */
+	coprthr_mem_t results_mem;
 	coprthr_mem_t C_mem; /* Remove ? */
 
 } GLOB = {
@@ -87,6 +88,7 @@ struct {
 	.bmps_mem = NULL,
 	.ref_fft_mem = NULL,
 	.tmp_fft_mem = NULL,
+	.results_mem = NULL,
 	.C_mem = NULL,
 
 };
@@ -204,6 +206,8 @@ static bool allocate_bufs()
 	GLOB.bmps_mem	= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz, 0);
 	GLOB.ref_fft_mem= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz, 0);
 	GLOB.tmp_fft_mem= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz, 0);
+	/* TODO: nmbr of bitmaps in bmps_mem * sizeof(float) */
+	GLOB.results_mem= coprthr_dmalloc(GLOB.coprthr_dd, 128, 0);
 	GLOB.C_mem	= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz, 0);
 	GLOB.C_mem	= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz, 0);
 
@@ -273,8 +277,7 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 
 	bool retval = true;
 
-	float A_mean = 0, B_mean = 0;	/* Means */
-	float correlation;
+	float correlation = 12345678.0f;
 
 	/* Intermediate matrices */
 	cfloat *A_cbitmap, *B_cbitmap, *A_fft, *B_fft, *C_fft, *C;
@@ -344,6 +347,7 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 		.bitmaps	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.bmps_mem, 0),
 		.ref_fft	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.ref_fft_mem, 0),
 		.tmp_fft	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.tmp_fft_mem, 0),
+		.results	= (__e_ptr(float)) coprthr_memptr(GLOB.results_mem, 0),
 	};
 
 	gettimeofday(&t0,0);
@@ -352,8 +356,8 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 	gettimeofday(&t1,0);
 
 	/* read back data from memory on device */
-	ev = coprthr_dread(GLOB.coprthr_dd, GLOB.ref_bmp_mem, 0, A_fft,
-			   NSIZE * NSIZE * sizeof(cfloat), COPRTHR_E_WAIT);
+	ev = coprthr_dread(GLOB.coprthr_dd, GLOB.results_mem, 0, &correlation,
+			   sizeof(correlation), COPRTHR_E_WAIT);
 	__free_event(ev);
 
 	double time_fwd = t1.tv_sec-t0.tv_sec + 1e-6*(t1.tv_usec - t0.tv_usec);
@@ -361,15 +365,6 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 #if 0
 	printf("mpiexec time: forward %f sec inverse %f sec\n", time_fwd,time_inv);
 #endif
-
-	/* TODO: Is the max always @0 ??? */
-	for (i = 0, correlation = FLT_MIN; i < NSIZE * NSIZE; i++) {
-		if (crealf(A_fft[i]) > correlation)
-			correlation = crealf(A_fft[i]);
-	}
-
-	/* Normalize correlation */
-	correlation /= ((float) NSIZE * NSIZE);
 
 	*out_corr = correlation;
 

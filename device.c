@@ -21,6 +21,7 @@
 
 #include <complex.h>
 #define cfloat float complex
+#include <float.h>
 #include <string.h>
 #if 0
 #include <stdint.h>
@@ -205,6 +206,47 @@ void normalize2(void *p_comm, int nprocs, int rank,
 	coprthr_tls_brk(memfree);
 }
 
+float global_max(void *p_comm, int nprocs, int rank,
+		 unsigned int nlocal, unsigned int n, void *p_signal)
+{
+	MPI_Comm comm = (MPI_Comm) p_comm;
+	MPI_Status status;
+	cfloat *signal = (cfloat *) p_signal;
+
+	int i = 0, j = 0;
+	float my_max = FLT_MIN, max = FLT_MIN;
+
+	void* memfree = coprthr_tls_sbrk(0);
+	float *buf = (float *) coprthr_tls_sbrk(8);
+
+	/* First calculate local max of signal */
+	for (i = 0, my_max = FLT_MIN; i < nlocal * n; i++) {
+		if (crealf(signal[i]) > my_max)
+			my_max = crealf(signal[i]);
+	}
+
+	int ct = (nprocs - rank) % nprocs;
+	for (i = 0; i < nprocs; i++) {
+		*buf = my_max;
+
+		MPI_Sendrecv_replace(buf, 2, MPI_FLOAT,
+				     ct, 25 , ct, 25, comm, &status);
+
+		if (ct == rank)
+			*buf = my_max;
+
+		if (*buf > max)
+			max = *buf;
+
+		ct = (ct + 1) % nprocs;
+	}
+
+	return max;
+
+	coprthr_tls_brk(memfree);
+}
+
+
 void fft2d(void *comm, int nprocs, int rank, unsigned int nlocal,
 	   unsigned int n, unsigned int m, uint16_t *brp, void *p_wn,
 	   void *p_signal)
@@ -351,16 +393,26 @@ my_thread (void *p) {
 				l_ref_fft[j] * conjf(l_tmp_fft[i * n_small + j]);
 		}
 	}
+	/* Free ref fft */
 	coprthr_tls_brk(l_ref_fft);
 
+	/* Bring in wn_bwd coeffs */
 	wn = (cfloat *) coprthr_tls_sbrk(wn_sz);
 	e_dma_copy(wn, g_wn_bwd, wn_sz);
 	/* IFFT() */
 	fft2d(comm, nprocs, myrank, nlocal, args.n, args.m, brp, wn,
 	      l_tmp_fft);
+
+	/* Free wn */
 	coprthr_tls_brk(wn);
 
-	// TODO: Calculate max on device ...
+	float max = global_max(comm, nprocs, myrank, nlocal, args.n, l_tmp_fft);
+
+
+	if (myrank == 0) {
+		max /= ((float) args.n * args.n);
+		args.results[0] = max;
+	}
 
 	e_dma_copy(args.ref_bitmap + myrank * nlocal * args.n, l_tmp_fft,
 		   l_fft_sz);
