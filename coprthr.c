@@ -306,17 +306,12 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 		goto out;
 	}
 
-	/* Calculate means */
-	for (i = 0; i < width * height; i++) {
-		A_mean = (A_mean * (i + 0.0f) + A[i]) / (i + 1.0f);
-		B_mean = (B_mean * (i + 0.0f) + B[i]) / (i + 1.0f);
-	}
-
-	/* Initialize data w/ DC component removed */
-	for (i = 0; i < width; i++) {
-		for (j = 0; j < height; j++) {
-			A_cbitmap[i * NSIZE + j] = A[i * width + j] - A_mean;
-			B_cbitmap[i * NSIZE + j] = B[i * width + j] - B_mean;
+	/* Initialize data */
+	/* TODO: Remove this and send input args directly to device */
+	for (i = 0; i < height; i++) {
+		for (j = 0; j < width; j++) {
+			A_cbitmap[i * NSIZE + j] = A[i * width + j];
+			B_cbitmap[i * NSIZE + j] = B[i * width + j];
 		}
 	}
 

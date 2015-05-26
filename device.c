@@ -126,7 +126,8 @@ void corner_turn(
 		}
 
 		MPI_Sendrecv_replace(buf2,2*nlocal*nlocal,MPI_FLOAT,
-			ct,71,ct,72,comm,&status);
+				     ct,11,ct,11,comm,&status);
+
 
 		for(i=0;i<nlocal;i++) {
 			cfloat* pdst = data+ct*nlocal+i;
@@ -149,6 +150,59 @@ void corner_turn(
 
 	coprthr_tls_brk(memfree);
 
+}
+
+void normalize2(void *p_comm, int nprocs, int rank,
+		unsigned int nlocal, unsigned int n, void *p_signal)
+{
+	MPI_Comm comm = (MPI_Comm) p_comm;
+	MPI_Status status;
+	cfloat *signal = (cfloat *) p_signal;
+
+	int i = 0, j = 0;
+	float local_sum = 0, total_sum = 0, mean = 0;
+
+	void* memfree = coprthr_tls_sbrk(0);
+	float *buf = (float *) coprthr_tls_sbrk(8);
+
+	/* First sum local portion of signal */
+
+	/* Zero padded input signal */
+
+	for (i = 0; i < nlocal; i++) {
+		for (j = 0; j < n / 2; j++)
+			local_sum += crealf(signal[i * n + j]);
+	}
+
+	int ct = (nprocs - rank) % nprocs;
+	for (i = 0; i < nprocs; i++) {
+		*buf = local_sum;
+
+		MPI_Sendrecv_replace(buf, 2, MPI_FLOAT,
+				     ct, 25 , ct, 25, comm, &status);
+
+		/* Zero padded entire lower half is black */
+		if (ct == rank)
+			*buf = local_sum;
+
+		if (ct < nprocs / 2)
+			total_sum += *buf;
+
+		ct = (ct + 1) % nprocs;
+	}
+
+	/* again it's zero padded */
+	mean = total_sum / ((float) (n * n / 4));
+
+	/* normalize local portion of signal */
+	if (rank < nprocs / 2) {
+		for (i = 0; i < nlocal; i++) {
+			for (j = 0; j < n / 2; j++)
+				signal[i * n + j] -= mean;
+		}
+	}
+
+	coprthr_tls_brk(memfree);
 }
 
 void fft2d(void *comm, int nprocs, int rank, unsigned int nlocal,
@@ -201,8 +255,6 @@ my_thread (void *p) {
 	int i,j,k,l;
 	int row;
 
-	int mask = (1 << args.m) - 1;
-
 	int nprocs;
 	int myrank;
 
@@ -219,9 +271,13 @@ my_thread (void *p) {
 	size_t brp_sz		= 2 * args.n * sizeof(uint16_t);
 	size_t l_fft_sz		= nlocal * args.n * sizeof(cfloat);
 
+	/* Probably unneccessary */
+	uintptr_t align = ((uintptr_t) coprthr_tls_sbrk(0)) & 7;
+	coprthr_tls_sbrk(align);
+
 	void *memfree = coprthr_tls_sbrk(0);
 
-	uint16_t *brp = (uint16_t *) coprthr_tls_sbrk(brp_sz);
+	uint16_t *brp = (uint16_t *) coprthr_tls_sbrk((brp_sz+7) & ~7);
         memset(brp, 0, brp_sz);
 
 	for(i = 0, k = 0; i < args.n; i++) {
@@ -235,30 +291,38 @@ my_thread (void *p) {
 		}
 	}
 
-	cfloat* wn_fwd = (cfloat *) coprthr_tls_sbrk(wn_sz);
-	cfloat* wn_bwd = (cfloat *) coprthr_tls_sbrk(wn_sz);
-	cfloat* l_tmp_fft  = (cfloat *) coprthr_tls_sbrk(l_fft_sz);
-
-	/* Copy wn coeffs to local mem */
-	e_dma_copy(wn_fwd, g_wn_fwd, wn_sz);
-	e_dma_copy(wn_bwd, g_wn_bwd, wn_sz);
-
 	/* Copy IMG A (reference image) to local memory */
+	cfloat* l_tmp_fft  = (cfloat *) coprthr_tls_sbrk(l_fft_sz);
 	e_dma_copy(l_tmp_fft, args.ref_bitmap + myrank * nlocal * args.n,
 		   l_fft_sz);
 
-	/* TODO: normalize(l_tmp_fft) */
+	/* Normalize signal to zero out DC component */
+	normalize2(comm, nprocs, myrank, nlocal, args.n, l_tmp_fft);
+
+	/* Copy fwd wn coeffs to local mem */
+	cfloat *wn = (cfloat *) coprthr_tls_sbrk(wn_sz);
+	e_dma_copy(wn, g_wn_fwd, wn_sz);
+
 
 	// FFT IMG A
-	fft2d(comm, nprocs, myrank, nlocal, args.n, args.m, brp, wn_fwd,
+	fft2d(comm, nprocs, myrank, nlocal, args.n, args.m, brp, wn,
 	      l_tmp_fft);
+
+	/* Copy back to shared RAM */
 	e_dma_copy(args.ref_fft + myrank * nlocal * args.n, l_tmp_fft,
 		   l_fft_sz);
 
 	// FFT IMG B
+	memset(l_tmp_fft, 0, l_fft_sz);
 	e_dma_copy(l_tmp_fft, g_cmp_bmp + myrank * nlocal * args.n, l_fft_sz);
-	fft2d(comm, nprocs, myrank, nlocal, args.n, args.m, brp, wn_fwd,
+
+	/* Normalize signal to zero out DC component */
+	normalize2(comm, nprocs, myrank, nlocal, args.n, l_tmp_fft);
+
+	fft2d(comm, nprocs, myrank, nlocal, args.n, args.m, brp, wn,
 	      l_tmp_fft);
+
+	coprthr_tls_brk(wn);
 
 	// tmp = A * conj(B)
 
@@ -270,10 +334,12 @@ my_thread (void *p) {
 	 * TODO: Investigate if we can get rid of this (fit two FFTs in mem)
 	 * or at least get the number of iterations down.
 	 */
+
+
 	size_t small_iters = 8;
 	size_t n_small = args.n * nlocal / small_iters;
 	size_t sz_small = n_small * sizeof(cfloat);
-	cfloat *l_ref_fft  = (cfloat *) coprthr_tls_sbrk(sz_small);
+	cfloat *l_ref_fft = (cfloat *) coprthr_tls_sbrk(sz_small);
 
 	for (i = 0; i < small_iters; i++) {
 		e_dma_copy(l_ref_fft,
@@ -285,12 +351,17 @@ my_thread (void *p) {
 				l_ref_fft[j] * conjf(l_tmp_fft[i * n_small + j]);
 		}
 	}
+	coprthr_tls_brk(l_ref_fft);
 
+	wn = (cfloat *) coprthr_tls_sbrk(wn_sz);
+	e_dma_copy(wn, g_wn_bwd, wn_sz);
 	/* IFFT() */
-	fft2d(comm, nprocs, myrank, nlocal, args.n, args.m, brp, wn_bwd,
+	fft2d(comm, nprocs, myrank, nlocal, args.n, args.m, brp, wn,
 	      l_tmp_fft);
+	coprthr_tls_brk(wn);
 
 	// TODO: Calculate max on device ...
+
 	e_dma_copy(args.ref_bitmap + myrank * nlocal * args.n, l_tmp_fft,
 		   l_fft_sz);
 
