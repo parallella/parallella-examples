@@ -71,7 +71,6 @@ struct {
 	coprthr_mem_t ref_bmp_mem;
 	coprthr_mem_t bmps_mem;
 	coprthr_mem_t ref_fft_mem;
-	coprthr_mem_t tmp_fft_mem; /* Do we need this ? */
 	coprthr_mem_t results_mem;
 	coprthr_mem_t C_mem; /* Remove ? */
 
@@ -87,7 +86,6 @@ struct {
 	.ref_bmp_mem = NULL,
 	.bmps_mem = NULL,
 	.ref_fft_mem = NULL,
-	.tmp_fft_mem = NULL,
 	.results_mem = NULL,
 	.C_mem = NULL,
 
@@ -205,7 +203,6 @@ static bool allocate_bufs()
 	/* TODO: Larger */
 	GLOB.bmps_mem	= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz * 2, 0);
 	GLOB.ref_fft_mem= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz, 0);
-	GLOB.tmp_fft_mem= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz, 0);
 	/* TODO: nmbr of bitmaps in bmps_mem * sizeof(float) */
 	GLOB.results_mem= coprthr_dmalloc(GLOB.coprthr_dd, 128, 0);
 	GLOB.C_mem	= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz, 0);
@@ -278,8 +275,6 @@ bool fftimpl_xcorr(float *ref_bmp, float *bmps, int nbmps,
 
 	bool retval = true;
 
-	float correlations[2] = { 12345678.0f, 1336.0f };
-
 	/* Intermediate matrices */
 	cfloat *ref_cbitmap, *cmp_cbitmaps;
 
@@ -351,7 +346,6 @@ bool fftimpl_xcorr(float *ref_bmp, float *bmps, int nbmps,
 		.bitmaps	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.bmps_mem, 0),
 		.nbitmaps	= nbmps,
 		.ref_fft	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.ref_fft_mem, 0),
-		.tmp_fft	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.tmp_fft_mem, 0),
 		.results	= (__e_ptr(float)) coprthr_memptr(GLOB.results_mem, 0),
 	};
 
@@ -370,8 +364,6 @@ bool fftimpl_xcorr(float *ref_bmp, float *bmps, int nbmps,
 #if 0
 	printf("mpiexec time: forward %f sec inverse %f sec\n", time_fwd,time_inv);
 #endif
-
-//	*out_corr = correlations[1];
 
 out:
 

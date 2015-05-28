@@ -46,10 +46,10 @@ struct my_args {
         /* Buffers */
 	__e_ptr(_X_cfloat) ref_fft;
 
-	__e_ptr(_X_cfloat) tmp_fft;
-
 	/* Where we should store the results */
 	__e_ptr(float) results;
+
+	uint32_t _pad;
 } __attribute__((packed));
 
 #undef _X_cfloat
