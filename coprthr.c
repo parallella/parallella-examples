@@ -59,7 +59,7 @@ typedef float complex cfloat;
 #define MSIZE 7
 
 /* Max bitmaps / iteration. Room for improvement */
-#define MAX_BITMAPS 64
+#define MAX_BITMAPS 96
 
 /* Global state */
 struct {
