@@ -42,8 +42,7 @@ bool calculateXCorr(uint8_t *jpeg1, size_t jpeg1_size,
 		goto free_A;
 	}
 
-
-	if (!fftimpl_xcorr(A, B, width, height, corr)) {
+	if (!fftimpl_xcorr(A, B, 1, width, height, corr)) {
 		fprintf(stderr, "ERROR: xcorr failed\n");
 		ret = false;
 	}
@@ -91,7 +90,7 @@ int main(int argc, char *argv[])
 		goto free_A;
 	}
 
-	if (!fftimpl_xcorr(A, B, width, height, &corr)) {
+	if (!fftimpl_xcorr(A, B, 1, width, height, &corr)) {
 		fprintf(stderr, "ERROR: xcorr failed\n");
 		ret = 3;
 	}

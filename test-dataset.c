@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
 			break;
 		}
 
-		if (!fftimpl_xcorr(A, B, width, height, &corr)) {
+		if (!fftimpl_xcorr(A, B, 1, width, height, &corr)) {
 			fprintf(stderr, "ERROR: xcorr failed\n");
 			break;
 		}

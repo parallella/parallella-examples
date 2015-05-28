@@ -270,9 +270,10 @@ fail:
 	return false;
 }
 
-bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
+bool fftimpl_xcorr(float *ref_bmp, float *bmps, int nbmps,
+		   int width, int height, float *out_corr)
 {
-	int i, j;
+	int i, j, n;
 	struct timeval t0, t1, t2, t3;
 
 	bool retval = true;
@@ -280,7 +281,7 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 	float correlations[2] = { 12345678.0f, 1336.0f };
 
 	/* Intermediate matrices */
-	cfloat *A_cbitmap, *B_cbitmap, *A_fft, *B_fft, *C_fft, *C;
+	cfloat *ref_cbitmap, *cmp_cbitmaps;
 
 	/* COPRTHR event */
 	coprthr_event_t ev;
@@ -295,13 +296,9 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 	}
 
 	/* Allocate zeroed memory on host */
-	A_cbitmap	= (cfloat *) calloc(NSIZE * NSIZE, sizeof(cfloat));
-	B_cbitmap	= (cfloat *) calloc(NSIZE * NSIZE, sizeof(cfloat));
-	A_fft		= (cfloat *) calloc(NSIZE * NSIZE, sizeof(cfloat));
-	B_fft		= (cfloat *) calloc(NSIZE * NSIZE, sizeof(cfloat));
-	C_fft		= (cfloat *) calloc(NSIZE * NSIZE, sizeof(cfloat));
-	C		= (cfloat *) calloc(NSIZE * NSIZE, sizeof(cfloat));
-	if (!A_cbitmap || !B_cbitmap || !A_fft || !B_fft || !C_fft || !C) {
+	ref_cbitmap	= (cfloat *) calloc(NSIZE * NSIZE, sizeof(cfloat));
+	cmp_cbitmaps	= (cfloat *) calloc(nbmps * NSIZE * NSIZE, sizeof(cfloat));
+	if (!ref_cbitmap || !cmp_cbitmaps) {
 		fprintf(stderr,
 			"ERROR: Failed allocating memory.\n");
 
@@ -312,9 +309,16 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 	/* Initialize data */
 	/* TODO: Remove this and send input args directly to device */
 	for (i = 0; i < height; i++) {
-		for (j = 0; j < width; j++) {
-			A_cbitmap[i * NSIZE + j] = A[i * width + j];
-			B_cbitmap[i * NSIZE + j] = B[i * width + j];
+		for (j = 0; j < width; j++)
+			ref_cbitmap[i * NSIZE + j] = ref_bmp[i * width + j];
+	}
+
+	for (n = 0; n < nbmps; n++) {
+		float *bmp = &bmps[n * height * width];
+		cfloat *cbmp = &cmp_cbitmaps[n * NSIZE * NSIZE];
+		for (i = 0; i < height; i++) {
+			for (j = 0; j < width; j++)
+				cbmp[i * NSIZE + j] = bmp[i * width + j];
 		}
 	}
 
@@ -328,20 +332,14 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 
 
 	/* Copy A (reference image) to device */
-	ev = coprthr_dwrite(GLOB.coprthr_dd, GLOB.ref_bmp_mem, 0, A_cbitmap,
+	ev = coprthr_dwrite(GLOB.coprthr_dd, GLOB.ref_bmp_mem, 0, ref_cbitmap,
 			    NSIZE * NSIZE * sizeof(cfloat), COPRTHR_E_WAIT);
 	__free_event(ev);
 
-	cfloat *bmpbuf = calloc(2*128*128, sizeof(cfloat));
-	memcpy(&bmpbuf[0], B_cbitmap, 128*128*sizeof(cfloat));
-	memcpy(&bmpbuf[128*128], B_cbitmap, 128*128*sizeof(cfloat));
-
 	/* Copy B to device. TODO: More images. */
-	ev = coprthr_dwrite(GLOB.coprthr_dd, GLOB.bmps_mem, 0, bmpbuf,
-			    2 * NSIZE * NSIZE * sizeof(cfloat), COPRTHR_E_WAIT);
+	ev = coprthr_dwrite(GLOB.coprthr_dd, GLOB.bmps_mem, 0, cmp_cbitmaps,
+			    nbmps * NSIZE * NSIZE * sizeof(cfloat), COPRTHR_E_WAIT);
 	__free_event(ev);
-
-	free(bmpbuf);
 
 	/* Calculate FFT for image A */
 	struct my_args args_xcorr = {
@@ -351,7 +349,7 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 		.wn_bwd		= (__e_ptr(cfloat)) coprthr_memptr(GLOB.wm_bwd_mem,0),
 		.ref_bitmap	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.ref_bmp_mem, 0),
 		.bitmaps	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.bmps_mem, 0),
-		.nbitmaps	= 2,
+		.nbitmaps	= nbmps,
 		.ref_fft	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.ref_fft_mem, 0),
 		.tmp_fft	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.tmp_fft_mem, 0),
 		.results	= (__e_ptr(float)) coprthr_memptr(GLOB.results_mem, 0),
@@ -363,8 +361,8 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 	gettimeofday(&t1,0);
 
 	/* read back data from memory on device */
-	ev = coprthr_dread(GLOB.coprthr_dd, GLOB.results_mem, 0, correlations,
-			   sizeof(correlations), COPRTHR_E_WAIT);
+	ev = coprthr_dread(GLOB.coprthr_dd, GLOB.results_mem, 0, out_corr,
+			   nbmps * sizeof(float), COPRTHR_E_WAIT);
 	__free_event(ev);
 
 	double time_fwd = t1.tv_sec-t0.tv_sec + 1e-6*(t1.tv_usec - t0.tv_usec);
@@ -373,22 +371,14 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 	printf("mpiexec time: forward %f sec inverse %f sec\n", time_fwd,time_inv);
 #endif
 
-	*out_corr = correlations[1];
+//	*out_corr = correlations[1];
 
 out:
 
-	if (A_cbitmap)
-		free(A_cbitmap);
-	if (B_cbitmap)
-		free(B_cbitmap);
-	if (A_fft)
-		free(A_fft);
-	if (B_fft)
-		free(B_fft);
-	if (C_fft)
-		free(C_fft);
-	if (C)
-		free(C);
+	if (ref_cbitmap)
+		free(ref_cbitmap);
+	if (cmp_cbitmaps)
+		free(cmp_cbitmaps);
 
 	return retval;
 }

@@ -13,30 +13,30 @@ struct {
 	bool initialized;
 
 	/* Buffers */
-	fftwf_complex *A;
+	fftwf_complex *ref;
 	fftwf_complex *B;
 	fftwf_complex *C;
-	fftwf_complex *A_fft;
+	fftwf_complex *ref_fft;
 	fftwf_complex *B_fft;
 	fftwf_complex *C_fft;
 
 	/* Plans */
-	fftwf_plan A_fwd;
+	fftwf_plan ref_fwd;
 	fftwf_plan B_fwd;
 	fftwf_plan C_inv;
 } GLOB = {
 	.initialized = false,
 
 	/* Buffers */
-	.A = NULL,
+	.ref = NULL,
 	.B = NULL,
 	.C = NULL,
-	.A_fft = NULL,
+	.ref_fft = NULL,
 	.B_fft = NULL,
 	.C_fft = NULL,
 
 	/* Plans */
-	.A_fwd = NULL,
+	.ref_fwd = NULL,
 	.B_fwd = NULL,
 	.C_inv = NULL,
 };
@@ -44,9 +44,9 @@ struct {
 void cleanup()
 {
 	/* Free buffers */
-	if (GLOB.A) {
-		fftwf_free(GLOB.A);
-		GLOB.A = NULL;
+	if (GLOB.ref) {
+		fftwf_free(GLOB.ref);
+		GLOB.ref = NULL;
 	}
 	if (GLOB.B) {
 		fftwf_free(GLOB.B);
@@ -56,9 +56,9 @@ void cleanup()
 		fftwf_free(GLOB.C);
 		GLOB.C = NULL;
 	}
-	if (GLOB.A_fft) {
-		fftwf_free(GLOB.A_fft);
-		GLOB.A_fft = NULL;
+	if (GLOB.ref_fft) {
+		fftwf_free(GLOB.ref_fft);
+		GLOB.ref_fft = NULL;
 	}
 	if (GLOB.B_fft) {
 		fftwf_free(GLOB.B_fft);
@@ -70,9 +70,9 @@ void cleanup()
 	}
 
 	/* Destroy plans */
-	if (GLOB.A_fwd) {
-		fftwf_free(GLOB.A_fwd);
-		GLOB.A_fwd = NULL;
+	if (GLOB.ref_fwd) {
+		fftwf_free(GLOB.ref_fwd);
+		GLOB.ref_fwd = NULL;
 	}
 	if (GLOB.B_fwd) {
 		fftwf_free(GLOB.B_fwd);
@@ -102,21 +102,21 @@ bool fftimpl_init()
 	const size_t fftw_bufsize = sizeof(fftw_complex) * NSIZE * NSIZE;
 
 	/* Init bufs */
-	GLOB.A = (fftwf_complex *) fftwf_malloc(fftw_bufsize);
+	GLOB.ref = (fftwf_complex *) fftwf_malloc(fftw_bufsize);
 	GLOB.B = (fftwf_complex *) fftwf_malloc(fftw_bufsize);
 	GLOB.C = (fftwf_complex *) fftwf_malloc(fftw_bufsize);
-	GLOB.A_fft = (fftwf_complex *) fftwf_malloc(fftw_bufsize);
+	GLOB.ref_fft = (fftwf_complex *) fftwf_malloc(fftw_bufsize);
 	GLOB.B_fft = (fftwf_complex *) fftwf_malloc(fftw_bufsize);
 	GLOB.C_fft = (fftwf_complex *) fftwf_malloc(fftw_bufsize);
-	if (!GLOB.A || !GLOB.B || !GLOB.C ||
-	    !GLOB.A_fft || !GLOB.B_fft || !GLOB.C_fft)
+	if (!GLOB.ref || !GLOB.B || !GLOB.C ||
+	    !GLOB.ref_fft || !GLOB.B_fft || !GLOB.C_fft)
 		goto fail;
 
 	/* Init plans */
-	GLOB.A_fwd = fftwf_plan_dft_2d(NSIZE, NSIZE, GLOB.A, GLOB.A_fft, FFTW_FORWARD, fftw_flags);
+	GLOB.ref_fwd = fftwf_plan_dft_2d(NSIZE, NSIZE, GLOB.ref, GLOB.ref_fft, FFTW_FORWARD, fftw_flags);
 	GLOB.B_fwd = fftwf_plan_dft_2d(NSIZE, NSIZE, GLOB.B, GLOB.B_fft, FFTW_FORWARD, fftw_flags);
 	GLOB.C_inv = fftwf_plan_dft_2d(NSIZE, NSIZE, GLOB.C_fft, GLOB.C, FFTW_BACKWARD, fftw_flags);
-	if (!GLOB.A_fwd || !GLOB.B_fwd || !GLOB.C_inv)
+	if (!GLOB.ref_fwd || !GLOB.B_fwd || !GLOB.C_inv)
 	       goto fail;
 
 	atexit(fftimpl_fini);
@@ -131,10 +131,10 @@ fail:
 	return false;
 }
 
-bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
+bool fftimpl_xcorr_one(float *B, int width, int height, float *out_corr)
 {
 	int i, j;
-	float A_mean, B_mean, correlation;
+	float B_mean, B_sum, correlation;
 
 	/* Preallocated buffers can take up to 128x128 incl. zero padding */
 	if (width > NSIZE / 2 || height > NSIZE / 2) {
@@ -145,32 +145,26 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 	}
 
 	/* Calculate means */
-	for (i = 0; i < width * height; i++) {
-		A_mean = (A_mean * (i + 0.0f) + A[i]) / (i + 1.0f);
-		B_mean = (B_mean * (i + 0.0f) + B[i]) / (i + 1.0f);
+	for (B_sum = 0, i = 0; i < width * height; i++) {
+		B_sum += B[i];
 	}
+	B_mean = B_sum / ((float) height * width);
 
 	/* Zero out A and B bufs */
-	memset(GLOB.A, 0, sizeof(*GLOB.A) * NSIZE * NSIZE);
 	memset(GLOB.B, 0, sizeof(*GLOB.B) * NSIZE * NSIZE);
 
 	/* Initialize data w/ DC component removed */
 	for (i = 0; i < width; i++) {
-		for (j = 0; j < height; j++) {
-			GLOB.A[i * NSIZE + j] = A[i * width + j] - A_mean;
+		for (j = 0; j < height; j++)
 			GLOB.B[i * NSIZE + j] = B[i * width + j] - B_mean;
-		}
 	}
-
-	/* Calculate FFT for image A */
-	fftwf_execute(GLOB.A_fwd);
 
 	/* Calculate FFT for image B */
 	fftwf_execute(GLOB.B_fwd);
 
-	/* C_fft = Element wise A_fft x B_fft(conjugate) (on host(!)) */
+	/* C_fft = Element wise ref_fft x B_fft(conjugate) (on host(!)) */
 	for (i = 0; i < NSIZE * NSIZE; i++)
-		GLOB.C_fft[i] = GLOB.A_fft[i] * conjf(GLOB.B_fft[i]);
+		GLOB.C_fft[i] = GLOB.ref_fft[i] * conjf(GLOB.B_fft[i]);
 
 	/* C = ifft(C_fft) */
 	fftwf_execute(GLOB.C_inv);
@@ -185,6 +179,49 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 	correlation /= ((float) NSIZE * NSIZE);
 
 	*out_corr = correlation;
+
+	return true;
+}
+
+bool fftimpl_xcorr(float *ref_bmp, float *bmps, int nbmps,
+		   int width, int height, float *out_corr)
+{
+	int i, j, n;
+	float ref_mean, ref_sum;
+
+	/* Preallocated buffers can take up to 128x128 incl. zero padding */
+	if (width > NSIZE / 2 || height > NSIZE / 2) {
+		fprintf(stderr,
+			"ERROR: Input image dimensions must not exceed %dx%d\n",
+			NSIZE / 2, NSIZE / 2);
+		return false;
+	}
+
+	/* Calculate means */
+	for (ref_sum = 0, i = 0; i < width * height; i++)
+		ref_sum += ref_bmp[i];
+	ref_mean = ref_sum /= ((float) width * height);
+
+	/* Initialize data w/ DC component removed */
+	for (i = 0; i < width; i++) {
+		for (j = 0; j < height; j++) {
+			GLOB.ref[i * NSIZE + j] =
+				ref_bmp[i * width + j] - ref_mean;
+		}
+	}
+
+	/* Calculate FFT for image A */
+	fftwf_execute(GLOB.ref_fwd);
+
+	for (n = 0; n < nbmps; n++, out_corr++) {
+		if (!fftimpl_xcorr_one(&bmps[n * width * height],
+				       width, height, out_corr)) {
+			fprintf(stderr,
+				"ERROR: fftimpl_xcorr_one_failed at bitmap %d\n",
+				n);
+			return false;
+		}
+	}
 
 	return true;
 }

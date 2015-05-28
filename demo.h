@@ -12,5 +12,6 @@ void *grayscale_to_jpeg(float *bitmap, int width, int height, unsigned long *jpe
 /* FFT implementation hooks */
 bool fftimpl_init();
 /* No fftimpl_fini() Register atexit handler in fftimpl_init() */
-bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr);
+bool fftimpl_xcorr(float *ref_bmp, float *bmps, int nbmps,
+		   int width, int height, float *out_corr);
 
