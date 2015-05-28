@@ -75,8 +75,6 @@ struct {
 	coprthr_mem_t bmps_mem;
 	coprthr_mem_t ref_fft_mem;
 	coprthr_mem_t results_mem;
-	coprthr_mem_t C_mem; /* Remove ? */
-
 } GLOB = {
 	.initialized = false,
 	.wn_fwd = NULL,
@@ -90,8 +88,6 @@ struct {
 	.bmps_mem = NULL,
 	.ref_fft_mem = NULL,
 	.results_mem = NULL,
-	.C_mem = NULL,
-
 };
 
 static void generate_wn_(unsigned int n, unsigned int m, int sign, float* cc,
@@ -210,8 +206,6 @@ static bool allocate_bufs()
 	/* TODO: nmbr of bitmaps in bmps_mem * sizeof(float) */
 	GLOB.results_mem= coprthr_dmalloc(GLOB.coprthr_dd,
 					  MAX_BITMAPS * sizeof(float), 0);
-	GLOB.C_mem	= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz, 0);
-	GLOB.C_mem	= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz, 0);
 
 	return true;
 }
