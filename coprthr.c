@@ -69,8 +69,8 @@ struct {
 	int coprthr_dd;			/* Device descriptor */
 	coprthr_program_t coprthr_prg;	/* COPRTHR device program */
 	coprthr_sym_t coprthr_fn;	/* Thread function symbol */
-	coprthr_mem_t wm_fwd_mem;
-	coprthr_mem_t wm_bwd_mem;
+	coprthr_mem_t wn_fwd_mem;
+	coprthr_mem_t wn_bwd_mem;
 	coprthr_mem_t ref_bmp_mem;
 	coprthr_mem_t bmps_mem;
 	coprthr_mem_t ref_fft_mem;
@@ -84,8 +84,8 @@ struct {
 	.coprthr_dd = -1,
 	.coprthr_prg = NULL,
 	.coprthr_fn = NULL,
-	.wm_fwd_mem = NULL,
-	.wm_bwd_mem = NULL,
+	.wn_fwd_mem = NULL,
+	.wn_bwd_mem = NULL,
 	.ref_bmp_mem = NULL,
 	.bmps_mem = NULL,
 	.ref_fft_mem = NULL,
@@ -200,8 +200,8 @@ static bool allocate_bufs()
 	size_t bitmap_sz = NSIZE * NSIZE * sizeof(cfloat);
 
 	/* allocate memory on device */
-	GLOB.wm_fwd_mem	= coprthr_dmalloc(GLOB.coprthr_dd, wn_sz, 0);
-	GLOB.wm_bwd_mem	= coprthr_dmalloc(GLOB.coprthr_dd, wn_sz, 0);
+	GLOB.wn_fwd_mem	= coprthr_dmalloc(GLOB.coprthr_dd, wn_sz, 0);
+	GLOB.wn_bwd_mem	= coprthr_dmalloc(GLOB.coprthr_dd, wn_sz, 0);
 	GLOB.ref_bmp_mem= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz, 0);
 	/* TODO: Larger */
 	GLOB.bmps_mem	= coprthr_dmalloc(GLOB.coprthr_dd,
@@ -330,10 +330,10 @@ bool fftimpl_xcorr(float *ref_bmp, float *bmps, int nbmps,
 	}
 
 	/* copy wn coeffs to device memory (shared mem) */
-	ev = coprthr_dwrite(GLOB.coprthr_dd, GLOB.wm_fwd_mem, 0, GLOB.wn_fwd,
+	ev = coprthr_dwrite(GLOB.coprthr_dd, GLOB.wn_fwd_mem, 0, GLOB.wn_fwd,
 			    NSIZE * sizeof(cfloat), COPRTHR_E_WAIT);
 	__free_event(ev);
-	ev = coprthr_dwrite(GLOB.coprthr_dd, GLOB.wm_bwd_mem, 0, GLOB.wn_bwd,
+	ev = coprthr_dwrite(GLOB.coprthr_dd, GLOB.wn_bwd_mem, 0, GLOB.wn_bwd,
 			    NSIZE * sizeof(cfloat), COPRTHR_E_WAIT);
 	__free_event(ev);
 
@@ -352,8 +352,8 @@ bool fftimpl_xcorr(float *ref_bmp, float *bmps, int nbmps,
 	struct my_args args_xcorr = {
 		.n		= NSIZE,
 		.m		= MSIZE,
-		.wn_fwd		= (__e_ptr(cfloat)) coprthr_memptr(GLOB.wm_fwd_mem, 0),
-		.wn_bwd		= (__e_ptr(cfloat)) coprthr_memptr(GLOB.wm_bwd_mem,0),
+		.wn_fwd		= (__e_ptr(cfloat)) coprthr_memptr(GLOB.wn_fwd_mem, 0),
+		.wn_bwd		= (__e_ptr(cfloat)) coprthr_memptr(GLOB.wn_bwd_mem,0),
 		.ref_bitmap	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.ref_bmp_mem, 0),
 		.bitmaps	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.bmps_mem, 0),
 		.nbitmaps	= nbmps,
