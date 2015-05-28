@@ -8,8 +8,13 @@
 #include <stdint.h>
 
 #include "demo.h"
+#include "libfft-demo.h"
 
 bool initialized = false;
+
+#define MAX_BITMAPS 96
+#define IMG_W 64
+#define IMG_H 64
 
 /* Returns true on success */
 __attribute__ ((visibility ("default")))
@@ -51,6 +56,76 @@ bool calculateXCorr(uint8_t *jpeg1, size_t jpeg1_size,
 free_A:
 	free(A);
 out:
+	return ret;
+}
+
+/* Returns true on success */
+__attribute__ ((visibility ("default")))
+bool calculateXCorr2(struct jpeg_image *ref_img, struct jpeg_image *compare,
+		     int ncompare, float *corr)
+{
+	bool ret = true;
+	float *ref, *tmp;
+	int width, height;
+	int i;
+	float *img_buf;
+
+	if (!initialized) {
+		if (!fftimpl_init()) {
+			fprintf(stderr,
+				"ERROR: failed to initialize fft library\n");
+			return false;
+		}
+		initialized = true;
+	}
+
+	ref = jpeg_to_grayscale(ref_img->data, ref_img->size, &width, &height);
+	if (!ref)
+		return false;
+
+	img_buf = (float *) malloc(MAX_BITMAPS * IMG_W * IMG_H * sizeof(float));
+
+	if (width != IMG_W || height != IMG_H) {
+		fprintf(stderr,
+			"ERROR: Wrong image dimension. Need %dx%d\n",
+			IMG_W, IMG_H);
+		ret = false;
+		goto out;
+	}
+
+	while (ncompare) {
+		for (i = 0; i < MAX_BITMAPS && ncompare; i++, ncompare--, compare++) {
+			tmp = jpeg_to_grayscale(compare->data, compare->size, &width, &height);
+			if (!tmp) {
+				ret = false;
+				goto out;
+			}
+
+			if (width != IMG_W || height != IMG_H) {
+				fprintf(stderr,
+					"ERROR: Wrong image dimension. Need %dx%d\n",
+					IMG_W, IMG_H);
+				ret = false;
+				free(tmp);
+				goto out;
+			}
+			memcpy(&img_buf[IMG_W * IMG_H * i], tmp,
+					IMG_W * IMG_H * sizeof(float));
+
+			free(tmp);
+		}
+
+		if (!fftimpl_xcorr(ref, img_buf, i, IMG_W, IMG_H, corr)) {
+			fprintf(stderr, "ERROR: xcorr failed\n");
+			ret = false;
+			goto out;
+		}
+		corr += i;
+	}
+
+out:
+	free(img_buf);
+	free(ref);
 	return ret;
 }
 
