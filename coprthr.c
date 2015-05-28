@@ -58,6 +58,9 @@ typedef float complex cfloat;
 #define NSIZE 128
 #define MSIZE 7
 
+/* Max bitmaps / iteration. Room for improvement */
+#define MAX_BITMAPS 64
+
 /* Global state */
 struct {
 	bool initialized;
@@ -201,10 +204,12 @@ static bool allocate_bufs()
 	GLOB.wm_bwd_mem	= coprthr_dmalloc(GLOB.coprthr_dd, wn_sz, 0);
 	GLOB.ref_bmp_mem= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz, 0);
 	/* TODO: Larger */
-	GLOB.bmps_mem	= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz * 2, 0);
+	GLOB.bmps_mem	= coprthr_dmalloc(GLOB.coprthr_dd,
+					  MAX_BITMAPS * bitmap_sz, 0);
 	GLOB.ref_fft_mem= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz, 0);
 	/* TODO: nmbr of bitmaps in bmps_mem * sizeof(float) */
-	GLOB.results_mem= coprthr_dmalloc(GLOB.coprthr_dd, 128, 0);
+	GLOB.results_mem= coprthr_dmalloc(GLOB.coprthr_dd,
+					  MAX_BITMAPS * sizeof(float), 0);
 	GLOB.C_mem	= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz, 0);
 	GLOB.C_mem	= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz, 0);
 
@@ -280,6 +285,13 @@ bool fftimpl_xcorr(float *ref_bmp, float *bmps, int nbmps,
 
 	/* COPRTHR event */
 	coprthr_event_t ev;
+
+	if (nbmps > MAX_BITMAPS) {
+		fprintf(stderr,
+			"ERROR: coprthr fftimpl_xcorr supports up to %d bitmaps in one go\n",
+			MAX_BITMAPS);
+		return false;
+	}
 
 	/* Current device algo can only support up to 128x128 including
 	 * zero padding. */
