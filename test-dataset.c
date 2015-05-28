@@ -9,6 +9,11 @@
 
 #include "demo.h"
 
+#define MAX_BITMAPS 96
+#define IMG_W 64
+#define IMG_H 64
+
+
 bool initialized = false;
 
 void usage(char *argv0)
@@ -23,9 +28,15 @@ int main(int argc, char *argv[])
 	char *refimg, *filelist;
 	float *A = NULL, *B = NULL;
 	int width, height;
-	float corr = 0;
 	FILE *fp;
-	char buf[256];
+	int i, j;
+	bool eof = false;
+	char fn_buf[MAX_BITMAPS][4096];
+
+	float *img_buf =
+		(float *) malloc(MAX_BITMAPS * IMG_W * IMG_H * sizeof(float));
+
+	float *corr = calloc(MAX_BITMAPS, sizeof(*corr));
 
 	if (!initialized) {
 		if (!fftimpl_init()) {
@@ -48,6 +59,14 @@ int main(int argc, char *argv[])
 		goto out;
 	}
 
+	if (width != IMG_W || height != IMG_H) {
+		fprintf(stderr,
+			"ERROR: Wrong image dimension. Need %dx%d\n",
+			IMG_W, IMG_H);
+		ret = 1;
+		goto free_A;
+	}
+
 	fp = fopen(filelist, "r");
 	if (!fp) {
 		fprintf(stderr, "ERROR: Could not open %s\n", filelist);
@@ -55,19 +74,44 @@ int main(int argc, char *argv[])
 		goto free_A;
 	}
 
-	while (fscanf(fp, "%s", buf) == 1) {
-		B = jpeg_file_to_grayscale(buf, &width, &height);
-		if (!B) {
-			ret = 3;
-			break;
+	while (!eof) {
+		for (i = 0; i < MAX_BITMAPS; i++) {
+			if (fscanf(fp, "%s", fn_buf[i]) != 1) {
+				eof = true;
+				break;
+			}
+			if (fn_buf[i][0] == '\0') {
+				eof = true;
+				break;
+			}
+			B = jpeg_file_to_grayscale(fn_buf[i], &width, &height);
+			if (!B) {
+				eof = true;
+				ret = 3;
+				break;
+			}
+			if (width != IMG_W || height != IMG_H) {
+				fprintf(stderr,
+				"ERROR: Wrong image dimension. Need %dx%d\n",
+				IMG_W, IMG_H);
+				eof = true;
+				ret = 3;
+				break;
+			}
+			memcpy(&img_buf[IMG_W *IMG_H * i],
+			       B, IMG_W *IMG_H * sizeof(float));
+			free(B);
 		}
+		if (!i)
+			break;
 
-		if (!fftimpl_xcorr(A, B, 1, width, height, &corr)) {
+		if (!fftimpl_xcorr(A, img_buf, i, width, height, corr)) {
 			fprintf(stderr, "ERROR: xcorr failed\n");
 			break;
 		}
-		free(B);
-		printf("%f,%s,%s\n", corr, refimg, buf);
+
+		for (j = 0; j < i; j++)
+			printf("%f,%s,%s\n", corr[j], refimg, fn_buf[j]);
 	}
 
 	fclose(fp);
