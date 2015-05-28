@@ -291,9 +291,6 @@ my_thread (void *p) {
 	cfloat *g_wn_fwd = args.wn_fwd;
 	cfloat *g_wn_bwd = args.wn_bwd;
 
-	/* TODO: First image now */
-	cfloat *g_cmp_bmp = args.bitmaps;
-
 	int i,j,k,l;
 	int row;
 
@@ -354,64 +351,83 @@ my_thread (void *p) {
 	e_dma_copy(args.ref_fft + myrank * nlocal * args.n, l_tmp_fft,
 		   l_fft_sz);
 
-	// FFT IMG B
-	memset(l_tmp_fft, 0, l_fft_sz);
-	e_dma_copy(l_tmp_fft, g_cmp_bmp + myrank * nlocal * args.n, l_fft_sz);
 
-	/* Normalize signal to zero out DC component */
-	normalize2(comm, nprocs, myrank, nlocal, args.n, l_tmp_fft);
-
-	fft2d(comm, nprocs, myrank, nlocal, args.n, args.m, brp, wn,
-	      l_tmp_fft);
-
+	// Free wn
 	coprthr_tls_brk(wn);
 
-	// tmp = A * conj(B)
+	int nbitmap = 0;
 
-	/* Not enough core SRAM to store two FFTs + code ...
-	 * So we resort to copying in smaller chunks of ref FFT...
-	 * It is possible to get the number of iterations down to 4 if you patch
-	 * COPRTHR to use -Os instead of -O3 when compiling this code.
-	 *
-	 * TODO: Investigate if we can get rid of this (fit two FFTs in mem)
-	 * or at least get the number of iterations down.
-	 */
+	/* Iterate over all bitmaps in args.bitmaps */
+	for (nbitmap = 0; nbitmap < args.nbitmaps; nbitmap++) {
+
+		// offset to bitmap
+		cfloat *g_cmp_bmp = args.bitmaps + args.n * args.n * nbitmap;
+
+		// FFT IMG B
+		memset(l_tmp_fft, 0, l_fft_sz);
+		e_dma_copy(l_tmp_fft, g_cmp_bmp + myrank * nlocal * args.n, l_fft_sz);
+
+		/* Normalize signal to zero out DC component */
+		normalize2(comm, nprocs, myrank, nlocal, args.n, l_tmp_fft);
+
+		/* Copy fwd wn coeffs to local mem */
+		cfloat *wn = (cfloat *) coprthr_tls_sbrk(wn_sz);
+		e_dma_copy(wn, g_wn_fwd, wn_sz);
+
+		fft2d(comm, nprocs, myrank, nlocal, args.n, args.m, brp, wn,
+		      l_tmp_fft);
+
+		coprthr_tls_brk(wn);
+
+		// tmp = A * conj(B)
+
+		/* Not enough core SRAM to store two FFTs + code ...
+		 * So we resort to copying in smaller chunks of ref FFT...
+		 * It is possible to get the number of iterations down to 4 if you patch
+		 * COPRTHR to use -Os instead of -O3 when compiling this code.
+		 *
+		 * TODO: Investigate if we can get rid of this (fit two FFTs in mem)
+		 * or at least get the number of iterations down.
+		 */
 
 
-	size_t small_iters = 8;
-	size_t n_small = args.n * nlocal / small_iters;
-	size_t sz_small = n_small * sizeof(cfloat);
-	cfloat *l_ref_fft = (cfloat *) coprthr_tls_sbrk(sz_small);
+		size_t small_iters = 8;
+		size_t n_small = args.n * nlocal / small_iters;
+		size_t sz_small = n_small * sizeof(cfloat);
+		cfloat *l_ref_fft = (cfloat *) coprthr_tls_sbrk(sz_small);
 
-	for (i = 0; i < small_iters; i++) {
-		e_dma_copy(l_ref_fft,
-			   args.ref_fft + myrank * nlocal * args.n + i * n_small,
-			   sz_small);
+		for (i = 0; i < small_iters; i++) {
+			e_dma_copy(l_ref_fft,
+				   args.ref_fft + myrank * nlocal * args.n + i * n_small,
+				   sz_small);
 
-		for (j = 0; j < n_small; j++) {
-			l_tmp_fft[i * n_small + j] =
-				l_ref_fft[j] * conjf(l_tmp_fft[i * n_small + j]);
+			for (j = 0; j < n_small; j++) {
+				l_tmp_fft[i * n_small + j] =
+					l_ref_fft[j] * conjf(l_tmp_fft[i * n_small + j]);
+			}
 		}
-	}
-	/* Free ref fft */
-	coprthr_tls_brk(l_ref_fft);
+		/* Free ref fft */
+		coprthr_tls_brk(l_ref_fft);
 
-	/* Bring in wn_bwd coeffs */
-	wn = (cfloat *) coprthr_tls_sbrk(wn_sz);
-	e_dma_copy(wn, g_wn_bwd, wn_sz);
-	/* IFFT() */
-	fft2d(comm, nprocs, myrank, nlocal, args.n, args.m, brp, wn,
-	      l_tmp_fft);
+		/* Bring in wn_bwd coeffs */
+		wn = (cfloat *) coprthr_tls_sbrk(wn_sz);
+		e_dma_copy(wn, g_wn_bwd, wn_sz);
+		/* IFFT() */
+		fft2d(comm, nprocs, myrank, nlocal, args.n, args.m, brp, wn,
+		      l_tmp_fft);
 
-	/* Free wn */
-	coprthr_tls_brk(wn);
+		/* Free wn */
+		coprthr_tls_brk(wn);
 
-	float max = global_max(comm, nprocs, myrank, nlocal, args.n, l_tmp_fft);
+		float max = global_max(comm, nprocs, myrank, nlocal, args.n, l_tmp_fft);
 
+		/* Root writes back result */
+		if (myrank == 0) {
+			/* Normalize result */
+			max /= ((float) args.n * args.n);
+			args.results[nbitmap] = max;
+		}
 
-	if (myrank == 0) {
-		max /= ((float) args.n * args.n);
-		args.results[0] = max;
 	}
 
 	coprthr_tls_brk(memfree);

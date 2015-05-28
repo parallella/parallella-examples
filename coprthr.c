@@ -203,7 +203,7 @@ static bool allocate_bufs()
 	GLOB.wm_bwd_mem	= coprthr_dmalloc(GLOB.coprthr_dd, wn_sz, 0);
 	GLOB.ref_bmp_mem= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz, 0);
 	/* TODO: Larger */
-	GLOB.bmps_mem	= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz, 0);
+	GLOB.bmps_mem	= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz * 2, 0);
 	GLOB.ref_fft_mem= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz, 0);
 	GLOB.tmp_fft_mem= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz, 0);
 	/* TODO: nmbr of bitmaps in bmps_mem * sizeof(float) */
@@ -277,7 +277,7 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 
 	bool retval = true;
 
-	float correlation = 12345678.0f;
+	float correlations[2] = { 12345678.0f, 1336.0f };
 
 	/* Intermediate matrices */
 	cfloat *A_cbitmap, *B_cbitmap, *A_fft, *B_fft, *C_fft, *C;
@@ -332,10 +332,16 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 			    NSIZE * NSIZE * sizeof(cfloat), COPRTHR_E_WAIT);
 	__free_event(ev);
 
+	cfloat *bmpbuf = calloc(2*128*128, sizeof(cfloat));
+	memcpy(&bmpbuf[0], B_cbitmap, 128*128*sizeof(cfloat));
+	memcpy(&bmpbuf[128*128], B_cbitmap, 128*128*sizeof(cfloat));
+
 	/* Copy B to device. TODO: More images. */
-	ev = coprthr_dwrite(GLOB.coprthr_dd, GLOB.bmps_mem, 0, B_cbitmap,
-			    NSIZE * NSIZE * sizeof(cfloat), COPRTHR_E_WAIT);
+	ev = coprthr_dwrite(GLOB.coprthr_dd, GLOB.bmps_mem, 0, bmpbuf,
+			    2 * NSIZE * NSIZE * sizeof(cfloat), COPRTHR_E_WAIT);
 	__free_event(ev);
+
+	free(bmpbuf);
 
 	/* Calculate FFT for image A */
 	struct my_args args_xcorr = {
@@ -345,6 +351,7 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 		.wn_bwd		= (__e_ptr(cfloat)) coprthr_memptr(GLOB.wm_bwd_mem,0),
 		.ref_bitmap	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.ref_bmp_mem, 0),
 		.bitmaps	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.bmps_mem, 0),
+		.nbitmaps	= 2,
 		.ref_fft	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.ref_fft_mem, 0),
 		.tmp_fft	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.tmp_fft_mem, 0),
 		.results	= (__e_ptr(float)) coprthr_memptr(GLOB.results_mem, 0),
@@ -356,8 +363,8 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 	gettimeofday(&t1,0);
 
 	/* read back data from memory on device */
-	ev = coprthr_dread(GLOB.coprthr_dd, GLOB.results_mem, 0, &correlation,
-			   sizeof(correlation), COPRTHR_E_WAIT);
+	ev = coprthr_dread(GLOB.coprthr_dd, GLOB.results_mem, 0, correlations,
+			   sizeof(correlations), COPRTHR_E_WAIT);
 	__free_event(ev);
 
 	double time_fwd = t1.tv_sec-t0.tv_sec + 1e-6*(t1.tv_usec - t0.tv_usec);
@@ -366,7 +373,7 @@ bool fftimpl_xcorr(float *A, float *B, int width, int height, float *out_corr)
 	printf("mpiexec time: forward %f sec inverse %f sec\n", time_fwd,time_inv);
 #endif
 
-	*out_corr = correlation;
+	*out_corr = correlations[1];
 
 out:
 
