@@ -317,7 +317,8 @@ my_thread (void *p) {
 	void *memfree = coprthr_tls_sbrk(0);
 
 	uint16_t *brp = (uint16_t *) coprthr_tls_sbrk((brp_sz+7) & ~7);
-        memset(brp, 0, brp_sz);
+	for (i = 0; i < brp_sz / sizeof(*brp); i++)
+		brp[i] = 0;
 
 	for(i = 0, k = 0; i < args.n; i++) {
 		int x = i;
@@ -364,7 +365,7 @@ my_thread (void *p) {
 		cfloat *g_cmp_bmp = args.bitmaps + args.n * args.n * nbitmap;
 
 		// FFT IMG B
-		memset(l_tmp_fft, 0, l_fft_sz);
+		//__builtin_memset(l_tmp_fft, 0, l_fft_sz);
 		e_dma_copy(l_tmp_fft, g_cmp_bmp + myrank * nlocal * args.n, l_fft_sz);
 
 		/* Normalize signal to zero out DC component */
