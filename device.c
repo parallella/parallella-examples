@@ -241,10 +241,10 @@ float global_max(void *p_comm, int nprocs, int rank,
 		ct = (ct + 1) % nprocs;
 	}
 
-	return max;
-
 	coprthr_tls_brk(memfree);
+	return max;
 }
+
 
 
 void fft2d(void *comm, int nprocs, int rank, unsigned int nlocal,
