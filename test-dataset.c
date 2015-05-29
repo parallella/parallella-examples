@@ -25,15 +25,15 @@ int main(int argc, char *argv[])
 {
 	int ret = 0;
 	char *refimg, *filelist;
-	float *A = NULL, *B = NULL;
+	uint8_t *A = NULL, *B = NULL;
 	int width, height;
 	FILE *fp;
 	int i, j;
 	bool eof = false;
 	char fn_buf[MAX_BITMAPS][4096];
 
-	float *img_buf =
-		(float *) malloc(MAX_BITMAPS * IMG_W * IMG_H * sizeof(float));
+	uint8_t *img_buf =
+		(uint8_t *) malloc(MAX_BITMAPS * IMG_W * IMG_H * sizeof(*img_buf));
 
 	float *corr = calloc(MAX_BITMAPS, sizeof(*corr));
 
@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
 	refimg = argv[1];
 	filelist = argv[2];
 
-	A = jpeg_file_to_grayscale(refimg, &width, &height);
+	A = jpeg_file_to_grayscale_int(refimg, &width, &height);
 	if (!A) {
 		ret = 1;
 		goto out;
@@ -83,7 +83,7 @@ int main(int argc, char *argv[])
 				eof = true;
 				break;
 			}
-			B = jpeg_file_to_grayscale(fn_buf[i], &width, &height);
+			B = jpeg_file_to_grayscale_int(fn_buf[i], &width, &height);
 			if (!B) {
 				eof = true;
 				ret = 3;
@@ -98,12 +98,11 @@ int main(int argc, char *argv[])
 				break;
 			}
 			memcpy(&img_buf[IMG_W *IMG_H * i],
-			       B, IMG_W *IMG_H * sizeof(float));
+			       B, IMG_W *IMG_H * sizeof(*img_buf));
 			free(B);
 		}
 		if (!i)
 			break;
-
 		if (!fftimpl_xcorr(A, img_buf, i, width, height, corr)) {
 			fprintf(stderr, "ERROR: xcorr failed\n");
 			break;

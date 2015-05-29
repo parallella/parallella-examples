@@ -44,6 +44,36 @@ static inline bool to_float(struct jpeg_decompress_struct *cinfo,
 	return true;
 }
 
+/* Convert to grayscale 8-bit integer
+ *
+ * Assumes 8-bit grayscale input data
+ *
+ * @return TRUE on success. FALSE on failure.
+ */
+static inline bool to_int(struct jpeg_decompress_struct *cinfo,
+			    uint8_t **bufs, size_t nbufs, uint8_t *bitmap,
+			    size_t line)
+{
+	uint8_t *out;
+	size_t i;
+
+	/* Only support 8-bit grayscale for now */
+	if (cinfo->data_precision != 8 || cinfo->output_components != 1) {
+		fprintf(stderr, "%s:%s: Unsupported color format\n",
+				__FILE__, __func__);
+		return false;
+	}
+
+	/* Advance bitmap */
+	out = bitmap + line * cinfo->output_width;
+
+	for (i = 0; i < nbufs; i++) {
+		memcpy(out, bufs[i], cinfo->output_width * sizeof(uint8_t));
+		out += cinfo->output_width;
+	}
+	return true;
+}
+
 static inline float in_range(const float min, const float max, const float val)
 {
 	if (val < min)
@@ -89,12 +119,14 @@ static inline bool from_float(struct jpeg_compress_struct *cinfo,
 
 /* Decompress jpeg to raw float grayscale
  *
+ * @fp  True if image should be converted to floating point
+ *
  * @return pointer to data. Caller need to free data.
  */
-float *jpeg_to_grayscale(void *jpeg, size_t jpeg_size, int *width, int *height)
+void *jpeg_to_grayscale_(void *jpeg, size_t jpeg_size, int *width, int *height, bool fp)
 {
 	int ret, denom, line = 0;
-	float *bitmap;
+	void *bitmap;
 	uint8_t *buf, *bufs[1];
 	bool decompress_fail = false;
 
@@ -132,12 +164,13 @@ float *jpeg_to_grayscale(void *jpeg, size_t jpeg_size, int *width, int *height)
 	*width = cinfo.output_width;
 	*height = cinfo.output_height;
 
-	bitmap = calloc((*width) * (*height), sizeof(float));
+	bitmap = calloc((*width) * (*height), fp ? sizeof(float) : sizeof(uint8_t));
 
 	buf = calloc(*width, sizeof(uint8_t));
 	bufs[0] = buf;
 
 	while (cinfo.output_scanline < cinfo.output_height) {
+		uint8_t *ptr = (uint8_t *) bitmap;
 
 		/* We're only reading one scanline at a time so this should
 		 * always be true */
@@ -148,9 +181,16 @@ float *jpeg_to_grayscale(void *jpeg, size_t jpeg_size, int *width, int *height)
 			break;
 		}
 
-		if (!to_float(&cinfo, bufs, 1, bitmap, line)) {
-			decompress_fail = true;
-			break;
+		if (fp) {
+			if (!to_float(&cinfo, bufs, 1, bitmap, line)) {
+				decompress_fail = true;
+				break;
+			}
+		} else {
+			if (!to_int(&cinfo, bufs, 1, bitmap, line)) {
+				decompress_fail = true;
+				break;
+			}
 		}
 		line++;
 	}
@@ -168,6 +208,17 @@ float *jpeg_to_grayscale(void *jpeg, size_t jpeg_size, int *width, int *height)
 
 	return bitmap;
 }
+
+float *jpeg_to_grayscale(void *jpeg, size_t jpeg_size, int *width, int *height)
+{
+	return jpeg_to_grayscale_(jpeg, jpeg_size, width, height, true);
+}
+
+uint8_t *jpeg_to_grayscale_int(void *jpeg, size_t jpeg_size, int *width, int *height)
+{
+	return jpeg_to_grayscale_(jpeg, jpeg_size, width, height, false);
+}
+
 
 /* In-memory conversion from float grayscale bitmap to grayscale JPEG
  *
@@ -264,9 +315,11 @@ out:
 
 /* Decompress JPEG file to float bitmap
  *
+ * @ fp True if output should be float. False and output will be uint8
+ *
  * @return pointer to data. Caller need to free data.
  */
-float *jpeg_file_to_grayscale(char *path, int *width, int *height)
+void *jpeg_file_to_grayscale_(char *path, int *width, int *height, float fp)
 {
 	int ret, fd;
 	uint8_t *jpeg;
@@ -274,7 +327,7 @@ float *jpeg_file_to_grayscale(char *path, int *width, int *height)
 	struct stat file_stat;
 	size_t i;
 	ssize_t count;
-	float *bitmap = NULL;
+	void *bitmap = NULL;
 
 	ret = stat(path, &file_stat);
 	if (ret) {
@@ -300,11 +353,21 @@ float *jpeg_file_to_grayscale(char *path, int *width, int *height)
 		}
 	}
 
-	bitmap = jpeg_to_grayscale(jpeg, jpeg_size, width, height);
+	bitmap = jpeg_to_grayscale_(jpeg, jpeg_size, width, height, fp);
 
 out:
 	free(jpeg);
 	close(fd);
 	return bitmap;
+}
+
+float *jpeg_file_to_grayscale(char *path, int *width, int *height)
+{
+	return jpeg_file_to_grayscale_(path, width, height, true);
+}
+
+uint8_t *jpeg_file_to_grayscale_int(char *path, int *width, int *height)
+{
+	return jpeg_file_to_grayscale_(path, width, height, false);
 }
 

@@ -131,7 +131,7 @@ fail:
 	return false;
 }
 
-bool fftimpl_xcorr_one(float *B, int width, int height, float *out_corr)
+bool fftimpl_xcorr_one(uint8_t *B, int width, int height, float *out_corr)
 {
 	int i, j;
 	float B_mean, B_sum, correlation;
@@ -144,19 +144,26 @@ bool fftimpl_xcorr_one(float *B, int width, int height, float *out_corr)
 		return false;
 	}
 
-	/* Calculate means */
-	for (B_sum = 0, i = 0; i < width * height; i++) {
-		B_sum += B[i];
+	/* Convert to float */
+	for (i = 0; i < width; i++) {
+		for (j = 0; j < height; j++) {
+			GLOB.B[i * NSIZE + j] =
+				((float) B[i * width + j] / 255.0f);
+		}
 	}
-	B_mean = B_sum / ((float) height * width);
 
-	/* Zero out A and B bufs */
-	memset(GLOB.B, 0, sizeof(*GLOB.B) * NSIZE * NSIZE);
+	/* Calculate means */
+	for (B_sum = 0, i = 0; i < width; i++) {
+		for (j = 0; j < height; j++) {
+			B_sum += GLOB.B[i * NSIZE + j];
+		}
+	}
+	B_mean = B_sum /= ((float) width * height);
 
-	/* Initialize data w/ DC component removed */
+	/* Remove  DC component */
 	for (i = 0; i < width; i++) {
 		for (j = 0; j < height; j++)
-			GLOB.B[i * NSIZE + j] = B[i * width + j] - B_mean;
+			GLOB.B[i * NSIZE + j] -= B_mean;
 	}
 
 	/* Calculate FFT for image B */
@@ -183,7 +190,7 @@ bool fftimpl_xcorr_one(float *B, int width, int height, float *out_corr)
 	return true;
 }
 
-bool fftimpl_xcorr(float *ref_bmp, float *bmps, int nbmps,
+bool fftimpl_xcorr(uint8_t *ref_bmp, uint8_t *bmps, int nbmps,
 		   int width, int height, float *out_corr)
 {
 	int i, j, n;
@@ -197,17 +204,27 @@ bool fftimpl_xcorr(float *ref_bmp, float *bmps, int nbmps,
 		return false;
 	}
 
-	/* Calculate means */
-	for (ref_sum = 0, i = 0; i < width * height; i++)
-		ref_sum += ref_bmp[i];
-	ref_mean = ref_sum /= ((float) width * height);
-
-	/* Initialize data w/ DC component removed */
+	/* Convert to float */
 	for (i = 0; i < width; i++) {
 		for (j = 0; j < height; j++) {
 			GLOB.ref[i * NSIZE + j] =
-				ref_bmp[i * width + j] - ref_mean;
+				((float) ref_bmp[i * width + j] / 255.0f);
 		}
+	}
+
+	/* Calculate means */
+	for (ref_sum = 0, i = 0; i < width; i++) {
+		for (j = 0; j < height; j++) {
+			ref_sum += GLOB.ref[i * NSIZE + j];
+		}
+	}
+	ref_mean = ref_sum /= ((float) width * height);
+
+
+	/* Remove  DC component */
+	for (i = 0; i < width; i++) {
+		for (j = 0; j < height; j++)
+			GLOB.ref[i * NSIZE + j] -= ref_mean;
 	}
 
 	/* Calculate FFT for image A */

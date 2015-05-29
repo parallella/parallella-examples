@@ -191,9 +191,9 @@ void fftimpl_fini()
 static bool allocate_bufs()
 {
 	size_t wn_sz = NSIZE * sizeof(cfloat);
-	size_t bitmap_sz = NSIZE * NSIZE * sizeof(cfloat);
+	size_t bitmap_sz = NSIZE * NSIZE * sizeof(uint8_t);
 
-	size_t bmp_sz = MAX_BITMAPS * (NSIZE / 2) * (NSIZE / 2) * sizeof(float);
+	size_t bmp_sz = MAX_BITMAPS * (NSIZE / 2) * (NSIZE / 2) * sizeof(uint8_t);
 
 	/* allocate memory on device */
 	GLOB.wn_fwd_mem	= coprthr_dmalloc(GLOB.coprthr_dd, wn_sz, 0);
@@ -265,7 +265,7 @@ fail:
 	return false;
 }
 
-bool fftimpl_xcorr(float *ref_bmp, float *bmps, int nbmps,
+bool fftimpl_xcorr(uint8_t *ref_bmp, uint8_t *bmps, int nbmps,
 		   int width, int height, float *out_corr)
 {
 	int i, j, n;
@@ -274,7 +274,7 @@ bool fftimpl_xcorr(float *ref_bmp, float *bmps, int nbmps,
 	bool retval = true;
 
 	/* Intermediate matrices */
-	cfloat *ref_cbitmap;
+	uint8_t *ref_bitmap; /* zero pad */
 	//float *cmp_bitmaps;
 
 	/* COPRTHR event */
@@ -297,9 +297,9 @@ bool fftimpl_xcorr(float *ref_bmp, float *bmps, int nbmps,
 	}
 
 	/* Allocate zeroed memory on host */
-	ref_cbitmap	= (cfloat *) calloc(NSIZE * NSIZE, sizeof(cfloat));
+	ref_bitmap	= (uint8_t *) calloc(NSIZE * NSIZE, sizeof(*ref_bitmap));
 	//cmp_bitmaps	= (float *) calloc(nbmps * NSIZE * NSIZE, sizeof(float));
-	if (!ref_cbitmap /*|| !cmp_bitmaps*/) {
+	if (!ref_bitmap /*|| !cmp_bitmaps*/) {
 		fprintf(stderr,
 			"ERROR: Failed allocating memory.\n");
 
@@ -311,7 +311,7 @@ bool fftimpl_xcorr(float *ref_bmp, float *bmps, int nbmps,
 	/* TODO: Remove this and send input args directly to device */
 	for (i = 0; i < height; i++) {
 		for (j = 0; j < width; j++)
-			ref_cbitmap[i * NSIZE + j] = ref_bmp[i * width + j];
+			ref_bitmap[i * NSIZE + j] = ref_bmp[i * width + j];
 	}
 
 #if 0
@@ -335,14 +335,14 @@ bool fftimpl_xcorr(float *ref_bmp, float *bmps, int nbmps,
 	__free_event(ev);
 
 
-	/* Copy A (reference image) to device */
-	ev = coprthr_dwrite(GLOB.coprthr_dd, GLOB.ref_bmp_mem, 0, ref_cbitmap,
-			    NSIZE * NSIZE * sizeof(cfloat), COPRTHR_E_WAIT);
+	/* Copy A (reference image) to device (shared mem) */
+	ev = coprthr_dwrite(GLOB.coprthr_dd, GLOB.ref_bmp_mem, 0, ref_bitmap,
+			    NSIZE * NSIZE * sizeof(uint8_t), COPRTHR_E_WAIT);
 	__free_event(ev);
 
-	/* Copy B to device. */
+	/* Copy bitmaps to compare to device (shared mem). */
 	ev = coprthr_dwrite(GLOB.coprthr_dd, GLOB.bmps_mem, 0, bmps,
-			    nbmps * width * height * sizeof(float), COPRTHR_E_WAIT);
+			    nbmps * width * height * sizeof(uint8_t), COPRTHR_E_WAIT);
 	__free_event(ev);
 
 	/* Calculate FFT for image A */
@@ -351,8 +351,8 @@ bool fftimpl_xcorr(float *ref_bmp, float *bmps, int nbmps,
 		.m		= MSIZE,
 		.wn_fwd		= (__e_ptr(cfloat)) coprthr_memptr(GLOB.wn_fwd_mem, 0),
 		.wn_bwd		= (__e_ptr(cfloat)) coprthr_memptr(GLOB.wn_bwd_mem,0),
-		.ref_bitmap	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.ref_bmp_mem, 0),
-		.bitmaps	= (__e_ptr(float)) coprthr_memptr(GLOB.bmps_mem, 0),
+		.ref_bitmap	= (__e_ptr(uint8_t)) coprthr_memptr(GLOB.ref_bmp_mem, 0),
+		.bitmaps	= (__e_ptr(uint8_t)) coprthr_memptr(GLOB.bmps_mem, 0),
 		.nbitmaps	= nbmps,
 		.ref_fft	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.ref_fft_mem, 0),
 		.results	= (__e_ptr(float)) coprthr_memptr(GLOB.results_mem, 0),
@@ -376,8 +376,8 @@ bool fftimpl_xcorr(float *ref_bmp, float *bmps, int nbmps,
 
 out:
 
-	if (ref_cbitmap)
-		free(ref_cbitmap);
+	if (ref_bitmap)
+		free(ref_bitmap);
 #if 0
 	if (/*cmp_bitmaps*/)
 		free(cmp_bitmaps);
