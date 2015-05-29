@@ -40,7 +40,7 @@ struct my_args {
 
 	/* TODO: Use 8-bit grayscale where possible for space */
 	__e_ptr(_X_cfloat) ref_bitmap; /* TODO float and then uint8 */
-	__e_ptr(_X_cfloat) bitmaps;    /* Likewise */
+	__e_ptr(float) bitmaps;    /* Likewise */
 	uint32_t nbitmaps;
 
         /* Buffers */

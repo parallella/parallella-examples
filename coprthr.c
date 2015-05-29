@@ -197,9 +197,9 @@ static bool allocate_bufs()
 	GLOB.wn_fwd_mem	= coprthr_dmalloc(GLOB.coprthr_dd, wn_sz, 0);
 	GLOB.wn_bwd_mem	= coprthr_dmalloc(GLOB.coprthr_dd, wn_sz, 0);
 	GLOB.ref_bmp_mem= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz, 0);
-	/* TODO: Larger */
+	/* / 2 since we use float here */
 	GLOB.bmps_mem	= coprthr_dmalloc(GLOB.coprthr_dd,
-					  MAX_BITMAPS * bitmap_sz, 0);
+					  MAX_BITMAPS * bitmap_sz / 2, 0);
 	GLOB.ref_fft_mem= coprthr_dmalloc(GLOB.coprthr_dd, bitmap_sz, 0);
 	/* TODO: nmbr of bitmaps in bmps_mem * sizeof(float) */
 	GLOB.results_mem= coprthr_dmalloc(GLOB.coprthr_dd,
@@ -273,7 +273,8 @@ bool fftimpl_xcorr(float *ref_bmp, float *bmps, int nbmps,
 	bool retval = true;
 
 	/* Intermediate matrices */
-	cfloat *ref_cbitmap, *cmp_cbitmaps;
+	cfloat *ref_cbitmap;
+	float *cmp_bitmaps;
 
 	/* COPRTHR event */
 	coprthr_event_t ev;
@@ -296,8 +297,8 @@ bool fftimpl_xcorr(float *ref_bmp, float *bmps, int nbmps,
 
 	/* Allocate zeroed memory on host */
 	ref_cbitmap	= (cfloat *) calloc(NSIZE * NSIZE, sizeof(cfloat));
-	cmp_cbitmaps	= (cfloat *) calloc(nbmps * NSIZE * NSIZE, sizeof(cfloat));
-	if (!ref_cbitmap || !cmp_cbitmaps) {
+	cmp_bitmaps	= (float *) calloc(nbmps * NSIZE * NSIZE, sizeof(float));
+	if (!ref_cbitmap || !cmp_bitmaps) {
 		fprintf(stderr,
 			"ERROR: Failed allocating memory.\n");
 
@@ -312,12 +313,13 @@ bool fftimpl_xcorr(float *ref_bmp, float *bmps, int nbmps,
 			ref_cbitmap[i * NSIZE + j] = ref_bmp[i * width + j];
 	}
 
+	/* Zero pad */
 	for (n = 0; n < nbmps; n++) {
 		float *bmp = &bmps[n * height * width];
-		cfloat *cbmp = &cmp_cbitmaps[n * NSIZE * NSIZE];
+		float *pbmp = &cmp_bitmaps[n * NSIZE * NSIZE];
 		for (i = 0; i < height; i++) {
 			for (j = 0; j < width; j++)
-				cbmp[i * NSIZE + j] = bmp[i * width + j];
+				pbmp[i * NSIZE + j] = bmp[i * width + j];
 		}
 	}
 
@@ -335,9 +337,9 @@ bool fftimpl_xcorr(float *ref_bmp, float *bmps, int nbmps,
 			    NSIZE * NSIZE * sizeof(cfloat), COPRTHR_E_WAIT);
 	__free_event(ev);
 
-	/* Copy B to device. TODO: More images. */
-	ev = coprthr_dwrite(GLOB.coprthr_dd, GLOB.bmps_mem, 0, cmp_cbitmaps,
-			    nbmps * NSIZE * NSIZE * sizeof(cfloat), COPRTHR_E_WAIT);
+	/* Copy B to device. */
+	ev = coprthr_dwrite(GLOB.coprthr_dd, GLOB.bmps_mem, 0, cmp_bitmaps,
+			    nbmps * NSIZE * NSIZE * sizeof(float), COPRTHR_E_WAIT);
 	__free_event(ev);
 
 	/* Calculate FFT for image A */
@@ -347,7 +349,7 @@ bool fftimpl_xcorr(float *ref_bmp, float *bmps, int nbmps,
 		.wn_fwd		= (__e_ptr(cfloat)) coprthr_memptr(GLOB.wn_fwd_mem, 0),
 		.wn_bwd		= (__e_ptr(cfloat)) coprthr_memptr(GLOB.wn_bwd_mem,0),
 		.ref_bitmap	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.ref_bmp_mem, 0),
-		.bitmaps	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.bmps_mem, 0),
+		.bitmaps	= (__e_ptr(float)) coprthr_memptr(GLOB.bmps_mem, 0),
 		.nbitmaps	= nbmps,
 		.ref_fft	= (__e_ptr(cfloat)) coprthr_memptr(GLOB.ref_fft_mem, 0),
 		.results	= (__e_ptr(float)) coprthr_memptr(GLOB.results_mem, 0),
@@ -373,8 +375,8 @@ out:
 
 	if (ref_cbitmap)
 		free(ref_cbitmap);
-	if (cmp_cbitmaps)
-		free(cmp_cbitmaps);
+	if (cmp_bitmaps)
+		free(cmp_bitmaps);
 
 	return retval;
 }

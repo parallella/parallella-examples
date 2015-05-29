@@ -362,11 +362,16 @@ my_thread (void *p) {
 	for (nbitmap = 0; nbitmap < args.nbitmaps; nbitmap++) {
 
 		// offset to bitmap
-		cfloat *g_cmp_bmp = args.bitmaps + args.n * args.n * nbitmap;
+		float *g_cmp_bmp = args.bitmaps + args.n * args.n * nbitmap;
 
 		// FFT IMG B
-		//__builtin_memset(l_tmp_fft, 0, l_fft_sz);
-		e_dma_copy(l_tmp_fft, g_cmp_bmp + myrank * nlocal * args.n, l_fft_sz);
+		e_dma_copy(l_tmp_fft, g_cmp_bmp + myrank * nlocal * args.n, l_fft_sz / 2);
+
+		// Unpack image (float -> cfloat) backwards
+		int last = nlocal * args.n - 1;
+		float *fptr = (float *) l_tmp_fft;
+		for (i = last; i >= 0; i--)
+			l_tmp_fft[i] = fptr[i];
 
 		/* Normalize signal to zero out DC component */
 		normalize2(comm, nprocs, myrank, nlocal, args.n, l_tmp_fft);
