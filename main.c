@@ -7,12 +7,14 @@
 #include <stdbool.h>
 #include <stdint.h>
 
+/* Internal */
 #include "demo.h"
+
+/* API */
 #include "libfft-demo.h"
 
 bool initialized = false;
 
-#define MAX_BITMAPS 96
 #define IMG_W 64
 #define IMG_H 64
 

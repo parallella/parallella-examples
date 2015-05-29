@@ -9,7 +9,6 @@
 
 #include "demo.h"
 
-#define MAX_BITMAPS 96
 #define IMG_W 64
 #define IMG_H 64
 

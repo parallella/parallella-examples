@@ -3,6 +3,9 @@
 #include <stdbool.h>
 #include <sys/types.h>
 
+/* Max bitmaps / iteration fftmpl_xcorr supports */
+#define MAX_BITMAPS 96
+
 /* JPEG manipulation */
 float *jpeg_file_to_grayscale(char *path, int *width, int *height);
 float *jpeg_to_grayscale(void *jpeg, size_t jpeg_size, int *width, int *height);
