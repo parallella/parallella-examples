@@ -361,17 +361,36 @@ my_thread (void *p) {
 	/* Iterate over all bitmaps in args.bitmaps */
 	for (nbitmap = 0; nbitmap < args.nbitmaps; nbitmap++) {
 
-		// offset to bitmap
-		float *g_cmp_bmp = args.bitmaps + args.n * args.n * nbitmap;
+		const int width = args.n / 2;
+		const int height = args.n / 2;
+		// offset to bitmap (assume needs zero padding)
+		float *g_cmp_bmp = args.bitmaps + nbitmap * width * height;
 
 		// FFT IMG B
-		e_dma_copy(l_tmp_fft, g_cmp_bmp + myrank * nlocal * args.n, l_fft_sz / 2);
+		if (myrank < nprocs / 2)
+			e_dma_copy(l_tmp_fft, g_cmp_bmp + myrank * nlocal * width, nlocal*width * sizeof(float));
 
-		// Unpack image (float -> cfloat) backwards
-		int last = nlocal * args.n - 1;
 		float *fptr = (float *) l_tmp_fft;
-		for (i = last; i >= 0; i--)
-			l_tmp_fft[i] = fptr[i];
+		cfloat *cptr = (cfloat *) l_tmp_fft;
+
+		// zeropad (lower part always zero)
+		if (myrank < nprocs / 2) {
+			for (i = nlocal - 1; i > 0; i--) {
+				for (j = width -1 ; j >= 0; j--)
+					fptr[i * args.n + j] = fptr[i * width + j];
+			}
+			for (i = 0; i < nlocal; i++) {
+				for (j = width; j < args.n; j++)
+					fptr[i * args.n + j] = 0;
+			}
+			// Unpack image (float -> cfloat) backwards
+			int last = nlocal * args.n - 1;
+			for (i = last; i >= 0; i--)
+				l_tmp_fft[i] = fptr[i];
+		} else {
+			for (i = 0; i < nlocal * args.n; i++)
+				cptr[i] = 0;
+		}
 
 		/* Normalize signal to zero out DC component */
 		normalize2(comm, nprocs, myrank, nlocal, args.n, l_tmp_fft);
