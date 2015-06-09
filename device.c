@@ -280,6 +280,114 @@ void fft2d(void *comm, int nprocs, int rank, unsigned int nlocal,
 	corner_turn(nprocs, rank, p_signal, n, nlocal, comm);
 }
 
+float xcorr_one(void *p_comm, int nprocs, int myrank, void *pargs,
+		unsigned int nlocal, uint8_t *bitmap, void *brp, void *p_l_tmp_fft)
+{
+	MPI_Comm comm = (MPI_Comm)p_comm;
+	struct my_args *args = (struct my_args *) pargs;
+	cfloat *g_wn_fwd = args->wn_fwd;
+	cfloat *g_wn_bwd = args->wn_bwd;
+	const float divider = 1.0f/255.0f;
+	const int width = args->n / 2;
+	const int height = args->n / 2;
+
+	size_t wn_sz		= args->n * sizeof(cfloat);
+	size_t brp_sz		= 2 * args->n * sizeof(uint16_t);
+	size_t l_fft_sz		= nlocal * args->n * sizeof(cfloat);
+
+	int i, j;
+
+	// offset to bitmap (assume needs zero padding)
+
+	void *memfree = coprthr_tls_sbrk(0);
+
+	cfloat *l_tmp_fft = (cfloat *) p_l_tmp_fft;
+
+	// FFT IMG B
+	if (myrank < nprocs / 2)
+		e_dma_copy(l_tmp_fft, bitmap, nlocal*width * sizeof(*bitmap));
+		//e_dma_copy(l_tmp_fft, g_cmp_bmp + myrank * nlocal * width, nlocal*width * sizeof(*g_cmp_bmp));
+
+	uint8_t *bptr = (uint8_t *) l_tmp_fft;
+	cfloat *cptr = (cfloat *) l_tmp_fft;
+
+	if (myrank < nprocs / 2) {
+		// zeropad (lower part always zero)
+		for (i = nlocal - 1; i > 0; i--) {
+			for (j = width -1 ; j >= 0; j--)
+				bptr[i * args->n + j] = bptr[i * width + j];
+		}
+		for (i = 0; i < nlocal; i++) {
+			for (j = width; j < args->n; j++)
+				bptr[i * args->n + j] = 0;
+		}
+		// Unpack image (uint8_t -> cfloat) backwards
+		int last = nlocal * args->n - 1;
+		for (i = last; i >= 0; i--)
+			l_tmp_fft[i] = ((float) bptr[i]) * divider;
+	} else {
+		for (i = 0; i < nlocal * args->n; i++)
+			cptr[i] = 0;
+	}
+
+	/* Normalize signal to zero out DC component */
+	normalize2(comm, nprocs, myrank, nlocal, args->n, l_tmp_fft);
+
+	/* Copy fwd wn coeffs to local mem */
+	cfloat *wn = (cfloat *) coprthr_tls_sbrk(wn_sz);
+	e_dma_copy(wn, g_wn_fwd, wn_sz);
+
+	fft2d(comm, nprocs, myrank, nlocal, args->n, args->m, brp, wn,
+	      l_tmp_fft);
+
+	coprthr_tls_brk(wn);
+
+	// tmp = A * conj(B)
+
+	/* Not enough core SRAM to store two FFTs + code ...
+	 * So we resort to copying in smaller chunks of ref FFT...
+	 * It is possible to get the number of iterations down to 4 if you patch
+	 * COPRTHR to use -Os instead of -O3 when compiling this code.
+	 *
+	 * TODO: Investigate if we can get rid of this (fit two FFTs in mem)
+	 * or at least get the number of iterations down.
+	 */
+
+
+	size_t small_iters = 8;
+	size_t n_small = args->n * nlocal / small_iters;
+	size_t sz_small = n_small * sizeof(cfloat);
+	cfloat *l_ref_fft = (cfloat *) coprthr_tls_sbrk(sz_small);
+
+	for (i = 0; i < small_iters; i++) {
+		e_dma_copy(l_ref_fft,
+			   args->ref_fft + myrank * nlocal * args->n + i * n_small,
+			   sz_small);
+
+		for (j = 0; j < n_small; j++) {
+			l_tmp_fft[i * n_small + j] =
+				l_ref_fft[j] * conjf(l_tmp_fft[i * n_small + j]);
+		}
+	}
+	/* Free ref fft */
+	coprthr_tls_brk(l_ref_fft);
+
+	/* Bring in wn_bwd coeffs */
+	wn = (cfloat *) coprthr_tls_sbrk(wn_sz);
+	e_dma_copy(wn, g_wn_bwd, wn_sz);
+	/* IFFT() */
+	fft2d(comm, nprocs, myrank, nlocal, args->n, args->m, brp, wn,
+	      l_tmp_fft);
+
+	/* Free wn */
+	coprthr_tls_brk(wn);
+
+	float max = global_max(comm, nprocs, myrank, nlocal, args->n, l_tmp_fft);
+
+	coprthr_tls_brk(memfree);
+
+	return max;
+}
 
 /* TODO: xcorr_batch */
 __kernel void
@@ -311,6 +419,9 @@ my_thread (void *p) {
 	size_t wn_sz		= args.n * sizeof(cfloat);
 	size_t brp_sz		= 2 * args.n * sizeof(uint16_t);
 	size_t l_fft_sz		= nlocal * args.n * sizeof(cfloat);
+
+	const int width = args.n / 2;
+	const int height = args.n / 2;
 
 	/* Probably unneccessary */
 	uintptr_t align = ((uintptr_t) coprthr_tls_sbrk(0)) & 7;
@@ -361,7 +472,6 @@ my_thread (void *p) {
 	e_dma_copy(args.ref_fft + myrank * nlocal * args.n, l_tmp_fft,
 		   l_fft_sz);
 
-
 	// Free wn
 	coprthr_tls_brk(wn);
 
@@ -369,91 +479,13 @@ my_thread (void *p) {
 
 	/* Iterate over all bitmaps in args.bitmaps */
 	for (nbitmap = 0; nbitmap < args.nbitmaps; nbitmap++) {
-
-		const int width = args.n / 2;
-		const int height = args.n / 2;
-		// offset to bitmap (assume needs zero padding)
 		uint8_t *g_cmp_bmp = args.bitmaps + nbitmap * width * height;
+		uint8_t *portion = g_cmp_bmp + myrank * nlocal * width;
+		//e_dma_copy(l_tmp_fft, g_cmp_bmp + myrank * nlocal * width, nlocal*width * sizeof(*g_cmp_bmp));
 
-		// FFT IMG B
-		if (myrank < nprocs / 2)
-			e_dma_copy(l_tmp_fft, g_cmp_bmp + myrank * nlocal * width, nlocal*width * sizeof(*g_cmp_bmp));
-
-		uint8_t *bptr = (uint8_t *) l_tmp_fft;
-		cfloat *cptr = (cfloat *) l_tmp_fft;
-
-		if (myrank < nprocs / 2) {
-			// zeropad (lower part always zero)
-			for (i = nlocal - 1; i > 0; i--) {
-				for (j = width -1 ; j >= 0; j--)
-					bptr[i * args.n + j] = bptr[i * width + j];
-			}
-			for (i = 0; i < nlocal; i++) {
-				for (j = width; j < args.n; j++)
-					bptr[i * args.n + j] = 0;
-			}
-			// Unpack image (uint8_t -> cfloat) backwards
-			int last = nlocal * args.n - 1;
-			for (i = last; i >= 0; i--)
-				l_tmp_fft[i] = ((float) bptr[i]) * divider;
-		} else {
-			for (i = 0; i < nlocal * args.n; i++)
-				cptr[i] = 0;
-		}
-
-		/* Normalize signal to zero out DC component */
-		normalize2(comm, nprocs, myrank, nlocal, args.n, l_tmp_fft);
-
-		/* Copy fwd wn coeffs to local mem */
-		cfloat *wn = (cfloat *) coprthr_tls_sbrk(wn_sz);
-		e_dma_copy(wn, g_wn_fwd, wn_sz);
-
-		fft2d(comm, nprocs, myrank, nlocal, args.n, args.m, brp, wn,
-		      l_tmp_fft);
-
-		coprthr_tls_brk(wn);
-
-		// tmp = A * conj(B)
-
-		/* Not enough core SRAM to store two FFTs + code ...
-		 * So we resort to copying in smaller chunks of ref FFT...
-		 * It is possible to get the number of iterations down to 4 if you patch
-		 * COPRTHR to use -Os instead of -O3 when compiling this code.
-		 *
-		 * TODO: Investigate if we can get rid of this (fit two FFTs in mem)
-		 * or at least get the number of iterations down.
-		 */
-
-
-		size_t small_iters = 8;
-		size_t n_small = args.n * nlocal / small_iters;
-		size_t sz_small = n_small * sizeof(cfloat);
-		cfloat *l_ref_fft = (cfloat *) coprthr_tls_sbrk(sz_small);
-
-		for (i = 0; i < small_iters; i++) {
-			e_dma_copy(l_ref_fft,
-				   args.ref_fft + myrank * nlocal * args.n + i * n_small,
-				   sz_small);
-
-			for (j = 0; j < n_small; j++) {
-				l_tmp_fft[i * n_small + j] =
-					l_ref_fft[j] * conjf(l_tmp_fft[i * n_small + j]);
-			}
-		}
-		/* Free ref fft */
-		coprthr_tls_brk(l_ref_fft);
-
-		/* Bring in wn_bwd coeffs */
-		wn = (cfloat *) coprthr_tls_sbrk(wn_sz);
-		e_dma_copy(wn, g_wn_bwd, wn_sz);
-		/* IFFT() */
-		fft2d(comm, nprocs, myrank, nlocal, args.n, args.m, brp, wn,
-		      l_tmp_fft);
-
-		/* Free wn */
-		coprthr_tls_brk(wn);
-
-		float max = global_max(comm, nprocs, myrank, nlocal, args.n, l_tmp_fft);
+		float max;
+		max = xcorr_one(comm, nprocs, myrank, &args, nlocal, portion,
+				brp, l_tmp_fft);
 
 		/* Root writes back result */
 		if (myrank == 0) {
@@ -461,11 +493,9 @@ my_thread (void *p) {
 			max /= ((float) args.n * args.n);
 			args.results[nbitmap] = max;
 		}
-
 	}
 
 	coprthr_tls_brk(memfree);
 
 	MPI_Finalize();
 }
-
