@@ -492,23 +492,33 @@ my_thread (void *p) {
 	// Free wn
 	coprthr_tls_brk(wn);
 
+	/* Compute autocorrelation */
+	float autocorr = xcorr_one(comm, nprocs, myrank, &args, nlocal,
+				   args.ref_bitmap + myrank * nlocal * width,
+				   brp, l_tmp_fft);
+
 	int nbitmap = 0;
 
 	/* Iterate over all bitmaps in args.bitmaps */
 	for (nbitmap = 0; nbitmap < args.nbitmaps; nbitmap++) {
-		uint8_t *g_cmp_bmp = args.bitmaps + nbitmap * width * height;
-		uint8_t *portion = g_cmp_bmp + myrank * nlocal * width;
-		//e_dma_copy(l_tmp_fft, g_cmp_bmp + myrank * nlocal * width, nlocal*width * sizeof(*g_cmp_bmp));
+		uint8_t *bitmap = args.bitmaps + nbitmap * width * height;
+		uint8_t *myportion = bitmap + myrank * nlocal * width;
 
-		float max;
-		max = xcorr_one(comm, nprocs, myrank, &args, nlocal, portion,
-				brp, l_tmp_fft);
+		float xcorr;
+		xcorr = xcorr_one(comm, nprocs, myrank, &args, nlocal, myportion,
+				  brp, l_tmp_fft);
 
 		/* Root writes back result */
 		if (myrank == 0) {
-			/* Normalize result */
-			max /= ((float) args.n * args.n);
-			args.results[nbitmap] = max;
+			float corr;
+
+			/* Report results as factor of autocorrelation. */
+			if (xcorr > autocorr)
+				corr = autocorr / xcorr;
+			else
+				corr = xcorr / autocorr;
+
+			args.results[nbitmap] = corr;
 		}
 	}
 
