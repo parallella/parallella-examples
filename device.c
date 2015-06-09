@@ -446,15 +446,32 @@ my_thread (void *p) {
 
 	/* Copy IMG A (reference image) to local memory */
 	cfloat* l_tmp_fft  = (cfloat *) coprthr_tls_sbrk(l_fft_sz);
-	e_dma_copy(l_tmp_fft, args.ref_bitmap + myrank * nlocal * args.n,
-		   nlocal * args.n * sizeof(uint8_t));
+	if (myrank < nprocs / 2) {
+		e_dma_copy(l_tmp_fft, args.ref_bitmap + myrank * nlocal * width,
+			   nlocal * args.n * sizeof(uint8_t));
+	}
 
-	// Unpack uint8_t -> cfloat
-	uint8_t *bref_ptr = (uint8_t*) l_tmp_fft;
+	uint8_t *bptr = (uint8_t *) l_tmp_fft;
+	cfloat *cptr = (cfloat *) l_tmp_fft;
 
-	int last = nlocal * args.n - 1;
-	for (i = last; i >= 0; i--)
-		l_tmp_fft[i] = ((float) bref_ptr[i]) * divider;
+	if (myrank < nprocs / 2) {
+		// zeropad (lower part always zero)
+		for (i = nlocal - 1; i > 0; i--) {
+			for (j = width -1 ; j >= 0; j--)
+				bptr[i * args.n + j] = bptr[i * width + j];
+		}
+		for (i = 0; i < nlocal; i++) {
+			for (j = width; j < args.n; j++)
+				bptr[i * args.n + j] = 0;
+		}
+		// Unpack image (uint8_t -> cfloat) backwards
+		int last = nlocal * args.n - 1;
+		for (i = last; i >= 0; i--)
+			l_tmp_fft[i] = ((float) bptr[i]) * divider;
+	} else {
+		for (i = 0; i < nlocal * args.n; i++)
+			cptr[i] = 0;
+	}
 
 	/* Normalize signal to zero out DC component */
 	normalize2(comm, nprocs, myrank, nlocal, args.n, l_tmp_fft);

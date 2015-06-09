@@ -268,15 +268,6 @@ fail:
 bool fftimpl_xcorr(uint8_t *ref_bmp, uint8_t *bmps, int nbmps,
 		   int width, int height, float *out_corr)
 {
-	int i, j, n;
-	struct timeval t0, t1, t2, t3;
-
-	bool retval = true;
-
-	/* Intermediate matrices */
-	uint8_t *ref_bitmap; /* zero pad */
-	//float *cmp_bitmaps;
-
 	/* COPRTHR event */
 	coprthr_event_t ev;
 
@@ -296,36 +287,6 @@ bool fftimpl_xcorr(uint8_t *ref_bmp, uint8_t *bmps, int nbmps,
 		return false;
 	}
 
-	/* Allocate zeroed memory on host */
-	ref_bitmap	= (uint8_t *) calloc(NSIZE * NSIZE, sizeof(*ref_bitmap));
-	//cmp_bitmaps	= (float *) calloc(nbmps * NSIZE * NSIZE, sizeof(float));
-	if (!ref_bitmap /*|| !cmp_bitmaps*/) {
-		fprintf(stderr,
-			"ERROR: Failed allocating memory.\n");
-
-		retval = false;
-		goto out;
-	}
-
-	/* Initialize data */
-	/* TODO: Remove this and send input args directly to device */
-	for (i = 0; i < height; i++) {
-		for (j = 0; j < width; j++)
-			ref_bitmap[i * NSIZE + j] = ref_bmp[i * width + j];
-	}
-
-#if 0
-	/* Copy to one buffer*/
-	for (n = 0; n < nbmps; n++) {
-		float *bmp = &bmps[n * height * width];
-		float *pbmp = &cmp_bitmaps[n * NSIZE * NSIZE];
-		for (i = 0; i < height; i++) {
-			for (j = 0; j < width; j++)
-				pbmp[i * NSIZE + j] = bmp[i * width + j];
-		}
-	}
-#endif
-
 	/* copy wn coeffs to device memory (shared mem) */
 	ev = coprthr_dwrite(GLOB.coprthr_dd, GLOB.wn_fwd_mem, 0, GLOB.wn_fwd,
 			    NSIZE * sizeof(cfloat), COPRTHR_E_WAIT);
@@ -336,8 +297,8 @@ bool fftimpl_xcorr(uint8_t *ref_bmp, uint8_t *bmps, int nbmps,
 
 
 	/* Copy A (reference image) to device (shared mem) */
-	ev = coprthr_dwrite(GLOB.coprthr_dd, GLOB.ref_bmp_mem, 0, ref_bitmap,
-			    NSIZE * NSIZE * sizeof(uint8_t), COPRTHR_E_WAIT);
+	ev = coprthr_dwrite(GLOB.coprthr_dd, GLOB.ref_bmp_mem, 0, ref_bmp,
+			    width * height * sizeof(uint8_t), COPRTHR_E_WAIT);
 	__free_event(ev);
 
 	/* Copy bitmaps to compare to device (shared mem). */
@@ -358,31 +319,14 @@ bool fftimpl_xcorr(uint8_t *ref_bmp, uint8_t *bmps, int nbmps,
 		.results	= (__e_ptr(float)) coprthr_memptr(GLOB.results_mem, 0),
 	};
 
-	gettimeofday(&t0,0);
 	coprthr_mpiexec(GLOB.coprthr_dd, NPROCS, GLOB.coprthr_fn, &args_xcorr,
 			sizeof(args_xcorr), 0);
-	gettimeofday(&t1,0);
 
 	/* read back data from memory on device */
 	ev = coprthr_dread(GLOB.coprthr_dd, GLOB.results_mem, 0, out_corr,
 			   nbmps * sizeof(float), COPRTHR_E_WAIT);
 	__free_event(ev);
 
-	double time_fwd = t1.tv_sec-t0.tv_sec + 1e-6*(t1.tv_usec - t0.tv_usec);
-	double time_inv = t3.tv_sec-t2.tv_sec + 1e-6*(t3.tv_usec - t2.tv_usec);
-#if 0
-	printf("mpiexec time: forward %f sec inverse %f sec\n", time_fwd,time_inv);
-#endif
-
-out:
-
-	if (ref_bitmap)
-		free(ref_bitmap);
-#if 0
-	if (/*cmp_bitmaps*/)
-		free(cmp_bitmaps);
-#endif
-
-	return retval;
+	return true;
 }
 
