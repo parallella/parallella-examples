@@ -158,7 +158,7 @@ bool fftimpl_xcorr_one(uint8_t *B, int width, int height, float *out_corr)
 			B_sum += GLOB.B[i * NSIZE + j];
 		}
 	}
-	B_mean = B_sum /= ((float) width * height);
+	B_mean = B_sum / ((float) width * height);
 
 	/* Remove  DC component */
 	for (i = 0; i < width; i++) {
@@ -177,6 +177,7 @@ bool fftimpl_xcorr_one(uint8_t *B, int width, int height, float *out_corr)
 	fftwf_execute(GLOB.C_inv);
 
 	/* TODO: Is the max always @0 ??? */
+
 	for (i = 0, correlation = FLT_MIN; i < NSIZE * NSIZE; i++) {
 		if (crealf(GLOB.C[i]) > correlation)
 			correlation = crealf(GLOB.C[i]);
@@ -195,6 +196,7 @@ bool fftimpl_xcorr(uint8_t *ref_bmp, uint8_t *bmps, int nbmps,
 {
 	int i, j, n;
 	float ref_mean, ref_sum;
+	float autocorr, tmp;
 
 	/* Preallocated buffers can take up to 128x128 incl. zero padding */
 	if (width > NSIZE / 2 || height > NSIZE / 2) {
@@ -218,7 +220,7 @@ bool fftimpl_xcorr(uint8_t *ref_bmp, uint8_t *bmps, int nbmps,
 			ref_sum += GLOB.ref[i * NSIZE + j];
 		}
 	}
-	ref_mean = ref_sum /= ((float) width * height);
+	ref_mean = ref_sum / ((float) width * height);
 
 
 	/* Remove  DC component */
@@ -230,14 +232,25 @@ bool fftimpl_xcorr(uint8_t *ref_bmp, uint8_t *bmps, int nbmps,
 	/* Calculate FFT for image A */
 	fftwf_execute(GLOB.ref_fwd);
 
+	/* Calculate autocorrelation */
+	if (!fftimpl_xcorr_one(ref_bmp, width, height, &autocorr)) {
+			fprintf(stderr,
+				"ERROR: fftimpl_xcorr_one_failed w ref img\n");
+			return false;
+	}
+
 	for (n = 0; n < nbmps; n++, out_corr++) {
 		if (!fftimpl_xcorr_one(&bmps[n * width * height],
-				       width, height, out_corr)) {
+				       width, height, &tmp)) {
 			fprintf(stderr,
 				"ERROR: fftimpl_xcorr_one_failed at bitmap %d\n",
 				n);
 			return false;
 		}
+		if (tmp > autocorr)
+			*out_corr = autocorr / tmp;
+		else
+			*out_corr = tmp / autocorr;
 	}
 
 	return true;
