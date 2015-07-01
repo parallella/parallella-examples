@@ -9,7 +9,7 @@ all: $(EXES)
 
 
 main: host.c shared_data.h
-	gcc -O3 host.c -o main -I $(EINCS) -L $(ELIBS) -le-hal -lrt
+	gcc -O3 host.c -o main -I $(EINCS) -L $(ELIBS) -le-hal -lrt -le-loader
 
 epiphany.elf: epiphany.c shared_data.h
 	e-gcc -O3 -funroll-loops -ffast-math -T $(ELDF) epiphany.c -o epiphany.elf -le-lib
