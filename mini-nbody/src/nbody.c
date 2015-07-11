@@ -104,12 +104,14 @@ void randomizeSphereBodies(Body *data, int n) {
 		u = (float) rand() / (float) RAND_MAX;
 		v = (float) rand() / (float) RAND_MAX;
 		//radius =((float) (rand() % 500) - 250.0);
-		radius = 350.0;
+		//radius = 350.0;
+		radius = (float) var.xres_virtual / 4;
 		theta = 2.0f * 3.14159f * u;
 		phi = acos(2 * v - 1);
-		data[i].x = 512.0 + (radius * sin(phi) * cos(theta));
-		data[i].y = 384.0 + (radius * sin(phi) * sin(theta));
-		data[i].z = 384.0 + (radius * cos(phi));
+		//data[i].x = 512.0 + (radius * sin(phi) * cos(theta));
+		data[i].x = (float) var.xres_virtual / 2.0 + (radius * sin(phi) * cos(theta));
+		data[i].y = (float) var.yres_virtual / 2.0 + (radius * sin(phi) * sin(theta));
+		data[i].z = (float) var.yres_virtual / 2.0 + (radius * cos(phi));
 //fprintf(stderr, "u = %f, v = %f, x = %f, y = %f, z = %f\n", u, v, data[i].x, data[i].y, data[i].z);
 		data[i].vx = 0.0f;
 		data[i].vy = 0.0f;
@@ -413,7 +415,7 @@ int main(int argc, char *argv[])
 			s_y = (int) bufOutput[y].y;
 			s_z = (int) bufOutput[y].z;
 			s_m = (int) bufOutput[y].m;
-			if(s_x >= 0 && s_x < 1024 && s_y >= 0 && s_y < 768){
+			if(s_x >= 0 && s_x < var.xres_virtual && s_y >= 0 && s_y < var.yres_virtual){
 				/*	if(y < 1){
 					fp[s_x + s_y * stride] = (color == 0x00000000 ? color : 0x00ff0000);
 					if(s_x > 0)
