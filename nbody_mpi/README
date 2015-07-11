@@ -1,0 +1,65 @@
+Compile and run as root ($ sudo -i)
+
+Uses default definitions found in the top of the Makefile
+
+$ make
+$ ./main.x
+
+NOTES:
+
+One must take care to balance the work across cores with
+appropriate values for the following command line args.
+
+COMMAND LINE:
+
+-n [on-chip number of particles]
+	This is the on-chip matrix size, typically up to 4096
+	for Epiphany III or up to 16384 for Epiphany IV.
+	Exceeding approximately 256 particles per core results
+	in undefined behavior.
+
+-s [off-chip scale factor]
+	This value is the amount of off-chip blocks to use.
+	Setting -n 4096 and -s 2, will perform a 8192 particle
+	calculation.  Use -s 1 (default) for a fully on-chip
+	calculation.
+
+-i [number of time step iterations]
+	This value is the outer loop of the calculation, or the
+	number of time steps for particle position updates.
+
+-d [eCore dimension]
+	This is the dimension of the 1D eCore array (typically
+	16 for Epiphany III or 64 for Epiphany IV).  You may use
+	less than the number of cores available but the behavior
+	is undefined when using more.
+
+-t [timestep value]
+	This sets the timestep value. 1.0 for fast, 0.1 for slow,
+	or any value in-between for your speed preference.
+
+-r
+	This causes the simulation to reset with random star positions
+	after every run completes, and starts over
+
+--validate
+
+-h, --help
+	Lists help for commands
+
+Example uses:
+
+./main.x
+	Uses default definitions found in the top of the Makefile
+
+./main.x -n 4096 -s 1 -i 100 -d 16
+	Performs a 4096 particle calculation with each of the 16
+	eCores getting a 256 particle working set.
+
+./main.x -n 4096 -s 2 -i 100 -d 16
+	Performs a 8192 particle calculation with each of the 16
+	eCores getting a 256 particle working set.
+
+./main.x -n 256 -s 16 -i 100 -d 1 --validate
+	Performs a 4096 particle calculation with a single eCore
+	and validates the result with the ARM CPU host.

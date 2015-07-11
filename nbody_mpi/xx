@@ -1,0 +1,1 @@
+/usr/bin/gcc -O3 -DECORE=16 -DNPARTICLE=1024 -DSTEPS=10000 -DSIZE=1 -DMPI_BUF_SIZE=1024 -I. -I/usr/local/browndeer/include -I/usr/local/browndeer/include/coprthr -c main.c
