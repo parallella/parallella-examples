@@ -90,7 +90,7 @@ nbody_thread( void* p )
 			}
 			s_x = (int) my_particles[i].x;
 			s_y = (int) my_particles[i].y;
-			if(s_x >= 0 && s_x < pargs->fbinfo.xres_virtual && s_y >= 0 && s_y < pargs->fbinfo.yres_virtual){
+			if(cnt  > 1 && s_x >= 0 && s_x < pargs->fbinfo.xres_virtual && s_y >= 0 && s_y < pargs->fbinfo.yres_virtual){
 				e_dma_copy((char *) pargs->fbinfo.smem_start + (s_y * pargs->fbinfo.line_length) + (s_x * BPP), (char *) &rgba_white, 1 * BPP);
 			}
 		}
