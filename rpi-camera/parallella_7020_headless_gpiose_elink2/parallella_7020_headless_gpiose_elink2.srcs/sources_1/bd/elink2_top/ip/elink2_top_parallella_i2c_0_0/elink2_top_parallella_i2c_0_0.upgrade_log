@@ -1,0 +1,16 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.3 (lin64) Build 1034051 Fri Oct  3 16:31:15 MDT 2014
+| Date         : Fri Jan 16 16:56:44 2015
+| Host         : FredsLaptop running 64-bit Ubuntu 14.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'elink2_top_parallella_i2c_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of elink2_top_parallella_i2c_0_0 (adapteva.com:Adapteva:parallella_i2c:1.0 (Rev. 2)) to current project options.
+

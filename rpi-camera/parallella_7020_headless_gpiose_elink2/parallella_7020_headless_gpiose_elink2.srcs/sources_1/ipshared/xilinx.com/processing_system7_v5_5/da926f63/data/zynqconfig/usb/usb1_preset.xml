@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE parameters PUBLIC "presets" "presets.dtd" >
+<presets>
+  <preset param="pcw_usb1_peripheral_enable" name="0" strength="7">
+      <disable param="pcw_usb1_peripheral_freqmhz"/>
+      <disable param="pcw_usb1_usb1_io"/>
+  </preset>
+
+  <preset param="pcw_usb1_peripheral_enable" name="" strength="7">
+      <disable param="pcw_usb1_peripheral_freqmhz"/>
+      <disable param="pcw_usb1_usb1_io"/>
+  </preset>
+
+  <preset param="pcw_usb1_peripheral_enable" name="1" strength="7">
+      <set param="pcw_EN_EMIO_USB1" value="0" />
+    <set param="pcw_usb1_usb1_io" value="MIO 40 .. 51" />
+      <set param="pcw_EN_USB1" value="1" />
+    <set param="pcw_usb_reset_valid" value="1" />
+  </preset>
+
+  <preset param="pcw_usb1_usb1_io" name="MIO 40 .. 51" strength="5">
+
+
+      <set param="pcw_usb1_data[4]_io" value="MIO 40" />
+      <set param="pcw_mio_mio[40]_signal" value="data[4]" />
+      <set param="pcw_mio_mio[40]_peripheral" value="USB 1" />
+      <set param="pcw_mio_mio[40]_signalgroup" value="USB 1" />
+      <set param="pcw_preset_mio_40" value="usb1" />
+
+      <set param="pcw_usb1_dir_io" value="MIO 41" />
+      <set param="pcw_mio_mio[41]_signal" value="dir" />
+      <set param="pcw_mio_mio[41]_peripheral" value="USB 1" />
+      <set param="pcw_mio_mio[41]_signalgroup" value="USB 1" />
+      <set param="pcw_preset_mio_41" value="usb1" />
+
+      <set param="pcw_usb1_stp_io" value="MIO 42" />
+      <set param="pcw_mio_mio[42]_signal" value="stp" />
+      <set param="pcw_mio_mio[42]_peripheral" value="USB 1" />
+      <set param="pcw_mio_mio[42]_signalgroup" value="USB 1" />
+      <set param="pcw_preset_mio_42" value="usb1" />
+
+      <set param="pcw_usb1_nxt_io" value="MIO 43" />
+      <set param="pcw_mio_mio[43]_signal" value="nxt" />
+      <set param="pcw_mio_mio[43]_peripheral" value="USB 1" />
+      <set param="pcw_mio_mio[43]_signalgroup" value="USB 1" />
+      <set param="pcw_preset_mio_43" value="usb1" />
+
+      <set param="pcw_usb1_data[0]_io" value="MIO 44" />
+      <set param="pcw_mio_mio[44]_signal" value="data[0]" />
+      <set param="pcw_mio_mio[44]_peripheral" value="USB 1" />
+      <set param="pcw_mio_mio[44]_signalgroup" value="USB 1" />
+      <set param="pcw_preset_mio_44" value="usb1" />
+
+      <set param="pcw_usb1_data[1]_io" value="MIO 45" />
+      <set param="pcw_mio_mio[45]_signal" value="data[1]" />
+      <set param="pcw_mio_mio[45]_peripheral" value="USB 1" />
+      <set param="pcw_mio_mio[45]_signalgroup" value="USB 1" />
+      <set param="pcw_preset_mio_45" value="usb1" />
+
+      <set param="pcw_usb1_data[2]_io" value="MIO 46" />
+      <set param="pcw_mio_mio[46]_signal" value="data[2]" />
+      <set param="pcw_mio_mio[46]_peripheral" value="USB 1" />
+      <set param="pcw_mio_mio[46]_signalgroup" value="USB 1" />
+      <set param="pcw_preset_mio_46" value="usb1" />
+
+      <set param="pcw_usb1_data[3]_io" value="MIO 47" />
+      <set param="pcw_mio_mio[47]_signal" value="data[3]" />
+      <set param="pcw_mio_mio[47]_peripheral" value="USB 1" />
+      <set param="pcw_mio_mio[47]_signalgroup" value="USB 1" />
+      <set param="pcw_preset_mio_47" value="usb1" />
+
+
+      <set param="pcw_usb1_clk_io" value="MIO 48" />
+      <set param="pcw_mio_mio[48]_signal" value="clk" />
+      <set param="pcw_mio_mio[48]_peripheral" value="USB 1" />
+      <set param="pcw_mio_mio[48]_signalgroup" value="USB 1" />
+      <set param="pcw_preset_mio_48" value="usb1" />
+
+      <set param="pcw_usb1_data[5]_io" value="MIO 49" />
+      <set param="pcw_mio_mio[49]_signal" value="data[5]" />
+      <set param="pcw_mio_mio[49]_peripheral" value="USB 1" />
+      <set param="pcw_mio_mio[49]_signalgroup" value="USB 1" />
+      <set param="pcw_preset_mio_49" value="usb1" />
+
+      <set param="pcw_usb1_data[6]_io" value="MIO 50" />
+      <set param="pcw_mio_mio[50]_signal" value="data[6]" />
+      <set param="pcw_mio_mio[50]_peripheral" value="USB 1" />
+      <set param="pcw_mio_mio[50]_signalgroup" value="USB 1" />
+      <set param="pcw_preset_mio_50" value="usb1" />
+
+      <set param="pcw_usb1_data[7]_io" value="MIO 51" />
+      <set param="pcw_mio_mio[51]_signal" value="data[7]" />
+      <set param="pcw_mio_mio[51]_peripheral" value="USB 1" />
+      <set param="pcw_mio_mio[51]_signalgroup" value="USB 1" />
+      <set param="pcw_preset_mio_51" value="usb1" />
+
+  </preset>
+</presets>
+

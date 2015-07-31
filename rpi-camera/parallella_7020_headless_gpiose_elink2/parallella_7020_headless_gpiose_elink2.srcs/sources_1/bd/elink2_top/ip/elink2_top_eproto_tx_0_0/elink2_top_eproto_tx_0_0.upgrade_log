@@ -1,0 +1,58 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.3 (lin64) Build 1034051 Fri Oct  3 16:31:15 MDT 2014
+| Date         : Fri Jan 16 16:56:37 2015
+| Host         : FredsLaptop running 64-bit Ubuntu 14.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'elink2_top_eproto_tx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of elink2_top_eproto_tx_0_0 (adapteva.com:Adatpeva:eproto_tx:1.0 (Rev. 4)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.3 (lin64) Build 1034051 Fri Oct  3 16:31:15 MDT 2014
+| Date         : Mon Dec 15 20:40:56 2014
+| Host         : FredsLaptop running 64-bit Ubuntu 14.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'elink2_top_eproto_tx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of elink2_top_eproto_tx_0_0 (adapteva.com:Adatpeva:eproto_tx:1.0 (Rev. 4)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.3 (lin64) Build 1034051 Fri Oct  3 16:31:15 MDT 2014
+| Date         : Thu Nov 20 14:18:20 2014
+| Host         : FredsLaptop running 64-bit Ubuntu 14.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'elink2_top_eproto_tx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of elink2_top_eproto_tx_0_0 (adapteva.com:Adatpeva:eproto_tx:1.0) from (Rev. 3) to (Rev. 4)
+

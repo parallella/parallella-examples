@@ -1,0 +1,184 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.3 (lin64) Build 1034051 Fri Oct  3 16:31:15 MDT 2014
+| Date         : Fri Jan 16 18:37:25 2015
+| Host         : FredsLaptop running 64-bit Ubuntu 14.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'elink2_top_eio_tx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of elink2_top_eio_tx_0_0 (adapteva.com:Adapteva:eio_tx:1.0) from (Rev. 16) to (Rev. 17)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.3 (lin64) Build 1034051 Fri Oct  3 16:31:15 MDT 2014
+| Date         : Fri Jan 16 16:56:36 2015
+| Host         : FredsLaptop running 64-bit Ubuntu 14.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'elink2_top_eio_tx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of elink2_top_eio_tx_0_0 (adapteva.com:Adapteva:eio_tx:1.0 (Rev. 16)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.3 (lin64) Build 1034051 Fri Oct  3 16:31:15 MDT 2014
+| Date         : Mon Dec 15 20:40:55 2014
+| Host         : FredsLaptop running 64-bit Ubuntu 14.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'elink2_top_eio_tx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of elink2_top_eio_tx_0_0 (adapteva.com:Adapteva:eio_tx:1.0 (Rev. 16)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.3 (lin64) Build 1034051 Fri Oct  3 16:31:15 MDT 2014
+| Date         : Mon Nov 24 16:33:07 2014
+| Host         : FredsLaptop running 64-bit Ubuntu 14.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'elink2_top_eio_tx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of elink2_top_eio_tx_0_0 (adapteva.com:Adapteva:eio_tx:1.0) from (Rev. 15) to (Rev. 16)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.3 (lin64) Build 1034051 Fri Oct  3 16:31:15 MDT 2014
+| Date         : Mon Nov 24 16:04:26 2014
+| Host         : FredsLaptop running 64-bit Ubuntu 14.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'elink2_top_eio_tx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of elink2_top_eio_tx_0_0 (adapteva.com:Adapteva:eio_tx:1.0) from (Rev. 14) to (Rev. 15)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.3 (lin64) Build 1034051 Fri Oct  3 16:31:15 MDT 2014
+| Date         : Mon Nov 24 15:50:04 2014
+| Host         : FredsLaptop running 64-bit Ubuntu 14.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'elink2_top_eio_tx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of elink2_top_eio_tx_0_0 (adapteva.com:Adapteva:eio_tx:1.0) from (Rev. 13) to (Rev. 14)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.3 (lin64) Build 1034051 Fri Oct  3 16:31:15 MDT 2014
+| Date         : Fri Nov 21 12:07:30 2014
+| Host         : FredsLaptop running 64-bit Ubuntu 14.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'elink2_top_eio_tx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of elink2_top_eio_tx_0_0 (adapteva.com:Adapteva:eio_tx:1.0) from (Rev. 12) to (Rev. 13)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.3 (lin64) Build 1034051 Fri Oct  3 16:31:15 MDT 2014
+| Date         : Thu Nov 20 19:18:13 2014
+| Host         : FredsLaptop running 64-bit Ubuntu 14.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'elink2_top_eio_tx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of elink2_top_eio_tx_0_0 (adapteva.com:Adapteva:eio_tx:1.0) from (Rev. 11) to (Rev. 12)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.3 (lin64) Build 1034051 Fri Oct  3 16:31:15 MDT 2014
+| Date         : Thu Nov 20 15:18:45 2014
+| Host         : FredsLaptop running 64-bit Ubuntu 14.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'elink2_top_eio_tx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of elink2_top_eio_tx_0_0 (adapteva.com:Adapteva:eio_tx:1.0) from (Rev. 10) to (Rev. 11)
+

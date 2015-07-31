@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE parameters PUBLIC "parameters" "parameters.dtd" >
+<parameters>
+
+  <parameter uniqueid="pcw_qspi_peripheral_enable">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_qspi_grp_single_ss_enable">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_qspi_grp_ss1_enable">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_qspi_grp_clk1_enable">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_qspi_grp_io1_enable">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_qspi_grp_fbclk_enable">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_qspi_qspi_io">
+    <name> Quad SPI </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_qspi_grp_single_ss_io">
+     <name> Single SS (4 bit ) IO  </name>
+     <desc> -- </desc>
+     <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_qspi_grp_ss1_io">
+    <name> Dual Quad SPI (4 bit )  </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_qspi_grp_clk1_io">
+    <name> Quad SPI (Clk Slave 1)  </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_qspi_grp_io1_io">
+    <name> Dual Quad SPI (Parallel 8 bit)  </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_qspi_grp_fbclk_io">
+    <name> Quad SPI (FB Clk)  </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+
+  <parameter uniqueid="pcw_qspi_io[7]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_qspi_io[6]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_qspi_io[5]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_qspi_io[4]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_qspi_io[3]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_qspi_io[2]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_qspi_io[1]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_qspi_io[0]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_qspi_0_sclk_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_qspi_1_sclk_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_qspi_0_ss_b_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_qspi_1_ss_b_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_qspi_fbclk_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_qspi_internal_mode">
+    <name> QSPI MODE </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_qspi_internal_highaddress">
+    <name> QSPI HA </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_qspi_internal_fbclk">
+    <name> FB Clocj </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+<parameter uniqueid="pcw_EN_QSPI">
+    <name>C_EN_QSPI </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+<parameter uniqueid="ps7_preset_qspi_dis_Holdb_dr">
+    <name>Holdb_dr</name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+<parameter uniqueid="ps7_preset_qspi_mutex">
+    <name>qspi mutext</name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+</parameters>

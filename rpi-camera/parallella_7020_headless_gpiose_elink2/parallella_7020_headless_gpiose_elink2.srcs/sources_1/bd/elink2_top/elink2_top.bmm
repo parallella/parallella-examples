@@ -1,0 +1,12 @@
+WORKFLOW_OPERATION simulation,dialog;
+
+DEFINE_MEMORY_TYPE elink2_eCfg_0_MEM_DEVICE [0x00002000] 32;
+
+ADDRESS_MAP processing_system7_0 ARM 100 processing_system7_0
+   ADDRESS_SPACE elink2_eCfg_0_ADDR_SPACE elink2_eCfg_0_MEM_DEVICE  [0x70000000:0x70001fff] elink2/axi_bram_ctrl_2
+      BUS_BLOCK
+      elink2_eCfg_0_BUS_BLK [31:0] INPUT = "elink2_top_eCfg_0_0.mem";
+      
+      END_BUS_BLOCK;
+   END_ADDRESS_SPACE;
+END_ADDRESS_MAP;

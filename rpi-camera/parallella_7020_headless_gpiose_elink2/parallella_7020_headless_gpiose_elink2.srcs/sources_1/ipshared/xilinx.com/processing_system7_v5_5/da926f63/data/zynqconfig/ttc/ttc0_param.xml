@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE parameters PUBLIC "parameters" "parameters.dtd" >
+<parameters>
+
+  <parameter uniqueid="pcw_ttc0_peripheral_freqmhz">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ttc0_clk0_peripheral_freqmhz">
+    <name> - </name>
+    <range min="0.1" max="200" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ttc0_clk1_peripheral_freqmhz">
+    <name> - </name>
+    <range min="0.1" max="200" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ttc0_clk2_peripheral_freqmhz">
+    <name> - </name>
+    <range min="0.1" max="200" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_act_ttc0_clk0_peripheral_freqmhz">
+    <name> TTC0 CLK0 Freq (MHz) </name>
+    <range min="0.1" max="200" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_act_ttc0_clk1_peripheral_freqmhz">
+    <name> TTC0 CLK1 Freq (MHz) </name>
+    <range min="0.1" max="200" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_act_ttc0_clk2_peripheral_freqmhz">
+    <name> TTC0 CLK2 Freq (MHz) </name>
+    <range min="0.1" max="200" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_EN_EMIO_TTC0">
+    <name> C_EN_EMIO_TTC0 </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_EN_TTC0">
+    <name> C_EN_TTC0 </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ttc0_peripheral_enable">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ttc0_ttc0_io">
+    <name> TTC 0 </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ttc0_clk_in_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ttc0_wave_out_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+</parameters>

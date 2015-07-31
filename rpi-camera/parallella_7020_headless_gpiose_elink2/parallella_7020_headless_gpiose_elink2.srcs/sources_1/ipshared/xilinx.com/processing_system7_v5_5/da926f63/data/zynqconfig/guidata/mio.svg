@@ -1,0 +1,1574 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg id="ZynqBD" width="1000" height="600" xmlns:xlink="http://www.w3.org/1999/xlink" 
+     viewBox="50 68 1000 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" >
+
+   <defs> 
+        <linearGradient id="boundryDark">
+            <stop offset="50%" stop-color="#464646" />
+            <stop offset="50%" stop-color="#464646" />
+        </linearGradient>
+   <linearGradient id="radGradient">
+    <stop offset="30%" stop-color="#D9F2BD" stop-opacity="1" />
+    <stop offset="70%" stop-color="#D9F2BD" stop-opacity="1"/>
+    </linearGradient>
+   <linearGradient id="periDisColor">
+    <stop offset="50%" stop-color="#E7E7E7" />
+    <stop offset="50%" stop-color="#E7E7E7" />
+    </linearGradient>
+
+    </defs>
+<g id="MIOView">	
+    <g id="row 1">
+		<rect id="backgroundRect" v:mID="04119" v:groupContext="shape" transform="translate(54,-702)" x="0" y="774" width="1000" height="700" fill="url(#periDisColor)" stroke="url(#boundryDark)"/>
+		<rect id="shape0-419" v:mID="0419" v:groupContext="shape" font="medium" Text="MIO Signal  Bank0 [0:15]"  transform="translate(54,-702)" x="0" y="774" width="288" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape0-420" v:mID="0420" v:groupContext="shape" font="medium" Text="MIO Signal Bank1 [16:53]"  transform="translate(288,-702)" x="0" y="774" width="738" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+     </g>   
+    <g id="row 2">
+		<rect id="shape112-85" v:mID="112" v:groupContext="shape" tag="pin1 0" transform="translate(54,-684)" Text="0" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape113-87" v:mID="113" v:groupContext="shape" tag="pin1 1" transform="translate(72,-684)" Text="1" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape114-89" v:mID="114" v:groupContext="shape" tag="pin1 2" transform="translate(90,-684)" Text="2" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape115-91" v:mID="115" v:groupContext="shape" tag="pin1 3" transform="translate(108,-684)" Text="3" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape116-93" v:mID="116" v:groupContext="shape" tag="pin1 4" transform="translate(126,-684)" Text="4" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape117-95" v:mID="117" v:groupContext="shape" tag="pin1 5" transform="translate(144,-684)" Text="5" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape120-97" v:mID="120" v:groupContext="shape" tag="pin1 6" transform="translate(162,-684)" Text="6" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape121-99" v:mID="121" v:groupContext="shape" tag="pin1 7" transform="translate(180,-684)" Text="7" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape124-101" v:mID="124" v:groupContext="shape" tag="pin1 8" transform="translate(198,-684)" Text="8" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape125-103" v:mID="125" v:groupContext="shape" tag="pin1 9" transform="translate(216,-684)" Text="9" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape94-49" v:mID="94" v:groupContext="shape" tag="pin1 10" transform="translate(234,-684)" Text="10" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape95-51" v:mID="95" v:groupContext="shape" tag="pin1 11" transform="translate(252,-684)" Text="11" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape90-41" v:mID="90" v:groupContext="shape" tag="pin1 12" transform="translate(270,-684)" Text="12" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape91-43" v:mID="91" v:groupContext="shape" tag="pin1 13" transform="translate(288,-684)" Text="13" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape84-29" v:mID="84" v:groupContext="shape" tag="pin1 14" transform="translate(306,-684)" Text="14" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape85-31" v:mID="85" v:groupContext="shape" tag="pin1 15" transform="translate(324,-684)" Text="15" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape86-33" v:mID="86" v:groupContext="shape" tag="pin1 16" transform="translate(342,-684)" Text="16" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape87-35" v:mID="87" v:groupContext="shape" tag="pin1 17" transform="translate(360,-684)" Text="17" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape88-37" v:mID="88" v:groupContext="shape" tag="pin1 18" transform="translate(378,-684)" Text="18" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape89-39" v:mID="89" v:groupContext="shape" tag="pin1 19" transform="translate(396,-684)" Text="19" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape92-45" v:mID="92" v:groupContext="shape" tag="pin1 20" transform="translate(414,-684)" Text="20" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape93-47" v:mID="93" v:groupContext="shape" tag="pin1 21" transform="translate(432,-684)" Text="21" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape96-53" v:mID="96" v:groupContext="shape" tag="pin1 22" transform="translate(450,-684)" Text="22" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape97-55" v:mID="97" v:groupContext="shape" tag="pin1 23" transform="translate(468,-684)" Text="23" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape80-21" v:mID="80" v:groupContext="shape" tag="pin1 24" transform="translate(486,-684)" Text="24" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape81-23" v:mID="81" v:groupContext="shape" tag="pin1 25" transform="translate(504,-684)" Text="25" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape76-13" v:mID="76" v:groupContext="shape" tag="pin1 26" transform="translate(522,-684)" Text="26" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape77-15" v:mID="77" v:groupContext="shape" tag="pin1 27" transform="translate(540,-684)" Text="27" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape70-1" v:mID="70" v:groupContext="shape" tag="pin1 28" transform="translate(558,-684)" Text="28" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape71-3" v:mID="71" v:groupContext="shape" tag="pin1 29" transform="translate(576,-684)" Text="29" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape72-5" v:mID="72" v:groupContext="shape" tag="pin1 30" transform="translate(594,-684)" Text="30" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape73-7" v:mID="73" v:groupContext="shape" tag="pin1 31" transform="translate(612,-684)" Text="31" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape74-9" v:mID="74" v:groupContext="shape" tag="pin1 32" transform="translate(630,-684)" Text="32" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape75-11" v:mID="75" v:groupContext="shape" tag="pin1 33" transform="translate(648,-684)" Text="33" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape78-17" v:mID="78" v:groupContext="shape" tag="pin1 34" transform="translate(666,-684)" Text="34" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape79-19" v:mID="79" v:groupContext="shape" tag="pin1 35" transform="translate(684,-684)" Text="35" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape82-25" v:mID="82" v:groupContext="shape" tag="pin1 36" transform="translate(702,-684)" Text="36" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape83-27" v:mID="83" v:groupContext="shape" tag="pin1 37" transform="translate(720,-684)" Text="37" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape108-77" v:mID="108" v:groupContext="shape" tag="pin1 38" transform="translate(738,-684)" Text="38" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape109-79" v:mID="109" v:groupContext="shape" tag="pin1 39" transform="translate(756,-684)" Text="39" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape104-69" v:mID="104" v:groupContext="shape" tag="pin1 40" transform="translate(774,-684)" Text="40" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape105-71" v:mID="105" v:groupContext="shape" tag="pin1 41" transform="translate(792,-684)" Text="41" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape98-57" v:mID="98" v:groupContext="shape" tag="pin1 42" transform="translate(810,-684)" Text="42" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape99-59" v:mID="99" v:groupContext="shape" tag="pin1 43" transform="translate(828,-684)" Text="43" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape100-61" v:mID="100" v:groupContext="shape" tag="pin1 44" transform="translate(846,-684)" Text="44" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape101-63" v:mID="101" v:groupContext="shape" tag="pin1 45" transform="translate(864,-684)" Text="45" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape102-65" v:mID="102" v:groupContext="shape" tag="pin1 46" transform="translate(882,-684)" Text="46" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape103-67" v:mID="103" v:groupContext="shape" tag="pin1 47" transform="translate(900,-684)" Text="47" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape106-73" v:mID="106" v:groupContext="shape" tag="pin1 48" transform="translate(918,-684)" Text="48" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape107-75" v:mID="107" v:groupContext="shape" tag="pin1 49" transform="translate(936,-684)" Text="49" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape110-81" v:mID="110" v:groupContext="shape" tag="pin1 50" transform="translate(954,-684)" Text="50" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape111-83" v:mID="111" v:groupContext="shape" tag="pin1 51" transform="translate(972,-684)" Text="51" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape31-143" v:mID="31" v:groupContext="shape" tag="pin1 52" transform="translate(990,-684)" Text="52" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape32-145" v:mID="32" v:groupContext="shape" tag="pin1 53" transform="translate(1008,-684)" Text="53" x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+ </g>
+        <g id="row 3">
+         		<rect id="shape12-105" v:mID="12" v:groupContext="shape" Text="" transform="translate(54,-612)"
+			x="0" y="720" width="36" height="72" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape13-107" v:mID="13" v:groupContext="shape" Text="Boot Mode" font="large" transform="translate(90,-666)"
+			x="0" y="774" width="126" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape14-109" v:mID="14" v:groupContext="shape" Text="Boot Device" transform="translate(90,-612)"
+			x="0" y="738" width="72" height="54" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape15-111" v:mID="15" v:groupContext="shape" Text="PLL" transform="translate(162,-612)"
+			x="0" y="738" width="18" height="54" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape15_1-111" v:mID="1501" v:groupContext="shape" Text="V" transform="translate(180,-612)"
+			x="0" y="738" width="36" height="54" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape16-113" v:mID="16" v:groupContext="shape" Text="The 20k ohm Boot$Modepull-up/down$resistors are sampled$at Reset." transform="translate(216,-612)"
+			x="0" y="720" width="126" height="72" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape17-115" v:mID="17" v:groupContext="shape" Text="Ethernet 0" font="large" tag="enet0" transform="translate(342,-666)"
+			x="0" y="774" width="216" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape18-117" v:mID="18" v:groupContext="shape" Text="tr$ck" tag="enet0 16" transform="translate(342,-612)"
+			x="0" y="738" width="18" height="54" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape19-119" v:mID="19" v:groupContext="shape" Text="tr data" tag="enet0 17" transform="translate(360,-612)"
+			x="0" y="738" width="72" height="54" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape20-121" v:mID="20" v:groupContext="shape" Text="tx$ctl" tag="enet0 21" transform="translate(432,-612)"
+			x="0" y="738" width="18" height="54" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape21-123" v:mID="21" v:groupContext="shape" Text="tx$ck" tag="enet0 22" transform="translate(450,-612)"
+			x="0" y="738" width="18" height="54" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape22-125" v:mID="22" v:groupContext="shape" Text="rx data" tag="enet0 23" transform="translate(468,-612)"
+			x="0" y="738" width="72" height="54" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape23-127" v:mID="23" v:groupContext="shape" Text="rx$ctl" tag="enet0 27" transform="translate(540,-612)"
+			x="0" y="738" width="18" height="54" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape24-129" v:mID="24" v:groupContext="shape" Text="Ethernet 1" font="large" tag="enet1" transform="translate(558,-666)"
+			x="0" y="774" width="216" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape25-131" v:mID="25" v:groupContext="shape" Text="tr$ck" tag="enet1 28" transform="translate(558,-612)"
+			x="0" y="738" width="18" height="54" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+
+		<rect id="shape26-133" v:mID="26" v:groupContext="shape" Text="tr data" tag="enet1 29" transform="translate(576,-612)"
+			x="0" y="738" width="72" height="54" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape27-135" v:mID="27" v:groupContext="shape" Text="tx$ctl" tag="enet1 33" transform="translate(648,-612)"
+			x="0" y="738" width="18" height="54" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape28-137" v:mID="28" v:groupContext="shape" Text="rx$ck" tag="enet1 34" transform="translate(666,-612)"
+			x="0" y="738" width="18" height="54" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape29-139" v:mID="29" v:groupContext="shape" Text="rx data" tag="enet1 35" transform="translate(684,-612)"
+			x="0" y="738" width="72" height="54" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape30-141" v:mID="30" v:groupContext="shape" Text="rx$ctl" tag="enet1 39" transform="translate(756,-612)"
+			x="0" y="738" width="18" height="54" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape35-147" v:mID="3514" v:groupContext="shape" Text="Ethernet MDIO" font="large" tag="enetMDIO" transform="translate(774,-666)"
+			x="0" y="774" width="216" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape36-147" v:mID="3614" v:groupContext="shape" Text="0" font="large" tag="enetMDIO0" transform="translate(954,-666)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape34-147" v:mID="34" v:groupContext="shape" Text="1" font="large" tag="enetMDIO1" transform="translate(990,-666)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape33-157" v:mID="33" v:groupContext="shape" Text=""  transform="translate(774,-612)"
+			x="0" y="738" width="180" height="54" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape37-153" v:mID="37" v:groupContext="shape" Text="ck" tag="enet0 50" transform="translate(954,-612)"
+			x="0" y="738" width="18" height="54" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape38-155" v:mID="38" v:groupContext="shape" Text="d" tag="enet0 51" transform="translate(972,-612)"
+			x="0" y="738" width="18" height="54" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape35-149" v:mID="35" v:groupContext="shape" Text="ck" tag="enet1 52" transform="translate(990,-612)"
+			x="0" y="738" width="18" height="54" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape36-151" v:mID="36" v:groupContext="shape" Text="d" tag="enet1 53" transform="translate(1008,-612)"
+			x="0" y="738" width="18" height="54" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+ 
+     </g> 
+
+         <g id="row 4">
+		<rect id="shape39_1-159" v:mID="3901" v:groupContext="shape" Text="" transform="translate(54,-594)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape39-159" v:mID="39" v:groupContext="shape" Text="Quad SPI 0" font="large" tag="qspi" transform="translate(90,-594)"
+			x="0" y="774" width="90" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape39_1-159" v:mID="3901" v:groupContext="shape" Text="Quad SPI 1" font="large" tag="qspi" transform="translate(216,-594)"
+			x="0" y="774" width="90" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape39_2-159" v:mID="3902" v:groupContext="shape" Text="" font="large" transform="translate(180,-594)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape40-161" v:mID="40" v:groupContext="shape" Text="cs$1" tag="qspi 0" transform="translate(54,-567)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape41-163" v:mID="41" v:groupContext="shape" Text="cs$0" tag="qspi 1" transform="translate(72,-567)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape42-165" v:mID="42" v:groupContext="shape" Text="io$0" tag="qspi 2" transform="translate(90,-567)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape42_1-165" v:mID="4201" v:groupContext="shape" Text="io$1" tag="qspi 3" transform="translate(108,-567)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape42_2-165" v:mID="4202" v:groupContext="shape" Text="io$2" tag="qspi 4" transform="translate(126,-567)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape42_3-165" v:mID="4203" v:groupContext="shape" Text="io$3" tag="qspi 5" transform="translate(144,-567)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape42_4-165" v:mID="4204" v:groupContext="shape" Text="s$clk " tag="qspi 6" transform="translate(162,-567)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape43-167" v:mID="43" v:groupContext="shape" Text="fb$ck" tag="qspi 8" transform="translate(198,-567)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape43_1-167" v:mID="4301" v:groupContext="shape" Text="s$clk" tag="qspi 9" transform="translate(216,-567)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape43_2-167" v:mID="4302" v:groupContext="shape" Text="io$0" tag="qspi 10" transform="translate(234,-567)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape43_3-167" v:mID="4303" v:groupContext="shape" Text="io$1" tag="qspi 11" transform="translate(252,-567)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape43_4-167" v:mID="4304" v:groupContext="shape" Text="io$2" tag="qspi 12" transform="translate(270,-567)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape43_5-167" v:mID="4305" v:groupContext="shape" Text="io$3" tag="qspi 13" transform="translate(288,-567)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape46-173" v:mID="46" v:groupContext="shape" Text="" transform="translate(306,-567)"
+			x="0" y="747" width="36" height="45" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape47-175" v:mID="47" v:groupContext="shape" Text="" transform="translate(342,-567)"
+			x="0" y="747" width="216" height="45" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape48-177" v:mID="48" v:groupContext="shape" Text="USB0" font="large" tag="usb0" transform="translate(558,-594)"
+			x="0" y="774" width="216" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape50-181" v:mID="50" v:groupContext="shape" Text="da$ta" tag="usb0 28" transform="translate(558,-567)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape51-183" v:mID="51" v:groupContext="shape" Text="dir" tag="usb0 29" transform="translate(576,-567)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape52-185" v:mID="52" v:groupContext="shape" Text="int" tag="usb0 30" transform="translate(594,-567)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape53-187" v:mID="53" v:groupContext="shape" Text="nxt" tag="usb0 31" transform="translate(612,-567)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape54-189" v:mID="54" v:groupContext="shape" Text="data" tag="usb0 32" transform="translate(630,-567)"
+			x="0" y="765" width="72" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape55-191" v:mID="55" v:groupContext="shape" Text="ck" tag="usb0 36" transform="translate(702,-567)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape56-193" v:mID="56" v:groupContext="shape" Text="data" tag="usb0 37" transform="translate(720,-567)"
+			x="0" y="765" width="54" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape49-179" v:mID="49" v:groupContext="shape" Text="USB1" font="large" tag="usb1" transform="translate(774,-594)"
+			x="0" y="774" width="216" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape57-195" v:mID="57" v:groupContext="shape" Text="da$ta" tag="usb1 40" transform="translate(774,-567)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape58-197" v:mID="58" v:groupContext="shape" Text="dir" tag="usb1 41" transform="translate(792,-567)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape59-199" v:mID="59" v:groupContext="shape" Text="int" tag="usb1 42" transform="translate(810,-567)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape60-201" v:mID="60" v:groupContext="shape" Text="nxt" tag="usb1 43" transform="translate(828,-567)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape61-203" v:mID="61" v:groupContext="shape" Text="data" tag="usb1 44" transform="translate(846,-567)"
+			x="0" y="765" width="72" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape62-205" v:mID="62" v:groupContext="shape" Text="ck" tag="usb1 48" transform="translate(918,-567)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape63-207" v:mID="63" v:groupContext="shape" Text="data" tag="usb1 49" transform="translate(936,-567)"
+			x="0" y="765" width="54" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape64-209" v:mID="64" v:groupContext="shape" Text="" transform="translate(990,-477)"
+			x="0" y="657" width="36" height="135" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+</g>
+
+        <g id="row 5">
+		<rect id="shape65-211" v:mID="65" v:groupContext="shape" Text="SPI" font="large" tag="spi" transform="translate(54,-522)"
+			x="0" y="747" width="144" height="45" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape66-213" v:mID="66" v:groupContext="shape" Text="0" tag="spi0" transform="translate(198,-549)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape67-215" v:mID="67" v:groupContext="shape" Text="1" tag="spi1" transform="translate(198,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape68-217" v:mID="68" v:groupContext="shape" Text="SPI1" font="medium" transform="translate(234,-549)"
+			x="0" y="774" width="108" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape69-219" v:mID="69" v:groupContext="shape" Text="mo$si" tag="spi1 10" transform="translate(234,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape118-221" v:mID="118" v:groupContext="shape" Text="mi$so" tag="spi1 11" transform="translate(252,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape119-223" v:mID="119" v:groupContext="shape" Text="ck" tag="spi1 12" transform="translate(270,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape122-225" v:mID="122" v:groupContext="shape" Text="ss$0" tag="spi1 13" transform="translate(288,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape123-227" v:mID="123" v:groupContext="shape" Text="ss$1" tag="spi1 14" transform="translate(306,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape126-229" v:mID="126" v:groupContext="shape" Text="ss$2" tag="spi1 15" transform="translate(324,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape132-231" v:mID="132" v:groupContext="shape" Text="SPI0" font="medium" transform="translate(342,-549)"
+			x="0" y="774" width="108" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape133-233" v:mID="133" v:groupContext="shape" Text="ck" tag="spi0 16" transform="translate(342,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape134-235" v:mID="134" v:groupContext="shape" Text="mi$so" tag="spi0 17" transform="translate(360,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape135-237" v:mID="135" v:groupContext="shape" Text="ss$0" tag="spi0 18" transform="translate(378,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape136-239" v:mID="136" v:groupContext="shape" Text="ss$1" tag="spi0 19" transform="translate(396,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape137-241" v:mID="137" v:groupContext="shape" Text="ss$2" tag="spi0 20" transform="translate(414,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape138-243" v:mID="138" v:groupContext="shape" Text="mo$si" tag="spi0 21" transform="translate(432,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape127-245" v:mID="127" v:groupContext="shape" Text="SPI1" font="medium" transform="translate(450,-549)"
+			x="0" y="774" width="108" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape128-247" v:mID="128" v:groupContext="shape" Text="mo$si" tag="spi1 22" transform="translate(450,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape129-249" v:mID="129" v:groupContext="shape" Text="mi$so" tag="spi1 23" transform="translate(468,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape130-251" v:mID="130" v:groupContext="shape" Text="ck" tag="spi1 24" transform="translate(486,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape131-253" v:mID="131" v:groupContext="shape" Text="ss$0" tag="spi1 25" transform="translate(504,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape139-255" v:mID="139" v:groupContext="shape" Text="ss$1" tag="spi1 26" transform="translate(522,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape140-257" v:mID="140" v:groupContext="shape" Text="ss$2" tag="spi1 27" transform="translate(540,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape141-259" v:mID="141" v:groupContext="shape" Text="SPI0" font="medium" transform="translate(558,-549)"
+			x="0" y="774" width="108" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape142-261" v:mID="142" v:groupContext="shape" Text="ck" tag="spi0 28" transform="translate(558,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape143-263" v:mID="143" v:groupContext="shape" Text="mi$so" tag="spi0 29" transform="translate(576,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape144-265" v:mID="144" v:groupContext="shape" Text="ss$0" tag="spi0 30" transform="translate(594,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape145-267" v:mID="145" v:groupContext="shape" Text="ss$1" tag="spi0 31" transform="translate(612,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape146-269" v:mID="146" v:groupContext="shape" Text="ss$2" tag="spi0 32" transform="translate(630,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape147-271" v:mID="147" v:groupContext="shape" Text="mo$si" tag="spi0 33" transform="translate(648,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape148-273" v:mID="148" v:groupContext="shape" Text="SPI1" font="medium" transform="translate(666,-549)"
+			x="0" y="774" width="108" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape149-275" v:mID="149" v:groupContext="shape" Text="mo$si" tag="spi1 34" transform="translate(666,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape150-277" v:mID="150" v:groupContext="shape" Text="mi$so" tag="spi1 35" transform="translate(684,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape151-279" v:mID="151" v:groupContext="shape" Text="ck" tag="spi1 36" transform="translate(702,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape152-281" v:mID="152" v:groupContext="shape" Text="ss$0" tag="spi1 37" transform="translate(720,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape153-283" v:mID="153" v:groupContext="shape" Text="ss$1" tag="spi1 38" transform="translate(738,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape154-285" v:mID="154" v:groupContext="shape" Text="ss$2" tag="spi1 39" transform="translate(756,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape155-287" v:mID="155" v:groupContext="shape" Text="SPI0" font="medium" transform="translate(774,-549)"
+			x="0" y="774" width="108" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape156-289" v:mID="156" v:groupContext="shape" Text="mi$so" tag="spi0 40" transform="translate(774,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape157-291" v:mID="157" v:groupContext="shape" Text="ck" tag="spi0 41" transform="translate(792,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape158-293" v:mID="158" v:groupContext="shape" Text="ss$0" tag="spi0 42" transform="translate(810,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape159-295" v:mID="159" v:groupContext="shape" Text="ss$1" tag="spi0 43" transform="translate(828,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape160-297" v:mID="160" v:groupContext="shape" Text="ss$2" tag="spi0 44" transform="translate(846,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape161-299" v:mID="161" v:groupContext="shape" Text="mo$si" tag="spi0 45" transform="translate(864,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape162-301" v:mID="162" v:groupContext="shape" Text="SPI1" font="medium" transform="translate(882,-549)"
+			x="0" y="774" width="108" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape163-303" v:mID="163" v:groupContext="shape" Text="mo$si" tag="spi1 46" transform="translate(882,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape164-305" v:mID="164" v:groupContext="shape" Text="mi$so" tag="spi1 47" transform="translate(900,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape165-307" v:mID="165" v:groupContext="shape" Text="ck" tag="spi1 48" transform="translate(918,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape166-309" v:mID="166" v:groupContext="shape" Text="ss$0" tag="spi1 49" transform="translate(936,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape167-311" v:mID="167" v:groupContext="shape" Text="ss$1" tag="spi1 50" transform="translate(954,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape168-313" v:mID="168" v:groupContext="shape" Text="ss$2" tag="spi1 51" transform="translate(972,-522)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+
+</g>
+        <g id="row 6">
+		<rect id="shape169-315" v:mID="169" v:groupContext="shape" Text="SDIO" font="large" tag="sd" transform="translate(54,-477)"
+			x="0" y="747" width="144" height="45" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape170-317" v:mID="170" v:groupContext="shape" Text="0" tag="sd0" transform="translate(198,-504)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape171-319" v:mID="171" v:groupContext="shape" Text="1" tag="sd1" transform="translate(198,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape172-321" v:mID="172" v:groupContext="shape" Text="SDIO 1" font="medium" transform="translate(234,-504)"
+			x="0" y="774" width="108" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape173-323" v:mID="173" v:groupContext="shape" Text="io$0" tag="sd1 10" transform="translate(234,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape174-325" v:mID="174" v:groupContext="shape" Text="cmd" tag="sd1 11" transform="translate(252,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape175-327" v:mID="175" v:groupContext="shape" Text="ck" tag="sd1 12" transform="translate(270,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape176-329" v:mID="176" v:groupContext="shape" Text="io$1" tag="sd1 13" transform="translate(288,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape177-331" v:mID="177" v:groupContext="shape" Text="io$2" tag="sd1 14" transform="translate(306,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape178-333" v:mID="178" v:groupContext="shape" Text="io$3" tag="sd1 15" transform="translate(324,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape179-335" v:mID="179" v:groupContext="shape" Text="SDIO 0" font="medium" transform="translate(342,-504)"
+			x="0" y="774" width="108" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape180-337" v:mID="180" v:groupContext="shape" Text="ck" tag="sd0 16" transform="translate(342,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape181-339" v:mID="181" v:groupContext="shape" Text="cmd" tag="sd0 17" transform="translate(360,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape182-341" v:mID="182" v:groupContext="shape" Text="io$0" tag="sd0 18" transform="translate(378,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape183-343" v:mID="183" v:groupContext="shape" Text="io$1" tag="sd0 19" transform="translate(396,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape184-345" v:mID="184" v:groupContext="shape" Text="io$2" tag="sd0 20" transform="translate(414,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape185-347" v:mID="185" v:groupContext="shape" Text="io$3" tag="sd0 21" transform="translate(432,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape186-349" v:mID="186" v:groupContext="shape" Text="SDIO 1" font="medium" transform="translate(450,-504)"
+			x="0" y="774" width="108" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape187-351" v:mID="187" v:groupContext="shape" Text="io$0" tag="sd1 22" transform="translate(450,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape188-353" v:mID="188" v:groupContext="shape" Text="cmd" tag="sd1 23" transform="translate(468,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape189-355" v:mID="189" v:groupContext="shape" Text="ck" tag="sd1 24" transform="translate(486,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape190-357" v:mID="190" v:groupContext="shape" Text="io$1" tag="sd1 25" transform="translate(504,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape191-359" v:mID="191" v:groupContext="shape" Text="io$2" tag="sd1 26" transform="translate(522,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape192-361" v:mID="192" v:groupContext="shape" Text="io$3" tag="sd1 27" transform="translate(540,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape193-363" v:mID="193" v:groupContext="shape" Text="SDIO 0" font="medium" transform="translate(558,-504)"
+			x="0" y="774" width="108" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape194-365" v:mID="194" v:groupContext="shape" Text="ck" tag="sd0 28" transform="translate(558,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape195-367" v:mID="195" v:groupContext="shape" Text="cmd" tag="sd0 29" transform="translate(576,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape196-369" v:mID="196" v:groupContext="shape" Text="io$0" tag="sd0 30" transform="translate(594,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape197-371" v:mID="197" v:groupContext="shape" Text="io$1" tag="sd0 31" transform="translate(612,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape198-373" v:mID="198" v:groupContext="shape" Text="io$2" tag="sd0 32" transform="translate(630,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape199-375" v:mID="199" v:groupContext="shape" Text="io$3" tag="sd0 33" transform="translate(648,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape200-377" v:mID="200" v:groupContext="shape" Text="SDIO 1" font="medium" transform="translate(666,-504)"
+			x="0" y="774" width="108" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape201-379" v:mID="201" v:groupContext="shape" Text="io$0" tag="sd1 34" transform="translate(666,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape202-381" v:mID="202" v:groupContext="shape" Text="cmd" tag="sd1 35" transform="translate(684,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape203-383" v:mID="203" v:groupContext="shape" Text="clk" tag="sd1 36" transform="translate(702,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape204-385" v:mID="204" v:groupContext="shape" Text="io$1" tag="sd1 37" transform="translate(720,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape205-387" v:mID="205" v:groupContext="shape" Text="io$2" tag="sd1 38" transform="translate(738,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape206-389" v:mID="206" v:groupContext="shape" Text="io$3" tag="sd1 39" transform="translate(756,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape207-391" v:mID="207" v:groupContext="shape" Text="SDIO 0" font="medium" transform="translate(774,-504)"
+			x="0" y="774" width="108" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape208-393" v:mID="208" v:groupContext="shape" Text="ck" tag="sd0 40" transform="translate(774,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape209-395" v:mID="209" v:groupContext="shape" Text="cmd" tag="sd0 41" transform="translate(792,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape210-397" v:mID="210" v:groupContext="shape" Text="io$0" tag="sd0 42" transform="translate(810,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape211-399" v:mID="211" v:groupContext="shape" Text="io$1" tag="sd0 43" transform="translate(828,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape212-401" v:mID="212" v:groupContext="shape" Text="io$2" tag="sd0 44" transform="translate(846,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape213-403" v:mID="213" v:groupContext="shape" Text="io$3" tag="sd0 45" transform="translate(864,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape214-405" v:mID="214" v:groupContext="shape" Text="SDIO 1" font="medium" transform="translate(882,-504)"
+			x="0" y="774" width="108" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape215-407" v:mID="215" v:groupContext="shape" Text="io$0" tag="sd1 46" transform="translate(882,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape216-409" v:mID="216" v:groupContext="shape" Text="cmd" tag="sd1 47" transform="translate(900,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape217-411" v:mID="217" v:groupContext="shape" Text="ck" tag="sd1 48" transform="translate(918,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape218-413" v:mID="218" v:groupContext="shape" Text="io$1" tag="sd1 49" transform="translate(936,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape219-415" v:mID="219" v:groupContext="shape" Text="io$2" tag="sd1 50" transform="translate(954,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape220-417" v:mID="220" v:groupContext="shape" Text="io$3" tag="sd1 51" transform="translate(972,-477)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+   </g>
+        <g id="row 7">
+		<rect id="shape221-419" v:mID="221" v:groupContext="shape" font="medium" Text=" SDIO Card Detect and Write Protect are available in any of the shaded positions in any combination of the four signals" tag="sd" transform="translate(54,-459)"
+			x="0" y="774" width="972" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+        </g>
+        
+        <g id="row 8">
+		<rect id="shape264-505" v:mID="264" v:groupContext="shape" Text="0" tag="SDCDPin 0" transform="translate(54,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape265-507" v:mID="265" v:groupContext="shape" Text="1" tag="SDCDPin 1" transform="translate(72,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape266-509" v:mID="266" v:groupContext="shape" Text="2" tag="SDCDPin 2" transform="translate(90,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape267-511" v:mID="267" v:groupContext="shape" Text="3" tag="SDCDPin 3" transform="translate(108,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape268-513" v:mID="268" v:groupContext="shape" Text="4" tag="SDCDPin 4" transform="translate(126,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape269-515" v:mID="269" v:groupContext="shape" Text="5" tag="SDCDPin 5" transform="translate(144,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape270-517" v:mID="270" v:groupContext="shape" Text="6" tag="SDCDPin 6" transform="translate(162,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape271-519" v:mID="271" v:groupContext="shape" Text=""  transform="translate(180,-441)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape273-523" v:mID="273" v:groupContext="shape" Text="9" tag="SDCDPin 9" transform="translate(216,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape246-469" v:mID="246" v:groupContext="shape" Text="10" tag="SDCDPin 10" transform="translate(234,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape247-471" v:mID="247" v:groupContext="shape" Text="11" tag="SDCDPin 11" transform="translate(252,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape242-461" v:mID="242" v:groupContext="shape" Text="12" tag="SDCDPin 12" transform="translate(270,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape243-463" v:mID="243" v:groupContext="shape" Text="13" tag="SDCDPin 13" transform="translate(288,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape236-449" v:mID="236" v:groupContext="shape" Text="14" tag="SDCDPin 14" transform="translate(306,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape237-451" v:mID="237" v:groupContext="shape" Text="15" tag="SDCDPin 15" transform="translate(324,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape238-453" v:mID="238" v:groupContext="shape" Text="16" tag="SDCDPin 16" transform="translate(342,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape239-455" v:mID="239" v:groupContext="shape" Text="17" tag="SDCDPin 17" transform="translate(360,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape240-457" v:mID="240" v:groupContext="shape" Text="18" tag="SDCDPin 18" transform="translate(378,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape241-459" v:mID="241" v:groupContext="shape" Text="19" tag="SDCDPin 19" transform="translate(396,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape244-465" v:mID="244" v:groupContext="shape" Text="20" tag="SDCDPin 20" transform="translate(414,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape245-467" v:mID="245" v:groupContext="shape" Text="21" tag="SDCDPin 21" transform="translate(432,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape248-473" v:mID="248" v:groupContext="shape" Text="22" tag="SDCDPin 22" transform="translate(450,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape249-475" v:mID="249" v:groupContext="shape" Text="23" tag="SDCDPin 23" transform="translate(468,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape232-441" v:mID="232" v:groupContext="shape" Text="24" tag="SDCDPin 24" transform="translate(486,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape233-443" v:mID="233" v:groupContext="shape" Text="25" tag="SDCDPin 25" transform="translate(504,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape228-433" v:mID="228" v:groupContext="shape" Text="26" tag="SDCDPin 26" transform="translate(522,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape229-435" v:mID="229" v:groupContext="shape" Text="27" tag="SDCDPin 27" transform="translate(540,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape222-421" v:mID="222" v:groupContext="shape" Text="28" tag="SDCDPin 28" transform="translate(558,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape223-423" v:mID="223" v:groupContext="shape" Text="29" tag="SDCDPin 29" transform="translate(576,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape224-425" v:mID="224" v:groupContext="shape" Text="30" tag="SDCDPin 30" transform="translate(594,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape225-427" v:mID="225" v:groupContext="shape" Text="31" tag="SDCDPin 31" transform="translate(612,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape226-429" v:mID="226" v:groupContext="shape" Text="32" tag="SDCDPin 32" transform="translate(630,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape227-431" v:mID="227" v:groupContext="shape" Text="33" tag="SDCDPin 33" transform="translate(648,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape230-437" v:mID="230" v:groupContext="shape" Text="34" tag="SDCDPin 34" transform="translate(666,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape231-439" v:mID="231" v:groupContext="shape" Text="35" tag="SDCDPin 35" transform="translate(684,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape234-445" v:mID="234" v:groupContext="shape" Text="36" tag="SDCDPin 36" transform="translate(702,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape235-447" v:mID="235" v:groupContext="shape" Text="37" tag="SDCDPin 37" transform="translate(720,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape260-497" v:mID="260" v:groupContext="shape" Text="38" tag="SDCDPin 38" transform="translate(738,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape261-499" v:mID="261" v:groupContext="shape" Text="39" tag="SDCDPin 39" transform="translate(756,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape256-489" v:mID="256" v:groupContext="shape" Text="40" tag="SDCDPin 40" transform="translate(774,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape257-491" v:mID="257" v:groupContext="shape" Text="41" tag="SDCDPin 41" transform="translate(792,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+
+		<rect id="shape250-477" v:mID="250" v:groupContext="shape" Text="42" tag="SDCDPin 42" transform="translate(810,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape251-479" v:mID="251" v:groupContext="shape" Text="43" tag="SDCDPin 43" transform="translate(828,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape252-481" v:mID="252" v:groupContext="shape" Text="44" tag="SDCDPin 44" transform="translate(846,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape253-483" v:mID="253" v:groupContext="shape" Text="45" tag="SDCDPin 45" transform="translate(864,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape254-485" v:mID="254" v:groupContext="shape" Text="46" tag="SDCDPin 46" transform="translate(882,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape255-487" v:mID="255" v:groupContext="shape" Text="47" tag="SDCDPin 47" transform="translate(900,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape258-493" v:mID="258" v:groupContext="shape" Text="48" tag="SDCDPin 48" transform="translate(918,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape259-495" v:mID="259" v:groupContext="shape" Text="49" tag="SDCDPin 49" transform="translate(936,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape262-501" v:mID="262" v:groupContext="shape" Text="50" tag="SDCDPin 50" transform="translate(954,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape263-503" v:mID="263" v:groupContext="shape" Text="51" tag="SDCDPin 51" transform="translate(972,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape274-525" v:mID="274" v:groupContext="shape" Text="52" tag="SDCDPin 52" transform="translate(990,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape275-527" v:mID="275" v:groupContext="shape" Text="53" tag="SDCDPin 53" transform="translate(1008,-441)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+        </g>  
+        <g id="row 9">
+        		<rect id="shape276-529" v:mID="276" v:groupContext="shape" font="medium" Text="SDIO Power Controls are available on an odd/even pin basis that corresponds to SDIO controllers 0 and 1" tag="sd" transform="translate(54,-423)"
+			x="0" y="774" width="972" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+       </g>
+        <g id="row 10">
+         		<rect id="shape319-615" v:mID="319" v:groupContext="shape" Text="0" tag="sdioPwr 0" transform="translate(54,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape320-617" v:mID="320" v:groupContext="shape" Text="1" tag="sdioPwr 1" transform="translate(72,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape321-619" v:mID="321" v:groupContext="shape" Text="0" tag="sdioPwr 2" transform="translate(90,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape322-621" v:mID="322" v:groupContext="shape" Text="1" tag="sdioPwr 3" transform="translate(108,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape323-623" v:mID="323" v:groupContext="shape" Text="0" tag="sdioPwr 4" transform="translate(126,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape324-625" v:mID="324" v:groupContext="shape" Text="1" tag="sdioPwr 5" transform="translate(144,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape325-627" v:mID="325" v:groupContext="shape" Text="0" tag="sdioPwr 6" transform="translate(162,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape326-629" v:mID="326" v:groupContext="shape" Text="1" tag="sdioPwr 7" transform="translate(180,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape327-631" v:mID="327" v:groupContext="shape" Text="0" tag="sdioPwr 8" transform="translate(198,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape328-633" v:mID="328" v:groupContext="shape" Text="1" tag="sdioPwr 9" transform="translate(216,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape301-579" v:mID="301" v:groupContext="shape" Text="0" tag="sdioPwr 10" transform="translate(234,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape302-581" v:mID="302" v:groupContext="shape" Text="1" tag="sdioPwr 11" transform="translate(252,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape297-571" v:mID="297" v:groupContext="shape" Text="0" tag="sdioPwr 12" transform="translate(270,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape298-573" v:mID="298" v:groupContext="shape" Text="1" tag="sdioPwr 13" transform="translate(288,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape291-559" v:mID="291" v:groupContext="shape" Text="0" tag="sdioPwr 14" transform="translate(306,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape292-561" v:mID="292" v:groupContext="shape" Text="1" tag="sdioPwr 15" transform="translate(324,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape293-563" v:mID="293" v:groupContext="shape" Text="0" tag="sdioPwr 16" transform="translate(342,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape294-565" v:mID="294" v:groupContext="shape" Text="1" tag="sdioPwr 17" transform="translate(360,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape295-567" v:mID="295" v:groupContext="shape" Text="0" tag="sdioPwr 18" transform="translate(378,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape296-569" v:mID="296" v:groupContext="shape" Text="1" tag="sdioPwr 19" transform="translate(396,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape299-575" v:mID="299" v:groupContext="shape" Text="0" tag="sdioPwr 20" transform="translate(414,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape300-577" v:mID="300" v:groupContext="shape" Text="1" tag="sdioPwr 21" transform="translate(432,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape303-583" v:mID="303" v:groupContext="shape" Text="0" tag="sdioPwr 22" transform="translate(450,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape304-585" v:mID="304" v:groupContext="shape" Text="1" tag="sdioPwr 23" transform="translate(468,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape287-551" v:mID="287" v:groupContext="shape" Text="0" tag="sdioPwr 24" transform="translate(486,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape288-553" v:mID="288" v:groupContext="shape" Text="1" tag="sdioPwr 25" transform="translate(504,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape283-543" v:mID="283" v:groupContext="shape" Text="0" tag="sdioPwr 26" transform="translate(522,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape284-545" v:mID="284" v:groupContext="shape" Text="1" tag="sdioPwr 27" transform="translate(540,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape277-531" v:mID="277" v:groupContext="shape" Text="0" tag="sdioPwr 28" transform="translate(558,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape278-533" v:mID="278" v:groupContext="shape" Text="1" tag="sdioPwr 29" transform="translate(576,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape279-535" v:mID="279" v:groupContext="shape" Text="0" tag="sdioPwr 30" transform="translate(594,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape280-537" v:mID="280" v:groupContext="shape" Text="1" tag="sdioPwr 31" transform="translate(612,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape281-539" v:mID="281" v:groupContext="shape" Text="0" tag="sdioPwr 32" transform="translate(630,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape282-541" v:mID="282" v:groupContext="shape" Text="1" tag="sdioPwr 33" transform="translate(648,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape285-547" v:mID="285" v:groupContext="shape" Text="0" tag="sdioPwr 34" transform="translate(666,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape286-549" v:mID="286" v:groupContext="shape" Text="1" tag="sdioPwr 35" transform="translate(684,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape289-555" v:mID="289" v:groupContext="shape" Text="0" tag="sdioPwr 36" transform="translate(702,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape290-557" v:mID="290" v:groupContext="shape" Text="1" tag="sdioPwr 37" transform="translate(720,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape315-607" v:mID="315" v:groupContext="shape" Text="0" tag="sdioPwr 38" transform="translate(738,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape316-609" v:mID="316" v:groupContext="shape" Text="1" tag="sdioPwr 39" transform="translate(756,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape311-599" v:mID="311" v:groupContext="shape" Text="0" tag="sdioPwr 40" transform="translate(774,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape312-601" v:mID="312" v:groupContext="shape" Text="1" tag="sdioPwr 41" transform="translate(792,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape305-587" v:mID="305" v:groupContext="shape" Text="0" tag="sdioPwr 42" transform="translate(810,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape306-589" v:mID="306" v:groupContext="shape" Text="1" tag="sdioPwr 43" transform="translate(828,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape307-591" v:mID="307" v:groupContext="shape" Text="0" tag="sdioPwr 44" transform="translate(846,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape308-593" v:mID="308" v:groupContext="shape" Text="1" tag="sdioPwr 45" transform="translate(864,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape309-595" v:mID="309" v:groupContext="shape" Text="0" tag="sdioPwr 46" transform="translate(882,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape310-597" v:mID="310" v:groupContext="shape" Text="1" tag="sdioPwr 47" transform="translate(900,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape313-603" v:mID="313" v:groupContext="shape" Text="0" tag="sdioPwr 48" transform="translate(918,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape314-605" v:mID="314" v:groupContext="shape" Text="1" tag="sdioPwr 49" transform="translate(936,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape317-611" v:mID="317" v:groupContext="shape" Text="0" tag="sdioPwr 50" transform="translate(954,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape318-613" v:mID="318" v:groupContext="shape" Text="1" tag="sdioPwr 51" transform="translate(972,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape329-635" v:mID="329" v:groupContext="shape" Text="0" tag="sdioPwr 52" transform="translate(990,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape330-637" v:mID="330" v:groupContext="shape" Text="1" tag="sdioPwr 53" transform="translate(1008,-405)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+       </g>
+        <g id="row 11">
+          <rect id="shape331-639" v:mID="331" v:groupContext="shape" font="medium" Text="SMC interface choice: NOR/SRAM or NAND Flash" transform="translate(54,-387)"
+			x="0" y="774" width="972" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+         </g>
+        <g id="row 12">
+          		<rect id="shape332-641" v:mID="332" v:groupContext="shape" Text="cs$0" tag="sram 0" transform="translate(54,-360)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape333-643" v:mID="333" v:groupContext="shape" Text="no$te" tag="sram 1" transform="translate(72,-360)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape334-645" v:mID="334" v:groupContext="shape" Text="" transform="translate(90,-360)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape335-647" v:mID="335" v:groupContext="shape" Text="data" tag="sram 3" transform="translate(108,-360)"
+			x="0" y="765" width="72" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape336-649" v:mID="336" v:groupContext="shape" Text="oe" tag="sram 7" transform="translate(180,-360)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape337-651" v:mID="337" v:groupContext="shape" Text="bls$_b" tag="sram 8" transform="translate(198,-360)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape338-653" v:mID="338" v:groupContext="shape" Text="data" tag="sram 9" transform="translate(216,-360)"
+			x="0" y="765" width="54" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape339-655" v:mID="339" v:groupContext="shape" Text="wa$it" tag="sram 12" transform="translate(270,-360)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape340-657" v:mID="340" v:groupContext="shape" Text="da$ta" tag="sram 13" transform="translate(288,-360)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape341-659" v:mID="341" v:groupContext="shape" Text="bu$sy" tag="sram 14" transform="translate(306,-360)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape373-665" v:mID="373" v:groupContext="shape" Text="Address[0:24]" tag="sram 15" transform="translate(324,-360)"
+			x="0" y="765" width="450" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape374-667" v:mID="374" v:groupContext="shape" font="large" Text="NOR/SRAM   MIO Pin[1] optional: addr 25, cs1$or gpio" tag="sram" transform="translate(774,-360)"
+			x="0" y="765" width="252" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+        </g>
+        <g id="row 13">
+   
+		<rect id="shape376-671" v:mID="376" v:groupContext="shape" Text="cs" tag="nand 0" transform="translate(54,-333)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape377-673" v:mID="377" v:groupContext="shape" Text="" transform="translate(72,-333)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape378-675" v:mID="378" v:groupContext="shape" Text="ale" tag="nand 2" transform="translate(90,-333)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape379-677" v:mID="379" v:groupContext="shape" Text="we" tag="nand 3" transform="translate(108,-333)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape380-679" v:mID="380" v:groupContext="shape" Text="io$2" tag="nand 4" transform="translate(126,-333)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape380_1-679" v:mID="38001" v:groupContext="shape" Text="io$1" tag="nand 5" transform="translate(144,-333)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape380_2-679" v:mID="38002" v:groupContext="shape" Text="io$0" tag="nand 6" transform="translate(162,-333)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape381-681" v:mID="381" v:groupContext="shape" Text="cle" tag="nand 7" transform="translate(180,-333)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape342-661" v:mID="342" v:groupContext="shape" Text="rd" tag="nand 8" transform="translate(198,-333)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape382-683" v:mID="382" v:groupContext="shape" Text="io 4~7" tag="nand 9" transform="translate(216,-333)"
+			x="0" y="765" width="72" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape382_1-683" v:mID="38201" v:groupContext="shape" Text="io$3" tag="nand 10" transform="translate(288,-333)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape385-685" v:mID="385" v:groupContext="shape" Text="bu$sy" tag="nand 14" transform="translate(306,-333)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape343-663" v:mID="343" v:groupContext="shape" Text="" transform="translate(324,-333)"
+			x="0" y="765" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape386-687" v:mID="386" v:groupContext="shape" Text="io 8~15" tag="nand 16" transform="translate(342,-333)"
+			x="0" y="765" width="144" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape387-689" v:mID="387" v:groupContext="shape" font="large" Text="NAND Flash" tag="nand" transform="translate(486,-333)"
+			x="0" y="765" width="540" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+        </g>    
+        <g id="row 14">
+		<rect id="shape428-775" v:mID="428" v:groupContext="shape" Text="0" tag="pin2 0" transform="translate(54,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape429-777" v:mID="429" v:groupContext="shape" Text="1" tag="pin2 1" transform="translate(72,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape430-779" v:mID="430" v:groupContext="shape" Text="2" tag="pin2 2" transform="translate(90,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape431-781" v:mID="431" v:groupContext="shape" Text="3" tag="pin2 3" transform="translate(108,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape432-783" v:mID="432" v:groupContext="shape" Text="4" tag="pin2 4" transform="translate(126,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape433-785" v:mID="433" v:groupContext="shape" Text="5" tag="pin2 5" transform="translate(144,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape434-787" v:mID="434" v:groupContext="shape" Text="6" tag="pin2 6" transform="translate(162,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape435-789" v:mID="435" v:groupContext="shape" Text="7" tag="pin2 7" transform="translate(180,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape436-791" v:mID="436" v:groupContext="shape" Text="8" tag="pin2 8" transform="translate(198,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape437-793" v:mID="437" v:groupContext="shape" Text="9" tag="pin2 9" transform="translate(216,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape410-739" v:mID="410" v:groupContext="shape" Text="10" tag="pin2 10" transform="translate(234,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape411-741" v:mID="411" v:groupContext="shape" Text="11" tag="pin2 11" transform="translate(252,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape406-731" v:mID="406" v:groupContext="shape" Text="12" tag="pin2 12" transform="translate(270,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape407-733" v:mID="407" v:groupContext="shape" Text="13" tag="pin2 13" transform="translate(288,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape400-719" v:mID="400" v:groupContext="shape" Text="14" tag="pin2 14" transform="translate(306,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape401-721" v:mID="401" v:groupContext="shape" Text="15" tag="pin2 15" transform="translate(324,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape402-723" v:mID="402" v:groupContext="shape" Text="16" tag="pin2 16" transform="translate(342,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape403-725" v:mID="403" v:groupContext="shape" Text="17" tag="pin2 17" transform="translate(360,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape404-727" v:mID="404" v:groupContext="shape" Text="18" tag="pin2 18" transform="translate(378,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape405-729" v:mID="405" v:groupContext="shape" Text="19" tag="pin2 19" transform="translate(396,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape408-735" v:mID="408" v:groupContext="shape" Text="20" tag="pin2 20" transform="translate(414,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape409-737" v:mID="409" v:groupContext="shape" Text="21" tag="pin2 21" transform="translate(432,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape412-743" v:mID="412" v:groupContext="shape" Text="22" tag="pin2 22" transform="translate(450,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape413-745" v:mID="413" v:groupContext="shape" Text="23" tag="pin2 23" transform="translate(468,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape396-711" v:mID="396" v:groupContext="shape" Text="24" tag="pin2 24" transform="translate(486,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape397-713" v:mID="397" v:groupContext="shape" Text="25" tag="pin2 25" transform="translate(504,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape392-703" v:mID="392" v:groupContext="shape" Text="26" tag="pin2 26" transform="translate(522,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape393-705" v:mID="393" v:groupContext="shape" Text="27" tag="pin2 27" transform="translate(540,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape383-691" v:mID="383" v:groupContext="shape" Text="28" tag="pin2 28" transform="translate(558,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape384-693" v:mID="384" v:groupContext="shape" Text="29" tag="pin2 29" transform="translate(576,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape388-695" v:mID="388" v:groupContext="shape" Text="30" tag="pin2 30" transform="translate(594,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape389-697" v:mID="389" v:groupContext="shape" Text="31" tag="pin2 31" transform="translate(612,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape390-699" v:mID="390" v:groupContext="shape" Text="32" tag="pin2 32" transform="translate(630,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape391-701" v:mID="391" v:groupContext="shape" Text="33" tag="pin2 33" transform="translate(648,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape394-707" v:mID="394" v:groupContext="shape" Text="34" tag="pin2 34" transform="translate(666,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape395-709" v:mID="395" v:groupContext="shape" Text="35" tag="pin2 35" transform="translate(684,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape398-715" v:mID="398" v:groupContext="shape" Text="36" tag="pin2 36" transform="translate(702,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape399-717" v:mID="399" v:groupContext="shape" Text="37" tag="pin2 37" transform="translate(720,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape424-767" v:mID="424" v:groupContext="shape" Text="38" tag="pin2 38" transform="translate(738,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape425-769" v:mID="425" v:groupContext="shape" Text="39" tag="pin2 39" transform="translate(756,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape420-759" v:mID="420" v:groupContext="shape" Text="40" tag="pin2 40" transform="translate(774,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape421-761" v:mID="421" v:groupContext="shape" Text="41" tag="pin2 41" transform="translate(792,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape414-747" v:mID="414" v:groupContext="shape" Text="42" tag="pin2 42" transform="translate(810,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape415-749" v:mID="415" v:groupContext="shape" Text="43" tag="pin2 43" transform="translate(828,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape416-751" v:mID="416" v:groupContext="shape" Text="44" tag="pin2 44" transform="translate(846,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape417-753" v:mID="417" v:groupContext="shape" Text="45" tag="pin2 45" transform="translate(864,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape418-755" v:mID="418" v:groupContext="shape" Text="46" tag="pin2 46" transform="translate(882,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape419-757" v:mID="419" v:groupContext="shape" Text="47" tag="pin2 47" transform="translate(900,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape422-763" v:mID="422" v:groupContext="shape" Text="48" tag="pin2 48" transform="translate(918,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape423-765" v:mID="423" v:groupContext="shape" Text="49" tag="pin2 49" transform="translate(936,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape426-771" v:mID="426" v:groupContext="shape" Text="50" tag="pin2 50" transform="translate(954,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape427-773" v:mID="427" v:groupContext="shape" Text="51" tag="pin2 51" transform="translate(972,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape438-795" v:mID="438" v:groupContext="shape" Text="52" tag="pin2 52" transform="translate(990,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape439-797" v:mID="439" v:groupContext="shape" Text="53" tag="pin2 53" transform="translate(1008,-315)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+        </g>
+        <g id="row 15">
+         		<rect id="shape344-799" v:mID="344" v:groupContext="shape" Text="CAN" tag="can" font="large" transform="translate(54,-279)"
+			x="0" y="756" width="90" height="36" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape344_1-799" v:mID="34401" v:groupContext="shape" Text="CAN External clocks are optionally available on any pin in any combination" font="medium" transform="translate(54,-243)"
+			x="0" y="756" width="972" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape366-805" v:mID="366" v:groupContext="shape" Text="0" tag="can0" font="medium" transform="translate(144,-297)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape443-807" v:mID="443" v:groupContext="shape" Text="1" tag="can1" font="medium" transform="translate(144,-279)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape443_1-807" v:mID="44301" v:groupContext="shape" Text="note$ order" transform="translate(162,-279)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape448-817" v:mID="448" v:groupContext="shape" Text="rx" tag="can0 10" transform="translate(234,-297)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape449-819" v:mID="449" v:groupContext="shape" Text="tx" tag="can0 11" transform="translate(252,-297)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape450-821" v:mID="450" v:groupContext="shape" Text="" transform="translate(270,-297)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape451-823" v:mID="451" v:groupContext="shape" Text="rx" tag="can0 14" transform="translate(306,-297)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape452-825" v:mID="452" v:groupContext="shape" Text="tx" tag="can0 15" transform="translate(324,-297)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape453-827" v:mID="453" v:groupContext="shape" Text="" transform="translate(342,-297)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape455-831" v:mID="455" v:groupContext="shape" Text="rx" tag="can0 18" transform="translate(378,-297)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape456-833" v:mID="456" v:groupContext="shape" Text="tx" tag="can0 19" transform="translate(396,-297)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape457-835" v:mID="457" v:groupContext="shape" Text="" transform="translate(414,-297)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape458-837" v:mID="458" v:groupContext="shape" Text="rx" tag="can0 22" transform="translate(450,-297)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape459-839" v:mID="459" v:groupContext="shape" Text="tx" tag="can0 23" transform="translate(468,-297)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape460-841" v:mID="460" v:groupContext="shape" Text="" transform="translate(486,-297)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape462-845" v:mID="462" v:groupContext="shape" Text="rx" tag="can0 26" transform="translate(522,-297)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape463-847" v:mID="463" v:groupContext="shape" Text="tx" tag="can0 27" transform="translate(540,-297)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape464-849" v:mID="464" v:groupContext="shape" Text="" transform="translate(558,-297)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape465-851" v:mID="465" v:groupContext="shape" Text="rx" tag="can0 30" transform="translate(594,-297)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape466-853" v:mID="466" v:groupContext="shape" Text="tx" tag="can0 31" transform="translate(612,-297)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape467-855" v:mID="467" v:groupContext="shape" Text="" transform="translate(630,-297)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape469-859" v:mID="469" v:groupContext="shape" Text="rx" tag="can0 34" transform="translate(666,-297)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape470-861" v:mID="470" v:groupContext="shape" Text="tx" tag="can0 35" transform="translate(684,-297)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape471-863" v:mID="471" v:groupContext="shape" Text="" transform="translate(702,-297)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape472-865" v:mID="472" v:groupContext="shape" Text="rx" tag="can0 38" transform="translate(738,-297)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape473-867" v:mID="473" v:groupContext="shape" Text="tx" tag="can0 39" transform="translate(756,-297)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape474-869" v:mID="474" v:groupContext="shape" Text="" transform="translate(774,-297)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape476-873" v:mID="476" v:groupContext="shape" Text="rx" tag="can0 42" transform="translate(810,-297)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape477-875" v:mID="477" v:groupContext="shape" Text="tx" tag="can0 43" transform="translate(828,-297)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape478-877" v:mID="478" v:groupContext="shape" Text="" transform="translate(846,-297)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape479-879" v:mID="479" v:groupContext="shape" Text="rx" tag="can0 46" transform="translate(882,-297)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape480-881" v:mID="480" v:groupContext="shape" Text="tx" tag="can0 47" transform="translate(900,-297)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape481-883" v:mID="481" v:groupContext="shape" Text="" transform="translate(918,-297)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape483-887" v:mID="483" v:groupContext="shape" Text="rx" tag="can0 50" transform="translate(954,-297)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape484-889" v:mID="484" v:groupContext="shape" Text="tx" tag="can0 51" transform="translate(972,-297)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape485-891" v:mID="485" v:groupContext="shape" Text="" transform="translate(990,-297)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape486-893" v:mID="486" v:groupContext="shape" Text="tx" tag="can1 8" transform="translate(198,-279)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape487-895" v:mID="487" v:groupContext="shape" Text="rx" tag="can1 9" transform="translate(216,-279)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape488-897" v:mID="488" v:groupContext="shape" Text="" transform="translate(234,-279)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape489-899" v:mID="489" v:groupContext="shape" Text="tx" tag="can1 12" transform="translate(270,-279)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape490-901" v:mID="490" v:groupContext="shape" Text="rx" tag="can1 13" transform="translate(288,-279)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape491-903" v:mID="491" v:groupContext="shape" Text="" transform="translate(306,-279)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape493-907" v:mID="493" v:groupContext="shape" Text="tx" tag="can1 16" transform="translate(342,-279)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape494-909" v:mID="494" v:groupContext="shape" Text="rx" tag="can1 17" transform="translate(360,-279)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape495-911" v:mID="495" v:groupContext="shape" Text="" transform="translate(378,-279)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape496-913" v:mID="496" v:groupContext="shape" Text="tx" tag="can1 20" transform="translate(414,-279)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape497-915" v:mID="497" v:groupContext="shape" Text="rx" tag="can1 21" transform="translate(432,-279)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape498-917" v:mID="498" v:groupContext="shape" Text="" transform="translate(450,-279)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape500-921" v:mID="500" v:groupContext="shape" Text="tx" tag="can1 24" transform="translate(486,-279)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape501-923" v:mID="501" v:groupContext="shape" Text="rx" tag="can1 25" transform="translate(504,-279)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape502-925" v:mID="502" v:groupContext="shape" Text="" transform="translate(522,-279)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape503-927" v:mID="503" v:groupContext="shape" Text="tx" tag="can1 28" transform="translate(558,-279)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape504-929" v:mID="504" v:groupContext="shape" Text="rx" tag="can1 29" transform="translate(576,-279)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape505-931" v:mID="505" v:groupContext="shape" Text="" transform="translate(594,-279)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape507-935" v:mID="507" v:groupContext="shape" Text="tx" tag="can1 32" transform="translate(630,-279)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape508-937" v:mID="508" v:groupContext="shape" Text="rx" tag="can1 33" transform="translate(648,-279)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape509-939" v:mID="509" v:groupContext="shape" Text="" transform="translate(666,-279)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape510-941" v:mID="510" v:groupContext="shape" Text="tx" tag="can1 36" transform="translate(702,-279)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape511-943" v:mID="511" v:groupContext="shape" Text="rx" tag="can1 37" transform="translate(720,-279)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape512-945" v:mID="512" v:groupContext="shape" Text="" transform="translate(738,-279)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape514-949" v:mID="514" v:groupContext="shape" Text="tx" tag="can1 40" transform="translate(774,-279)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape515-951" v:mID="515" v:groupContext="shape" Text="rx" tag="can1 41" transform="translate(792,-279)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape516-953" v:mID="516" v:groupContext="shape" Text="" transform="translate(810,-279)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape517-955" v:mID="517" v:groupContext="shape" Text="tx" tag="can1 44" transform="translate(846,-279)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape518-957" v:mID="518" v:groupContext="shape" Text="rx" tag="can1 45" transform="translate(864,-279)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape519-959" v:mID="519" v:groupContext="shape" Text="" transform="translate(882,-279)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape521-963" v:mID="521" v:groupContext="shape" Text="tx" tag="can1 48" transform="translate(918,-279)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape522-965" v:mID="522" v:groupContext="shape" Text="rx" tag="can1 49" transform="translate(936,-279)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape523-967" v:mID="523" v:groupContext="shape" Text="" transform="translate(954,-279)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape524-969" v:mID="524" v:groupContext="shape" Text="tx" tag="can1 52" transform="translate(990,-279)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape525-971" v:mID="525" v:groupContext="shape" Text="rx" tag="can1 53" transform="translate(1008,-279)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+        </g> 
+        <g id="row 16">
+         		<rect id="shape345-801" v:mID="345" v:groupContext="shape" Text="UART" tag="uart"  font="large" transform="translate(54,-216)"
+			x="0" y="756" width="90" height="36" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape444-809" v:mID="444" v:groupContext="shape" Text="0" tag="uart0" font="medium" transform="translate(144,-234)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape445-811" v:mID="445" v:groupContext="shape" Text="1"  tag="uart1" font="medium" transform="translate(144,-216)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape445_1-811" v:mID="44501" v:groupContext="shape" Text="note$ order"  transform="translate(162,-216)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape526-973" v:mID="526" v:groupContext="shape" Text="rx" tag="uart0 10" transform="translate(234,-234)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape527-975" v:mID="527" v:groupContext="shape" Text="tx" tag="uart0 11" transform="translate(252,-234)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape528-977" v:mID="528" v:groupContext="shape" Text="" transform="translate(270,-234)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape529-979" v:mID="529" v:groupContext="shape" Text="rx" tag="uart0 14" transform="translate(306,-234)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape530-981" v:mID="530" v:groupContext="shape" Text="tx" tag="uart0 15" transform="translate(324,-234)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape531-983" v:mID="531" v:groupContext="shape" Text="" transform="translate(342,-234)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape533-987" v:mID="533" v:groupContext="shape" Text="rx" tag="uart0 18" transform="translate(378,-234)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape534-989" v:mID="534" v:groupContext="shape" Text="tx" tag="uart0 19" transform="translate(396,-234)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape535-991" v:mID="535" v:groupContext="shape" Text="" transform="translate(414,-234)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape536-993" v:mID="536" v:groupContext="shape" Text="rx" tag="uart0 22" transform="translate(450,-234)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape537-995" v:mID="537" v:groupContext="shape" Text="tx" tag="uart0 23" transform="translate(468,-234)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape538-997" v:mID="538" v:groupContext="shape" Text="" transform="translate(486,-234)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape540-1001" v:mID="540" v:groupContext="shape" Text="rx" tag="uart0 26" transform="translate(522,-234)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape541-1003" v:mID="541" v:groupContext="shape" Text="tx" tag="uart0 27" transform="translate(540,-234)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape542-1005" v:mID="542" v:groupContext="shape" Text="" transform="translate(558,-234)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape543-1007" v:mID="543" v:groupContext="shape" Text="rx" tag="uart0 30" transform="translate(594,-234)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape544-1009" v:mID="544" v:groupContext="shape" Text="tx" tag="uart0 31" transform="translate(612,-234)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape545-1011" v:mID="545" v:groupContext="shape" Text="" transform="translate(630,-234)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape547-1015" v:mID="547" v:groupContext="shape" Text="rx" tag="uart0 34" transform="translate(666,-234)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape548-1017" v:mID="548" v:groupContext="shape" Text="tx" tag="uart0 35" transform="translate(684,-234)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape549-1019" v:mID="549" v:groupContext="shape" Text="" transform="translate(702,-234)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape550-1021" v:mID="550" v:groupContext="shape" Text="rx" tag="uart0 38" transform="translate(738,-234)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape551-1023" v:mID="551" v:groupContext="shape" Text="tx" tag="uart0 39" transform="translate(756,-234)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape552-1025" v:mID="552" v:groupContext="shape" Text="" transform="translate(774,-234)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape554-1029" v:mID="554" v:groupContext="shape" Text="rx" tag="uart0 42" transform="translate(810,-234)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape555-1031" v:mID="555" v:groupContext="shape" Text="tx" tag="uart0 43" transform="translate(828,-234)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape556-1033" v:mID="556" v:groupContext="shape" Text="" transform="translate(846,-234)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape557-1035" v:mID="557" v:groupContext="shape" Text="rx" tag="uart0 46" transform="translate(882,-234)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape558-1037" v:mID="558" v:groupContext="shape" Text="tx" tag="uart0 47" transform="translate(900,-234)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape559-1039" v:mID="559" v:groupContext="shape" Text="" transform="translate(918,-234)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape561-1043" v:mID="561" v:groupContext="shape" Text="rx" tag="uart0 50" transform="translate(954,-234)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape562-1045" v:mID="562" v:groupContext="shape" Text="tx" tag="uart0 51" transform="translate(972,-234)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape563-1047" v:mID="563" v:groupContext="shape" Text="" transform="translate(990,-234)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape564-1049" v:mID="564" v:groupContext="shape" Text="tx" tag="uart1 8" transform="translate(198,-216)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape565-1051" v:mID="565" v:groupContext="shape" Text="rx" tag="uart1 9" transform="translate(216,-216)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape566-1053" v:mID="566" v:groupContext="shape" Text="" transform="translate(234,-216)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape567-1055" v:mID="567" v:groupContext="shape" Text="tx" tag="uart1 12" transform="translate(270,-216)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape568-1057" v:mID="568" v:groupContext="shape" Text="rx" tag="uart1 13" transform="translate(288,-216)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape569-1059" v:mID="569" v:groupContext="shape" Text="" transform="translate(306,-216)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape571-1063" v:mID="571" v:groupContext="shape" Text="tx" tag="uart1 16" transform="translate(342,-216)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape572-1065" v:mID="572" v:groupContext="shape" Text="rx" tag="uart1 17" transform="translate(360,-216)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape573-1067" v:mID="573" v:groupContext="shape" Text="" transform="translate(378,-216)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape574-1069" v:mID="574" v:groupContext="shape" Text="tx" tag="uart1 20" transform="translate(414,-216)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape575-1071" v:mID="575" v:groupContext="shape" Text="rx" tag="uart1 21" transform="translate(432,-216)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape576-1073" v:mID="576" v:groupContext="shape" Text="" transform="translate(450,-216)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape578-1077" v:mID="578" v:groupContext="shape" Text="tx" tag="uart1 24" transform="translate(486,-216)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape579-1079" v:mID="579" v:groupContext="shape" Text="rx" tag="uart1 25" transform="translate(504,-216)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape580-1081" v:mID="580" v:groupContext="shape" Text="" transform="translate(522,-216)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape581-1083" v:mID="581" v:groupContext="shape" Text="tx" tag="uart1 28" transform="translate(558,-216)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape582-1085" v:mID="582" v:groupContext="shape" Text="rx" tag="uart1 29" transform="translate(576,-216)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape583-1087" v:mID="583" v:groupContext="shape" Text="" transform="translate(594,-216)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape585-1091" v:mID="585" v:groupContext="shape" Text="tx" tag="uart1 32" transform="translate(630,-216)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape586-1093" v:mID="586" v:groupContext="shape" Text="rx" tag="uart1 33" transform="translate(648,-216)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape587-1095" v:mID="587" v:groupContext="shape" Text="" transform="translate(666,-216)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape588-1097" v:mID="588" v:groupContext="shape" Text="tx" tag="uart1 36" transform="translate(702,-216)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape589-1099" v:mID="589" v:groupContext="shape" Text="rx" tag="uart1 37" transform="translate(720,-216)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape590-1101" v:mID="590" v:groupContext="shape" Text="" transform="translate(738,-216)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape592-1105" v:mID="592" v:groupContext="shape" Text="tx" tag="uart1 40" transform="translate(774,-216)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape593-1107" v:mID="593" v:groupContext="shape" Text="rx" tag="uart1 41" transform="translate(792,-216)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape594-1109" v:mID="594" v:groupContext="shape" Text="" transform="translate(810,-216)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape595-1111" v:mID="595" v:groupContext="shape" Text="tx" tag="uart1 44" transform="translate(846,-216)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape596-1113" v:mID="596" v:groupContext="shape" Text="rx" tag="uart1 45" transform="translate(864,-216)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape597-1115" v:mID="597" v:groupContext="shape" Text="" transform="translate(882,-216)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape599-1119" v:mID="599" v:groupContext="shape" Text="tx" tag="uart1 48" transform="translate(918,-216)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape600-1121" v:mID="600" v:groupContext="shape" Text="rx" tag="uart1 49" transform="translate(936,-216)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape601-1123" v:mID="601" v:groupContext="shape" Text="" transform="translate(954,-216)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape602-1125" v:mID="602" v:groupContext="shape" Text="tx" tag="uart1 52" transform="translate(990,-216)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape603-1127" v:mID="603" v:groupContext="shape" Text="rx" tag="uart1 53" transform="translate(1008,-216)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+        </g> 
+        <g id="row 17">
+		<rect id="shape346-803" v:mID="346" v:groupContext="shape" Text="I2C" tag="i2c" font="large" transform="translate(54,-180)"
+			x="0" y="756" width="92" height="36" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape446-813" v:mID="446" v:groupContext="shape" Text="0" tag="i2c0" font="medium" transform="translate(144,-198)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape447-815" v:mID="447" v:groupContext="shape" Text="1" tag="i2c1" font="medium" transform="translate(144,-180)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape604-1129" v:mID="604" v:groupContext="shape" Text="ck" tag="i2c0 10" transform="translate(234,-198)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape605-1131" v:mID="605" v:groupContext="shape" Text="d" tag="i2c0 11" transform="translate(252,-198)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape606-1133" v:mID="606" v:groupContext="shape" Text="" transform="translate(270,-198)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape607-1135" v:mID="607" v:groupContext="shape" Text="ck" tag="i2c0 14" transform="translate(306,-198)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape608-1137" v:mID="608" v:groupContext="shape" Text="d" tag="i2c0 15" transform="translate(324,-198)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape609-1139" v:mID="609" v:groupContext="shape" Text="" transform="translate(342,-198)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape611-1143" v:mID="611" v:groupContext="shape" Text="ck" tag="i2c0 18" transform="translate(378,-198)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape612-1145" v:mID="612" v:groupContext="shape" Text="d" tag="i2c0 19" transform="translate(396,-198)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape613-1147" v:mID="613" v:groupContext="shape" Text="" transform="translate(414,-198)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape614-1149" v:mID="614" v:groupContext="shape" Text="ck" tag="i2c0 22" transform="translate(450,-198)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape615-1151" v:mID="615" v:groupContext="shape" Text="d" tag="i2c0 23" transform="translate(468,-198)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape616-1153" v:mID="616" v:groupContext="shape" Text="" transform="translate(486,-198)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape618-1157" v:mID="618" v:groupContext="shape" Text="ck" tag="i2c0 26" transform="translate(522,-198)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape619-1159" v:mID="619" v:groupContext="shape" Text="d" tag="i2c0 27" transform="translate(540,-198)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape620-1161" v:mID="620" v:groupContext="shape" Text="" transform="translate(558,-198)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape621-1163" v:mID="621" v:groupContext="shape" Text="ck" tag="i2c0 30" transform="translate(594,-198)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape622-1165" v:mID="622" v:groupContext="shape" Text="d" tag="i2c0 31" transform="translate(612,-198)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape623-1167" v:mID="623" v:groupContext="shape" Text="" transform="translate(630,-198)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape625-1171" v:mID="625" v:groupContext="shape" Text="ck" tag="i2c0 34" transform="translate(666,-198)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape626-1173" v:mID="626" v:groupContext="shape" Text="d" tag="i2c0 35" transform="translate(684,-198)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape627-1175" v:mID="627" v:groupContext="shape" Text="" transform="translate(702,-198)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape628-1177" v:mID="628" v:groupContext="shape" Text="ck" tag="i2c0 38" transform="translate(738,-198)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape629-1179" v:mID="629" v:groupContext="shape" Text="d" tag="i2c0 39" transform="translate(756,-198)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape630-1181" v:mID="630" v:groupContext="shape" Text="" transform="translate(774,-198)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape632-1185" v:mID="632" v:groupContext="shape" Text="ck" tag="i2c0 42" transform="translate(810,-198)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape633-1187" v:mID="633" v:groupContext="shape" Text="d" tag="i2c0 43" transform="translate(828,-198)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape634-1189" v:mID="634" v:groupContext="shape" Text="" transform="translate(846,-198)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape635-1191" v:mID="635" v:groupContext="shape" Text="ck" tag="i2c0 46" transform="translate(882,-198)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape636-1193" v:mID="636" v:groupContext="shape" Text="d" tag="i2c0 47" transform="translate(900,-198)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape637-1195" v:mID="637" v:groupContext="shape" Text="" transform="translate(918,-198)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape639-1199" v:mID="639" v:groupContext="shape" Text="ck" tag="i2c0 50" transform="translate(954,-198)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape640-1201" v:mID="640" v:groupContext="shape" Text="d" tag="i2c0 51" transform="translate(972,-198)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape641-1203" v:mID="641" v:groupContext="shape" Text="" transform="translate(990,-198)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape642-1205" v:mID="642" v:groupContext="shape" Text="ck" tag="i2c1 12" transform="translate(270,-180)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape643-1207" v:mID="643" v:groupContext="shape" Text="d" tag="i2c1 13" transform="translate(288,-180)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape644-1209" v:mID="644" v:groupContext="shape" Text="" transform="translate(306,-180)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape645-1211" v:mID="645" v:groupContext="shape" Text="ck" tag="i2c1 16" transform="translate(342,-180)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape646-1213" v:mID="646" v:groupContext="shape" Text="d" tag="i2c1 17" transform="translate(360,-180)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape647-1215" v:mID="647" v:groupContext="shape" Text="" transform="translate(378,-180)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape649-1219" v:mID="649" v:groupContext="shape" Text="ck" tag="i2c1 20" transform="translate(414,-180)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape650-1221" v:mID="650" v:groupContext="shape" Text="d" tag="i2c1 21" transform="translate(432,-180)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape651-1223" v:mID="651" v:groupContext="shape" Text="" transform="translate(450,-180)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape652-1225" v:mID="652" v:groupContext="shape" Text="ck" tag="i2c1 24" transform="translate(486,-180)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape653-1227" v:mID="653" v:groupContext="shape" Text="d" tag="i2c1 25" transform="translate(504,-180)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape654-1229" v:mID="654" v:groupContext="shape" Text="" transform="translate(522,-180)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape656-1233" v:mID="656" v:groupContext="shape" Text="ck" tag="i2c1 28" transform="translate(558,-180)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape657-1235" v:mID="657" v:groupContext="shape" Text="d" tag="i2c1 29" transform="translate(576,-180)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape658-1237" v:mID="658" v:groupContext="shape" Text="" transform="translate(594,-180)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape659-1239" v:mID="659" v:groupContext="shape" Text="ck" tag="i2c1 32" transform="translate(630,-180)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape660-1241" v:mID="660" v:groupContext="shape" Text="d" tag="i2c1 33" transform="translate(648,-180)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape661-1243" v:mID="661" v:groupContext="shape" Text="" transform="translate(666,-180)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape663-1247" v:mID="663" v:groupContext="shape" Text="ck" tag="i2c1 36" transform="translate(702,-180)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape664-1249" v:mID="664" v:groupContext="shape" Text="d" tag="i2c1 37" transform="translate(720,-180)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape665-1251" v:mID="665" v:groupContext="shape" Text="" transform="translate(738,-180)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape666-1253" v:mID="666" v:groupContext="shape" Text="ck" tag="i2c1 40" transform="translate(774,-180)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape667-1255" v:mID="667" v:groupContext="shape" Text="d" tag="i2c1 41" transform="translate(792,-180)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape668-1257" v:mID="668" v:groupContext="shape" Text="" transform="translate(810,-180)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape670-1261" v:mID="670" v:groupContext="shape" Text="ck" tag="i2c1 44" transform="translate(846,-180)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape671-1263" v:mID="671" v:groupContext="shape" Text="d" tag="i2c1 45" transform="translate(864,-180)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape672-1265" v:mID="672" v:groupContext="shape" Text="" transform="translate(882,-180)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape673-1267" v:mID="673" v:groupContext="shape" Text="ck" tag="i2c1 48" transform="translate(918,-180)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape674-1269" v:mID="674" v:groupContext="shape" Text="d" tag="i2c1 49" transform="translate(936,-180)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape675-1271" v:mID="675" v:groupContext="shape" Text="" transform="translate(954,-180)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape677-1275" v:mID="677" v:groupContext="shape" Text="ck" tag="i2c1 52" transform="translate(990,-180)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape678-1277" v:mID="678" v:groupContext="shape" Text="d" tag="i2c1 53" transform="translate(1008,-180)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+        </g>
+        <g id="row 18">
+       		<rect id="shape679-1279" v:mID="679" v:groupContext="shape" Text="System Timers"  tag="Timer" font="large" transform="translate(54,-126)"
+			x="0" y="738" width="108" height="54" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape716-1287" v:mID="716" v:groupContext="shape" Text="TTC 0" font="medium" tag="ttc0" transform="translate(162,-162)"
+			x="0" y="774" width="54" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape716_1-1287" v:mID="71601" v:groupContext="shape" Text="Clk In, Wave Out" transform="translate(216,-162)"
+			x="0" y="774" width="126" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape680-1281" v:mID="680" v:groupContext="shape" Text="w" tag="Timer0 18" transform="translate(378,-162)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape681-1283" v:mID="681" v:groupContext="shape" Text="ck" tag="Timer0 19" transform="translate(396,-162)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape682-1285" v:mID="682" v:groupContext="shape" Text="" transform="translate(414,-162)"
+			x="0" y="774" width="180" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape349-1293" v:mID="349" v:groupContext="shape" Text="w" tag="Timer0 30" transform="translate(594,-162)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape350-1295" v:mID="350" v:groupContext="shape" Text="ck" tag="Timer0 31" transform="translate(612,-162)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape351-1297" v:mID="351" v:groupContext="shape" Text="" transform="translate(630,-162)"
+			x="0" y="774" width="180" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape352-1299" v:mID="352" v:groupContext="shape" Text="w" tag="Timer0 42" transform="translate(810,-162)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape353-1301" v:mID="353" v:groupContext="shape" Text="ck" tag="Timer0 43" transform="translate(828,-162)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape354-1303" v:mID="354" v:groupContext="shape" Text="" transform="translate(846,-162)"
+			x="0" y="774" width="180" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape347-1289" v:mID="347" v:groupContext="shape" Text="TTC 1" font="medium" tag="ttc1" transform="translate(162,-144)"
+			x="0" y="774" width="54" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape347_1-1289" v:mID="34701" v:groupContext="shape" Text="Clk In, Wave Out" transform="translate(216,-144)"
+			x="0" y="774" width="126" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape355-1305" v:mID="355" v:groupContext="shape" Text="w" tag="Timer1 16" transform="translate(342,-144)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape356-1307" v:mID="356" v:groupContext="shape" Text="ck" tag="Timer1 17" transform="translate(360,-144)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape357-1309" v:mID="357" v:groupContext="shape" Text="" transform="translate(378,-144)"
+			x="0" y="774" width="180" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape358-1311" v:mID="358" v:groupContext="shape" Text="w" tag="Timer1 28" transform="translate(558,-144)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape359-1313" v:mID="359" v:groupContext="shape" Text="ck" tag="Timer1 29" transform="translate(576,-144)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape360-1315" v:mID="360" v:groupContext="shape" Text="" transform="translate(594,-144)"
+			x="0" y="774" width="180" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape361-1317" v:mID="361" v:groupContext="shape" Text="w" tag="Timer1 40" transform="translate(774,-144)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape362-1319" v:mID="362" v:groupContext="shape" Text="ck" tag="Timer1 41" transform="translate(792,-144)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape363-1321" v:mID="363" v:groupContext="shape" Text="" transform="translate(810,-144)"
+			x="0" y="774" width="216" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape348-1291" v:mID="348" v:groupContext="shape" Text="SWDT" font="medium" tag="swdt" transform="translate(162,-126)"
+			x="0" y="774" width="54" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape348_1-1291" v:mID="34801" v:groupContext="shape" Text="Clk In, Reset Out" transform="translate(216,-126)"
+			x="0" y="774" width="90" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape364-1323" v:mID="364" v:groupContext="shape" Text="ck" tag="Watchdog 14" transform="translate(306,-126)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape365-1325" v:mID="365" v:groupContext="shape" Text="r" tag="Watchdog 15" transform="translate(324,-126)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape367-1327" v:mID="367" v:groupContext="shape" Text="" transform="translate(342,-126)"
+			x="0" y="774" width="180" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape368-1329" v:mID="368" v:groupContext="shape" Text="ck" tag="Watchdog 26" transform="translate(522,-126)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape369-1331" v:mID="369" v:groupContext="shape" Text="r" tag="Watchdog 27" transform="translate(540,-126)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape370-1333" v:mID="370" v:groupContext="shape" Text="" transform="translate(558,-126)"
+			x="0" y="774" width="180" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape371-1335" v:mID="371" v:groupContext="shape" Text="ck" tag="Watchdog 38" transform="translate(738,-126)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape372-1337" v:mID="372" v:groupContext="shape" Text="r" tag="Watchdog 39" transform="translate(756,-126)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape440-1339" v:mID="440" v:groupContext="shape" Text="" transform="translate(774,-126)"
+			x="0" y="774" width="180" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape717-1345" v:mID="717" v:groupContext="shape" Text="ck" tag="Watchdog 50" transform="translate(954,-126)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape718-1347" v:mID="718" v:groupContext="shape" Text="r" tag="Watchdog 51" transform="translate(972,-126)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape441-1341" v:mID="441" v:groupContext="shape" Text="ck" tag="Watchdog 52" transform="translate(990,-126)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape442-1343" v:mID="442" v:groupContext="shape" Text="r" tag="Watchdog 53" transform="translate(1008,-126)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+        </g> 
+        <g id="row 19">
+         		<rect id="shape683-1349" v:mID="683" v:groupContext="shape" font="medium" Text="GPIOs are available for each MIO pins. Pins 0-31 are controlled by GPIO bank 0. Pins 32-53 are controlled by GPIO bank1" tag="gpio" transform="translate(54,-108)"
+			x="0" y="774" width="972" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+        </g>
+        <g id="row 20">
+          		<rect id="shape729-1435" v:mID="729" v:groupContext="shape" Text="0" tag="GPIOPin 0" transform="translate(54,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape730-1437" v:mID="730" v:groupContext="shape" Text="1" tag="GPIOPin 1" transform="translate(72,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape731-1439" v:mID="731" v:groupContext="shape" Text="2" tag="GPIOPin 2" transform="translate(90,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape732-1441" v:mID="732" v:groupContext="shape" Text="3" tag="GPIOPin 3" transform="translate(108,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape733-1443" v:mID="733" v:groupContext="shape" Text="4" tag="GPIOPin 4" transform="translate(126,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape734-1445" v:mID="734" v:groupContext="shape" Text="5" tag="GPIOPin 5" transform="translate(144,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape735-1447" v:mID="735" v:groupContext="shape" Text="6" tag="GPIOPin 6" transform="translate(162,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape736-1449" v:mID="736" v:groupContext="shape" Text="7" tag="GPIOPin 7" transform="translate(180,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape737-1451" v:mID="737" v:groupContext="shape" Text="8" tag="GPIOPin 8" transform="translate(198,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape738-1453" v:mID="738" v:groupContext="shape" Text="9" tag="GPIOPin 9" transform="translate(216,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape708-1399" v:mID="708" v:groupContext="shape" Text="10" tag="GPIOPin 10" transform="translate(234,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape709-1401" v:mID="709" v:groupContext="shape" Text="11" tag="GPIOPin 11" transform="translate(252,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape704-1391" v:mID="704" v:groupContext="shape" Text="12" tag="GPIOPin 12" transform="translate(270,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape705-1393" v:mID="705" v:groupContext="shape" Text="13" tag="GPIOPin 13" transform="translate(288,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape698-1379" v:mID="698" v:groupContext="shape" Text="14" tag="GPIOPin 14" transform="translate(306,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape699-1381" v:mID="699" v:groupContext="shape" Text="15" tag="GPIOPin 15" transform="translate(324,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape700-1383" v:mID="700" v:groupContext="shape" Text="16" tag="GPIOPin 16" transform="translate(342,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape701-1385" v:mID="701" v:groupContext="shape" Text="17" tag="GPIOPin 17" transform="translate(360,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape702-1387" v:mID="702" v:groupContext="shape" Text="18" tag="GPIOPin 18" transform="translate(378,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape703-1389" v:mID="703" v:groupContext="shape" Text="19" tag="GPIOPin 19" transform="translate(396,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape706-1395" v:mID="706" v:groupContext="shape" Text="20" tag="GPIOPin 20" transform="translate(414,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape707-1397" v:mID="707" v:groupContext="shape" Text="21" tag="GPIOPin 21" transform="translate(432,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape710-1403" v:mID="710" v:groupContext="shape" Text="22" tag="GPIOPin 22" transform="translate(450,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape711-1405" v:mID="711" v:groupContext="shape" Text="23" tag="GPIOPin 23" transform="translate(468,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+
+		<rect id="shape694-1371" v:mID="694" v:groupContext="shape" Text="24" tag="GPIOPin 24" transform="translate(486,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape695-1373" v:mID="695" v:groupContext="shape" Text="25" tag="GPIOPin 25" transform="translate(504,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape690-1363" v:mID="690" v:groupContext="shape" Text="26" tag="GPIOPin 26" transform="translate(522,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape691-1365" v:mID="691" v:groupContext="shape" Text="27" tag="GPIOPin 27" transform="translate(540,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape684-1351" v:mID="684" v:groupContext="shape" Text="28" tag="GPIOPin 28" transform="translate(558,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape685-1353" v:mID="685" v:groupContext="shape" Text="29" tag="GPIOPin 29" transform="translate(576,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape686-1355" v:mID="686" v:groupContext="shape" Text="30" tag="GPIOPin 30" transform="translate(594,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape687-1357" v:mID="687" v:groupContext="shape" Text="31" tag="GPIOPin 31" transform="translate(612,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape688-1359" v:mID="688" v:groupContext="shape" Text="32" tag="GPIOPin 32" transform="translate(630,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape689-1361" v:mID="689" v:groupContext="shape" Text="33" tag="GPIOPin 33" transform="translate(648,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape692-1367" v:mID="692" v:groupContext="shape" Text="34" tag="GPIOPin 34" transform="translate(666,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape693-1369" v:mID="693" v:groupContext="shape" Text="35" tag="GPIOPin 35" transform="translate(684,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape696-1375" v:mID="696" v:groupContext="shape" Text="36" tag="GPIOPin 36" transform="translate(702,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape697-1377" v:mID="697" v:groupContext="shape" Text="37" tag="GPIOPin 37" transform="translate(720,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape725-1427" v:mID="725" v:groupContext="shape" Text="38" tag="GPIOPin 38" transform="translate(738,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape726-1429" v:mID="726" v:groupContext="shape" Text="39" tag="GPIOPin 39" transform="translate(756,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape721-1419" v:mID="721" v:groupContext="shape" Text="40" tag="GPIOPin 40" transform="translate(774,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape722-1421" v:mID="722" v:groupContext="shape" Text="41" tag="GPIOPin 41" transform="translate(792,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape712-1407" v:mID="712" v:groupContext="shape" Text="42" tag="GPIOPin 42" transform="translate(810,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape713-1409" v:mID="713" v:groupContext="shape" Text="43" tag="GPIOPin 43" transform="translate(828,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape714-1411" v:mID="714" v:groupContext="shape" Text="44" tag="GPIOPin 44" transform="translate(846,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape715-1413" v:mID="715" v:groupContext="shape" Text="45" tag="GPIOPin 45" transform="translate(864,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape719-1415" v:mID="719" v:groupContext="shape" Text="46" tag="GPIOPin 46" transform="translate(882,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape720-1417" v:mID="720" v:groupContext="shape" Text="47" tag="GPIOPin 47" transform="translate(900,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape723-1423" v:mID="723" v:groupContext="shape" Text="48" tag="GPIOPin 48" transform="translate(918,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape724-1425" v:mID="724" v:groupContext="shape" Text="49" tag="GPIOPin 49" transform="translate(936,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape727-1431" v:mID="727" v:groupContext="shape" Text="50" tag="GPIOPin 50" transform="translate(954,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape728-1433" v:mID="728" v:groupContext="shape" Text="51" tag="GPIOPin 51" transform="translate(972,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape739-1455" v:mID="739" v:groupContext="shape" Text="52" tag="GPIOPin 52" transform="translate(990,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape740-1457" v:mID="740" v:groupContext="shape" Text="53" tag="GPIOPin 53" transform="translate(1008,-90)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+        </g>
+        <g id="row 21">
+         		<rect id="shape741_1-1459" v:mID="74101" v:groupContext="shape" Text="PJTAG Interface" tag="PJTAG" font="large" transform="translate(54,-72)"
+			x="0" y="774" width="180" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape741_2-1459" v:mID="74102" v:groupContext="shape" Text="tdi" tag="PJTAG 10" transform="translate(234,-72)"
+			x="0" y="774" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape741_3-1459" v:mID="74103" v:groupContext="shape" Text="tdo" tag="PJTAG 11" transform="translate(252,-72)"
+			x="0" y="774" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape741_4-1459" v:mID="74104" v:groupContext="shape" Text="tck" tag="PJTAG 12" transform="translate(270,-72)"
+			x="0" y="774" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape741_5-1459" v:mID="74105" v:groupContext="shape" Text="tms" tag="PJTAG 13" transform="translate(288,-72)"
+			x="0" y="774" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape741_6-1459" v:mID="74106" v:groupContext="shape" Text="" transform="translate(306,-72)"
+			x="0" y="774" width="144" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape741_7-1459" v:mID="74107" v:groupContext="shape" Text="tdi" tag="PJTAG 22" transform="translate(450,-72)"
+			x="0" y="774" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape741_8-1459" v:mID="74108" v:groupContext="shape" Text="tdo" tag="PJTAG 23" transform="translate(468,-72)"
+			x="0" y="774" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape741_9-1459" v:mID="74109" v:groupContext="shape" Text="tck" tag="PJTAG 24" transform="translate(486,-72)"
+			x="0" y="774" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape741_10-1459" v:mID="74110" v:groupContext="shape" Text="tms" tag="PJTAG 25" transform="translate(504,-72)"
+			x="0" y="774" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape741_11-1459" v:mID="74111" v:groupContext="shape" Text="" transform="translate(522,-72)"
+			x="0" y="774" width="144" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape741_12-1459" v:mID="74112" v:groupContext="shape" Text="tdi" tag="PJTAG 34" transform="translate(666,-72)"
+			x="0" y="774" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape741_13-1459" v:mID="74113" v:groupContext="shape" Text="tdo" tag="PJTAG 35" transform="translate(684,-72)"
+			x="0" y="774" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape741_14-1459" v:mID="74114" v:groupContext="shape" Text="tck" tag="PJTAG 36" transform="translate(702,-72)"
+			x="0" y="774" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape741_15-1459" v:mID="74115" v:groupContext="shape" Text="tms" tag="PJTAG 37" transform="translate(720,-72)"
+			x="0" y="774" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape741_16-1459" v:mID="74116" v:groupContext="shape" Text="" transform="translate(738,-72)"
+			x="0" y="774" width="144" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape741_17-1459" v:mID="74117" v:groupContext="shape" Text="tdi" tag="PJTAG 46" transform="translate(882,-72)"
+			x="0" y="774" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape741_18-1459" v:mID="74118" v:groupContext="shape" Text="tdo" tag="PJTAG 47" transform="translate(900,-72)"
+			x="0" y="774" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape741_19-1459" v:mID="74119" v:groupContext="shape" Text="tck" tag="PJTAG 48" transform="translate(918,-72)"
+			x="0" y="774" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape741_20-1459" v:mID="74120" v:groupContext="shape" Text="tms" tag="PJTAG 49" transform="translate(936,-72)"
+			x="0" y="774" width="18" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape741_21-1459" v:mID="74121" v:groupContext="shape" Text="" transform="translate(954,-45)"
+			x="0" y="774" width="72" height="27" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+        </g>
+        <g id="row 22">
+        		<rect id="shape742_1-1461" v:mID="74201" v:groupContext="shape" Text="" transform="translate(54,-45)"
+			x="0" y="774" width="216" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape742-1461" v:mID="742" v:groupContext="shape" Text="ck" tag="Trace 12" transform="translate(270,-45)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape743-1463" v:mID="743" v:groupContext="shape" Text="ctl" tag="Trace 13" transform="translate(288,-45)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape744-1465" v:mID="744" v:groupContext="shape" Text="" transform="translate(306,-45)"
+			x="0" y="774" width="180" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape745-1467" v:mID="745" v:groupContext="shape" Text="ck" tag="Trace 24" transform="translate(486,-45)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape746-1469" v:mID="746" v:groupContext="shape" Text="ctl" tag="Trace 25" transform="translate(504,-45)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape747-1471" v:mID="747" v:groupContext="shape" Text="Clock and Control" font="medium" transform="translate(522,-45)"
+			x="0" y="774" width="252" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape750-1473" v:mID="750" v:groupContext="shape" Text="Test and Debug Trace" tag="Trace" font="large" transform="translate(774,-27)"
+			x="0" y="756" width="252" height="36" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+    </g> 
+     <g id="row 23">
+		<rect id="shape748-1475" v:mID="748" v:groupContext="shape" Text="" transform="translate(54,-27)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape758-1479" v:mID="758" v:groupContext="shape" Text="8" tag="Trace 2" transform="translate(90,-27)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape759-1481" v:mID="759" v:groupContext="shape" Text="9" tag="Trace 3" transform="translate(108,-27)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape760-1483" v:mID="760" v:groupContext="shape" Text="10" tag="Trace 4" transform="translate(126,-27)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape761-1485" v:mID="761" v:groupContext="shape" Text="11" tag="Trace 5" transform="translate(144,-27)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape762-1487" v:mID="762" v:groupContext="shape" Text="12" tag="Trace 6" transform="translate(162,-27)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape763-1489" v:mID="763" v:groupContext="shape" Text="13" tag="Trace 7" transform="translate(180,-27)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape764-1491" v:mID="764" v:groupContext="shape" Text="14" tag="Trace 8" transform="translate(198,-27)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape765-1493" v:mID="765" v:groupContext="shape" Text="15" tag="Trace 9" transform="translate(216,-27)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape766-1495" v:mID="766" v:groupContext="shape" Text="2" tag="Trace 10" transform="translate(234,-27)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape767-1497" v:mID="767" v:groupContext="shape" Text="3" tag="Trace 11" transform="translate(252,-27)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape749-1499" v:mID="749" v:groupContext="shape" Text="" transform="translate(270,-27)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape751-1501" v:mID="751" v:groupContext="shape" Text="0" tag="Trace 14" transform="translate(306,-27)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape752-1503" v:mID="752" v:groupContext="shape" Text="1" tag="Trace 15" transform="translate(324,-27)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape753-1505" v:mID="753" v:groupContext="shape" Text="4" tag="Trace 16" transform="translate(342,-27)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape754-1507" v:mID="754" v:groupContext="shape" Text="5" tag="Trace 17" transform="translate(360,-27)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape756-1509" v:mID="756" v:groupContext="shape" Text="6" tag="Trace 18" transform="translate(378,-27)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape757-1511" v:mID="757" v:groupContext="shape" Text="7" tag="Trace 19" transform="translate(396,-27)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape769-1513" v:mID="769" v:groupContext="shape" Text="" transform="translate(414,-27)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape770-1515" v:mID="770" v:groupContext="shape" Text="2" tag="Trace 22" transform="translate(450,-27)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape771-1517" v:mID="771" v:groupContext="shape" Text="3" tag="Trace 23" transform="translate(468,-27)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape768-1521" v:mID="768" v:groupContext="shape" Text="" transform="translate(486,-27)"
+			x="0" y="774" width="36" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape773-1523" v:mID="773" v:groupContext="shape" Text="0" tag="Trace 26" transform="translate(522,-27)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape774-1525" v:mID="774" v:groupContext="shape" Text="1" tag="Trace 27" transform="translate(540,-27)"
+			x="0" y="774" width="18" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+		<rect id="shape755-1477" v:mID="755" v:groupContext="shape" Text="Data"  font="medium" transform="translate(558,-27)"
+			x="0" y="774" width="216" height="18" fill="url(#radGradient)" stroke="url(#boundryDark)"/>
+       </g>     
+  </g>     
+  </svg> 

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE parameters PUBLIC "parameters" "parameters.dtd" >
+<parameters>
+
+
+  <parameter uniqueid="pcw_nand_peripheral_enable">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_nand_nand_io">
+    <name> NAND </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+
+  <parameter uniqueid="pcw_nand_grp_d8_enable">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_nand_grp_d8_io">
+    <name> NAND (d[15:8]) </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+  <parameter uniqueid="pcw_nand_peripheral_freqmhz">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+  <parameter uniqueid="pcw_nand_ale_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nand_busy_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nand_cle_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nand_cs_b[0]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nand_data[0]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nand_data[1]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+ <parameter uniqueid="pcw_nand_data[2]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nand_data[3]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nand_data[4]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nand_data[5]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nand_data[6]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nand_data[7]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nand_data[8]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nand_data[9]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nand_data[10]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nand_data[11]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nand_data[12]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nand_data[13]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nand_data[14]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nand_data[15]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nand_re_b_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nand_we_b_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+  <parameter uniqueid="pcw_nand_cs_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nand_internal_mode">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+ <parameter uniqueid="pcw_nand_cycles_t_rr">
+    <name> t_rr </name>
+    <desc> BUSY to RE, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+ <parameter uniqueid="pcw_nand_cycles_t_ar">
+    <name> t_ar </name>
+    <desc> ID read time, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+
+ <parameter uniqueid="pcw_nand_cycles_t_clr">
+    <name> t_clr </name>
+    <desc> Page cycle time, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+
+ <parameter uniqueid="pcw_nand_cycles_t_wp">
+    <name> t_wp </name>
+    <desc> WE deassertion delay, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+
+ <parameter uniqueid="pcw_nand_cycles_t_rea">
+    <name> t_rea </name>
+    <desc> RE assertion delay, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+
+ <parameter uniqueid="pcw_nand_cycles_t_wc">
+    <name> t_wc </name>
+    <desc> Write cycle time, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+ <parameter uniqueid="pcw_nand_cycles_t_rc">
+    <name> t_rc </name>
+    <desc> Read cycle time, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+ <parameter uniqueid="pcw_nand_opmode_set_mw">
+    <name> t_rc </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+</parameters>

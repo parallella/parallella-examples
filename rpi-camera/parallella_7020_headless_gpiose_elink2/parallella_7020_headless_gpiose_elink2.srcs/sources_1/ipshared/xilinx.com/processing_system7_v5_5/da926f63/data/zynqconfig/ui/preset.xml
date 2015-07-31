@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE presets PUBLIC "presets" "presets.dtd" >
+<presets>
+
+  <preset param="pcw_mode_peripheral_enable" name="0" strength="5">
+      <disable param="pcw_mode_mode_io"/>
+      <disable param="pcw_mode_peripheral_freqmhz"/>
+  </preset>
+
+  <preset param="pcw_mode_peripheral_enable" name="" strength="5">
+      <disable param="pcw_mode_mode_io"/>
+      <disable param="pcw_mode_peripheral_freqmhz"/>
+  </preset>
+
+  <preset param="pcw_mode_mode_io" name="MIO 5 .. 9" strength="5">
+      <set param="pcw_mode_mode[4]_io" value="MIO 5" />
+      <set param="pcw_mio_mio[5]_signal" value="mode[4]" />
+      <set param="pcw_mio_mio[5]_peripheral" value="Mode" />
+      <set param="pcw_mio_mio[5]_signalgroup" value="Mode" />
+      <set param="pcw_preset_mio_5" value="mode" />
+      <set param="pcw_mode_mode[3]_io" value="MIO 6" />
+      <set param="pcw_mio_mio[6]_signal" value="mode[3]" />
+      <set param="pcw_mio_mio[6]_peripheral" value="Mode" />
+      <set param="pcw_mio_mio[6]_signalgroup" value="Mode" />
+      <set param="pcw_preset_mio_6" value="mode" />
+      <set param="pcw_mode_mode[2]_io" value="MIO 7" />
+      <set param="pcw_mio_mio[7]_signal" value="mode[2]" />
+      <set param="pcw_mio_mio[7]_peripheral" value="Mode" />
+      <set param="pcw_mio_mio[7]_signalgroup" value="Mode" />
+      <set param="pcw_preset_mio_7" value="mode" />
+      <set param="pcw_mode_mode[1]_io" value="MIO 8" />
+      <set param="pcw_mio_mio[8]_signal" value="mode[1]" />
+      <set param="pcw_mio_mio[8]_peripheral" value="Mode" />
+      <set param="pcw_mio_mio[8]_signalgroup" value="Mode" />
+      <set param="pcw_preset_mio_8" value="mode" />
+      <set param="pcw_mode_mode[0]_io" value="MIO 9" />
+      <set param="pcw_mio_mio[9]_signal" value="mode[0]" />
+      <set param="pcw_mio_mio[9]_peripheral" value="Mode" />
+      <set param="pcw_mio_mio[9]_signalgroup" value="Mode" />
+      <set param="pcw_preset_mio_9" value="mode" />
+  </preset>
+
+  <preset param="pcw_vcfg_peripheral_enable" name="0" strength="5">
+      <disable param="pcw_vcfg_peripheral_freqmhz"/>
+      <disable param="pcw_vcfg_vcfg_io"/>
+  </preset>
+
+  <preset param="pcw_vcfg_peripheral_enable" name="" strength="5">
+      <disable param="pcw_vcfg_peripheral_freqmhz"/>
+      <disable param="pcw_vcfg_vcfg_io"/>
+  </preset>
+
+  <preset param="pcw_vcfg_vcfg_io" name="MIO 5 .. 6" strength="5">
+      <set param="pcw_vcfg_vcfg[1]_io" value="MIO 5" />
+      <set param="pcw_mio_mio[5]_signal" value="vcfg[1]" />
+      <set param="pcw_mio_mio[5]_peripheral" value="VCfg" />
+      <set param="pcw_mio_mio[5]_signalgroup" value="VCfg" />
+      <set param="pcw_preset_mio_5" value="vcfg" />
+      <set param="pcw_vcfg_vcfg[0]_io" value="MIO 6" />
+      <set param="pcw_mio_mio[6]_signal" value="vcfg[0]" />
+      <set param="pcw_mio_mio[6]_peripheral" value="VCfg" />
+      <set param="pcw_mio_mio[6]_signalgroup" value="VCfg" />
+      <set param="pcw_preset_mio_6" value="vcfg" />
+  </preset>
+
+</presets>

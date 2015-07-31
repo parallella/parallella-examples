@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE parameters PUBLIC "parameters" "parameters.dtd" >
+<parameters>
+
+  <parameter uniqueid="pcw_sd0_peripheral_enable">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_sd0_grp_cd_enable">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_sd0_grp_wp_enable">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_sd0_grp_pow_enable">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+  <parameter uniqueid="pcw_sd0_sd0_io">
+    <name> SDIO 0 </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_sd0_grp_cd_io">
+    <name> SDIO 0 (cd) </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_sd0_grp_wp_io">
+    <name> SDIO 0 (wp) </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_sd0_grp_pow_io">
+    <name> SDIO 0 (pow) </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+
+  <parameter uniqueid="pcw_sd0_clk_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_sd0_cmd_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_sd0_data[3]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_sd0_data[2]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_sd0_data[1]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_sd0_data[0]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_sd0_cd_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+  <parameter uniqueid="pcw_sd0_wp_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_EN_EMIO_SDIO0">
+    <name> C_EN_EMIO_SDIO0 </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_EN_EMIO_CD_SDIO0">
+    <name> C_EN_EMIO_CD_SDIO0 </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_EN_EMIO_WP_SDIO0">
+    <name> C_EN_EMIO_WP_SDIO0 </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_EN_SDIO0">
+    <name> C_EN_SDIO0 </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_sd0_internal_cd">
+    <name> CD </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_sd0_internal_wp">
+    <name> WP </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_sd0_internal_pow">
+    <name> POW </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+</parameters>

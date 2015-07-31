@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE parameters PUBLIC "parameters" "parameters.dtd" >
+<parameters>
+  <parameter uniqueid="pcw_use_cross_trigger">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_ftm_cti_in0">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_ftm_cti_in1">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_ftm_cti_in2">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_ftm_cti_in3">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_ftm_cti_out0">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_ftm_cti_out1">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_ftm_cti_out2">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_ftm_cti_out3">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+</parameters>

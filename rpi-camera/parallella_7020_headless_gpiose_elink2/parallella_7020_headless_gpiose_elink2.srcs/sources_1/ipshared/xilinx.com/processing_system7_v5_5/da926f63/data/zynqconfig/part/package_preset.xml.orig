@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE presets>
+
+<presets>
+<preset param="pcw_preset_package_info" name="clg225" strength="8">
+<dischoice param="pcw_can0_can0_io" value="MIO 18 .. 19" />
+<dischoice param="pcw_can0_can0_io" value="MIO 22 .. 23" />
+<dischoice param="pcw_can0_can0_io" value="MIO 26 .. 27" />
+<dischoice param="pcw_can0_can0_io" value="MIO 42 .. 43" />
+<dischoice param="pcw_can0_can0_io" value="MIO 46 .. 47" />
+<dischoice param="pcw_can0_can0_io" value="MIO 50 .. 51" />
+<dischoice param="pcw_can0_grp_clk_io" value="MIO 16" />
+<dischoice param="pcw_can0_grp_clk_io" value="MIO 17" />
+<dischoice param="pcw_can0_grp_clk_io" value="MIO 18" />
+<dischoice param="pcw_can0_grp_clk_io" value="MIO 19" />
+<dischoice param="pcw_can0_grp_clk_io" value="MIO 20" />
+<dischoice param="pcw_can0_grp_clk_io" value="MIO 21" />
+<dischoice param="pcw_can0_grp_clk_io" value="MIO 22" />
+<dischoice param="pcw_can0_grp_clk_io" value="MIO 23" />
+<dischoice param="pcw_can0_grp_clk_io" value="MIO 24" />
+<dischoice param="pcw_can0_grp_clk_io" value="MIO 25" />
+<dischoice param="pcw_can0_grp_clk_io" value="MIO 26" />
+<dischoice param="pcw_can0_grp_clk_io" value="MIO 27" />
+<dischoice param="pcw_can0_grp_clk_io" value="MIO 40" />
+<dischoice param="pcw_can0_grp_clk_io" value="MIO 41" />
+<dischoice param="pcw_can0_grp_clk_io" value="MIO 42" />
+<dischoice param="pcw_can0_grp_clk_io" value="MIO 43" />
+<dischoice param="pcw_can0_grp_clk_io" value="MIO 44" />
+<dischoice param="pcw_can0_grp_clk_io" value="MIO 45" />
+<dischoice param="pcw_can0_grp_clk_io" value="MIO 46" />
+<dischoice param="pcw_can0_grp_clk_io" value="MIO 47" />
+<dischoice param="pcw_can0_grp_clk_io" value="MIO 50" />
+<dischoice param="pcw_can0_grp_clk_io" value="MIO 51" />
+<dischoice param="pcw_can0_grp_en_io" value="MIO 16" />
+<dischoice param="pcw_can0_grp_en_io" value="MIO 17" />
+<dischoice param="pcw_can0_grp_en_io" value="MIO 18" />
+<dischoice param="pcw_can0_grp_en_io" value="MIO 19" />
+<dischoice param="pcw_can0_grp_en_io" value="MIO 20" />
+<dischoice param="pcw_can0_grp_en_io" value="MIO 21" />
+<dischoice param="pcw_can0_grp_en_io" value="MIO 22" />
+<dischoice param="pcw_can0_grp_en_io" value="MIO 23" />
+<dischoice param="pcw_can0_grp_en_io" value="MIO 24" />
+<dischoice param="pcw_can0_grp_en_io" value="MIO 25" />
+<dischoice param="pcw_can0_grp_en_io" value="MIO 26" />
+<dischoice param="pcw_can0_grp_en_io" value="MIO 27" />
+<dischoice param="pcw_can0_grp_en_io" value="MIO 40" />
+<dischoice param="pcw_can0_grp_en_io" value="MIO 41" />
+<dischoice param="pcw_can0_grp_en_io" value="MIO 42" />
+<dischoice param="pcw_can0_grp_en_io" value="MIO 43" />
+<dischoice param="pcw_can0_grp_en_io" value="MIO 44" />
+<dischoice param="pcw_can0_grp_en_io" value="MIO 45" />
+<dischoice param="pcw_can0_grp_en_io" value="MIO 46" />
+<dischoice param="pcw_can0_grp_en_io" value="MIO 47" />
+<dischoice param="pcw_can0_grp_en_io" value="MIO 50" />
+<dischoice param="pcw_can0_grp_en_io" value="MIO 51" />
+<dischoice param="pcw_can0_grp_err_n_io" value="MIO 16" />
+<dischoice param="pcw_can0_grp_err_n_io" value="MIO 17" />
+<dischoice param="pcw_can0_grp_err_n_io" value="MIO 18" />
+<dischoice param="pcw_can0_grp_err_n_io" value="MIO 19" />
+<dischoice param="pcw_can0_grp_err_n_io" value="MIO 20" />
+<dischoice param="pcw_can0_grp_err_n_io" value="MIO 21" />
+<dischoice param="pcw_can0_grp_err_n_io" value="MIO 22" />
+<dischoice param="pcw_can0_grp_err_n_io" value="MIO 23" />
+<dischoice param="pcw_can0_grp_err_n_io" value="MIO 24" />
+<dischoice param="pcw_can0_grp_err_n_io" value="MIO 25" />
+<dischoice param="pcw_can0_grp_err_n_io" value="MIO 26" />
+<dischoice param="pcw_can0_grp_err_n_io" value="MIO 27" />
+<dischoice param="pcw_can0_grp_err_n_io" value="MIO 40" />
+<dischoice param="pcw_can0_grp_err_n_io" value="MIO 41" />
+<dischoice param="pcw_can0_grp_err_n_io" value="MIO 42" />
+<dischoice param="pcw_can0_grp_err_n_io" value="MIO 43" />
+<dischoice param="pcw_can0_grp_err_n_io" value="MIO 44" />
+<dischoice param="pcw_can0_grp_err_n_io" value="MIO 45" />
+<dischoice param="pcw_can0_grp_err_n_io" value="MIO 46" />
+<dischoice param="pcw_can0_grp_err_n_io" value="MIO 47" />
+<dischoice param="pcw_can0_grp_err_n_io" value="MIO 50" />
+<dischoice param="pcw_can0_grp_err_n_io" value="MIO 51" />
+<dischoice param="pcw_can0_grp_stb_n_io" value="MIO 16" />
+<dischoice param="pcw_can0_grp_stb_n_io" value="MIO 17" />
+<dischoice param="pcw_can0_grp_stb_n_io" value="MIO 18" />
+<dischoice param="pcw_can0_grp_stb_n_io" value="MIO 19" />
+<dischoice param="pcw_can0_grp_stb_n_io" value="MIO 20" />
+<dischoice param="pcw_can0_grp_stb_n_io" value="MIO 21" />
+<dischoice param="pcw_can0_grp_stb_n_io" value="MIO 22" />
+<dischoice param="pcw_can0_grp_stb_n_io" value="MIO 23" />
+<dischoice param="pcw_can0_grp_stb_n_io" value="MIO 24" />
+<dischoice param="pcw_can0_grp_stb_n_io" value="MIO 25" />
+<dischoice param="pcw_can0_grp_stb_n_io" value="MIO 26" />
+<dischoice param="pcw_can0_grp_stb_n_io" value="MIO 27" />
+<dischoice param="pcw_can0_grp_stb_n_io" value="MIO 40" />
+<dischoice param="pcw_can0_grp_stb_n_io" value="MIO 41" />
+<dischoice param="pcw_can0_grp_stb_n_io" value="MIO 42" />
+<dischoice param="pcw_can0_grp_stb_n_io" value="MIO 43" />
+<dischoice param="pcw_can0_grp_stb_n_io" value="MIO 44" />
+<dischoice param="pcw_can0_grp_stb_n_io" value="MIO 45" />
+<dischoice param="pcw_can0_grp_stb_n_io" value="MIO 46" />
+<dischoice param="pcw_can0_grp_stb_n_io" value="MIO 47" />
+<dischoice param="pcw_can0_grp_stb_n_io" value="MIO 50" />
+<dischoice param="pcw_can0_grp_stb_n_io" value="MIO 51" />
+<dischoice param="pcw_can1_can1_io" value="MIO 16 .. 17" />
+<dischoice param="pcw_can1_can1_io" value="MIO 20 .. 21" />
+<dischoice param="pcw_can1_can1_io" value="MIO 24 .. 25" />
+<dischoice param="pcw_can1_can1_io" value="MIO 40 .. 41" />
+<dischoice param="pcw_can1_can1_io" value="MIO 44 .. 45" />
+<dischoice param="pcw_can1_grp_clk_io" value="MIO 16" />
+<dischoice param="pcw_can1_grp_clk_io" value="MIO 17" />
+<dischoice param="pcw_can1_grp_clk_io" value="MIO 18" />
+<dischoice param="pcw_can1_grp_clk_io" value="MIO 19" />
+<dischoice param="pcw_can1_grp_clk_io" value="MIO 20" />
+<dischoice param="pcw_can1_grp_clk_io" value="MIO 21" />
+<dischoice param="pcw_can1_grp_clk_io" value="MIO 22" />
+<dischoice param="pcw_can1_grp_clk_io" value="MIO 23" />
+<dischoice param="pcw_can1_grp_clk_io" value="MIO 24" />
+<dischoice param="pcw_can1_grp_clk_io" value="MIO 25" />
+<dischoice param="pcw_can1_grp_clk_io" value="MIO 26" />
+<dischoice param="pcw_can1_grp_clk_io" value="MIO 27" />
+<dischoice param="pcw_can1_grp_clk_io" value="MIO 40" />
+<dischoice param="pcw_can1_grp_clk_io" value="MIO 41" />
+<dischoice param="pcw_can1_grp_clk_io" value="MIO 42" />
+<dischoice param="pcw_can1_grp_clk_io" value="MIO 43" />
+<dischoice param="pcw_can1_grp_clk_io" value="MIO 44" />
+<dischoice param="pcw_can1_grp_clk_io" value="MIO 45" />
+<dischoice param="pcw_can1_grp_clk_io" value="MIO 46" />
+<dischoice param="pcw_can1_grp_clk_io" value="MIO 47" />
+<dischoice param="pcw_can1_grp_clk_io" value="MIO 50" />
+<dischoice param="pcw_can1_grp_clk_io" value="MIO 51" />
+<dischoice param="pcw_can1_grp_en_io" value="MIO 16" />
+<dischoice param="pcw_can1_grp_en_io" value="MIO 17" />
+<dischoice param="pcw_can1_grp_en_io" value="MIO 18" />
+<dischoice param="pcw_can1_grp_en_io" value="MIO 19" />
+<dischoice param="pcw_can1_grp_en_io" value="MIO 20" />
+<dischoice param="pcw_can1_grp_en_io" value="MIO 21" />
+<dischoice param="pcw_can1_grp_en_io" value="MIO 22" />
+<dischoice param="pcw_can1_grp_en_io" value="MIO 23" />
+<dischoice param="pcw_can1_grp_en_io" value="MIO 24" />
+<dischoice param="pcw_can1_grp_en_io" value="MIO 25" />
+<dischoice param="pcw_can1_grp_en_io" value="MIO 26" />
+<dischoice param="pcw_can1_grp_en_io" value="MIO 27" />
+<dischoice param="pcw_can1_grp_en_io" value="MIO 40" />
+<dischoice param="pcw_can1_grp_en_io" value="MIO 41" />
+<dischoice param="pcw_can1_grp_en_io" value="MIO 42" />
+<dischoice param="pcw_can1_grp_en_io" value="MIO 43" />
+<dischoice param="pcw_can1_grp_en_io" value="MIO 44" />
+<dischoice param="pcw_can1_grp_en_io" value="MIO 45" />
+<dischoice param="pcw_can1_grp_en_io" value="MIO 46" />
+<dischoice param="pcw_can1_grp_en_io" value="MIO 47" />
+<dischoice param="pcw_can1_grp_en_io" value="MIO 50" />
+<dischoice param="pcw_can1_grp_en_io" value="MIO 51" />
+<dischoice param="pcw_can1_grp_err_n_io" value="MIO 16" />
+<dischoice param="pcw_can1_grp_err_n_io" value="MIO 17" />
+<dischoice param="pcw_can1_grp_err_n_io" value="MIO 18" />
+<dischoice param="pcw_can1_grp_err_n_io" value="MIO 19" />
+<dischoice param="pcw_can1_grp_err_n_io" value="MIO 20" />
+<dischoice param="pcw_can1_grp_err_n_io" value="MIO 21" />
+<dischoice param="pcw_can1_grp_err_n_io" value="MIO 22" />
+<dischoice param="pcw_can1_grp_err_n_io" value="MIO 23" />
+<dischoice param="pcw_can1_grp_err_n_io" value="MIO 24" />
+<dischoice param="pcw_can1_grp_err_n_io" value="MIO 25" />
+<dischoice param="pcw_can1_grp_err_n_io" value="MIO 26" />
+<dischoice param="pcw_can1_grp_err_n_io" value="MIO 27" />
+<dischoice param="pcw_can1_grp_err_n_io" value="MIO 40" />
+<dischoice param="pcw_can1_grp_err_n_io" value="MIO 41" />
+<dischoice param="pcw_can1_grp_err_n_io" value="MIO 42" />
+<dischoice param="pcw_can1_grp_err_n_io" value="MIO 43" />
+<dischoice param="pcw_can1_grp_err_n_io" value="MIO 44" />
+<dischoice param="pcw_can1_grp_err_n_io" value="MIO 45" />
+<dischoice param="pcw_can1_grp_err_n_io" value="MIO 46" />
+<dischoice param="pcw_can1_grp_err_n_io" value="MIO 47" />
+<dischoice param="pcw_can1_grp_err_n_io" value="MIO 50" />
+<dischoice param="pcw_can1_grp_err_n_io" value="MIO 51" />
+<dischoice param="pcw_can1_grp_stb_n_io" value="MIO 16" />
+<dischoice param="pcw_can1_grp_stb_n_io" value="MIO 17" />
+<dischoice param="pcw_can1_grp_stb_n_io" value="MIO 18" />
+<dischoice param="pcw_can1_grp_stb_n_io" value="MIO 19" />
+<dischoice param="pcw_can1_grp_stb_n_io" value="MIO 20" />
+<dischoice param="pcw_can1_grp_stb_n_io" value="MIO 21" />
+<dischoice param="pcw_can1_grp_stb_n_io" value="MIO 22" />
+<dischoice param="pcw_can1_grp_stb_n_io" value="MIO 23" />
+<dischoice param="pcw_can1_grp_stb_n_io" value="MIO 24" />
+<dischoice param="pcw_can1_grp_stb_n_io" value="MIO 25" />
+<dischoice param="pcw_can1_grp_stb_n_io" value="MIO 26" />
+<dischoice param="pcw_can1_grp_stb_n_io" value="MIO 27" />
+<dischoice param="pcw_can1_grp_stb_n_io" value="MIO 40" />
+<dischoice param="pcw_can1_grp_stb_n_io" value="MIO 41" />
+<dischoice param="pcw_can1_grp_stb_n_io" value="MIO 42" />
+<dischoice param="pcw_can1_grp_stb_n_io" value="MIO 43" />
+<dischoice param="pcw_can1_grp_stb_n_io" value="MIO 44" />
+<dischoice param="pcw_can1_grp_stb_n_io" value="MIO 45" />
+<dischoice param="pcw_can1_grp_stb_n_io" value="MIO 46" />
+<dischoice param="pcw_can1_grp_stb_n_io" value="MIO 47" />
+<dischoice param="pcw_can1_grp_stb_n_io" value="MIO 50" />
+<dischoice param="pcw_can1_grp_stb_n_io" value="MIO 51" />
+<dischoice param="pcw_uart0_uart0_io" value="MIO 18 .. 19" />
+<dischoice param="pcw_uart0_uart0_io" value="MIO 22 .. 23" />
+<dischoice param="pcw_uart0_uart0_io" value="MIO 26 .. 27" />
+<dischoice param="pcw_uart0_uart0_io" value="MIO 42 .. 43" />
+<dischoice param="pcw_uart0_uart0_io" value="MIO 46 .. 47" />
+<dischoice param="pcw_uart0_uart0_io" value="MIO 50 .. 51" />
+<dischoice param="pcw_uart1_uart1_io" value="MIO 16 .. 17" />
+<dischoice param="pcw_uart1_uart1_io" value="MIO 20 .. 21" />
+<dischoice param="pcw_uart1_uart1_io" value="MIO 24 .. 25" />
+<dischoice param="pcw_uart1_uart1_io" value="MIO 40 .. 41" />
+<dischoice param="pcw_uart1_uart1_io" value="MIO 44 .. 45" />
+<dischoice param="pcw_enet0_enet0_io" value="MIO 16 .. 27" />
+<dischoice param="pcw_gpio_grp_gpio[16]_io" value="MIO 16" />
+<dischoice param="pcw_gpio_grp_gpio[17]_io" value="MIO 17" />
+<dischoice param="pcw_gpio_grp_gpio[18]_io" value="MIO 18" />
+<dischoice param="pcw_gpio_grp_gpio[19]_io" value="MIO 19" />
+<dischoice param="pcw_gpio_grp_gpio[20]_io" value="MIO 20" />
+<dischoice param="pcw_gpio_grp_gpio[21]_io" value="MIO 21" />
+<dischoice param="pcw_gpio_grp_gpio[22]_io" value="MIO 22" />
+<dischoice param="pcw_gpio_grp_gpio[23]_io" value="MIO 23" />
+<dischoice param="pcw_gpio_grp_gpio[24]_io" value="MIO 24" />
+<dischoice param="pcw_gpio_grp_gpio[25]_io" value="MIO 25" />
+<dischoice param="pcw_gpio_grp_gpio[26]_io" value="MIO 26" />
+<dischoice param="pcw_gpio_grp_gpio[27]_io" value="MIO 27" />
+<dischoice param="pcw_gpio_grp_gpio[40]_io" value="MIO 40" />
+<dischoice param="pcw_gpio_grp_gpio[41]_io" value="MIO 41" />
+<dischoice param="pcw_gpio_grp_gpio[42]_io" value="MIO 42" />
+<dischoice param="pcw_gpio_grp_gpio[43]_io" value="MIO 43" />
+<dischoice param="pcw_gpio_grp_gpio[44]_io" value="MIO 44" />
+<dischoice param="pcw_gpio_grp_gpio[45]_io" value="MIO 45" />
+<dischoice param="pcw_gpio_grp_gpio[46]_io" value="MIO 46" />
+<dischoice param="pcw_gpio_grp_gpio[47]_io" value="MIO 47" />
+<dischoice param="pcw_gpio_grp_gpio[50]_io" value="MIO 50" />
+<dischoice param="pcw_gpio_grp_gpio[51]_io" value="MIO 51" />
+<dischoice param="pcw_i2c0_i2c0_io" value="MIO 18 .. 19" />
+<dischoice param="pcw_i2c0_i2c0_io" value="MIO 22 .. 23" />
+<dischoice param="pcw_i2c0_i2c0_io" value="MIO 26 .. 27" />
+<dischoice param="pcw_i2c0_i2c0_io" value="MIO 42 .. 43" />
+<dischoice param="pcw_i2c0_i2c0_io" value="MIO 46 .. 47" />
+<dischoice param="pcw_i2c0_i2c0_io" value="MIO 50 .. 51" />
+<dischoice param="pcw_i2c0_grp_int_io" value="MIO 16" />
+<dischoice param="pcw_i2c0_grp_int_io" value="MIO 17" />
+<dischoice param="pcw_i2c0_grp_int_io" value="MIO 18" />
+<dischoice param="pcw_i2c0_grp_int_io" value="MIO 19" />
+<dischoice param="pcw_i2c0_grp_int_io" value="MIO 20" />
+<dischoice param="pcw_i2c0_grp_int_io" value="MIO 21" />
+<dischoice param="pcw_i2c0_grp_int_io" value="MIO 22" />
+<dischoice param="pcw_i2c0_grp_int_io" value="MIO 23" />
+<dischoice param="pcw_i2c0_grp_int_io" value="MIO 24" />
+<dischoice param="pcw_i2c0_grp_int_io" value="MIO 25" />
+<dischoice param="pcw_i2c0_grp_int_io" value="MIO 26" />
+<dischoice param="pcw_i2c0_grp_int_io" value="MIO 27" />
+<dischoice param="pcw_i2c0_grp_int_io" value="MIO 40" />
+<dischoice param="pcw_i2c0_grp_int_io" value="MIO 41" />
+<dischoice param="pcw_i2c0_grp_int_io" value="MIO 42" />
+<dischoice param="pcw_i2c0_grp_int_io" value="MIO 43" />
+<dischoice param="pcw_i2c0_grp_int_io" value="MIO 44" />
+<dischoice param="pcw_i2c0_grp_int_io" value="MIO 45" />
+<dischoice param="pcw_i2c0_grp_int_io" value="MIO 46" />
+<dischoice param="pcw_i2c0_grp_int_io" value="MIO 47" />
+<dischoice param="pcw_i2c0_grp_int_io" value="MIO 50" />
+<dischoice param="pcw_i2c0_grp_int_io" value="MIO 51" />
+<dischoice param="pcw_i2c1_i2c1_io" value="MIO 16 .. 17" />
+<dischoice param="pcw_i2c1_i2c1_io" value="MIO 20 .. 21" />
+<dischoice param="pcw_i2c1_i2c1_io" value="MIO 24 .. 25" />
+<dischoice param="pcw_i2c1_i2c1_io" value="MIO 40 .. 41" />
+<dischoice param="pcw_i2c1_i2c1_io" value="MIO 44 .. 45" />
+<dischoice param="pcw_i2c1_grp_int_io" value="MIO 16" />
+<dischoice param="pcw_i2c1_grp_int_io" value="MIO 17" />
+<dischoice param="pcw_i2c1_grp_int_io" value="MIO 18" />
+<dischoice param="pcw_i2c1_grp_int_io" value="MIO 19" />
+<dischoice param="pcw_i2c1_grp_int_io" value="MIO 20" />
+<dischoice param="pcw_i2c1_grp_int_io" value="MIO 21" />
+<dischoice param="pcw_i2c1_grp_int_io" value="MIO 22" />
+<dischoice param="pcw_i2c1_grp_int_io" value="MIO 23" />
+<dischoice param="pcw_i2c1_grp_int_io" value="MIO 24" />
+<dischoice param="pcw_i2c1_grp_int_io" value="MIO 25" />
+<dischoice param="pcw_i2c1_grp_int_io" value="MIO 26" />
+<dischoice param="pcw_i2c1_grp_int_io" value="MIO 27" />
+<dischoice param="pcw_i2c1_grp_int_io" value="MIO 40" />
+<dischoice param="pcw_i2c1_grp_int_io" value="MIO 41" />
+<dischoice param="pcw_i2c1_grp_int_io" value="MIO 42" />
+<dischoice param="pcw_i2c1_grp_int_io" value="MIO 43" />
+<dischoice param="pcw_i2c1_grp_int_io" value="MIO 44" />
+<dischoice param="pcw_i2c1_grp_int_io" value="MIO 45" />
+<dischoice param="pcw_i2c1_grp_int_io" value="MIO 46" />
+<dischoice param="pcw_i2c1_grp_int_io" value="MIO 47" />
+<dischoice param="pcw_i2c1_grp_int_io" value="MIO 50" />
+<dischoice param="pcw_i2c1_grp_int_io" value="MIO 51" />
+<dischoice param="pcw_nand_grp_d8_io" value="MIO 16 .. 23" />
+<dischoice param="pcw_nor_nor_io" value="MIO 3 .. 39" />
+<dischoice param="pcw_pjtag_pjtag_io" value="MIO 22 .. 25" />
+<dischoice param="pcw_pjtag_pjtag_io" value="MIO 46 .. 49" />
+<dischoice param="pcw_sd0_sd0_io" value="MIO 16 .. 21" />
+<dischoice param="pcw_sd0_sd0_io" value="MIO 40 .. 45" />
+<dischoice param="pcw_sd0_grp_cd_io" value="MIO 16" />
+<dischoice param="pcw_sd0_grp_cd_io" value="MIO 17" />
+<dischoice param="pcw_sd0_grp_cd_io" value="MIO 18" />
+<dischoice param="pcw_sd0_grp_cd_io" value="MIO 19" />
+<dischoice param="pcw_sd0_grp_cd_io" value="MIO 20" />
+<dischoice param="pcw_sd0_grp_cd_io" value="MIO 21" />
+<dischoice param="pcw_sd0_grp_cd_io" value="MIO 22" />
+<dischoice param="pcw_sd0_grp_cd_io" value="MIO 23" />
+<dischoice param="pcw_sd0_grp_cd_io" value="MIO 24" />
+<dischoice param="pcw_sd0_grp_cd_io" value="MIO 25" />
+<dischoice param="pcw_sd0_grp_cd_io" value="MIO 26" />
+<dischoice param="pcw_sd0_grp_cd_io" value="MIO 27" />
+<dischoice param="pcw_sd0_grp_cd_io" value="MIO 40" />
+<dischoice param="pcw_sd0_grp_cd_io" value="MIO 41" />
+<dischoice param="pcw_sd0_grp_cd_io" value="MIO 42" />
+<dischoice param="pcw_sd0_grp_cd_io" value="MIO 43" />
+<dischoice param="pcw_sd0_grp_cd_io" value="MIO 44" />
+<dischoice param="pcw_sd0_grp_cd_io" value="MIO 45" />
+<dischoice param="pcw_sd0_grp_cd_io" value="MIO 46" />
+<dischoice param="pcw_sd0_grp_cd_io" value="MIO 47" />
+<dischoice param="pcw_sd0_grp_cd_io" value="MIO 50" />
+<dischoice param="pcw_sd0_grp_cd_io" value="MIO 51" />
+<dischoice param="pcw_sd0_grp_wp_io" value="MIO 16" />
+<dischoice param="pcw_sd0_grp_wp_io" value="MIO 17" />
+<dischoice param="pcw_sd0_grp_wp_io" value="MIO 18" />
+<dischoice param="pcw_sd0_grp_wp_io" value="MIO 19" />
+<dischoice param="pcw_sd0_grp_wp_io" value="MIO 20" />
+<dischoice param="pcw_sd0_grp_wp_io" value="MIO 21" />
+<dischoice param="pcw_sd0_grp_wp_io" value="MIO 22" />
+<dischoice param="pcw_sd0_grp_wp_io" value="MIO 23" />
+<dischoice param="pcw_sd0_grp_wp_io" value="MIO 24" />
+<dischoice param="pcw_sd0_grp_wp_io" value="MIO 25" />
+<dischoice param="pcw_sd0_grp_wp_io" value="MIO 26" />
+<dischoice param="pcw_sd0_grp_wp_io" value="MIO 27" />
+<dischoice param="pcw_sd0_grp_wp_io" value="MIO 40" />
+<dischoice param="pcw_sd0_grp_wp_io" value="MIO 41" />
+<dischoice param="pcw_sd0_grp_wp_io" value="MIO 42" />
+<dischoice param="pcw_sd0_grp_wp_io" value="MIO 43" />
+<dischoice param="pcw_sd0_grp_wp_io" value="MIO 44" />
+<dischoice param="pcw_sd0_grp_wp_io" value="MIO 45" />
+<dischoice param="pcw_sd0_grp_wp_io" value="MIO 46" />
+<dischoice param="pcw_sd0_grp_wp_io" value="MIO 47" />
+<dischoice param="pcw_sd0_grp_wp_io" value="MIO 50" />
+<dischoice param="pcw_sd0_grp_wp_io" value="MIO 51" />
+<dischoice param="pcw_sd0_grp_pow_io" value="MIO 16" />
+<dischoice param="pcw_sd0_grp_pow_io" value="MIO 18" />
+<dischoice param="pcw_sd0_grp_pow_io" value="MIO 20" />
+<dischoice param="pcw_sd0_grp_pow_io" value="MIO 22" />
+<dischoice param="pcw_sd0_grp_pow_io" value="MIO 24" />
+<dischoice param="pcw_sd0_grp_pow_io" value="MIO 26" />
+<dischoice param="pcw_sd0_grp_pow_io" value="MIO 40" />
+<dischoice param="pcw_sd0_grp_pow_io" value="MIO 42" />
+<dischoice param="pcw_sd0_grp_pow_io" value="MIO 44" />
+<dischoice param="pcw_sd0_grp_pow_io" value="MIO 46" />
+<dischoice param="pcw_sd0_grp_pow_io" value="MIO 50" />
+<dischoice param="pcw_sd1_sd1_io" value="MIO 22 .. 27" />
+<dischoice param="pcw_sd1_sd1_io" value="MIO 46 .. 51" />
+<dischoice param="pcw_sd1_sd1_io" value="MIO 46 .. 51" />
+<dischoice param="pcw_sd1_grp_cd_io" value="MIO 16" />
+<dischoice param="pcw_sd1_grp_cd_io" value="MIO 17" />
+<dischoice param="pcw_sd1_grp_cd_io" value="MIO 18" />
+<dischoice param="pcw_sd1_grp_cd_io" value="MIO 19" />
+<dischoice param="pcw_sd1_grp_cd_io" value="MIO 20" />
+<dischoice param="pcw_sd1_grp_cd_io" value="MIO 21" />
+<dischoice param="pcw_sd1_grp_cd_io" value="MIO 22" />
+<dischoice param="pcw_sd1_grp_cd_io" value="MIO 23" />
+<dischoice param="pcw_sd1_grp_cd_io" value="MIO 24" />
+<dischoice param="pcw_sd1_grp_cd_io" value="MIO 25" />
+<dischoice param="pcw_sd1_grp_cd_io" value="MIO 26" />
+<dischoice param="pcw_sd1_grp_cd_io" value="MIO 27" />
+<dischoice param="pcw_sd1_grp_cd_io" value="MIO 40" />
+<dischoice param="pcw_sd1_grp_cd_io" value="MIO 41" />
+<dischoice param="pcw_sd1_grp_cd_io" value="MIO 42" />
+<dischoice param="pcw_sd1_grp_cd_io" value="MIO 43" />
+<dischoice param="pcw_sd1_grp_cd_io" value="MIO 44" />
+<dischoice param="pcw_sd1_grp_cd_io" value="MIO 45" />
+<dischoice param="pcw_sd1_grp_cd_io" value="MIO 46" />
+<dischoice param="pcw_sd1_grp_cd_io" value="MIO 47" />
+<dischoice param="pcw_sd1_grp_cd_io" value="MIO 50" />
+<dischoice param="pcw_sd1_grp_cd_io" value="MIO 51" />
+<dischoice param="pcw_sd1_grp_wp_io" value="MIO 16" />
+<dischoice param="pcw_sd1_grp_wp_io" value="MIO 17" />
+<dischoice param="pcw_sd1_grp_wp_io" value="MIO 18" />
+<dischoice param="pcw_sd1_grp_wp_io" value="MIO 19" />
+<dischoice param="pcw_sd1_grp_wp_io" value="MIO 20" />
+<dischoice param="pcw_sd1_grp_wp_io" value="MIO 21" />
+<dischoice param="pcw_sd1_grp_wp_io" value="MIO 22" />
+<dischoice param="pcw_sd1_grp_wp_io" value="MIO 23" />
+<dischoice param="pcw_sd1_grp_wp_io" value="MIO 24" />
+<dischoice param="pcw_sd1_grp_wp_io" value="MIO 25" />
+<dischoice param="pcw_sd1_grp_wp_io" value="MIO 26" />
+<dischoice param="pcw_sd1_grp_wp_io" value="MIO 27" />
+<dischoice param="pcw_sd1_grp_wp_io" value="MIO 40" />
+<dischoice param="pcw_sd1_grp_wp_io" value="MIO 41" />
+<dischoice param="pcw_sd1_grp_wp_io" value="MIO 42" />
+<dischoice param="pcw_sd1_grp_wp_io" value="MIO 43" />
+<dischoice param="pcw_sd1_grp_wp_io" value="MIO 44" />
+<dischoice param="pcw_sd1_grp_wp_io" value="MIO 45" />
+<dischoice param="pcw_sd1_grp_wp_io" value="MIO 46" />
+<dischoice param="pcw_sd1_grp_wp_io" value="MIO 47" />
+<dischoice param="pcw_sd1_grp_wp_io" value="MIO 50" />
+<dischoice param="pcw_sd1_grp_wp_io" value="MIO 51" />
+<dischoice param="pcw_sd1_grp_pow_io" value="MIO 17" />
+<dischoice param="pcw_sd1_grp_pow_io" value="MIO 19" />
+<dischoice param="pcw_sd1_grp_pow_io" value="MIO 21" />
+<dischoice param="pcw_sd1_grp_pow_io" value="MIO 23" />
+<dischoice param="pcw_sd1_grp_pow_io" value="MIO 25" />
+<dischoice param="pcw_sd1_grp_pow_io" value="MIO 27" />
+<dischoice param="pcw_sd1_grp_pow_io" value="MIO 41" />
+<dischoice param="pcw_sd1_grp_pow_io" value="MIO 43" />
+<dischoice param="pcw_sd1_grp_pow_io" value="MIO 45" />
+<dischoice param="pcw_sd1_grp_pow_io" value="MIO 47" />
+<dischoice param="pcw_sd1_grp_pow_io" value="MIO 51" />
+<dischoice param="pcw_sdio_pow_sdio_pow_io" value="MIO 16 .. 17" />
+<dischoice param="pcw_sdio_pow_sdio_pow_io" value="MIO 18 .. 19" />
+<dischoice param="pcw_sdio_pow_sdio_pow_io" value="MIO 20 .. 21" />
+<dischoice param="pcw_sdio_pow_sdio_pow_io" value="MIO 22 .. 23" />
+<dischoice param="pcw_sdio_pow_sdio_pow_io" value="MIO 24 .. 25" />
+<dischoice param="pcw_sdio_pow_sdio_pow_io" value="MIO 26 .. 27" />
+<dischoice param="pcw_sdio_pow_sdio_pow_io" value="MIO 40 .. 41" />
+<dischoice param="pcw_sdio_pow_sdio_pow_io" value="MIO 42 .. 43" />
+<dischoice param="pcw_sdio_pow_sdio_pow_io" value="MIO 44 .. 45" />
+<dischoice param="pcw_sdio_pow_sdio_pow_io" value="MIO 46 .. 47" />
+<dischoice param="pcw_sdio_pow_sdio_pow_io" value="MIO 50 .. 51" />
+<dischoice param="pcw_spi0_spi0_io" value="MIO 16 .. 21" />
+<dischoice param="pcw_spi0_grp_ss0_io" value="MIO 18" />
+<dischoice param="pcw_spi0_grp_ss1_io" value="MIO 19" />
+<dischoice param="pcw_spi0_grp_ss2_io" value="MIO 20" />
+<dischoice param="pcw_spi0_spi0_io" value="MIO 40 .. 45" />
+<dischoice param="pcw_spi0_grp_ss0_io" value="MIO 42" />
+<dischoice param="pcw_spi0_grp_ss1_io" value="MIO 43" />
+<dischoice param="pcw_spi0_grp_ss2_io" value="MIO 44" />
+<dischoice param="pcw_spi1_spi1_io" value="MIO 22 .. 27" />
+<dischoice param="pcw_spi1_grp_ss0_io" value="MIO 25" />
+<dischoice param="pcw_spi1_grp_ss1_io" value="MIO 26" />
+<dischoice param="pcw_spi1_grp_ss2_io" value="MIO 27" />
+<dischoice param="pcw_spi1_spi1_io" value="MIO 46 .. 51" />
+<dischoice param="pcw_spi1_spi1_io" value="MIO 46 .. 51" />
+<dischoice param="pcw_spi1_grp_ss1_io" value="MIO 50" />
+<dischoice param="pcw_spi1_grp_ss2_io" value="MIO 51" />
+<dischoice param="pcw_trace_trace_io" value="MIO 24 .. 25" />
+<dischoice param="pcw_trace_grp_2bit_io" value="MIO 26 .. 27" />
+<dischoice param="pcw_trace_grp_4bit_io" value="MIO 22 .. 23" />
+<dischoice param="pcw_trace_grp_8bit_io" value="MIO 16 .. 19" />
+<dischoice param="pcw_ttc0_ttc0_io" value="MIO 18 .. 19" />
+<dischoice param="pcw_ttc0_ttc0_io" value="MIO 42 .. 43" />
+<dischoice param="pcw_ttc1_ttc1_io" value="MIO 16 .. 17" />
+<dischoice param="pcw_ttc1_ttc1_io" value="MIO 40 .. 41" />
+<dischoice param="pcw_usb1_usb1_io" value="MIO 40 .. 51" />
+<dischoice param="pcw_usb1_usb1_io" value="MIO 40 .. 51" />
+<dischoice param="pcw_wdt_wdt_io" value="MIO 26 .. 27" />
+<dischoice param="pcw_wdt_wdt_io" value="MIO 50 .. 51" />
+<dischoice param="pcw_uiparam_ddr_bus_width" value="32 Bit" />
+<disable param="pcw_usb1_peripheral_enable" />
+<disable param="pcw_nor_peripheral_enable" />
+<disable param="pcw_mio_16_slew" />
+<disable param="pcw_mio_16_iotype" />
+<disable param="pcw_mio_16_direction" />
+<disable param="pcw_mio_16_pullup" />
+<disable param="pcw_mio_17_slew" />
+<disable param="pcw_mio_17_iotype" />
+<disable param="pcw_mio_17_direction" />
+<disable param="pcw_mio_17_pullup" />
+<disable param="pcw_mio_18_slew" />
+<disable param="pcw_mio_18_iotype" />
+<disable param="pcw_mio_18_direction" />
+<disable param="pcw_mio_18_pullup" />
+<disable param="pcw_mio_19_slew" />
+<disable param="pcw_mio_19_iotype" />
+<disable param="pcw_mio_19_direction" />
+<disable param="pcw_mio_19_pullup" />
+<disable param="pcw_mio_20_slew" />
+<disable param="pcw_mio_20_iotype" />
+<disable param="pcw_mio_20_direction" />
+<disable param="pcw_mio_20_pullup" />
+<disable param="pcw_mio_21_slew" />
+<disable param="pcw_mio_21_iotype" />
+<disable param="pcw_mio_21_direction" />
+<disable param="pcw_mio_21_pullup" />
+<disable param="pcw_mio_22_slew" />
+<disable param="pcw_mio_22_iotype" />
+<disable param="pcw_mio_22_direction" />
+<disable param="pcw_mio_22_pullup" />
+<disable param="pcw_mio_23_slew" />
+<disable param="pcw_mio_23_iotype" />
+<disable param="pcw_mio_23_direction" />
+<disable param="pcw_mio_23_pullup" />
+<disable param="pcw_mio_24_slew" />
+<disable param="pcw_mio_24_iotype" />
+<disable param="pcw_mio_24_direction" />
+<disable param="pcw_mio_24_pullup" />
+<disable param="pcw_mio_25_slew" />
+<disable param="pcw_mio_25_iotype" />
+<disable param="pcw_mio_25_direction" />
+<disable param="pcw_mio_25_pullup" />
+<disable param="pcw_mio_26_slew" />
+<disable param="pcw_mio_26_iotype" />
+<disable param="pcw_mio_26_direction" />
+<disable param="pcw_mio_26_pullup" />
+<disable param="pcw_mio_27_slew" />
+<disable param="pcw_mio_27_iotype" />
+<disable param="pcw_mio_27_direction" />
+<disable param="pcw_mio_27_pullup" />
+<disable param="pcw_mio_40_slew" />
+<disable param="pcw_mio_40_iotype" />
+<disable param="pcw_mio_40_direction" />
+<disable param="pcw_mio_40_pullup" />
+<disable param="pcw_mio_41_slew" />
+<disable param="pcw_mio_41_iotype" />
+<disable param="pcw_mio_41_direction" />
+<disable param="pcw_mio_41_pullup" />
+<disable param="pcw_mio_42_slew" />
+<disable param="pcw_mio_42_iotype" />
+<disable param="pcw_mio_42_direction" />
+<disable param="pcw_mio_42_pullup" />
+<disable param="pcw_mio_43_slew" />
+<disable param="pcw_mio_43_iotype" />
+<disable param="pcw_mio_43_direction" />
+<disable param="pcw_mio_43_pullup" />
+<disable param="pcw_mio_44_slew" />
+<disable param="pcw_mio_44_iotype" />
+<disable param="pcw_mio_44_direction" />
+<disable param="pcw_mio_44_pullup" />
+<disable param="pcw_mio_45_slew" />
+<disable param="pcw_mio_45_iotype" />
+<disable param="pcw_mio_45_direction" />
+<disable param="pcw_mio_45_pullup" />
+<disable param="pcw_mio_46_slew" />
+<disable param="pcw_mio_46_iotype" />
+<disable param="pcw_mio_46_direction" />
+<disable param="pcw_mio_46_pullup" />
+<disable param="pcw_mio_47_slew" />
+<disable param="pcw_mio_47_iotype" />
+<disable param="pcw_mio_47_direction" />
+<disable param="pcw_mio_47_pullup" />
+<disable param="pcw_mio_50_slew" />
+<disable param="pcw_mio_50_iotype" />
+<disable param="pcw_mio_50_direction" />
+<disable param="pcw_mio_50_pullup" />
+<disable param="pcw_mio_51_slew" />
+<disable param="pcw_mio_51_iotype" />
+<disable param="pcw_mio_51_direction" />
+<disable param="pcw_mio_51_pullup" />
+</preset>
+</presets>

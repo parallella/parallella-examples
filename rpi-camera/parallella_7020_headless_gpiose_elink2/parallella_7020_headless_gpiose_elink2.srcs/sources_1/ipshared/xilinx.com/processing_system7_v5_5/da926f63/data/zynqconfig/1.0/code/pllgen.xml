@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE codegen PUBLIC "codegen" "codegen.dtd" >
+<codegen version="">
+  <funcname name="ps7_pll_init_data_1_0"/>  
+  <group cmt="SLCR Settings">
+    <force param="ps7_slcr_slcr_unlock_unlock_key" value="0xDF0D" />
+  </group>
+    <group cmt="PLL SLCR registers ">
+      <param param="ps7_slcr_SCL_LOCK"/>
+      <param param="ps7_slcr_SLCR_LOCK_LOCK_KEY"/>
+      <param param="ps7_slcr_SLCR_UNLOCK_UNLOCK_KEY"/>
+      <param param="ps7_slcr_SLCR_LOCKSTA_LOCK_STATUS"/>
+      <group cmt="ARM PLL INIT">
+        <param param="ps7_slcr_ARM_PLL_CFG_PLL_RES"/>
+        <param param="ps7_slcr_ARM_PLL_CFG_PLL_CP"/>
+        <param param="ps7_slcr_ARM_PLL_CFG_LOCK_CNT"/>
+        <group cmt="Update FB_DIV">
+            <param param="ps7_slcr_ARM_PLL_CTRL_PLL_FDIV"/>
+        </group>   
+        <group cmt="By pass PLL">
+           <force param="ps7_slcr_ARM_PLL_CTRL_PLL_BYPASS_FORCE" value="1"/>
+        </group>   
+        <group cmt="Assert Reset">
+            <force param="ps7_slcr_ARM_PLL_CTRL_PLL_RESET" value="1"/>
+        </group>   
+        <group cmt="DeAssert Reset">
+            <force param="ps7_slcr_ARM_PLL_CTRL_PLL_RESET" value="0"/>
+        </group>   
+        <group cmt="Check PLL Status">
+            <poll param="ps7_slcr_PLL_STATUS_ARM_PLL_LOCK"/>
+        </group>   
+        <group cmt="Remove PLL By Pass">
+           <force param="ps7_slcr_ARM_PLL_CTRL_PLL_BYPASS_FORCE" value="0"/>
+        </group>   
+        <param param="ps7_slcr_ARM_CLK_CTRL_SRCSEL"/>
+        <param param="ps7_slcr_ARM_CLK_CTRL_DIVISOR"/>
+        <param param="ps7_slcr_ARM_CLK_CTRL_CPU_6OR4XCLKACT"/>
+        <param param="ps7_slcr_ARM_CLK_CTRL_CPU_3OR2XCLKACT"/>
+        <param param="ps7_slcr_ARM_CLK_CTRL_CPU_2XCLKACT"/>
+        <param param="ps7_slcr_ARM_CLK_CTRL_CPU_1XCLKACT"/>
+        <param param="ps7_slcr_ARM_CLK_CTRL_CPU_PERI_CLKACT"/>
+      </group>
+      <group cmt="DDR PLL INIT">
+        <param param="ps7_slcr_DDR_PLL_CFG_PLL_RES"/>
+        <param param="ps7_slcr_DDR_PLL_CFG_PLL_CP"/>
+        <param param="ps7_slcr_DDR_PLL_CFG_LOCK_CNT"/>
+        <group cmt="Update FB_DIV">
+            <param param="ps7_slcr_DDR_PLL_CTRL_PLL_FDIV"/>
+        </group>   
+        <group cmt="By pass PLL">
+           <force param="ps7_slcr_DDR_PLL_CTRL_PLL_BYPASS_FORCE" value="1"/>
+        </group>   
+        <group cmt="Assert Reset">
+            <force param="ps7_slcr_DDR_PLL_CTRL_PLL_RESET" value="1"/>
+        </group>   
+        <group cmt="DeAssert Reset">
+            <force param="ps7_slcr_DDR_PLL_CTRL_PLL_RESET" value="0"/>
+        </group>   
+        <group cmt="Check PLL Status">
+            <poll param="ps7_slcr_PLL_STATUS_DDR_PLL_LOCK"/>
+        </group>   
+        <group cmt="Remove PLL By Pass">
+           <force param="ps7_slcr_DDR_PLL_CTRL_PLL_BYPASS_FORCE" value="0"/>
+        </group>   
+        <param param="ps7_slcr_DDR_CLK_CTRL_DDR_3XCLKACT"/>
+        <param param="ps7_slcr_DDR_CLK_CTRL_DDR_2XCLKACT"/>
+        <param param="ps7_slcr_DDR_CLK_CTRL_DDR_3XCLK_DIVISOR"/>
+        <param param="ps7_slcr_DDR_CLK_CTRL_DDR_2XCLK_DIVISOR"/>
+      </group>
+      <group cmt="IO PLL INIT">
+        <param param="ps7_slcr_IO_PLL_CFG_PLL_RES"/>
+        <param param="ps7_slcr_IO_PLL_CFG_PLL_CP"/>
+        <param param="ps7_slcr_IO_PLL_CFG_LOCK_CNT"/>
+        <group cmt="Update FB_DIV">
+            <param param="ps7_slcr_IO_PLL_CTRL_PLL_FDIV"/>
+        </group>   
+        <group cmt="By pass PLL">
+           <force param="ps7_slcr_IO_PLL_CTRL_PLL_BYPASS_FORCE" value="1"/>
+        </group>   
+        <group cmt="Assert Reset">
+            <force param="ps7_slcr_IO_PLL_CTRL_PLL_RESET" value="1"/>
+        </group>   
+        <group cmt="DeAssert Reset">
+            <force param="ps7_slcr_IO_PLL_CTRL_PLL_RESET" value="0"/>
+        </group>   
+        <group cmt="Check PLL Status">
+            <poll param="ps7_slcr_PLL_STATUS_IO_PLL_LOCK"/>
+        </group>   
+        <group cmt="Remove PLL By Pass">
+           <force param="ps7_slcr_IO_PLL_CTRL_PLL_BYPASS_FORCE" value="0"/>
+        </group>   
+      </group>
+      <param param="ps7_slcr_PLL_STATUS_ARM_PLL_STABLE"/>
+      <param param="ps7_slcr_PLL_STATUS_DDR_PLL_STABLE"/>
+      <param param="ps7_slcr_PLL_STATUS_IO_PLL_STABLE"/>
+  </group>
+  <group cmt="Lock it back">
+    <force param="ps7_slcr_slcr_lock_lock_key" value="0x767B"/>
+ </group>
+</codegen>

@@ -1,0 +1,238 @@
+<style type="text/css">
+.sitename {
+    background-color: #EEE;
+border:2px ridge #FFCF01;
+color: #B20838;
+       font-size:22px;
+       font-style:oblique;
+       font-weight:bold;
+margin:0px 0px 10px 0px;
+padding:5px 0px;
+        text-align:center;
+        z-index: 3;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -khtml-border-radius: 10px;
+        border-radius: 10px;
+}
+
+.navpath {
+color: #FFCF01;
+       font-size:8px;
+padding: 7px 2px 2px 11px;
+         text-transform: capitalize;
+         z-index:2;
+}
+
+.navbar {
+    background-color: #B20838;
+    background-color: #EE3424;
+color: #fff;
+border: 1px solid #000;
+        border-left: 0px solid #000;
+        border-right: 0px solid #000;
+        font-family: arial, sans-serif;
+        font-weight: bold;
+height:50px;
+       letter-spacing: 2px;
+       text-transform: uppercase;
+position:fixed;
+top:0px;
+left:0px;
+right:0px;
+      z-index: 0;
+      /*
+         -moz-border-radius: 10px;
+         -webkit-border-radius: 10px;
+         -khtml-border-radius: 10px;
+         border-radius: 10px;
+       */
+}
+
+.navlink_container {
+    text-align:center;
+position: absolute;
+bottom:-1px;
+}
+
+.navbar a {
+color: #FFF;
+}
+
+.navbar a:hover {
+color: #EC891D;
+}
+
+.navbar ul {
+    margin-left: 0px;
+height: 70px;
+overflow: hidden;
+}
+
+.navbar li {
+    background-color: #B20838;
+padding: 4px 400px 4px 400px;
+float: left;
+       font-size:24px;
+width: 800px;
+}
+
+.navbar li:hover {
+    background-color: #000;
+color: #eee;
+}
+
+.navbar li#last {
+    padding-right: 10px;
+    border-right: 1px solid #050505;
+    background-image: none;
+}
+
+.nav_splash {
+width: 80%;
+float:right;
+      z-index: 0;
+}
+
+.search_form {
+position:fixed;
+top:25px;
+right:5px;
+      z-index:2;
+}
+
+
+
+.action_tray {
+padding:5px;
+position: fixed;
+top: 57px;
+width: 210px;
+}
+
+.action_tray_header {
+    text-align: center;
+    background-color: #DDD;
+border: 2px groove #FFCF01;
+        margin-bottom: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -khtml-border-radius: 10px;
+        border-radius: 10px;
+}
+
+.action_tray_header:hover {
+    background-color: #eee;
+}
+
+.action_container {
+padding:10px 5px;
+        text-align: center;
+}
+
+.action {
+    background-color: #FFF;
+border: 1px outset #B20838;
+padding: 5px 0px;
+         font-weight:bolder;
+         margin-bottom: 2px;
+         -moz-border-radius: 7px;
+         -webkit-border-radius: 7px;
+         -khtml-border-radius: 7px;
+         border-radius: 7px;
+         text-transform:uppercase;
+color: #B20838; 
+}
+.action:hover {
+border: 1px inset #000;
+        background-color: #FFCF01;
+color: #000;
+}
+
+
+.content_container {
+    background-color:#fff;
+border: 0px solid #000;
+        border-left: 1px solid #000;
+color: #000;
+overflow:auto;
+padding: 10px;
+position:fixed;
+left: 224px;
+top: 52px;
+right: 0px;
+bottom:0px;
+       text-align: left;
+       padding-right:25px;
+       z-index:1;
+}
+
+.SelectButtons {
+    background-color:white;
+    border-width:1px 1px 1px 1px;
+    border-style:solid;
+    border-color:black;
+margin:10px 10px 10px 0px;
+       z-index:2;
+       -moz-border-radius: 5px;
+       -webkit-border-radius: 5px;
+       -khtml-border-radius: 5px;
+       border-radius: 5px;
+       font-weight:bold;
+}
+address {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: thin dotted 
+    }
+
+.viewButtons {
+    background-color:#F3F781;
+    border-width:1px 1px 1px 1px;
+    border-style:solid;
+    border-color:black;
+margin:10px 0px 10px 0px;
+       z-index:2;
+       -moz-border-radius: 5px;
+       -webkit-border-radius: 5px;
+       -khtml-border-radius: 5px;
+       border-radius: 5px;
+       font-weight:bold;
+}
+address {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: thin dotted 
+}
+.db_selector {
+margin:10px 0px 10px 0px;
+}
+
+.db_selector_title {
+    background-color: #00FFFF;
+border: 1px solid #000;
+        margin-bottom:5px;
+        font-weight:bold;
+padding:5px 3px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -khtml-border-radius: 5px;
+        border-radius: 5px;
+}
+
+select {
+    background-color: #FFEFC0;
+    font-weight:bolder;
+padding:3px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -khtml-border-radius: 5px;
+        border-radius: 5px;
+}
+
+select:hover {
+           background-color: #AFEFF0;
+       }
+
+
+</style>

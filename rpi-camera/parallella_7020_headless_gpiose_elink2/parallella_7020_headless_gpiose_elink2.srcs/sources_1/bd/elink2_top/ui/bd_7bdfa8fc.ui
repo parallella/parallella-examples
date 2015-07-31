@@ -1,0 +1,108 @@
+{
+   Display-PortTypeClock: "true",
+   Display-PortTypeOthers: "true",
+   Display-PortTypeReset: "true",
+   guistr: "# # String gsaved with Nlview 6.4.7  2014-07-30 bk=1.3165 VDI=35 GEI=35 GUI=JA:1.8
+#  -string -flagsOSRD
+preplace port s_axi_aclk -pg 1 -y 750 -defaultsOSRD
+preplace port EMS_FROMMMU -pg 1 -y 830 -defaultsOSRD
+preplace port RX -pg 1 -y 990 -defaultsOSRD
+preplace port clkin -pg 1 -y 370 -defaultsOSRD
+preplace port m00_axi_aclk -pg 1 -y 320 -defaultsOSRD
+preplace port s00_axi_aresetn -pg 1 -y 350 -defaultsOSRD
+preplace port S00_AXI -pg 1 -y 450 -defaultsOSRD
+preplace port CCLK_N -pg 1 -y 480 -defaultsOSRD
+preplace port m00_axi_aresetn -pg 1 -y 920 -defaultsOSRD
+preplace port EMM_TOMMU -pg 1 -y 1160 -defaultsOSRD
+preplace port CCLK_P -pg 1 -y 460 -defaultsOSRD
+preplace port s_axi_aresetn -pg 1 -y 670 -defaultsOSRD
+preplace port TX -pg 1 -y 290 -defaultsOSRD
+preplace port S_AXI_CFG -pg 1 -y 690 -defaultsOSRD
+preplace port DSP_RESET_N -pg 1 -y 530 -defaultsOSRD
+preplace port s00_axi_aclk -pg 1 -y 470 -defaultsOSRD
+preplace port reset -pg 1 -y 110 -defaultsOSRD
+preplace port M00_AXI -pg 1 -y 980 -defaultsOSRD
+preplace inst axi_bram_ctrl_2 -pg 1 -lvl 1 -y 710 -defaultsOSRD
+preplace inst eio_tx_0 -pg 1 -lvl 4 -y 310 -defaultsOSRD
+preplace inst fifo_103x32_write -pg 1 -lvl 5 -y 860 -defaultsOSRD
+preplace inst eclock_0 -pg 1 -lvl 3 -y 480 -defaultsOSRD
+preplace inst earb_0 -pg 1 -lvl 1 -y 110 -defaultsOSRD
+preplace inst fifo_103x32_rresp -pg 1 -lvl 5 -y 660 -defaultsOSRD
+preplace inst fifo_103x16_rresp -pg 1 -lvl 2 -y 340 -defaultsOSRD
+preplace inst fifo_103x16_write -pg 1 -lvl 2 -y 550 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 5 -y 530 -defaultsOSRD
+preplace inst esaxi_0 -pg 1 -lvl 1 -y 500 -defaultsOSRD
+preplace inst emaxi_0 -pg 1 -lvl 4 -y 1010 -defaultsOSRD
+preplace inst edistrib_0 -pg 1 -lvl 4 -y 770 -defaultsOSRD
+preplace inst ecfg_split_0 -pg 1 -lvl 3 -y 720 -defaultsOSRD
+preplace inst fifo_103x32_rdreq -pg 1 -lvl 5 -y 380 -defaultsOSRD
+preplace inst emesh_split_0 -pg 1 -lvl 3 -y 1150 -defaultsOSRD
+preplace inst eio_rx_0 -pg 1 -lvl 2 -y 1090 -defaultsOSRD
+preplace inst eproto_tx_0 -pg 1 -lvl 3 -y 120 -defaultsOSRD
+preplace inst fifo_103x16_rdreq -pg 1 -lvl 2 -y 120 -defaultsOSRD
+preplace inst eproto_rx_0 -pg 1 -lvl 3 -y 970 -defaultsOSRD
+preplace inst eCfg_0 -pg 1 -lvl 2 -y 720 -defaultsOSRD
+preplace netloc Conn1 1 3 3 N 1160 NJ 1160 NJ
+preplace netloc Conn2 1 0 4 NJ 830 NJ 830 NJ 830 1410
+preplace netloc ecfg_split_0_mcfg0 1 1 3 610 880 NJ 890 1330
+preplace netloc ecfg_split_0_mcfg4_sw_reset 1 3 2 NJ 660 1730
+preplace netloc s_axi_aclk_1 1 0 1 210
+preplace netloc Conn3 1 4 2 N 980 NJ
+preplace netloc RX_1 1 0 2 NJ 990 N
+preplace netloc earb_0_emwr 1 1 1 530
+preplace netloc ecfg_split_0_mcfg1 1 3 1 1360
+preplace netloc fifo_103x16_rresp_prog_full 1 2 2 1070 850 NJ
+preplace netloc fifo_103x32_2_prog_full 1 3 3 1450 1090 NJ 1090 2140
+preplace netloc eclock_0_CCLK_N 1 3 3 1400 480 NJ 480 NJ
+preplace netloc eio_tx_0_tx_rd_wait 1 1 4 590 910 1020 570 NJ 570 1700
+preplace netloc eclock_0_lclk_p 1 0 4 200 210 510 30 1060 300 1330
+preplace netloc emesh_split_0_emm0 1 3 1 1420
+preplace netloc ecfg_split_0_mcfg2 1 3 1 N
+preplace netloc clkin_1 1 0 3 NJ 370 NJ 430 1080
+preplace netloc eproto_tx_0_txframe_p 1 1 3 580 870 NJ 880 1390
+preplace netloc emaxi_0_emwr 1 4 1 1820
+preplace netloc ecfg_split_0_mcfg3 1 0 4 210 640 NJ 650 NJ 620 1340
+preplace netloc util_vector_logic_0_Res 1 5 1 N
+preplace netloc eio_rx_0_rxframe_p 1 2 1 990
+preplace netloc eclock_0_CCLK_P 1 3 3 1420 470 NJ 470 NJ
+preplace netloc eclock_0_lclk_out 1 3 1 1370
+preplace netloc eio_tx_0_TX 1 4 2 N 290 NJ
+preplace netloc emaxi_0_emrq 1 4 1 1740
+preplace netloc axi_bram_ctrl_2_BRAM_PORTA 1 1 1 N
+preplace netloc eproto_rx_0_rx_wr_wait 1 1 3 630 940 NJ 1070 1330
+preplace netloc eclock_0_lclk_s 1 3 1 1340
+preplace netloc emaxi_0_emrr 1 1 4 610 850 NJ 860 NJ 930 1710
+preplace netloc m00_axi_aresetn_1 1 0 4 NJ 920 NJ 900 NJ 1050 1440
+preplace netloc eio_tx_0_tx_wr_wait 1 1 4 600 920 1050 580 NJ 580 1710
+preplace netloc earb_0_emrq 1 1 1 N
+preplace netloc m00_axi_aclk_1 1 0 5 200 600 590 840 NJ 840 1380 900 1810
+preplace netloc S00_AXI_1 1 0 1 N
+preplace netloc earb_0_emrr 1 1 1 520
+preplace netloc edistrib_0_emwr 1 4 1 1700
+preplace netloc eproto_rx_0_rx_rd_wait 1 1 3 620 930 NJ 1060 1340
+preplace netloc esaxi_0_emwr 1 1 1 490
+preplace netloc esaxi_0_emrq 1 1 1 500
+preplace netloc earb_0_emm_tx 1 1 2 NJ 10 1080
+preplace netloc eCfg_0_ecfg 1 2 1 N
+preplace netloc fifo_103x16_write_prog_full 1 0 3 220 400 NJ 440 960
+preplace netloc fifo_103x16_rdreq_prog_full 1 0 3 220 610 NJ 460 980
+preplace netloc s00_axi_aclk_1 1 0 5 180 620 600 640 NJ 610 NJ 610 NJ
+preplace netloc fifo_103x32_0_prog_full 1 3 3 1440 880 NJ 770 2120
+preplace netloc eio_rx_0_rxdata_p 1 2 1 1030
+preplace netloc aresetn_1 1 0 1 190
+preplace netloc esaxi_0_emrr 1 1 4 NJ 450 NJ 590 NJ 590 1790
+preplace netloc eproto_tx_0_emtx_ack 1 0 4 220 190 NJ 20 NJ 30 1330
+preplace netloc s00_axi_aresetn_1 1 0 1 190
+preplace netloc S_AXI_REGS_1 1 0 1 N
+preplace netloc edistrib_0_emrq 1 4 1 1720
+preplace netloc eCfg_0_ecfg_cclk 1 2 1 1040
+preplace netloc fifo_103x32_1_prog_full 1 3 3 1460 1100 NJ 1100 2130
+preplace netloc eio_rx_0_rxlclk_p 1 2 3 950 1080 1430 890 1770
+preplace netloc eproto_tx_0_txdata_p 1 1 3 570 860 NJ 870 1350
+preplace netloc reset_1 1 0 5 190 200 550 890 990 260 1420 430 1800
+preplace netloc edistrib_0_emrr 1 4 1 1750
+preplace netloc eproto_rx_0_emrx 1 2 2 1080 1090 1350
+levelinfo -pg 1 160 350 800 1210 1580 1970 2170
+",
+}
+0

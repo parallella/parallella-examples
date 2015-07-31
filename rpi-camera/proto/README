@@ -1,0 +1,150 @@
+RPi camera interface prototype
+==============================
+
+[All the binaries in here are for the Z7020 !]
+
+
+Getting started
+---------------
+
+ 0) (ensure you have the 2015.1 image)
+
+ 1) Clone the parallella-flash git repo
+
+    Replace the FSBL.elf and the elink2_top_wrapper.bit by the ones
+    provided here.
+
+    Follow the instruction in that repo to regenerate a flash image
+    and flash it to QSPI
+
+ 2) Put the modified device tree on the first partition of the SD card,
+    replacing the existing one.
+
+ 3) Reboot the board
+
+    Note that you might need to have a serial cable plugged in or
+    have it tied to GND because the u-boot in the parallella-flash
+    repo has a 'press any key' to interrupt boot prompt and garbage
+    during boot on the serial line can interrupt the start sequence
+    if it's floating.
+
+ 4) Build the rpi_cam utility included here.
+
+    Copy it to the parallella an type 'make'
+
+ 5) Try to capture stuff
+    
+    Create a FIFO to transfer raw image between the example software and ffmpeg:
+
+      bash# mkfifo /tmp/image.raw
+
+    In one terminal, launch the video conversion using the FIFO as source:
+    (apt-get install libav-tools if not already installed)
+
+      bash# avconv -s 1296x972 -f rawvideo -pix_fmt rgba -r 3 -i image.raw -vf scale=640:480 -g 4 -coder 0 -y out.mp4
+
+    In another start the capture (0 here means capture until CTRL-C is pressed)
+
+      bash# sudo ./rpi_cam rgbz32 /tmp/image.raw 0
+
+    Note that because encoding speed is limited you'll get 2/3 fps only.
+    You can record a few second of RAW video on a RAM disk and then encode
+    but given it takes a _lot_ of space you can't do much of it.
+
+
+Content
+-------
+
+ * FSBL.elf
+
+   New FSBL compiled from the new projects. The major changes compared to the
+   default version are:
+
+    . Increased memory frequency to 533MHz and tighter timings
+      (not strictly required but that's what I had in my project)
+
+    . Enabled FCLK1 output at 200 MHz
+      (this will be used as the refclk for the IDELAY_CTRL blocks)
+
+    . Enabled I2C_1 module to EMIO
+      (this will be used to interface to the camera sensor)
+
+ * elink2_top_wrapper.bit
+
+   New bitstream that includes both the e-link base logic and the new logic
+   to drive the RPi camera. The major changes compared to the default
+   version are:
+
+     . Replaced the auto generated top level file with a custom manually
+       written one. This allows for more flexibility in what's connected
+       where.
+
+       Also the MIPI IP is not a Vivado block yet, so it's instanciated in
+       there, connected to some AXI bus exported from the Block Design.
+
+     . Added constraint (.xdc) file for the RPi camera interface (mostly
+       selecting IOSTANDARDS)
+
+     . Added a second parallella_i2c IO buffer block for I2C_1
+
+     . Added the MIPI CSI logic
+
+     . Replaced the axi3 -> axi4 lite protocol converter with an AXI
+       interconnect so there can be several slaves (3).
+
+     . Added a Xilinx Video DMA
+
+ * elink2_top_wrapper.bit.bin
+
+   Bit/Byte swapped version of elink2_top_wrapper.bit that's suitable for
+   dynamic loading using /dev/xdevcfg
+
+ * devicetree.dtb
+
+   Modified device tree to include the I2C_1 controller
+
+   i2c@e0005000 {
+     compatible = "cdns,i2c-r1p10";
+     reg = <0xe0005000 0x1000>;
+     interrupts = <0 48 4>;
+     interrupt-parent = <&gic>;
+     bus-id = <0x1>;
+     clocks = <&clkc 39>;
+     clock-frequency = <400000>;
+     #address-cells = <0x1>;
+     #size-cells = <0x0>;
+   };
+
+ * rpi_cam/*
+
+   Example software that will pilot everything from userspace to record
+   frames.
+
+
+HW mod (optional)
+------
+
+    The current version of the code doesn't require this, but if you want to
+    play with higher data rate or IDELAY calibration you might need it.
+
+    Note that even it's not required, the current bitstream still have the
+    GPIO_{N,P}[7] assigned to it.
+
+
+    You need 4 * 1k resistors.
+
+    VCC ---/\/\/-----,
+                      >------> GPIO_N[7]
+    GND ---/\/\/-----'
+         |       |
+	 `-/\/\/-' 
+   
+    GPIO_N[8] -----/\/\/-----> GPIO_P[7]
+
+    The goal is to have a fixed ~ 0.8V on GPIO_N[7] and to connect
+    GPIO_P[7] to GPIO_N[8] with some high enough resistor to not disturb
+    the signal.
+
+    Then the differential input [7] will act as a comparator and return '0'
+    if the data lane is in HS mode ( 0.2v CM +- 0.2v swing ) and '1' if it's
+    in LP11 state (1.2v).

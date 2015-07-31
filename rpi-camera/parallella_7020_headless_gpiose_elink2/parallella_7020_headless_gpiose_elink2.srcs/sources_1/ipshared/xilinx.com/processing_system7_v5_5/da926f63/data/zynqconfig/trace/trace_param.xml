@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE parameters PUBLIC "parameters" "parameters.dtd" >
+<parameters>
+  <parameter uniqueid="pcw_trace_peripheral_freqmhz">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_EN_EMIO_TRACE">
+    <name> C_EN_EMIO_TRACE </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_EN_TRACE">
+    <name> C_EN_TRACE </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+  <parameter uniqueid="pcw_trace_peripheral_enable">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_trace_grp_2bit_enable">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_trace_grp_4bit_enable">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_trace_grp_8bit_enable">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_trace_grp_16bit_enable">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_trace_grp_32bit_enable">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+  <parameter uniqueid="pcw_trace_trace_io">
+    <name> TRACE </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_trace_grp_2bit_io">
+    <name> TRACE d[0:1] </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_trace_grp_4bit_io">
+    <name> TRACE d[3:2] </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_trace_grp_8bit_io">
+    <name> TRACE d[7:4] </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_trace_grp_16bit_io">
+    <name> TRACE d[15:8] </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_trace_grp_32bit_io">
+    <name> TRACE [31:16] </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+
+
+  <parameter uniqueid="pcw_trace_trace_clk_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_trace_trace_ctl_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_trace_data[0]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_trace_data[1]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+  <parameter uniqueid="pcw_trace_data[2]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_trace_data[3]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+  <parameter uniqueid="pcw_trace_data[4]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_trace_data[5]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_trace_data[6]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_trace_data[7]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+  <parameter uniqueid="pcw_trace_data[8]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_trace_data[9]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_trace_data[10]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_trace_data[11]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_trace_data[12]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_trace_data[13]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_trace_data[14]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_trace_data[15]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_trace_data[16]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_trace_data[17]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_trace_data[18]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_trace_data[19]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_trace_data[20]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_trace_data[21]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_trace_data[22]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_trace_data[23]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_trace_data[24]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_trace_data[25]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_trace_data[26]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_trace_data[27]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_trace_data[28]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_trace_data[29]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_trace_data[30]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_trace_data[31]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_trace_internal_width">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_trace_internal_clksrc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+
+</parameters>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE parameters PUBLIC "presets" "presets.dtd" >
+<presets>
+
+  <preset param="pcw_ttc1_peripheral_enable" name="0" strength="7">
+      <disable param="pcw_ttc1_peripheral_freqmhz"/>
+      <set param="pcw_ttc1_clk0_peripheral_freqmhz" value="133.333333"/>
+      <set param="pcw_ttc1_clk1_peripheral_freqmhz" value="133.333333"/>
+      <set param="pcw_ttc1_clk2_peripheral_freqmhz" value="133.333333"/>
+      <disable param="pcw_ttc1_clk0_peripheral_freqmhz"/>
+      <disable param="pcw_ttc1_clk1_peripheral_freqmhz"/>
+      <disable param="pcw_ttc1_clk2_peripheral_freqmhz"/>
+      <disable param="pcw_ttc1_ttc1_io"/>
+  </preset>
+
+  <preset param="pcw_ttc1_peripheral_enable" name="" strength="7">
+      <disable param="pcw_ttc1_peripheral_freqmhz"/>
+      <set param="pcw_ttc1_clk0_peripheral_freqmhz" value="133.333333"/>
+      <set param="pcw_ttc1_clk1_peripheral_freqmhz" value="133.333333"/>
+      <set param="pcw_ttc1_clk2_peripheral_freqmhz" value="133.333333"/>
+      <disable param="pcw_ttc1_clk0_peripheral_freqmhz"/>
+      <disable param="pcw_ttc1_clk1_peripheral_freqmhz"/>
+      <disable param="pcw_ttc1_clk2_peripheral_freqmhz"/>
+      <disable param="pcw_ttc1_ttc1_io"/>
+  </preset>
+
+  <preset param="pcw_ttc1_peripheral_enable" name="1" strength="4">
+      <set param="pcw_ttc1_ttc1_io" value="EMIO" />
+      <set param="pcw_EN_TTC1" value="1" />
+      <set param="pcw_ttc_peripheral_valid" value="1"/>
+      <set param="pcw_ttc1_clk0_peripheral_freqmhz" value="133.333333"/>
+      <set param="pcw_ttc1_clk1_peripheral_freqmhz" value="133.333333"/>
+      <set param="pcw_ttc1_clk2_peripheral_freqmhz" value="133.333333"/>
+  </preset>
+
+  <preset param="pcw_ttc1_ttc1_io" name="EMIO" strength="5">
+      <set param="pcw_ttc1_clk_in_io" value="EMIO" />
+      <set param="pcw_ttc1_wave_out_io" value="EMIO" />
+      <set param="pcw_EN_EMIO_TTC1" value="1" />
+  </preset>
+
+  <preset param="pcw_ttc1_ttc1_io" name="MIO 16 .. 17" strength="5">
+      <set param="pcw_ttc1_clk_in_io" value="MIO 16" />
+      <set param="pcw_mio_mio[16]_signal" value="wave_out" />
+      <set param="pcw_mio_mio[16]_peripheral" value="Timer 1" />
+      <set param="pcw_mio_mio[16]_signalgroup" value="Timer 1" />
+      <set param="pcw_preset_mio_16" value="ttc1" />
+      <set param="pcw_ttc1_wave_out_io" value="MIO 17" />
+      <set param="pcw_mio_mio[17]_signal" value="clk_in" />
+      <set param="pcw_mio_mio[17]_peripheral" value="Timer 1" />
+      <set param="pcw_mio_mio[17]_signalgroup" value="Timer 1" />
+      <set param="pcw_preset_mio_17" value="ttc1" />
+  </preset>
+
+  <preset param="pcw_ttc1_ttc1_io" name="MIO 28 .. 29" strength="5">
+      <set param="pcw_ttc1_clk_in_io" value="MIO 28" />
+      <set param="pcw_mio_mio[28]_signal" value="wave_out" />
+      <set param="pcw_mio_mio[28]_peripheral" value="Timer 1" />
+      <set param="pcw_mio_mio[28]_signalgroup" value="Timer 1" />
+      <set param="pcw_preset_mio_28" value="ttc1" />
+      <set param="pcw_ttc1_wave_out_io" value="MIO 29" />
+      <set param="pcw_mio_mio[29]_signal" value="clk_in" />
+      <set param="pcw_mio_mio[29]_peripheral" value="Timer 1" />
+      <set param="pcw_mio_mio[29]_signalgroup" value="Timer 1" />
+      <set param="pcw_preset_mio_29" value="ttc1" />
+  </preset>
+
+  <preset param="pcw_ttc1_ttc1_io" name="MIO 40 .. 41" strength="5">
+      <set param="pcw_ttc1_clk_in_io" value="MIO 40" />
+      <set param="pcw_mio_mio[40]_signal" value="wave_out" />
+      <set param="pcw_mio_mio[40]_peripheral" value="Timer 1" />
+      <set param="pcw_mio_mio[40]_signalgroup" value="Timer 1" />
+      <set param="pcw_preset_mio_40" value="ttc1" />
+      <set param="pcw_ttc1_wave_out_io" value="MIO 41" />
+      <set param="pcw_mio_mio[41]_signal" value="clk_in" />
+      <set param="pcw_mio_mio[41]_peripheral" value="Timer 1" />
+      <set param="pcw_mio_mio[41]_signalgroup" value="Timer 1" />
+      <set param="pcw_preset_mio_41" value="ttc1" />
+  </preset>
+
+</presets>
+

@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Webtalk v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 16:44:35 MST 2014
+# 
+# Start of session at: Mon Jun 22 20:07:57 2015
+# Process ID: 1118
+# Log file: /tmp/v/parviv/parallella_7020_headless_gpiose_elink2.sdk/webtalk/webtalk.log
+# Journal file: /tmp/v/parviv/parallella_7020_headless_gpiose_elink2.sdk/webtalk/webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

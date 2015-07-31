@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE parameters PUBLIC "presets" "presets.dtd" >
+<presets>
+  <preset param="pcw_pjtag_peripheral_enable" name="0" strength="7">
+      <disable param="pcw_pjtag_peripheral_freqmhz"/>
+      <disable param="pcw_pjtag_pjtag_io"/>
+  </preset>
+
+  <preset param="pcw_pjtag_peripheral_enable" name="" strength="7">
+      <disable param="pcw_pjtag_peripheral_freqmhz"/>
+      <disable param="pcw_pjtag_pjtag_io"/>
+  </preset>
+
+  <preset param="pcw_pjtag_peripheral_enable" name="1" strength="4">
+      <set param="pcw_pjtag_pjtag_io" value="EMIO"/>
+      <set param="pcw_EN_PJTAG" value="1" />
+  </preset>
+
+  <preset param="pcw_pjtag_pjtag_io" name="EMIO" strength="5">
+      <set param="pcw_pjtag_tck_io" value="EMIO" />
+      <set param="pcw_pjtag_tdi_io" value="EMIO" />
+      <set param="pcw_pjtag_tdo_io" value="EMIO" />
+      <set param="pcw_pjtag_tms_io" value="EMIO" />
+      <set param="pcw_EN_EMIO_PJTAG" value="1" />
+  </preset>
+
+  <preset param="pcw_pjtag_pjtag_io" name="MIO 10 .. 13" strength="5">
+      <set param="pcw_pjtag_tdi_io" value="MIO 10" />
+      <set param="pcw_mio_mio[10]_signal" value="tdi" />
+      <set param="pcw_mio_mio[10]_peripheral" value="PJTAG" />
+      <set param="pcw_mio_mio[10]_signalgroup" value="PJTAG" />
+      <set param="pcw_preset_mio_10" value="pjtag" />
+      <set param="pcw_pjtag_tdo_io" value="MIO 11" />
+      <set param="pcw_mio_mio[11]_signal" value="tdo" />
+      <set param="pcw_mio_mio[11]_peripheral" value="PJTAG" />
+      <set param="pcw_mio_mio[11]_signalgroup" value="PJTAG" />
+      <set param="pcw_preset_mio_11" value="pjtag" />
+      <set param="pcw_pjtag_tck_io" value="MIO 12" />
+      <set param="pcw_mio_mio[12]_signal" value="tck" />
+      <set param="pcw_mio_mio[12]_peripheral" value="PJTAG" />
+      <set param="pcw_mio_mio[12]_signalgroup" value="PJTAG" />
+      <set param="pcw_preset_mio_12" value="pjtag" />
+      <set param="pcw_pjtag_tms_io" value="MIO 13" />
+      <set param="pcw_mio_mio[13]_signal" value="tms" />
+      <set param="pcw_mio_mio[13]_peripheral" value="PJTAG" />
+      <set param="pcw_mio_mio[13]_signalgroup" value="PJTAG" />
+      <set param="pcw_preset_mio_13" value="pjtag" />
+  </preset>
+
+  <preset param="pcw_pjtag_pjtag_io" name="MIO 22 .. 25" strength="5">
+      <set param="pcw_pjtag_tdi_io" value="MIO 22" />
+      <set param="pcw_mio_mio[22]_signal" value="tdi" />
+      <set param="pcw_mio_mio[22]_peripheral" value="PJTAG" />
+      <set param="pcw_mio_mio[22]_signalgroup" value="PJTAG" />
+      <set param="pcw_preset_mio_22" value="pjtag" />
+      <set param="pcw_pjtag_tdo_io" value="MIO 23" />
+      <set param="pcw_mio_mio[23]_signal" value="tdo" />
+      <set param="pcw_mio_mio[23]_peripheral" value="PJTAG" />
+      <set param="pcw_mio_mio[23]_signalgroup" value="PJTAG" />
+      <set param="pcw_preset_mio_23" value="pjtag" />
+      <set param="pcw_pjtag_tck_io" value="MIO 24" />
+      <set param="pcw_mio_mio[24]_signal" value="tck" />
+      <set param="pcw_mio_mio[24]_peripheral" value="PJTAG" />
+      <set param="pcw_mio_mio[24]_signalgroup" value="PJTAG" />
+      <set param="pcw_preset_mio_24" value="pjtag" />
+      <set param="pcw_pjtag_tms_io" value="MIO 25" />
+      <set param="pcw_mio_mio[25]_signal" value="tms" />
+      <set param="pcw_mio_mio[25]_peripheral" value="PJTAG" />
+      <set param="pcw_mio_mio[25]_signalgroup" value="PJTAG" />
+      <set param="pcw_preset_mio_25" value="pjtag" />
+  </preset>
+
+  <preset param="pcw_pjtag_pjtag_io" name="MIO 34 .. 37" strength="5">
+      <set param="pcw_pjtag_tdi_io" value="MIO 34" />
+      <set param="pcw_mio_mio[34]_signal" value="tdi" />
+      <set param="pcw_mio_mio[34]_peripheral" value="PJTAG" />
+      <set param="pcw_mio_mio[34]_signalgroup" value="PJTAG" />
+      <set param="pcw_preset_mio_34" value="pjtag" />
+      <set param="pcw_pjtag_tdo_io" value="MIO 35" />
+      <set param="pcw_mio_mio[35]_signal" value="tdo" />
+      <set param="pcw_mio_mio[35]_peripheral" value="PJTAG" />
+      <set param="pcw_mio_mio[35]_signalgroup" value="PJTAG" />
+      <set param="pcw_preset_mio_35" value="pjtag" />
+      <set param="pcw_pjtag_tck_io" value="MIO 36" />
+      <set param="pcw_mio_mio[36]_signal" value="tck" />
+      <set param="pcw_mio_mio[36]_peripheral" value="PJTAG" />
+      <set param="pcw_mio_mio[36]_signalgroup" value="PJTAG" />
+      <set param="pcw_preset_mio_36" value="pjtag" />
+      <set param="pcw_pjtag_tms_io" value="MIO 37" />
+      <set param="pcw_mio_mio[37]_signal" value="tms" />
+      <set param="pcw_mio_mio[37]_peripheral" value="PJTAG" />
+      <set param="pcw_mio_mio[37]_signalgroup" value="PJTAG" />
+      <set param="pcw_preset_mio_37" value="pjtag" />
+  </preset>
+
+  <preset param="pcw_pjtag_pjtag_io" name="MIO 46 .. 49" strength="5">
+      <set param="pcw_pjtag_tdi_io" value="MIO 46" />
+      <set param="pcw_mio_mio[46]_signal" value="tdi" />
+      <set param="pcw_mio_mio[46]_peripheral" value="PJTAG" />
+      <set param="pcw_mio_mio[46]_signalgroup" value="PJTAG" />
+      <set param="pcw_preset_mio_46" value="pjtag" />
+      <set param="pcw_pjtag_tdo_io" value="MIO 47" />
+      <set param="pcw_mio_mio[47]_signal" value="tdo" />
+      <set param="pcw_mio_mio[47]_peripheral" value="PJTAG" />
+      <set param="pcw_mio_mio[47]_signalgroup" value="PJTAG" />
+      <set param="pcw_preset_mio_47" value="pjtag" />
+      <set param="pcw_pjtag_tck_io" value="MIO 48" />
+      <set param="pcw_mio_mio[48]_signal" value="tck" />
+      <set param="pcw_mio_mio[48]_peripheral" value="PJTAG" />
+      <set param="pcw_mio_mio[48]_signalgroup" value="PJTAG" />
+      <set param="pcw_preset_mio_48" value="pjtag" />
+      <set param="pcw_pjtag_tms_io" value="MIO 49" />
+      <set param="pcw_mio_mio[49]_signal" value="tms" />
+      <set param="pcw_mio_mio[49]_peripheral" value="PJTAG" />
+      <set param="pcw_mio_mio[49]_signalgroup" value="PJTAG" />
+      <set param="pcw_preset_mio_49" value="pjtag" />
+  </preset>
+
+</presets>
+

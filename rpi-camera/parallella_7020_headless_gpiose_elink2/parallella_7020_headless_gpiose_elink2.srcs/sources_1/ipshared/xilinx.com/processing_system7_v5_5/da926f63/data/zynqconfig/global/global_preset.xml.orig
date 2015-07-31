@@ -1,0 +1,2325 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE presets PUBLIC "presets" "presets.dtd" >
+<presets>
+  <preset param="pcw_preset_global_config" name="Default" strength="1">
+
+    <set param="pcw_qspi_peripheral_enable" value="0" />
+    <set param="pcw_nand_peripheral_enable" value="0" />
+    <set param="pcw_nor_peripheral_enable" value="0" />
+    <set param="pcw_usb0_peripheral_enable" value="0" />
+    <set param="pcw_usb1_peripheral_enable" value="0" />
+    <set param="pcw_nand_cycles_t_rr" value="0" />
+    <set param="pcw_nand_cycles_t_ar" value="0" />
+    <set param="pcw_nand_cycles_t_clr" value="0" />
+    <set param="pcw_nand_cycles_t_wp" value="0" />
+    <set param="pcw_nand_cycles_t_rea" value="0" />
+    <set param="pcw_nand_cycles_t_wc" value="0" />
+    <set param="pcw_nand_cycles_t_rc" value="0" />
+    <set param="pcw_nand_opmode_set_mw" value="0" />
+    <set param="pcw_nor_cs0_t_tr" value="0" />
+    <set param="pcw_nor_cs0_t_pc" value="0" />
+    <set param="pcw_nor_cs0_t_wp" value="0" />
+    <set param="pcw_nor_cs0_t_ceoe" value="0" />
+    <set param="pcw_nor_cs0_t_wc" value="0" />
+    <set param="pcw_nor_cs0_t_rc" value="0" />
+    <set param="pcw_nor_cs0_we_time" value="0" />
+    <set param="pcw_nor_cs1_t_tr" value="0" />
+    <set param="pcw_nor_cs1_t_pc" value="0" />
+    <set param="pcw_nor_cs1_t_wp" value="0" />
+    <set param="pcw_nor_cs1_t_ceoe" value="0" />
+    <set param="pcw_nor_cs1_t_wc" value="0" />
+    <set param="pcw_nor_cs1_t_rc" value="0" />
+    <set param="pcw_nor_cs1_we_time" value="0" />
+    <set param="pcw_nor_sram_cs0_t_tr" value="0" />
+    <set param="pcw_nor_sram_cs0_t_pc" value="0" />
+    <set param="pcw_nor_sram_cs0_t_wp" value="0" />
+    <set param="pcw_nor_sram_cs0_t_ceoe" value="0" />
+    <set param="pcw_nor_sram_cs0_t_wc" value="0" />
+    <set param="pcw_nor_sram_cs0_t_rc" value="0" />
+    <set param="pcw_nor_sram_cs0_we_time" value="0" />
+    <set param="pcw_nor_sram_cs1_t_tr" value="0" />
+    <set param="pcw_nor_sram_cs1_t_pc" value="0" />
+    <set param="pcw_nor_sram_cs1_t_wp" value="0" />
+    <set param="pcw_nor_sram_cs1_t_ceoe" value="0" />
+    <set param="pcw_nor_sram_cs1_t_wc" value="0" />
+    <set param="pcw_nor_sram_cs1_t_rc" value="0" />
+    <set param="pcw_nor_sram_cs1_we_time" value="0" />
+    <set param="pcw_smcc_nand_rule" value="0" />
+    <set param="pcw_smcc_cs0_rule" value="0" />
+    <set param="pcw_smcc_cs1_rule" value="0" />
+    <set param="pcw_usb_reset_rule" value="0" />
+    <set param="pcw_enet_reset_rule" value="0" />
+    <set param="pcw_i2c_reset_rule" value="0" />
+    <set param="pcw_data_reset_rule" value="0" />
+    <set param="pcw_usb_reset_enable" value="0" />
+    <set param="pcw_enet_reset_enable" value="0" />
+    <set param="pcw_i2c_reset_enable" value="0" />
+    <set param="pcw_usb_reset_io" value="-1" />
+    <set param="pcw_enet_reset_io" value="-1" />
+    <set param="pcw_i2c_reset_io" value="-1" />
+    <set param="pcw_uiparam_ddr_clock_stop_en" name="Disabled"/>
+    
+    <set param="pcw_enet0_peripheral_enable" value="0" />
+    <set param="pcw_enet1_peripheral_enable" value="0" />
+
+
+    <set param="pcw_sd0_peripheral_enable" value="0" />
+    <set param="pcw_sd1_peripheral_enable" value="0" />
+    <set param="pcw_sdio_pow_peripheral_enable" value="0" />
+
+    <set param="pcw_i2c0_peripheral_enable" value="0" />
+    <set param="pcw_i2c1_peripheral_enable" value="0" />
+
+    <set param="pcw_spi0_peripheral_enable" value="0" />
+    <set param="pcw_spi1_peripheral_enable" value="0" />
+
+    <set param="pcw_can0_peripheral_enable" value="0" />
+    <set param="pcw_can1_peripheral_enable" value="0" />
+
+    <set param="pcw_uart0_peripheral_enable" value="0" />
+    <set param="pcw_uart1_peripheral_enable" value="0" />
+
+    <set param="pcw_ttc0_peripheral_enable" value="0" />
+    <set param="pcw_ttc1_peripheral_enable" value="0" />
+
+    <set param="pcw_trace_peripheral_enable" value="0" />
+
+    <set param="pcw_wdt_peripheral_enable" value="0" />
+
+    <set param="pcw_pjtag_peripheral_enable" value="0" />
+    <set param="pcw_gpio_peripheral_enable" value="0" />
+    <set param="pcw_devcfg_ctrl_fab_4k_timer" value="0" />
+
+  </preset>
+
+  <preset param="pcw_preset_global_default" name="powerup" strength="0">
+
+
+    <set param="pcw_uiparam_ddr_memory_type" value="DDR 3" />
+    <set param="pcw_uiparam_ddr_ecc" value="Disabled" />
+    <set param="pcw_uiparam_ddr_sim_mode" value="Disabled" />
+    <set param="pcw_devcfg_ctrl_fab_4k_timer" value="0" />
+    <set param="pcw_uiparam_ddr_enable" value="1" />
+    <set param="pcw_uiparam_ddr_bus_width" value="32 Bit" />
+    <set param="pcw_uiparam_ddr_bl" value="8" />
+    <set param="pcw_uiparam_ddr_high_temp" value="Normal (0-85)" />
+    <set param="pcw_uiparam_ddr_dram_width" value="8 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="2048 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="DDR3_1066F" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="15" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="10" />
+    <set param="pcw_uiparam_ddr_cl" value="7" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="7" />
+    <set param="pcw_uiparam_ddr_t_rp" value="7" />
+    <set param="pcw_uiparam_ddr_t_rc" value="48.91" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="34.0" />
+    <set param="pcw_uiparam_ddr_t_faw" value="25" />
+    <set param="pcw_uiparam_ddr_al" value="0" />
+    <set param="pcw_uiparam_ddr_dqs_to_clk_delay_0" value="0.0" />
+    <set param="pcw_uiparam_ddr_dqs_to_clk_delay_1" value="0.0" />
+    <set param="pcw_uiparam_ddr_dqs_to_clk_delay_2" value="0.0" />
+    <set param="pcw_uiparam_ddr_dqs_to_clk_delay_3" value="0.0" />
+    <set param="pcw_uiparam_ddr_max_freq" value="800" />
+
+    <set param="pcw_uiparam_ddr_cwl" value="5" />
+    <set param="pcw_uiparam_ddr_use_internal_vref" value="0" />
+    <set param="pcw_uiparam_ddr_train_write_level" value="0" />
+    <set param="pcw_uiparam_ddr_train_read_gate" value="0" />
+    <set param="pcw_uiparam_ddr_train_data_eye" value="0" />
+    <set param="pcw_uiparam_ddr_train_write_level" value="0" />
+    <set param="pcw_uiparam_ddr_board_delay0" value="0.0" />
+    <set param="pcw_uiparam_ddr_board_delay1" value="0.0" />
+    <set param="pcw_uiparam_ddr_board_delay2" value="0.0" />
+    <set param="pcw_uiparam_ddr_board_delay3" value="0.0" />
+
+    <set param="pcw_uiparam_ddr_clock_0_length_mm" value="0" />
+    <set param="pcw_uiparam_ddr_clock_1_length_mm" value="0" />
+    <set param="pcw_uiparam_ddr_clock_2_length_mm" value="0" />
+    <set param="pcw_uiparam_ddr_clock_3_length_mm" value="0" />
+    <set param="pcw_uiparam_ddr_clock_0_package_length" value="470.0" />
+    <set param="pcw_uiparam_ddr_clock_1_package_length" value="470.0" />
+    <set param="pcw_uiparam_ddr_clock_2_package_length" value="470.0" />
+    <set param="pcw_uiparam_ddr_clock_3_package_length" value="470.0" />
+    <set param="pcw_uiparam_ddr_clock_0_propogation_delay" value="160" />
+    <set param="pcw_uiparam_ddr_clock_1_propogation_delay" value="160" />
+    <set param="pcw_uiparam_ddr_clock_2_propogation_delay" value="160" />
+    <set param="pcw_uiparam_ddr_clock_3_propogation_delay" value="160" />
+
+    <set param="pcw_uiparam_ddr_dq_0_length_mm" value="0" />
+    <set param="pcw_uiparam_ddr_dq_1_length_mm" value="0" />
+    <set param="pcw_uiparam_ddr_dq_2_length_mm" value="0" />
+    <set param="pcw_uiparam_ddr_dq_3_length_mm" value="0" />
+
+    <set param="pcw_uiparam_ddr_dq_0_package_length" value="465" />
+    <set param="pcw_uiparam_ddr_dq_1_package_length" value="480" />
+    <set param="pcw_uiparam_ddr_dq_2_package_length" value="550" />
+    <set param="pcw_uiparam_ddr_dq_3_package_length" value="780" />
+
+    <set param="pcw_uiparam_ddr_dq_0_propogation_delay" value="160" />
+    <set param="pcw_uiparam_ddr_dq_1_propogation_delay" value="160" />
+    <set param="pcw_uiparam_ddr_dq_2_propogation_delay" value="160" />
+    <set param="pcw_uiparam_ddr_dq_3_propogation_delay" value="160" />
+
+    <set param="pcw_uiparam_ddr_dqs_0_length_mm" value="0" />
+    <set param="pcw_uiparam_ddr_dqs_1_length_mm" value="0" />
+    <set param="pcw_uiparam_ddr_dqs_2_length_mm" value="0" />
+    <set param="pcw_uiparam_ddr_dqs_3_length_mm" value="0" />
+
+    <set param="pcw_uiparam_ddr_dqs_0_package_length" value="504" />
+    <set param="pcw_uiparam_ddr_dqs_1_package_length" value="495" />
+    <set param="pcw_uiparam_ddr_dqs_2_package_length" value="520" />
+    <set param="pcw_uiparam_ddr_dqs_3_package_length" value="835" />
+
+    <set param="pcw_uiparam_ddr_dqs_0_propogation_delay" value="160" />
+    <set param="pcw_uiparam_ddr_dqs_1_propogation_delay" value="160" />
+    <set param="pcw_uiparam_ddr_dqs_2_propogation_delay" value="160" />
+    <set param="pcw_uiparam_ddr_dqs_3_propogation_delay" value="160" />
+
+    <set param="pcw_internal_ddr_slew" value="FAST" />
+
+    <set param="pcw_uiparam_ddr_partno" value="Custom" />
+    
+    <set param="pcw_sdio_pow_peripheral_valid" value="0" />
+
+    <set param="pcw_ddr_ram_highaddr" value="0x0fffffff" />
+
+    <set param="pcw_ddr_v4.00.a_c_s_axi_hp0_baseaddr"  value="0x0fffffff" />
+    <set param="pcw_ddr_v4.00.a_c_s_axi_hp0_highaddr"  value="0x0fffffff" />
+    <set param="pcw_ddr_v4.00.a_c_s_axi_hp1_baseaddr"  value="0x0fffffff" />
+    <set param="pcw_ddr_v4.00.a_c_s_axi_hp1_highaddr"  value="0x0fffffff" />
+    <set param="pcw_ddr_v4.00.a_c_s_axi_hp2_baseaddr"  value="0x0fffffff" />
+    <set param="pcw_ddr_v4.00.a_c_s_axi_hp2_highaddr"  value="0x0fffffff" />
+    <set param="pcw_ddr_v4.00.a_c_s_axi_hp3_baseaddr"  value="0x0fffffff" />
+    <set param="pcw_ddr_v4.00.a_c_s_axi_hp3_highaddr"  value="0x0fffffff" />
+
+    <set param="pcw_internal_fpga_package"  value="0" />
+    <set param="pcw_EN_EMIO_CAN0" value="0" />
+    <set param="pcw_EN_EMIO_CAN1"  value="0" />
+    <set param="pcw_EN_EMIO_ENET0"  value="0" />
+    <set param="pcw_EN_EMIO_ENET1"  value="0" />
+    <set param="pcw_en_emio_sram_int"  value="0" />
+    <set param="pcw_EN_EMIO_I2C0"  value="0" />
+    <set param="pcw_EN_EMIO_I2C1"  value="0" />
+    <set param="pcw_EN_EMIO_PJTAG"  value="0" />
+    <set param="pcw_EN_EMIO_SDIO0"  value="0" />
+    <set param="pcw_EN_EMIO_CD_SDIO0"  value="0" />
+    <set param="pcw_EN_EMIO_WP_SDIO0"  value="0" />
+    <set param="pcw_EN_EMIO_SDIO1"  value="0" />
+    <set param="pcw_EN_EMIO_CD_SDIO1"  value="0" />
+    <set param="pcw_EN_EMIO_WP_SDIO1"  value="0" />
+    <set param="pcw_EN_EMIO_SPI0"  value="0" />
+    <set param="pcw_EN_EMIO_SPI1"  value="0" />
+    <set param="pcw_EN_EMIO_TRACE"  value="0" />
+    <set param="pcw_EN_EMIO_TTC0"  value="0" />
+    <set param="pcw_EN_EMIO_TTC1"  value="0" />
+    <set param="pcw_EN_EMIO_UART0"  value="0" />
+    <set param="pcw_EN_EMIO_UART1"  value="0" />
+    <set param="pcw_EN_EMIO_MODEM_UART0"  value="0" />
+    <set param="pcw_EN_EMIO_MODEM_UART1"  value="0" />
+    <set param="pcw_EN_EMIO_USB0"  value="0" />
+    <set param="pcw_EN_EMIO_USB1"  value="0" />
+    <set param="pcw_EN_EMIO_WDT"  value="0" />
+    <set param="pcw_EN_EMIO_GPIO" value="0" />
+
+    <set param="pcw_EN_QSPI" value="0" />
+    <set param="pcw_EN_SMC" value="0" />
+    <set param="pcw_EN_CAN0" value="0" />
+    <set param="pcw_EN_CAN1"  value="0" />
+    <set param="pcw_EN_ENET0"  value="0" />
+    <set param="pcw_EN_ENET1"  value="0" />
+    <set param="pcw_EN_I2C0"  value="0" />
+    <set param="pcw_EN_I2C1"  value="0" />
+    <set param="pcw_EN_PJTAG"  value="0" />
+    <set param="pcw_EN_SDIO0"  value="0" />
+    <set param="pcw_EN_SDIO1"  value="0" />
+    <set param="pcw_EN_SPI0"  value="0" />
+    <set param="pcw_EN_SPI1"  value="0" />
+    <set param="pcw_EN_TRACE"  value="0" />
+    <set param="pcw_EN_TTC0"  value="0" />
+    <set param="pcw_EN_TTC1"  value="0" />
+    <set param="pcw_EN_UART0"  value="0" />
+    <set param="pcw_EN_UART1"  value="0" />
+    <set param="pcw_EN_MODEM_UART0"  value="0" />
+    <set param="pcw_EN_MODEM_UART1"  value="0" />
+    <set param="pcw_EN_USB0"  value="0" />
+    <set param="pcw_EN_USB1"  value="0" />
+    <set param="pcw_EN_WDT"  value="0" />
+    <set param="pcw_EN_GPIO"  value="0" />
+    
+    <set param="pcw_mio_tree_peripherals"  value=" " />
+    <set param="pcw_mio_tree_signals"  value=" " />
+
+
+    <set param="pcw_gpio_emio_gpio_width" value="64" />
+    <set param="pcw_ddr_axi_hp0_datawidth" value="64" />
+    <set param="pcw_ddr_axi_hp1_datawidth" value="64" />
+    <set param="pcw_ddr_axi_hp2_datawidth" value="64" />
+    <set param="pcw_ddr_axi_hp3_datawidth" value="64" />
+
+    <set param="pcw_fpga_fclk0_enable" value="0" />
+    <set param="pcw_fpga_fclk1_enable" value="0" />
+    <set param="pcw_fpga_fclk2_enable" value="0" />
+    <set param="pcw_fpga_fclk3_enable" value="0" />
+
+    <set param="pcw_cpu_cpu_6x4x_max_range" value="1000" />
+    <set param="pcw_crystal_peripheral_freqmhz" value="33.333333" />
+    <set param="pcw_apu_peripheral_freqmhz" value="666.666666" />
+    <set param="pcw_apu_1x_peripheral_freqmhz" value="111.111111" />
+    <set param="pcw_apu_clk_ratio_enable" value="6:2:1" />
+    <set param="pcw_dci_peripheral_freqmhz" value="10.159" />
+    <set param="pcw_tpiu_peripheral_freqmhz" value="200" />
+    <set param="pcw_pcap_peripheral_freqmhz" value="200" />
+    <set param="pcw_fpga0_peripheral_freqmhz" value="50" />
+    <set param="pcw_fpga1_peripheral_freqmhz" value="50" />
+    <set param="pcw_fpga2_peripheral_freqmhz" value="50" />
+    <set param="pcw_fpga3_peripheral_freqmhz" value="50" />
+    <set param="pcw_qspi_peripheral_freqmhz" value="200" />
+    <set param="pcw_smc_peripheral_freqmhz" value="100" />
+    <set param="pcw_enet0_peripheral_freqmhz" value="1000 Mbps" />
+    <set param="pcw_enet1_peripheral_freqmhz" value="1000 Mbps" />
+    <set param="pcw_usb0_peripheral_freqmhz" value="60" />
+    <set param="pcw_usb1_peripheral_freqmhz" value="60" />
+    <set param="pcw_sdio_peripheral_freqmhz" value="125" />
+    <set param="pcw_uart_peripheral_freqmhz" value="100" />
+    <set param="pcw_spi_peripheral_freqmhz" value="166.666666" />
+    <set param="pcw_can_peripheral_freqmhz" value="100" />
+    <set param="pcw_can0_peripheral_freqmhz" value="100" />
+    <set param="pcw_can1_peripheral_freqmhz" value="100" />
+    <set param="pcw_uiparam_ddr_freq_mhz" value="533.333333" />
+    <set param="pcw_ttc_peripheral_freqmhz" value="50" />
+    <set param="pcw_ttc0_clk0_peripheral_freqmhz" value="133.333333" />
+    <set param="pcw_ttc0_clk1_peripheral_freqmhz" value="133.333333" />
+    <set param="pcw_ttc0_clk2_peripheral_freqmhz" value="133.333333" />
+    <set param="pcw_ttc1_clk0_peripheral_freqmhz" value="133.333333" />
+    <set param="pcw_ttc1_clk1_peripheral_freqmhz" value="133.333333" />
+    <set param="pcw_ttc1_clk2_peripheral_freqmhz" value="133.333333" />
+    <set param="pcw_wdt_peripheral_freqmhz" value="50" />
+    <set param="pcw_internal_uart_baud_rate" value="115200"/>
+
+    <set param="pcw_en_ddr" value="1" />
+    <set param="pcw_clk0_freq" value="0" />
+    <set param="pcw_clk1_freq" value="0" />
+    <set param="pcw_clk2_freq" value="0" />
+    <set param="pcw_clk3_freq" value="0" />
+
+    <set param="pcw_cpu_peripheral_clksrc" value="ARM PLL" />
+    <set param="pcw_ddr_peripheral_clksrc" value="DDR PLL" />
+    <set param="pcw_tpiu_peripheral_clksrc" value="IO PLL" />
+    <set param="pcw_pcap_peripheral_clksrc" value="IO PLL" />
+    <set param="pcw_fclk0_peripheral_clksrc" value="IO PLL" />
+    <set param="pcw_fclk1_peripheral_clksrc" value="IO PLL" />
+    <set param="pcw_fclk2_peripheral_clksrc" value="IO PLL" />
+    <set param="pcw_fclk3_peripheral_clksrc" value="IO PLL" />
+    <set param="pcw_qspi_peripheral_clksrc" value="ARM PLL" />
+    <set param="pcw_smc_peripheral_clksrc" value="IO PLL" />
+    <set param="pcw_enet0_peripheral_clksrc" value="IO PLL" />
+    <set param="pcw_enet1_peripheral_clksrc" value="IO PLL" />
+    <set param="pcw_sdio_peripheral_clksrc" value="IO PLL" />
+    <set param="pcw_uart_peripheral_clksrc" value="IO PLL" />
+    <set param="pcw_spi_peripheral_clksrc" value="IO PLL" />
+    <set param="pcw_can_peripheral_clksrc" value="IO PLL" />
+    <set param="pcw_can0_peripheral_clksrc" value="External" />
+    <set param="pcw_can1_peripheral_clksrc" value="External" />
+    <set param="pcw_ttc_peripheral_clksrc" value="CPU_1X" />
+    <set param="pcw_wdt_peripheral_clksrc" value="CPU_1X" />
+
+    <set param="pcw_ttc0_clk0_peripheral_clksrc" value="CPU_1X" />
+    <set param="pcw_ttc0_clk1_peripheral_clksrc" value="CPU_1X" />
+    <set param="pcw_ttc0_clk2_peripheral_clksrc" value="CPU_1X" />
+    <set param="pcw_ttc1_clk0_peripheral_clksrc" value="CPU_1X" />
+    <set param="pcw_ttc1_clk1_peripheral_clksrc" value="CPU_1X" />
+    <set param="pcw_ttc1_clk2_peripheral_clksrc" value="CPU_1X" />
+    <set param="pcw_can0_peripheral_mioclk" value="0" />
+    <set param="pcw_can1_peripheral_mioclk" value="0" />
+
+    <set param="pcw_can_peripheral_valid" value="0" />
+    <set param="pcw_smc_peripheral_valid" value="0" />
+    <set param="pcw_uart_peripheral_valid" value="0" />
+    <set param="pcw_spi_peripheral_valid" value="0" />
+    <set param="pcw_usb_peripheral_valid" value="0" />
+    <set param="pcw_sdio_peripheral_valid" value="0" />
+    <set param="pcw_i2c_peripheral_valid" value="0" />
+    <set param="pcw_gpio_peripheral_valid" value="0" />
+    <set param="pcw_ttc_peripheral_valid" value="0" />
+
+    <set param="pcw_enet0_internal_divisor" value="1" />
+    <set param="pcw_enet1_internal_divisor" value="1" />
+    <set param="pcw_enet0_slcr_1000mbps_div0" value="0" />
+    <set param="pcw_enet0_slcr_1000mbps_div1" value="1" />
+    <set param="pcw_enet0_slcr_100mbps_div0" value="0" />
+    <set param="pcw_enet0_slcr_100mbps_div1" value="5" />
+    <set param="pcw_enet0_slcr_10mbps_div0" value="0" />
+    <set param="pcw_enet0_slcr_10mbps_div1" value="50" />
+    <set param="pcw_enet1_slcr_1000mbps_div0" value="0" />
+    <set param="pcw_enet1_slcr_1000mbps_div1" value="1" />
+    <set param="pcw_enet1_slcr_100mbps_div0" value="0" />
+    <set param="pcw_enet1_slcr_100mbps_div1" value="5" />
+    <set param="pcw_enet1_slcr_10mbps_div0" value="0" />
+    <set param="pcw_enet1_slcr_10mbps_div1" value="50" />
+
+    <set param="pcw_preset_mio_pinname" value="default"/>
+    <set param="pcw_mio_0_direction" value="inout"  />
+    <set param="pcw_mio_1_direction" value="inout"  />
+    <set param="pcw_mio_2_direction" value="inout"  />
+    <set param="pcw_mio_3_direction" value="inout"  />
+    <set param="pcw_mio_4_direction" value="inout"  />
+    <set param="pcw_mio_5_direction" value="inout"  />
+    <set param="pcw_mio_6_direction" value="inout"  />
+    <set param="pcw_mio_7_direction" value="inout"  />
+    <set param="pcw_mio_8_direction" value="inout"  />
+    <set param="pcw_mio_9_direction" value="inout"  />
+    <set param="pcw_mio_10_direction" value="inout"  />
+    <set param="pcw_mio_11_direction" value="inout"  />
+    <set param="pcw_mio_12_direction" value="inout"  />
+    <set param="pcw_mio_13_direction" value="inout"  />
+    <set param="pcw_mio_14_direction" value="inout"  />
+    <set param="pcw_mio_15_direction" value="inout"  />
+    <set param="pcw_mio_16_direction" value="inout"  />
+    <set param="pcw_mio_17_direction" value="inout"  />
+    <set param="pcw_mio_18_direction" value="inout"  />
+    <set param="pcw_mio_19_direction" value="inout"  />
+    <set param="pcw_mio_20_direction" value="inout"  />
+    <set param="pcw_mio_21_direction" value="inout"  />
+    <set param="pcw_mio_22_direction" value="inout"  />
+    <set param="pcw_mio_23_direction" value="inout"  />
+    <set param="pcw_mio_24_direction" value="inout"  />
+    <set param="pcw_mio_25_direction" value="inout"  />
+    <set param="pcw_mio_26_direction" value="inout"  />
+    <set param="pcw_mio_27_direction" value="inout"  />
+    <set param="pcw_mio_28_direction" value="inout"  />
+    <set param="pcw_mio_29_direction" value="inout"  />
+    <set param="pcw_mio_30_direction" value="inout"  />
+    <set param="pcw_mio_31_direction" value="inout"  />
+    <set param="pcw_mio_32_direction" value="inout"  />
+    <set param="pcw_mio_33_direction" value="inout"  />
+    <set param="pcw_mio_34_direction" value="inout"  />
+    <set param="pcw_mio_35_direction" value="inout"  />
+    <set param="pcw_mio_36_direction" value="inout"  />
+    <set param="pcw_mio_37_direction" value="inout"  />
+    <set param="pcw_mio_38_direction" value="inout"  />
+    <set param="pcw_mio_39_direction" value="inout"  />
+    <set param="pcw_mio_40_direction" value="inout"  />
+    <set param="pcw_mio_41_direction" value="inout"  />
+    <set param="pcw_mio_42_direction" value="inout"  />
+    <set param="pcw_mio_43_direction" value="inout"  />
+    <set param="pcw_mio_44_direction" value="inout"  />
+    <set param="pcw_mio_45_direction" value="inout"  />
+    <set param="pcw_mio_46_direction" value="inout"  />
+    <set param="pcw_mio_47_direction" value="inout"  />
+    <set param="pcw_mio_48_direction" value="inout"  />
+    <set param="pcw_mio_49_direction" value="inout"  />
+    <set param="pcw_mio_50_direction" value="inout"  />
+    <set param="pcw_mio_51_direction" value="inout"  />
+    <set param="pcw_mio_52_direction" value="inout"  />
+    <set param="pcw_mio_53_direction" value="inout"  />
+
+    <set param="pcw_mio_mio[0]_drive" value="8"  />
+    <set param="pcw_mio_mio[1]_drive" value="8"  />
+    <set param="pcw_mio_mio[2]_drive" value="8"  />
+    <set param="pcw_mio_mio[3]_drive" value="8"  />
+    <set param="pcw_mio_mio[4]_drive" value="8"  />
+    <set param="pcw_mio_mio[5]_drive" value="8"  />
+    <set param="pcw_mio_mio[6]_drive" value="8"  />
+    <set param="pcw_mio_mio[7]_drive" value="8"  />
+    <set param="pcw_mio_mio[8]_drive" value="8"  />
+    <set param="pcw_mio_mio[9]_drive" value="8"  />
+    <set param="pcw_mio_mio[10]_drive" value="8"  />
+    <set param="pcw_mio_mio[11]_drive" value="8"  />
+    <set param="pcw_mio_mio[12]_drive" value="8"  />
+    <set param="pcw_mio_mio[13]_drive" value="8"  />
+    <set param="pcw_mio_mio[14]_drive" value="8"  />
+    <set param="pcw_mio_mio[15]_drive" value="8"  />
+    <set param="pcw_mio_mio[16]_drive" value="8"  />
+    <set param="pcw_mio_mio[17]_drive" value="8"  />
+    <set param="pcw_mio_mio[18]_drive" value="8"  />
+    <set param="pcw_mio_mio[19]_drive" value="8"  />
+    <set param="pcw_mio_mio[20]_drive" value="8"  />
+    <set param="pcw_mio_mio[21]_drive" value="8"  />
+    <set param="pcw_mio_mio[22]_drive" value="8"  />
+    <set param="pcw_mio_mio[23]_drive" value="8"  />
+    <set param="pcw_mio_mio[24]_drive" value="8"  />
+    <set param="pcw_mio_mio[25]_drive" value="8"  />
+    <set param="pcw_mio_mio[26]_drive" value="8"  />
+    <set param="pcw_mio_mio[27]_drive" value="8"  />
+    <set param="pcw_mio_mio[28]_drive" value="8"  />
+    <set param="pcw_mio_mio[29]_drive" value="8"  />
+    <set param="pcw_mio_mio[30]_drive" value="8"  />
+    <set param="pcw_mio_mio[31]_drive" value="8"  />
+    <set param="pcw_mio_mio[32]_drive" value="8"  />
+    <set param="pcw_mio_mio[33]_drive" value="8"  />
+    <set param="pcw_mio_mio[34]_drive" value="8"  />
+    <set param="pcw_mio_mio[35]_drive" value="8"  />
+    <set param="pcw_mio_mio[36]_drive" value="8"  />
+    <set param="pcw_mio_mio[37]_drive" value="8"  />
+    <set param="pcw_mio_mio[38]_drive" value="8"  />
+    <set param="pcw_mio_mio[39]_drive" value="8"  />
+    <set param="pcw_mio_mio[40]_drive" value="8"  />
+    <set param="pcw_mio_mio[41]_drive" value="8"  />
+    <set param="pcw_mio_mio[42]_drive" value="8"  />
+    <set param="pcw_mio_mio[43]_drive" value="8"  />
+    <set param="pcw_mio_mio[44]_drive" value="8"  />
+    <set param="pcw_mio_mio[45]_drive" value="8"  />
+    <set param="pcw_mio_mio[46]_drive" value="8"  />
+    <set param="pcw_mio_mio[47]_drive" value="8"  />
+    <set param="pcw_mio_mio[48]_drive" value="8"  />
+    <set param="pcw_mio_mio[49]_drive" value="8"  />
+    <set param="pcw_mio_mio[50]_drive" value="8"  />
+    <set param="pcw_mio_mio[51]_drive" value="8"  />
+    <set param="pcw_mio_mio[52]_drive" value="8"  />
+    <set param="pcw_mio_mio[53]_drive" value="8"  />
+
+    <set param="pcw_preset_bank0_voltage" value="LVCMOS 3.3V"  />
+    <set param="pcw_preset_bank1_voltage" value="LVCMOS 3.3V"  />
+
+    <set param="pcw_mio_0_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_1_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_2_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_3_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_4_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_5_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_6_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_7_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_8_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_9_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_10_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_11_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_12_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_13_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_14_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_15_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_16_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_17_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_18_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_19_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_20_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_21_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_22_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_23_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_24_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_25_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_26_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_27_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_28_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_29_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_30_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_31_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_32_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_33_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_34_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_35_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_36_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_37_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_38_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_39_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_40_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_41_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_42_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_43_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_44_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_45_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_46_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_47_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_48_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_49_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_50_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_51_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_52_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_53_iotype" value="LVCMOS 3.3V"  />
+
+
+    <set param="pcw_mio_0_slew" value="slow"  />
+    <set param="pcw_mio_1_slew" value="slow"  />
+    <set param="pcw_mio_2_slew" value="slow"  />
+    <set param="pcw_mio_3_slew" value="slow"  />
+    <set param="pcw_mio_4_slew" value="slow"  />
+    <set param="pcw_mio_5_slew" value="slow"  />
+    <set param="pcw_mio_6_slew" value="slow"  />
+    <set param="pcw_mio_7_slew" value="slow"  />
+    <set param="pcw_mio_8_slew" value="slow"  />
+    <set param="pcw_mio_9_slew" value="slow"  />
+    <set param="pcw_mio_10_slew" value="slow"  />
+    <set param="pcw_mio_11_slew" value="slow"  />
+    <set param="pcw_mio_12_slew" value="slow"  />
+    <set param="pcw_mio_13_slew" value="slow"  />
+    <set param="pcw_mio_14_slew" value="slow"  />
+    <set param="pcw_mio_15_slew" value="slow"  />
+    <set param="pcw_mio_16_slew" value="slow"  />
+    <set param="pcw_mio_17_slew" value="slow"  />
+    <set param="pcw_mio_18_slew" value="slow"  />
+    <set param="pcw_mio_19_slew" value="slow"  />
+    <set param="pcw_mio_20_slew" value="slow"  />
+    <set param="pcw_mio_21_slew" value="slow"  />
+    <set param="pcw_mio_22_slew" value="slow"  />
+    <set param="pcw_mio_23_slew" value="slow"  />
+    <set param="pcw_mio_24_slew" value="slow"  />
+    <set param="pcw_mio_25_slew" value="slow"  />
+    <set param="pcw_mio_26_slew" value="slow"  />
+    <set param="pcw_mio_27_slew" value="slow"  />
+    <set param="pcw_mio_28_slew" value="slow"  />
+    <set param="pcw_mio_29_slew" value="slow"  />
+    <set param="pcw_mio_30_slew" value="slow"  />
+    <set param="pcw_mio_31_slew" value="slow"  />
+    <set param="pcw_mio_32_slew" value="slow"  />
+    <set param="pcw_mio_33_slew" value="slow"  />
+    <set param="pcw_mio_34_slew" value="slow"  />
+    <set param="pcw_mio_35_slew" value="slow"  />
+    <set param="pcw_mio_36_slew" value="slow"  />
+    <set param="pcw_mio_37_slew" value="slow"  />
+    <set param="pcw_mio_38_slew" value="slow"  />
+    <set param="pcw_mio_39_slew" value="slow"  />
+    <set param="pcw_mio_40_slew" value="slow"  />
+    <set param="pcw_mio_41_slew" value="slow"  />
+    <set param="pcw_mio_42_slew" value="slow"  />
+    <set param="pcw_mio_43_slew" value="slow"  />
+    <set param="pcw_mio_44_slew" value="slow"  />
+    <set param="pcw_mio_45_slew" value="slow"  />
+    <set param="pcw_mio_46_slew" value="slow"  />
+    <set param="pcw_mio_47_slew" value="slow"  />
+    <set param="pcw_mio_48_slew" value="slow"  />
+    <set param="pcw_mio_49_slew" value="slow"  />
+    <set param="pcw_mio_50_slew" value="slow"  />
+    <set param="pcw_mio_51_slew" value="slow"  />
+    <set param="pcw_mio_52_slew" value="slow"  />
+    <set param="pcw_mio_53_slew" value="slow"  />
+
+    <set param="pcw_mio_0_pullup" value="enabled"  />
+    <set param="pcw_mio_1_pullup" value="enabled"  />
+    <set param="pcw_mio_2_pullup" value="disabled"  />
+    <set param="pcw_mio_3_pullup" value="disabled"  />
+    <set param="pcw_mio_4_pullup" value="disabled"  />
+    <set param="pcw_mio_5_pullup" value="disabled"  />
+    <set param="pcw_mio_6_pullup" value="disabled"  />
+    <set param="pcw_mio_7_pullup" value="disabled"  />
+    <set param="pcw_mio_8_pullup" value="disabled"  />
+    <disable param="pcw_mio_2_pullup" />
+    <disable param="pcw_mio_3_pullup" />
+    <disable param="pcw_mio_4_pullup" />
+    <disable param="pcw_mio_5_pullup" />
+    <disable param="pcw_mio_6_pullup" />
+    <disable param="pcw_mio_7_pullup" />
+    <disable param="pcw_mio_8_pullup" />
+    <set param="pcw_mio_9_pullup" value="enabled"  />
+    <set param="pcw_mio_10_pullup" value="enabled"  />
+    <set param="pcw_mio_11_pullup" value="enabled"  />
+    <set param="pcw_mio_12_pullup" value="enabled"  />
+    <set param="pcw_mio_13_pullup" value="enabled"  />
+    <set param="pcw_mio_14_pullup" value="enabled"  />
+    <set param="pcw_mio_15_pullup" value="enabled"  />
+    <set param="pcw_mio_16_pullup" value="enabled"  />
+    <set param="pcw_mio_17_pullup" value="enabled"  />
+    <set param="pcw_mio_18_pullup" value="enabled"  />
+    <set param="pcw_mio_19_pullup" value="enabled"  />
+    <set param="pcw_mio_20_pullup" value="enabled"  />
+    <set param="pcw_mio_21_pullup" value="enabled"  />
+    <set param="pcw_mio_22_pullup" value="enabled"  />
+    <set param="pcw_mio_23_pullup" value="enabled"  />
+    <set param="pcw_mio_24_pullup" value="enabled"  />
+    <set param="pcw_mio_25_pullup" value="enabled"  />
+    <set param="pcw_mio_26_pullup" value="enabled"  />
+    <set param="pcw_mio_27_pullup" value="enabled"  />
+    <set param="pcw_mio_28_pullup" value="enabled"  />
+    <set param="pcw_mio_29_pullup" value="enabled"  />
+    <set param="pcw_mio_30_pullup" value="enabled"  />
+    <set param="pcw_mio_31_pullup" value="enabled"  />
+    <set param="pcw_mio_32_pullup" value="enabled"  />
+    <set param="pcw_mio_33_pullup" value="enabled"  />
+    <set param="pcw_mio_34_pullup" value="enabled"  />
+    <set param="pcw_mio_35_pullup" value="enabled"  />
+    <set param="pcw_mio_36_pullup" value="enabled"  />
+    <set param="pcw_mio_37_pullup" value="enabled"  />
+    <set param="pcw_mio_38_pullup" value="enabled"  />
+    <set param="pcw_mio_39_pullup" value="enabled"  />
+    <set param="pcw_mio_40_pullup" value="enabled"  />
+    <set param="pcw_mio_41_pullup" value="enabled"  />
+    <set param="pcw_mio_42_pullup" value="enabled"  />
+    <set param="pcw_mio_43_pullup" value="enabled"  />
+    <set param="pcw_mio_44_pullup" value="enabled"  />
+    <set param="pcw_mio_45_pullup" value="enabled"  />
+    <set param="pcw_mio_46_pullup" value="enabled"  />
+    <set param="pcw_mio_47_pullup" value="enabled"  />
+    <set param="pcw_mio_48_pullup" value="enabled"  />
+    <set param="pcw_mio_49_pullup" value="enabled"  />
+    <set param="pcw_mio_50_pullup" value="enabled"  />
+    <set param="pcw_mio_51_pullup" value="enabled"  />
+    <set param="pcw_mio_52_pullup" value="enabled"  />
+    <set param="pcw_mio_53_pullup" value="enabled"  />
+
+
+    <set param="pcw_can0_internal_en" value="0"  />
+    <set param="pcw_can0_internal_error" value="0"  />
+    <set param="pcw_can0_internal_strb" value="0"  />
+    <set param="pcw_can0_internal_en_mio" value="0"  />
+    <set param="pcw_can0_internal_error_mio" value="0"  />
+    <set param="pcw_can0_internal_strb_mio" value="0"  />
+
+    <set param="pcw_can1_internal_en" value="0"  />
+    <set param="pcw_can1_internal_error" value="0"  />
+    <set param="pcw_can1_internal_strb" value="0"  />
+    <set param="pcw_can1_internal_en_mio" value="0"  />
+    <set param="pcw_can1_internal_error_mio" value="0"  />
+    <set param="pcw_can1_internal_strb_mio" value="0"  />
+
+    <set param="pcw_ddr_internal_hasecc" value="0"  />
+
+    <set param="pcw_enet0_internal_mdio" value="0"  />
+    <set param="pcw_enet0_internal_eth_mode" value="0"  />
+    <set param="pcw_enet1_internal_mdio" value="0"  />
+    <set param="pcw_enet1_internal_eth_mode" value="0"  />
+
+    <set param="pcw_i2c0_internal_int" value="0"  />
+    <set param="pcw_i2c1_internal_int" value="0"  />
+
+    <set param="pcw_nor_internal_cs0" value="0"  />
+    <set param="pcw_nor_internal_cs1" value="0"  />
+    <set param="pcw_nor_internal_sram_cs0" value="0"  />
+    <set param="pcw_nor_internal_sram_cs1" value="0"  />
+    <set param="pcw_nor_internal_a25" value="0"  />
+
+    <set param="pcw_nand_internal_mode" value="8"/>
+
+    <set param="pcw_qspi_internal_mode" value="0"  />
+    <set param="pcw_qspi_internal_fbclk" value="0"  />
+
+    <set param="pcw_sd0_internal_cd" value="0"  />
+    <set param="pcw_sd0_internal_wp" value="0"  />
+    <set param="pcw_sd0_internal_pow" value="0"  />
+
+    <set param="pcw_sd1_internal_cd" value="0"  />
+    <set param="pcw_sd1_internal_wp" value="0"  />
+    <set param="pcw_sd1_internal_pow" value="0"  />
+
+    <set param="pcw_spi0_internal_ss0" value="0"  />
+    <set param="pcw_spi0_internal_ss1" value="0"  />
+    <set param="pcw_spi0_internal_ss2" value="0"  />
+
+    <set param="pcw_spi1_internal_ss0" value="0"  />
+    <set param="pcw_spi1_internal_ss1" value="0"  />
+    <set param="pcw_spi1_internal_ss2" value="0"  />
+
+    <set param="pcw_uart0_internal_modem" value="0"  />
+    <set param="pcw_uart1_internal_modem" value="0"  />
+
+  </preset>
+  
+
+  <preset param="pcw_psconfig_LVL_SHFTR_EN_C_USE_CR_FABRIC" name="0" strength="7">
+    <set param="ps7_slcr_LVL_SHFTR_EN_USER_INP_ICT_EN_0" value="0" />
+    <set param="ps7_slcr_LVL_SHFTR_EN_USER_INP_ICT_EN_1" value="0" />
+  </preset>
+
+  <preset param="pcw_ddr_axi_hp0_datawidth" name="32" strength="7">
+    <set param="ps7_afi0_AFI_RDCHAN_CTRL_n32BitEn" value="1" />
+    <set param="ps7_afi0_AFI_WRCHAN_CTRL_n32BitEn" value="1" />
+  </preset>
+
+  <preset param="pcw_ddr_axi_hp1_datawidth" name="32" strength="7">
+    <set param="ps7_afi1_AFI_RDCHAN_CTRL_n32BitEn" value="1" />
+    <set param="ps7_afi1_AFI_WRCHAN_CTRL_n32BitEn" value="1" />
+  </preset>
+
+  <preset param="pcw_ddr_axi_hp2_datawidth" name="32" strength="7">
+    <set param="ps7_afi2_AFI_RDCHAN_CTRL_n32BitEn" value="1" />
+    <set param="ps7_afi2_AFI_WRCHAN_CTRL_n32BitEn" value="1" />
+  </preset>
+
+  <preset param="pcw_ddr_axi_hp3_datawidth" name="32" strength="7">
+    <set param="ps7_afi3_AFI_RDCHAN_CTRL_n32BitEn" value="1" />
+    <set param="ps7_afi3_AFI_WRCHAN_CTRL_n32BitEn" value="1" />
+  </preset>
+  
+  <preset param="pcw_psconfig_LVL_SHFTR_EN_C_USE_CR_FABRIC" name="1" strength="7">
+    <set param="ps7_slcr_LVL_SHFTR_EN_USER_INP_ICT_EN_0" value="3" />
+    <set param="ps7_slcr_LVL_SHFTR_EN_USER_INP_ICT_EN_1" value="3" />
+  </preset>
+  <preset param="pcw_can_peripheral_valid" name="0" strength="7">
+    <disable param="pcw_can_peripheral_freqmhz"/>
+    <set param="pcw_can_peripheral_freqmhz" value="100"/>
+  </preset>
+
+  <preset param="pcw_i2c_peripheral_valid" name="0" strength="7">
+    <disable param="pcw_i2c_peripheral_freqmhz"/>
+    <set param="pcw_i2c_peripheral_freqmhz" value="25"/>
+  </preset>
+
+  <preset param="pcw_smc_peripheral_valid" name="0" strength="7">
+    <disable param="pcw_smc_peripheral_freqmhz"/>
+    <set param="pcw_smc_peripheral_freqmhz" value="100"/>
+  </preset>
+
+  <preset param="pcw_uart_peripheral_valid" name="0" strength="7">
+    <disable param="pcw_uart_peripheral_freqmhz"/>
+    <set param="pcw_uart_peripheral_freqmhz" value="100"/>
+  </preset>
+
+  <preset param="pcw_spi_peripheral_valid" name="0" strength="7">
+    <disable param="pcw_spi_peripheral_freqmhz"/>
+    <set param="pcw_spi_peripheral_freqmhz" value="166.666666"/>
+  </preset>
+
+  <preset param="pcw_ttc_peripheral_valid" name="0" strength="7">
+    <disable param="pcw_ttc_peripheral_freqmhz"/>
+    <set param="pcw_ttc_peripheral_freqmhz" value="50"/>
+  </preset>
+
+  <preset param="pcw_usb_peripheral_valid" name="0" strength="7">
+    <disable param="pcw_usb0_peripheral_freqmhz"/>
+    <set param="pcw_usb0_peripheral_freqmhz" value="60"/>
+    <disable param="pcw_usb1_peripheral_freqmhz"/>
+    <set param="pcw_usb1_peripheral_freqmhz" value="60"/>
+  </preset>
+
+  <preset param="pcw_sdio_peripheral_valid" name="0" strength="7">
+    <disable param="pcw_sdio_peripheral_freqmhz"/>
+    <set param="pcw_sdio_peripheral_freqmhz" value="125"/>
+  </preset>
+
+  <preset param="pcw_apu_clk_ratio_enable" name="6:2:1" >
+    <set param="pcw_apu_clk_ratio_is_6_2_1" value="1" />
+  </preset>
+  <preset param="pcw_apu_clk_ratio_enable" name="4:2:1" >
+    <set param="pcw_apu_clk_ratio_is_6_2_1" value="0" />
+  </preset>
+
+  <preset param="pcw_cpu_peripheral_clksrc" name="ARM PLL" strength="3" >
+    <set param="pcw_cpu_internal_clksrc" value="0" />
+  </preset>
+
+  <preset param="pcw_cpu_peripheral_clksrc" name="DDR PLL" strength="3" >
+    <set param="pcw_cpu_internal_clksrc" value="1" />
+  </preset>
+
+  <preset param="pcw_cpu_peripheral_clksrc" name="IO PLL" strength="3" >
+    <set param="pcw_cpu_internal_clksrc" value="2" />
+  </preset>
+
+  <preset param="pcw_ddr_peripheral_clksrc" name="DDR PLL" strength="3" >
+    <set param="pcw_ddr_internal_clksrc" value="1" />
+  </preset>
+
+  <preset param="pcw_smc_peripheral_clksrc" name="ARM PLL" strength="3" >
+    <set param="pcw_smc_internal_clksrc" value="0" />
+  </preset>
+
+  <preset param="pcw_smc_peripheral_clksrc" name="DDR PLL" strength="3" >
+    <set param="pcw_smc_internal_clksrc" value="1" />
+  </preset>
+
+  <preset param="pcw_smc_peripheral_clksrc" name="IO PLL" strength="3" >
+    <set param="pcw_smc_internal_clksrc" value="2" />
+  </preset>
+
+  <preset param="pcw_qspi_peripheral_clksrc" name="ARM PLL" strength="3" >
+    <set param="pcw_qspi_internal_clksrc" value="0" />
+  </preset>
+
+  <preset param="pcw_qspi_peripheral_clksrc" name="DDR PLL" strength="3" >
+    <set param="pcw_qspi_internal_clksrc" value="1" />
+  </preset>
+
+  <preset param="pcw_qspi_peripheral_clksrc" name="IO PLL" strength="3" >
+    <set param="pcw_qspi_internal_clksrc" value="2" />
+  </preset>
+
+  <preset param="pcw_enet0_peripheral_clksrc" name="ARM PLL" strength="3" >
+    <set param="pcw_enet0_internal_clksrc" value="0" />
+  </preset>
+
+  <preset param="pcw_enet0_peripheral_clksrc" name="IO PLL" strength="3" >
+    <set param="pcw_enet0_internal_clksrc" value="2" />
+  </preset>
+
+  <preset param="pcw_enet0_peripheral_clksrc" name="DDR PLL" strength="3" >
+    <set param="pcw_enet0_internal_clksrc" value="1" />
+  </preset>
+
+  <preset param="pcw_enet0_peripheral_clksrc" name="External" strength="3" >
+    <set param="pcw_enet0_internal_clksrc" value="3" />
+  </preset>
+
+  <preset param="pcw_enet1_peripheral_clksrc" name="ARM PLL" strength="3" >
+    <set param="pcw_enet1_internal_clksrc" value="0" />
+  </preset>
+
+  <preset param="pcw_enet1_peripheral_clksrc" name="DDR PLL" strength="3" >
+    <set param="pcw_enet1_internal_clksrc" value="1" />
+  </preset>
+
+  <preset param="pcw_enet1_peripheral_clksrc" name="External" strength="3" >
+    <set param="pcw_enet1_internal_clksrc" value="3" />
+  </preset>
+
+  <preset param="pcw_sdio_peripheral_clksrc" name="ARM PLL" strength="3" >
+    <set param="pcw_sdio_internal_clksrc" value="0" />
+  </preset>
+
+  <preset param="pcw_sdio_peripheral_clksrc" name="DDR PLL" strength="3" >
+    <set param="pcw_sdio_internal_clksrc" value="1" />
+  </preset>
+
+  <preset param="pcw_sdio_peripheral_clksrc" name="IO PLL" strength="3" >
+    <set param="pcw_sdio_internal_clksrc" value="2" />
+  </preset>
+
+  <preset param="pcw_uart_peripheral_clksrc" name="ARM PLL" strength="3" >
+    <set param="pcw_uart_internal_clksrc" value="0" />
+  </preset>
+
+  <preset param="pcw_uart_peripheral_clksrc" name="DDR PLL" strength="3" >
+    <set param="pcw_uart_internal_clksrc" value="1" />
+  </preset>
+
+  <preset param="pcw_uart_peripheral_clksrc" name="IO PLL" strength="3" >
+    <set param="pcw_uart_internal_clksrc" value="2" />
+  </preset>
+
+  <preset param="pcw_spi_peripheral_clksrc" name="ARM PLL" strength="3" >
+    <set param="pcw_spi_internal_clksrc" value="0" />
+  </preset>
+
+  <preset param="pcw_spi_peripheral_clksrc" name="DDR PLL" strength="3" >
+    <set param="pcw_spi_internal_clksrc" value="1" />
+  </preset>
+
+  <preset param="pcw_spi_peripheral_clksrc" name="IO PLL" strength="3" >
+    <set param="pcw_spi_internal_clksrc" value="2" />
+  </preset>
+
+  <preset param="pcw_can_peripheral_clksrc" name="ARM PLL" strength="3" >
+    <set param="pcw_can_internal_clksrc" value="0" />
+  </preset>
+
+  <preset param="pcw_can_peripheral_clksrc" name="DDR PLL" strength="3" >
+    <set param="pcw_can_internal_clksrc" value="1" />
+  </preset>
+
+  <preset param="pcw_can_peripheral_clksrc" name="IO PLL" strength="3" >
+    <set param="pcw_can_internal_clksrc" value="2" />
+  </preset>
+
+  <preset param="pcw_tpiu_peripheral_clksrc" name="ARM PLL" strength="3" >
+    <set param="pcw_tpiu_internal_clksrc" value="0" />
+  </preset>
+
+  <preset param="pcw_tpiu_peripheral_clksrc" name="DDR PLL" strength="3" >
+    <set param="pcw_tpiu_internal_clksrc" value="1" />
+  </preset>
+
+  <preset param="pcw_tpiu_peripheral_clksrc" name="IO PLL" strength="3" >
+    <set param="pcw_tpiu_internal_clksrc" value="2" />
+  </preset>
+
+  <preset param="pcw_fclk0_peripheral_clksrc" name="ARM PLL" strength="3" >
+    <set param="pcw_fclk0_internal_clksrc" value="0" />
+  </preset>
+
+  <preset param="pcw_fclk0_peripheral_clksrc" name="DDR PLL" strength="3" >
+    <set param="pcw_fclk0_internal_clksrc" value="1" />
+  </preset>
+
+  <preset param="pcw_fclk0_peripheral_clksrc" name="IO PLL" strength="3" >
+    <set param="pcw_fclk0_internal_clksrc" value="2" />
+  </preset>
+
+  <preset param="pcw_fclk1_peripheral_clksrc" name="ARM PLL" strength="3" >
+    <set param="pcw_fclk1_internal_clksrc" value="0" />
+  </preset>
+
+  <preset param="pcw_fclk1_peripheral_clksrc" name="DDR PLL" strength="3" >
+    <set param="pcw_fclk1_internal_clksrc" value="1" />
+  </preset>
+
+  <preset param="pcw_fclk1_peripheral_clksrc" name="IO PLL" strength="3" >
+    <set param="pcw_fclk1_internal_clksrc" value="2" />
+  </preset>
+
+  <preset param="pcw_fclk2_peripheral_clksrc" name="ARM PLL" strength="3" >
+    <set param="pcw_fclk2_internal_clksrc" value="0" />
+  </preset>
+
+  <preset param="pcw_fclk2_peripheral_clksrc" name="DDR PLL" strength="3">
+    <set param="pcw_fclk2_internal_clksrc" value="1" />
+  </preset>
+
+  <preset param="pcw_fclk2_peripheral_clksrc" name="IO PLL" strength="3">
+    <set param="pcw_fclk2_internal_clksrc" value="2" />
+  </preset>
+
+  <preset param="pcw_fclk3_peripheral_clksrc" name="ARM PLL" strength="3">
+    <set param="pcw_fclk3_internal_clksrc" value="0" />
+  </preset>
+
+  <preset param="pcw_fclk3_peripheral_clksrc" name="DDR PLL" strength="3">
+    <set param="pcw_fclk3_internal_clksrc" value="1" />
+  </preset>
+
+  <preset param="pcw_fclk3_peripheral_clksrc" name="IO PLL" strength="3">
+    <set param="pcw_fclk3_internal_clksrc" value="2" />
+  </preset>
+
+  <preset param="pcw_pcap_peripheral_clksrc" name="IO PLL" strength="3">
+    <set param="pcw_pcap_internal_clksrc" value="2" />
+  </preset>
+
+  <preset param="pcw_ttc_peripheral_clksrc" name="CPU_1X" strength="3">
+    <set param="pcw_ttc_internal_clksrc" value="4" />
+  </preset>
+
+  <preset param="pcw_ttc_peripheral_clksrc" name="External" strength="3">
+    <set param="pcw_ttc_internal_clksrc" value="3" />
+  </preset>
+
+  <preset param="pcw_enet1_peripheral_clksrc" name="IO PLL" strength="3">
+    <set param="pcw_enet1_internal_clksrc" value="2" />
+  </preset>
+
+  <preset param="pcw_can0_peripheral_clksrc" name="ARM PLL"  strength="3">
+    <set param="pcw_can0_internal_clksrc" value="0" />
+  </preset>
+
+  <preset param="pcw_can0_peripheral_clksrc" name="DDR PLL"  strength="3">
+    <set param="pcw_can0_internal_clksrc" value="1" />
+  </preset>
+
+  <preset param="pcw_can0_peripheral_clksrc" name="IO PLL"  strength="3">
+    <set param="pcw_can0_internal_clksrc" value="2" />
+  </preset>
+
+  <preset param="pcw_can0_peripheral_clksrc" name="External" strength="3">
+    <set param="pcw_can0_internal_clksrc" value="3" />
+  </preset>
+
+  <preset param="pcw_can1_peripheral_clksrc" name="ARM PLL" strength="3">
+    <set param="pcw_can1_internal_clksrc" value="0" />
+  </preset>
+
+  <preset param="pcw_can1_peripheral_clksrc" name="DDR PLL" strength="3">
+    <set param="pcw_can1_internal_clksrc" value="1" />
+  </preset>
+
+  <preset param="pcw_can1_peripheral_clksrc" name="IO PLL" strength="3">
+    <set param="pcw_can1_internal_clksrc" value="2" />
+  </preset>
+
+  <preset param="pcw_can1_peripheral_clksrc" name="External" strength="3" >
+    <set param="pcw_can1_internal_clksrc" value="3" />
+  </preset>
+
+  <preset param="pcw_tpiu_peripheral_clksrc" name="External" strength="3">
+    <set param="pcw_tpiu_internal_clksrc" value="3" />
+  </preset>
+
+  <preset param="pcw_wdt_peripheral_clksrc" name="CPU_1X" strength="3">
+    <set param="pcw_wdt_internal_clksrc" value="4" />
+    <disable param="pcw_wdt_peripheral_freqmhz"/>
+  </preset>
+
+  <preset param="pcw_wdt_peripheral_clksrc" name="External" strength="3">
+    <set param="pcw_wdt_internal_clksrc" value="3" />
+  </preset>
+
+  <preset param="pcw_ttc0_clk0_peripheral_clksrc" name="CPU_1X" strength="3">
+    <set param="pcw_ttc0_clk0_internal_clksrc" value="4" />
+    <set param="pcw_ttc0_clk0_actual_clksrc" value="0" />
+    <disable param="pcw_ttc0_clk0_peripheral_freqmhz"/>
+  </preset>
+
+  <preset param="pcw_ttc0_clk0_peripheral_clksrc" name="External" strength="3">
+    <set param="pcw_ttc0_clk0_internal_clksrc" value="3" />
+    <set param="pcw_ttc0_clk0_actual_clksrc" value="1" />
+  </preset>
+
+  <preset param="pcw_ttc0_clk1_peripheral_clksrc" name="CPU_1X" strength="3">
+    <set param="pcw_ttc0_clk1_internal_clksrc" value="4" />
+    <set param="pcw_ttc0_clk1_actual_clksrc" value="0" />
+    <disable param="pcw_ttc0_clk1_peripheral_freqmhz"/>
+  </preset>
+
+  <preset param="pcw_ttc0_clk1_peripheral_clksrc" name="External" strength="3">
+    <set param="pcw_ttc0_clk1_internal_clksrc" value="3" />
+    <set param="pcw_ttc0_clk1_actual_clksrc" value="1" />
+  </preset>
+
+  <preset param="pcw_ttc0_clk2_peripheral_clksrc" name="CPU_1X" strength="3">
+    <set param="pcw_ttc0_clk2_internal_clksrc" value="4" />
+    <set param="pcw_ttc0_clk2_actual_clksrc" value="0" />
+    <disable param="pcw_ttc0_clk2_peripheral_freqmhz"/>
+  </preset>
+
+  <preset param="pcw_ttc0_clk2_peripheral_clksrc" name="External" strength="3">
+    <set param="pcw_ttc0_clk2_internal_clksrc" value="3" />
+    <set param="pcw_ttc0_clk2_actual_clksrc" value="1" />
+  </preset>
+
+  <preset param="pcw_ttc1_clk0_peripheral_clksrc" name="CPU_1X" strength="3">
+    <set param="pcw_ttc1_clk0_internal_clksrc" value="4" />
+    <set param="pcw_ttc1_clk0_actual_clksrc" value="0" />
+    <disable param="pcw_ttc1_clk0_peripheral_freqmhz"/>
+  </preset>
+
+  <preset param="pcw_ttc1_clk0_peripheral_clksrc" name="External" strength="3">
+    <set param="pcw_ttc1_clk0_internal_clksrc" value="3" />
+    <set param="pcw_ttc1_clk0_actual_clksrc" value="1" />
+  </preset>
+
+  <preset param="pcw_ttc1_clk1_peripheral_clksrc" name="CPU_1X" strength="3">
+    <set param="pcw_ttc1_clk1_internal_clksrc" value="4" />
+    <set param="pcw_ttc1_clk1_actual_clksrc" value="0" />
+    <disable param="pcw_ttc1_clk1_peripheral_freqmhz"/>
+  </preset>
+
+  <preset param="pcw_ttc1_clk1_peripheral_clksrc" name="External" strength="3">
+    <set param="pcw_ttc1_clk1_internal_clksrc" value="3" />
+    <set param="pcw_ttc1_clk1_actual_clksrc" value="1" />
+  </preset>
+
+  <preset param="pcw_ttc1_clk2_peripheral_clksrc" name="CPU_1X" strength="3">
+    <set param="pcw_ttc1_clk2_internal_clksrc" value="4" />
+    <set param="pcw_ttc1_clk2_actual_clksrc" value="0" />
+    <disable param="pcw_ttc1_clk2_peripheral_freqmhz"/>
+  </preset>
+
+  <preset param="pcw_ttc1_clk2_peripheral_clksrc" name="External" strength="3">
+    <set param="pcw_ttc1_clk2_internal_clksrc" value="3" />
+    <set param="pcw_ttc1_clk2_actual_clksrc" value="1" />
+  </preset>
+  
+  <preset param="pcw_devcfg_ctrl_fab_4k_timer" name="0" strength="3">
+    <set param="ps7_devcfg_CTRL_PCFG_POR_CNT_4K" value="0"/>
+  </preset>
+   
+  <preset param="pcw_devcfg_ctrl_fab_4k_timer" name="1" strength="3">
+    <set param="ps7_devcfg_CTRL_PCFG_POR_CNT_4K" value="1"/>
+  </preset>
+  
+  <preset param="pcw_preset_bank0_voltage" name="LVCMOS 3.3V" strength="3">
+    <set param="pcw_mio_0_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_1_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_2_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_3_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_4_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_5_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_6_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_7_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_8_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_9_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_10_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_11_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_12_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_13_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_14_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_15_iotype" value="LVCMOS 3.3V"  />
+
+    <dischoice param="pcw_mio_0_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_1_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_2_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_3_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_4_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_5_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_6_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_7_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_8_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_9_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_10_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_11_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_12_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_13_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_14_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_15_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_0_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_1_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_2_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_3_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_4_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_5_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_6_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_7_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_8_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_9_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_10_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_11_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_12_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_13_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_14_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_15_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_0_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_1_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_2_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_3_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_4_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_5_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_6_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_7_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_8_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_9_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_10_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_11_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_12_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_13_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_14_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_15_iotype" value="HSTL 1.8V"  />
+  </preset>
+
+  <preset param="pcw_preset_bank0_voltage" name="LVCMOS 2.5V" strength="3">
+    <set param="pcw_mio_0_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_1_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_2_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_3_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_4_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_5_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_6_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_7_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_8_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_9_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_10_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_11_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_12_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_13_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_14_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_15_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_0_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_1_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_2_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_3_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_4_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_5_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_6_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_7_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_8_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_9_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_10_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_11_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_12_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_13_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_14_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_15_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_0_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_1_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_2_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_3_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_4_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_5_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_6_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_7_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_8_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_9_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_10_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_11_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_12_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_13_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_14_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_15_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_0_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_1_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_2_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_3_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_4_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_5_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_6_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_7_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_8_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_9_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_10_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_11_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_12_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_13_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_14_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_15_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_0_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_1_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_2_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_3_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_4_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_5_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_6_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_7_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_8_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_9_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_10_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_11_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_12_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_13_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_14_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_15_iotype" value="HSTL 1.8V"  />
+  </preset>
+
+  <preset param="pcw_preset_bank0_voltage" name="LVCMOS 1.8V" strength="3">
+    <set param="pcw_mio_0_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_1_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_2_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_3_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_4_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_5_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_6_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_7_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_8_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_9_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_10_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_11_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_12_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_13_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_14_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_15_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_0_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_1_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_2_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_3_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_4_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_5_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_6_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_7_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_8_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_9_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_10_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_11_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_12_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_13_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_14_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_15_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_0_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_1_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_2_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_3_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_4_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_5_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_6_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_7_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_8_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_9_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_10_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_11_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_12_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_13_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_14_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_15_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_0_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_1_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_2_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_3_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_4_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_5_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_6_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_7_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_8_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_9_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_10_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_11_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_12_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_13_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_14_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_15_iotype" value="LVTTL 3.3V"  />
+  </preset>
+
+  <preset param="pcw_preset_bank0_voltage" name="LVTTL 3.3V" strength="3">
+    <set param="pcw_mio_0_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_1_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_2_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_3_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_4_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_5_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_6_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_7_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_8_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_9_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_10_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_11_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_12_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_13_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_14_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_15_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_0_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_1_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_2_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_3_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_4_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_5_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_6_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_7_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_8_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_9_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_10_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_11_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_12_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_13_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_14_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_15_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_0_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_1_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_2_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_3_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_4_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_5_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_6_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_7_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_8_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_9_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_10_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_11_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_12_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_13_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_14_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_15_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_0_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_1_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_2_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_3_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_4_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_5_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_6_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_7_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_8_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_9_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_10_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_11_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_12_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_13_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_14_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_15_iotype" value="HSTL 1.8V"  />
+  </preset>
+
+  <preset param="pcw_preset_bank0_voltage" name="HSTL 1.8V" strength="3">
+    <set param="pcw_mio_0_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_1_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_2_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_3_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_4_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_5_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_6_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_7_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_8_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_9_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_10_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_11_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_12_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_13_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_14_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_15_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_0_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_1_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_2_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_3_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_4_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_5_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_6_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_7_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_8_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_9_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_10_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_11_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_12_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_13_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_14_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_15_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_0_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_1_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_2_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_3_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_4_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_5_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_6_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_7_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_8_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_9_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_10_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_11_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_12_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_13_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_14_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_15_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_0_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_1_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_2_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_3_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_4_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_5_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_6_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_7_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_8_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_9_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_10_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_11_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_12_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_13_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_14_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_15_iotype" value="LVTTL 3.3V"  />
+  </preset>
+
+  <preset param="pcw_preset_bank1_voltage" name="LVCMOS 1.8V" strength="3">
+    <set param="pcw_mio_16_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_17_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_18_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_19_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_20_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_21_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_22_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_23_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_24_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_25_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_26_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_27_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_28_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_29_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_30_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_31_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_32_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_33_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_34_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_35_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_36_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_37_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_38_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_39_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_40_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_41_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_42_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_43_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_44_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_45_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_46_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_47_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_48_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_49_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_50_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_51_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_52_iotype" value="LVCMOS 1.8V"  />
+    <set param="pcw_mio_53_iotype" value="LVCMOS 1.8V"  />
+
+    <dischoice param="pcw_mio_16_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_17_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_18_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_19_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_20_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_21_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_22_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_23_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_24_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_25_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_26_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_27_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_28_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_29_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_30_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_31_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_32_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_33_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_34_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_35_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_36_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_37_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_38_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_39_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_40_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_41_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_42_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_43_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_44_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_45_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_46_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_47_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_48_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_49_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_50_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_51_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_52_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_53_iotype" value="LVTTL 3.3V"  />
+
+    <dischoice param="pcw_mio_16_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_17_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_18_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_19_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_20_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_21_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_22_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_23_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_24_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_25_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_26_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_27_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_28_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_29_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_30_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_31_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_32_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_33_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_34_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_35_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_36_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_37_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_38_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_39_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_40_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_41_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_42_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_43_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_44_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_45_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_46_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_47_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_48_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_49_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_50_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_51_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_52_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_53_iotype" value="LVCMOS 2.5V"  />
+
+    <dischoice param="pcw_mio_16_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_17_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_18_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_19_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_20_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_21_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_22_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_23_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_24_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_25_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_26_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_27_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_28_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_29_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_30_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_31_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_32_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_33_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_34_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_35_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_36_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_37_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_38_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_39_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_40_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_41_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_42_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_43_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_44_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_45_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_46_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_47_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_48_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_49_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_50_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_51_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_52_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_53_iotype" value="LVCMOS 3.3V"  />
+  </preset>
+
+  <preset param="pcw_preset_bank1_voltage" name="LVCMOS 2.5V" strength="3">
+    <set param="pcw_mio_16_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_17_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_18_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_19_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_20_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_21_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_22_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_23_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_24_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_25_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_26_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_27_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_28_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_29_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_30_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_31_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_32_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_33_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_34_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_35_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_36_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_37_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_38_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_39_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_40_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_41_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_42_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_43_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_44_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_45_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_46_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_47_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_48_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_49_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_50_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_51_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_52_iotype" value="LVCMOS 2.5V"  />
+    <set param="pcw_mio_53_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_16_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_17_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_18_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_19_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_20_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_21_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_22_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_23_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_24_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_25_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_26_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_27_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_28_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_29_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_30_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_31_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_32_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_33_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_34_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_35_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_36_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_37_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_38_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_39_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_40_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_41_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_42_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_43_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_44_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_45_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_46_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_47_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_48_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_49_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_50_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_51_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_52_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_53_iotype" value="LVTTL 3.3V"  />
+
+    <dischoice param="pcw_mio_16_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_17_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_18_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_19_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_20_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_21_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_22_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_23_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_24_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_25_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_26_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_27_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_28_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_29_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_30_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_31_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_32_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_33_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_34_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_35_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_36_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_37_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_38_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_39_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_40_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_41_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_42_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_43_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_44_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_45_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_46_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_47_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_48_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_49_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_50_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_51_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_52_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_53_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_16_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_17_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_18_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_19_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_20_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_21_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_22_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_23_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_24_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_25_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_26_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_27_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_28_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_29_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_30_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_31_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_32_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_33_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_34_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_35_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_36_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_37_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_38_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_39_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_40_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_41_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_42_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_43_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_44_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_45_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_46_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_47_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_48_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_49_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_50_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_51_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_52_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_53_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_16_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_17_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_18_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_19_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_20_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_21_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_22_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_23_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_24_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_25_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_26_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_27_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_28_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_29_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_30_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_31_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_32_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_33_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_34_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_35_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_36_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_37_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_38_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_39_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_40_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_41_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_42_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_43_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_44_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_45_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_46_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_47_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_48_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_49_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_50_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_51_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_52_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_53_iotype" value="HSTL 1.8V"  />
+  </preset>
+
+  <preset param="pcw_preset_bank1_voltage" name="LVCMOS 3.3V" strength="3">
+    <set param="pcw_mio_16_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_17_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_18_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_19_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_20_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_21_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_22_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_23_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_24_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_25_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_26_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_27_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_28_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_29_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_30_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_31_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_32_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_33_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_34_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_35_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_36_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_37_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_38_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_39_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_40_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_41_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_42_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_43_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_44_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_45_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_46_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_47_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_48_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_49_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_50_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_51_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_52_iotype" value="LVCMOS 3.3V"  />
+    <set param="pcw_mio_53_iotype" value="LVCMOS 3.3V"  />
+
+    <dischoice param="pcw_mio_16_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_17_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_18_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_19_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_20_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_21_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_22_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_23_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_24_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_25_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_26_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_27_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_28_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_29_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_30_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_31_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_32_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_33_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_34_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_35_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_36_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_37_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_38_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_39_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_40_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_41_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_42_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_43_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_44_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_45_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_46_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_47_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_48_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_49_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_50_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_51_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_52_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_53_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_16_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_17_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_18_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_19_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_20_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_21_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_22_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_23_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_24_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_25_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_26_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_27_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_28_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_29_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_30_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_31_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_32_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_33_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_34_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_35_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_36_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_37_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_38_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_39_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_40_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_41_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_42_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_43_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_44_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_45_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_46_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_47_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_48_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_49_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_50_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_51_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_52_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_53_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_16_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_17_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_18_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_19_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_20_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_21_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_22_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_23_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_24_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_25_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_26_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_27_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_28_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_29_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_30_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_31_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_32_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_33_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_34_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_35_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_36_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_37_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_38_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_39_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_40_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_41_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_42_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_43_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_44_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_45_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_46_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_47_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_48_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_49_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_50_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_51_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_52_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_53_iotype" value="LVCMOS 2.5V"  />
+  </preset>
+
+  <preset param="pcw_preset_bank1_voltage" name="LVTTL 3.3V" strength="3">
+    <set param="pcw_mio_16_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_17_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_18_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_19_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_20_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_21_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_22_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_23_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_24_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_25_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_26_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_27_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_28_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_29_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_30_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_31_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_32_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_33_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_34_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_35_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_36_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_37_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_38_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_39_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_40_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_41_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_42_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_43_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_44_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_45_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_46_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_47_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_48_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_49_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_50_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_51_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_52_iotype" value="LVTTL 3.3V"  />
+    <set param="pcw_mio_53_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_16_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_17_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_18_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_19_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_20_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_21_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_22_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_23_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_24_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_25_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_26_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_27_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_28_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_29_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_30_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_31_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_32_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_33_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_34_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_35_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_36_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_37_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_38_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_39_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_40_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_41_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_42_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_43_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_44_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_45_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_46_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_47_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_48_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_49_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_50_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_51_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_52_iotype" value="LVCMOS 1.8V"  />
+    <dischoice param="pcw_mio_53_iotype" value="LVCMOS 1.8V"  />
+
+    <dischoice param="pcw_mio_16_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_17_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_18_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_19_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_20_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_21_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_22_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_23_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_24_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_25_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_26_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_27_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_28_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_29_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_30_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_31_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_32_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_33_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_34_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_35_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_36_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_37_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_38_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_39_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_40_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_41_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_42_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_43_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_44_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_45_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_46_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_47_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_48_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_49_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_50_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_51_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_52_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_53_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_16_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_17_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_18_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_19_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_20_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_21_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_22_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_23_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_24_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_25_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_26_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_27_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_28_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_29_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_30_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_31_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_32_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_33_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_34_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_35_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_36_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_37_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_38_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_39_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_40_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_41_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_42_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_43_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_44_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_45_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_46_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_47_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_48_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_49_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_50_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_51_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_52_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_53_iotype" value="HSTL 1.8V"  />
+  </preset>
+
+  <preset param="pcw_preset_bank1_voltage" name="HSTL 1.8V" strength="3">
+    <set param="pcw_mio_16_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_17_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_18_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_19_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_20_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_21_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_22_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_23_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_24_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_25_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_26_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_27_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_28_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_29_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_30_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_31_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_32_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_33_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_34_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_35_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_36_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_37_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_38_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_39_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_40_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_41_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_42_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_43_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_44_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_45_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_46_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_47_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_48_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_49_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_50_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_51_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_52_iotype" value="HSTL 1.8V"  />
+    <set param="pcw_mio_53_iotype" value="HSTL 1.8V"  />
+    <dischoice param="pcw_mio_16_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_17_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_18_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_19_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_20_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_21_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_22_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_23_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_24_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_25_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_26_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_27_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_28_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_29_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_30_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_31_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_32_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_33_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_34_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_35_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_36_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_37_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_38_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_39_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_40_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_41_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_42_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_43_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_44_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_45_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_46_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_47_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_48_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_49_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_50_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_51_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_52_iotype" value="LVTTL 3.3V"  />
+    <dischoice param="pcw_mio_53_iotype" value="LVTTL 3.3V"  />
+
+    <dischoice param="pcw_mio_16_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_17_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_18_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_19_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_20_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_21_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_22_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_23_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_24_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_25_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_26_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_27_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_28_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_29_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_30_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_31_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_32_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_33_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_34_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_35_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_36_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_37_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_38_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_39_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_40_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_41_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_42_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_43_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_44_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_45_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_46_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_47_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_48_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_49_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_50_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_51_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_52_iotype" value="LVCMOS 2.5V"  />
+    <dischoice param="pcw_mio_53_iotype" value="LVCMOS 2.5V"  />
+
+    <dischoice param="pcw_mio_16_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_17_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_18_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_19_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_20_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_21_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_22_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_23_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_24_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_25_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_26_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_27_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_28_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_29_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_30_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_31_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_32_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_33_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_34_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_35_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_36_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_37_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_38_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_39_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_40_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_41_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_42_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_43_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_44_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_45_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_46_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_47_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_48_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_49_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_50_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_51_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_52_iotype" value="LVCMOS 3.3V"  />
+    <dischoice param="pcw_mio_53_iotype" value="LVCMOS 3.3V"  />
+  </preset>
+
+  <preset name="default" param="pcw_preset_mio_pinname" strength="4">
+    <set param="pcw_mio_mio[0]_pinname" value="MIO[0]"/>
+    <set param="pcw_mio_mio[1]_pinname" value="MIO[1]"/>
+    <set param="pcw_mio_mio[2]_pinname" value="MIO[2]"/>
+    <set param="pcw_mio_mio[3]_pinname" value="MIO[3]"/>
+    <set param="pcw_mio_mio[4]_pinname" value="MIO[4]"/>
+    <set param="pcw_mio_mio[5]_pinname" value="MIO[5]"/>
+    <set param="pcw_mio_mio[6]_pinname" value="MIO[6]"/>
+    <set param="pcw_mio_mio[7]_pinname" value="MIO[7]"/>
+    <set param="pcw_mio_mio[8]_pinname" value="MIO[8]"/>
+    <set param="pcw_mio_mio[9]_pinname" value="MIO[9]"/>
+    <set param="pcw_mio_mio[10]_pinname" value="MIO[10]"/>
+    <set param="pcw_mio_mio[11]_pinname" value="MIO[11]"/>
+    <set param="pcw_mio_mio[12]_pinname" value="MIO[12]"/>
+    <set param="pcw_mio_mio[13]_pinname" value="MIO[13]"/>
+    <set param="pcw_mio_mio[14]_pinname" value="MIO[14]"/>
+    <set param="pcw_mio_mio[15]_pinname" value="MIO[15]"/>
+    <set param="pcw_mio_mio[16]_pinname" value="MIO[16]"/>
+    <set param="pcw_mio_mio[17]_pinname" value="MIO[17]"/>
+    <set param="pcw_mio_mio[18]_pinname" value="MIO[18]"/>
+    <set param="pcw_mio_mio[19]_pinname" value="MIO[19]"/>
+    <set param="pcw_mio_mio[20]_pinname" value="MIO[20]"/>
+    <set param="pcw_mio_mio[21]_pinname" value="MIO[21]"/>
+    <set param="pcw_mio_mio[22]_pinname" value="MIO[22]"/>
+    <set param="pcw_mio_mio[23]_pinname" value="MIO[23]"/>
+    <set param="pcw_mio_mio[24]_pinname" value="MIO[24]"/>
+    <set param="pcw_mio_mio[25]_pinname" value="MIO[25]"/>
+    <set param="pcw_mio_mio[26]_pinname" value="MIO[26]"/>
+    <set param="pcw_mio_mio[27]_pinname" value="MIO[27]"/>
+    <set param="pcw_mio_mio[28]_pinname" value="MIO[28]"/>
+    <set param="pcw_mio_mio[29]_pinname" value="MIO[29]"/>
+    <set param="pcw_mio_mio[30]_pinname" value="MIO[30]"/>
+    <set param="pcw_mio_mio[31]_pinname" value="MIO[31]"/>
+    <set param="pcw_mio_mio[32]_pinname" value="MIO[32]"/>
+    <set param="pcw_mio_mio[33]_pinname" value="MIO[33]"/>
+    <set param="pcw_mio_mio[34]_pinname" value="MIO[34]"/>
+    <set param="pcw_mio_mio[35]_pinname" value="MIO[35]"/>
+    <set param="pcw_mio_mio[36]_pinname" value="MIO[36]"/>
+    <set param="pcw_mio_mio[37]_pinname" value="MIO[37]"/>
+    <set param="pcw_mio_mio[38]_pinname" value="MIO[38]"/>
+    <set param="pcw_mio_mio[39]_pinname" value="MIO[39]"/>
+    <set param="pcw_mio_mio[40]_pinname" value="MIO[40]"/>
+    <set param="pcw_mio_mio[41]_pinname" value="MIO[41]"/>
+    <set param="pcw_mio_mio[42]_pinname" value="MIO[42]"/>
+    <set param="pcw_mio_mio[43]_pinname" value="MIO[43]"/>
+    <set param="pcw_mio_mio[44]_pinname" value="MIO[44]"/>
+    <set param="pcw_mio_mio[45]_pinname" value="MIO[45]"/>
+    <set param="pcw_mio_mio[46]_pinname" value="MIO[46]"/>
+    <set param="pcw_mio_mio[47]_pinname" value="MIO[47]"/>
+    <set param="pcw_mio_mio[48]_pinname" value="MIO[48]"/>
+    <set param="pcw_mio_mio[49]_pinname" value="MIO[49]"/>
+    <set param="pcw_mio_mio[50]_pinname" value="MIO[50]"/>
+    <set param="pcw_mio_mio[51]_pinname" value="MIO[51]"/>
+    <set param="pcw_mio_mio[52]_pinname" value="MIO[52]"/>
+    <set param="pcw_mio_mio[53]_pinname" value="MIO[53]"/>
+  </preset>
+
+</presets>

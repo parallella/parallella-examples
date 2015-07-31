@@ -1,0 +1,1363 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE presets PUBLIC "presets" "presets.dtd" >
+<presets>
+
+  <preset param="pcw_uiparam_ddr_config" name="Custom" >
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="MT41J128M8 JP-125" strength="8" >
+    <set param="pcw_uiparam_ddr_dram_width" value="8 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="1024 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="DDR3_1066F" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="14" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="10" />
+    <set param="pcw_uiparam_ddr_cl" value="7" />
+    <set param="pcw_uiparam_ddr_cwl" value="6" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="7" />
+    <set param="pcw_uiparam_ddr_t_rp" value="7" />
+    <set param="pcw_uiparam_ddr_t_rc" value="48.75" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="35.0" />
+    <set param="pcw_uiparam_ddr_t_faw" value="30.0" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="MT41J128M8 JP-15E" strength="8" >
+    <set param="pcw_uiparam_ddr_dram_width" value="8 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="1024 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="DDR3_1066F" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="14" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="10" />
+    <set param="pcw_uiparam_ddr_cl" value="7" />
+    <set param="pcw_uiparam_ddr_cwl" value="6" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="7" />
+    <set param="pcw_uiparam_ddr_t_rp" value="7" />
+    <set param="pcw_uiparam_ddr_t_rc" value="49.5" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="36.0" />
+    <set param="pcw_uiparam_ddr_t_faw" value="30.0" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="MT41J64M16 JT-125G" strength="8" >
+    <set param="pcw_uiparam_ddr_dram_width" value="8 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="1024 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="DDR3_1066F" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="13" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="10" />
+    <set param="pcw_uiparam_ddr_cl" value="7" />
+    <set param="pcw_uiparam_ddr_cwl" value="6" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="7" />
+    <set param="pcw_uiparam_ddr_t_rp" value="7" />
+    <set param="pcw_uiparam_ddr_t_rc" value="48.75" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="35.0" />
+    <set param="pcw_uiparam_ddr_t_faw" value="40.0" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="MT41J64M16 JT-15E" strength="8" >
+    <set param="pcw_uiparam_ddr_dram_width" value="8 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="1024 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="DDR3_1066F" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="13" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="10" />
+    <set param="pcw_uiparam_ddr_cl" value="7" />
+    <set param="pcw_uiparam_ddr_cwl" value="6" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="7" />
+    <set param="pcw_uiparam_ddr_t_rp" value="7" />
+    <set param="pcw_uiparam_ddr_t_rc" value="49.5" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="36.0" />
+    <set param="pcw_uiparam_ddr_t_faw" value="45.0" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="MT41J256M8 DA-107" strength="8" >
+    <set param="pcw_uiparam_ddr_dram_width" value="8 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="2048 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="DDR3_1066F" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="15" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="10" />
+    <set param="pcw_uiparam_ddr_cl" value="7" />
+    <set param="pcw_uiparam_ddr_cwl" value="6" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="7" />
+    <set param="pcw_uiparam_ddr_t_rp" value="7" />
+    <set param="pcw_uiparam_ddr_t_rc" value="48.91" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="34.0" />
+    <set param="pcw_uiparam_ddr_t_faw" value="25.0" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="MT41K128M16 JT-125" strength="8" >
+    <set param="pcw_uiparam_ddr_dram_width" value="16 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="2048 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="DDR3_1066F" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="14" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="10" />
+    <set param="pcw_uiparam_ddr_cl" value="7" />
+    <set param="pcw_uiparam_ddr_cwl" value="6" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="7" />
+    <set param="pcw_uiparam_ddr_t_rp" value="7" />
+    <set param="pcw_uiparam_ddr_t_rc" value="48.75" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="35.0" />
+    <set param="pcw_uiparam_ddr_t_faw" value="40.0" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="MT41J256M8 HX-125" strength="8" >
+    <set param="pcw_uiparam_ddr_dram_width" value="8 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="2048 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="DDR3_1066F" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="15" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="10" />
+    <set param="pcw_uiparam_ddr_cl" value="7" />
+    <set param="pcw_uiparam_ddr_cwl" value="6" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="7" />
+    <set param="pcw_uiparam_ddr_t_rp" value="7" />
+    <set param="pcw_uiparam_ddr_t_rc" value="48.75" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="35.0" />
+    <set param="pcw_uiparam_ddr_t_faw" value="32.0" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="MT41J256M8 HX-15E" strength="8" >
+    <set param="pcw_uiparam_ddr_dram_width" value="8 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="2048 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="DDR3_1066F" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="15" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="10" />
+    <set param="pcw_uiparam_ddr_cl" value="7" />
+    <set param="pcw_uiparam_ddr_cwl" value="6" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="7" />
+    <set param="pcw_uiparam_ddr_t_rp" value="7" />
+    <set param="pcw_uiparam_ddr_t_rc" value="49.5" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="36.0" />
+    <set param="pcw_uiparam_ddr_t_faw" value="30.0" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="MT41J256M8 HX-187E" strength="8" >
+    <set param="pcw_uiparam_ddr_dram_width" value="8 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="2048 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="DDR3_1066F" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="15" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="10" />
+    <set param="pcw_uiparam_ddr_cl" value="7" />
+    <set param="pcw_uiparam_ddr_cwl" value="6" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="7" />
+    <set param="pcw_uiparam_ddr_t_rp" value="7" />
+    <set param="pcw_uiparam_ddr_t_rc" value="50.625" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="37.5" />
+    <set param="pcw_uiparam_ddr_t_faw" value="37.5" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="MT41J128M16 HA-107G" strength="8" >
+    <set param="pcw_uiparam_ddr_dram_width" value="16 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="2048 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="DDR3_1066F" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="14" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="10" />
+    <set param="pcw_uiparam_ddr_cl" value="7" />
+    <set param="pcw_uiparam_ddr_cwl" value="6" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="7" />
+    <set param="pcw_uiparam_ddr_t_rp" value="7" />
+    <set param="pcw_uiparam_ddr_t_rc" value="48.91" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="34.0" />
+    <set param="pcw_uiparam_ddr_t_faw" value="25.0" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="MT41J128M16 HA-125" strength="8" >
+    <set param="pcw_uiparam_ddr_dram_width" value="16 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="2048 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="DDR3_1066F" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="14" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="10" />
+    <set param="pcw_uiparam_ddr_cl" value="7" />
+    <set param="pcw_uiparam_ddr_cwl" value="6" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="7" />
+    <set param="pcw_uiparam_ddr_t_rp" value="7" />
+    <set param="pcw_uiparam_ddr_t_rc" value="48.75" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="35.0" />
+    <set param="pcw_uiparam_ddr_t_faw" value="40.0" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="MT41J128M16 HA-15E" strength="8" >
+    <set param="pcw_uiparam_ddr_dram_width" value="16 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="2048 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="DDR3_1066F" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="14" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="10" />
+    <set param="pcw_uiparam_ddr_cl" value="7" />
+    <set param="pcw_uiparam_ddr_cwl" value="6" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="7" />
+    <set param="pcw_uiparam_ddr_t_rp" value="7" />
+    <set param="pcw_uiparam_ddr_t_rc" value="49.5" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="36.0" />
+    <set param="pcw_uiparam_ddr_t_faw" value="45.0" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="MT41J128M16 HA-187E" strength="8" >
+    <set param="pcw_uiparam_ddr_dram_width" value="16 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="2048 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="DDR3_1066F" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="14" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="10" />
+    <set param="pcw_uiparam_ddr_cl" value="7" />
+    <set param="pcw_uiparam_ddr_cwl" value="6" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="7" />
+    <set param="pcw_uiparam_ddr_t_rp" value="7" />
+    <set param="pcw_uiparam_ddr_t_rc" value="50.625" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="37.5" />
+    <set param="pcw_uiparam_ddr_t_faw" value="50.0" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="MT41J512M8 RA-15E" strength="8" >
+    <set param="pcw_uiparam_ddr_dram_width" value="8 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="4096 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="DDR3_1066F" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="16" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="10" />
+    <set param="pcw_uiparam_ddr_cl" value="7" />
+    <set param="pcw_uiparam_ddr_cwl" value="6" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="7" />
+    <set param="pcw_uiparam_ddr_t_rp" value="7" />
+    <set param="pcw_uiparam_ddr_t_rc" value="49.5" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="36.0" />
+    <set param="pcw_uiparam_ddr_t_faw" value="30.0" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="MT41K128M16 HA-15E" strength="8" >
+    <set param="pcw_uiparam_ddr_dram_width" value="16 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="2048 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="DDR3_1066F" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="14" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="10" />
+    <set param="pcw_uiparam_ddr_cl" value="7" />
+    <set param="pcw_uiparam_ddr_cwl" value="6" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="7" />
+    <set param="pcw_uiparam_ddr_t_rp" value="7" />
+    <set param="pcw_uiparam_ddr_t_rc" value="49.5" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="36.0" />
+    <set param="pcw_uiparam_ddr_t_faw" value="45.0" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="MT41K256M16 RE-125" strength="8" >
+    <set param="pcw_uiparam_ddr_dram_width" value="16 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="4096 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="DDR3_1066F" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="15" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="10" />
+    <set param="pcw_uiparam_ddr_cl" value="7" />
+    <set param="pcw_uiparam_ddr_cwl" value="6" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="7" />
+    <set param="pcw_uiparam_ddr_t_rp" value="7" />
+    <set param="pcw_uiparam_ddr_t_rc" value="48.75" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="35.0" />
+    <set param="pcw_uiparam_ddr_t_faw" value="40.0" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="MT41K256M16 RE-15E" strength="8" >
+    <set param="pcw_uiparam_ddr_dram_width" value="16 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="4096 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="DDR3_1066F" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="15" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="10" />
+    <set param="pcw_uiparam_ddr_cl" value="7" />
+    <set param="pcw_uiparam_ddr_cwl" value="6" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="7" />
+    <set param="pcw_uiparam_ddr_t_rp" value="7" />
+    <set param="pcw_uiparam_ddr_t_rc" value="49.5" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="36.0" />
+    <set param="pcw_uiparam_ddr_t_faw" value="45.0" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="MT41K256M8 DA-125" strength="8" >
+    <set param="pcw_uiparam_ddr_dram_width" value="8 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="2048 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="DDR3_1066F" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="15" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="10" />
+    <set param="pcw_uiparam_ddr_cl" value="7" />
+    <set param="pcw_uiparam_ddr_cwl" value="6" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="7" />
+    <set param="pcw_uiparam_ddr_t_rp" value="7" />
+    <set param="pcw_uiparam_ddr_t_rc" value="48.75" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="35.0" />
+    <set param="pcw_uiparam_ddr_t_faw" value="32.0" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="MT41K256M8 DA-15E" strength="8" >
+    <set param="pcw_uiparam_ddr_dram_width" value="8 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="2048 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="DDR3_1066F" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="15" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="10" />
+    <set param="pcw_uiparam_ddr_cl" value="7" />
+    <set param="pcw_uiparam_ddr_cwl" value="6" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="7" />
+    <set param="pcw_uiparam_ddr_t_rp" value="7" />
+    <set param="pcw_uiparam_ddr_t_rc" value="49.5" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="36.0" />
+    <set param="pcw_uiparam_ddr_t_faw" value="30.0" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="MT41K256M8 HX-15E" strength="8" >
+    <set param="pcw_uiparam_ddr_dram_width" value="8 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="2048 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="DDR3_1066F" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="15" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="10" />
+    <set param="pcw_uiparam_ddr_cl" value="7" />
+    <set param="pcw_uiparam_ddr_cwl" value="6" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="7" />
+    <set param="pcw_uiparam_ddr_t_rp" value="7" />
+    <set param="pcw_uiparam_ddr_t_rc" value="49.5" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="36.0" />
+    <set param="pcw_uiparam_ddr_t_faw" value="30.0" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="MT41J256M16 RE-125" strength="8" >
+    <set param="pcw_uiparam_ddr_dram_width" value="16 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="4096 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="DDR3_1066F" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="15" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="10" />
+    <set param="pcw_uiparam_ddr_cl" value="7" />
+    <set param="pcw_uiparam_ddr_cwl" value="6" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="7" />
+    <set param="pcw_uiparam_ddr_t_rp" value="7" />
+    <set param="pcw_uiparam_ddr_t_rc" value="48.91" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="35.0" />
+    <set param="pcw_uiparam_ddr_t_faw" value="40.0" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="MT42L64M32 D1KL-25" strength="8" >
+    <set param="pcw_uiparam_ddr_dram_width" value="32 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="2048 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_800" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="14" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="9" />
+    <set param="pcw_uiparam_ddr_cl" value="7" />
+    <set param="pcw_uiparam_ddr_cwl" value="0" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="7" />
+    <set param="pcw_uiparam_ddr_t_rp" value="8" />
+    <set param="pcw_uiparam_ddr_t_rc" value="63.0" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="42.0" />
+    <set param="pcw_uiparam_ddr_t_faw" value="50.0" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="MT42L128M16 D1KL-25" strength="8" >
+    <set param="pcw_uiparam_ddr_dram_width" value="16 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="2048 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_800" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="14" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="10" />
+    <set param="pcw_uiparam_ddr_cl" value="6" />
+    <set param="pcw_uiparam_ddr_cwl" value="0" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="8" />
+    <set param="pcw_uiparam_ddr_t_rp" value="9" />
+    <set param="pcw_uiparam_ddr_t_rc" value="63.0" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="42.0" />
+    <set param="pcw_uiparam_ddr_t_faw" value="50.0" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="MT47H128M16 RT-25E" strength="8" >
+    <set param="pcw_uiparam_ddr_dram_width" value="16 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="2048 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="DDR2_800D" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="14" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="10" />
+    <set param="pcw_uiparam_ddr_cl" value="5" />
+    <set param="pcw_uiparam_ddr_cwl" value="3" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="5" />
+    <set param="pcw_uiparam_ddr_t_rp" value="5" />
+    <set param="pcw_uiparam_ddr_t_rc" value="55" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="40.0" />
+    <set param="pcw_uiparam_ddr_t_faw" value="45.0" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="MT47H128M8 CF-25" strength="8" >
+    <set param="pcw_uiparam_ddr_dram_width" value="8 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="1024 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="DDR2_800D" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="14" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="10" />
+    <set param="pcw_uiparam_ddr_cl" value="6" />
+    <set param="pcw_uiparam_ddr_cwl" value="0" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="6" />
+    <set param="pcw_uiparam_ddr_t_rp" value="6" />
+    <set param="pcw_uiparam_ddr_t_rc" value="55" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="40.0" />
+    <set param="pcw_uiparam_ddr_t_faw" value="35.0" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="MT47H128M8 CF-25E" strength="8" >
+    <set param="pcw_uiparam_ddr_dram_width" value="8 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="1024 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="DDR2_800D" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="14" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="10" />
+    <set param="pcw_uiparam_ddr_cl" value="5" />
+    <set param="pcw_uiparam_ddr_cwl" value="0" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="5" />
+    <set param="pcw_uiparam_ddr_t_rp" value="5" />
+    <set param="pcw_uiparam_ddr_t_rc" value="55" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="40.0" />
+    <set param="pcw_uiparam_ddr_t_faw" value="35.0" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="MT47H256M8 EB-25E" strength="8" >
+    <set param="pcw_uiparam_ddr_dram_width" value="8 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="2048 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="DDR2_800D" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="15" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="10" />
+    <set param="pcw_uiparam_ddr_cl" value="5" />
+    <set param="pcw_uiparam_ddr_cwl" value="0" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="5" />
+    <set param="pcw_uiparam_ddr_t_rp" value="5" />
+    <set param="pcw_uiparam_ddr_t_rc" value="55" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="40.0" />
+    <set param="pcw_uiparam_ddr_t_faw" value="35.0" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="MT47H64M16 HR-25" strength="8" >
+    <set param="pcw_uiparam_ddr_dram_width" value="16 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="1024 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="DDR2_800D" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="13" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="10" />
+    <set param="pcw_uiparam_ddr_cl" value="6" />
+    <set param="pcw_uiparam_ddr_cwl" value="0" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="6" />
+    <set param="pcw_uiparam_ddr_t_rp" value="6" />
+    <set param="pcw_uiparam_ddr_t_rc" value="55" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="40.0" />
+    <set param="pcw_uiparam_ddr_t_faw" value="45.0" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="MT47H64M16 HR-25E" strength="8" >
+    <set param="pcw_uiparam_ddr_dram_width" value="16 Bits" />
+    <set param="pcw_uiparam_ddr_device_capacity" value="1024 MBits" />
+    <set param="pcw_uiparam_ddr_speed_bin" value="DDR2_800D" />
+    <set param="pcw_uiparam_ddr_bank_addr_count" value="3" />
+    <set param="pcw_uiparam_ddr_row_addr_count" value="13" />
+    <set param="pcw_uiparam_ddr_col_addr_count" value="10" />
+    <set param="pcw_uiparam_ddr_cl" value="5" />
+    <set param="pcw_uiparam_ddr_cwl" value="0" />
+    <set param="pcw_uiparam_ddr_t_rcd" value="5" />
+    <set param="pcw_uiparam_ddr_t_rp" value="5" />
+    <set param="pcw_uiparam_ddr_t_rc" value="55" />
+    <set param="pcw_uiparam_ddr_t_ras_min" value="40.0" />
+    <set param="pcw_uiparam_ddr_t_faw" value="45.0" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_partno" name="Custom" >
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_memory_type" name="LPDDR 2" strength="7" >
+    <set param="pcw_internal_ddr_memory_type" value="1" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <set param="pcw_uiparam_ddr_train_write_level" value="0" />
+    <disable param="pcw_uiparam_ddr_train_write_level" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41J128M8 JP-125" /> 
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41J128M8 JP-15E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41J64M16 JT-125G" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41J64M16 JT-15E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41J256M8 DA-107" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41J256M8 HX-125" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41J256M8 HX-15E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41J256M8 HX-187E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41J128M16 HA-107G" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41J128M16 HA-125" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41J128M16 HA-15E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41J128M16 HA-187E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41J512M8 RA-15E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41K128M16 HA-15E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41K128M16 JT-125" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41K256M16 RE-125" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41K256M16 RE-15E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41K256M8 DA-125" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41K256M8 DA-15E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41K256M8 HX-15E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41J256M16 RE-125" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT47H128M16 RT-25E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT47H128M8 CF-25" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT47H128M8 CF-25E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT47H256M8 EB-25E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT47H64M16 HR-25" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT47H64M16 HR-25E" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_400B" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_400C" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_533B" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_533C" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_667C" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_667D" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_800C" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_800D" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_800E" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR3_800D" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR3_800E" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR3_1066E" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR3_1066F" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR3_1066G" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR3_1333F" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR3_1333G" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR3_1333H" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR3_1333J" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR3_1600G" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR3_1600H" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR3_1600J" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR3_1600K" />
+    </preset>
+
+  <preset param="pcw_uiparam_ddr_memory_type" name="DDR 2" strength="7" >
+    <set param="pcw_internal_ddr_memory_type" value="2" />
+    <set param="pcw_uiparam_ddr_cwl" value="3" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+    <set param="pcw_uiparam_ddr_train_write_level" value="0" />
+    <disable param="pcw_uiparam_ddr_train_write_level" />
+    <set param="pcw_uiparam_ddr_train_read_gate" value="0" />
+    <disable param="pcw_uiparam_ddr_train_read_gate" />
+    <set param="pcw_uiparam_ddr_train_data_eye" value="0" />
+    <disable param="pcw_uiparam_ddr_train_data_eye" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41J128M8 JP-125" /> 
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41J128M8 JP-15E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41J64M16 JT-125G" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41J64M16 JT-15E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41J256M8 DA-107" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41J256M8 HX-125" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41J256M8 HX-15E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41J256M8 HX-187E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41J128M16 HA-107G" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41J128M16 HA-125" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41J128M16 HA-15E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41J128M16 HA-187E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41J512M8 RA-15E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41K128M16 HA-15E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41K128M16 JT-125" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41K256M16 RE-125" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41K256M16 RE-15E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41K256M8 DA-125" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41K256M8 DA-15E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41K256M8 HX-15E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT41J256M16 RE-125" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT42L64M32 D1KL-25" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT42L128M16 D1KL-25" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR3_800D" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR3_800E" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR3_1066E" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR3_1066F" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR3_1066G" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR3_1333F" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR3_1333G" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR3_1333H" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR3_1333J" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR3_1600G" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR3_1600H" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR3_1600J" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR3_1600K" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_333" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_400" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_533" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_667" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_800" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_933" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_1066" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_memory_type" name="DDR 3" strength="7">
+    <set param="pcw_internal_ddr_memory_type" value="3" />
+    <set param="pcw_uiparam_ddr_bl" value="8" />
+    <disable param="pcw_uiparam_ddr_bl"  />
+    <set param="pcw_internal_ddr_ddr3slew" value="0" />
+    <set param="pcw_internal_ddr_ddr3l" value="0" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT47H128M16 RT-25E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT47H128M8 CF-25" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT47H128M8 CF-25E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT47H256M8 EB-25E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT47H64M16 HR-25" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT47H64M16 HR-25E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT42L64M32 D1KL-25" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT42L128M16 D1KL-25" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_400B" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_400C" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_533B" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_533C" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_667C" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_667D" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_800C" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_800D" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_800E" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_333" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_400" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_533" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_667" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_800" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_933" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_1066" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_memory_type" name="DDR 3L" strength="7">
+    <set param="pcw_internal_ddr_memory_type" value="3" />
+    <set param="pcw_uiparam_ddr_bl" value="8" />
+    <disable param="pcw_uiparam_ddr_bl"  />
+    <set param="pcw_internal_ddr_ddr3slew" value="0" />
+    <set param="pcw_internal_ddr_ddr3l" value="1" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT47H128M16 RT-25E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT47H128M8 CF-25" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT47H128M8 CF-25E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT47H256M8 EB-25E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT47H64M16 HR-25" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT47H64M16 HR-25E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT42L64M32 D1KL-25" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT42L128M16 D1KL-25" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_400B" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_400C" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_533B" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_533C" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_667C" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_667D" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_800C" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_800D" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_800E" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR3_800D" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR3_800E" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_333" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_400" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_533" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_667" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_800" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_933" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_1066" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_memory_type" name="DDR 3LF" strength="7">
+    <set param="pcw_internal_ddr_memory_type" value="3" />
+    <set param="pcw_uiparam_ddr_bl" value="8" />
+    <disable param="pcw_uiparam_ddr_bl"  />
+    <set param="pcw_internal_ddr_ddr3slew" value="1" />
+    <set param="pcw_internal_ddr_ddr3l" value="1" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT47H128M16 RT-25E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT47H128M8 CF-25" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT47H128M8 CF-25E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT47H256M8 EB-25E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT47H64M16 HR-25" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT47H64M16 HR-25E" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT42L64M32 D1KL-25" />
+    <dischoice param="pcw_uiparam_ddr_partno" value="MT42L128M16 D1KL-25" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_400B" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_400C" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_533B" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_533C" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_667C" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_667D" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_800C" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_800D" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="DDR2_800E" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_333" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_400" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_533" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_667" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_800" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_933" />
+    <dischoice param="pcw_uiparam_ddr_speed_bin" value="LPDDR2_1066" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_enable" name="0" strength="8">
+    <set param="pcw_en_ddr" value="0" />
+    <disable param="pcw_uiparam_ddr_memory_type" />
+    <disable param="pcw_uiparam_ddr_ecc" />
+    <disable param="pcw_uiparam_ddr_bus_width" />
+    <disable param="pcw_uiparam_ddr_bl" />
+    <disable param="pcw_uiparam_ddr_high_temp" />
+    <disable param="pcw_uiparam_ddr_dram_width" />
+    <disable param="pcw_uiparam_ddr_device_capacity" />
+    <disable param="pcw_uiparam_ddr_speed_bin" />
+    <disable param="pcw_uiparam_ddr_freq_mhz" />
+    <disable param="pcw_uiparam_ddr_freq_mhz" />
+    <disable param="pcw_uiparam_ddr_bank_addr_count" />
+    <disable param="pcw_uiparam_ddr_row_addr_count" />
+    <disable param="pcw_uiparam_ddr_col_addr_count" />
+    <disable param="pcw_uiparam_ddr_cl" />
+    <disable param="pcw_uiparam_ddr_t_rcd" />
+    <disable param="pcw_uiparam_ddr_t_rp" />
+    <disable param="pcw_uiparam_ddr_al" />
+    <disable param="pcw_uiparam_ddr_t_rc" />
+    <disable param="pcw_uiparam_ddr_t_ras_min" />
+    <disable param="pcw_uiparam_ddr_t_faw" />
+
+    <disable param="pcw_uiparam_ddr_config" />
+    <disable param="pcw_uiparam_ddr_clock_period" />
+    <disable param="pcw_uiparam_ddr_partno" />
+    <disable param="pcw_uiparam_ddr_max_freq" />
+    <disable param="pcw_uiparam_ddr_sim_mode" />
+    <disable param="pcw_uiparam_ddr_train" />
+    <disable param="pcw_uiparam_ddr_clock_stop_en" />
+    <disable param="pcw_uiparam_ddr_use_internal_vref" />
+    <disable param="pcw_uiparam_ddr_dqs_to_clk_delay_0" />
+    <disable param="pcw_uiparam_ddr_dqs_to_clk_delay_1" />
+    <disable param="pcw_uiparam_ddr_dqs_to_clk_delay_2" />
+    <disable param="pcw_uiparam_ddr_dqs_to_clk_delay_3" />
+    <disable param="pcw_uiparam_ddr_board_delay0" />
+    <disable param="pcw_uiparam_ddr_board_delay1" />
+    <disable param="pcw_uiparam_ddr_board_delay2" />
+    <disable param="pcw_uiparam_ddr_board_delay3" />
+    <disable param="pcw_uiparam_ddr_train_write_level" />
+    <disable param="pcw_uiparam_ddr_train_read_gate" />
+    <disable param="pcw_uiparam_ddr_train_data_eye" />
+    <disable param="pcw_uiparam_ddr_cwl" />
+</preset>
+
+  <preset param="pcw_uiparam_ddr_ecc" name="Disabled" >
+    <set param="pcw_internal_ddr_ecc" value="0" />
+    <set param="pcw_ddr_internal_hasecc" value="0" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_ecc" name="Enabled" >
+    <set param="pcw_internal_ddr_ecc" value="1" />
+    <set param="pcw_ddr_internal_hasecc" value="1" />
+  </preset>
+
+
+  <preset param="pcw_uiparam_ddr_bus_width" name="16 Bit" strength="7">
+    <set param="pcw_internal_ddr_bus_width" value="16" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_bus_width" name="32 Bit" strength="7">
+    <set param="pcw_internal_ddr_bus_width" value="32" />
+    <set param="pcw_uiparam_ddr_ecc" value="Disabled" />
+    <disable param="pcw_uiparam_ddr_ecc" />   
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_bl" name="4" >
+    <set param="pcw_internal_ddr_bl" value="4" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_bl" name="8" >
+    <set param="pcw_internal_ddr_bl" value="8" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_bl" name="16" >
+    <set param="pcw_internal_ddr_bl" value="16" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_high_temp" name="Normal (0-85)" >
+    <set param="pcw_internal_ddr_high_temp" value="0" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_high_temp" name="High (95 Max)" >
+    <set param="pcw_internal_ddr_high_temp" value="1" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_dram_width" name="8 Bits" >
+    <set param="pcw_internal_ddr_dram_width" value="8" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_dram_width" name="16 Bits" >
+    <set param="pcw_internal_ddr_dram_width" value="16" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_dram_width" name="32 Bits" >
+    <set param="pcw_internal_ddr_dram_width" value="32" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_device_capacity" name="128 MBits" >
+    <set param="pcw_internal_ddr_device_capacity" value="128" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_device_capacity" name="256 MBits" >
+    <set param="pcw_internal_ddr_device_capacity" value="256" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_device_capacity" name="512 MBits" >
+    <set param="pcw_internal_ddr_device_capacity" value="512" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_device_capacity" name="1024 MBits" >
+    <set param="pcw_internal_ddr_device_capacity" value="1024" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_device_capacity" name="2048 MBits" >
+    <set param="pcw_internal_ddr_device_capacity" value="2048" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_device_capacity" name="4096 MBits" >
+    <set param="pcw_internal_ddr_device_capacity" value="4096" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_device_capacity" name="8192 MBits" >
+    <set param="pcw_internal_ddr_device_capacity" value="8192" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_speed_bin" name="DDR2_400B" >
+    <set param="pcw_internal_ddr_speed_bin" value="1" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_speed_bin" name="DDR2_400C" >
+    <set param="pcw_internal_ddr_speed_bin" value="2" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_speed_bin" name="DDR2_533B" >
+    <set param="pcw_internal_ddr_speed_bin" value="3" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_speed_bin" name="DDR2_533C" >
+    <set param="pcw_internal_ddr_speed_bin" value="4" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_speed_bin" name="DDR2_667C" >
+    <set param="pcw_internal_ddr_speed_bin" value="5" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_speed_bin" name="DDR2_667D" >
+    <set param="pcw_internal_ddr_speed_bin" value="6" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_speed_bin" name="DDR2_800C" >
+    <set param="pcw_internal_ddr_speed_bin" value="7" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_speed_bin" name="DDR2_800D" >
+    <set param="pcw_internal_ddr_speed_bin" value="8" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_speed_bin" name="DDR2_800E" >
+    <set param="pcw_internal_ddr_speed_bin" value="9" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_speed_bin" name="DDR3_800D" >
+    <set param="pcw_internal_ddr_speed_bin" value="10" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_speed_bin" name="DDR3_800E" >
+    <set param="pcw_internal_ddr_speed_bin" value="11" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_speed_bin" name="DDR3_1066E" >
+    <set param="pcw_internal_ddr_speed_bin" value="12" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_speed_bin" name="DDR3_1066F" >
+    <set param="pcw_internal_ddr_speed_bin" value="13" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_speed_bin" name="DDR3_1066G" >
+    <set param="pcw_internal_ddr_speed_bin" value="14" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_speed_bin" name="DDR3_1333F" >
+    <set param="pcw_internal_ddr_speed_bin" value="15" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_speed_bin" name="DDR3_1333G" >
+    <set param="pcw_internal_ddr_speed_bin" value="16" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_speed_bin" name="DDR3_1333H" >
+    <set param="pcw_internal_ddr_speed_bin" value="17" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_speed_bin" name="DDR3_1333J" >
+    <set param="pcw_internal_ddr_speed_bin" value="18" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_speed_bin" name="DDR3_1600G" >
+    <set param="pcw_internal_ddr_speed_bin" value="19" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_speed_bin" name="DDR3_1600H" >
+    <set param="pcw_internal_ddr_speed_bin" value="20" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_speed_bin" name="DDR3_1600J" >
+    <set param="pcw_internal_ddr_speed_bin" value="21" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_speed_bin" name="DDR3_1600K" >
+    <set param="pcw_internal_ddr_speed_bin" value="22" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_speed_bin" name="LPDDR2_333" >
+    <set param="pcw_internal_ddr_speed_bin" value="23" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_speed_bin" name="LPDDR2_400" >
+    <set param="pcw_internal_ddr_speed_bin" value="24" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_speed_bin" name="LPDDR2_533" >
+    <set param="pcw_internal_ddr_speed_bin" value="25" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_speed_bin" name="LPDDR2_667" >
+    <set param="pcw_internal_ddr_speed_bin" value="26" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_speed_bin" name="LPDDR2_800" >
+    <set param="pcw_internal_ddr_speed_bin" value="27" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_speed_bin" name="LPDDR2_933" >
+    <set param="pcw_internal_ddr_speed_bin" value="28" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_speed_bin" name="LPDDR2_1066" >
+    <set param="pcw_internal_ddr_speed_bin" value="29" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_sim_mode" name="Disabled" >
+    <set param="pcw_internal_ddr_sim_mode" value="0" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_sim_mode" name="Enabled" >
+    <set param="pcw_internal_ddr_sim_mode" value="1" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_use_internal_vref" name="" strength="7" >
+    <disable param="pcw_internal_ddr_use_internal_vref" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_use_internal_vref" name="0" strength="7" >
+    <set param="pcw_internal_ddr_use_internal_vref" value="0" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_use_internal_vref" name="1" strength="7">
+    <set param="pcw_internal_ddr_use_internal_vref" value="1" />
+  </preset>
+
+  <preset param="pcw_uiparam_ddr_clock_stop_en" name="Disabled" >
+    <set param="pcw_internal_ddr_clock_stop_en" value="0" />
+  </preset>
+  <preset param="pcw_uiparam_ddr_clock_stop_en" name="Enabled" >
+    <set param="pcw_internal_ddr_clock_stop_en" value="1" />
+  </preset>
+
+  <preset param="pcw_internal_ddr_slew" name="FAST" strength="7" >
+    <set param="pcw_ddr_ck_p_slew" value="FAST" />
+    <set param="pcw_ddr_ck_n_slew" value="FAST" />
+    <set param="pcw_ddr_dqs_p[0]_slew" value="FAST" />
+    <set param="pcw_ddr_dqs_p[1]_slew" value="FAST" />
+    <set param="pcw_ddr_dqs_p[2]_slew" value="FAST" />
+    <set param="pcw_ddr_dqs_p[3]_slew" value="FAST" />
+    <set param="pcw_ddr_dqs_n[0]_slew" value="FAST" />
+    <set param="pcw_ddr_dqs_n[1]_slew" value="FAST" />
+    <set param="pcw_ddr_dqs_n[2]_slew" value="FAST" />
+    <set param="pcw_ddr_dqs_n[3]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[0]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[1]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[2]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[3]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[4]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[5]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[6]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[7]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[8]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[9]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[10]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[11]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[12]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[13]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[14]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[15]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[16]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[17]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[18]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[19]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[20]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[21]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[22]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[23]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[24]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[25]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[26]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[27]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[28]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[29]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[30]_slew" value="FAST" />
+    <set param="pcw_ddr_dq[31]_slew" value="FAST" />
+    <set param="pcw_ddr_dm[0]_slew" value="FAST" />
+    <set param="pcw_ddr_dm[1]_slew" value="FAST" />
+    <set param="pcw_ddr_dm[2]_slew" value="FAST" />
+    <set param="pcw_ddr_dm[3]_slew" value="FAST" />
+    <set param="pcw_ddr_a[0]_slew" value="FAST" />
+    <set param="pcw_ddr_a[1]_slew" value="FAST" />
+    <set param="pcw_ddr_a[2]_slew" value="FAST" />
+    <set param="pcw_ddr_a[3]_slew" value="FAST" />
+    <set param="pcw_ddr_a[4]_slew" value="FAST" />
+    <set param="pcw_ddr_a[5]_slew" value="FAST" />
+    <set param="pcw_ddr_a[6]_slew" value="FAST" />
+    <set param="pcw_ddr_a[7]_slew" value="FAST" />
+    <set param="pcw_ddr_a[8]_slew" value="FAST" />
+    <set param="pcw_ddr_a[9]_slew" value="FAST" />
+    <set param="pcw_ddr_a[10]_slew" value="FAST" />
+    <set param="pcw_ddr_a[11]_slew" value="FAST" />
+    <set param="pcw_ddr_a[12]_slew" value="FAST" />
+    <set param="pcw_ddr_a[13]_slew" value="FAST" />
+    <set param="pcw_ddr_a[14]_slew" value="FAST" />
+    <set param="pcw_ddr_ba[0]_slew" value="FAST" />
+    <set param="pcw_ddr_ba[1]_slew" value="FAST" />
+    <set param="pcw_ddr_ba[2]_slew" value="FAST" />
+    <set param="pcw_ddr_cke_slew" value="FAST" />
+    <set param="pcw_ddr_odt_slew" value="FAST" />
+    <set param="pcw_ddr_we_b_slew" value="FAST" />
+    <set param="pcw_ddr_cas_b_slew" value="FAST" />
+    <set param="pcw_ddr_ras_b_slew" value="FAST" />
+    <set param="pcw_ddr_cs_b_slew" value="FAST" />
+    <set param="pcw_ddr_vrn_slew" value="FAST" />
+    <set param="pcw_ddr_vrp_slew" value="FAST" />
+    <set param="pcw_ddr_drst_b_slew" value="FAST" />
+  </preset>
+</presets>

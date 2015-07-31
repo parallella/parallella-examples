@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE parameters PUBLIC "presets" "presets.dtd" >
+<presets>
+
+  <preset param="pcw_enet0_peripheral_enable" name="0" strength="7">
+      <set param="pcw_enet0_peripheral_freqmhz" value="1000 Mbps"/>
+      <disable param="pcw_enet0_enet0_io"/>
+      <disable param="pcw_enet0_grp_MDIO_enable"/>
+      <disable param="pcw_enet0_peripheral_freqmhz"/>
+  </preset>
+
+  <preset param="pcw_enet0_peripheral_enable" name="" strength="7">
+      <set param="pcw_enet0_peripheral_freqmhz" value="1000 Mbps"/>
+      <disable param="pcw_enet0_enet0_io"/>
+      <disable param="pcw_enet0_grp_MDIO_enable"/>
+      <disable param="pcw_enet0_peripheral_freqmhz"/>
+  </preset>
+
+
+  <preset param="pcw_enet0_peripheral_enable" name="1" strength="4">
+    <set param="pcw_enet0_enet0_io" value="EMIO" />
+    <set param="pcw_enet0_peripheral_freqmhz" value="1000 Mbps"/>
+    <set param="pcw_EN_ENET0" value="1" />
+  </preset>
+
+
+
+  <preset param="pcw_enet0_grp_MDIO_enable" name="0" strength="7">
+      <disable param="pcw_enet0_grp_MDIO_io"/>
+  </preset>
+  <preset param="pcw_enet0_grp_MDIO_enable" name="" strength="7">
+      <disable param="pcw_enet0_grp_MDIO_io"/>
+  </preset>
+
+  <preset param="pcw_enet0_grp_MDIO_enable" name="1" strength="4 ">
+      <set param="pcw_enet0_grp_MDIO_io" value="EMIO" />
+      <set param="pcw_enet0_internal_mdio" value="1" />
+  </preset>
+
+
+  <preset param="pcw_enet0_enet0_io" name="EMIO" strength="6">
+      <set param="pcw_enet0_tx_clk_io" value="EMIO" />
+      <set param="pcw_enet0_txd[3]_io" value="EMIO" />
+      <set param="pcw_enet0_txd[2]_io" value="EMIO" />
+      <set param="pcw_enet0_txd[1]_io" value="EMIO" />
+      <set param="pcw_enet0_txd[0]_io" value="EMIO" />
+      <set param="pcw_enet0_tx_ctl_io" value="EMIO" />
+      <set param="pcw_enet0_rx_clk_io" value="EMIO" />
+      <set param="pcw_enet0_rxd[3]_io" value="EMIO" />
+      <set param="pcw_enet0_rxd[2]_io" value="EMIO" />
+      <set param="pcw_enet0_rxd[1]_io" value="EMIO" />
+      <set param="pcw_enet0_rxd[0]_io" value="EMIO" />
+      <set param="pcw_enet0_rx_ctl_io" value="EMIO" />
+      <set param="pcw_enet0_grp_MDIO_io" value="EMIO" />
+      <set param="pcw_enet0_grp_MDIO_enable" value="1"/>
+      <set param="pcw_enet0_internal_eth_mode" value="0" />
+      <disable param="pcw_enet0_grp_MDIO_enable" />
+      <disable param="pcw_enet0_grp_MDIO_io" />
+      <set param="pcw_EN_EMIO_ENET0" value="1" />
+      <set param="pcw_enet0_peripheral_clksrc" value="External" />
+      <disable param="pcw_enet0_peripheral_clksrc" />
+  </preset>
+
+  <preset param="pcw_enet0_enet0_io" name="MIO 16 .. 27" strength="5">
+      <set param="pcw_enet0_grp_MDIO_io" value="MIO 52 .. 53" />
+      <disable param="pcw_enet0_grp_MDIO_io" />
+      <set param="pcw_enet0_tx_clk_io" value="MIO 16" />
+      <set param="pcw_mio_mio[16]_signal" value="tx_clk" />
+      <set param="pcw_mio_mio[16]_peripheral" value="Enet 0" />
+      <set param="pcw_mio_mio[16]_signalgroup" value="Enet 0" />
+      <set param="pcw_preset_mio_16" value="enet0" />
+
+      <set param="pcw_enet0_txd[0]_io" value="MIO 17" />
+      <set param="pcw_mio_mio[17]_signal" value="txd[0]" />
+      <set param="pcw_mio_mio[17]_peripheral" value="Enet 0" />
+      <set param="pcw_mio_mio[17]_signalgroup" value="Enet 0" />
+      <set param="pcw_preset_mio_17" value="enet0" />
+
+      <set param="pcw_enet0_txd[1]_io" value="MIO 18" />
+      <set param="pcw_mio_mio[18]_signal" value="txd[1]" />
+      <set param="pcw_mio_mio[18]_peripheral" value="Enet 0" />
+      <set param="pcw_mio_mio[18]_signalgroup" value="Enet 0" />
+      <set param="pcw_preset_mio_18" value="enet0" />
+
+      <set param="pcw_enet0_txd[2]_io" value="MIO 19" />
+      <set param="pcw_mio_mio[19]_signal" value="txd[2]" />
+      <set param="pcw_mio_mio[19]_peripheral" value="Enet 0" />
+      <set param="pcw_mio_mio[19]_signalgroup" value="Enet 0" />
+      <set param="pcw_preset_mio_19" value="enet0" />
+
+      <set param="pcw_enet0_txd[3]_io" value="MIO 20" />
+      <set param="pcw_mio_mio[20]_signal" value="txd[3]" />
+      <set param="pcw_mio_mio[20]_peripheral" value="Enet 0" />
+      <set param="pcw_mio_mio[20]_signalgroup" value="Enet 0" />
+      <set param="pcw_preset_mio_20" value="enet0" />
+
+      <set param="pcw_enet0_tx_ctl_io" value="MIO 21" />
+      <set param="pcw_mio_mio[21]_signal" value="tx_ctl" />
+      <set param="pcw_mio_mio[21]_peripheral" value="Enet 0" />
+      <set param="pcw_mio_mio[21]_signalgroup" value="Enet 0" />
+      <set param="pcw_preset_mio_21" value="enet0" />
+
+      <set param="pcw_enet0_rx_clk_io" value="MIO 22" />
+      <set param="pcw_mio_mio[22]_signal" value="rx_clk" />
+      <set param="pcw_mio_mio[22]_peripheral" value="Enet 0" />
+      <set param="pcw_mio_mio[22]_signalgroup" value="Enet 0" />
+      <set param="pcw_preset_mio_22" value="enet0" />
+
+      <set param="pcw_enet0_rxd[0]_io" value="MIO 23" />
+      <set param="pcw_mio_mio[23]_signal" value="rxd[0]" />
+      <set param="pcw_mio_mio[23]_peripheral" value="Enet 0" />
+      <set param="pcw_mio_mio[23]_signalgroup" value="Enet 0" />
+      <set param="pcw_preset_mio_23" value="enet0" />
+
+      <set param="pcw_enet0_rxd[1]_io" value="MIO 24" />
+      <set param="pcw_mio_mio[24]_signal" value="rxd[1]" />
+      <set param="pcw_mio_mio[24]_peripheral" value="Enet 0" />
+      <set param="pcw_mio_mio[24]_signalgroup" value="Enet 0" />
+      <set param="pcw_preset_mio_24" value="enet0" />
+
+      <set param="pcw_enet0_rxd[2]_io" value="MIO 25" />
+      <set param="pcw_mio_mio[25]_signal" value="rxd[2]" />
+      <set param="pcw_mio_mio[25]_peripheral" value="Enet 0" />
+      <set param="pcw_mio_mio[25]_signalgroup" value="Enet 0" />
+      <set param="pcw_preset_mio_25" value="enet0" />
+
+      <set param="pcw_enet0_rxd[3]_io" value="MIO 26" />
+      <set param="pcw_mio_mio[26]_signal" value="rxd[3]" />
+      <set param="pcw_mio_mio[26]_peripheral" value="Enet 0" />
+      <set param="pcw_mio_mio[26]_signalgroup" value="Enet 0" />
+      <set param="pcw_preset_mio_26" value="enet0" />
+
+      <set param="pcw_enet0_rx_ctl_io" value="MIO 27" />
+      <set param="pcw_mio_mio[27]_signal" value="rx_ctl" />
+      <set param="pcw_mio_mio[27]_peripheral" value="Enet 0" />
+      <set param="pcw_mio_mio[27]_signalgroup" value="Enet 0" />
+      <set param="pcw_preset_mio_27" value="enet0" />
+
+      <set param="pcw_enet0_internal_eth_mode" value="1" />
+  </preset>
+
+  <preset param="pcw_enet0_grp_MDIO_io" name="EMIO" strength="5">
+      <set param="pcw_enet0_mdc_io" value="EMIO" />
+      <set param="pcw_enet0_mdio_io" value="EMIO" />
+  </preset>
+
+  <preset param="pcw_enet0_grp_MDIO_io" name="MIO 52 .. 53" strength="5">
+
+      <set param="pcw_enet0_mdc_io" value="MIO 52" />
+      <set param="pcw_mio_mio[52]_signal" value="mdc" />
+      <set param="pcw_mio_mio[52]_peripheral" value="Enet 0" />
+      <set param="pcw_mio_mio[52]_signalgroup" value="MDIO" />
+      <set param="pcw_preset_mio_52" value="mdio0" />
+
+      <set param="pcw_enet0_mdio_io" value="MIO 53" />
+      <set param="pcw_mio_mio[53]_signal" value="mdio" />
+      <set param="pcw_mio_mio[53]_peripheral" value="Enet 0" />
+      <set param="pcw_mio_mio[53]_signalgroup" value="MDIO" />
+      <set param="pcw_preset_mio_53" value="mdio0" />
+
+  </preset>
+
+  <preset param="pcw_enet0_peripheral_freqmhz" name="1000 Mbps" >
+    <set param="pcw_enet0_internal_freqmhz" value="125" />
+    <set param="pcw_enet0_internal_divisor" value="1" />
+  </preset>
+
+  <preset param="pcw_enet0_peripheral_freqmhz" name="100 Mbps" >
+    <set param="pcw_enet0_internal_freqmhz" value="25" />
+    <set param="pcw_enet0_internal_divisor" value="5" />
+  </preset>
+
+  <preset param="pcw_enet0_peripheral_freqmhz" name="10 Mbps" >
+    <set param="pcw_enet0_internal_freqmhz" value="2.5" />
+    <set param="pcw_enet0_internal_divisor" value="50" />
+  </preset>
+
+
+
+</presets>
+

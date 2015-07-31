@@ -1,0 +1,58 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (lin64) Build 1071353 Tue Nov 18 16:47:07 MST 2014
+| Date         : Sun Jun 21 18:33:25 2015
+| Host         : lain running 64-bit Gentoo Base System release 2.2
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'elink2_top_fifo_103x32_rdreq_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of elink2_top_fifo_103x32_rdreq_0 (xilinx.com:ip:fifo_generator:12.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.3 (lin64) Build 1034051 Fri Oct  3 16:31:15 MDT 2014
+| Date         : Fri Jan 16 16:56:41 2015
+| Host         : FredsLaptop running 64-bit Ubuntu 14.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'elink2_top_fifo_103x32_rdreq_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of elink2_top_fifo_103x32_rdreq_0 (xilinx.com:ip:fifo_generator:12.0 (Rev. 2)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.3 (lin64) Build 1034051 Fri Oct  3 16:31:15 MDT 2014
+| Date         : Mon Dec 15 20:41:00 2014
+| Host         : FredsLaptop running 64-bit Ubuntu 14.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'elink2_top_fifo_103x32_rdreq_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of elink2_top_fifo_103x32_rdreq_0 (xilinx.com:ip:fifo_generator:12.0 (Rev. 2)) to current project options.
+

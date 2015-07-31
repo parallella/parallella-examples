@@ -1,0 +1,58 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.3 (lin64) Build 1034051 Fri Oct  3 16:31:15 MDT 2014
+| Date         : Fri Jan 16 16:57:11 2015
+| Host         : FredsLaptop running 64-bit Ubuntu 14.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'elink_testbench_elink_gold_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of elink_testbench_elink_gold_0_0 (adapteva.com:Adapteva:elink_gold:1.0 (Rev. 15)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.3 (lin64) Build 1034051 Fri Oct  3 16:31:15 MDT 2014
+| Date         : Mon Dec 15 20:41:26 2014
+| Host         : FredsLaptop running 64-bit Ubuntu 14.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'elink_testbench_elink_gold_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of elink_testbench_elink_gold_0_0 (adapteva.com:Adapteva:elink_gold:1.0 (Rev. 15)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.3 (lin64) Build 1034051 Fri Oct  3 16:31:15 MDT 2014
+| Date         : Tue Nov  4 16:53:04 2014
+| Host         : FredsLaptop running 64-bit Ubuntu 14.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'elink_testbench_elink_gold_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of elink_testbench_elink_gold_0_0 (adapteva.com:Adapteva:elink_gold:1.0) from (Rev. 13) to (Rev. 15)
+

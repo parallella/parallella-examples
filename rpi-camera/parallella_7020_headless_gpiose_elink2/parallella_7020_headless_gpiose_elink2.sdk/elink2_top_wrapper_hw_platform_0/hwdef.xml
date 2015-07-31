@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Project Version="1" Minor="0">
+	<BUILD_NUMBER Name="1071353"/>
+	<FULL_BUILD Name="SW Build 1071353 on Tue Nov 18 16:47:07 MST 2014"/>
+	<MODE Name="Pre-Synthesis"/>
+	<SYSTEMINFO BOARD="" ARCH="zynq" PACKAGE="clg400" DEVICE="7z020" SPEED="-1" LUT="" FF="" BRAM="" DSP=""/>
+	<HIERARCHY Name="elink2_top_i"/>
+	<File Type="BD_TCL" Name="esaxi.tcl" ModTime="1434996527"/>
+	<File Type="PS_FSBL_INIT" Name="ps7_init.c" ModTime="1434997353"/>
+	<File Type="PS_FSBL_INIT" Name="ps7_init.h" ModTime="1434997353"/>
+	<File Type="PS_FSBL_INIT_GPL" Name="ps7_init_gpl.c" ModTime="1434997353"/>
+	<File Type="PS_FSBL_INIT_GPL" Name="ps7_init_gpl.h" ModTime="1434997353"/>
+	<File Type="PS_XMD_INIT" Name="ps7_init.tcl" ModTime="1434997353"/>
+	<File Type="PS_INIT_HELP" Name="ps7_init.html" ModTime="1434997353"/>
+	<File Type="HW_HANDOFF" Name="elink2_top.hwh" ModTime="1434997328"/>
+	<File Type="BD_TCL" Name="elink2_top_bd.tcl" ModTime="1434997328"/>
+</Project>
+

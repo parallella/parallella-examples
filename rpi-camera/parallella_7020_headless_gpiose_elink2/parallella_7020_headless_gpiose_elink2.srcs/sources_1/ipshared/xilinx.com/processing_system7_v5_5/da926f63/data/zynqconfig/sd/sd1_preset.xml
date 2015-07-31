@@ -1,0 +1,1404 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE parameters PUBLIC "presets" "presets.dtd" >
+<presets>
+
+  
+  <preset param="pcw_sd1_peripheral_enable" name="0" strength="7">
+    <disable param="pcw_sd1_grp_cd_enable"/>
+    <disable param="pcw_sd1_grp_wp_enable"/>
+    <disable param="pcw_sd1_grp_pow_enable"/>
+    <disable param="pcw_sd1_peripheral_freqmhz"/>
+    <disable param="pcw_sd1_sd1_io"/>
+  </preset>
+  <preset param="pcw_sd1_peripheral_enable" name="" strength="7">
+    <disable param="pcw_sd1_grp_cd_enable"/>
+    <disable param="pcw_sd1_grp_wp_enable"/>
+    <disable param="pcw_sd1_grp_pow_enable"/>
+    <disable param="pcw_sd1_peripheral_freqmhz"/>
+    <disable param="pcw_sd1_sd1_io"/>
+  </preset>
+  <preset param="pcw_sd1_peripheral_enable" name="1" strength="4" >
+    <set param="pcw_sd1_sd1_io" value="EMIO" />
+    <set param="pcw_sdio_pow_peripheral_valid" value="1" />
+    <set param="pcw_sdio_peripheral_valid" value="1" />
+    <set param="pcw_EN_SDIO1" value="1" />
+  </preset>
+  
+  <preset param="pcw_sd1_grp_cd_enable" name="0" strength="7">
+    <disable param="pcw_sd1_grp_cd_io"/>
+  </preset>  
+  <preset param="pcw_sd1_grp_cd_enable" name="" strength="7">
+    <disable param="pcw_sd1_grp_cd_io"/>
+  </preset>
+  <preset param="pcw_sd1_grp_cd_enable" name="1" strength="4">
+    <set param="pcw_sd1_grp_cd_io" value="EMIO" />
+    <set param="pcw_sd1_internal_cd" value="1" />
+  </preset>
+
+
+  <preset param="pcw_sd1_grp_wp_enable" name="0" strength="7">
+    <disable param="pcw_sd1_grp_wp_io"/>
+  </preset>
+  <preset param="pcw_sd1_grp_wp_enable" name="" strength="7">
+      <disable param="pcw_sd1_grp_wp_io"/>
+  </preset>
+  <preset param="pcw_sd1_grp_wp_enable" name="1" strength="4">
+    <set param="pcw_sd1_grp_wp_io" value="EMIO" />
+    <set param="pcw_sd1_internal_wp" value="1" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_pow_enable" name="0" strength="7">
+    <disable param="pcw_sd1_grp_pow_io"/>
+  </preset>
+  <preset param="pcw_sd1_grp_pow_enable" name="" strength="7">
+      <disable param="pcw_sd1_grp_pow_io"/>
+  </preset>
+  <preset param="pcw_sd1_grp_pow_enable" name="1" strength="4">
+    <set param="pcw_sd1_grp_pow_io" value="MIO 0" />
+    <set param="pcw_sd1_internal_pow" value="1" />
+  </preset>
+
+
+
+
+  <preset param="pcw_sd1_sd1_io" name="EMIO" strength="7">
+      <set param="pcw_sd1_clk_io" value="EMIO" />
+      <set param="pcw_sd1_cmd_io" value="EMIO" />
+      <set param="pcw_sd1_data[3]_io" value="EMIO" />
+      <set param="pcw_sd1_data[2]_io" value="EMIO" />
+      <set param="pcw_sd1_data[1]_io" value="EMIO" />
+      <set param="pcw_sd1_data[0]_io" value="EMIO" />
+      <set param="pcw_sd1_grp_wp_io" value="EMIO" />
+      <set param="pcw_sd1_grp_wp_enable" value="1" />
+      <set param="pcw_sd1_grp_cd_io" value="EMIO" />
+      <set param="pcw_sd1_grp_cd_enable" value="1" />
+      <set param="pcw_EN_EMIO_SDIO1" value="1" />
+
+      <set param="pcw_sd1_grp_cd_enable" value="1" />
+      <set param="pcw_sd1_grp_wp_enable" value="1" />
+      <set param="pcw_sd1_grp_cd_io" value="EMIO" />
+      <set param="pcw_sd1_grp_wp_io" value="EMIO" />
+      <disable param="pcw_sd1_grp_cd_io" />
+      <disable param="pcw_sd1_grp_wp_io" />
+      <disable param="pcw_sd1_grp_cd_enable" />
+      <disable param="pcw_sd1_grp_wp_enable" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="EMIO" strength="5">
+      <set param="pcw_sd1_wp_io" value="EMIO" />
+      <set param="pcw_EN_EMIO_WP_SDIO1" value="1" />
+      <set param="ps7_slcr_SD1_WP_CD_SEL_SDIO1_WP_SEL" value="57" />
+
+  </preset>
+  <preset param="pcw_sd1_grp_cd_io" name="EMIO" strength="5">
+      <set param="pcw_sd1_cd_io" value="EMIO" />
+      <set param="pcw_EN_EMIO_CD_SDIO1" value="1" />
+      <set param="ps7_slcr_SD1_WP_CD_SEL_SDIO1_CD_SEL" value="58" />
+  </preset>
+
+
+
+
+
+
+
+ <preset param="pcw_sd1_sd1_io" name="MIO 10 .. 15" strength="5">
+
+      <set param="pcw_sd1_data[0]_io" value="MIO 10" />
+      <set param="pcw_mio_mio[10]_signal" value="data[0]" />
+      <set param="pcw_mio_mio[10]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[10]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_10" value="sd1" />
+
+      <set param="pcw_sd1_cmd_io" value="MIO 11" />
+      <set param="pcw_mio_mio[11]_signal" value="cmd" />
+      <set param="pcw_mio_mio[11]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[11]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_11" value="sd1" />
+
+      <set param="pcw_sd1_clk_io" value="MIO 12" />
+      <set param="pcw_mio_mio[12]_signal" value="clk" />
+      <set param="pcw_mio_mio[12]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[12]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_12" value="sd1" />
+
+      <set param="pcw_sd1_data[1]_io" value="MIO 13" />
+      <set param="pcw_mio_mio[13]_signal" value="data[1]" />
+      <set param="pcw_mio_mio[13]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[13]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_13" value="sd1" />
+
+      <set param="pcw_sd1_data[2]_io" value="MIO 14" />
+      <set param="pcw_mio_mio[14]_signal" value="data[2]" />
+      <set param="pcw_mio_mio[14]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[14]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_14" value="sd1" />
+
+      <set param="pcw_sd1_data[3]_io" value="MIO 15" />
+      <set param="pcw_mio_mio[15]_signal" value="data[3]" />
+      <set param="pcw_mio_mio[15]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[15]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_15" value="sd1" />
+
+  </preset>
+
+  <preset param="pcw_sd1_sd1_io" name="MIO 22 .. 27" strength="5">
+
+      <set param="pcw_sd1_data[0]_io" value="MIO 22" />
+      <set param="pcw_mio_mio[22]_signal" value="data[0]" />
+      <set param="pcw_mio_mio[22]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[22]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_22" value="sd1" />
+
+      <set param="pcw_sd1_cmd_io" value="MIO 23" />
+      <set param="pcw_mio_mio[23]_signal" value="cmd" />
+      <set param="pcw_mio_mio[23]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[23]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_23" value="sd1" />
+
+      <set param="pcw_sd1_clk_io" value="MIO 24" />
+      <set param="pcw_mio_mio[24]_signal" value="clk" />
+      <set param="pcw_mio_mio[24]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[24]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_24" value="sd1" />
+
+      <set param="pcw_sd1_data[1]_io" value="MIO 25" />
+      <set param="pcw_mio_mio[25]_signal" value="data[1]" />
+      <set param="pcw_mio_mio[25]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[25]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_25" value="sd1" />
+
+      <set param="pcw_sd1_data[2]_io" value="MIO 26" />
+      <set param="pcw_mio_mio[26]_signal" value="data[2]" />
+      <set param="pcw_mio_mio[26]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[26]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_26" value="sd1" />
+
+      <set param="pcw_sd1_data[3]_io" value="MIO 27" />
+      <set param="pcw_mio_mio[27]_signal" value="data[3]" />
+      <set param="pcw_mio_mio[27]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[27]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_27" value="sd1" />
+
+  </preset>
+
+  <preset param="pcw_sd1_sd1_io" name="MIO 34 .. 39" strength="5">
+
+      <set param="pcw_sd1_data[0]_io" value="MIO 34" />
+      <set param="pcw_mio_mio[34]_signal" value="data[0]" />
+      <set param="pcw_mio_mio[34]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[34]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_34" value="sd1" />
+
+      <set param="pcw_sd1_cmd_io" value="MIO 35" />
+      <set param="pcw_mio_mio[35]_signal" value="cmd" />
+      <set param="pcw_mio_mio[35]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[35]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_35" value="sd1" />
+
+      <set param="pcw_sd1_clk_io" value="MIO 36" />
+      <set param="pcw_mio_mio[36]_signal" value="clk" />
+      <set param="pcw_mio_mio[36]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[36]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_36" value="sd1" />
+
+      <set param="pcw_sd1_data[1]_io" value="MIO 37" />
+      <set param="pcw_mio_mio[37]_signal" value="data[1]" />
+      <set param="pcw_mio_mio[37]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[37]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_37" value="sd1" />
+
+      <set param="pcw_sd1_data[2]_io" value="MIO 38" />
+      <set param="pcw_mio_mio[38]_signal" value="data[2]" />
+      <set param="pcw_mio_mio[38]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[38]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_38" value="sd1" />
+
+      <set param="pcw_sd1_data[3]_io" value="MIO 39" />
+      <set param="pcw_mio_mio[39]_signal" value="data[3]" />
+      <set param="pcw_mio_mio[39]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[39]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_39" value="sd1" />
+
+  </preset>
+
+  <preset param="pcw_sd1_sd1_io" name="MIO 46 .. 51" strength="5">
+
+      <set param="pcw_sd1_data[0]_io" value="MIO 46" />
+      <set param="pcw_mio_mio[46]_signal" value="data[0]" />
+      <set param="pcw_mio_mio[46]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[46]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_46" value="sd1" />
+
+      <set param="pcw_sd1_cmd_io" value="MIO 47" />
+      <set param="pcw_mio_mio[47]_signal" value="cmd" />
+      <set param="pcw_mio_mio[47]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[47]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_47" value="sd1" />
+
+      <set param="pcw_sd1_clk_io" value="MIO 48" />
+      <set param="pcw_mio_mio[48]_signal" value="clk" />
+      <set param="pcw_mio_mio[48]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[48]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_48" value="sd1" />
+
+      <set param="pcw_sd1_data[1]_io" value="MIO 49" />
+      <set param="pcw_mio_mio[49]_signal" value="data[1]" />
+      <set param="pcw_mio_mio[49]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[49]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_49" value="sd1" />
+
+      <set param="pcw_sd1_data[2]_io" value="MIO 50" />
+      <set param="pcw_mio_mio[50]_signal" value="data[2]" />
+      <set param="pcw_mio_mio[50]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[50]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_50" value="sd1" />
+
+      <set param="pcw_sd1_data[3]_io" value="MIO 51" />
+      <set param="pcw_mio_mio[51]_signal" value="data[3]" />
+      <set param="pcw_mio_mio[51]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[51]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_51" value="sd1" />
+
+  </preset>
+
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 0" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 0" />
+      <set param="pcw_mio_mio[0]_signal" value="cd" />
+      <set param="pcw_mio_mio[0]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[0]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_0" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 1" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 1" />
+      <set param="pcw_mio_mio[1]_signal" value="cd" />
+      <set param="pcw_mio_mio[1]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[1]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_1" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 2" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 2" />
+      <set param="pcw_mio_mio[2]_signal" value="cd" />
+      <set param="pcw_mio_mio[2]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[2]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_2" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 3" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 3" />
+      <set param="pcw_mio_mio[3]_signal" value="cd" />
+      <set param="pcw_mio_mio[3]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[3]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_3" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 4" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 4" />
+      <set param="pcw_mio_mio[4]_signal" value="cd" />
+      <set param="pcw_mio_mio[4]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[4]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_4" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 5" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 5" />
+      <set param="pcw_mio_mio[5]_signal" value="cd" />
+      <set param="pcw_mio_mio[5]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[5]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_5" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 6" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 6" />
+      <set param="pcw_mio_mio[6]_signal" value="cd" />
+      <set param="pcw_mio_mio[6]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[6]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_6" value="sdio1_cd" />
+  </preset>
+
+  <!--preset param="pcw_sd1_grp_cd_io" name="MIO 7" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 7" />
+      <set param="pcw_mio_mio[7]_signal" value="cd" />
+      <set param="pcw_mio_mio[7]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[7]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_7" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 8" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 8" />
+      <set param="pcw_mio_mio[8]_signal" value="cd" />
+      <set param="pcw_mio_mio[8]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[8]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_8" value="sdio1_cd" />
+  </preset-->
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 9" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 9" />
+      <set param="pcw_mio_mio[9]_signal" value="cd" />
+      <set param="pcw_mio_mio[9]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[9]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_9" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 10" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 10" />
+      <set param="pcw_mio_mio[10]_signal" value="cd" />
+      <set param="pcw_mio_mio[10]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[10]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_10" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 11" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 11" />
+      <set param="pcw_mio_mio[11]_signal" value="cd" />
+      <set param="pcw_mio_mio[11]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[11]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_11" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 12" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 12" />
+      <set param="pcw_mio_mio[12]_signal" value="cd" />
+      <set param="pcw_mio_mio[12]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[12]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_12" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 13" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 13" />
+      <set param="pcw_mio_mio[13]_signal" value="cd" />
+      <set param="pcw_mio_mio[13]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[13]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_13" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 14" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 14" />
+      <set param="pcw_mio_mio[14]_signal" value="cd" />
+      <set param="pcw_mio_mio[14]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[14]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_14" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 15" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 15" />
+      <set param="pcw_mio_mio[15]_signal" value="cd" />
+      <set param="pcw_mio_mio[15]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[15]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_15" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 16" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 16" />
+      <set param="pcw_mio_mio[16]_signal" value="cd" />
+      <set param="pcw_mio_mio[16]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[16]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_16" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 17" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 17" />
+      <set param="pcw_mio_mio[17]_signal" value="cd" />
+      <set param="pcw_mio_mio[17]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[17]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_17" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 18" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 18" />
+      <set param="pcw_mio_mio[18]_signal" value="cd" />
+      <set param="pcw_mio_mio[18]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[18]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_18" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 19" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 19" />
+      <set param="pcw_mio_mio[19]_signal" value="cd" />
+      <set param="pcw_mio_mio[19]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[19]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_19" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 20" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 20" />
+      <set param="pcw_mio_mio[20]_signal" value="cd" />
+      <set param="pcw_mio_mio[20]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[20]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_20" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 21" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 21" />
+      <set param="pcw_mio_mio[21]_signal" value="cd" />
+      <set param="pcw_mio_mio[21]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[21]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_21" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 22" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 22" />
+      <set param="pcw_mio_mio[22]_signal" value="cd" />
+      <set param="pcw_mio_mio[22]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[22]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_22" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 23" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 23" />
+      <set param="pcw_mio_mio[23]_signal" value="cd" />
+      <set param="pcw_mio_mio[23]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[23]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_23" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 24" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 24" />
+      <set param="pcw_mio_mio[24]_signal" value="cd" />
+      <set param="pcw_mio_mio[24]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[24]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_24" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 25" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 25" />
+      <set param="pcw_mio_mio[25]_signal" value="cd" />
+      <set param="pcw_mio_mio[25]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[25]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_25" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 26" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 26" />
+      <set param="pcw_mio_mio[26]_signal" value="cd" />
+      <set param="pcw_mio_mio[26]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[26]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_26" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 27" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 27" />
+      <set param="pcw_mio_mio[27]_signal" value="cd" />
+      <set param="pcw_mio_mio[27]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[27]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_27" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 28" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 28" />
+      <set param="pcw_mio_mio[28]_signal" value="cd" />
+      <set param="pcw_mio_mio[28]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[28]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_28" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 29" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 29" />
+      <set param="pcw_mio_mio[29]_signal" value="cd" />
+      <set param="pcw_mio_mio[29]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[29]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_29" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 30" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 30" />
+      <set param="pcw_mio_mio[30]_signal" value="cd" />
+      <set param="pcw_mio_mio[30]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[30]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_30" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 31" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 31" />
+      <set param="pcw_mio_mio[31]_signal" value="cd" />
+      <set param="pcw_mio_mio[31]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[31]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_31" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 32" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 32" />
+      <set param="pcw_mio_mio[32]_signal" value="cd" />
+      <set param="pcw_mio_mio[32]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[32]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_32" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 33" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 33" />
+      <set param="pcw_mio_mio[33]_signal" value="cd" />
+      <set param="pcw_mio_mio[33]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[33]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_33" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 34" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 34" />
+      <set param="pcw_mio_mio[34]_signal" value="cd" />
+      <set param="pcw_mio_mio[34]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[34]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_34" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 35" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 35" />
+      <set param="pcw_mio_mio[35]_signal" value="cd" />
+      <set param="pcw_mio_mio[35]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[35]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_35" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 36" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 36" />
+      <set param="pcw_mio_mio[36]_signal" value="cd" />
+      <set param="pcw_mio_mio[36]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[36]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_36" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 37" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 37" />
+      <set param="pcw_mio_mio[37]_signal" value="cd" />
+      <set param="pcw_mio_mio[37]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[37]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_37" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 38" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 38" />
+      <set param="pcw_mio_mio[38]_signal" value="cd" />
+      <set param="pcw_mio_mio[38]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[38]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_38" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 39" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 39" />
+      <set param="pcw_mio_mio[39]_signal" value="cd" />
+      <set param="pcw_mio_mio[39]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[39]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_39" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 40" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 40" />
+      <set param="pcw_mio_mio[40]_signal" value="cd" />
+      <set param="pcw_mio_mio[40]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[40]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_40" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 41" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 41" />
+      <set param="pcw_mio_mio[41]_signal" value="cd" />
+      <set param="pcw_mio_mio[41]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[41]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_41" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 42" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 42" />
+      <set param="pcw_mio_mio[42]_signal" value="cd" />
+      <set param="pcw_mio_mio[42]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[42]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_42" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 43" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 43" />
+      <set param="pcw_mio_mio[43]_signal" value="cd" />
+      <set param="pcw_mio_mio[43]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[43]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_43" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 44" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 44" />
+      <set param="pcw_mio_mio[44]_signal" value="cd" />
+      <set param="pcw_mio_mio[44]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[44]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_44" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 45" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 45" />
+      <set param="pcw_mio_mio[45]_signal" value="cd" />
+      <set param="pcw_mio_mio[45]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[45]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_45" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 46" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 46" />
+      <set param="pcw_mio_mio[46]_signal" value="cd" />
+      <set param="pcw_mio_mio[46]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[46]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_46" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 47" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 47" />
+      <set param="pcw_mio_mio[47]_signal" value="cd" />
+      <set param="pcw_mio_mio[47]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[47]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_47" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 48" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 48" />
+      <set param="pcw_mio_mio[48]_signal" value="cd" />
+      <set param="pcw_mio_mio[48]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[48]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_48" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 49" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 49" />
+      <set param="pcw_mio_mio[49]_signal" value="cd" />
+      <set param="pcw_mio_mio[49]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[49]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_49" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 50" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 50" />
+      <set param="pcw_mio_mio[50]_signal" value="cd" />
+      <set param="pcw_mio_mio[50]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[50]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_50" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 51" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 51" />
+      <set param="pcw_mio_mio[51]_signal" value="cd" />
+      <set param="pcw_mio_mio[51]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[51]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_51" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 52" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 52" />
+      <set param="pcw_mio_mio[52]_signal" value="cd" />
+      <set param="pcw_mio_mio[52]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[52]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_52" value="sdio1_cd" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_cd_io" name="MIO 53" strength="5">
+      <set param="pcw_sd1_cd_io" value="MIO 53" />
+      <set param="pcw_mio_mio[53]_signal" value="cd" />
+      <set param="pcw_mio_mio[53]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[53]_signalgroup" value="CD" />
+      <set param="pcw_preset_mio_53" value="sdio1_cd" />
+  </preset>
+
+
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 0" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 0" />
+      <set param="pcw_mio_mio[0]_signal" value="wp" />
+      <set param="pcw_mio_mio[0]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[0]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_0" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 1" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 1" />
+      <set param="pcw_mio_mio[1]_signal" value="wp" />
+      <set param="pcw_mio_mio[1]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[1]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_1" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 2" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 2" />
+      <set param="pcw_mio_mio[2]_signal" value="wp" />
+      <set param="pcw_mio_mio[2]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[2]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_2" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 3" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 3" />
+      <set param="pcw_mio_mio[3]_signal" value="wp" />
+      <set param="pcw_mio_mio[3]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[3]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_3" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 4" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 4" />
+      <set param="pcw_mio_mio[4]_signal" value="wp" />
+      <set param="pcw_mio_mio[4]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[4]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_4" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 5" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 5" />
+      <set param="pcw_mio_mio[5]_signal" value="wp" />
+      <set param="pcw_mio_mio[5]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[5]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_5" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 6" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 6" />
+      <set param="pcw_mio_mio[6]_signal" value="wp" />
+      <set param="pcw_mio_mio[6]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[6]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_6" value="sdio1_wp" />
+  </preset>
+
+  <!--preset param="pcw_sd1_grp_wp_io" name="MIO 7" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 7" />
+      <set param="pcw_mio_mio[7]_signal" value="wp" />
+      <set param="pcw_mio_mio[7]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[7]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_7" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 8" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 8" />
+      <set param="pcw_mio_mio[8]_signal" value="wp" />
+      <set param="pcw_mio_mio[8]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[8]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_8" value="sdio1_wp" />
+  </preset-->
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 9" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 9" />
+      <set param="pcw_mio_mio[9]_signal" value="wp" />
+      <set param="pcw_mio_mio[9]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[9]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_9" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 10" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 10" />
+      <set param="pcw_mio_mio[10]_signal" value="wp" />
+      <set param="pcw_mio_mio[10]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[10]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_10" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 11" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 11" />
+      <set param="pcw_mio_mio[11]_signal" value="wp" />
+      <set param="pcw_mio_mio[11]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[11]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_11" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 12" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 12" />
+      <set param="pcw_mio_mio[12]_signal" value="wp" />
+      <set param="pcw_mio_mio[12]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[12]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_12" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 13" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 13" />
+      <set param="pcw_mio_mio[13]_signal" value="wp" />
+      <set param="pcw_mio_mio[13]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[13]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_13" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 14" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 14" />
+      <set param="pcw_mio_mio[14]_signal" value="wp" />
+      <set param="pcw_mio_mio[14]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[14]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_14" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 15" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 15" />
+      <set param="pcw_mio_mio[15]_signal" value="wp" />
+      <set param="pcw_mio_mio[15]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[15]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_15" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 16" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 16" />
+      <set param="pcw_mio_mio[16]_signal" value="wp" />
+      <set param="pcw_mio_mio[16]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[16]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_16" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 17" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 17" />
+      <set param="pcw_mio_mio[17]_signal" value="wp" />
+      <set param="pcw_mio_mio[17]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[17]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_17" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 18" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 18" />
+      <set param="pcw_mio_mio[18]_signal" value="wp" />
+      <set param="pcw_mio_mio[18]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[18]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_18" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 19" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 19" />
+      <set param="pcw_mio_mio[19]_signal" value="wp" />
+      <set param="pcw_mio_mio[19]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[19]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_19" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 20" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 20" />
+      <set param="pcw_mio_mio[20]_signal" value="wp" />
+      <set param="pcw_mio_mio[20]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[20]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_20" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 21" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 21" />
+      <set param="pcw_mio_mio[21]_signal" value="wp" />
+      <set param="pcw_mio_mio[21]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[21]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_21" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 22" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 22" />
+      <set param="pcw_mio_mio[22]_signal" value="wp" />
+      <set param="pcw_mio_mio[22]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[22]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_22" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 23" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 23" />
+      <set param="pcw_mio_mio[23]_signal" value="wp" />
+      <set param="pcw_mio_mio[23]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[23]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_23" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 24" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 24" />
+      <set param="pcw_mio_mio[24]_signal" value="wp" />
+      <set param="pcw_mio_mio[24]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[24]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_24" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 25" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 25" />
+      <set param="pcw_mio_mio[25]_signal" value="wp" />
+      <set param="pcw_mio_mio[25]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[25]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_25" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 26" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 26" />
+      <set param="pcw_mio_mio[26]_signal" value="wp" />
+      <set param="pcw_mio_mio[26]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[26]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_26" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 27" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 27" />
+      <set param="pcw_mio_mio[27]_signal" value="wp" />
+      <set param="pcw_mio_mio[27]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[27]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_27" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 28" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 28" />
+      <set param="pcw_mio_mio[28]_signal" value="wp" />
+      <set param="pcw_mio_mio[28]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[28]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_28" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 29" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 29" />
+      <set param="pcw_mio_mio[29]_signal" value="wp" />
+      <set param="pcw_mio_mio[29]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[29]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_29" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 30" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 30" />
+      <set param="pcw_mio_mio[30]_signal" value="wp" />
+      <set param="pcw_mio_mio[30]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[30]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_30" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 31" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 31" />
+      <set param="pcw_mio_mio[31]_signal" value="wp" />
+      <set param="pcw_mio_mio[31]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[31]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_31" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 32" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 32" />
+      <set param="pcw_mio_mio[32]_signal" value="wp" />
+      <set param="pcw_mio_mio[32]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[32]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_32" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 33" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 33" />
+      <set param="pcw_mio_mio[33]_signal" value="wp" />
+      <set param="pcw_mio_mio[33]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[33]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_33" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 34" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 34" />
+      <set param="pcw_mio_mio[34]_signal" value="wp" />
+      <set param="pcw_mio_mio[34]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[34]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_34" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 35" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 35" />
+      <set param="pcw_mio_mio[35]_signal" value="wp" />
+      <set param="pcw_mio_mio[35]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[35]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_35" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 36" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 36" />
+      <set param="pcw_mio_mio[36]_signal" value="wp" />
+      <set param="pcw_mio_mio[36]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[36]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_36" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 37" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 37" />
+      <set param="pcw_mio_mio[37]_signal" value="wp" />
+      <set param="pcw_mio_mio[37]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[37]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_37" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 38" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 38" />
+      <set param="pcw_mio_mio[38]_signal" value="wp" />
+      <set param="pcw_mio_mio[38]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[38]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_38" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 39" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 39" />
+      <set param="pcw_mio_mio[39]_signal" value="wp" />
+      <set param="pcw_mio_mio[39]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[39]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_39" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 40" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 40" />
+      <set param="pcw_mio_mio[40]_signal" value="wp" />
+      <set param="pcw_mio_mio[40]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[40]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_40" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 41" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 41" />
+      <set param="pcw_mio_mio[41]_signal" value="wp" />
+      <set param="pcw_mio_mio[41]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[41]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_41" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 42" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 42" />
+      <set param="pcw_mio_mio[42]_signal" value="wp" />
+      <set param="pcw_mio_mio[42]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[42]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_42" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 43" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 43" />
+      <set param="pcw_mio_mio[43]_signal" value="wp" />
+      <set param="pcw_mio_mio[43]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[43]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_43" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 44" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 44" />
+      <set param="pcw_mio_mio[44]_signal" value="wp" />
+      <set param="pcw_mio_mio[44]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[44]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_44" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 45" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 45" />
+      <set param="pcw_mio_mio[45]_signal" value="wp" />
+      <set param="pcw_mio_mio[45]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[45]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_45" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 46" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 46" />
+      <set param="pcw_mio_mio[46]_signal" value="wp" />
+      <set param="pcw_mio_mio[46]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[46]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_46" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 47" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 47" />
+      <set param="pcw_mio_mio[47]_signal" value="wp" />
+      <set param="pcw_mio_mio[47]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[47]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_47" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 48" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 48" />
+      <set param="pcw_mio_mio[48]_signal" value="wp" />
+      <set param="pcw_mio_mio[48]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[48]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_48" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 49" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 49" />
+      <set param="pcw_mio_mio[49]_signal" value="wp" />
+      <set param="pcw_mio_mio[49]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[49]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_49" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 50" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 50" />
+      <set param="pcw_mio_mio[50]_signal" value="wp" />
+      <set param="pcw_mio_mio[50]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[50]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_50" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 51" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 51" />
+      <set param="pcw_mio_mio[51]_signal" value="wp" />
+      <set param="pcw_mio_mio[51]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[51]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_51" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 52" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 52" />
+      <set param="pcw_mio_mio[52]_signal" value="wp" />
+      <set param="pcw_mio_mio[52]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[52]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_52" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_wp_io" name="MIO 53" strength="5">
+      <set param="pcw_sd1_wp_io" value="MIO 53" />
+      <set param="pcw_mio_mio[53]_signal" value="wp" />
+      <set param="pcw_mio_mio[53]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[53]_signalgroup" value="WP" />
+      <set param="pcw_preset_mio_53" value="sdio1_wp" />
+  </preset>
+
+  <preset param="pcw_sd1_grp_pow_io" name="MIO 1" strength="5">
+
+      <set param="pcw_sdio_pow_sdio1_pow_io" value="MIO 1" />
+      <set param="pcw_mio_mio[1]_signal" value="sdio1_pow" />
+      <set param="pcw_mio_mio[1]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[1]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_1" value="sdio_pow" />
+
+  </preset>
+
+  <preset param="pcw_sd1_grp_pow_io" name="MIO 3" strength="5">
+
+      <set param="pcw_sdio_pow_sdio1_pow_io" value="MIO 3" />
+      <set param="pcw_mio_mio[3]_signal" value="sdio1_pow" />
+      <set param="pcw_mio_mio[3]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[3]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_3" value="sdio_pow" />
+
+  </preset>
+
+  <preset param="pcw_sd1_grp_pow_io" name="MIO 5" strength="5">
+
+      <set param="pcw_sdio_pow_sdio1_pow_io" value="MIO 5" />
+      <set param="pcw_mio_mio[5]_signal" value="sdio1_pow" />
+      <set param="pcw_mio_mio[5]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[5]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_5" value="sdio_pow" />
+
+  </preset>
+
+  <preset param="pcw_sd1_grp_pow_io" name="MIO 7" strength="5">
+
+      <set param="pcw_sdio_pow_sdio1_pow_io" value="MIO 7" />
+      <set param="pcw_mio_mio[7]_signal" value="sdio1_pow" />
+      <set param="pcw_mio_mio[7]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[7]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_7" value="sdio_pow" />
+
+  </preset>
+
+  <preset param="pcw_sd1_grp_pow_io" name="MIO 9" strength="5">
+
+      <set param="pcw_sdio_pow_sdio1_pow_io" value="MIO 9" />
+      <set param="pcw_mio_mio[9]_signal" value="sdio1_pow" />
+      <set param="pcw_mio_mio[9]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[9]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_9" value="sdio_pow" />
+
+  </preset>
+
+  <preset param="pcw_sd1_grp_pow_io" name="MIO 11" strength="5">
+
+      <set param="pcw_sdio_pow_sdio1_pow_io" value="MIO 11" />
+      <set param="pcw_mio_mio[11]_signal" value="sdio1_pow" />
+      <set param="pcw_mio_mio[11]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[11]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_11" value="sdio_pow" />
+
+  </preset>
+
+  <preset param="pcw_sd1_grp_pow_io" name="MIO 13" strength="5">
+
+      <set param="pcw_sdio_pow_sdio1_pow_io" value="MIO 13" />
+      <set param="pcw_mio_mio[13]_signal" value="sdio1_pow" />
+      <set param="pcw_mio_mio[13]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[13]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_13" value="sdio_pow" />
+
+  </preset>
+
+  <preset param="pcw_sd1_grp_pow_io" name="MIO 15" strength="5">
+
+      <set param="pcw_sdio_pow_sdio1_pow_io" value="MIO 15" />
+      <set param="pcw_mio_mio[15]_signal" value="sdio1_pow" />
+      <set param="pcw_mio_mio[15]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[15]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_15" value="sdio_pow" />
+
+  </preset>
+
+  <preset param="pcw_sd1_grp_pow_io" name="MIO 17" strength="5">
+
+      <set param="pcw_sdio_pow_sdio1_pow_io" value="MIO 17" />
+      <set param="pcw_mio_mio[17]_signal" value="sdio1_pow" />
+      <set param="pcw_mio_mio[17]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[17]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_17" value="sdio_pow" />
+
+  </preset>
+
+  <preset param="pcw_sd1_grp_pow_io" name="MIO 19" strength="5">
+
+      <set param="pcw_sdio_pow_sdio1_pow_io" value="MIO 19" />
+      <set param="pcw_mio_mio[19]_signal" value="sdio1_pow" />
+      <set param="pcw_mio_mio[19]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[19]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_19" value="sdio_pow" />
+
+  </preset>
+
+  <preset param="pcw_sd1_grp_pow_io" name="MIO 21" strength="5">
+
+      <set param="pcw_sdio_pow_sdio1_pow_io" value="MIO 21" />
+      <set param="pcw_mio_mio[21]_signal" value="sdio1_pow" />
+      <set param="pcw_mio_mio[21]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[21]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_21" value="sdio_pow" />
+
+  </preset>
+
+  <preset param="pcw_sd1_grp_pow_io" name="MIO 23" strength="5">
+
+      <set param="pcw_sdio_pow_sdio1_pow_io" value="MIO 23" />
+      <set param="pcw_mio_mio[23]_signal" value="sdio1_pow" />
+      <set param="pcw_mio_mio[23]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[23]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_23" value="sdio_pow" />
+
+  </preset>
+
+  <preset param="pcw_sd1_grp_pow_io" name="MIO 25" strength="5">
+
+      <set param="pcw_sdio_pow_sdio1_pow_io" value="MIO 25" />
+      <set param="pcw_mio_mio[25]_signal" value="sdio1_pow" />
+      <set param="pcw_mio_mio[25]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[25]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_25" value="sdio_pow" />
+
+  </preset>
+
+  <preset param="pcw_sd1_grp_pow_io" name="MIO 27" strength="5">
+
+      <set param="pcw_sdio_pow_sdio1_pow_io" value="MIO 27" />
+      <set param="pcw_mio_mio[27]_signal" value="sdio1_pow" />
+      <set param="pcw_mio_mio[27]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[27]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_27" value="sdio_pow" />
+
+  </preset>
+
+  <preset param="pcw_sd1_grp_pow_io" name="MIO 29" strength="5">
+
+      <set param="pcw_sdio_pow_sdio1_pow_io" value="MIO 29" />
+      <set param="pcw_mio_mio[29]_signal" value="sdio1_pow" />
+      <set param="pcw_mio_mio[29]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[29]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_29" value="sdio_pow" />
+
+  </preset>
+
+  <preset param="pcw_sd1_grp_pow_io" name="MIO 31" strength="5">
+
+      <set param="pcw_sdio_pow_sdio1_pow_io" value="MIO 31" />
+      <set param="pcw_mio_mio[31]_signal" value="sdio1_pow" />
+      <set param="pcw_mio_mio[31]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[31]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_31" value="sdio_pow" />
+
+  </preset>
+
+  <preset param="pcw_sd1_grp_pow_io" name="MIO 33" strength="5">
+
+      <set param="pcw_sdio_pow_sdio1_pow_io" value="MIO 33" />
+      <set param="pcw_mio_mio[33]_signal" value="sdio1_pow" />
+      <set param="pcw_mio_mio[33]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[33]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_33" value="sdio_pow" />
+
+  </preset>
+
+  <preset param="pcw_sd1_grp_pow_io" name="MIO 35" strength="5">
+
+      <set param="pcw_sdio_pow_sdio1_pow_io" value="MIO 35" />
+      <set param="pcw_mio_mio[35]_signal" value="sdio1_pow" />
+      <set param="pcw_mio_mio[35]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[35]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_35" value="sdio_pow" />
+
+  </preset>
+
+  <preset param="pcw_sd1_grp_pow_io" name="MIO 37" strength="5">
+
+      <set param="pcw_sdio_pow_sdio1_pow_io" value="MIO 37" />
+      <set param="pcw_mio_mio[37]_signal" value="sdio1_pow" />
+      <set param="pcw_mio_mio[37]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[37]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_37" value="sdio_pow" />
+
+  </preset>
+
+  <preset param="pcw_sd1_grp_pow_io" name="MIO 39" strength="5">
+
+      <set param="pcw_sdio_pow_sdio1_pow_io" value="MIO 39" />
+      <set param="pcw_mio_mio[39]_signal" value="sdio1_pow" />
+      <set param="pcw_mio_mio[39]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[39]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_39" value="sdio_pow" />
+
+  </preset>
+
+  <preset param="pcw_sd1_grp_pow_io" name="MIO 41" strength="5">
+
+      <set param="pcw_sdio_pow_sdio1_pow_io" value="MIO 41" />
+      <set param="pcw_mio_mio[41]_signal" value="sdio1_pow" />
+      <set param="pcw_mio_mio[41]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[41]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_41" value="sdio_pow" />
+
+  </preset>
+
+  <preset param="pcw_sd1_grp_pow_io" name="MIO 43" strength="5">
+
+      <set param="pcw_sdio_pow_sdio1_pow_io" value="MIO 43" />
+      <set param="pcw_mio_mio[43]_signal" value="sdio1_pow" />
+      <set param="pcw_mio_mio[43]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[43]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_43" value="sdio_pow" />
+
+  </preset>
+
+  <preset param="pcw_sd1_grp_pow_io" name="MIO 45" strength="5">
+
+      <set param="pcw_sdio_pow_sdio1_pow_io" value="MIO 45" />
+      <set param="pcw_mio_mio[45]_signal" value="sdio1_pow" />
+      <set param="pcw_mio_mio[45]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[45]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_45" value="sdio_pow" />
+
+  </preset>
+
+  <preset param="pcw_sd1_grp_pow_io" name="MIO 47" strength="5">
+
+      <set param="pcw_sdio_pow_sdio1_pow_io" value="MIO 47" />
+      <set param="pcw_mio_mio[47]_signal" value="sdio1_pow" />
+      <set param="pcw_mio_mio[47]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[47]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_47" value="sdio_pow" />
+
+  </preset>
+
+  <preset param="pcw_sd1_grp_pow_io" name="MIO 49" strength="5">
+
+      <set param="pcw_sdio_pow_sdio1_pow_io" value="MIO 49" />
+      <set param="pcw_mio_mio[49]_signal" value="sdio1_pow" />
+      <set param="pcw_mio_mio[49]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[49]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_49" value="sdio_pow" />
+
+  </preset>
+
+  <preset param="pcw_sd1_grp_pow_io" name="MIO 51" strength="5">
+
+      <set param="pcw_sdio_pow_sdio1_pow_io" value="MIO 51" />
+      <set param="pcw_mio_mio[51]_signal" value="sdio1_pow" />
+      <set param="pcw_mio_mio[51]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[51]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_51" value="sdio_pow" />
+
+  </preset>
+
+  <preset param="pcw_sd1_grp_pow_io" name="MIO 53" strength="5">
+
+      <set param="pcw_sdio_pow_sdio1_pow_io" value="MIO 53" />
+      <set param="pcw_mio_mio[53]_signal" value="sdio1_pow" />
+      <set param="pcw_mio_mio[53]_peripheral" value="SD 1" />
+      <set param="pcw_mio_mio[53]_signalgroup" value="SD 1" />
+      <set param="pcw_preset_mio_53" value="sdio_pow" />
+
+  </preset>
+
+
+</presets>
+

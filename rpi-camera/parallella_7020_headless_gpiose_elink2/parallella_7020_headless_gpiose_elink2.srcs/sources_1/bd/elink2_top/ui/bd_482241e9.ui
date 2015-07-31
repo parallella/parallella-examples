@@ -1,0 +1,70 @@
+{
+   guistr: "# # String gsaved with Nlview 6.4.10  2014-10-02 bk=1.3207 VDI=35 GEI=35 GUI=JA:1.8
+#  -string -flagsOSRD
+preplace port csi_intr -pg 1 -y 1150 -defaultsOSRD
+preplace port RX -pg 1 -y 610 -defaultsOSRD
+preplace port DDR -pg 1 -y 950 -defaultsOSRD
+preplace port CAM_I2C_SCL -pg 1 -y 1250 -defaultsOSRD
+preplace port CAM_I2C_SDA -pg 1 -y 1230 -defaultsOSRD
+preplace port CSI_AXI -pg 1 -y 400 -defaultsOSRD
+preplace port CCLK_N -pg 1 -y 610 -defaultsOSRD
+preplace port GPIO_0 -pg 1 -y 930 -defaultsOSRD
+preplace port I2C_SDA -pg 1 -y 1120 -defaultsOSRD
+preplace port CCLK_P -pg 1 -y 590 -defaultsOSRD
+preplace port CSI_VIDEO -pg 1 -y 70 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 970 -defaultsOSRD
+preplace port FCLK_CLK0 -pg 1 -y 1050 -defaultsOSRD
+preplace port TX -pg 1 -y 530 -defaultsOSRD
+preplace port FCLK_CLK1 -pg 1 -y 1030 -defaultsOSRD
+preplace port I2C_SCL -pg 1 -y 1140 -defaultsOSRD
+preplace portBus DSP_RESET_N -pg 1 -y 630 -defaultsOSRD
+preplace portBus aresetn -pg 1 -y 900 -defaultsOSRD
+preplace inst axi_vdma_0 -pg 1 -lvl 2 -y 110 -defaultsOSRD
+preplace inst elink2 -pg 1 -lvl 3 -y 580 -defaultsOSRD
+preplace inst axi_protocol_converter_0 -pg 1 -lvl 1 -y 920 -defaultsOSRD
+preplace inst axi_protocol_converter_1 -pg 1 -lvl 1 -y 770 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 1 -y 1140 -defaultsOSRD
+preplace inst axi_protocol_converter_2 -pg 1 -lvl 2 -y 690 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -y 1310 -defaultsOSRD
+preplace inst axi_lite_0 -pg 1 -lvl 2 -y 410 -defaultsOSRD
+preplace inst parallella_i2c_0 -pg 1 -lvl 3 -y 1130 -defaultsOSRD
+preplace inst parallella_i2c_1 -pg 1 -lvl 3 -y 1240 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 2 -y 940 -defaultsOSRD
+preplace netloc CSI_VIDEO_1 1 0 2 NJ 70 N
+preplace netloc processing_system7_0_DDR 1 2 2 980 950 NJ
+preplace netloc Net4 1 3 1 N
+preplace netloc elink2_CCLK_N 1 3 1 N
+preplace netloc axi_protocol_converter_2_M_AXI 1 2 1 990
+preplace netloc axi_vdma_0_s2mm_introut 1 0 3 130 240 NJ 240 1000
+preplace netloc Net5 1 3 1 N
+preplace netloc RX_1 1 0 3 NJ 610 NJ 580 920
+preplace netloc elink2_CCLK_P 1 3 1 N
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 2 470 610 930
+preplace netloc EMS_FROMMMU_1 1 2 2 1010 410 1350
+preplace netloc processing_system7_0_M_AXI_GP1 1 1 2 470 620 920
+preplace netloc csi_intr_1 1 0 1 N
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 470 1220 930
+preplace netloc processing_system7_0_IIC_0 1 2 1 950
+preplace netloc elink2_mcfg4_sw_reset 1 3 1 N
+preplace netloc processing_system7_0_IIC_1 1 2 1 940
+preplace netloc axi_protocol_converter_0_M_AXI 1 1 1 N
+preplace netloc xlconcat_0_dout 1 1 1 460
+preplace netloc axi_lite_0_M02_AXI 1 2 2 990 400 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 2 2 960 970 NJ
+preplace netloc proc_sys_reset_0_peripheral_reset 1 2 1 1000
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 0 4 170 700 460 590 970 900 NJ
+preplace netloc processing_system7_0_GPIO_0 1 2 2 990 930 NJ
+preplace netloc axi_lite_0_M01_AXI 1 1 2 470 220 920
+preplace netloc elink2_M00_AXI 1 0 4 150 570 NJ 250 NJ 390 1360
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 160 690 440 600 1010 1050 NJ
+preplace netloc elink2_TX 1 3 1 N
+preplace netloc axi_vdma_0_M_AXI_S2MM 1 0 3 140 230 NJ 230 1010
+preplace netloc processing_system7_0_FCLK_CLK1 1 2 2 N 1030 NJ
+preplace netloc Net2 1 3 1 N
+preplace netloc axi_protocol_converter_1_M_AXI 1 1 1 430
+preplace netloc axi_lite_0_M00_AXI 1 2 1 1000
+preplace netloc Net3 1 3 1 N
+levelinfo -pg 1 110 300 700 1190 1380
+",
+}
+0

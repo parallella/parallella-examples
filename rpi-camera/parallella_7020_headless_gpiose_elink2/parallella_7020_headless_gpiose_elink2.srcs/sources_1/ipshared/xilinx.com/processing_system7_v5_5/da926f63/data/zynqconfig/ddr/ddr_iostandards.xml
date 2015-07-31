@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE presets PUBLIC "presets" "presets.dtd" >
+<presets>
+  <preset param="pcw_internal_ddr_ddriob_addr0" name="SSTL15" strength="7" >
+    <set param="pcw_ddr_a[0]_voltage" value="SSTL15" />
+    <set param="pcw_ddr_a[1]_voltage" value="SSTL15" />
+    <set param="pcw_ddr_a[2]_voltage" value="SSTL15" />
+    <set param="pcw_ddr_a[3]_voltage" value="SSTL15" />
+    <set param="pcw_ddr_a[4]_voltage" value="SSTL15" />
+    <set param="pcw_ddr_a[5]_voltage" value="SSTL15" />
+    <set param="pcw_ddr_a[6]_voltage" value="SSTL15" />
+    <set param="pcw_ddr_a[7]_voltage" value="SSTL15" />
+    <set param="pcw_ddr_a[8]_voltage" value="SSTL15" />
+    <set param="pcw_ddr_a[9]_voltage" value="SSTL15" />
+    <set param="pcw_ddr_a[10]_voltage" value="SSTL15" />
+    <set param="pcw_ddr_a[11]_voltage" value="SSTL15" />
+    <set param="pcw_ddr_a[12]_voltage" value="SSTL15" />
+    <set param="pcw_ddr_a[13]_voltage" value="SSTL15" />
+    <set param="pcw_ddr_a[14]_voltage" value="SSTL15" />
+    <set param="pcw_ddr_ba[0]_voltage" value="SSTL15" />
+    <set param="pcw_ddr_ba[1]_voltage" value="SSTL15" />
+    <set param="pcw_ddr_ba[2]_voltage" value="SSTL15" />
+    <set param="pcw_ddr_cke_voltage" value="SSTL15" />
+    <set param="pcw_ddr_odt_voltage" value="SSTL15" />
+    <set param="pcw_ddr_we_b_voltage" value="SSTL15" />
+    <set param="pcw_ddr_cas_b_voltage" value="SSTL15" />
+    <set param="pcw_ddr_ras_b_voltage" value="SSTL15" />
+    <set param="pcw_ddr_cs_b_voltage" value="SSTL15" />
+    <set param="pcw_ddr_drst_b_voltage" value="SSTL15" />
+  </preset>
+
+  <preset param="pcw_internal_ddr_ddriob_addr0" name="SSTL135" strength="7" >
+    <set param="pcw_ddr_a[0]_voltage" value="SSTL135" />
+    <set param="pcw_ddr_a[1]_voltage" value="SSTL135" />
+    <set param="pcw_ddr_a[2]_voltage" value="SSTL135" />
+    <set param="pcw_ddr_a[3]_voltage" value="SSTL135" />
+    <set param="pcw_ddr_a[4]_voltage" value="SSTL135" />
+    <set param="pcw_ddr_a[5]_voltage" value="SSTL135" />
+    <set param="pcw_ddr_a[6]_voltage" value="SSTL135" />
+    <set param="pcw_ddr_a[7]_voltage" value="SSTL135" />
+    <set param="pcw_ddr_a[8]_voltage" value="SSTL135" />
+    <set param="pcw_ddr_a[9]_voltage" value="SSTL135" />
+    <set param="pcw_ddr_a[10]_voltage" value="SSTL135" />
+    <set param="pcw_ddr_a[11]_voltage" value="SSTL135" />
+    <set param="pcw_ddr_a[12]_voltage" value="SSTL135" />
+    <set param="pcw_ddr_a[13]_voltage" value="SSTL135" />
+    <set param="pcw_ddr_a[14]_voltage" value="SSTL135" />
+    <set param="pcw_ddr_ba[0]_voltage" value="SSTL135" />
+    <set param="pcw_ddr_ba[1]_voltage" value="SSTL135" />
+    <set param="pcw_ddr_ba[2]_voltage" value="SSTL135" />
+    <set param="pcw_ddr_cke_voltage" value="SSTL135" />
+    <set param="pcw_ddr_odt_voltage" value="SSTL135" />
+    <set param="pcw_ddr_we_b_voltage" value="SSTL135" />
+    <set param="pcw_ddr_cas_b_voltage" value="SSTL135" />
+    <set param="pcw_ddr_ras_b_voltage" value="SSTL135" />
+    <set param="pcw_ddr_cs_b_voltage" value="SSTL135" />
+    <set param="pcw_ddr_drst_b_voltage" value="SSTL135" />
+  </preset>
+
+  <preset param="pcw_internal_ddr_ddriob_addr0" name="SSTL18_I" strength="7" >
+    <set param="pcw_ddr_a[0]_voltage" value="SSTL18_I" />
+    <set param="pcw_ddr_a[1]_voltage" value="SSTL18_I" />
+    <set param="pcw_ddr_a[2]_voltage" value="SSTL18_I" />
+    <set param="pcw_ddr_a[3]_voltage" value="SSTL18_I" />
+    <set param="pcw_ddr_a[4]_voltage" value="SSTL18_I" />
+    <set param="pcw_ddr_a[5]_voltage" value="SSTL18_I" />
+    <set param="pcw_ddr_a[6]_voltage" value="SSTL18_I" />
+    <set param="pcw_ddr_a[7]_voltage" value="SSTL18_I" />
+    <set param="pcw_ddr_a[8]_voltage" value="SSTL18_I" />
+    <set param="pcw_ddr_a[9]_voltage" value="SSTL18_I" />
+    <set param="pcw_ddr_a[10]_voltage" value="SSTL18_I" />
+    <set param="pcw_ddr_a[11]_voltage" value="SSTL18_I" />
+    <set param="pcw_ddr_a[12]_voltage" value="SSTL18_I" />
+    <set param="pcw_ddr_a[13]_voltage" value="SSTL18_I" />
+    <set param="pcw_ddr_a[14]_voltage" value="SSTL18_I" />
+    <set param="pcw_ddr_ba[0]_voltage" value="SSTL18_I" />
+    <set param="pcw_ddr_ba[1]_voltage" value="SSTL18_I" />
+    <set param="pcw_ddr_ba[2]_voltage" value="SSTL18_I" />
+    <set param="pcw_ddr_cke_voltage" value="SSTL18_I" />
+    <set param="pcw_ddr_odt_voltage" value="SSTL18_I" />
+    <set param="pcw_ddr_we_b_voltage" value="SSTL18_I" />
+    <set param="pcw_ddr_cas_b_voltage" value="SSTL18_I" />
+    <set param="pcw_ddr_ras_b_voltage" value="SSTL18_I" />
+    <set param="pcw_ddr_cs_b_voltage" value="SSTL18_I" />
+    <set param="pcw_ddr_drst_b_voltage" value="SSTL18_I" />
+  </preset>
+
+  <preset param="pcw_internal_ddr_ddriob_addr0" name="HSUL_12_DCI" strength="7" >
+    <set param="pcw_ddr_a[0]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_a[1]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_a[2]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_a[3]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_a[4]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_a[5]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_a[6]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_a[7]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_a[8]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_a[9]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_a[10]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_a[11]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_a[12]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_a[13]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_a[14]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_ba[0]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_ba[1]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_ba[2]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_cke_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_odt_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_we_b_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_cas_b_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_ras_b_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_cs_b_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_drst_b_voltage" value="HSUL_12_DCI" />
+  </preset>
+
+  <preset param="pcw_internal_ddr_ddriob_data0" name="SSTL135_T_DCI" strength="7" >
+    <set param="pcw_ddr_dq[0]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[1]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[2]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[3]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[4]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[5]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[6]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[7]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[8]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[9]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[10]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[11]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[12]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[13]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[14]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[15]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[16]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[17]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[18]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[19]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[20]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[21]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[22]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[23]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[24]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[25]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[26]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[27]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[28]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[29]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[30]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dq[31]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dm[0]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dm[1]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dm[2]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_dm[3]_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_vrn_voltage" value="SSTL135_T_DCI" />
+    <set param="pcw_ddr_vrp_voltage" value="SSTL135_T_DCI" />
+  </preset>
+
+  <preset param="pcw_internal_ddr_ddriob_data0" name="SSTL15_T_DCI" strength="7" >
+    <set param="pcw_ddr_dq[0]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[1]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[2]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[3]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[4]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[5]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[6]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[7]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[8]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[9]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[10]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[11]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[12]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[13]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[14]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[15]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[16]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[17]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[18]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[19]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[20]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[21]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[22]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[23]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[24]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[25]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[26]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[27]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[28]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[29]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[30]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dq[31]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dm[0]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dm[1]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dm[2]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_dm[3]_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_vrn_voltage" value="SSTL15_T_DCI" />
+    <set param="pcw_ddr_vrp_voltage" value="SSTL15_T_DCI" />
+  </preset>
+
+  <preset param="pcw_internal_ddr_ddriob_data0" name="SSTL18_II_T_DCI" strength="7" >
+    <set param="pcw_ddr_dq[0]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[1]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[2]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[3]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[4]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[5]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[6]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[7]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[8]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[9]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[10]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[11]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[12]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[13]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[14]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[15]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[16]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[17]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[18]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[19]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[20]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[21]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[22]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[23]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[24]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[25]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[26]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[27]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[28]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[29]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[30]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dq[31]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dm[0]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dm[1]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dm[2]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dm[3]_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_vrn_voltage" value="SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_vrp_voltage" value="SSTL18_II_T_DCI" />
+  </preset>
+
+  <preset param="pcw_internal_ddr_ddriob_data0" name="HSUL_12_DCI" strength="7" >
+    <set param="pcw_ddr_dq[0]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[1]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[2]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[3]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[4]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[5]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[6]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[7]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[8]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[9]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[10]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[11]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[12]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[13]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[14]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[15]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[16]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[17]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[18]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[19]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[20]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[21]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[22]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[23]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[24]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[25]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[26]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[27]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[28]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[29]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[30]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dq[31]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dm[0]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dm[1]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dm[2]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_dm[3]_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_vrn_voltage" value="HSUL_12_DCI" />
+    <set param="pcw_ddr_vrp_voltage" value="HSUL_12_DCI" />
+  </preset>
+
+  <preset param="pcw_internal_ddr_ddriob_diff0" name="DIFF_SSTL15_T_DCI" strength="7" >
+    <set param="pcw_ddr_dqs_p[0]_voltage" value="DIFF_SSTL15_T_DCI" />
+    <set param="pcw_ddr_dqs_p[1]_voltage" value="DIFF_SSTL15_T_DCI" />
+    <set param="pcw_ddr_dqs_p[2]_voltage" value="DIFF_SSTL15_T_DCI" />
+    <set param="pcw_ddr_dqs_p[3]_voltage" value="DIFF_SSTL15_T_DCI" />
+    <set param="pcw_ddr_dqs_n[0]_voltage" value="DIFF_SSTL15_T_DCI" />
+    <set param="pcw_ddr_dqs_n[1]_voltage" value="DIFF_SSTL15_T_DCI" />
+    <set param="pcw_ddr_dqs_n[2]_voltage" value="DIFF_SSTL15_T_DCI" />
+    <set param="pcw_ddr_dqs_n[3]_voltage" value="DIFF_SSTL15_T_DCI" />
+  </preset>
+
+  <preset param="pcw_internal_ddr_ddriob_diff0" name="DIFF_SSTL135_T_DCI" strength="7" >
+    <set param="pcw_ddr_dqs_p[0]_voltage" value="DIFF_SSTL135_T_DCI" />
+    <set param="pcw_ddr_dqs_p[1]_voltage" value="DIFF_SSTL135_T_DCI" />
+    <set param="pcw_ddr_dqs_p[2]_voltage" value="DIFF_SSTL135_T_DCI" />
+    <set param="pcw_ddr_dqs_p[3]_voltage" value="DIFF_SSTL135_T_DCI" />
+    <set param="pcw_ddr_dqs_n[0]_voltage" value="DIFF_SSTL135_T_DCI" />
+    <set param="pcw_ddr_dqs_n[1]_voltage" value="DIFF_SSTL135_T_DCI" />
+    <set param="pcw_ddr_dqs_n[2]_voltage" value="DIFF_SSTL135_T_DCI" />
+    <set param="pcw_ddr_dqs_n[3]_voltage" value="DIFF_SSTL135_T_DCI" />
+  </preset>
+
+  <preset param="pcw_internal_ddr_ddriob_diff0" name="DIFF_SSTL18_II_T_DCI" strength="7" >
+    <set param="pcw_ddr_dqs_p[0]_voltage" value="DIFF_SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dqs_p[1]_voltage" value="DIFF_SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dqs_p[2]_voltage" value="DIFF_SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dqs_p[3]_voltage" value="DIFF_SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dqs_n[0]_voltage" value="DIFF_SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dqs_n[1]_voltage" value="DIFF_SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dqs_n[2]_voltage" value="DIFF_SSTL18_II_T_DCI" />
+    <set param="pcw_ddr_dqs_n[3]_voltage" value="DIFF_SSTL18_II_T_DCI" />
+  </preset>
+
+  <preset param="pcw_internal_ddr_ddriob_diff0" name="DIFF_HSUL_12_DCI" strength="7" >
+    <set param="pcw_ddr_dqs_p[0]_voltage" value="DIFF_HSUL_12_DCI" />
+    <set param="pcw_ddr_dqs_p[1]_voltage" value="DIFF_HSUL_12_DCI" />
+    <set param="pcw_ddr_dqs_p[2]_voltage" value="DIFF_HSUL_12_DCI" />
+    <set param="pcw_ddr_dqs_p[3]_voltage" value="DIFF_HSUL_12_DCI" />
+    <set param="pcw_ddr_dqs_n[0]_voltage" value="DIFF_HSUL_12_DCI" />
+    <set param="pcw_ddr_dqs_n[1]_voltage" value="DIFF_HSUL_12_DCI" />
+    <set param="pcw_ddr_dqs_n[2]_voltage" value="DIFF_HSUL_12_DCI" />
+    <set param="pcw_ddr_dqs_n[3]_voltage" value="DIFF_HSUL_12_DCI" />
+  </preset>
+
+  <preset param="pcw_internal_ddr_ddriob_diff0" name="DIFF_HSUL_12_DCI" strength="7" >
+    <set param="pcw_ddr_dqs_p[0]_voltage" value="DIFF_HSUL_12_DCI" />
+    <set param="pcw_ddr_dqs_p[1]_voltage" value="DIFF_HSUL_12_DCI" />
+    <set param="pcw_ddr_dqs_p[2]_voltage" value="DIFF_HSUL_12_DCI" />
+    <set param="pcw_ddr_dqs_p[3]_voltage" value="DIFF_HSUL_12_DCI" />
+    <set param="pcw_ddr_dqs_n[0]_voltage" value="DIFF_HSUL_12_DCI" />
+    <set param="pcw_ddr_dqs_n[1]_voltage" value="DIFF_HSUL_12_DCI" />
+    <set param="pcw_ddr_dqs_n[2]_voltage" value="DIFF_HSUL_12_DCI" />
+    <set param="pcw_ddr_dqs_n[3]_voltage" value="DIFF_HSUL_12_DCI" />
+  </preset>
+
+  <preset param="pcw_internal_ddr_ddriob_clock" name="DIFF_SSTL15" strength="7" >
+    <set param="pcw_ddr_ck_p_voltage" value="DIFF_SSTL15" />
+    <set param="pcw_ddr_ck_n_voltage" value="DIFF_SSTL15" />
+  </preset>
+
+  <preset param="pcw_internal_ddr_ddriob_clock" name="DIFF_SSTL135" strength="7" >
+    <set param="pcw_ddr_ck_p_voltage" value="DIFF_SSTL135" />
+    <set param="pcw_ddr_ck_n_voltage" value="DIFF_SSTL135" />
+  </preset>
+
+  <preset param="pcw_internal_ddr_ddriob_clock" name="DIFF_SSTL18_I" strength="7" >
+    <set param="pcw_ddr_ck_p_voltage" value="DIFF_SSTL18_I" />
+    <set param="pcw_ddr_ck_n_voltage" value="DIFF_SSTL18_I" />
+  </preset>
+
+  <preset param="pcw_internal_ddr_ddriob_clock" name="DIFF_HSUL_12_DCI" strength="7" >
+    <set param="pcw_ddr_ck_p_voltage" value="DIFF_HSUL_12_DCI" />
+    <set param="pcw_ddr_ck_n_voltage" value="DIFF_HSUL_12_DCI" />
+  </preset>
+
+  <preset param="pcw_internal_ddriob_addr0" name="1" strength="7" >
+    <set param="pcw_ddr_a[0]_pullup" value="enabled" />
+    <set param="pcw_ddr_a[1]_pullup" value="enabled" />
+    <set param="pcw_ddr_a[2]_pullup" value="enabled" />
+    <set param="pcw_ddr_a[3]_pullup" value="enabled" />
+    <set param="pcw_ddr_a[4]_pullup" value="enabled" />
+    <set param="pcw_ddr_a[5]_pullup" value="enabled" />
+    <set param="pcw_ddr_a[6]_pullup" value="enabled" />
+    <set param="pcw_ddr_a[7]_pullup" value="enabled" />
+    <set param="pcw_ddr_a[8]_pullup" value="enabled" />
+    <set param="pcw_ddr_a[9]_pullup" value="enabled" />
+    <set param="pcw_ddr_a[10]_pullup" value="enabled" />
+    <set param="pcw_ddr_a[11]_pullup" value="enabled" />
+    <set param="pcw_ddr_a[12]_pullup" value="enabled" />
+    <set param="pcw_ddr_a[13]_pullup" value="enabled" />
+    <set param="pcw_ddr_a[14]_pullup" value="enabled" />
+    <set param="pcw_ddr_cke_pullup" value="enabled" />
+    <set param="pcw_ddr_drst_b_pullup" value="enabled" />
+  </preset>
+
+  <preset param="pcw_internal_ddriob_addr0" name="0" strength="7" >
+    <set param="pcw_ddr_a[0]_pullup" value="disabled" />
+    <set param="pcw_ddr_a[1]_pullup" value="disabled" />
+    <set param="pcw_ddr_a[2]_pullup" value="disabled" />
+    <set param="pcw_ddr_a[3]_pullup" value="disabled" />
+    <set param="pcw_ddr_a[4]_pullup" value="disabled" />
+    <set param="pcw_ddr_a[5]_pullup" value="disabled" />
+    <set param="pcw_ddr_a[6]_pullup" value="disabled" />
+    <set param="pcw_ddr_a[7]_pullup" value="disabled" />
+    <set param="pcw_ddr_a[8]_pullup" value="disabled" />
+    <set param="pcw_ddr_a[9]_pullup" value="disabled" />
+    <set param="pcw_ddr_a[10]_pullup" value="disabled" />
+    <set param="pcw_ddr_a[11]_pullup" value="disabled" />
+    <set param="pcw_ddr_a[12]_pullup" value="disabled" />
+    <set param="pcw_ddr_a[13]_pullup" value="disabled" />
+    <set param="pcw_ddr_a[14]_pullup" value="disabled" />
+    <set param="pcw_ddr_cke_pullup" value="disabled" />
+    <set param="pcw_ddr_drst_b_pullup" value="disabled" />
+  </preset>
+
+  <preset param="pcw_internal_ddriob_addr1" name="1" strength="7" >
+    <set param="pcw_ddr_cs_b_pullup" value="enabled" />
+    <set param="pcw_ddr_odt_pullup" value="enabled" />
+    <set param="pcw_ddr_we_b_pullup" value="enabled" />
+    <set param="pcw_ddr_cas_b_pullup" value="enabled" />
+    <set param="pcw_ddr_ras_b_pullup" value="enabled" />
+    <set param="pcw_ddr_ba[0]_pullup" value="enabled" />
+    <set param="pcw_ddr_ba[1]_pullup" value="enabled" />
+    <set param="pcw_ddr_ba[2]_pullup" value="enabled" />
+  </preset>
+
+  <preset param="pcw_internal_ddriob_addr1" name="0" strength="7" >
+    <set param="pcw_ddr_cs_b_pullup" value="disabled" />
+    <set param="pcw_ddr_odt_pullup" value="disabled" />
+    <set param="pcw_ddr_we_b_pullup" value="disabled" />
+    <set param="pcw_ddr_cas_b_pullup" value="disabled" />
+    <set param="pcw_ddr_ras_b_pullup" value="disabled" />
+    <set param="pcw_ddr_ba[0]_pullup" value="disabled" />
+    <set param="pcw_ddr_ba[1]_pullup" value="disabled" />
+    <set param="pcw_ddr_ba[2]_pullup" value="disabled" />
+  </preset>
+
+  <preset param="pcw_internal_ddriob_data0" name="1" strength="7" >
+    <set param="pcw_ddr_dq[0]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[1]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[2]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[3]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[4]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[5]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[6]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[7]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[8]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[9]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[10]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[11]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[12]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[13]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[14]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[15]_pullup" value="enabled" />
+    <set param="pcw_ddr_dm[0]_pullup" value="enabled" />
+    <set param="pcw_ddr_dm[1]_pullup" value="enabled" />
+    <set param="pcw_ddr_vrn_pullup" value="enabled" />
+    <set param="pcw_ddr_vrp_pullup" value="enabled" />
+  </preset>
+
+  <preset param="pcw_internal_ddriob_data1" name="1" strength="7" >
+    <set param="pcw_ddr_dq[16]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[17]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[18]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[19]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[20]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[21]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[22]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[23]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[24]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[25]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[26]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[27]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[28]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[29]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[30]_pullup" value="enabled" />
+    <set param="pcw_ddr_dq[31]_pullup" value="enabled" />
+    <set param="pcw_ddr_dm[2]_pullup" value="enabled" />
+    <set param="pcw_ddr_dm[3]_pullup" value="enabled" />
+  </preset>
+
+  <preset param="pcw_internal_ddriob_data0" name="0" strength="7" >
+    <set param="pcw_ddr_dq[0]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[1]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[2]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[3]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[4]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[5]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[6]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[7]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[8]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[9]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[10]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[11]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[12]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[13]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[14]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[15]_pullup" value="disabled" />
+    <set param="pcw_ddr_dm[0]_pullup" value="disabled" />
+    <set param="pcw_ddr_dm[1]_pullup" value="disabled" />
+    <set param="pcw_ddr_vrn_pullup" value="disabled" />
+    <set param="pcw_ddr_vrp_pullup" value="disabled" />
+  </preset>
+
+  <preset param="pcw_internal_ddriob_data1" name="0" strength="7" >
+    <set param="pcw_ddr_dq[16]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[17]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[18]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[19]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[20]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[21]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[22]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[23]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[24]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[25]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[26]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[27]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[28]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[29]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[30]_pullup" value="disabled" />
+    <set param="pcw_ddr_dq[31]_pullup" value="disabled" />
+    <set param="pcw_ddr_dm[2]_pullup" value="disabled" />
+    <set param="pcw_ddr_dm[3]_pullup" value="disabled" />
+  </preset>
+
+  <preset param="pcw_internal_ddriob_diff0" name="1" strength="7" >
+    <set param="pcw_ddr_dqs_p[0]_pullup" value="enabled" />
+    <set param="pcw_ddr_dqs_p[1]_pullup" value="enabled" />
+    <set param="pcw_ddr_dqs_n[0]_pullup" value="enabled" />
+    <set param="pcw_ddr_dqs_n[1]_pullup" value="enabled" />
+  </preset>
+
+  <preset param="pcw_internal_ddriob_diff1" name="1" strength="7" >
+    <set param="pcw_ddr_dqs_p[2]_pullup" value="enabled" />
+    <set param="pcw_ddr_dqs_p[3]_pullup" value="enabled" />
+    <set param="pcw_ddr_dqs_n[2]_pullup" value="enabled" />
+    <set param="pcw_ddr_dqs_n[3]_pullup" value="enabled" />
+  </preset>
+
+  <preset param="pcw_internal_ddriob_diff0" name="0" strength="7" >
+    <set param="pcw_ddr_dqs_p[0]_pullup" value="disabled" />
+    <set param="pcw_ddr_dqs_p[1]_pullup" value="disabled" />
+    <set param="pcw_ddr_dqs_n[0]_pullup" value="disabled" />
+    <set param="pcw_ddr_dqs_n[1]_pullup" value="disabled" />
+  </preset>
+
+  <preset param="pcw_internal_ddriob_diff1" name="0" strength="7" >
+    <set param="pcw_ddr_dqs_p[2]_pullup" value="disabled" />
+    <set param="pcw_ddr_dqs_p[3]_pullup" value="disabled" />
+    <set param="pcw_ddr_dqs_n[2]_pullup" value="disabled" />
+    <set param="pcw_ddr_dqs_n[3]_pullup" value="disabled" />
+  </preset>
+
+  <preset param="pcw_internal_ddriob_clock" name="1" strength="7" >
+    <set param="pcw_ddr_ckp_pullup" value="enabled" />
+    <set param="pcw_ddr_ckn_pullup" value="enabled" />
+  </preset>
+
+  <preset param="pcw_internal_ddriob_clock" name="0" strength="7" >
+    <set param="pcw_ddr_ckp_pullup" value="disabled" />
+    <set param="pcw_ddr_ckn_pullup" value="disabled" />
+  </preset>
+
+</presets>

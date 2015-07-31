@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 16:47:07 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Sat Jun 27 19:18:51 2015
+# Process ID: 23468
+# Log file: /tmp/v/parviv/parallella_7020_headless_gpiose_elink2.runs/impl_1/elink2_top_wrapper.vdi
+# Journal file: /tmp/v/parviv/parallella_7020_headless_gpiose_elink2.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source elink2_top_wrapper.tcl -notrace

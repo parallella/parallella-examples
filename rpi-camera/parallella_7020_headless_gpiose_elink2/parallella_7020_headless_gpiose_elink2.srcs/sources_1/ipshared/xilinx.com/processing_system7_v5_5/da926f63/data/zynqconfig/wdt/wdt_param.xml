@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE parameters PUBLIC "parameters" "parameters.dtd" >
+<parameters>
+
+  <parameter uniqueid="pcw_wdt_peripheral_freqmhz">
+    <name> WDT Freq (MHz) </name>
+    <range min="0.1" max="200" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_act_wdt_peripheral_freqmhz">
+    <name> WDT Freq (MHz) </name>
+    <range min="0.1" max="200" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_EN_EMIO_WDT">
+    <name> C_EN_EMIO_WDT </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_EN_WDT">
+    <name> C_EN_WDT </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_wdt_peripheral_enable">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_wdt_wdt_io">
+    <name> WDT </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_wdt_clk_in_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_wdt_rst_out_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+
+</parameters>

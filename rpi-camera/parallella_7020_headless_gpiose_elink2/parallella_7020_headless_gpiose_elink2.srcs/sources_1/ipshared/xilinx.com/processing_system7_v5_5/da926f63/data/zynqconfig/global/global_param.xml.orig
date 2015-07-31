@@ -1,0 +1,1350 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE parameters PUBLIC "parameters" "parameters.dtd" >
+<parameters>
+
+
+  <parameter uniqueid="pcw_preset_global_config">
+    <name> Global Configuration  </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+  <parameter uniqueid="pcw_preset_global_default">
+    <name> low strength setting of values </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+
+  <parameter uniqueid="pcw_en_emio_sram_int">
+    <name> C_EN_EMIO_SRAM_INT </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+<parameter uniqueid="pcw_smc_cycle_t0">
+    <name> SMC SET_T0 </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+ <parameter uniqueid="pcw_smc_cycle_t1">
+    <name> SMC SET_T1 </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+ <parameter uniqueid="pcw_smc_cycle_t2">
+    <name> SMC SET_T2 </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+ <parameter uniqueid="pcw_smc_cycle_t3">
+    <name> SMC SET_T3 </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+ <parameter uniqueid="pcw_smc_cycle_t4">
+    <name> SMC SET_T4 </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+ <parameter uniqueid="pcw_smc_cycle_t5">
+    <name> SMC SET_T5 </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+ <parameter uniqueid="pcw_smc_cycle_t6">
+    <name> SMC SET_T6 </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+  <parameter uniqueid="pcw_crystal_peripheral_freqmhz">
+    <name> Input Crystal Freq (MHz) </name>
+    <range min="30" max="60" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_apu_peripheral_freqmhz">
+    <name> CPU 6x Freq (MHz) </name>
+    <range min="50" max="800" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_apu_1x_peripheral_freqmhz">
+    <name> CPU 1x Freq (MHz) </name>
+    <range min="50" max="400" />
+    <ui_param/>
+  </parameter>
+
+
+  <parameter uniqueid="pcw_apu_clk_ratio_enable">
+    <name> CPU clock ratio (6:2:1) </name>
+    <choice value="0"> <name> 4:2:1 </name> </choice> 
+    <choice value="1"> <name> 6:2:1 </name> </choice>      
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_apu_clk_ratio_is_6_2_1">
+    <name> Is clock ratio (6:2:1) enable </name>
+    <desc> -- </desc>
+  </parameter>
+
+  <parameter uniqueid="pcw_dci_peripheral_freqmhz">
+    <name> DCI Freq (MHz) </name>
+    <range min="0.1" max="177" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_pcap_peripheral_freqmhz">
+    <name> PCAP Freq (MHz) </name>
+    <range min="10" max="300" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_tpiu_peripheral_freqmhz">
+    <name> TPIU Freq (MHz) </name>
+    <range min="10" max="300" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_fpga0_peripheral_freqmhz">
+    <name> FPGA0 Freq (MHz) </name>
+    <range min="0.1" max="333" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_fpga1_peripheral_freqmhz">
+    <name> FPGA1 Freq (MHz) </name>
+    <range min="0.1" max="333" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_fpga2_peripheral_freqmhz">
+    <name> FPGA2 Freq (MHz) </name>
+    <range min="0.1" max="333" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_fpga3_peripheral_freqmhz">
+    <name> FPGA3 Freq (MHz) </name>
+    <range min="0.1" max="333" />
+    <ui_param/>
+  </parameter>
+  
+  <parameter uniqueid="pcw_en_ddr">
+    <name>C_EN_DDR</name>
+  </parameter>
+  
+  <parameter uniqueid="pcw_clk0_freq">
+    <name>C_FCLK_CLK0_FREQ</name>
+  </parameter>
+  
+  <parameter uniqueid="pcw_clk1_freq">
+    <name>C_FCLK_CLK1_FREQ</name>
+  </parameter>
+  
+  <parameter uniqueid="pcw_clk2_freq">
+    <name>C_FCLK_CLK2_FREQ</name>
+  </parameter>
+  
+  <parameter uniqueid="pcw_clk3_freq">
+    <name>C_FCLK_CLK3_FREQ</name>
+  </parameter>
+  
+  <parameter uniqueid="pcw_qspi_peripheral_freqmhz">
+    <name> QSPI Flash Freq (MHz) </name>
+    <range min="10" max="200" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_smc_peripheral_freqmhz">
+    <name> SMC Freq (MHz) </name>
+    <range min="10" max="100" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_enet0_peripheral_freqmhz">
+    <name> ENET0 Freq (MHz) </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_enet0_internal_freqmhz">
+    <name> ENET0 Freq (MHz) </name>
+    <choice value="125"> <name> 1000 Mbps </name> </choice> 
+    <choice value="25"> <name> 100 Mbps </name> </choice>      
+    <choice value="2.5"> <name> 10 Mbps </name> </choice>      
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_enet1_peripheral_freqmhz">
+    <name> ENET1 Freq (MHz) </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_enet1_internal_freqmhz">
+    <name> ENET1 Freq (MHz) </name>
+    <choice value="125"> <name> 1000 Mbps </name> </choice> 
+    <choice value="25"> <name> 100 Mbps </name> </choice>      
+    <choice value="2.5"> <name> 10 Mbps </name> </choice>      
+    <ui_param/>
+  </parameter>
+ 
+ <parameter uniqueid="pcw_internal_uart_baud_rate">
+       <name> C_UART_BAUD_RATE </name>
+       <desc> -- </desc>
+       <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_usb0_peripheral_freqmhz">
+    <name> USB0 Freq (MHz) </name>
+    <range min="5" max="60" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_usb1_peripheral_freqmhz">
+    <name> USB1 Freq (MHz) </name>
+    <range min="5" max="60" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_sdio_peripheral_freqmhz">
+    <name> SDIO Freq (MHz) </name>
+    <range min="10" max="125" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_uart_peripheral_freqmhz">
+    <name> UART Freq (MHz) </name>
+    <range min="10" max="100" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_spi_peripheral_freqmhz">
+    <name> SPI Freq (MHz) </name>
+    <range min="10" max="200" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_can_peripheral_freqmhz">
+    <name> CAN Freq (MHz) </name>
+    <range min="0.1" max="100" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_can0_peripheral_freqmhz">
+    <name> CAN Freq (MHz) </name>
+    <range min="0.1" max="100" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_can1_peripheral_freqmhz">
+    <name> CAN Freq (MHz) </name>
+    <range min="0.1" max="100" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ttc_peripheral_freqmhz">
+    <name> TTC Freq (MHz) </name>
+    <range min="0.1" max="100" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_i2c_peripheral_freqmhz">
+    <name> I2C Freq (MHz) </name>
+    <range min="0.1" max="200" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_act_crystal_peripheral_freqmhz">
+    <name> Input Crystal Freq (MHz) </name>
+    <range min="30" max="60" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_act_apu_peripheral_freqmhz">
+    <name> CPU 6x Freq (MHz) </name>
+    <range min="50" max="800" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_act_dci_peripheral_freqmhz">
+    <name> DCI Freq (MHz) </name>
+    <range min="0.1" max="177" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_act_pcap_peripheral_freqmhz">
+    <name> PCAP Freq (MHz) </name>
+    <range min="10" max="300" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_act_tpiu_peripheral_freqmhz">
+    <name> TPIU Freq (MHz) </name>
+    <range min="10" max="300" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_act_fpga0_peripheral_freqmhz">
+    <name> FPGA0 Freq (MHz) </name>
+    <range min="0.1" max="333" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_act_fpga1_peripheral_freqmhz">
+    <name> FPGA1 Freq (MHz) </name>
+    <range min="0.1" max="333" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_act_fpga2_peripheral_freqmhz">
+    <name> FPGA2 Freq (MHz) </name>
+    <range min="0.1" max="333" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_act_fpga3_peripheral_freqmhz">
+    <name> FPGA3 Freq (MHz) </name>
+    <range min="0.1" max="333" />
+    <ui_param/>
+  </parameter>
+  
+  <parameter uniqueid="pcw_act_qspi_peripheral_freqmhz">
+    <name> QSPI Flash Freq (MHz) </name>
+    <range min="10" max="200" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_act_smc_peripheral_freqmhz">
+    <name> SMC Freq (MHz) </name>
+    <range min="10" max="100" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_act_enet0_peripheral_freqmhz">
+    <name> ENET0 Freq (MHz) </name>
+    <range min="0.1" max="125" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_act_enet1_peripheral_freqmhz">
+    <name> ENET1 Freq (MHz) </name>
+    <range min="0.1" max="125" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_act_usb0_peripheral_freqmhz">
+    <name> USB0 Freq (MHz) </name>
+    <range min="5" max="60" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_act_usb1_peripheral_freqmhz">
+    <name> USB1 Freq (MHz) </name>
+    <range min="5" max="60" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_act_sdio_peripheral_freqmhz">
+    <name> SDIO Freq (MHz) </name>
+    <range min="10" max="125" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_act_uart_peripheral_freqmhz">
+    <name> UART Freq (MHz) </name>
+    <range min="10" max="100" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_act_spi_peripheral_freqmhz">
+    <name> SPI Freq (MHz) </name>
+    <range min="10" max="200" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_act_can_peripheral_freqmhz">
+    <name> CAN Freq (MHz) </name>
+    <range min="0.1" max="100" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_act_can0_peripheral_freqmhz">
+    <name> CAN 0 Freq (MHz) </name>
+    <range min="0.1" max="100" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_act_can1_peripheral_freqmhz">
+    <name> CAN 1 Freq (MHz) </name>
+    <range min="0.1" max="100" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_act_ttc_peripheral_freqmhz">
+    <name> TTC Freq (MHz) </name>
+    <range min="0.1" max="100" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_act_i2c_peripheral_freqmhz">
+    <name> I2C Freq (MHz) </name>
+    <range min="0.1" max="100" />
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_preset_fpga_partnumber" >
+    <name> FPGA Part number </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_preset_fpga_device" isprojdata="false">
+    <name> FPGA Device Size </name>
+    <ui_param/>
+  </parameter>
+  
+  <parameter uniqueid="pcw_preset_fpga_package" isprojdata="false">
+    <name> FPGA Package </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_internal_fpga_package" >
+    <name> FPGA Package </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_preset_fpga_speed">
+    <name> FPGA Speed </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_fpga_fclk0_enable" isprojdata="false">
+    <name> FPGA 0 </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_fpga_fclk1_enable" isprojdata="false">
+    <name> FPGA 1 </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_fpga_fclk2_enable" isprojdata="false">
+    <name> FPGA 2 </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_fpga_fclk3_enable" isprojdata="false">
+    <name> FPGA 3 </name>
+    <ui_param/>
+  </parameter>
+  
+  <parameter uniqueid="pcw_can_peripheral_valid">
+    <name> is can enable possible .. 1 only if either can0 or can1 is 1 </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_smc_peripheral_valid">
+    <name> is smc enable possible .. 1 only if either nand or nor is 1 </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+  <parameter uniqueid="pcw_uart_peripheral_valid">
+    <name> is uart enable possible .. 1 only if either uart0 or uart1 is 1 </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+  <parameter uniqueid="pcw_spi_peripheral_valid">
+    <name> is spi enable possible .. 1 only if either spi0 or spi1 is 1 </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_usb_peripheral_valid">
+    <name> is usb enable possible .. 1 only if either usb0 or usb1 is 1 </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_sdio_peripheral_valid">
+    <name> is sdio enable possible .. 1 only if either sd0 or sd1 is 1 </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_i2c_peripheral_valid">
+    <name> is i2c enable possible .. 1 only if either sd0 or sd1 is 1 </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ttc_peripheral_valid">
+    <name> is ttc enable possible .. 1 only if either ttc0 or ttc1 is 1 </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_clk_ps_clk_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_rst_ps_srstb_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_porb_ps_porb_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  
+  <parameter uniqueid="pcw_psconfig_LVL_SHFTR_EN_C_USE_CR_FABRIC">
+  <name> - </name>
+  <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_preset_bank0_voltage">
+    <name> Bank0 Voltage </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_preset_bank1_voltage">
+    <name> Bank1 Voltage </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_cpu_peripheral_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_cpu_internal_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_peripheral_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_internal_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_smc_peripheral_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_smc_internal_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_qspi_peripheral_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_qspi_internal_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_sdio_peripheral_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_sdio_internal_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_uart_peripheral_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_uart_internal_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_spi_peripheral_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_spi_internal_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_can_peripheral_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_can_internal_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_fclk0_peripheral_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_fclk0_internal_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_fclk1_peripheral_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_fclk1_internal_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_fclk2_peripheral_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_fclk2_internal_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_fclk3_peripheral_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_fclk3_internal_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_pcap_peripheral_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_pcap_internal_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ttc_peripheral_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ttc_internal_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+  <parameter uniqueid="pcw_enet0_peripheral_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_enet0_internal_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_enet1_peripheral_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_enet1_internal_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_tpiu_peripheral_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_tpiu_internal_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_wdt_peripheral_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_wdt_internal_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ttc0_clk0_peripheral_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ttc0_clk0_internal_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ttc0_clk0_actual_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ttc0_clk1_peripheral_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ttc0_clk1_internal_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ttc0_clk1_actual_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ttc0_clk2_peripheral_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ttc0_clk2_internal_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ttc0_clk2_actual_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ttc1_clk0_peripheral_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ttc1_clk0_internal_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ttc1_clk0_actual_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ttc1_clk1_peripheral_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ttc1_clk1_internal_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ttc1_clk1_actual_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ttc1_clk2_peripheral_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ttc1_clk2_internal_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ttc1_clk2_actual_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_can0_peripheral_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_can0_internal_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_can0_peripheral_mioclk">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_can1_peripheral_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_can1_internal_clksrc">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_can1_peripheral_mioclk">
+    <name> CLKSRC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_preset_package_info">
+    <name> Package Info </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_devcfg_ctrl_fab_4k_timer">
+    <name> Fabric timer </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_smcc_nand_rule">
+    <name> -- </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_smcc_cs0_rule">
+    <name> -- </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_smcc_cs1_rule">
+    <name> -- </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_usb_reset_rule">
+    <name> -- </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_i2c_reset_rule">
+    <name> -- </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_enet_reset_rule">
+    <name> -- </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_data_reset_rule">
+    <name> -- </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_usb_reset_io">
+    <name> -- </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_usb_reset_enable">
+    <name> -- </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_enet_reset_enable">
+    <name> -- </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_enet_reset_io">
+    <name> -- </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_i2c_reset_enable">
+    <name> -- </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_i2c_reset_io">
+    <name> -- </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_internal_rule_speedtoclk">
+    <name> -- </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_cpu_cpu_pll_freqmhz">
+    <name> pll </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ddr_pll_freqmhz">
+    <name> pll </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_io_io_pll_freqmhz">
+    <name> pll </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_cpu_cpu_6x4x_max_range">
+    <name> pll </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[0]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[1]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[2]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[3]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[4]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[5]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[6]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[7]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[8]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[9]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[10]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[11]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[12]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[13]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[14]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[15]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[16]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[17]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[18]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[19]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[20]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[21]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[22]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[23]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[24]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[25]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[26]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[27]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[28]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[29]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[30]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[31]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[32]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[33]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[34]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[35]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[36]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[37]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[38]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[39]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[40]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[41]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[42]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[43]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[44]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[45]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[46]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[47]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[48]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[49]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[50]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[51]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[52]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_mio[53]_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_preset_mio_pinname">
+    <name> pin </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_tree_peripherals">
+    <name> Peripherals </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_mio_tree_signals">
+    <name> Signals </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+</parameters>

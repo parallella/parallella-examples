@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE codegen PUBLIC "codegen" "codegen.dtd" >
+<codegen version="">
+  <funcname name="ps7_peripherals_init_data_2_0"/>  
+    <group cmt="SLCR Settings">
+      <force param="ps7_slcr_slcr_unlock_unlock_key" value="0xDF0D" />
+    </group>
+      <group cmt="DDR TERM/IBUF_DISABLE_MODE settings ">
+        <param param="ps7_slcr_DDRIOB_DATA0_IBUF_DISABLE_MODE"/>
+        <param param="ps7_slcr_DDRIOB_DATA0_TERM_DISABLE_MODE"/>
+        <param param="ps7_slcr_DDRIOB_DATA1_IBUF_DISABLE_MODE"/>
+        <param param="ps7_slcr_DDRIOB_DATA1_TERM_DISABLE_MODE"/>
+        <param param="ps7_slcr_DDRIOB_DIFF0_IBUF_DISABLE_MODE"/>
+        <param param="ps7_slcr_DDRIOB_DIFF0_TERM_DISABLE_MODE"/>
+        <param param="ps7_slcr_DDRIOB_DIFF1_IBUF_DISABLE_MODE"/>
+        <param param="ps7_slcr_DDRIOB_DIFF1_TERM_DISABLE_MODE"/>
+      </group>
+    <group cmt="Lock it back">
+      <force param="ps7_slcr_slcr_lock_lock_key" value="0x767B"/>
+    </group>
+    <group cmt="SRAM/NOR set opmode">
+      <param param="ps7_smcc_set_opmode_set_bls"/>
+    </group>
+    <group cmt="Trace Lock access register">
+      <force param="ps7_debug_tpiu_LAR_a" value="0xC5ACCE55" />
+    </group>
+    <group cmt="Trace current Port Size">
+      <param param="ps7_debug_tpiu_CurrentSize_a"/>
+    </group>
+    <group cmt="Trace Lock access register">
+      <force param="ps7_debug_tpiu_LAR_a" value="0x0" />
+    </group>
+    <group cmt="UART registers ">
+      <param param="ps7_uart1_Baud_rate_divider_reg0_BDIV"/>
+      <param param="ps7_uart1_Baud_rate_gen_reg0_CD"/>
+      <param param="ps7_uart1_Control_reg0_STPBRK"/>
+      <param param="ps7_uart1_Control_reg0_STTBRK"/>
+      <param param="ps7_uart1_Control_reg0_RSTTO"/>
+      <param param="ps7_uart1_Control_reg0_TXDIS"/>
+      <param param="ps7_uart1_Control_reg0_TXEN"/>
+      <param param="ps7_uart1_Control_reg0_RXDIS"/>
+      <param param="ps7_uart1_Control_reg0_RXEN"/>
+      <param param="ps7_uart1_Control_reg0_TXRES"/>
+      <param param="ps7_uart1_Control_reg0_RXRES"/>
+      <param param="ps7_uart1_mode_reg0_IRMODE"/>
+      <param param="ps7_uart1_mode_reg0_UCLKEN"/>
+      <param param="ps7_uart1_mode_reg0_CHMODE"/>
+      <param param="ps7_uart1_mode_reg0_NBSTOP"/>
+      <param param="ps7_uart1_mode_reg0_PAR"/>
+      <param param="ps7_uart1_mode_reg0_CHRL"/>
+      <param param="ps7_uart1_mode_reg0_CLKS"/>
+      <param param="ps7_uart0_Baud_rate_divider_reg0_BDIV"/>
+      <param param="ps7_uart0_Baud_rate_gen_reg0_CD"/>
+      <param param="ps7_uart0_Control_reg0_STPBRK"/>
+      <param param="ps7_uart0_Control_reg0_STTBRK"/>
+      <param param="ps7_uart0_Control_reg0_RSTTO"/>
+      <param param="ps7_uart0_Control_reg0_TXDIS"/>
+      <param param="ps7_uart0_Control_reg0_TXEN"/>
+      <param param="ps7_uart0_Control_reg0_RXDIS"/>
+      <param param="ps7_uart0_Control_reg0_RXEN"/>
+      <param param="ps7_uart0_Control_reg0_TXRES"/>
+      <param param="ps7_uart0_Control_reg0_RXRES"/>
+      <param param="ps7_uart0_mode_reg0_IRMODE"/>
+      <param param="ps7_uart0_mode_reg0_UCLKEN"/>
+      <param param="ps7_uart0_mode_reg0_CHMODE"/>
+      <param param="ps7_uart0_mode_reg0_NBSTOP"/>
+      <param param="ps7_uart0_mode_reg0_PAR"/>
+      <param param="ps7_uart0_mode_reg0_CHRL"/>
+      <param param="ps7_uart0_mode_reg0_CLKS"/>
+     </group>  
+    <group cmt="QSPI registers " isValid="ps7_preset_qspi_dis_Holdb_dr">
+       <force param="ps7_qspi_Config_reg_Holdb_dr" value="1"/>
+     </group> 
+    <group cmt="PL Power on reset registers"> 
+       <param param="ps7_devcfg_CTRL_PCFG_POR_CNT_4K"/>
+    </group>
+  
+   <group cmt="SMC Timing calculation register update">
+      <group cmt="NAND Set Cycle">
+       <run_rule param="pcw_smcc_nand_rule" value="1" />
+       <param param="ps7_smcc_set_cycles_Set_t0" />
+       <param param="ps7_smcc_set_cycles_Set_t1" />
+       <param param="ps7_smcc_set_cycles_Set_t2" />
+       <param param="ps7_smcc_set_cycles_Set_t3" />
+       <param param="ps7_smcc_set_cycles_Set_t4" />
+       <param param="ps7_smcc_set_cycles_Set_t5" />
+       <param param="ps7_smcc_set_cycles_Set_t6" />
+      </group>
+      <group cmt="Opmode">
+        <param param="ps7_smcc_set_opmode_set_mw" />
+      </group>
+      <group cmt="Direct command">
+        <param param="ps7_smcc_direct_cmd_chip_select"/>
+        <param param="ps7_smcc_direct_cmd_cmd_type"/>
+      </group>
+      <run_rule param="pcw_smcc_nand_rule" value="0" />
+     <run_rule param="pcw_smcc_cs0_rule" value="1" />
+     <group cmt="SRAM/NOR CS0 set cycle">
+       <param param="ps7_smcc_set_cycles_Set_t0" />
+       <param param="ps7_smcc_set_cycles_Set_t1" />
+       <param param="ps7_smcc_set_cycles_Set_t2" />
+       <param param="ps7_smcc_set_cycles_Set_t3" />
+       <param param="ps7_smcc_set_cycles_Set_t4" />
+       <param param="ps7_smcc_set_cycles_Set_t5" />
+       <param param="ps7_smcc_set_cycles_Set_t6" />
+     </group>
+     <group cmt="Direct Command">
+       <param param="ps7_smcc_direct_cmd_chip_select"/>
+       <param param="ps7_smcc_direct_cmd_cmd_type"/>
+       <param param="ps7_smcc_direct_cmd_addr"/>
+     </group>
+     <group cmt="NOR CS0 Base address">
+     <param param="ps7_smcc_nor_cs0_data"/>
+     </group>
+     <run_rule param="pcw_smcc_cs0_rule" value="0"/>
+     <run_rule param="pcw_smcc_cs1_rule" value="1"/>
+     <group cmt="SRAM/NOR CS1 set cycle">  
+       <param param="ps7_smcc_set_cycles_Set_t0" />
+       <param param="ps7_smcc_set_cycles_Set_t1" />
+       <param param="ps7_smcc_set_cycles_Set_t2" />
+       <param param="ps7_smcc_set_cycles_Set_t3" />
+       <param param="ps7_smcc_set_cycles_Set_t4" />
+       <param param="ps7_smcc_set_cycles_Set_t5" />
+       <param param="ps7_smcc_set_cycles_Set_t6" />
+     </group>  
+     <group cmt="Direct Command">
+       <param param="ps7_smcc_direct_cmd_chip_select"/>
+       <param param="ps7_smcc_direct_cmd_cmd_type"/>
+       <param param="ps7_smcc_direct_cmd_addr"/>
+     </group>
+     <group cmt="NOR CS1 Base address">
+     <param param="ps7_smcc_nor_cs1_data"/>
+     </group>
+     <run_rule param="pcw_smcc_cs1_rule" value="0" />
+     <group cmt="USB Reset">
+        <run_rule param="pcw_usb_reset_rule" value="1"/>
+        <run_rule param="pcw_data_reset_rule" value="1"/>
+        <group cmt="DIR Mode Bank 0">
+        <param param="ps7_gpio_DIRM_0_DIRECTION_0"/>
+        </group>
+        <group cmt="DIR Mode Bank 1">
+        <param param="ps7_gpio_DIRM_1_DIRECTION_1"/>
+        </group>
+
+        <group cmt="MASK_DATA_0_LSW high Bank [15:0]">
+        <param param="ps7_gpio_MASK_DATA_0_LSW_MASK_0_LSW"/>
+        <param param="ps7_gpio_MASK_DATA_0_LSW_DATA_0_LSW"/>
+        </group>
+        <group cmt="MASK_DATA_0_MSW high Bank [31:16]">
+        <param param="ps7_gpio_MASK_DATA_0_MSW_MASK_0_MSW"/>
+        <param param="ps7_gpio_MASK_DATA_0_MSW_DATA_0_MSW"/>
+        </group>
+        <group cmt="MASK_DATA_1_LSW high Bank [47:32]">
+        <param param="ps7_gpio_MASK_DATA_1_LSW_MASK_1_LSW"/>
+        <param param="ps7_gpio_MASK_DATA_1_LSW_DATA_1_LSW"/>
+        </group>
+        <group cmt="MASK_DATA_1_MSW high Bank [53:48]">
+        <param param="ps7_gpio_MASK_DATA_1_MSW_MASK_1_MSW"/>
+        <param param="ps7_gpio_MASK_DATA_1_MSW_DATA_1_MSW"/>
+        </group>
+
+        <group cmt="Output Enable Bank 0">
+        <param param="ps7_gpio_OEN_0_OP_ENABLE_0"/>
+        </group>
+        <group cmt="Output Enable Bank 1">
+        <param param="ps7_gpio_OEN_1_OP_ENABLE_1"/>
+        </group>
+
+        <run_rule param="pcw_data_reset_rule" value="0"/>
+        <group cmt="MASK_DATA_0_LSW Low Bank [15:0]">
+        <param param="ps7_gpio_MASK_DATA_0_LSW_MASK_0_LSW"/>
+        <param param="ps7_gpio_MASK_DATA_0_LSW_DATA_0_LSW"/>
+        </group>
+        <group cmt="MASK_DATA_0_MSW Low Bank [31:16]">
+        <param param="ps7_gpio_MASK_DATA_0_MSW_MASK_0_MSW"/>
+        <param param="ps7_gpio_MASK_DATA_0_MSW_DATA_0_MSW"/>
+        </group>
+        <group cmt="MASK_DATA_1_LSW Low Bank [47:32]">
+        <param param="ps7_gpio_MASK_DATA_1_LSW_MASK_1_LSW"/>
+        <param param="ps7_gpio_MASK_DATA_1_LSW_DATA_1_LSW"/>
+        </group>
+        <group cmt="MASK_DATA_1_MSW Low Bank [53:48]">
+        <param param="ps7_gpio_MASK_DATA_1_MSW_MASK_1_MSW"/>
+        <param param="ps7_gpio_MASK_DATA_1_MSW_DATA_1_MSW"/>
+        </group>
+        <group cmt="Add 1 MS delay" >
+           <delay param="ps7_mpcore_Global_Timer_Counter_Register0_a" value="1"/>
+        </group>   
+        <run_rule param="pcw_data_reset_rule" value="1" dyn_value="pcw_usb_reset_state2"/>
+        <group cmt="MASK_DATA_0_LSW high Bank [15:0]">
+        <param param="ps7_gpio_MASK_DATA_0_LSW_MASK_0_LSW"/>
+        <param param="ps7_gpio_MASK_DATA_0_LSW_DATA_0_LSW"/>
+        </group>
+        <group cmt="MASK_DATA_0_MSW high Bank [31:16]">
+        <param param="ps7_gpio_MASK_DATA_0_MSW_MASK_0_MSW"/>
+        <param param="ps7_gpio_MASK_DATA_0_MSW_DATA_0_MSW"/>
+        </group>
+        <group cmt="MASK_DATA_1_LSW high Bank [47:32]">
+        <param param="ps7_gpio_MASK_DATA_1_LSW_MASK_1_LSW"/>
+        <param param="ps7_gpio_MASK_DATA_1_LSW_DATA_1_LSW"/>
+        </group>
+        <group cmt="MASK_DATA_1_MSW high Bank [53:48]">
+        <param param="ps7_gpio_MASK_DATA_1_MSW_MASK_1_MSW"/>
+        <param param="ps7_gpio_MASK_DATA_1_MSW_DATA_1_MSW"/>
+        </group>
+        <run_rule param="pcw_usb_reset_rule" value="0"/>
+     </group>
+     <group cmt="ENET Reset">
+        <run_rule param="pcw_enet_reset_rule" value="1"/>
+        <run_rule param="pcw_data_reset_rule" value="1" dyn_value="pcw_usb_reset_state0"/>
+        <group cmt="DIR Mode Bank 0">
+        <param param="ps7_gpio_DIRM_0_DIRECTION_0"/>
+        </group>
+        <group cmt="DIR Mode Bank 1">
+        <param param="ps7_gpio_DIRM_1_DIRECTION_1"/>
+        </group>
+
+        <group cmt="MASK_DATA_0_LSW high Bank [15:0]">
+        <param param="ps7_gpio_MASK_DATA_0_LSW_MASK_0_LSW"/>
+        <param param="ps7_gpio_MASK_DATA_0_LSW_DATA_0_LSW"/>
+        </group>
+        <group cmt="MASK_DATA_0_MSW high Bank [31:16]">
+        <param param="ps7_gpio_MASK_DATA_0_MSW_MASK_0_MSW"/>
+        <param param="ps7_gpio_MASK_DATA_0_MSW_DATA_0_MSW"/>
+        </group>
+        <group cmt="MASK_DATA_1_LSW high Bank [47:32]">
+        <param param="ps7_gpio_MASK_DATA_1_LSW_MASK_1_LSW"/>
+        <param param="ps7_gpio_MASK_DATA_1_LSW_DATA_1_LSW"/>
+        </group>
+        <group cmt="MASK_DATA_1_MSW high Bank [53:48]">
+        <param param="ps7_gpio_MASK_DATA_1_MSW_MASK_1_MSW"/>
+        <param param="ps7_gpio_MASK_DATA_1_MSW_DATA_1_MSW"/>
+        </group>
+
+        <group cmt="Output Enable Bank 0">
+        <param param="ps7_gpio_OEN_0_OP_ENABLE_0"/>
+        </group>
+        <group cmt="Output Enable Bank 1">
+        <param param="ps7_gpio_OEN_1_OP_ENABLE_1"/>
+        </group>
+
+        <run_rule param="pcw_data_reset_rule" value="0" dyn_value="pcw_usb_reset_state1"/>
+        <group cmt="MASK_DATA_0_LSW Low Bank [15:0]">
+        <param param="ps7_gpio_MASK_DATA_0_LSW_MASK_0_LSW"/>
+        <param param="ps7_gpio_MASK_DATA_0_LSW_DATA_0_LSW"/>
+        </group>
+        <group cmt="MASK_DATA_0_MSW Low Bank [31:16]">
+        <param param="ps7_gpio_MASK_DATA_0_MSW_MASK_0_MSW"/>
+        <param param="ps7_gpio_MASK_DATA_0_MSW_DATA_0_MSW"/>
+        </group>
+        <group cmt="MASK_DATA_1_LSW Low Bank [47:32]">
+        <param param="ps7_gpio_MASK_DATA_1_LSW_MASK_1_LSW"/>
+        <param param="ps7_gpio_MASK_DATA_1_LSW_DATA_1_LSW"/>
+        </group>
+        <group cmt="MASK_DATA_1_MSW Low Bank [53:48]">
+        <param param="ps7_gpio_MASK_DATA_1_MSW_MASK_1_MSW"/>
+        <param param="ps7_gpio_MASK_DATA_1_MSW_DATA_1_MSW"/>
+        </group>
+        <group cmt="Add 1 MS delay" >
+           <delay param="ps7_mpcore_Global_Timer_Counter_Register0_a" value="1"/>
+        </group>   
+        <run_rule param="pcw_data_reset_rule" value="1" dyn_value="pcw_usb_reset_state2"/>
+        <group cmt="MASK_DATA_0_LSW high Bank [15:0]">
+        <param param="ps7_gpio_MASK_DATA_0_LSW_MASK_0_LSW"/>
+        <param param="ps7_gpio_MASK_DATA_0_LSW_DATA_0_LSW"/>
+        </group>
+        <group cmt="MASK_DATA_0_MSW high Bank [31:16]">
+        <param param="ps7_gpio_MASK_DATA_0_MSW_MASK_0_MSW"/>
+        <param param="ps7_gpio_MASK_DATA_0_MSW_DATA_0_MSW"/>
+        </group>
+        <group cmt="MASK_DATA_1_LSW high Bank [47:32]">
+        <param param="ps7_gpio_MASK_DATA_1_LSW_MASK_1_LSW"/>
+        <param param="ps7_gpio_MASK_DATA_1_LSW_DATA_1_LSW"/>
+        </group>
+        <group cmt="MASK_DATA_1_MSW high Bank [53:48]">
+        <param param="ps7_gpio_MASK_DATA_1_MSW_MASK_1_MSW"/>
+        <param param="ps7_gpio_MASK_DATA_1_MSW_DATA_1_MSW"/>
+        </group>
+        <run_rule param="pcw_enet_reset_rule" value="0"/>
+     </group>
+     <group cmt="I2C Reset">
+        <run_rule param="pcw_i2c_reset_rule" value="1"/>
+        <run_rule param="pcw_data_reset_rule" value="1" dyn_value="pcw_usb_reset_state0"/>
+        <group cmt="DIR Mode GPIO Bank0">
+        <param param="ps7_gpio_DIRM_0_DIRECTION_0"/>
+        </group>
+        <group cmt="DIR Mode GPIO Bank1">
+        <param param="ps7_gpio_DIRM_1_DIRECTION_1"/>
+        </group>
+
+        <group cmt="MASK_DATA_0_LSW high Bank [15:0]">
+        <param param="ps7_gpio_MASK_DATA_0_LSW_MASK_0_LSW"/>
+        <param param="ps7_gpio_MASK_DATA_0_LSW_DATA_0_LSW"/>
+        </group>
+        <group cmt="MASK_DATA_0_MSW high Bank [31:16]">
+        <param param="ps7_gpio_MASK_DATA_0_MSW_MASK_0_MSW"/>
+        <param param="ps7_gpio_MASK_DATA_0_MSW_DATA_0_MSW"/>
+        </group>
+        <group cmt="MASK_DATA_1_LSW high Bank [47:32]">
+        <param param="ps7_gpio_MASK_DATA_1_LSW_MASK_1_LSW"/>
+        <param param="ps7_gpio_MASK_DATA_1_LSW_DATA_1_LSW"/>
+        </group>
+        <group cmt="MASK_DATA_1_MSW high Bank [53:48]">
+        <param param="ps7_gpio_MASK_DATA_1_MSW_MASK_1_MSW"/>
+        <param param="ps7_gpio_MASK_DATA_1_MSW_DATA_1_MSW"/>
+        </group>
+
+        <group cmt="Output Enable">
+        <param param="ps7_gpio_OEN_0_OP_ENABLE_0"/>
+        </group>
+        <group cmt="Output Enable">
+        <param param="ps7_gpio_OEN_1_OP_ENABLE_1"/>
+        </group>
+
+        <run_rule param="pcw_data_reset_rule" value="0" dyn_value="pcw_usb_reset_state1"/>
+        <group cmt="MASK_DATA_0_LSW Low Bank [15:0]">
+        <param param="ps7_gpio_MASK_DATA_0_LSW_MASK_0_LSW"/>
+        <param param="ps7_gpio_MASK_DATA_0_LSW_DATA_0_LSW"/>
+        </group>
+        <group cmt="MASK_DATA_0_MSW Low Bank [31:16]">
+        <param param="ps7_gpio_MASK_DATA_0_MSW_MASK_0_MSW"/>
+        <param param="ps7_gpio_MASK_DATA_0_MSW_DATA_0_MSW"/>
+        </group>
+        <group cmt="MASK_DATA_1_LSW Low Bank [47:32]">
+        <param param="ps7_gpio_MASK_DATA_1_LSW_MASK_1_LSW"/>
+        <param param="ps7_gpio_MASK_DATA_1_LSW_DATA_1_LSW"/>
+        </group>
+        <group cmt="MASK_DATA_1_MSW Low Bank [53:48]">
+        <param param="ps7_gpio_MASK_DATA_1_MSW_MASK_1_MSW"/>
+        <param param="ps7_gpio_MASK_DATA_1_MSW_DATA_1_MSW"/>
+        </group>
+        <group cmt="Add 1 MS delay" >
+           <delay param="ps7_mpcore_Global_Timer_Counter_Register0_a" value="1"/>
+        </group>   
+        <run_rule param="pcw_data_reset_rule" value="1" dyn_value="pcw_usb_reset_state2"/>
+        <group cmt="MASK_DATA_0_LSW high Bank [15:0]">
+        <param param="ps7_gpio_MASK_DATA_0_LSW_MASK_0_LSW"/>
+        <param param="ps7_gpio_MASK_DATA_0_LSW_DATA_0_LSW"/>
+        </group>
+        <group cmt="MASK_DATA_0_MSW high Bank [31:16]">
+        <param param="ps7_gpio_MASK_DATA_0_MSW_MASK_0_MSW"/>
+        <param param="ps7_gpio_MASK_DATA_0_MSW_DATA_0_MSW"/>
+        </group>
+        <group cmt="MASK_DATA_1_LSW high Bank [47:32]">
+        <param param="ps7_gpio_MASK_DATA_1_LSW_MASK_1_LSW"/>
+        <param param="ps7_gpio_MASK_DATA_1_LSW_DATA_1_LSW"/>
+        </group>
+        <group cmt="MASK_DATA_1_MSW high Bank [53:48]">
+        <param param="ps7_gpio_MASK_DATA_1_MSW_MASK_1_MSW"/>
+        <param param="ps7_gpio_MASK_DATA_1_MSW_DATA_1_MSW"/>
+        </group>
+        <run_rule param="pcw_i2c_reset_rule" value="0"/>
+     </group>
+
+ </group>
+ 
+</codegen>

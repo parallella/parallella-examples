@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE parameters PUBLIC "presets" "presets.dtd" >
+<presets>
+
+  <preset param="pcw_use_cross_trigger" name="0" strength="8">
+      <disable param="pcw_ftm_cti_in0"/>
+      <disable param="pcw_ftm_cti_in1"/>
+      <disable param="pcw_ftm_cti_in2"/>
+      <disable param="pcw_ftm_cti_in3"/>
+      <disable param="pcw_ftm_cti_out0"/>
+      <disable param="pcw_ftm_cti_out1"/>
+      <disable param="pcw_ftm_cti_out2"/>
+      <disable param="pcw_ftm_cti_out3"/>
+  </preset>
+  <preset param="pcw_use_cross_trigger" name="" strength="8">
+      <disable param="pcw_ftm_cti_in0"/>
+      <disable param="pcw_ftm_cti_in1"/>
+      <disable param="pcw_ftm_cti_in2"/>
+      <disable param="pcw_ftm_cti_in3"/>
+      <disable param="pcw_ftm_cti_out0"/>
+      <disable param="pcw_ftm_cti_out1"/>
+      <disable param="pcw_ftm_cti_out2"/>
+      <disable param="pcw_ftm_cti_out3"/>
+  </preset>
+  <preset param="pcw_use_cross_trigger" name="1" strength="4">
+      <set param="ps7_debug_cpu_cti0_CTICONTROL_GLBEN" value="1"/>
+	  <set param="pcw_ftm_cti_in0" value="DISABLED"/>
+	  <set param="pcw_ftm_cti_in1" value="DISABLED"/>
+	  <set param="pcw_ftm_cti_in2" value="DISABLED"/>
+	  <set param="pcw_ftm_cti_in3" value="DISABLED"/>
+	  <set param="pcw_ftm_cti_out0" value="DISABLED"/>
+	  <set param="pcw_ftm_cti_out1" value="DISABLED"/>
+	  <set param="pcw_ftm_cti_out2" value="DISABLED"/>
+	  <set param="pcw_ftm_cti_out3" value="DISABLED"/>
+      <set param="ps7_debug_cpu_cti1_CTICONTROL_GLBEN" value="1"/>
+      <set param="ps7_debug_cti_ftm_CTICONTROL_GLBEN" value="1"/>
+	  <set param="ps7_debug_cpu_cti0_CTIGATE_CTIGATEEN3" value="0"/>
+  	  <set param="ps7_debug_cpu_cti0_CTIGATE_CTIGATEEN2" value="0"/>
+	  <set param="ps7_debug_cpu_cti0_CTIGATE_CTIGATEEN1" value="1"/>
+	  <set param="ps7_debug_cpu_cti0_CTIGATE_CTIGATEEN0" value="1"/>
+	  <set param="ps7_debug_cpu_cti1_CTIGATE_CTIGATEEN3" value="1"/>
+  	  <set param="ps7_debug_cpu_cti1_CTIGATE_CTIGATEEN2" value="1"/>
+	  <set param="ps7_debug_cpu_cti1_CTIGATE_CTIGATEEN1" value="0"/>
+	  <set param="ps7_debug_cpu_cti1_CTIGATE_CTIGATEEN0" value="0"/>
+	  <set param="ps7_debug_cti_ftm_CTIGATE_CTIGATEEN3" value="1"/>
+	  <set param="ps7_debug_cti_ftm_CTIGATE_CTIGATEEN2" value="1"/>
+	  <set param="ps7_debug_cti_ftm_CTIGATE_CTIGATEEN1" value="1"/>
+	  <set param="ps7_debug_cti_ftm_CTIGATE_CTIGATEEN0" value="1"/>
+	  <set param="ps7_debug_cpu_cti0_CTIINEN0_TRIGINEN" value="1"/>
+	  <set param="ps7_debug_cpu_cti0_CTIOUTEN0_TRIGOUTEN" value="2"/>
+	  <set param="ps7_debug_cpu_cti1_CTIINEN0_TRIGINEN" value="4"/>
+	  <set param="ps7_debug_cpu_cti1_CTIOUTEN0_TRIGOUTEN" value="8"/>
+  </preset>
+
+  <preset param="pcw_ftm_cti_in0" name="DISABLED" strength="3">
+      <set param="ps7_debug_cti_ftm_CTIINEN0_TRIGINEN" value="0"/>
+  </preset>
+  <preset param="pcw_ftm_cti_in0" name="CPU0 DBG_REQ" strength="3">
+      <set param="ps7_debug_cti_ftm_CTIINEN0_TRIGINEN" value="2"/>
+  </preset>
+  <preset param="pcw_ftm_cti_in0" name="CPU1 DBG_REQ" strength="3">
+        <set param="ps7_debug_cti_ftm_CTIINEN0_TRIGINEN" value="8"/>
+  </preset>
+  <preset param="pcw_ftm_cti_in0" name="BOTH" strength="3">
+      <set param="ps7_debug_cti_ftm_CTIINEN0_TRIGINEN" value="10"/>
+  </preset>
+  
+  <preset param="pcw_ftm_cti_in1" name="DISABLED" strength="3">
+      <set param="ps7_debug_cti_ftm_CTIINEN1_TRIGINEN" value="0"/>
+  </preset>
+  <preset param="pcw_ftm_cti_in1" name="CPU0 DBG_REQ" strength="3">
+      <set param="ps7_debug_cti_ftm_CTIINEN1_TRIGINEN" value="2"/>
+  </preset>
+  <preset param="pcw_ftm_cti_in1" name="CPU1 DBG_REQ" strength="3">
+        <set param="ps7_debug_cti_ftm_CTIINEN1_TRIGINEN" value="8"/>
+  </preset>
+  <preset param="pcw_ftm_cti_in1" name="BOTH" strength="3">
+      <set param="ps7_debug_cti_ftm_CTIINEN1_TRIGINEN" value="10"/>
+  </preset>
+  
+  <preset param="pcw_ftm_cti_in2" name="DISABLED" strength="3">
+      <set param="ps7_debug_cti_ftm_CTIINEN2_TRIGINEN" value="0"/>
+  </preset>
+  <preset param="pcw_ftm_cti_in2" name="CPU0 DBG_REQ" strength="3">
+      <set param="ps7_debug_cti_ftm_CTIINEN2_TRIGINEN" value="2"/>
+  </preset>
+  <preset param="pcw_ftm_cti_in2" name="CPU1 DBG_REQ" strength="3">
+        <set param="ps7_debug_cti_ftm_CTIINEN2_TRIGINEN" value="8"/>
+  </preset>
+  <preset param="pcw_ftm_cti_in2" name="BOTH" strength="3">
+      <set param="ps7_debug_cti_ftm_CTIINEN2_TRIGINEN" value="10"/>
+  </preset>
+  
+  <preset param="pcw_ftm_cti_in3" name="DISABLED" strength="3">
+      <set param="ps7_debug_cti_ftm_CTIINEN3_TRIGINEN" value="0"/>
+  </preset>
+  <preset param="pcw_ftm_cti_in3" name="CPU0 DBG_REQ" strength="3">
+      <set param="ps7_debug_cti_ftm_CTIINEN3_TRIGINEN" value="2"/>
+  </preset>
+  <preset param="pcw_ftm_cti_in3" name="CPU1 DBG_REQ" strength="3">
+        <set param="ps7_debug_cti_ftm_CTIINEN3_TRIGINEN" value="8"/>
+  </preset>
+  <preset param="pcw_ftm_cti_in3" name="BOTH" strength="3">
+      <set param="ps7_debug_cti_ftm_CTIINEN3_TRIGINEN" value="10"/>
+  </preset>
+
+  <preset param="pcw_ftm_cti_out0" name="DISABLED" strength="3">
+      <set param="ps7_debug_cti_ftm_CTIOUTEN0_TRIGOUTEN" value="0"/>
+  </preset>
+  <preset param="pcw_ftm_cti_out0" name="CPU0 DBG_ACK" strength="3">
+      <set param="ps7_debug_cti_ftm_CTIOUTEN0_TRIGOUTEN" value="1"/>
+  </preset>
+  <preset param="pcw_ftm_cti_out0" name="CPU1 DBG_ACK" strength="3">
+        <set param="ps7_debug_cti_ftm_CTIOUTEN0_TRIGOUTEN" value="4"/>
+  </preset>
+  <preset param="pcw_ftm_cti_out0" name="BOTH" strength="3">
+      <set param="ps7_debug_cti_ftm_CTIOUTEN0_TRIGOUTEN" value="5"/>
+  </preset>
+  
+  <preset param="pcw_ftm_cti_out1" name="DISABLED" strength="3">
+      <set param="ps7_debug_cti_ftm_CTIOUTEN1_TRIGOUTEN" value="0"/>
+  </preset>
+  <preset param="pcw_ftm_cti_out1" name="CPU0 DBG_ACK" strength="3">
+      <set param="ps7_debug_cti_ftm_CTIOUTEN1_TRIGOUTEN" value="1"/>
+  </preset>
+  <preset param="pcw_ftm_cti_out1" name="CPU1 DBG_ACK" strength="3">
+        <set param="ps7_debug_cti_ftm_CTIOUTEN1_TRIGOUTEN" value="4"/>
+  </preset>
+  <preset param="pcw_ftm_cti_out1" name="BOTH" strength="3">
+      <set param="ps7_debug_cti_ftm_CTIOUTEN1_TRIGOUTEN" value="5"/>
+  </preset>
+  
+  <preset param="pcw_ftm_cti_out2" name="DISABLED" strength="3">
+      <set param="ps7_debug_cti_ftm_CTIOUTEN2_TRIGOUTEN" value="0"/>
+  </preset>
+  <preset param="pcw_ftm_cti_out2" name="CPU0 DBG_ACK" strength="3">
+      <set param="ps7_debug_cti_ftm_CTIOUTEN2_TRIGOUTEN" value="1"/>
+  </preset>
+  <preset param="pcw_ftm_cti_out2" name="CPU1 DBG_ACK" strength="3">
+        <set param="ps7_debug_cti_ftm_CTIOUTEN2_TRIGOUTEN" value="4"/>
+  </preset>
+  <preset param="pcw_ftm_cti_out2" name="BOTH" strength="3">
+      <set param="ps7_debug_cti_ftm_CTIOUTEN2_TRIGOUTEN" value="5"/>
+  </preset> 
+  
+  <preset param="pcw_ftm_cti_out3" name="DISABLED" strength="3">
+      <set param="ps7_debug_cti_ftm_CTIOUTEN3_TRIGOUTEN" value="0"/>
+  </preset>
+  <preset param="pcw_ftm_cti_out3" name="CPU0 DBG_ACK" strength="3">
+      <set param="ps7_debug_cti_ftm_CTIOUTEN3_TRIGOUTEN" value="1"/>
+  </preset>
+  <preset param="pcw_ftm_cti_out3" name="CPU1 DBG_ACK" strength="3">
+        <set param="ps7_debug_cti_ftm_CTIOUTEN3_TRIGOUTEN" value="4"/>
+  </preset>
+  <preset param="pcw_ftm_cti_out3" name="BOTH" strength="3">
+      <set param="ps7_debug_cti_ftm_CTIOUTEN3_TRIGOUTEN" value="5"/>
+  </preset>
+
+</presets>
+

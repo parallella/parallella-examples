@@ -1,0 +1,1323 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE codegen PUBLIC "ucfgen" "ucfgen.dtd" >
+<ucfgen version="">
+
+    <clock cmt="FCLK_CLK0"> 
+        <freq param="pcw_act_fpga0_peripheral_freqmhz" netname="clk_fpga_0"/> 
+        <enable param="pcw_fpga_fclk0_enable"/> 
+    </clock>
+
+    <clock cmt="FCLK_CLK1"> 
+        <freq param="pcw_act_fpga1_peripheral_freqmhz" netname="clk_fpga_1"/> 
+        <enable param="pcw_fpga_fclk1_enable"/> 
+    </clock>
+
+    <clock cmt="FCLK_CLK2"> 
+        <freq param="pcw_act_fpga2_peripheral_freqmhz" netname="clk_fpga_2"/> 
+        <enable param="pcw_fpga_fclk2_enable"/> 
+    </clock>
+
+    <clock cmt="FCLK_CLK3"> 
+        <freq param="pcw_act_fpga3_peripheral_freqmhz" netname="clk_fpga_3"/> 
+        <enable param="pcw_fpga_fclk3_enable"/> 
+    </clock>
+
+    <pin cmt="PS_CLK"> 
+        <drive param="pcw_mio_mio[0]_drive"/> 
+        <slew param="pcw_mio_0_slew"/> 
+        <voltage param="pcw_mio_mio[0]_voltage"/>
+        <loc param="pcw_clk_ps_clk_loc"/>
+    </pin>
+
+    <pin cmt="PS_SRSTB"> 
+        <drive param="pcw_mio_mio[0]_drive"/> 
+        <slew param="pcw_mio_0_slew"/> 
+        <voltage param="pcw_mio_mio[0]_voltage"/>
+        <loc param="pcw_rst_ps_srstb_loc"/>
+    </pin>
+
+    <pin cmt="PS_PORB"> 
+        <drive param="pcw_mio_mio[0]_drive"/> 
+        <slew param="pcw_mio_0_slew"/> 
+        <voltage param="pcw_mio_mio[0]_voltage"/>
+        <loc param="pcw_porb_ps_porb_loc"/>
+    </pin>
+
+    <pin cmt="DDR_Addr[0]"> 
+        <slew param="pcw_ddr_a[0]_slew"/> 
+        <voltage param="pcw_ddr_a[0]_voltage"/>
+        <loc param="pcw_ddr_a[0]_loc"/>
+        <pullup param="pcw_ddr_a[0]_pullup"/>
+    </pin>
+    
+    <pin cmt="DDR_Addr[10]"> 
+        <slew param="pcw_ddr_a[10]_slew"/>
+        <voltage param="pcw_ddr_a[10]_voltage"/>
+        <loc param="pcw_ddr_a[10]_loc"/>
+        <pullup param="pcw_ddr_a[10]_pullup"/>
+    </pin>
+    
+    
+    <pin cmt="DDR_Addr[11]"> 
+        <slew param="pcw_ddr_a[11]_slew"/>
+        <voltage param="pcw_ddr_a[11]_voltage"/>
+        <loc param="pcw_ddr_a[11]_loc"/>
+        <pullup param="pcw_ddr_a[11]_pullup"/>
+    </pin>
+    
+    
+    <pin cmt="DDR_Addr[12]"> 
+        <slew param="pcw_ddr_a[12]_slew"/>
+        <voltage param="pcw_ddr_a[12]_voltage"/>
+        <loc param="pcw_ddr_a[12]_loc"/>
+        <pullup param="pcw_ddr_a[12]_pullup"/>
+    </pin>
+    
+    
+    <pin cmt="DDR_Addr[13]"> 
+        <slew param="pcw_ddr_a[13]_slew"/>
+        <voltage param="pcw_ddr_a[13]_voltage"/>
+        <loc param="pcw_ddr_a[13]_loc"/>
+        <pullup param="pcw_ddr_a[13]_pullup"/>
+    </pin>
+
+    <pin cmt="DDR_Addr[14]"> 
+        <slew param="pcw_ddr_a[14]_slew"/>
+        <voltage param="pcw_ddr_a[14]_voltage"/>
+        <loc param="pcw_ddr_a[14]_loc"/>
+        <pullup param="pcw_ddr_a[14]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_Addr[1]"> 
+        <slew param="pcw_ddr_a[1]_slew"/>
+        <voltage param="pcw_ddr_a[1]_voltage"/>
+        <loc param="pcw_ddr_a[1]_loc"/>
+        <pullup param="pcw_ddr_a[1]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_Addr[2]"> 
+        <slew param="pcw_ddr_a[2]_slew"/>
+        <voltage param="pcw_ddr_a[2]_voltage"/>
+        <loc param="pcw_ddr_a[2]_loc"/>
+        <pullup param="pcw_ddr_a[2]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_Addr[3]"> 
+        <slew param="pcw_ddr_a[3]_slew"/>
+        <voltage param="pcw_ddr_a[3]_voltage"/>
+        <loc param="pcw_ddr_a[3]_loc"/>
+        <pullup param="pcw_ddr_a[3]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_Addr[4]"> 
+        <slew param="pcw_ddr_a[4]_slew"/>
+        <voltage param="pcw_ddr_a[4]_voltage"/>
+        <loc param="pcw_ddr_a[4]_loc"/>
+        <pullup param="pcw_ddr_a[4]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_Addr[5]"> 
+        <slew param="pcw_ddr_a[5]_slew"/>
+        <voltage param="pcw_ddr_a[5]_voltage"/>
+        <loc param="pcw_ddr_a[5]_loc"/>
+        <pullup param="pcw_ddr_a[5]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_Addr[6]"> 
+        <slew param="pcw_ddr_a[6]_slew"/>
+        <voltage param="pcw_ddr_a[6]_voltage"/>
+        <loc param="pcw_ddr_a[6]_loc"/>
+        <pullup param="pcw_ddr_a[6]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_Addr[7]"> 
+        <slew param="pcw_ddr_a[7]_slew"/>
+        <voltage param="pcw_ddr_a[7]_voltage"/>
+        <loc param="pcw_ddr_a[7]_loc"/>
+        <pullup param="pcw_ddr_a[7]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_Addr[8]"> 
+        <slew param="pcw_ddr_a[8]_slew"/>
+        <voltage param="pcw_ddr_a[8]_voltage"/>
+        <loc param="pcw_ddr_a[8]_loc"/>
+        <pullup param="pcw_ddr_a[8]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_Addr[9]" > 
+        <slew param="pcw_ddr_a[9]_slew"/>
+        <voltage param="pcw_ddr_a[9]_voltage"/>
+        <loc param="pcw_ddr_a[9]_loc"/>
+        <pullup param="pcw_ddr_a[9]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_BankAddr[0]" > 
+        <slew param="pcw_ddr_ba[0]_slew"/>
+        <voltage param="pcw_ddr_ba[0]_voltage"/>
+        <loc param="pcw_ddr_ba[0]_loc"/>
+        <pullup param="pcw_ddr_ba[0]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_BankAddr[1]" > 
+        <slew param="pcw_ddr_ba[1]_slew"/>
+        <voltage param="pcw_ddr_ba[1]_voltage"/>
+        <loc param="pcw_ddr_ba[1]_loc"/>
+        <pullup param="pcw_ddr_ba[1]_pullup"/>
+    </pin>
+
+    <pin cmt="DDR_BankAddr[2]" > 
+        <slew param="pcw_ddr_ba[2]_slew"/>
+        <voltage param="pcw_ddr_ba[2]_voltage"/>
+        <loc param="pcw_ddr_ba[2]_loc"/>
+        <pullup param="pcw_ddr_ba[2]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_CAS_n"> 
+        <slew param="pcw_ddr_cas_b_slew"/>
+        <voltage param="pcw_ddr_cas_b_voltage"/>
+        <loc param="pcw_ddr_cas_b_loc"/>
+        <pullup param="pcw_ddr_cas_b_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_Clk_n"> 
+        <slew param="pcw_ddr_ck_n_slew"/>
+        <voltage param="pcw_ddr_ck_n_voltage"/>
+        <loc param="pcw_ddr_ckn_loc"/>
+        <pullup param="pcw_ddr_ckn_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_Clk"> 
+        <slew param="pcw_ddr_ck_p_slew"/>
+        <voltage param="pcw_ddr_ck_p_voltage"/>
+        <loc param="pcw_ddr_ckp_loc"/>
+        <pullup param="pcw_ddr_ckp_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_CKE"> 
+        <slew param="pcw_ddr_cke_slew"/>
+        <voltage param="pcw_ddr_cke_voltage"/>
+        <loc param="pcw_ddr_cke_loc"/>
+        <pullup param="pcw_ddr_cke_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_CS_n"> 
+        <slew param="pcw_ddr_cs_b_slew"/>
+        <voltage param="pcw_ddr_cs_b_voltage"/>
+        <loc param="pcw_ddr_cs_b_loc"/>
+        <pullup param="pcw_ddr_cs_b_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DM[0]" > 
+        <slew param="pcw_ddr_dm[0]_slew"/>
+        <voltage param="pcw_ddr_dm[0]_voltage"/>
+        <loc param="pcw_ddr_dm[0]_loc"/>
+        <pullup param="pcw_ddr_dm[0]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DM[1]" > 
+        <slew param="pcw_ddr_dm[1]_slew"/>
+        <voltage param="pcw_ddr_dm[1]_voltage"/>
+        <loc param="pcw_ddr_dm[1]_loc"/>
+        <pullup param="pcw_ddr_dm[1]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DM[2]" > 
+        <slew param="pcw_ddr_dm[2]_slew"/>
+        <voltage param="pcw_ddr_dm[2]_voltage"/>
+        <loc param="pcw_ddr_dm[2]_loc"/>
+        <pullup param="pcw_ddr_dm[2]_pullup"/>
+    </pin>
+
+    <pin cmt="DDR_DM[3]" > 
+        <slew param="pcw_ddr_dm[3]_slew"/>
+        <voltage param="pcw_ddr_dm[3]_voltage"/>
+        <loc param="pcw_ddr_dm[3]_loc"/>
+        <pullup param="pcw_ddr_dm[3]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQ[0]" > 
+        <slew param="pcw_ddr_dq[0]_slew"/>
+        <voltage param="pcw_ddr_dq[0]_voltage"/>
+        <loc param="pcw_ddr_dq[0]_loc"/>
+        <pullup param="pcw_ddr_dq[0]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQ[10]" > 
+        <slew param="pcw_ddr_dq[10]_slew"/>
+        <voltage param="pcw_ddr_dq[10]_voltage"/>
+        <loc param="pcw_ddr_dq[10]_loc"/>
+        <pullup param="pcw_ddr_dq[10]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQ[11]" > 
+        <slew param="pcw_ddr_dq[11]_slew"/>
+        <voltage param="pcw_ddr_dq[11]_voltage"/>
+        <loc param="pcw_ddr_dq[11]_loc"/>
+        <pullup param="pcw_ddr_dq[11]_pullup"/>
+    </pin>
+    
+    <pin cmt="DDR_DQ[12]" > 
+        <slew param="pcw_ddr_dq[12]_slew"/>
+        <voltage param="pcw_ddr_dq[12]_voltage"/>
+        <loc param="pcw_ddr_dq[12]_loc"/>
+        <pullup param="pcw_ddr_dq[12]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQ[13]" > 
+        <slew param="pcw_ddr_dq[13]_slew"/>
+        <voltage param="pcw_ddr_dq[13]_voltage"/>
+        <loc param="pcw_ddr_dq[13]_loc"/>
+        <pullup param="pcw_ddr_dq[13]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQ[14]" > 
+        <slew param="pcw_ddr_dq[14]_slew"/>
+        <voltage param="pcw_ddr_dq[14]_voltage"/>
+        <loc param="pcw_ddr_dq[14]_loc"/>
+        <pullup param="pcw_ddr_dq[14]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQ[15]" > 
+        <slew param="pcw_ddr_dq[15]_slew"/>
+        <voltage param="pcw_ddr_dq[15]_voltage"/>
+        <loc param="pcw_ddr_dq[15]_loc"/>
+        <pullup param="pcw_ddr_dq[15]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQ[16]" > 
+        <slew param="pcw_ddr_dq[16]_slew"/>
+        <voltage param="pcw_ddr_dq[16]_voltage"/>
+        <loc param="pcw_ddr_dq[16]_loc"/>
+        <pullup param="pcw_ddr_dq[16]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQ[17]" > 
+        <slew param="pcw_ddr_dq[17]_slew"/>
+        <voltage param="pcw_ddr_dq[17]_voltage"/>
+        <loc param="pcw_ddr_dq[17]_loc"/>
+        <pullup param="pcw_ddr_dq[17]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQ[18]" > 
+        <slew param="pcw_ddr_dq[18]_slew"/>
+        <voltage param="pcw_ddr_dq[18]_voltage"/>
+        <loc param="pcw_ddr_dq[18]_loc"/>
+        <pullup param="pcw_ddr_dq[18]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQ[19]" > 
+        <slew param="pcw_ddr_dq[19]_slew"/>
+        <voltage param="pcw_ddr_dq[19]_voltage"/>
+        <loc param="pcw_ddr_dq[19]_loc"/>
+        <pullup param="pcw_ddr_dq[19]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQ[1]" > 
+        <slew param="pcw_ddr_dq[1]_slew"/>
+        <voltage param="pcw_ddr_dq[1]_voltage"/>
+        <loc param="pcw_ddr_dq[1]_loc"/>
+        <pullup param="pcw_ddr_dq[1]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQ[20]" > 
+        <slew param="pcw_ddr_dq[20]_slew"/>
+        <voltage param="pcw_ddr_dq[20]_voltage"/>
+        <loc param="pcw_ddr_dq[20]_loc"/>
+        <pullup param="pcw_ddr_dq[20]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQ[21]" > 
+        <slew param="pcw_ddr_dq[21]_slew"/>
+        <voltage param="pcw_ddr_dq[21]_voltage"/>
+        <loc param="pcw_ddr_dq[21]_loc"/>
+        <pullup param="pcw_ddr_dq[21]_pullup"/>
+    </pin>
+    
+    <pin cmt="DDR_DQ[22]" > 
+        <slew param="pcw_ddr_dq[22]_slew"/>
+        <voltage param="pcw_ddr_dq[22]_voltage"/>
+        <loc param="pcw_ddr_dq[22]_loc"/>
+        <pullup param="pcw_ddr_dq[22]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQ[23]" > 
+        <slew param="pcw_ddr_dq[23]_slew"/>
+        <voltage param="pcw_ddr_dq[23]_voltage"/>
+        <loc param="pcw_ddr_dq[23]_loc"/>
+        <pullup param="pcw_ddr_dq[23]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQ[24]" > 
+        <slew param="pcw_ddr_dq[24]_slew"/>
+        <voltage param="pcw_ddr_dq[24]_voltage"/>
+        <loc param="pcw_ddr_dq[24]_loc"/>
+        <pullup param="pcw_ddr_dq[24]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQ[25]" > 
+        <slew param="pcw_ddr_dq[25]_slew"/>
+        <voltage param="pcw_ddr_dq[25]_voltage"/>
+        <loc param="pcw_ddr_dq[25]_loc"/>
+        <pullup param="pcw_ddr_dq[25]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQ[26]" > 
+        <slew param="pcw_ddr_dq[26]_slew"/>
+        <voltage param="pcw_ddr_dq[26]_voltage"/>
+        <loc param="pcw_ddr_dq[26]_loc"/>
+        <pullup param="pcw_ddr_dq[26]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQ[27]" > 
+        <slew param="pcw_ddr_dq[27]_slew"/>
+        <voltage param="pcw_ddr_dq[27]_voltage"/>
+        <loc param="pcw_ddr_dq[27]_loc"/>
+        <pullup param="pcw_ddr_dq[27]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQ[28]" > 
+        <slew param="pcw_ddr_dq[28]_slew"/>
+        <voltage param="pcw_ddr_dq[28]_voltage"/>
+        <loc param="pcw_ddr_dq[28]_loc"/>
+        <pullup param="pcw_ddr_dq[28]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQ[29]" > 
+        <slew param="pcw_ddr_dq[29]_slew"/>
+        <voltage param="pcw_ddr_dq[29]_voltage"/>
+        <loc param="pcw_ddr_dq[29]_loc"/>
+        <pullup param="pcw_ddr_dq[29]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQ[2]" > 
+        <slew param="pcw_ddr_dq[2]_slew"/>
+        <voltage param="pcw_ddr_dq[2]_voltage"/>
+        <loc param="pcw_ddr_dq[2]_loc"/>
+        <pullup param="pcw_ddr_dq[2]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQ[30]" > 
+        <slew param="pcw_ddr_dq[30]_slew"/>
+        <voltage param="pcw_ddr_dq[30]_voltage"/>
+        <loc param="pcw_ddr_dq[30]_loc"/>
+        <pullup param="pcw_ddr_dq[30]_pullup"/>
+    </pin>
+
+    <pin cmt="DDR_DQ[31]" > 
+        <slew param="pcw_ddr_dq[31]_slew"/>
+        <voltage param="pcw_ddr_dq[31]_voltage"/>
+        <loc param="pcw_ddr_dq[31]_loc"/>
+        <pullup param="pcw_ddr_dq[31]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQ[3]" > 
+        <slew param="pcw_ddr_dq[3]_slew"/>
+        <voltage param="pcw_ddr_dq[3]_voltage"/>
+        <loc param="pcw_ddr_dq[3]_loc"/>
+        <pullup param="pcw_ddr_dq[3]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQ[4]" > 
+        <slew param="pcw_ddr_dq[4]_slew"/>
+        <voltage param="pcw_ddr_dq[4]_voltage"/>
+        <loc param="pcw_ddr_dq[4]_loc"/>
+        <pullup param="pcw_ddr_dq[4]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQ[5]" > 
+        <slew param="pcw_ddr_dq[5]_slew"/>
+        <voltage param="pcw_ddr_dq[5]_voltage"/>
+        <loc param="pcw_ddr_dq[5]_loc"/>
+        <pullup param="pcw_ddr_dq[5]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQ[6]" > 
+        <slew param="pcw_ddr_dq[6]_slew"/>
+        <voltage param="pcw_ddr_dq[6]_voltage"/>
+        <loc param="pcw_ddr_dq[6]_loc"/>
+        <pullup param="pcw_ddr_dq[6]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQ[7]" > 
+        <slew param="pcw_ddr_dq[7]_slew"/>
+        <voltage param="pcw_ddr_dq[7]_voltage"/>
+        <loc param="pcw_ddr_dq[7]_loc"/>
+        <pullup param="pcw_ddr_dq[7]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQ[8]" > 
+        <slew param="pcw_ddr_dq[8]_slew"/>
+        <voltage param="pcw_ddr_dq[8]_voltage"/>
+        <loc param="pcw_ddr_dq[8]_loc"/>
+        <pullup param="pcw_ddr_dq[8]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQ[9]" > 
+        <slew param="pcw_ddr_dq[9]_slew"/>
+        <voltage param="pcw_ddr_dq[9]_voltage"/>
+        <loc param="pcw_ddr_dq[9]_loc"/>
+        <pullup param="pcw_ddr_dq[9]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQS_n[0]" > 
+        <slew param="pcw_ddr_dqs_n[0]_slew"/>
+        <voltage param="pcw_ddr_dqs_n[0]_voltage"/>
+        <loc param="pcw_ddr_dqs_n[0]_loc"/>
+        <pullup param="pcw_ddr_dqs_n[0]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQS_n[1]" > 
+        <slew param="pcw_ddr_dqs_n[1]_slew"/>
+        <voltage param="pcw_ddr_dqs_n[1]_voltage"/>
+        <loc param="pcw_ddr_dqs_n[1]_loc"/>
+        <pullup param="pcw_ddr_dqs_n[1]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQS_n[2]" > 
+        <slew param="pcw_ddr_dqs_n[2]_slew"/>
+        <voltage param="pcw_ddr_dqs_n[2]_voltage"/>
+        <loc param="pcw_ddr_dqs_n[2]_loc"/>
+        <pullup param="pcw_ddr_dqs_n[2]_pullup"/>
+    </pin>
+
+    <pin cmt="DDR_DQS_n[3]" > 
+        <slew param="pcw_ddr_dqs_n[3]_slew"/>
+        <voltage param="pcw_ddr_dqs_n[3]_voltage"/>
+        <loc param="pcw_ddr_dqs_n[3]_loc"/>
+        <pullup param="pcw_ddr_dqs_n[3]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQS[0]" > 
+        <slew param="pcw_ddr_dqs_p[0]_slew"/>
+        <voltage param="pcw_ddr_dqs_p[0]_voltage"/>
+        <loc param="pcw_ddr_dqs_p[0]_loc"/>
+        <pullup param="pcw_ddr_dqs_p[0]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQS[1]" > 
+        <slew param="pcw_ddr_dqs_p[1]_slew"/>
+        <voltage param="pcw_ddr_dqs_p[1]_voltage"/>
+        <loc param="pcw_ddr_dqs_p[1]_loc"/>
+        <pullup param="pcw_ddr_dqs_p[1]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DQS[2]" > 
+        <slew param="pcw_ddr_dqs_p[2]_slew"/>
+        <voltage param="pcw_ddr_dqs_p[2]_voltage"/>
+        <loc param="pcw_ddr_dqs_p[2]_loc"/>
+        <pullup param="pcw_ddr_dqs_p[2]_pullup"/>
+    </pin>
+
+    <pin cmt="DDR_DQS[3]" > 
+        <slew param="pcw_ddr_dqs_p[3]_slew"/>
+        <voltage param="pcw_ddr_dqs_p[3]_voltage"/>
+        <loc param="pcw_ddr_dqs_p[3]_loc"/>
+        <pullup param="pcw_ddr_dqs_p[3]_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_DRSTB"> 
+        <slew param="pcw_ddr_drst_b_slew"/>
+        <voltage param="pcw_ddr_drst_b_voltage"/>
+        <loc param="pcw_ddr_drst_b_loc"/>
+        <pullup param="pcw_ddr_drst_b_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_ODT"> 
+        <slew param="pcw_ddr_odt_slew"/>
+        <voltage param="pcw_ddr_odt_voltage"/>
+        <loc param="pcw_ddr_odt_loc"/>
+        <pullup param="pcw_ddr_odt_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_RAS_n"> 
+        <slew param="pcw_ddr_ras_b_slew"/>
+        <voltage param="pcw_ddr_ras_b_voltage"/>
+        <loc param="pcw_ddr_ras_b_loc"/>
+        <pullup param="pcw_ddr_ras_b_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_VRN"> 
+        <slew param="pcw_ddr_vrn_slew"/>
+        <voltage param="pcw_ddr_vrn_voltage"/>
+        <loc param="pcw_ddr_vrn_loc"/>
+        <pullup param="pcw_ddr_vrn_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_VRP"> 
+        <slew param="pcw_ddr_vrp_slew"/>
+        <voltage param="pcw_ddr_vrp_voltage"/>
+        <loc param="pcw_ddr_vrp_loc"/>
+        <pullup param="pcw_ddr_vrp_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="DDR_WEB"> 
+        <slew param="pcw_ddr_we_b_slew"/>
+        <voltage param="pcw_ddr_we_b_voltage"/>
+        <loc param="pcw_ddr_we_b_loc"/>
+        <pullup param="pcw_ddr_we_b_pullup"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[0]" > 
+        <name param="pcw_mio_mio[0]_pinname"/>
+        <drive param="pcw_mio_mio[0]_drive"/>
+        <slew param="pcw_mio_0_slew"/>
+        <voltage param="pcw_mio_mio[0]_voltage"/>
+        <loc param="pcw_mio_mio[0]_loc"/>
+        <pullup param="pcw_mio_0_pullup"/>
+        <dir param="pcw_mio_0_direction"/>
+        <peri param="pcw_mio_mio[0]_peripheral"/>
+        <signal param="pcw_mio_mio[0]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[1]" > 
+        <name param="pcw_mio_mio[1]_pinname"/>
+        <drive param="pcw_mio_mio[1]_drive"/>
+        <slew param="pcw_mio_1_slew"/>
+        <voltage param="pcw_mio_mio[1]_voltage"/>
+        <loc param="pcw_mio_mio[1]_loc"/>
+        <pullup param="pcw_mio_1_pullup"/>
+        <dir param="pcw_mio_1_direction"/>
+        <peri param="pcw_mio_mio[1]_peripheral"/>
+        <signal param="pcw_mio_mio[1]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[2]" > 
+        <name param="pcw_mio_mio[2]_pinname"/>
+        <drive param="pcw_mio_mio[2]_drive"/>
+        <slew param="pcw_mio_2_slew"/>
+        <voltage param="pcw_mio_mio[2]_voltage"/>
+        <loc param="pcw_mio_mio[2]_loc"/>
+        <pullup param="pcw_mio_2_pullup"/>
+        <dir param="pcw_mio_2_direction"/>
+        <peri param="pcw_mio_mio[2]_peripheral"/>
+        <signal param="pcw_mio_mio[2]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[3]" > 
+        <name param="pcw_mio_mio[3]_pinname"/>
+        <drive param="pcw_mio_mio[3]_drive"/>
+        <slew param="pcw_mio_3_slew"/>
+        <voltage param="pcw_mio_mio[3]_voltage"/>
+        <loc param="pcw_mio_mio[3]_loc"/>
+        <pullup param="pcw_mio_3_pullup"/>
+        <dir param="pcw_mio_3_direction"/>
+        <peri param="pcw_mio_mio[3]_peripheral"/>
+        <signal param="pcw_mio_mio[3]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[4]" > 
+        <name param="pcw_mio_mio[4]_pinname"/>
+        <drive param="pcw_mio_mio[4]_drive"/>
+        <slew param="pcw_mio_4_slew"/>
+        <voltage param="pcw_mio_mio[4]_voltage"/>
+        <loc param="pcw_mio_mio[4]_loc"/>
+        <pullup param="pcw_mio_4_pullup"/>
+        <dir param="pcw_mio_4_direction"/>
+        <peri param="pcw_mio_mio[4]_peripheral"/>
+        <signal param="pcw_mio_mio[4]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[5]" > 
+        <name param="pcw_mio_mio[5]_pinname"/>
+        <drive param="pcw_mio_mio[5]_drive"/>
+        <slew param="pcw_mio_5_slew"/>
+        <voltage param="pcw_mio_mio[5]_voltage"/>
+        <loc param="pcw_mio_mio[5]_loc"/>
+        <pullup param="pcw_mio_5_pullup"/>
+        <dir param="pcw_mio_5_direction"/>
+        <peri param="pcw_mio_mio[5]_peripheral"/>
+        <signal param="pcw_mio_mio[5]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[6]" > 
+        <name param="pcw_mio_mio[6]_pinname"/>
+        <drive param="pcw_mio_mio[6]_drive"/>
+        <slew param="pcw_mio_6_slew"/>
+        <voltage param="pcw_mio_mio[6]_voltage"/>
+        <loc param="pcw_mio_mio[6]_loc"/>
+        <pullup param="pcw_mio_6_pullup"/>
+        <dir param="pcw_mio_6_direction"/>
+        <peri param="pcw_mio_mio[6]_peripheral"/>
+        <signal param="pcw_mio_mio[6]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[7]" > 
+        <name param="pcw_mio_mio[7]_pinname"/>
+        <drive param="pcw_mio_mio[7]_drive"/>
+        <slew param="pcw_mio_7_slew"/>
+        <voltage param="pcw_mio_mio[7]_voltage"/>
+        <loc param="pcw_mio_mio[7]_loc"/>
+        <pullup param="pcw_mio_7_pullup"/>
+        <dir param="pcw_mio_7_direction"/>
+        <peri param="pcw_mio_mio[7]_peripheral"/>
+        <signal param="pcw_mio_mio[7]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[8]" > 
+        <name param="pcw_mio_mio[8]_pinname"/>
+        <drive param="pcw_mio_mio[8]_drive"/>
+        <slew param="pcw_mio_8_slew"/>
+        <voltage param="pcw_mio_mio[8]_voltage"/>
+        <loc param="pcw_mio_mio[8]_loc"/>
+        <pullup param="pcw_mio_8_pullup"/>
+        <dir param="pcw_mio_8_direction"/>
+        <peri param="pcw_mio_mio[8]_peripheral"/>
+        <signal param="pcw_mio_mio[8]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[9]" > 
+        <name param="pcw_mio_mio[9]_pinname"/>
+        <drive param="pcw_mio_mio[9]_drive"/>
+        <slew param="pcw_mio_9_slew"/>
+        <voltage param="pcw_mio_mio[9]_voltage"/>
+        <loc param="pcw_mio_mio[9]_loc"/>
+        <pullup param="pcw_mio_9_pullup"/>
+        <dir param="pcw_mio_9_direction"/>
+        <peri param="pcw_mio_mio[9]_peripheral"/>
+        <signal param="pcw_mio_mio[9]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[10]" > 
+        <name param="pcw_mio_mio[10]_pinname"/>
+        <drive param="pcw_mio_mio[10]_drive"/>
+        <slew param="pcw_mio_10_slew"/>
+        <voltage param="pcw_mio_mio[10]_voltage"/>
+        <loc param="pcw_mio_mio[10]_loc"/>
+        <pullup param="pcw_mio_10_pullup"/>
+        <dir param="pcw_mio_10_direction"/>
+        <peri param="pcw_mio_mio[10]_peripheral"/>
+        <signal param="pcw_mio_mio[10]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[11]" > 
+        <name param="pcw_mio_mio[11]_pinname"/>
+        <drive param="pcw_mio_mio[11]_drive"/>
+        <slew param="pcw_mio_11_slew"/>
+        <voltage param="pcw_mio_mio[11]_voltage"/>
+        <loc param="pcw_mio_mio[11]_loc"/>
+        <pullup param="pcw_mio_11_pullup"/>
+        <dir param="pcw_mio_11_direction"/>
+        <peri param="pcw_mio_mio[11]_peripheral"/>
+        <signal param="pcw_mio_mio[11]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[12]" > 
+        <name param="pcw_mio_mio[12]_pinname"/>
+        <drive param="pcw_mio_mio[12]_drive"/>
+        <slew param="pcw_mio_12_slew"/>
+        <voltage param="pcw_mio_mio[12]_voltage"/>
+        <loc param="pcw_mio_mio[12]_loc"/>
+        <pullup param="pcw_mio_12_pullup"/>
+        <dir param="pcw_mio_12_direction"/>
+        <peri param="pcw_mio_mio[12]_peripheral"/>
+        <signal param="pcw_mio_mio[12]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[13]" > 
+        <name param="pcw_mio_mio[13]_pinname"/>
+        <drive param="pcw_mio_mio[13]_drive"/>
+        <slew param="pcw_mio_13_slew"/>
+        <voltage param="pcw_mio_mio[13]_voltage"/>
+        <loc param="pcw_mio_mio[13]_loc"/>
+        <pullup param="pcw_mio_13_pullup"/>
+        <dir param="pcw_mio_13_direction"/>
+        <peri param="pcw_mio_mio[13]_peripheral"/>
+        <signal param="pcw_mio_mio[13]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[14]" > 
+        <name param="pcw_mio_mio[14]_pinname"/>
+        <drive param="pcw_mio_mio[14]_drive"/>
+        <slew param="pcw_mio_14_slew"/>
+        <voltage param="pcw_mio_mio[14]_voltage"/>
+        <loc param="pcw_mio_mio[14]_loc"/>
+        <pullup param="pcw_mio_14_pullup"/>
+        <dir param="pcw_mio_14_direction"/>
+        <peri param="pcw_mio_mio[14]_peripheral"/>
+        <signal param="pcw_mio_mio[14]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[15]" > 
+        <name param="pcw_mio_mio[15]_pinname"/>
+        <drive param="pcw_mio_mio[15]_drive"/>
+        <slew param="pcw_mio_15_slew"/>
+        <voltage param="pcw_mio_mio[15]_voltage"/>
+        <loc param="pcw_mio_mio[15]_loc"/>
+        <pullup param="pcw_mio_15_pullup"/>
+        <dir param="pcw_mio_15_direction"/>
+        <peri param="pcw_mio_mio[15]_peripheral"/>
+        <signal param="pcw_mio_mio[15]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[16]" > 
+        <name param="pcw_mio_mio[16]_pinname"/>
+        <drive param="pcw_mio_mio[16]_drive"/>
+        <slew param="pcw_mio_16_slew"/>
+        <voltage param="pcw_mio_mio[16]_voltage"/>
+        <loc param="pcw_mio_mio[16]_loc"/>
+        <pullup param="pcw_mio_16_pullup"/>
+        <dir param="pcw_mio_16_direction"/>
+        <peri param="pcw_mio_mio[16]_peripheral"/>
+        <signal param="pcw_mio_mio[16]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[17]" > 
+        <name param="pcw_mio_mio[17]_pinname"/>
+        <drive param="pcw_mio_mio[17]_drive"/>
+        <slew param="pcw_mio_17_slew"/>
+        <voltage param="pcw_mio_mio[17]_voltage"/>
+        <loc param="pcw_mio_mio[17]_loc"/>
+        <pullup param="pcw_mio_17_pullup"/>
+        <dir param="pcw_mio_17_direction"/>
+        <peri param="pcw_mio_mio[17]_peripheral"/>
+        <signal param="pcw_mio_mio[17]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[18]" > 
+        <name param="pcw_mio_mio[18]_pinname"/>
+        <drive param="pcw_mio_mio[18]_drive"/>
+        <slew param="pcw_mio_18_slew"/>
+        <voltage param="pcw_mio_mio[18]_voltage"/>
+        <loc param="pcw_mio_mio[18]_loc"/>
+        <pullup param="pcw_mio_18_pullup"/>
+        <dir param="pcw_mio_18_direction"/>
+        <peri param="pcw_mio_mio[18]_peripheral"/>
+        <signal param="pcw_mio_mio[18]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[19]" > 
+        <name param="pcw_mio_mio[19]_pinname"/>
+        <drive param="pcw_mio_mio[19]_drive"/>
+        <slew param="pcw_mio_19_slew"/>
+        <voltage param="pcw_mio_mio[19]_voltage"/>
+        <loc param="pcw_mio_mio[19]_loc"/>
+        <pullup param="pcw_mio_19_pullup"/>
+        <dir param="pcw_mio_19_direction"/>
+        <peri param="pcw_mio_mio[19]_peripheral"/>
+        <signal param="pcw_mio_mio[19]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[20]" > 
+        <name param="pcw_mio_mio[20]_pinname"/>
+        <drive param="pcw_mio_mio[20]_drive"/>
+        <slew param="pcw_mio_20_slew"/>
+        <voltage param="pcw_mio_mio[20]_voltage"/>
+        <loc param="pcw_mio_mio[20]_loc"/>
+        <pullup param="pcw_mio_20_pullup"/>
+        <dir param="pcw_mio_20_direction"/>
+        <peri param="pcw_mio_mio[20]_peripheral"/>
+        <signal param="pcw_mio_mio[20]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[21]" > 
+        <name param="pcw_mio_mio[21]_pinname"/>
+        <drive param="pcw_mio_mio[21]_drive"/>
+        <slew param="pcw_mio_21_slew"/>
+        <voltage param="pcw_mio_mio[21]_voltage"/>
+        <loc param="pcw_mio_mio[21]_loc"/>
+        <pullup param="pcw_mio_21_pullup"/>
+        <dir param="pcw_mio_21_direction"/>
+        <peri param="pcw_mio_mio[21]_peripheral"/>
+        <signal param="pcw_mio_mio[21]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[22]" > 
+        <name param="pcw_mio_mio[22]_pinname"/>
+        <drive param="pcw_mio_mio[22]_drive"/>
+        <slew param="pcw_mio_22_slew"/>
+        <voltage param="pcw_mio_mio[22]_voltage"/>
+        <loc param="pcw_mio_mio[22]_loc"/>
+        <pullup param="pcw_mio_22_pullup"/>
+        <dir param="pcw_mio_22_direction"/>
+        <peri param="pcw_mio_mio[22]_peripheral"/>
+        <signal param="pcw_mio_mio[22]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[23]" > 
+        <name param="pcw_mio_mio[23]_pinname"/>
+        <drive param="pcw_mio_mio[23]_drive"/>
+        <slew param="pcw_mio_23_slew"/>
+        <voltage param="pcw_mio_mio[23]_voltage"/>
+        <loc param="pcw_mio_mio[23]_loc"/>
+        <pullup param="pcw_mio_23_pullup"/>
+        <dir param="pcw_mio_23_direction"/>
+        <peri param="pcw_mio_mio[23]_peripheral"/>
+        <signal param="pcw_mio_mio[23]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[24]" > 
+        <name param="pcw_mio_mio[24]_pinname"/>
+        <drive param="pcw_mio_mio[24]_drive"/>
+        <slew param="pcw_mio_24_slew"/>
+        <voltage param="pcw_mio_mio[24]_voltage"/>
+        <loc param="pcw_mio_mio[24]_loc"/>
+        <pullup param="pcw_mio_24_pullup"/>
+        <dir param="pcw_mio_24_direction"/>
+        <peri param="pcw_mio_mio[24]_peripheral"/>
+        <signal param="pcw_mio_mio[24]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[25]" > 
+        <name param="pcw_mio_mio[25]_pinname"/>
+        <drive param="pcw_mio_mio[25]_drive"/>
+        <slew param="pcw_mio_25_slew"/>
+        <voltage param="pcw_mio_mio[25]_voltage"/>
+        <loc param="pcw_mio_mio[25]_loc"/>
+        <pullup param="pcw_mio_25_pullup"/>
+        <dir param="pcw_mio_25_direction"/>
+        <peri param="pcw_mio_mio[25]_peripheral"/>
+        <signal param="pcw_mio_mio[25]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[26]" > 
+        <name param="pcw_mio_mio[26]_pinname"/>
+        <drive param="pcw_mio_mio[26]_drive"/>
+        <slew param="pcw_mio_26_slew"/>
+        <voltage param="pcw_mio_mio[26]_voltage"/>
+        <loc param="pcw_mio_mio[26]_loc"/>
+        <pullup param="pcw_mio_26_pullup"/>
+        <dir param="pcw_mio_26_direction"/>
+        <peri param="pcw_mio_mio[26]_peripheral"/>
+        <signal param="pcw_mio_mio[26]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[27]" > 
+        <name param="pcw_mio_mio[27]_pinname"/>
+        <drive param="pcw_mio_mio[27]_drive"/>
+        <slew param="pcw_mio_27_slew"/>
+        <voltage param="pcw_mio_mio[27]_voltage"/>
+        <loc param="pcw_mio_mio[27]_loc"/>
+        <pullup param="pcw_mio_27_pullup"/>
+        <dir param="pcw_mio_27_direction"/>
+        <peri param="pcw_mio_mio[27]_peripheral"/>
+        <signal param="pcw_mio_mio[27]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[28]" > 
+        <name param="pcw_mio_mio[28]_pinname"/>
+        <drive param="pcw_mio_mio[28]_drive"/>
+        <slew param="pcw_mio_28_slew"/>
+        <voltage param="pcw_mio_mio[28]_voltage"/>
+        <loc param="pcw_mio_mio[28]_loc"/>
+        <pullup param="pcw_mio_28_pullup"/>
+        <dir param="pcw_mio_28_direction"/>
+        <peri param="pcw_mio_mio[28]_peripheral"/>
+        <signal param="pcw_mio_mio[28]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[29]" > 
+        <name param="pcw_mio_mio[29]_pinname"/>
+        <drive param="pcw_mio_mio[29]_drive"/>
+        <slew param="pcw_mio_29_slew"/>
+        <voltage param="pcw_mio_mio[29]_voltage"/>
+        <loc param="pcw_mio_mio[29]_loc"/>
+        <pullup param="pcw_mio_29_pullup"/>
+        <dir param="pcw_mio_29_direction"/>
+        <peri param="pcw_mio_mio[29]_peripheral"/>
+        <signal param="pcw_mio_mio[29]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[30]" > 
+        <name param="pcw_mio_mio[30]_pinname"/>
+        <drive param="pcw_mio_mio[30]_drive"/>
+        <slew param="pcw_mio_30_slew"/>
+        <voltage param="pcw_mio_mio[30]_voltage"/>
+        <loc param="pcw_mio_mio[30]_loc"/>
+        <pullup param="pcw_mio_30_pullup"/>
+        <dir param="pcw_mio_30_direction"/>
+        <peri param="pcw_mio_mio[30]_peripheral"/>
+        <signal param="pcw_mio_mio[30]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[31]" > 
+        <name param="pcw_mio_mio[31]_pinname"/>
+        <drive param="pcw_mio_mio[31]_drive"/>
+        <slew param="pcw_mio_31_slew"/>
+        <voltage param="pcw_mio_mio[31]_voltage"/>
+        <loc param="pcw_mio_mio[31]_loc"/>
+        <pullup param="pcw_mio_31_pullup"/>
+        <dir param="pcw_mio_31_direction"/>
+        <peri param="pcw_mio_mio[31]_peripheral"/>
+        <signal param="pcw_mio_mio[31]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[32]" > 
+        <name param="pcw_mio_mio[32]_pinname"/>
+        <drive param="pcw_mio_mio[32]_drive"/>
+        <slew param="pcw_mio_32_slew"/>
+        <voltage param="pcw_mio_mio[32]_voltage"/>
+        <loc param="pcw_mio_mio[32]_loc"/>
+        <pullup param="pcw_mio_32_pullup"/>
+        <dir param="pcw_mio_32_direction"/>
+        <peri param="pcw_mio_mio[32]_peripheral"/>
+        <signal param="pcw_mio_mio[32]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[33]" > 
+        <name param="pcw_mio_mio[33]_pinname"/>
+        <drive param="pcw_mio_mio[33]_drive"/>
+        <slew param="pcw_mio_33_slew"/>
+        <voltage param="pcw_mio_mio[33]_voltage"/>
+        <loc param="pcw_mio_mio[33]_loc"/>
+        <pullup param="pcw_mio_33_pullup"/>
+        <dir param="pcw_mio_33_direction"/>
+        <peri param="pcw_mio_mio[33]_peripheral"/>
+        <signal param="pcw_mio_mio[33]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[34]" > 
+        <name param="pcw_mio_mio[34]_pinname"/>
+        <drive param="pcw_mio_mio[34]_drive"/>
+        <slew param="pcw_mio_34_slew"/>
+        <voltage param="pcw_mio_mio[34]_voltage"/>
+        <loc param="pcw_mio_mio[34]_loc"/>
+        <pullup param="pcw_mio_34_pullup"/>
+        <pullup param="pcw_mio_34_pullup"/>
+        <dir param="pcw_mio_34_direction"/>
+        <peri param="pcw_mio_mio[34]_peripheral"/>
+        <signal param="pcw_mio_mio[34]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[35]" > 
+        <name param="pcw_mio_mio[35]_pinname"/>
+        <drive param="pcw_mio_mio[35]_drive"/>
+        <slew param="pcw_mio_35_slew"/>
+        <voltage param="pcw_mio_mio[35]_voltage"/>
+        <loc param="pcw_mio_mio[35]_loc"/>
+        <pullup param="pcw_mio_35_pullup"/>
+        <dir param="pcw_mio_35_direction"/>
+        <peri param="pcw_mio_mio[35]_peripheral"/>
+        <signal param="pcw_mio_mio[35]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[36]" > 
+        <name param="pcw_mio_mio[36]_pinname"/>
+        <drive param="pcw_mio_mio[36]_drive"/>
+        <slew param="pcw_mio_36_slew"/>
+        <voltage param="pcw_mio_mio[36]_voltage"/>
+        <loc param="pcw_mio_mio[36]_loc"/>
+        <pullup param="pcw_mio_36_pullup"/>
+        <dir param="pcw_mio_36_direction"/>
+        <peri param="pcw_mio_mio[36]_peripheral"/>
+        <signal param="pcw_mio_mio[36]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[37]" > 
+        <name param="pcw_mio_mio[37]_pinname"/>
+        <drive param="pcw_mio_mio[37]_drive"/>
+        <slew param="pcw_mio_37_slew"/>
+        <voltage param="pcw_mio_mio[37]_voltage"/>
+        <loc param="pcw_mio_mio[37]_loc"/>
+        <pullup param="pcw_mio_37_pullup"/>
+        <dir param="pcw_mio_37_direction"/>
+        <peri param="pcw_mio_mio[37]_peripheral"/>
+        <signal param="pcw_mio_mio[37]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[38]" > 
+        <name param="pcw_mio_mio[38]_pinname"/>
+        <drive param="pcw_mio_mio[38]_drive"/>
+        <slew param="pcw_mio_38_slew"/>
+        <voltage param="pcw_mio_mio[38]_voltage"/>
+        <loc param="pcw_mio_mio[38]_loc"/>
+        <pullup param="pcw_mio_38_pullup"/>
+        <pullup param="pcw_mio_38_pullup"/>
+        <dir param="pcw_mio_38_direction"/>
+        <peri param="pcw_mio_mio[38]_peripheral"/>
+        <signal param="pcw_mio_mio[38]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[39]" > 
+        <name param="pcw_mio_mio[39]_pinname"/>
+        <drive param="pcw_mio_mio[39]_drive"/>
+        <slew param="pcw_mio_39_slew"/>
+        <voltage param="pcw_mio_mio[39]_voltage"/>
+        <loc param="pcw_mio_mio[39]_loc"/>
+        <pullup param="pcw_mio_39_pullup"/>
+        <dir param="pcw_mio_39_direction"/>
+        <peri param="pcw_mio_mio[39]_peripheral"/>
+        <signal param="pcw_mio_mio[39]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[40]" > 
+        <name param="pcw_mio_mio[40]_pinname"/>
+        <drive param="pcw_mio_mio[40]_drive"/>
+        <slew param="pcw_mio_40_slew"/>
+        <voltage param="pcw_mio_mio[40]_voltage"/>
+        <loc param="pcw_mio_mio[40]_loc"/>
+        <pullup param="pcw_mio_40_pullup"/>
+        <dir param="pcw_mio_40_direction"/>
+        <peri param="pcw_mio_mio[40]_peripheral"/>
+        <signal param="pcw_mio_mio[40]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[41]" > 
+        <name param="pcw_mio_mio[41]_pinname"/>
+        <drive param="pcw_mio_mio[41]_drive"/>
+        <slew param="pcw_mio_41_slew"/>
+        <voltage param="pcw_mio_mio[41]_voltage"/>
+        <loc param="pcw_mio_mio[41]_loc"/>
+        <pullup param="pcw_mio_41_pullup"/>
+        <dir param="pcw_mio_41_direction"/>
+        <peri param="pcw_mio_mio[41]_peripheral"/>
+        <signal param="pcw_mio_mio[41]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[42]" > 
+        <name param="pcw_mio_mio[42]_pinname"/>
+        <drive param="pcw_mio_mio[42]_drive"/>
+        <slew param="pcw_mio_42_slew"/>
+        <voltage param="pcw_mio_mio[42]_voltage"/>
+        <loc param="pcw_mio_mio[42]_loc"/>
+        <pullup param="pcw_mio_42_pullup"/>
+        <dir param="pcw_mio_42_direction"/>
+        <peri param="pcw_mio_mio[42]_peripheral"/>
+        <signal param="pcw_mio_mio[42]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[43]" > 
+        <name param="pcw_mio_mio[43]_pinname"/>
+        <drive param="pcw_mio_mio[43]_drive"/>
+        <slew param="pcw_mio_43_slew"/>
+        <voltage param="pcw_mio_mio[43]_voltage"/>
+        <loc param="pcw_mio_mio[43]_loc"/>
+        <pullup param="pcw_mio_43_pullup"/>
+        <dir param="pcw_mio_43_direction"/>
+        <peri param="pcw_mio_mio[43]_peripheral"/>
+        <signal param="pcw_mio_mio[43]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[44]" > 
+        <name param="pcw_mio_mio[44]_pinname"/>
+        <drive param="pcw_mio_mio[44]_drive"/>
+        <slew param="pcw_mio_44_slew"/>
+        <voltage param="pcw_mio_mio[44]_voltage"/>
+        <loc param="pcw_mio_mio[44]_loc"/>
+        <pullup param="pcw_mio_44_pullup"/>
+        <dir param="pcw_mio_44_direction"/>
+        <peri param="pcw_mio_mio[44]_peripheral"/>
+        <signal param="pcw_mio_mio[44]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[45]" > 
+        <name param="pcw_mio_mio[45]_pinname"/>
+        <drive param="pcw_mio_mio[45]_drive"/>
+        <slew param="pcw_mio_45_slew"/>
+        <voltage param="pcw_mio_mio[45]_voltage"/>
+        <loc param="pcw_mio_mio[45]_loc"/>
+        <pullup param="pcw_mio_45_pullup"/>
+        <dir param="pcw_mio_45_direction"/>
+        <peri param="pcw_mio_mio[45]_peripheral"/>
+        <signal param="pcw_mio_mio[45]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[46]" > 
+        <name param="pcw_mio_mio[46]_pinname"/>
+        <drive param="pcw_mio_mio[46]_drive"/>
+        <slew param="pcw_mio_46_slew"/>
+        <voltage param="pcw_mio_mio[46]_voltage"/>
+        <loc param="pcw_mio_mio[46]_loc"/>
+        <pullup param="pcw_mio_46_pullup"/>
+        <dir param="pcw_mio_46_direction"/>
+        <peri param="pcw_mio_mio[46]_peripheral"/>
+        <signal param="pcw_mio_mio[46]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[47]" > 
+        <name param="pcw_mio_mio[47]_pinname"/>
+        <drive param="pcw_mio_mio[47]_drive"/>
+        <slew param="pcw_mio_47_slew"/>
+        <voltage param="pcw_mio_mio[47]_voltage"/>
+        <loc param="pcw_mio_mio[47]_loc"/>
+        <pullup param="pcw_mio_47_pullup"/>
+        <dir param="pcw_mio_47_direction"/>
+        <peri param="pcw_mio_mio[47]_peripheral"/>
+        <signal param="pcw_mio_mio[47]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[48]" > 
+        <name param="pcw_mio_mio[48]_pinname"/>
+        <drive param="pcw_mio_mio[48]_drive"/>
+        <slew param="pcw_mio_48_slew"/>
+        <voltage param="pcw_mio_mio[48]_voltage"/>
+        <loc param="pcw_mio_mio[48]_loc"/>
+        <pullup param="pcw_mio_48_pullup"/>
+        <dir param="pcw_mio_48_direction"/>
+        <peri param="pcw_mio_mio[48]_peripheral"/>
+        <signal param="pcw_mio_mio[48]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[49]" > 
+        <name param="pcw_mio_mio[49]_pinname"/>
+        <drive param="pcw_mio_mio[49]_drive"/>
+        <slew param="pcw_mio_49_slew"/>
+        <voltage param="pcw_mio_mio[49]_voltage"/>
+        <loc param="pcw_mio_mio[49]_loc"/>
+        <pullup param="pcw_mio_49_pullup"/>
+        <dir param="pcw_mio_49_direction"/>
+        <peri param="pcw_mio_mio[49]_peripheral"/>
+        <signal param="pcw_mio_mio[49]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[50]" > 
+        <name param="pcw_mio_mio[50]_pinname"/>
+        <drive param="pcw_mio_mio[50]_drive"/>
+        <slew param="pcw_mio_50_slew"/>
+        <voltage param="pcw_mio_mio[50]_voltage"/>
+        <loc param="pcw_mio_mio[50]_loc"/>
+        <pullup param="pcw_mio_50_pullup"/>
+        <dir param="pcw_mio_50_direction"/>
+        <peri param="pcw_mio_mio[50]_peripheral"/>
+        <signal param="pcw_mio_mio[50]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[51]" > 
+        <name param="pcw_mio_mio[51]_pinname"/>
+        <drive param="pcw_mio_mio[51]_drive"/>
+        <slew param="pcw_mio_51_slew"/>
+        <voltage param="pcw_mio_mio[51]_voltage"/>
+        <loc param="pcw_mio_mio[51]_loc"/>
+        <pullup param="pcw_mio_51_pullup"/>
+        <dir param="pcw_mio_51_direction"/>
+        <peri param="pcw_mio_mio[51]_peripheral"/>
+        <signal param="pcw_mio_mio[51]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[52]" > 
+        <name param="pcw_mio_mio[52]_pinname"/>
+        <drive param="pcw_mio_mio[52]_drive"/>
+        <slew param="pcw_mio_52_slew"/>
+        <voltage param="pcw_mio_mio[52]_voltage"/>
+        <loc param="pcw_mio_mio[52]_loc"/>
+        <pullup param="pcw_mio_52_pullup"/>
+        <dir param="pcw_mio_52_direction"/>
+        <peri param="pcw_mio_mio[52]_peripheral"/>
+        <signal param="pcw_mio_mio[52]_signal"/>
+    </pin>
+        
+    
+    <pin cmt="MIO[53]" > 
+        <name param="pcw_mio_mio[53]_pinname"/>
+        <drive param="pcw_mio_mio[53]_drive"/>
+        <slew param="pcw_mio_53_slew"/>
+        <voltage param="pcw_mio_mio[53]_voltage"/>
+        <loc param="pcw_mio_mio[53]_loc"/>
+        <pullup param="pcw_mio_53_pullup"/>
+        <dir param="pcw_mio_53_direction"/>
+        <peri param="pcw_mio_mio[53]_peripheral"/>
+        <signal param="pcw_mio_mio[53]_signal"/>
+    </pin>
+</ucfgen>

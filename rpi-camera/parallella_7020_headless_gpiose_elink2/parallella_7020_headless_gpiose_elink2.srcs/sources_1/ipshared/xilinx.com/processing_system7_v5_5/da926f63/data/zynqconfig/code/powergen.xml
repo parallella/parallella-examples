@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE powergen PUBLIC "powergen" "powergen.dtd" >
+<powergen author="XPS" dataVersion="2012.3">
+      <gpio param="pcw_qspi_peripheral_enable" interface="QSPI" ports="6">
+        <usageRate usageRate="0.5"/>
+        <clockFreq param="pcw_qspi_peripheral_freqmhz"/>
+        <ioStandard param="pcw_qspi_qspi_io" value="MIO 1 .. 6" voltage="pcw_mio_mio[1]_voltage" ioBank="Vcco_p0"/>
+        <bidis param="pcw_qspi_grp_ss1_enable" add="1"/>
+        <bidis param="pcw_qspi_grp_io1_enable" add="5"/>
+        <bidis param="pcw_qspi_grp_fbclk_enable" add="1"/>
+      </gpio>  
+      <gpio param="pcw_nor_peripheral_enable" interface="NOR" ports="36">
+        <usageRate usageRate="0.5"/>
+        <clockFreq param="pcw_act_smc_peripheral_freqmhz"/>
+        <ioStandard param="pcw_nor_nor_io" value="MIO 3 .. 39" voltage="pcw_mio_mio[3]_voltage" ioBank="Vcco_p0/Vcco_p1"/>
+        <bidis param="pcw_nor_grp_a25_enable" add="1"/>
+        <bidis param="pcw_nor_grp_cs0_enable" add="1"/>
+        <bidis param="pcw_nor_grp_cs1_enable" add="1"/>
+        <bidis param="pcw_nor_grp_sram_cs0_enable" add="1"/>
+        <bidis param="pcw_nor_grp_sram_cs1_enable" add="1"/>
+      </gpio>  
+      <gpio param="pcw_nand_peripheral_enable" interface="NAND" ports="14">
+        <usageRate usageRate="0.5"/>
+        <clockFreq param="pcw_act_smc_peripheral_freqmhz"/>
+        <ioStandard param="pcw_nand_nand_io" value="MIO 0 2 .. 14" voltage="pcw_mio_mio[0]_voltage" ioBank="Vcco_p0"/>
+        <bidis param="pcw_nand_grp_d8_enable" add="8"/>
+      </gpio>  
+      <gpio param="pcw_enet0_peripheral_enable" interface="GigE" ports="12" isEmio="pcw_enet0_enet0_io">
+        <usageRate usageRate="0.5"/>
+        <clockFreq param="pcw_act_enet0_peripheral_freqmhz"/>
+        <ioStandard param="pcw_enet0_enet0_io" value="MIO 16 .. 27" voltage="pcw_mio_mio[16]_voltage" ioBank="Vcco_p1"/>
+        <bidis param="pcw_enet0_grp_MDIO_enable" add="2"/>
+      </gpio>  
+      <gpio param="pcw_enet1_peripheral_enable" interface="GigE" ports="12" isEmio="pcw_enet1_enet1_io">
+        <usageRate usageRate="0.5"/>
+        <clockFreq param="pcw_act_enet1_peripheral_freqmhz"/>
+        <ioStandard param="pcw_enet1_enet1_io" value="MIO 28 .. 39" voltage="pcw_mio_mio[28]_voltage" ioBank="Vcco_p1"/>
+        <bidis param="pcw_enet1_grp_MDIO_enable" add="2"/>
+      </gpio>  
+      <gpio param="pcw_usb0_peripheral_enable" interface="USB" ports="12">
+        <usageRate usageRate="0.5"/>
+        <clockFreq param="pcw_usb0_peripheral_freqmhz"/>
+        <ioStandard param="pcw_usb0_usb0_io" value="MIO 28 .. 39" voltage="pcw_mio_mio[28]_voltage" ioBank="Vcco_p1"/>
+      </gpio>  
+      <gpio param="pcw_usb1_peripheral_enable" interface="USB" ports="12">
+        <usageRate usageRate="0.5"/>
+        <clockFreq param="pcw_usb1_peripheral_freqmhz"/>
+        <ioStandard param="pcw_usb1_usb1_io" value="MIO 40 .. 51" voltage="pcw_mio_mio[40]_voltage" ioBank="Vcco_p1"/>
+      </gpio>  
+      <gpio param="pcw_sd0_peripheral_enable" interface="SD" ports="6" isEmio="pcw_sd0_sd0_io">
+        <usageRate usageRate="0.5"/>
+        <clockFreq param="pcw_act_sdio_peripheral_freqmhz"/>
+        <ioStandard param="pcw_sd0_sd0_io" value="MIO 16 .. 21" voltage="pcw_mio_mio[16]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_sd0_sd0_io" value="MIO 28 .. 33" voltage="pcw_mio_mio[28]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_sd0_sd0_io" value="MIO 40 .. 45" voltage="pcw_mio_mio[40]_voltage" ioBank="Vcco_p1"/>
+        <bidis param="pcw_sd0_grp_cd_enable" isEmio="pcw_sd0_grp_cd_io" add="1"/>
+        <bidis param="pcw_sd0_grp_wp_enable" isEmio="pcw_sd0_grp_wp_io" add="1"/>
+        <bidis param="pcw_sd0_grp_pow_enable" add="1"/>
+      </gpio>  
+      <gpio param="pcw_sd1_peripheral_enable" interface="SD" ports="6" isEmio="pcw_sd1_sd1_io">
+        <usageRate usageRate="0.5"/>
+        <clockFreq param="pcw_act_sdio_peripheral_freqmhz"/>
+        <ioStandard param="pcw_sd1_sd1_io" value="MIO 10 .. 15" voltage="pcw_mio_mio[10]_voltage" ioBank="Vcco_p0"/>
+        <ioStandard param="pcw_sd1_sd1_io" value="MIO 22 .. 27" voltage="pcw_mio_mio[22]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_sd1_sd1_io" value="MIO 34 .. 39" voltage="pcw_mio_mio[34]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_sd1_sd1_io" value="MIO 46 .. 51" voltage="pcw_mio_mio[46]_voltage" ioBank="Vcco_p1"/>
+        <bidis param="pcw_sd1_grp_cd_enable" isEmio="pcw_sd1_grp_cd_io" add="1"/>
+        <bidis param="pcw_sd1_grp_wp_enable" isEmio="pcw_sd1_grp_wp_io" add="1"/>
+        <bidis param="pcw_sd1_grp_pow_enable" add="1"/>
+      </gpio>  
+      <gpio param="pcw_uart0_peripheral_enable" interface="UART" ports="2" isEmio="pcw_uart0_uart0_io">
+        <usageRate usageRate="0.5"/>
+        <clockFreq param="pcw_act_uart_peripheral_freqmhz"/>
+        <ioStandard param="pcw_uart0_uart0_io" value="MIO 10 .. 11" voltage="pcw_mio_mio[10]_voltage" ioBank="Vcco_p0"/>
+        <ioStandard param="pcw_uart0_uart0_io" value="MIO 14 .. 15" voltage="pcw_mio_mio[14]_voltage" ioBank="Vcco_p0"/>
+        <ioStandard param="pcw_uart0_uart0_io" value="MIO 18 .. 19" voltage="pcw_mio_mio[18]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_uart0_uart0_io" value="MIO 22 .. 23" voltage="pcw_mio_mio[22]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_uart0_uart0_io" value="MIO 26 .. 27" voltage="pcw_mio_mio[26]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_uart0_uart0_io" value="MIO 30 .. 31" voltage="pcw_mio_mio[30]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_uart0_uart0_io" value="MIO 34 .. 35" voltage="pcw_mio_mio[34]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_uart0_uart0_io" value="MIO 38 .. 39" voltage="pcw_mio_mio[38]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_uart0_uart0_io" value="MIO 42 .. 43" voltage="pcw_mio_mio[42]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_uart0_uart0_io" value="MIO 46 .. 47" voltage="pcw_mio_mio[46]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_uart0_uart0_io" value="MIO 50 .. 51" voltage="pcw_mio_mio[50]_voltage" ioBank="Vcco_p1"/>
+      </gpio>  
+      <gpio param="pcw_uart1_peripheral_enable" interface="UART" ports="2" isEmio="pcw_uart1_uart1_io">
+        <usageRate usageRate="0.5"/>
+        <clockFreq param="pcw_act_uart_peripheral_freqmhz"/>
+        <ioStandard param="pcw_uart1_uart1_io" value="MIO 8 .. 9" voltage="pcw_mio_mio[8]_voltage" ioBank="Vcco_p0"/>
+        <ioStandard param="pcw_uart1_uart1_io" value="MIO 12 .. 13" voltage="pcw_mio_mio[12]_voltage" ioBank="Vcco_p0"/>
+        <ioStandard param="pcw_uart1_uart1_io" value="MIO 16 .. 17" voltage="pcw_mio_mio[16]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_uart1_uart1_io" value="MIO 20 .. 21" voltage="pcw_mio_mio[20]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_uart1_uart1_io" value="MIO 24 .. 25" voltage="pcw_mio_mio[24]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_uart1_uart1_io" value="MIO 28 .. 29" voltage="pcw_mio_mio[38]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_uart1_uart1_io" value="MIO 32 .. 33" voltage="pcw_mio_mio[32]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_uart1_uart1_io" value="MIO 36 .. 37" voltage="pcw_mio_mio[36]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_uart1_uart1_io" value="MIO 40 .. 41" voltage="pcw_mio_mio[40]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_uart1_uart1_io" value="MIO 44 .. 45" voltage="pcw_mio_mio[44]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_uart1_uart1_io" value="MIO 48 .. 49" voltage="pcw_mio_mio[48]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_uart1_uart1_io" value="MIO 52 .. 53" voltage="pcw_mio_mio[52]_voltage" ioBank="Vcco_p1"/>
+      </gpio>  
+      <gpio param="pcw_i2c0_peripheral_enable" interface="I2C" ports="2" isEmio="pcw_i2c0_i2c0_io">
+        <usageRate usageRate="0.5"/>
+        <clockFreq param="pcw_i2c_peripheral_freqmhz"/>
+        <ioStandard param="pcw_i2c0_i2c0_io" value="MIO 10 .. 11" voltage="pcw_mio_mio[10]_voltage" ioBank="Vcco_p0"/>
+        <ioStandard param="pcw_i2c0_i2c0_io" value="MIO 14 .. 15" voltage="pcw_mio_mio[14]_voltage" ioBank="Vcco_p0"/>
+        <ioStandard param="pcw_i2c0_i2c0_io" value="MIO 18 .. 19" voltage="pcw_mio_mio[18]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_i2c0_i2c0_io" value="MIO 22 .. 23" voltage="pcw_mio_mio[22]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_i2c0_i2c0_io" value="MIO 26 .. 27" voltage="pcw_mio_mio[26]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_i2c0_i2c0_io" value="MIO 30 .. 31" voltage="pcw_mio_mio[30]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_i2c0_i2c0_io" value="MIO 34 .. 35" voltage="pcw_mio_mio[34]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_i2c0_i2c0_io" value="MIO 38 .. 39" voltage="pcw_mio_mio[38]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_i2c0_i2c0_io" value="MIO 42 .. 43" voltage="pcw_mio_mio[42]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_i2c0_i2c0_io" value="MIO 46 .. 47" voltage="pcw_mio_mio[46]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_i2c0_i2c0_io" value="MIO 50 .. 51" voltage="pcw_mio_mio[50]_voltage" ioBank="Vcco_p1"/>
+        <bidis param="pcw_i2c0_grp_int_enable" add="1"/>
+      </gpio>  
+      <gpio param="pcw_i2c1_peripheral_enable" interface="I2C" ports="2" isEmio="pcw_i2c1_i2c1_io">
+        <usageRate usageRate="0.5"/>
+        <clockFreq param="pcw_i2c_peripheral_freqmhz"/>
+        <ioStandard param="pcw_i2c1_i2c1_io" value="MIO 8 .. 9" voltage="pcw_mio_mio[8]_voltage" ioBank="Vcco_p0"/>
+        <ioStandard param="pcw_i2c1_i2c1_io" value="MIO 12 .. 13" voltage="pcw_mio_mio[12]_voltage" ioBank="Vcco_p0"/>
+        <ioStandard param="pcw_i2c1_i2c1_io" value="MIO 16 .. 17" voltage="pcw_mio_mio[16]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_i2c1_i2c1_io" value="MIO 20 .. 21" voltage="pcw_mio_mio[20]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_i2c1_i2c1_io" value="MIO 24 .. 25" voltage="pcw_mio_mio[24]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_i2c1_i2c1_io" value="MIO 28 .. 29" voltage="pcw_mio_mio[38]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_i2c1_i2c1_io" value="MIO 32 .. 33" voltage="pcw_mio_mio[32]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_i2c1_i2c1_io" value="MIO 36 .. 37" voltage="pcw_mio_mio[36]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_i2c1_i2c1_io" value="MIO 40 .. 41" voltage="pcw_mio_mio[40]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_i2c1_i2c1_io" value="MIO 44 .. 45" voltage="pcw_mio_mio[44]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_i2c1_i2c1_io" value="MIO 48 .. 49" voltage="pcw_mio_mio[48]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_i2c1_i2c1_io" value="MIO 52 .. 53" voltage="pcw_mio_mio[52]_voltage" ioBank="Vcco_p1"/>
+        <bidis param="pcw_i2c1_grp_int_enable" isEmio="pcw_i2c1_grp_int_io" add="1"/>
+      </gpio>  
+      <gpio param="pcw_spi0_peripheral_enable" interface="SPI" ports="4" isEmio="pcw_spi0_spi0_io">
+        <usageRate usageRate="0.5"/>
+        <clockFreq param="pcw_act_spi_peripheral_freqmhz"/>
+        <ioStandard param="pcw_spi0_spi0_io" value="MIO 16 .. 21" voltage="pcw_mio_mio[16]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_spi0_spi0_io" value="MIO 28 .. 33" voltage="pcw_mio_mio[28]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_spi0_spi0_io" value="MIO 40 .. 45" voltage="pcw_mio_mio[40]_voltage" ioBank="Vcco_p1"/>
+        <bidis param="pcw_spi0_grp_ss0_enable" isEmio="pcw_spi0_grp_ss0_io" add="1"/>
+        <bidis param="pcw_spi0_grp_ss1_enable" isEmio="pcw_spi0_grp_ss1_io" add="1"/>
+        <bidis param="pcw_spi0_grp_ss2_enable" isEmio="pcw_spi0_grp_ss2_io" add="1"/>
+      </gpio>  
+      <gpio param="pcw_spi1_peripheral_enable" interface="SPI" ports="4" isEmio="pcw_spi1_spi1_io">
+        <usageRate usageRate="0.5"/>
+        <clockFreq param="pcw_act_spi_peripheral_freqmhz"/>
+        <ioStandard param="pcw_spi1_spi1_io" value="MIO 10 .. 15" voltage="pcw_mio_mio[10]_voltage" ioBank="Vcco_p0"/>
+        <ioStandard param="pcw_spi1_spi1_io" value="MIO 22 .. 27" voltage="pcw_mio_mio[22]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_spi1_spi1_io" value="MIO 34 .. 39" voltage="pcw_mio_mio[34]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_spi1_spi1_io" value="MIO 46 .. 51" voltage="pcw_mio_mio[46]_voltage" ioBank="Vcco_p1"/>
+        <bidis param="pcw_spi1_grp_ss0_enable" isEmio="pcw_spi0_grp_ss0_io" add="1"/>
+        <bidis param="pcw_spi1_grp_ss1_enable" isEmio="pcw_spi1_grp_ss1_io" add="1"/>
+        <bidis param="pcw_spi1_grp_ss2_enable" isEmio="pcw_spi2_grp_ss2_io" add="1"/>
+      </gpio>  
+      <gpio param="pcw_can0_peripheral_enable" interface="CAN" ports="2" isEmio="pcw_can0_can0_io">
+        <usageRate usageRate="0.5"/>
+        <clockFreq param="pcw_act_can0_peripheral_freqmhz"/>
+        <ioStandard param="pcw_can0_can0_io" value="MIO 10 .. 11" voltage="pcw_mio_mio[10]_voltage" ioBank="Vcco_p0"/>
+        <ioStandard param="pcw_can0_can0_io" value="MIO 14 .. 15" voltage="pcw_mio_mio[14]_voltage" ioBank="Vcco_p0"/>
+        <ioStandard param="pcw_can0_can0_io" value="MIO 18 .. 19" voltage="pcw_mio_mio[18]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_can0_can0_io" value="MIO 22 .. 23" voltage="pcw_mio_mio[22]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_can0_can0_io" value="MIO 26 .. 27" voltage="pcw_mio_mio[26]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_can0_can0_io" value="MIO 30 .. 31" voltage="pcw_mio_mio[30]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_can0_can0_io" value="MIO 34 .. 35" voltage="pcw_mio_mio[34]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_can0_can0_io" value="MIO 38 .. 39" voltage="pcw_mio_mio[38]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_can0_can0_io" value="MIO 42 .. 43" voltage="pcw_mio_mio[42]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_can0_can0_io" value="MIO 46 .. 47" voltage="pcw_mio_mio[46]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_can0_can0_io" value="MIO 50 .. 51" voltage="pcw_mio_mio[50]_voltage" ioBank="Vcco_p1"/>
+        <bidis param="pcw_can0_grp_clk_enable" add="1"/>
+      </gpio>  
+      <gpio param="pcw_can1_peripheral_enable" interface="CAN" ports="2" isEmio="pcw_can1_can1_io">
+        <usageRate usageRate="0.5"/>
+        <clockFreq param="pcw_act_can1_peripheral_freqmhz"/>
+        <ioStandard param="pcw_can1_can1_io" value="MIO 8 .. 9" voltage="pcw_mio_mio[8]_voltage" ioBank="Vcco_p0"/>
+        <ioStandard param="pcw_can1_can1_io" value="MIO 12 .. 13" voltage="pcw_mio_mio[12]_voltage" ioBank="Vcco_p0"/>
+        <ioStandard param="pcw_can1_can1_io" value="MIO 16 .. 17" voltage="pcw_mio_mio[16]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_can1_can1_io" value="MIO 20 .. 21" voltage="pcw_mio_mio[20]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_can1_can1_io" value="MIO 24 .. 25" voltage="pcw_mio_mio[24]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_can1_can1_io" value="MIO 28 .. 29" voltage="pcw_mio_mio[38]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_can1_can1_io" value="MIO 32 .. 33" voltage="pcw_mio_mio[32]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_can1_can1_io" value="MIO 36 .. 37" voltage="pcw_mio_mio[36]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_can1_can1_io" value="MIO 40 .. 41" voltage="pcw_mio_mio[40]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_can1_can1_io" value="MIO 44 .. 45" voltage="pcw_mio_mio[44]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_can1_can1_io" value="MIO 48 .. 49" voltage="pcw_mio_mio[48]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_can1_can1_io" value="MIO 52 .. 53" voltage="pcw_mio_mio[52]_voltage" ioBank="Vcco_p1"/>
+        <bidis param="pcw_can1_grp_clk_enable" add="1"/>
+      </gpio>  
+      <gpio param="pcw_trace_peripheral_enable" interface="TRACE" ports="2" isEmio="pcw_trace_trace_io">
+        <usageRate usageRate="0.5"/>
+        <clockFreq param="pcw_act_tpiu_peripheral_freqmhz"/>
+        <ioStandard param="pcw_trace_trace_io" value="MIO 12 .. 13" voltage="pcw_mio_mio[12]_voltage" ioBank="Vcco_p0"/>
+        <ioStandard param="pcw_trace_trace_io" value="MIO 24 .. 25" voltage="pcw_mio_mio[24]_voltage" ioBank="Vcco_p1"/>
+        <bidis param="pcw_trace_grp_2bit_enable" isEmio="pcw_trace_grp_2bit_io" add="2"/>
+        <bidis param="pcw_trace_grp_4bit_enable" isEmio="pcw_trace_grp_4bit_io" add="2"/>
+        <bidis param="pcw_trace_grp_8bit_enable" isEmio="pcw_trace_grp_8bit_io" add="4"/>
+        <bidis param="pcw_trace_grp_16bit_enable" isEmio="pcw_trace_grp_16bit_io" add="8"/>
+      </gpio>  
+      <gpio param="pcw_ttc0_peripheral_enable" interface="Timer" ports="2" isEmio="pcw_ttc0_ttc0_io">
+        <usageRate usageRate="0.5"/>
+        <clockFreq param="pcw_act_ttc0_clk0_peripheral_freqmhz"/>
+        <ioStandard param="pcw_ttc0_ttc0_io" value="MIO 18 .. 19" voltage="pcw_mio_mio[18]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_ttc0_ttc0_io" value="MIO 30 .. 31" voltage="pcw_mio_mio[30]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_ttc0_ttc0_io" value="MIO 42 .. 43" voltage="pcw_mio_mio[42]_voltage" ioBank="Vcco_p1"/>
+      </gpio>  
+      <gpio param="pcw_ttc1_peripheral_enable" interface="Timer" ports="2" isEmio="pcw_ttc1_ttc1_io">
+        <usageRate usageRate="0.5"/>
+        <clockFreq param="pcw_act_ttc1_clk0_peripheral_freqmhz"/>
+        <ioStandard param="pcw_ttc1_ttc1_io" value="MIO 16 .. 17" voltage="pcw_mio_mio[16]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_ttc1_ttc1_io" value="MIO 28 .. 29" voltage="pcw_mio_mio[28]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_ttc1_ttc1_io" value="MIO 40 .. 41" voltage="pcw_mio_mio[40]_voltage" ioBank="Vcco_p1"/>
+      </gpio>  
+      <gpio param="pcw_wdt_peripheral_enable" interface="Watchdog" ports="2" isEmio="pcw_wdt_wdt_io">
+        <usageRate usageRate="0.5"/>
+        <clockFreq param="pcw_act_wdt_peripheral_freqmhz"/>
+        <ioStandard param="pcw_wdt_wdt_io" value="MIO 14 .. 15" voltage="pcw_mio_mio[14]_voltage" ioBank="Vcco_p0"/>
+        <ioStandard param="pcw_wdt_wdt_io" value="MIO 26 .. 27" voltage="pcw_mio_mio[26]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_wdt_wdt_io" value="MIO 38 .. 39" voltage="pcw_mio_mio[38]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_wdt_wdt_io" value="MIO 50 .. 51" voltage="pcw_mio_mio[50]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_wdt_wdt_io" value="MIO 52 .. 53" voltage="pcw_mio_mio[52]_voltage" ioBank="Vcco_p1"/>
+      </gpio>  
+      <gpio param="pcw_pjtag_peripheral_enable" interface="PJTAG" ports="4" isEmio="pcw_pjtag_pjtag_io">
+        <usageRate usageRate="0.5"/>
+        <clockFreq param="pcw_apu_1x_peripheral_freqmhz"/>
+        <ioStandard param="pcw_pjtag_pjtag_io" value="MIO 10 .. 13" voltage="pcw_mio_mio[10]_voltage" ioBank="Vcco_p0"/>
+        <ioStandard param="pcw_pjtag_pjtag_io" value="MIO 22 .. 25" voltage="pcw_mio_mio[22]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_pjtag_pjtag_io" value="MIO 34 .. 37" voltage="pcw_mio_mio[34]_voltage" ioBank="Vcco_p1"/>
+        <ioStandard param="pcw_pjtag_pjtag_io" value="MIO 46 .. 49" voltage="pcw_mio_mio[46]_voltage" ioBank="Vcco_p1"/>
+      </gpio>  
+      <memory name="code" memType="pcw_uiparam_ddr_memory_type" dataWidth="pcw_internal_ddr_bus_width" clockFreq="pcw_uiparam_ddr_freq_mhz" readRate="0.5" writeRate="0.5"/>
+      <processor name="system" numA9Cores="2" clockFreq="pcw_apu_peripheral_freqmhz" load="0.5"/>
+      <pll domain="IO" vco="pcw_io_io_pll_freqmhz"/>
+      <pll domain="Memory" vco="pcw_ddr_ddr_pll_freqmhz"/>
+      <pll domain="Processor" vco="pcw_cpu_cpu_pll_freqmhz"/>
+      <gpio param="pcw_gpio_mio_gpio_enable" interface="GPIO_Bank_0" ports="0">
+        <usageRate usageRate="0.5"/>
+        <clockFreq param="pcw_gpio_peripheral_freqmhz"/>
+        <ioStandard param="pcw_gpio_peripheral_freqmhz" value="1" voltage="pcw_internal_bank0_voltage" ioBank="Vcco_p0"/>
+        <isgpioport param="pcw_preset_mio_0" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_1" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_2" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_3" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_4" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_5" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_6" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_7" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_8" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_9" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_10" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_11" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_12" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_13" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_14" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_15" value="gpio" add="1"/>
+      </gpio>  
+      <gpio param="pcw_gpio_mio_gpio_enable" interface="GPIO_Bank_1" ports="0">
+        <usageRate usageRate="0.5"/>
+        <clockFreq param="pcw_gpio_peripheral_freqmhz"/>
+        <ioStandard param="pcw_gpio_peripheral_freqmhz" value="1" voltage="pcw_internal_bank1_voltage" ioBank="Vcco_p1"/>
+        <isgpioport param="pcw_preset_mio_16" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_17" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_18" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_19" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_20" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_21" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_22" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_23" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_24" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_25" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_26" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_27" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_28" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_29" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_30" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_31" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_32" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_33" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_34" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_35" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_36" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_37" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_38" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_39" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_40" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_41" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_42" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_43" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_44" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_45" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_46" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_47" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_48" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_49" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_50" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_51" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_52" value="gpio" add="1"/>
+        <isgpioport param="pcw_preset_mio_53" value="gpio" add="1"/>
+      </gpio>  
+      <axi interface="M_AXI_GP0" dataWidth="32" clockFreq="pcw_m_axi_gp0_freqmhz" usageRate="0.5" param="pcw_use_m_axi_gp0"/>
+      <axi interface="M_AXI_GP1" dataWidth="32" clockFreq="pcw_m_axi_gp1_freqmhz" usageRate="0.5" param="pcw_use_m_axi_gp1"/>
+      <axi interface="S_AXI_GP0" dataWidth="32" clockFreq="pcw_s_axi_gp0_freqmhz" usageRate="0.5" param="pcw_use_s_axi_gp0"/>
+      <axi interface="S_AXI_GP1" dataWidth="32" clockFreq="pcw_s_axi_gp1_freqmhz" usageRate="0.5" param="pcw_use_s_axi_gp1"/>
+      <axi interface="S_AXI_ACP" dataWidth="32" clockFreq="pcw_s_axi_acp_freqmhz" usageRate="0.5" param="pcw_use_s_axi_acp"/>
+      <axi interface="S_AXI_HP0" dataWidth="pcw_s_axi_hp0_data_width" clockFreq="pcw_s_axi_hp0_freqmhz" usageRate="0.5" param="pcw_use_s_axi_hp0"/>
+      <axi interface="S_AXI_HP1" dataWidth="pcw_s_axi_hp1_data_width" clockFreq="pcw_s_axi_hp1_freqmhz" usageRate="0.5" param="pcw_use_s_axi_hp1"/>
+      <axi interface="S_AXI_HP2" dataWidth="pcw_s_axi_hp2_data_width" clockFreq="pcw_s_axi_hp2_freqmhz" usageRate="0.5" param="pcw_use_s_axi_hp2"/>
+      <axi interface="S_AXI_HP3" dataWidth="pcw_s_axi_hp3_data_width" clockFreq="pcw_s_axi_hp3_freqmhz" usageRate="0.5" param="pcw_use_s_axi_hp3"/>
+</powergen>

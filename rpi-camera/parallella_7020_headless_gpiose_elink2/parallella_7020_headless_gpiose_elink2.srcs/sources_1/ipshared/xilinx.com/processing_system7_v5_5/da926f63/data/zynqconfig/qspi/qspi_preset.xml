@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE parameters PUBLIC "presets" "presets.dtd" >
+<presets>
+
+  <preset param="pcw_qspi_peripheral_enable" name="0" strength="7">
+      <set param="pcw_qspi_peripheral_freqmhz" value="200"/>
+      <disable param="pcw_qspi_qspi_io"/>
+      <disable param="pcw_qspi_peripheral_freqmhz"/>
+
+      <disable param="pcw_qspi_grp_ss1_enable"/>
+      <disable param="pcw_qspi_grp_fbclk_enable"/>
+      <disable param="pcw_qspi_grp_io1_enable" />
+      <disable param="pcw_qspi_grp_single_ss_enable" />
+  </preset>
+  <preset param="pcw_qspi_peripheral_enable" name="" strength="7">
+      <set param="pcw_qspi_peripheral_freqmhz" value="200"/>
+      <disable param="pcw_qspi_qspi_io"/>
+      <disable param="pcw_qspi_peripheral_freqmhz"/>
+
+      <disable param="pcw_qspi_grp_ss1_enable"/>
+      <disable param="pcw_qspi_grp_fbclk_enable"/>
+      <disable param="pcw_qspi_grp_io1_enable" />
+      <disable param="pcw_qspi_grp_single_ss_enable" />
+  </preset>
+  <preset param="pcw_qspi_peripheral_enable" name="1" strength="3">
+      <disable param="pcw_nor_peripheral_enable"/>
+      <disable param="pcw_nor_nor_io"/>
+      <disable param="pcw_nor_grp_a25_enable"/>
+      <disable param="pcw_nor_grp_cs0_enable"/>
+      <disable param="pcw_nor_grp_cs1_enable"/>
+      <disable param="pcw_nor_grp_sram_cs0_enable"/>
+      <disable param="pcw_nor_grp_sram_cs1_enable"/>
+      <disable param="pcw_nor_grp_sram_int_enable"/>
+      <disable param="pcw_nand_peripheral_enable"/>
+      <disable param="pcw_nand_nand_io"/>
+      <disable param="pcw_nand_grp_d8_enable"/>
+    <set param="pcw_qspi_peripheral_freqmhz" value="200"/>
+    <set param="pcw_qspi_grp_fbclk_enable" value="1"/>
+    <set param="pcw_EN_QSPI" value="1" />
+    <set param="ps7_preset_qspi_dis_Holdb_dr" value="0" />
+    <set param="pcw_qspi_qspi_io" value="MIO 1 .. 6"/>
+    <set param="pcw_qspi_grp_single_ss_enable" value="1" />
+
+  </preset>
+
+
+  <preset param="pcw_qspi_grp_single_ss_enable" name="0" strength="6">
+        <disable param="pcw_qspi_grp_single_ss_io"/>
+  </preset>
+  <preset param="pcw_qspi_grp_single_ss_enable" name="" strength="6">
+        <disable param="pcw_qspi_grp_single_ss_io"/>
+    </preset>
+  <preset param="pcw_qspi_grp_single_ss_enable" name="1" strength="4">
+        <set param="pcw_qspi_grp_single_ss_io" value="MIO 1 .. 6"/>
+    <set param="ps7_preset_qspi_mutex" value="1" />
+  </preset>
+  <preset param="pcw_qspi_grp_ss1_enable" name="0" strength="6">
+      <disable param="pcw_qspi_grp_ss1_io"/>
+  </preset>
+  <preset param="pcw_qspi_grp_ss1_enable" name="" strength="6">
+      <disable param="pcw_qspi_grp_ss1_io"/>
+  </preset>
+  <preset param="pcw_qspi_grp_ss1_enable" name="1" strength="4">
+    <set param="pcw_qspi_grp_ss1_io" value="MIO 0" />
+    <set param="pcw_qspi_internal_mode" value="1" />
+    <set param="pcw_qspi_internal_highaddress" value="0xFDFFFFFF" />
+    <set param="ps7_preset_qspi_mutex" value="2" />
+  </preset>
+
+
+  <preset param="pcw_qspi_grp_io1_enable" name="0" strength="6">
+      <disable param="pcw_qspi_grp_io1_io"/>
+  </preset>
+  <preset param="pcw_qspi_grp_io1_enable" name="" strength="6">
+      <disable param="pcw_qspi_grp_io1_io"/>
+  </preset>
+  <preset param="pcw_qspi_grp_io1_enable" name="1" strength="4">
+    <set param="pcw_qspi_grp_io1_io" value="MIO 0 9 .. 13" />
+    <set param="pcw_qspi_internal_mode" value="2" />
+    <set param="ps7_preset_qspi_mutex" value="3" />
+    <set param="pcw_qspi_internal_highaddress" value="0xFDFFFFFF" />
+  </preset>
+
+
+  <preset param="pcw_qspi_grp_fbclk_enable" name="0" strength="6">
+      <disable param="pcw_qspi_grp_fbclk_io"/>
+  </preset>
+  <preset param="pcw_qspi_grp_fbclk_enable" name="" strength="6">
+      <disable param="pcw_qspi_grp_fbclk_io"/>
+  </preset>
+  <preset param="pcw_qspi_grp_fbclk_enable" name="1" strength="6">
+    <set param="pcw_qspi_grp_fbclk_io" value="MIO 8" />
+    <set param="pcw_qspi_internal_fbclk" value="1" />
+  </preset>
+
+  <preset param="pcw_qspi_qspi_io" name="MIO 1 .. 6" strength="5">
+
+  </preset>
+
+  <preset param="pcw_qspi_grp_ss1_io" name="MIO 0" strength="5">
+
+      <set param="pcw_qspi_1_ss_b_io" value="MIO 0" />
+      <set param="pcw_mio_mio[0]_signal" value="qspi1_ss_b" />
+      <set param="pcw_mio_mio[0]_peripheral" value="Quad SPI Flash" />
+      <set param="pcw_mio_mio[0]_signalgroup" value="Select Signals" />
+      <set param="pcw_preset_mio_0" value="qspi" />
+
+      <set param="pcw_qspi_0_ss_b_io" value="MIO 1" />
+      <set param="pcw_mio_mio[1]_signal" value="qspi0_ss_b" />
+      <set param="pcw_mio_mio[1]_peripheral" value="Quad SPI Flash" />
+      <set param="pcw_mio_mio[1]_signalgroup" value="Quad SPI Flash" />
+      <set param="pcw_preset_mio_1" value="qspi" />
+
+
+      <set param="pcw_qspi_io[0]_io" value="MIO 2" />
+      <set param="pcw_mio_mio[2]_signal" value="qspi0_io[0]" />
+      <set param="pcw_mio_mio[2]_peripheral" value="Quad SPI Flash" />
+      <set param="pcw_mio_mio[2]_signalgroup" value="Quad SPI Flash" />
+      <set param="pcw_preset_mio_2" value="qspi" />
+
+      <set param="pcw_qspi_io[1]_io" value="MIO 3" />
+      <set param="pcw_mio_mio[3]_signal" value="qspi0_io[1]" />
+      <set param="pcw_mio_mio[3]_peripheral" value="Quad SPI Flash" />
+      <set param="pcw_mio_mio[3]_signalgroup" value="Quad SPI Flash" />
+      <set param="pcw_preset_mio_3" value="qspi" />
+
+      <set param="pcw_qspi_io[2]_io" value="MIO 4" />
+      <set param="pcw_mio_mio[4]_signal" value="qspi0_io[2]" />
+      <set param="pcw_mio_mio[4]_peripheral" value="Quad SPI Flash" />
+      <set param="pcw_mio_mio[4]_signalgroup" value="Quad SPI Flash" />
+      <set param="pcw_preset_mio_4" value="qspi" />
+
+      <set param="pcw_qspi_io[3]_io" value="MIO 5" />
+      <set param="pcw_mio_mio[5]_signal" value="qspi0_io[3]" />
+      <set param="pcw_mio_mio[5]_peripheral" value="Quad SPI Flash" />
+      <set param="pcw_mio_mio[5]_signalgroup" value="Quad SPI Flash" />
+      <set param="pcw_preset_mio_5" value="qspi" />
+
+      <set param="pcw_qspi_0_sclk_io" value="MIO 6" />
+      <set param="pcw_mio_mio[6]_signal" value="qspi0_sclk" />
+      <set param="pcw_mio_mio[6]_peripheral" value="Quad SPI Flash" />
+      <set param="pcw_mio_mio[6]_signalgroup" value="Quad SPI Flash" />
+      <set param="pcw_preset_mio_6" value="qspi" />
+
+  </preset>
+
+
+
+  <preset param="pcw_qspi_grp_clk1_io" name="MIO 9" strength="5">
+
+      <set param="pcw_qspi_1_sclk_io" value="MIO 9" />
+      <set param="pcw_mio_mio[9]_signal" value="qspi1_sclk" />
+      <set param="pcw_mio_mio[9]_peripheral" value="Quad SPI Flash" />
+      <set param="pcw_mio_mio[9]_signalgroup" value="Quad SPI Flash" />
+      <set param="pcw_preset_mio_9" value="qspi" />
+
+  </preset>
+
+
+
+
+  <preset param="pcw_qspi_grp_io1_io" name="MIO 0 9 .. 13" strength="5">
+
+      <set param="pcw_qspi_1_ss_b_io" value="MIO 0" />
+      <set param="pcw_mio_mio[0]_signal" value="qspi1_ss_b" />
+      <set param="pcw_mio_mio[0]_peripheral" value="Quad SPI Flash" />
+      <set param="pcw_mio_mio[0]_signalgroup" value="Select Signals" />
+      <set param="pcw_preset_mio_0" value="qspi" />
+
+      <set param="pcw_qspi_0_ss_b_io" value="MIO 1" />
+      <set param="pcw_mio_mio[1]_signal" value="qspi0_ss_b" />
+      <set param="pcw_mio_mio[1]_peripheral" value="Quad SPI Flash" />
+      <set param="pcw_mio_mio[1]_signalgroup" value="Quad SPI Flash" />
+      <set param="pcw_preset_mio_1" value="qspi" />
+
+
+      <set param="pcw_qspi_io[0]_io" value="MIO 2" />
+      <set param="pcw_mio_mio[2]_signal" value="qspi0_io[0]" />
+      <set param="pcw_mio_mio[2]_peripheral" value="Quad SPI Flash" />
+      <set param="pcw_mio_mio[2]_signalgroup" value="Quad SPI Flash" />
+      <set param="pcw_preset_mio_2" value="qspi" />
+
+      <set param="pcw_qspi_io[1]_io" value="MIO 3" />
+      <set param="pcw_mio_mio[3]_signal" value="qspi0_io[1]" />
+      <set param="pcw_mio_mio[3]_peripheral" value="Quad SPI Flash" />
+      <set param="pcw_mio_mio[3]_signalgroup" value="Quad SPI Flash" />
+      <set param="pcw_preset_mio_3" value="qspi" />
+
+      <set param="pcw_qspi_io[2]_io" value="MIO 4" />
+      <set param="pcw_mio_mio[4]_signal" value="qspi0_io[2]" />
+      <set param="pcw_mio_mio[4]_peripheral" value="Quad SPI Flash" />
+      <set param="pcw_mio_mio[4]_signalgroup" value="Quad SPI Flash" />
+      <set param="pcw_preset_mio_4" value="qspi" />
+
+      <set param="pcw_qspi_io[3]_io" value="MIO 5" />
+      <set param="pcw_mio_mio[5]_signal" value="qspi0_io[3]" />
+      <set param="pcw_mio_mio[5]_peripheral" value="Quad SPI Flash" />
+      <set param="pcw_mio_mio[5]_signalgroup" value="Quad SPI Flash" />
+      <set param="pcw_preset_mio_5" value="qspi" />
+
+      <set param="pcw_qspi_0_sclk_io" value="MIO 6" />
+      <set param="pcw_mio_mio[6]_signal" value="qspi0_sclk" />
+      <set param="pcw_mio_mio[6]_peripheral" value="Quad SPI Flash" />
+      <set param="pcw_mio_mio[6]_signalgroup" value="Quad SPI Flash" />
+      <set param="pcw_preset_mio_6" value="qspi" />
+
+      <set param="pcw_qspi_1_sclk_io" value="MIO 9" />
+      <set param="pcw_mio_mio[9]_signal" value="qspi1_sclk" />
+      <set param="pcw_mio_mio[9]_peripheral" value="Quad SPI Flash" />
+      <set param="pcw_mio_mio[9]_signalgroup" value="Quad SPI Flash" />
+      <set param="pcw_preset_mio_9" value="qspi" />
+
+      <set param="pcw_qspi_io[4]_io" value="MIO 10" />
+      <set param="pcw_mio_mio[10]_signal" value="qspi1_io[0]" />
+      <set param="pcw_mio_mio[10]_peripheral" value="Quad SPI Flash" />
+      <set param="pcw_mio_mio[10]_signalgroup" value="Dual Mode" />
+      <set param="pcw_preset_mio_10" value="qspi" />
+
+      <set param="pcw_qspi_io[5]_io" value="MIO 11" />
+      <set param="pcw_mio_mio[11]_signal" value="qspi1_io[1]" />
+      <set param="pcw_mio_mio[11]_peripheral" value="Quad SPI Flash" />
+      <set param="pcw_mio_mio[11]_signalgroup" value="Dual Mode" />
+      <set param="pcw_preset_mio_11" value="qspi" />
+
+      <set param="pcw_qspi_io[6]_io" value="MIO 12" />
+      <set param="pcw_mio_mio[12]_signal" value="qspi1_io[2]" />
+      <set param="pcw_mio_mio[12]_peripheral" value="Quad SPI Flash" />
+      <set param="pcw_mio_mio[12]_signalgroup" value="Dual Mode" />
+      <set param="pcw_preset_mio_12" value="qspi" />
+
+      <set param="pcw_qspi_io[7]_io" value="MIO 13" />
+      <set param="pcw_mio_mio[13]_signal" value="qspi1_io[3]" />
+      <set param="pcw_mio_mio[13]_peripheral" value="Quad SPI Flash" />
+      <set param="pcw_mio_mio[13]_signalgroup" value="Dual Mode" />
+      <set param="pcw_preset_mio_13" value="qspi" />
+
+  </preset>
+
+
+  <preset param="pcw_qspi_grp_fbclk_io" name="MIO 8" strength="5">
+      <set param="pcw_qspi_fbclk_io" value="MIO 8" />
+      <set param="pcw_mio_mio[8]_signal" value="qspi_fbclk" />
+      <set param="pcw_mio_mio[8]_peripheral" value="Quad SPI Flash" />
+      <set param="pcw_mio_mio[8]_signalgroup" value="Quad SPI Flash" />
+      <set param="pcw_preset_mio_8" value="qspi" />
+  </preset>
+
+   <preset param="pcw_qspi_grp_single_ss_io" name="MIO 1 .. 6" strength="5">
+       <set param="pcw_qspi_0_ss_b_io" value="MIO 1" />
+       <set param="pcw_mio_mio[1]_signal" value="qspi0_ss_b" />
+       <set param="pcw_mio_mio[1]_peripheral" value="Quad SPI Flash" />
+       <set param="pcw_mio_mio[1]_signalgroup" value="Quad SPI Flash" />
+       <set param="pcw_preset_mio_1" value="qspi" />
+
+
+       <set param="pcw_qspi_io[0]_io" value="MIO 2" />
+       <set param="pcw_mio_mio[2]_signal" value="qspi0_io[0]" />
+       <set param="pcw_mio_mio[2]_peripheral" value="Quad SPI Flash" />
+       <set param="pcw_mio_mio[2]_signalgroup" value="Quad SPI Flash" />
+       <set param="pcw_preset_mio_2" value="qspi" />
+
+       <set param="pcw_qspi_io[1]_io" value="MIO 3" />
+       <set param="pcw_mio_mio[3]_signal" value="qspi0_io[1]" />
+       <set param="pcw_mio_mio[3]_peripheral" value="Quad SPI Flash" />
+       <set param="pcw_mio_mio[3]_signalgroup" value="Quad SPI Flash" />
+       <set param="pcw_preset_mio_3" value="qspi" />
+
+       <set param="pcw_qspi_io[2]_io" value="MIO 4" />
+       <set param="pcw_mio_mio[4]_signal" value="qspi0_io[2]" />
+       <set param="pcw_mio_mio[4]_peripheral" value="Quad SPI Flash" />
+       <set param="pcw_mio_mio[4]_signalgroup" value="Quad SPI Flash" />
+       <set param="pcw_preset_mio_4" value="qspi" />
+
+       <set param="pcw_qspi_io[3]_io" value="MIO 5" />
+       <set param="pcw_mio_mio[5]_signal" value="qspi0_io[3]" />
+       <set param="pcw_mio_mio[5]_peripheral" value="Quad SPI Flash" />
+       <set param="pcw_mio_mio[5]_signalgroup" value="Quad SPI Flash" />
+       <set param="pcw_preset_mio_5" value="qspi" />
+
+       <set param="pcw_qspi_0_sclk_io" value="MIO 6" />
+       <set param="pcw_mio_mio[6]_signal" value="qspi0_sclk" />
+       <set param="pcw_mio_mio[6]_peripheral" value="Quad SPI Flash" />
+       <set param="pcw_mio_mio[6]_signalgroup" value="Quad SPI Flash" />
+       <set param="pcw_preset_mio_6" value="qspi" />
+   </preset>
+
+
+</presets>
+

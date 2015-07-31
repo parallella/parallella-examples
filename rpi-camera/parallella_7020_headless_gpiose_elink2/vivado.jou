@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 16:47:07 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Tue Jun 30 22:14:28 2015
+# Process ID: 4998
+# Log file: /tmp/v/parviv/vivado.log
+# Journal file: /tmp/v/parviv/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /tmp/v/parviv/parallella_7020_headless_gpiose_elink2.xpr
+update_compile_order -fileset sources_1
+archive_project /tmp/v/parallella_rpicam.xpr.zip -force -exclude_run_results

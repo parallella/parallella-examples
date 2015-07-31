@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE clkgen PUBLIC "clkgen" "clkgen.dtd" >
+<clkgen>
+<peripheral name="ENET0" enable="PCW_ENET0_PERIPHERAL_ENABLE">
+<ui_srcsel  param="PCW_ENET0_PERIPHERAL_CLKSRC" />
+<int_srcsel  param="PCW_ENET0_INTERNAL_CLKSRC" />
+<ui_div0  param="PCW_ENET0_PERIPHERAL_DIVISOR0" />
+<ui_div1  param="PCW_ENET0_PERIPHERAL_DIVISOR1" />
+<sw_div0  param="PS7_SLCR_GEM0_CLK_CTRL_DIVISOR" />
+<sw_div1  param="PS7_SLCR_GEM0_CLK_CTRL_DIVISOR1" />
+<sw_srcsel  param="PS7_SLCR_GEM0_CLK_CTRL_SRCSEL" />
+<out_freq  param="PCW_ENET0_INTERNAL_FREQMHZ"/>
+<act_freq  param="PCW_ACT_ENET0_PERIPHERAL_FREQMHZ"/>
+<sw_static_param  param="PS7_SLCR_GEM0_CLK_CTRL_CLKACT" value="1" />
+</peripheral>
+
+<peripheral name="ENET1" enable="PCW_ENET1_PERIPHERAL_ENABLE">
+<ui_srcsel  param="PCW_ENET1_PERIPHERAL_CLKSRC" />
+<int_srcsel  param="PCW_ENET1_INTERNAL_CLKSRC" />
+<ui_div0  param="PCW_ENET1_PERIPHERAL_DIVISOR0" />
+<ui_div1  param="PCW_ENET1_PERIPHERAL_DIVISOR1" />
+<sw_div0  param="PS7_SLCR_GEM1_CLK_CTRL_DIVISOR" />
+<sw_div1  param="PS7_SLCR_GEM1_CLK_CTRL_DIVISOR1" />
+<sw_srcsel  param="PS7_SLCR_GEM1_CLK_CTRL_SRCSEL" />
+<out_freq  param="PCW_ENET1_INTERNAL_FREQMHZ"/>
+<act_freq  param="PCW_ACT_ENET1_PERIPHERAL_FREQMHZ"/>
+<sw_static_param  param="PS7_SLCR_GEM1_CLK_CTRL_CLKACT" value="1" />
+</peripheral>
+
+<peripheral name="CPU" >
+<ui_srcsel  param="PCW_CPU_PERIPHERAL_CLKSRC" />
+<int_srcsel  param="PCW_CPU_INTERNAL_CLKSRC" />
+<ui_div0  param="PCW_CPU_PERIPHERAL_DIVISOR0" />
+<sw_div0  param="PS7_SLCR_ARM_CLK_CTRL_DIVISOR" />
+<sw_srcsel  param="PS7_SLCR_ARM_CLK_CTRL_SRCSEL" />
+<out_freq  param="PCW_APU_PERIPHERAL_FREQMHZ"/>
+<act_freq  param="PCW_ACT_APU_PERIPHERAL_FREQMHZ"/>
+<sw_static_param  param="PS7_SLCR_ARM_CLK_CTRL_CPU_PERI_CLKACT" value="1" />
+<sw_static_param  param="PS7_SLCR_ARM_CLK_CTRL_CPU_1XCLKACT" value="1" />
+<sw_static_param  param="PS7_SLCR_ARM_CLK_CTRL_CPU_2XCLKACT" value="1" />
+<sw_static_param  param="PS7_SLCR_ARM_CLK_CTRL_CPU_3OR2XCLKACT" value="1" />
+<sw_static_param  param="PS7_SLCR_ARM_CLK_CTRL_CPU_6OR4XCLKACT" value="1" />
+</peripheral>
+<peripheral name="DDR" >
+<ui_srcsel  param="PCW_DDR_PERIPHERAL_CLKSRC"/>
+<int_srcsel  param="PCW_DDR_INTERNAL_CLKSRC" />
+<ui_div0  param="PCW_DDR_PERIPHERAL_DIVISOR0" />
+<sw_div0  param="PS7_SLCR_DDR_CLK_CTRL_DDR_3XCLK_DIVISOR" />
+<out_freq  param="PCW_UIPARAM_DDR_FREQ_MHZ"/>
+<act_freq  param="PCW_UIPARAM_ACT_DDR_FREQ_MHZ"/>
+<sw_static_param  param="PS7_SLCR_DDR_CLK_CTRL_DDR_1XCLKACT" value="1" />
+<sw_static_param  param="PS7_SLCR_DDR_CLK_CTRL_DDR_2XCLKACT" value="1" />
+</peripheral>
+<peripheral name="DCI" >
+<ui_div0  param="PCW_DCI_PERIPHERAL_DIVISOR0" />
+<ui_div1  param="PCW_DCI_PERIPHERAL_DIVISOR1" />
+<ui_srcsel  param="PCW_DCI_PERIPHERAL_CLKSRC"/>
+<int_srcsel  param="PCW_DCI_INTERNAL_CLKSRC" />
+<sw_div0  param="PS7_SLCR_DCI_CLK_CTRL_DIVISOR0" />
+<sw_div1  param="PS7_SLCR_DCI_CLK_CTRL_DIVISOR1" />
+<out_freq  param="PCW_DCI_PERIPHERAL_FREQMHZ"/>
+<act_freq  param="PCW_ACT_DCI_PERIPHERAL_FREQMHZ"/>
+<sw_static_param  param="PS7_SLCR_DCI_CLK_CTRLCLKACT" value="1" />
+</peripheral>
+<peripheral name="SMC" enable="PCW_SMC_PERIPHERAL_VALID">
+<ui_srcsel  param="PCW_SMC_PERIPHERAL_CLKSRC" />
+<int_srcsel  param="PCW_SMC_INTERNAL_CLKSRC" />
+<ui_div0  param="PCW_SMC_PERIPHERAL_DIVISOR0" />
+<sw_div0  param="PS7_SLCR_SMC_CLK_CTRL_DIVISOR" />
+<sw_srcsel  param="PS7_SLCR_SMC_CLK_CTRL_SRCSEL" />
+<out_freq  param="PCW_SMC_PERIPHERAL_FREQMHZ"/>
+<act_freq  param="PCW_ACT_SMC_PERIPHERAL_FREQMHZ"/>
+<sw_static_param  param="PS7_SLCR_SMC_CLK_CTRL_CLKACT" value="1" />
+</peripheral>
+<peripheral name="QSPI" enable="PCW_QSPI_PERIPHERAL_ENABLE">
+<ui_srcsel  param="PCW_QSPI_PERIPHERAL_CLKSRC" />
+<int_srcsel  param="PCW_QSPI_INTERNAL_CLKSRC" />
+<ui_div0  param="PCW_QSPI_PERIPHERAL_DIVISOR0" />
+<sw_div0  param="PS7_SLCR_LQSPI_CLK_CTRL_DIVISOR" />
+<sw_srcsel  param="PS7_SLCR_LQSPI_CLK_CTRL_SRCSEL" />
+<out_freq  param="PCW_QSPI_PERIPHERAL_FREQMHZ"/>
+<act_freq  param="PCW_ACT_QSPI_PERIPHERAL_FREQMHZ"/>
+<sw_static_param  param="PS7_SLCR_LQSPI_CLK_CTRL_CLKACT" value="1" />
+</peripheral>
+
+<peripheral name="SDIO" enable="PCW_SDIO_PERIPHERAL_VALID">
+<ui_srcsel  param="PCW_SDIO_PERIPHERAL_CLKSRC" />
+<int_srcsel  param="PCW_SDIO_INTERNAL_CLKSRC" />
+<ui_div0  param="PCW_SDIO_PERIPHERAL_DIVISOR0" />
+<sw_div0  param="PS7_SLCR_SDIO_CLK_CTRL_DIVISOR" />
+<sw_srcsel  param="PS7_SLCR_SDIO_CLK_CTRL_SRCSEL" />
+<out_freq  param="PCW_SDIO_PERIPHERAL_FREQMHZ"/>
+<act_freq  param="PCW_ACT_SDIO_PERIPHERAL_FREQMHZ"/>
+<sw_static_param  param="PS7_SLCR_SDIO_CLK_CTRL_CLKACT0" value="%PCW_SD0_PERIPHERAL_ENABLE" />
+<sw_static_param  param="PS7_SLCR_SDIO_CLK_CTRL_CLKACT1" value="%PCW_SD1_PERIPHERAL_ENABLE" />
+</peripheral>
+<peripheral name="UART" enable="PCW_UART_PERIPHERAL_VALID">
+<ui_srcsel  param="PCW_UART_PERIPHERAL_CLKSRC" />
+<int_srcsel  param="PCW_UART_INTERNAL_CLKSRC" />
+<ui_div0  param="PCW_UART_PERIPHERAL_DIVISOR0" />
+<sw_div0  param="PS7_SLCR_UART_CLK_CTRL_DIVISOR" />
+<sw_srcsel  param="PS7_SLCR_UART_CLK_CTRL_SRCSEL" />
+<out_freq  param="PCW_UART_PERIPHERAL_FREQMHZ"/>
+<act_freq  param="PCW_ACT_UART_PERIPHERAL_FREQMHZ"/>
+<sw_static_param  param="PS7_SLCR_UART_CLK_CTRL_CLKACT0" value="%PCW_UART0_PERIPHERAL_ENABLE" />
+<sw_static_param  param="PS7_SLCR_UART_CLK_CTRL_CLKACT1" value="%PCW_UART1_PERIPHERAL_ENABLE" />
+</peripheral>
+<peripheral name="SPI" enable="PCW_SPI_PERIPHERAL_VALID">
+<ui_srcsel  param="PCW_SPI_PERIPHERAL_CLKSRC" />
+<int_srcsel  param="PCW_SPI_INTERNAL_CLKSRC" />
+<ui_div0  param="PCW_SPI_PERIPHERAL_DIVISOR0" />
+<sw_div0  param="PS7_SLCR_SPI_CLK_CTRL_DIVISOR" />
+<sw_srcsel  param="PS7_SLCR_SPI_CLK_CTRL_SRCSEL" />
+<out_freq  param="PCW_SPI_PERIPHERAL_FREQMHZ"/>
+<act_freq  param="PCW_ACT_SPI_PERIPHERAL_FREQMHZ"/>
+<sw_static_param  param="PS7_SLCR_SPI_CLK_CTRL_CLKACT0" value="%PCW_SPI0_PERIPHERAL_ENABLE" />
+<sw_static_param  param="PS7_SLCR_SPI_CLK_CTRL_CLKACT1" value="%PCW_SPI1_PERIPHERAL_ENABLE" />
+</peripheral>
+<peripheral name="APER_CLK_CTRL">
+<sw_static_param  param="ps7_slcr_APER_CLK_CTRL_CAN0_CPU_1XCLKACT" value="%PCW_CAN0_PERIPHERAL_ENABLE" />
+<sw_static_param  param="ps7_slcr_APER_CLK_CTRL_CAN1_CPU_1XCLKACT" value="%PCW_CAN1_PERIPHERAL_ENABLE" />
+<sw_static_param  param="ps7_slcr_APER_CLK_CTRL_GEM0_CPU_1XCLKACT" value="%PCW_ENET0_PERIPHERAL_ENABLE" />
+<sw_static_param  param="ps7_slcr_APER_CLK_CTRL_GEM1_CPU_1XCLKACT" value="%PCW_ENET1_PERIPHERAL_ENABLE" />
+<sw_static_param  param="ps7_slcr_APER_CLK_CTRL_SMC_CPU_1XCLKACT" value="1"/>
+<sw_static_param  param="ps7_slcr_APER_CLK_CTRL_LQSPI_CPU_1XCLKACT" value="%PCW_QSPI_PERIPHERAL_ENABLE" />
+<sw_static_param  param="ps7_slcr_APER_CLK_CTRL_SDI0_CPU_1XCLKACT" value="%PCW_SD0_PERIPHERAL_ENABLE"/> 
+<sw_static_param  param="ps7_slcr_APER_CLK_CTRL_SDI1_CPU_1XCLKACT" value="%PCW_SD1_PERIPHERAL_ENABLE"/> 
+<sw_static_param  param="ps7_slcr_APER_CLK_CTRL_UART0_CPU_1XCLKACT" value="%PCW_UART0_PERIPHERAL_ENABLE"/> 
+<sw_static_param  param="ps7_slcr_APER_CLK_CTRL_UART1_CPU_1XCLKACT" value="%PCW_UART1_PERIPHERAL_ENABLE"/> 
+<sw_static_param  param="ps7_slcr_APER_CLK_CTRL_SPI0_CPU_1XCLKACT" value="%PCW_SPI0_PERIPHERAL_ENABLE" />
+<sw_static_param  param="ps7_slcr_APER_CLK_CTRL_SPI1_CPU_1XCLKACT" value="%PCW_SPI1_PERIPHERAL_ENABLE" />
+<sw_static_param  param="ps7_slcr_APER_CLK_CTRL_USB0_CPU_1XCLKACT" value="1"/> 
+<sw_static_param  param="ps7_slcr_APER_CLK_CTRL_USB1_CPU_1XCLKACT" value="1"/> 
+<sw_static_param  param="ps7_slcr_APER_CLK_CTRL_TPIU_CPU_1XCLKACT" value="%PCW_TRACE_PERIPHERAL_ENABLE" />
+<sw_static_param  param="ps7_slcr_APER_CLK_CTRL_I2C0_CPU_1XCLKACT" value="1" />
+<sw_static_param  param="ps7_slcr_APER_CLK_CTRL_I2C1_CPU_1XCLKACT" value="1" />
+<sw_static_param  param="ps7_slcr_APER_CLK_CTRL_GPIO_CPU_1XCLKACT" value="1" />
+<sw_static_param  param="ps7_slcr_APER_CLK_CTRL_DMA_CPU_2XCLKACT" value="1" />
+
+</peripheral>
+
+<peripheral name="CAN" enable="PCW_CAN_PERIPHERAL_VALID">
+<ui_srcsel  param="PCW_CAN_PERIPHERAL_CLKSRC" />
+<int_srcsel  param="PCW_CAN_INTERNAL_CLKSRC" />
+<ui_div0  param="PCW_CAN_PERIPHERAL_DIVISOR0" />
+<sw_div0  param="PS7_SLCR_CAN_CLK_CTRL_DIVISOR0" />
+<ui_div1  param="PCW_CAN_PERIPHERAL_DIVISOR1" />
+<sw_div1  param="PS7_SLCR_CAN_CLK_CTRL_DIVISOR1" />
+<sw_srcsel  param="PS7_SLCR_CAN_CLK_CTRL_SRCSEL" />
+<out_freq  param="PCW_CAN_PERIPHERAL_FREQMHZ"/>
+<act_freq  param="PCW_ACT_CAN_PERIPHERAL_FREQMHZ"/>
+<sw_static_param  param="PS7_SLCR_CAN_CLK_CTRL_CLKACT0" value="%PCW_CAN0_PERIPHERAL_ENABLE" />
+<sw_static_param  param="PS7_SLCR_CAN_CLK_CTRL_CLKACT1" value="%PCW_CAN1_PERIPHERAL_ENABLE" />
+</peripheral>
+<peripheral name="USB" enable="PCW_USB_PERIPHERAL_VALID">
+</peripheral>
+<peripheral name="PCAP" >
+<ui_srcsel  param="PCW_PCAP_PERIPHERAL_CLKSRC" />
+<int_srcsel  param="PCW_PCAP_INTERNAL_CLKSRC" />
+<ui_div0  param="PCW_PCAP_PERIPHERAL_DIVISOR0" />
+<sw_div0  param="PS7_SLCR_PCAP_CLK_CTRL_DIVISOR" />
+<sw_srcsel  param="PS7_SLCR_PCAP_CLK_CTRL_SRCSEL" />
+<out_freq  param="PCW_PCAP_PERIPHERAL_FREQMHZ"/>
+<act_freq  param="PCW_ACT_PCAP_PERIPHERAL_FREQMHZ"/>
+<sw_static_param  param="PS7_SLCR_PCAP_CLK_CTRL_CLKACT" value="1" />
+</peripheral>
+<peripheral name="FPGA0" >
+<ui_srcsel  param="PCW_FCLK0_PERIPHERAL_CLKSRC" />
+<int_srcsel  param="PCW_FCLK0_INTERNAL_CLKSRC" />
+<ui_div0  param="PCW_FCLK0_PERIPHERAL_DIVISOR0" />
+<ui_div1  param="PCW_FCLK0_PERIPHERAL_DIVISOR1" />
+<sw_div0  param="PS7_SLCR_FPGA0_CLK_CTRL_DIVISOR0" />
+<sw_div1  param="PS7_SLCR_FPGA0_CLK_CTRL_DIVISOR1" />
+<sw_srcsel  param="PS7_SLCR_FPGA0_CLK_CTRL_SRCSEL" />
+<out_freq  param="PCW_FPGA0_PERIPHERAL_FREQMHZ"/>
+<act_freq  param="PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ"/>
+</peripheral>
+<peripheral name="FPGA1" >
+<ui_srcsel  param="PCW_FCLK1_PERIPHERAL_CLKSRC" />
+<int_srcsel  param="PCW_FCLK1_INTERNAL_CLKSRC" />
+<ui_div0  param="PCW_FCLK1_PERIPHERAL_DIVISOR0" />
+<ui_div1  param="PCW_FCLK1_PERIPHERAL_DIVISOR1" />
+<sw_div0  param="PS7_SLCR_FPGA1_CLK_CTRL_DIVISOR0" />
+<sw_div1  param="PS7_SLCR_FPGA1_CLK_CTRL_DIVISOR1" />
+<sw_srcsel  param="PS7_SLCR_FPGA1_CLK_CTRL_SRCSEL" />
+<out_freq  param="PCW_FPGA1_PERIPHERAL_FREQMHZ"/>
+<act_freq  param="PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ"/>
+</peripheral>
+<peripheral name="FPGA2" >
+<ui_srcsel  param="PCW_FCLK2_PERIPHERAL_CLKSRC" />
+<int_srcsel  param="PCW_FCLK2_INTERNAL_CLKSRC" />
+<ui_div0  param="PCW_FCLK2_PERIPHERAL_DIVISOR0" />
+<ui_div1  param="PCW_FCLK2_PERIPHERAL_DIVISOR1" />
+<sw_div0  param="PS7_SLCR_FPGA2_CLK_CTRL_DIVISOR0" />
+<sw_div1  param="PS7_SLCR_FPGA2_CLK_CTRL_DIVISOR1" />
+<sw_srcsel  param="PS7_SLCR_FPGA2_CLK_CTRL_SRCSEL" />
+<out_freq  param="PCW_FPGA2_PERIPHERAL_FREQMHZ"/>
+<act_freq  param="PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ"/>
+</peripheral>
+<peripheral name="FPGA3" >
+<ui_srcsel  param="PCW_FCLK3_PERIPHERAL_CLKSRC" />
+<int_srcsel  param="PCW_FCLK3_INTERNAL_CLKSRC" />
+<ui_div0  param="PCW_FCLK3_PERIPHERAL_DIVISOR0" />
+<ui_div1  param="PCW_FCLK3_PERIPHERAL_DIVISOR1" />
+<sw_div0  param="PS7_SLCR_FPGA3_CLK_CTRL_DIVISOR0" />
+<sw_div1  param="PS7_SLCR_FPGA3_CLK_CTRL_DIVISOR1" />
+<sw_srcsel  param="PS7_SLCR_FPGA3_CLK_CTRL_SRCSEL" />
+<out_freq  param="PCW_FPGA3_PERIPHERAL_FREQMHZ"/>
+<act_freq  param="PCW_ACT_FPGA3_PERIPHERAL_FREQMHZ"/>
+</peripheral>
+<peripheral name="TPIU" enable="PCW_TRACE_PERIPHERAL_ENABLE">
+<ui_srcsel  param="PCW_TPIU_PERIPHERAL_CLKSRC" />
+<int_srcsel  param="PCW_TPIU_INTERNAL_CLKSRC" />
+<ui_div0  param="PCW_TPIU_PERIPHERAL_DIVISOR0" />
+<sw_div0  param="PS7_SLCR_DBG_CLK_CTRL_DIVISOR" />
+<sw_srcsel  param="PS7_SLCR_DBG_CLK_CTRL_SRCSEL" />
+<out_freq  param="PCW_TPIU_PERIPHERAL_FREQMHZ"/>
+<act_freq  param="PCW_ACT_TPIU_PERIPHERAL_FREQMHZ"/>
+<sw_static_param  param="PS7_SLCR_DBG_CLK_CTRL_CPU_1XCLKACT" value="1" />
+<sw_static_param  param="PS7_SLCR_DBG_CLK_CTRL_CLKACT_TRC" value="1" />
+</peripheral>
+
+<peripheral name="TTC0_CLK0" enable="PCW_TTC0_PERIPHERAL_ENABLE">
+<ui_srcsel  param="PCW_TTC0_CLK0_PERIPHERAL_CLKSRC" />
+<int_srcsel  param="PCW_TTC0_CLK0_INTERNAL_CLKSRC" />
+<out_freq  param="PCW_TTC0_CLK0_PERIPHERAL_FREQMHZ"/>
+<act_freq  param="PCW_ACT_TTC0_CLK0_PERIPHERAL_FREQMHZ"/>
+</peripheral>
+<peripheral name="TTC0_CLK1" enable="PCW_TTC0_PERIPHERAL_ENABLE">
+<ui_srcsel  param="PCW_TTC0_CLK1_PERIPHERAL_CLKSRC" />
+<int_srcsel  param="PCW_TTC0_CLK1_INTERNAL_CLKSRC" />
+<out_freq  param="PCW_TTC0_CLK1_PERIPHERAL_FREQMHZ"/>
+<act_freq  param="PCW_ACT_TTC0_CLK1_PERIPHERAL_FREQMHZ"/>
+</peripheral>
+<peripheral name="TTC0_CLK2" enable="PCW_TTC0_PERIPHERAL_ENABLE">
+<ui_srcsel  param="PCW_TTC0_CLK2_PERIPHERAL_CLKSRC" />
+<int_srcsel  param="PCW_TTC0_CLK2_INTERNAL_CLKSRC" />
+<out_freq  param="PCW_TTC0_CLK2_PERIPHERAL_FREQMHZ"/>
+<act_freq  param="PCW_ACT_TTC0_CLK2_PERIPHERAL_FREQMHZ"/>
+</peripheral>
+<peripheral name="TTC1_CLK0" enable="PCW_TTC1_PERIPHERAL_ENABLE">
+<ui_srcsel  param="PCW_TTC1_CLK0_PERIPHERAL_CLKSRC" />
+<int_srcsel  param="PCW_TTC1_CLK0_INTERNAL_CLKSRC" />
+<out_freq  param="PCW_TTC1_CLK0_PERIPHERAL_FREQMHZ"/>
+<act_freq  param="PCW_ACT_TTC1_CLK0_PERIPHERAL_FREQMHZ"/>
+</peripheral>
+<peripheral name="TTC1_CLK1" enable="PCW_TTC1_PERIPHERAL_ENABLE">
+<ui_srcsel  param="PCW_TTC1_CLK1_PERIPHERAL_CLKSRC" />
+<int_srcsel  param="PCW_TTC1_CLK1_INTERNAL_CLKSRC" />
+<out_freq  param="PCW_TTC1_CLK1_PERIPHERAL_FREQMHZ"/>
+<act_freq  param="PCW_ACT_TTC1_CLK1_PERIPHERAL_FREQMHZ"/>
+</peripheral>
+<peripheral name="TTC1_CLK2" enable="PCW_TTC1_PERIPHERAL_ENABLE">
+<ui_srcsel  param="PCW_TTC1_CLK2_PERIPHERAL_CLKSRC" />
+<int_srcsel  param="PCW_TTC1_CLK2_INTERNAL_CLKSRC" />
+<out_freq  param="PCW_TTC1_CLK2_PERIPHERAL_FREQMHZ"/>
+<act_freq  param="PCW_ACT_TTC1_CLK2_PERIPHERAL_FREQMHZ"/>
+</peripheral>
+<peripheral name="WDT" enable="PCW_WDT_PERIPHERAL_ENABLE">
+<ui_srcsel  param="PCW_WDT_PERIPHERAL_CLKSRC" />
+<int_srcsel  param="PCW_WDT_INTERNAL_CLKSRC" />
+<out_freq  param="PCW_WDT_PERIPHERAL_FREQMHZ"/>
+<act_freq  param="PCW_ACT_WDT_PERIPHERAL_FREQMHZ"/>
+</peripheral>
+
+
+
+<clksrc name="DDR PLL" >
+<ui_fbdiv param="PCW_DDRPLL_CTRL_FBDIV" />
+<ui_freq param="PCW_DDR_DDR_PLL_FREQMHZ" />
+<sw_fbdiv param="PS7_SLCR_DDR_PLL_CTRL_PLL_FDIV" />
+<sw_clkcp param="PS7_SLCR_DDR_PLL_CFG_PLL_CP" />
+<sw_clkres param="PS7_SLCR_DDR_PLL_CFG_PLL_RES" />
+<sw_lockcnt param="PS7_SLCR_DDR_PLL_CFG_LOCK_CNT" />
+<sw_static_param param="PS7_SLCR_DDR_PLL_CTRL_PLL_BYPASS_FORCE" value="0"/>
+<sw_static_param param="ps7_slcr_DDR_PLL_CTRL_PLL_BYPASS_QUAL" value="1"/>
+<sw_static_param param="ps7_slcr_DDR_PLL_CTRL_PLL_PWRDWN" value="0"/>
+<sw_static_param param="ps7_slcr_DDR_PLL_CTRL_PLL_reset" value="0"/>
+</clksrc>
+
+<clksrc name="IO PLL" >
+<ui_fbdiv param="PCW_IOPLL_CTRL_FBDIV" />
+<ui_freq param="PCW_IO_IO_PLL_FREQMHZ" />
+<sw_fbdiv param="PS7_SLCR_IO_PLL_CTRL_PLL_FDIV" />
+<sw_clkcp param="PS7_SLCR_IO_PLL_CFG_PLL_CP" />
+<sw_clkres param="PS7_SLCR_IO_PLL_CFG_PLL_RES" />
+<sw_lockcnt param="PS7_SLCR_IO_PLL_CFG_LOCK_CNT" />
+<sw_static_param param="PS7_SLCR_IO_PLL_CTRL_PLL_BYPASS_FORCE" value="0"/>
+<sw_static_param param="ps7_slcr_IO_PLL_CTRL_PLL_BYPASS_QUAL" value="1"/>
+<sw_static_param param="ps7_slcr_IO_PLL_CTRL_PLL_PWRDWN" value="0"/>
+<sw_static_param param="ps7_slcr_IO_PLL_CTRL_PLL_reset" value="0"/>
+</clksrc>
+
+<clksrc name="ARM PLL" >
+<ui_fbdiv param="PCW_ARMPLL_CTRL_FBDIV" />
+<ui_freq param="PCW_CPU_CPU_PLL_FREQMHZ" />
+<sw_fbdiv param="PS7_SLCR_ARM_PLL_CTRL_PLL_FDIV" />
+<sw_clkcp param="PS7_SLCR_ARM_PLL_CFG_PLL_CP" />
+<sw_clkres param="PS7_SLCR_ARM_PLL_CFG_PLL_RES" />
+<sw_lockcnt param="PS7_SLCR_ARM_PLL_CFG_LOCK_CNT" />
+<sw_static_param param="PS7_SLCR_ARM_PLL_CTRL_PLL_BYPASS_FORCE" value="0"/>
+<sw_static_param param="ps7_slcr_ARM_PLL_CTRL_PLL_BYPASS_QUAL" value="1"/>
+<sw_static_param param="ps7_slcr_ARM_PLL_CTRL_PLL_PWRDWN" value="0"/>
+<sw_static_param param="ps7_slcr_ARM_PLL_CTRL_PLL_reset" value="0"/>
+</clksrc>
+</clkgen>

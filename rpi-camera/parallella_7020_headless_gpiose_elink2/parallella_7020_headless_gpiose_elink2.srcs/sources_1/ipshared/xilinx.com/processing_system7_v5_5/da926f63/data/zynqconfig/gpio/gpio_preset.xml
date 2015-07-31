@@ -1,0 +1,2534 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE parameters PUBLIC "presets" "presets.dtd" >
+<presets>
+
+  <preset param="pcw_gpio_peripheral_enable" name="0" strength="7">
+  </preset>
+
+  <preset param="pcw_gpio_peripheral_enable" name="" strength="7">
+  </preset>
+
+  <preset param="pcw_gpio_peripheral_enable" name="1" strength="4">
+  </preset>
+
+  <preset param="pcw_gpio_peripheral_valid" name="0" strength="7">
+    <disable param="pcw_gpio_peripheral_freqmhz"/>
+  </preset>
+
+  <preset param="pcw_gpio_peripheral_valid" name="1" strength="4">
+    <set param="pcw_gpio_peripheral_freqmhz" value="1"/>
+  </preset>
+
+  <preset param="pcw_gpio_mio_gpio_enable" name="0" strength="7">
+      <disable param="pcw_gpio_mio_gpio_io"/>
+      <disable param="pcw_usb0_reset_enable"/>
+      <disable param="pcw_enet0_reset_enable"/>
+      <disable param="pcw_i2c0_reset_enable"/>
+      <disable param="pcw_enet0_reset_io" />
+      <disable param="pcw_i2c0_reset_io" />
+      <disable param="pcw_usb0_reset_io" />
+      <set param="pcw_gpio_grp_gpio_unassigned" value="0" />
+  </preset>
+
+  <preset param="pcw_gpio_mio_gpio_enable" name="" strength="7">
+      <disable param="pcw_gpio_mio_gpio_io"/>
+      <set param="pcw_gpio_grp_gpio_unassigned" value="0" />
+      <disable param="pcw_usb0_reset_enable"/>
+      <disable param="pcw_enet0_reset_enable"/>
+      <disable param="pcw_i2c0_reset_enable"/>
+      <disable param="pcw_enet0_reset_io" />
+      <disable param="pcw_i2c0_reset_io" />
+      <disable param="pcw_usb0_reset_io" />
+  </preset>
+  <preset param="pcw_enet_reset_valid" name="0" strength="7">
+     <disable param="pcw_enet0_reset_enable" />
+     <disable param="pcw_enet0_reset_io" />
+  </preset>
+  <preset param="pcw_enet0_reset_enable" name="0" strength="7">
+     <disable param="pcw_enet0_reset_io" />
+  </preset>
+  <preset param="pcw_enet0_reset_enable" name="1" strength="4">
+     <set param="pcw_enet0_reset_io" value="MIO 0" />
+     <set param="pcw_enet_reset_enable" value="1" />
+  </preset>
+  <preset param="pcw_i2c_reset_valid" name="0" strength="7">
+     <disable param="pcw_i2c0_reset_enable" />
+     <disable param="pcw_i2c0_reset_io" />
+  </preset>
+  <preset param="pcw_i2c0_reset_enable" name="0" strength="7">
+     <disable param="pcw_i2c0_reset_io" />
+  </preset>
+  <preset param="pcw_i2c0_reset_enable" name="1" strength="4">
+     <set param="pcw_i2c0_reset_io" value="MIO 1" />
+     <set param="pcw_i2c_reset_enable" value="1" />
+  </preset>
+  <preset param="pcw_usb_reset_valid" name="0" strength="7">
+     <disable param="pcw_usb0_reset_enable" />
+     <disable param="pcw_usb0_reset_io" />
+  </preset>
+  <preset param="pcw_usb0_reset_enable" name="0" strength="7">
+     <disable param="pcw_usb0_reset_io" />
+  </preset>
+  <preset param="pcw_usb0_reset_enable" name="1" strength="4">
+     <set param="pcw_usb0_reset_io" value="MIO 3" />
+     <set param="pcw_usb_reset_enable" value="1" />
+  </preset>
+  <preset param="pcw_gpio_mio_gpio_enable" name="1" strength="4">
+    <set param="pcw_gpio_gpio_io" value="MIO" />
+    <set param="pcw_gpio_mio_gpio_io" value="MIO" />
+    <set param="pcw_EN_GPIO" value="1" />
+    <set param="pcw_gpio_peripheral_valid" value="1"/>
+  </preset>
+
+  <preset param="pcw_gpio_mio_gpio_io" name="MIO" strength="7">
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_enable" name="0" strength="7">
+      <disable param="pcw_gpio_emio_gpio_io"/>
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_enable" name="" strength="7">
+      <disable param="pcw_gpio_emio_gpio_io"/>
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_enable" name="1" strength="4">
+    <set param="pcw_gpio_emio_gpio_io" value="64" />
+    <set param="pcw_gpio_peripheral_valid" value="1"/>
+    <set param="pcw_EN_EMIO_GPIO" value="1" />
+  </preset>
+
+  <preset param="pcw_EN_EMIO_GPIO" name="1" strength="4">
+    <set param="pcw_gpio_peripheral_valid" value="1"/>
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="1" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="1" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="2" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="2" />
+  </preset>
+  
+  <preset param="pcw_gpio_emio_gpio_io" name="3" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="3" />
+  </preset>
+  
+  <preset param="pcw_gpio_emio_gpio_io" name="4" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="4" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="5" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="5" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="6" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="6" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="7" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="7" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="8" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="8" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="9" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="9" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="10" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="10" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="11" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="11" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="12" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="12" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="13" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="13" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="14" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="14" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="15" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="15" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="16" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="16" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="17" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="17" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="18" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="18" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="19" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="19" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="20" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="20" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="21" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="21" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="22" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="22" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="23" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="23" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="24" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="24" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="25" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="25" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="26" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="26" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="27" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="27" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="28" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="28" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="29" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="29" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="30" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="30" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="31" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="31" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="32" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="32" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="33" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="33" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="34" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="34" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="35" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="35" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="36" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="36" />
+  </preset>
+  <preset param="pcw_gpio_emio_gpio_io" name="37" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="37" />
+  </preset>
+  <preset param="pcw_gpio_emio_gpio_io" name="38" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="38" />
+  </preset>
+  <preset param="pcw_gpio_emio_gpio_io" name="39" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="39" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="40" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="40" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="41" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="41" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="42" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="42" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="43" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="43" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="44" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="44" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="45" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="45" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="46" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="46" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="47" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="47" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="48" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="48" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="49" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="49" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="50" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="50" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="51" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="51" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="52" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="52" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="53" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="53" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="54" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="54" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="55" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="55" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="56" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="56" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="57" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="57" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="58" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="58" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="59" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="59" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="60" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="60" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="61" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="61" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="62" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="62" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="63" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="63" />
+  </preset>
+
+  <preset param="pcw_gpio_emio_gpio_io" name="64" strength="7">
+      <set param="pcw_gpio_emio_gpio_width" value="64" />
+  </preset>
+
+  <preset param="pcw_gpio_gpio_io" name="MIO" strength="3">
+    <set param="pcw_gpio_grp_gpio[0]_io" value="MIO 0" />
+    <set param="pcw_gpio_grp_gpio[1]_io" value="MIO 1" />
+    <set param="pcw_gpio_grp_gpio[2]_io" value="MIO 2" />
+    <set param="pcw_gpio_grp_gpio[3]_io" value="MIO 3" />
+    <set param="pcw_gpio_grp_gpio[4]_io" value="MIO 4" />
+    <set param="pcw_gpio_grp_gpio[5]_io" value="MIO 5" />
+    <set param="pcw_gpio_grp_gpio[6]_io" value="MIO 6" />
+    <set param="pcw_gpio_grp_gpio[7]_io" value="MIO 7" />
+    <set param="pcw_gpio_grp_gpio[8]_io" value="MIO 8" />
+    <set param="pcw_gpio_grp_gpio[9]_io" value="MIO 9" />
+    <set param="pcw_gpio_grp_gpio[10]_io" value="MIO 10" />
+    <set param="pcw_gpio_grp_gpio[11]_io" value="MIO 11" />
+    <set param="pcw_gpio_grp_gpio[12]_io" value="MIO 12" />
+    <set param="pcw_gpio_grp_gpio[13]_io" value="MIO 13" />
+    <set param="pcw_gpio_grp_gpio[14]_io" value="MIO 14" />
+    <set param="pcw_gpio_grp_gpio[15]_io" value="MIO 15" />
+    <set param="pcw_gpio_grp_gpio[16]_io" value="MIO 16" />
+    <set param="pcw_gpio_grp_gpio[17]_io" value="MIO 17" />
+    <set param="pcw_gpio_grp_gpio[18]_io" value="MIO 18" />
+    <set param="pcw_gpio_grp_gpio[19]_io" value="MIO 19" />
+    <set param="pcw_gpio_grp_gpio[20]_io" value="MIO 20" />
+    <set param="pcw_gpio_grp_gpio[21]_io" value="MIO 21" />
+    <set param="pcw_gpio_grp_gpio[22]_io" value="MIO 22" />
+    <set param="pcw_gpio_grp_gpio[23]_io" value="MIO 23" />
+    <set param="pcw_gpio_grp_gpio[24]_io" value="MIO 24" />
+    <set param="pcw_gpio_grp_gpio[25]_io" value="MIO 25" />
+    <set param="pcw_gpio_grp_gpio[26]_io" value="MIO 26" />
+    <set param="pcw_gpio_grp_gpio[27]_io" value="MIO 27" />
+    <set param="pcw_gpio_grp_gpio[28]_io" value="MIO 28" />
+    <set param="pcw_gpio_grp_gpio[29]_io" value="MIO 29" />
+    <set param="pcw_gpio_grp_gpio[30]_io" value="MIO 30" />
+    <set param="pcw_gpio_grp_gpio[31]_io" value="MIO 31" />
+    <set param="pcw_gpio_grp_gpio[32]_io" value="MIO 32" />
+    <set param="pcw_gpio_grp_gpio[33]_io" value="MIO 33" />
+    <set param="pcw_gpio_grp_gpio[34]_io" value="MIO 34" />
+    <set param="pcw_gpio_grp_gpio[35]_io" value="MIO 35" />
+    <set param="pcw_gpio_grp_gpio[36]_io" value="MIO 36" />
+    <set param="pcw_gpio_grp_gpio[37]_io" value="MIO 37" />
+    <set param="pcw_gpio_grp_gpio[38]_io" value="MIO 38" />
+    <set param="pcw_gpio_grp_gpio[39]_io" value="MIO 39" />
+    <set param="pcw_gpio_grp_gpio[40]_io" value="MIO 40" />
+    <set param="pcw_gpio_grp_gpio[41]_io" value="MIO 41" />
+    <set param="pcw_gpio_grp_gpio[42]_io" value="MIO 42" />
+    <set param="pcw_gpio_grp_gpio[43]_io" value="MIO 43" />
+    <set param="pcw_gpio_grp_gpio[44]_io" value="MIO 44" />
+    <set param="pcw_gpio_grp_gpio[45]_io" value="MIO 45" />
+    <set param="pcw_gpio_grp_gpio[46]_io" value="MIO 46" />
+    <set param="pcw_gpio_grp_gpio[47]_io" value="MIO 47" />
+    <set param="pcw_gpio_grp_gpio[48]_io" value="MIO 48" />
+    <set param="pcw_gpio_grp_gpio[49]_io" value="MIO 49" />
+    <set param="pcw_gpio_grp_gpio[50]_io" value="MIO 50" />
+    <set param="pcw_gpio_grp_gpio[51]_io" value="MIO 51" />
+    <set param="pcw_gpio_grp_gpio[52]_io" value="MIO 52" />
+    <set param="pcw_gpio_grp_gpio[53]_io" value="MIO 53" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[0]_io" name="MIO 0" strength="3">
+      <set param="pcw_gpio_gpio[0]_io" value="MIO 0" />
+      <set param="pcw_mio_mio[0]_signal" value="gpio[0]" />
+      <set param="pcw_mio_mio[0]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[0]_signalgroup" value="GPIO 0" />
+      <set param="pcw_preset_mio_0" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[1]_io" name="MIO 1" strength="3">
+      <set param="pcw_gpio_gpio[1]_io" value="MIO 1" />
+      <set param="pcw_mio_mio[1]_signal" value="gpio[1]" />
+      <set param="pcw_mio_mio[1]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[1]_signalgroup" value="GPIO 1" />
+      <set param="pcw_preset_mio_1" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[2]_io" name="MIO 2" strength="3">
+      <set param="pcw_gpio_gpio[2]_io" value="MIO 2" />
+      <set param="pcw_mio_mio[2]_signal" value="gpio[2]" />
+      <set param="pcw_mio_mio[2]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[2]_signalgroup" value="GPIO 2" />
+      <set param="pcw_preset_mio_2" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[3]_io" name="MIO 3" strength="3">
+      <set param="pcw_gpio_gpio[3]_io" value="MIO 3" />
+      <set param="pcw_mio_mio[3]_signal" value="gpio[3]" />
+      <set param="pcw_mio_mio[3]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[3]_signalgroup" value="GPIO 3" />
+      <set param="pcw_preset_mio_3" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[4]_io" name="MIO 4" strength="3">
+      <set param="pcw_gpio_gpio[4]_io" value="MIO 4" />
+      <set param="pcw_mio_mio[4]_signal" value="gpio[4]" />
+      <set param="pcw_mio_mio[4]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[4]_signalgroup" value="GPIO 4" />
+      <set param="pcw_preset_mio_4" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[5]_io" name="MIO 5" strength="3">
+      <set param="pcw_gpio_gpio[5]_io" value="MIO 5" />
+      <set param="pcw_mio_mio[5]_signal" value="gpio[5]" />
+      <set param="pcw_mio_mio[5]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[5]_signalgroup" value="GPIO 5" />
+      <set param="pcw_preset_mio_5" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[6]_io" name="MIO 6" strength="3">
+      <set param="pcw_gpio_gpio[6]_io" value="MIO 6" />
+      <set param="pcw_mio_mio[6]_signal" value="gpio[6]" />
+      <set param="pcw_mio_mio[6]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[6]_signalgroup" value="GPIO 6" />
+      <set param="pcw_preset_mio_6" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[7]_io" name="MIO 7" strength="3">
+      <set param="pcw_gpio_gpio[7]_io" value="MIO 7" />
+      <set param="pcw_mio_mio[7]_signal" value="gpio[7]" />
+      <set param="pcw_mio_mio[7]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[7]_signalgroup" value="GPIO 7" />
+      <set param="pcw_preset_mio_7" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[8]_io" name="MIO 8" strength="3">
+      <set param="pcw_gpio_gpio[8]_io" value="MIO 8" />
+      <set param="pcw_mio_mio[8]_signal" value="gpio[8]" />
+      <set param="pcw_mio_mio[8]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[8]_signalgroup" value="GPIO 8" />
+      <set param="pcw_preset_mio_8" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[9]_io" name="MIO 9" strength="3">
+      <set param="pcw_gpio_gpio[9]_io" value="MIO 9" />
+      <set param="pcw_mio_mio[9]_signal" value="gpio[9]" />
+      <set param="pcw_mio_mio[9]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[9]_signalgroup" value="GPIO 9" />
+      <set param="pcw_preset_mio_9" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[10]_io" name="MIO 10" strength="3">
+      <set param="pcw_gpio_gpio[10]_io" value="MIO 10" />
+      <set param="pcw_mio_mio[10]_signal" value="gpio[10]" />
+      <set param="pcw_mio_mio[10]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[10]_signalgroup" value="GPIO 10" />
+      <set param="pcw_preset_mio_10" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[11]_io" name="MIO 11" strength="3">
+      <set param="pcw_gpio_gpio[11]_io" value="MIO 11" />
+      <set param="pcw_mio_mio[11]_signal" value="gpio[11]" />
+      <set param="pcw_mio_mio[11]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[11]_signalgroup" value="GPIO 11" />
+      <set param="pcw_preset_mio_11" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[12]_io" name="MIO 12" strength="3">
+      <set param="pcw_gpio_gpio[12]_io" value="MIO 12" />
+      <set param="pcw_mio_mio[12]_signal" value="gpio[12]" />
+      <set param="pcw_mio_mio[12]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[12]_signalgroup" value="GPIO 12" />
+      <set param="pcw_preset_mio_12" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[13]_io" name="MIO 13" strength="3">
+      <set param="pcw_gpio_gpio[13]_io" value="MIO 13" />
+      <set param="pcw_mio_mio[13]_signal" value="gpio[13]" />
+      <set param="pcw_mio_mio[13]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[13]_signalgroup" value="GPIO 13" />
+      <set param="pcw_preset_mio_13" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[14]_io" name="MIO 14" strength="3">
+      <set param="pcw_gpio_gpio[14]_io" value="MIO 14" />
+      <set param="pcw_mio_mio[14]_signal" value="gpio[14]" />
+      <set param="pcw_mio_mio[14]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[14]_signalgroup" value="GPIO 14" />
+      <set param="pcw_preset_mio_14" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[15]_io" name="MIO 15" strength="3">
+      <set param="pcw_gpio_gpio[15]_io" value="MIO 15" />
+      <set param="pcw_mio_mio[15]_signal" value="gpio[15]" />
+      <set param="pcw_mio_mio[15]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[15]_signalgroup" value="GPIO 15" />
+      <set param="pcw_preset_mio_15" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[16]_io" name="MIO 16" strength="3">
+      <set param="pcw_gpio_gpio[16]_io" value="MIO 16" />
+      <set param="pcw_mio_mio[16]_signal" value="gpio[16]" />
+      <set param="pcw_mio_mio[16]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[16]_signalgroup" value="GPIO 16" />
+      <set param="pcw_preset_mio_16" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[17]_io" name="MIO 17" strength="3">
+      <set param="pcw_gpio_gpio[17]_io" value="MIO 17" />
+      <set param="pcw_mio_mio[17]_signal" value="gpio[17]" />
+      <set param="pcw_mio_mio[17]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[17]_signalgroup" value="GPIO 17" />
+      <set param="pcw_preset_mio_17" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[18]_io" name="MIO 18" strength="3">
+      <set param="pcw_gpio_gpio[18]_io" value="MIO 18" />
+      <set param="pcw_mio_mio[18]_signal" value="gpio[18]" />
+      <set param="pcw_mio_mio[18]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[18]_signalgroup" value="GPIO 18" />
+      <set param="pcw_preset_mio_18" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[19]_io" name="MIO 19" strength="3">
+      <set param="pcw_gpio_gpio[19]_io" value="MIO 19" />
+      <set param="pcw_mio_mio[19]_signal" value="gpio[19]" />
+      <set param="pcw_mio_mio[19]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[19]_signalgroup" value="GPIO 19" />
+      <set param="pcw_preset_mio_19" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[20]_io" name="MIO 20" strength="3">
+      <set param="pcw_gpio_gpio[20]_io" value="MIO 20" />
+      <set param="pcw_mio_mio[20]_signal" value="gpio[20]" />
+      <set param="pcw_mio_mio[20]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[20]_signalgroup" value="GPIO 20" />
+      <set param="pcw_preset_mio_20" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[21]_io" name="MIO 21" strength="3">
+      <set param="pcw_gpio_gpio[21]_io" value="MIO 21" />
+      <set param="pcw_mio_mio[21]_signal" value="gpio[21]" />
+      <set param="pcw_mio_mio[21]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[21]_signalgroup" value="GPIO 21" />
+      <set param="pcw_preset_mio_21" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[22]_io" name="MIO 22" strength="3">
+      <set param="pcw_gpio_gpio[22]_io" value="MIO 22" />
+      <set param="pcw_mio_mio[22]_signal" value="gpio[22]" />
+      <set param="pcw_mio_mio[22]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[22]_signalgroup" value="GPIO 22" />
+      <set param="pcw_preset_mio_22" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[23]_io" name="MIO 23" strength="3">
+      <set param="pcw_gpio_gpio[23]_io" value="MIO 23" />
+      <set param="pcw_mio_mio[23]_signal" value="gpio[23]" />
+      <set param="pcw_mio_mio[23]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[23]_signalgroup" value="GPIO 23" />
+      <set param="pcw_preset_mio_23" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[24]_io" name="MIO 24" strength="3">
+      <set param="pcw_gpio_gpio[24]_io" value="MIO 24" />
+      <set param="pcw_mio_mio[24]_signal" value="gpio[24]" />
+      <set param="pcw_mio_mio[24]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[24]_signalgroup" value="GPIO 24" />
+      <set param="pcw_preset_mio_24" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[25]_io" name="MIO 25" strength="3">
+      <set param="pcw_gpio_gpio[25]_io" value="MIO 25" />
+      <set param="pcw_mio_mio[25]_signal" value="gpio[25]" />
+      <set param="pcw_mio_mio[25]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[25]_signalgroup" value="GPIO 25" />
+      <set param="pcw_preset_mio_25" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[26]_io" name="MIO 26" strength="3">
+      <set param="pcw_gpio_gpio[26]_io" value="MIO 26" />
+      <set param="pcw_mio_mio[26]_signal" value="gpio[26]" />
+      <set param="pcw_mio_mio[26]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[26]_signalgroup" value="GPIO 26" />
+      <set param="pcw_preset_mio_26" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[27]_io" name="MIO 27" strength="3">
+      <set param="pcw_gpio_gpio[27]_io" value="MIO 27" />
+      <set param="pcw_mio_mio[27]_signal" value="gpio[27]" />
+      <set param="pcw_mio_mio[27]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[27]_signalgroup" value="GPIO 27" />
+      <set param="pcw_preset_mio_27" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[28]_io" name="MIO 28" strength="3">
+      <set param="pcw_gpio_gpio[28]_io" value="MIO 28" />
+      <set param="pcw_mio_mio[28]_signal" value="gpio[28]" />
+      <set param="pcw_mio_mio[28]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[28]_signalgroup" value="GPIO 28" />
+      <set param="pcw_preset_mio_28" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[29]_io" name="MIO 29" strength="3">
+      <set param="pcw_gpio_gpio[29]_io" value="MIO 29" />
+      <set param="pcw_mio_mio[29]_signal" value="gpio[29]" />
+      <set param="pcw_mio_mio[29]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[29]_signalgroup" value="GPIO 29" />
+      <set param="pcw_preset_mio_29" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[30]_io" name="MIO 30" strength="3">
+      <set param="pcw_gpio_gpio[30]_io" value="MIO 30" />
+      <set param="pcw_mio_mio[30]_signal" value="gpio[30]" />
+      <set param="pcw_mio_mio[30]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[30]_signalgroup" value="GPIO 30" />
+      <set param="pcw_preset_mio_30" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[31]_io" name="MIO 31" strength="3">
+      <set param="pcw_gpio_gpio[31]_io" value="MIO 31" />
+      <set param="pcw_mio_mio[31]_signal" value="gpio[31]" />
+      <set param="pcw_mio_mio[31]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[31]_signalgroup" value="GPIO 31" />
+      <set param="pcw_preset_mio_31" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[32]_io" name="MIO 32" strength="3">
+      <set param="pcw_gpio_gpio[32]_io" value="MIO 32" />
+      <set param="pcw_mio_mio[32]_signal" value="gpio[32]" />
+      <set param="pcw_mio_mio[32]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[32]_signalgroup" value="GPIO 32" />
+      <set param="pcw_preset_mio_32" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[33]_io" name="MIO 33" strength="3">
+      <set param="pcw_gpio_gpio[33]_io" value="MIO 33" />
+      <set param="pcw_mio_mio[33]_signal" value="gpio[33]" />
+      <set param="pcw_mio_mio[33]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[33]_signalgroup" value="GPIO 33" />
+      <set param="pcw_preset_mio_33" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[34]_io" name="MIO 34" strength="3">
+      <set param="pcw_gpio_gpio[34]_io" value="MIO 34" />
+      <set param="pcw_mio_mio[34]_signal" value="gpio[34]" />
+      <set param="pcw_mio_mio[34]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[34]_signalgroup" value="GPIO 34" />
+      <set param="pcw_preset_mio_34" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[35]_io" name="MIO 35" strength="3">
+      <set param="pcw_gpio_gpio[35]_io" value="MIO 35" />
+      <set param="pcw_mio_mio[35]_signal" value="gpio[35]" />
+      <set param="pcw_mio_mio[35]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[35]_signalgroup" value="GPIO 35" />
+      <set param="pcw_preset_mio_35" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[36]_io" name="MIO 36" strength="3">
+      <set param="pcw_gpio_gpio[36]_io" value="MIO 36" />
+      <set param="pcw_mio_mio[36]_signal" value="gpio[36]" />
+      <set param="pcw_mio_mio[36]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[36]_signalgroup" value="GPIO 36" />
+      <set param="pcw_preset_mio_36" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[37]_io" name="MIO 37" strength="3">
+      <set param="pcw_gpio_gpio[37]_io" value="MIO 37" />
+      <set param="pcw_mio_mio[37]_signal" value="gpio[37]" />
+      <set param="pcw_mio_mio[37]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[37]_signalgroup" value="GPIO 37" />
+      <set param="pcw_preset_mio_37" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[38]_io" name="MIO 38" strength="3">
+      <set param="pcw_gpio_gpio[38]_io" value="MIO 38" />
+      <set param="pcw_mio_mio[38]_signal" value="gpio[38]" />
+      <set param="pcw_mio_mio[38]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[38]_signalgroup" value="GPIO 38" />
+      <set param="pcw_preset_mio_38" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[39]_io" name="MIO 39" strength="3">
+      <set param="pcw_gpio_gpio[39]_io" value="MIO 39" />
+      <set param="pcw_mio_mio[39]_signal" value="gpio[39]" />
+      <set param="pcw_mio_mio[39]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[39]_signalgroup" value="GPIO 39" />
+      <set param="pcw_preset_mio_39" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[40]_io" name="MIO 40" strength="3">
+      <set param="pcw_gpio_gpio[40]_io" value="MIO 40" />
+      <set param="pcw_mio_mio[40]_signal" value="gpio[40]" />
+      <set param="pcw_mio_mio[40]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[40]_signalgroup" value="GPIO 40" />
+      <set param="pcw_preset_mio_40" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[41]_io" name="MIO 41" strength="3">
+      <set param="pcw_gpio_gpio[41]_io" value="MIO 41" />
+      <set param="pcw_mio_mio[41]_signal" value="gpio[41]" />
+      <set param="pcw_mio_mio[41]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[41]_signalgroup" value="GPIO 41" />
+      <set param="pcw_preset_mio_41" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[42]_io" name="MIO 42" strength="3">
+      <set param="pcw_gpio_gpio[42]_io" value="MIO 42" />
+      <set param="pcw_mio_mio[42]_signal" value="gpio[42]" />
+      <set param="pcw_mio_mio[42]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[42]_signalgroup" value="GPIO 42" />
+      <set param="pcw_preset_mio_42" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[43]_io" name="MIO 43" strength="3">
+      <set param="pcw_gpio_gpio[43]_io" value="MIO 43" />
+      <set param="pcw_mio_mio[43]_signal" value="gpio[43]" />
+      <set param="pcw_mio_mio[43]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[43]_signalgroup" value="GPIO 43" />
+      <set param="pcw_preset_mio_43" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[44]_io" name="MIO 44" strength="3">
+      <set param="pcw_gpio_gpio[44]_io" value="MIO 44" />
+      <set param="pcw_mio_mio[44]_signal" value="gpio[44]" />
+      <set param="pcw_mio_mio[44]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[44]_signalgroup" value="GPIO 44" />
+      <set param="pcw_preset_mio_44" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[45]_io" name="MIO 45" strength="3">
+      <set param="pcw_gpio_gpio[45]_io" value="MIO 45" />
+      <set param="pcw_mio_mio[45]_signal" value="gpio[45]" />
+      <set param="pcw_mio_mio[45]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[45]_signalgroup" value="GPIO 45" />
+      <set param="pcw_preset_mio_45" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[46]_io" name="MIO 46" strength="3">
+      <set param="pcw_gpio_gpio[46]_io" value="MIO 46" />
+      <set param="pcw_mio_mio[46]_signal" value="gpio[46]" />
+      <set param="pcw_mio_mio[46]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[46]_signalgroup" value="GPIO 46" />
+      <set param="pcw_preset_mio_46" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[47]_io" name="MIO 47" strength="3">
+      <set param="pcw_gpio_gpio[47]_io" value="MIO 47" />
+      <set param="pcw_mio_mio[47]_signal" value="gpio[47]" />
+      <set param="pcw_mio_mio[47]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[47]_signalgroup" value="GPIO 47" />
+      <set param="pcw_preset_mio_47" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[48]_io" name="MIO 48" strength="3">
+      <set param="pcw_gpio_gpio[48]_io" value="MIO 48" />
+      <set param="pcw_mio_mio[48]_signal" value="gpio[48]" />
+      <set param="pcw_mio_mio[48]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[48]_signalgroup" value="GPIO 48" />
+      <set param="pcw_preset_mio_48" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[49]_io" name="MIO 49" strength="3">
+      <set param="pcw_gpio_gpio[49]_io" value="MIO 49" />
+      <set param="pcw_mio_mio[49]_signal" value="gpio[49]" />
+      <set param="pcw_mio_mio[49]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[49]_signalgroup" value="GPIO 49" />
+      <set param="pcw_preset_mio_49" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[50]_io" name="MIO 50" strength="3">
+      <set param="pcw_gpio_gpio[50]_io" value="MIO 50" />
+      <set param="pcw_mio_mio[50]_signal" value="gpio[50]" />
+      <set param="pcw_mio_mio[50]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[50]_signalgroup" value="GPIO 50" />
+      <set param="pcw_preset_mio_50" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[51]_io" name="MIO 51" strength="3">
+      <set param="pcw_gpio_gpio[51]_io" value="MIO 51" />
+      <set param="pcw_mio_mio[51]_signal" value="gpio[51]" />
+      <set param="pcw_mio_mio[51]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[51]_signalgroup" value="GPIO 51" />
+      <set param="pcw_preset_mio_51" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[52]_io" name="MIO 52" strength="3">
+      <set param="pcw_gpio_gpio[52]_io" value="MIO 52" />
+      <set param="pcw_mio_mio[52]_signal" value="gpio[52]" />
+      <set param="pcw_mio_mio[52]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[52]_signalgroup" value="GPIO 52" />
+      <set param="pcw_preset_mio_52" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio[53]_io" name="MIO 53" strength="3">
+      <set param="pcw_gpio_gpio[53]_io" value="MIO 53" />
+      <set param="pcw_mio_mio[53]_signal" value="gpio[53]" />
+      <set param="pcw_mio_mio[53]_peripheral" value="GPIO" />
+      <set param="pcw_mio_mio[53]_signalgroup" value="GPIO 53" />
+      <set param="pcw_preset_mio_53" value="gpio" />
+  </preset>
+
+  <preset param="pcw_gpio_grp_gpio_unassigned" name="0" strength="4">
+      <set param="pcw_mio_mio[0]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[1]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[2]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[3]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[4]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[5]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[6]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[7]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[8]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[9]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[10]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[11]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[12]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[13]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[14]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[15]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[16]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[17]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[18]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[19]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[20]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[21]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[22]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[23]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[24]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[25]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[26]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[27]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[28]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[29]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[30]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[31]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[32]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[33]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[34]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[35]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[36]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[37]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[38]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[39]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[40]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[41]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[42]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[43]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[44]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[45]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[46]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[47]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[48]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[49]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[50]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[51]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[52]_signal" value="unassigned" />
+      <set param="pcw_mio_mio[53]_signal" value="unassigned" />
+
+      <set param="pcw_mio_mio[0]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[1]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[2]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[3]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[4]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[5]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[6]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[7]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[8]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[9]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[10]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[11]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[12]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[13]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[14]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[15]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[16]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[17]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[18]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[19]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[20]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[21]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[22]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[23]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[24]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[25]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[26]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[27]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[28]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[29]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[30]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[31]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[32]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[33]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[34]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[35]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[36]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[37]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[38]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[39]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[40]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[41]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[42]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[43]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[44]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[45]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[46]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[47]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[48]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[49]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[50]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[51]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[52]_signalgroup" value="unassigned" />
+      <set param="pcw_mio_mio[53]_signalgroup" value="unassigned" />
+
+      <set param="pcw_mio_mio[0]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[1]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[2]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[3]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[4]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[5]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[6]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[7]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[8]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[9]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[10]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[11]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[12]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[13]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[14]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[15]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[16]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[17]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[18]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[19]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[20]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[21]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[22]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[23]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[24]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[25]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[26]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[27]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[28]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[29]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[30]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[31]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[32]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[33]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[34]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[35]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[36]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[37]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[38]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[39]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[40]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[41]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[42]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[43]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[44]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[45]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[46]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[47]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[48]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[49]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[50]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[51]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[52]_peripheral" value="unassigned" />
+      <set param="pcw_mio_mio[53]_peripheral" value="unassigned" />
+  </preset>
+
+  <preset param="pcw_mio_mio[0]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_0_direction" />
+    <disable param="pcw_mio_0_iotype" />
+    <disable param="pcw_mio_0_slew" />
+    <disable param="pcw_mio_0_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[1]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_1_direction" />
+    <disable param="pcw_mio_1_iotype" />
+    <disable param="pcw_mio_1_slew" />
+    <disable param="pcw_mio_1_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[2]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_2_direction" />
+    <disable param="pcw_mio_2_iotype" />
+    <disable param="pcw_mio_2_slew" />
+    <disable param="pcw_mio_2_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[3]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_3_direction" />
+    <disable param="pcw_mio_3_iotype" />
+    <disable param="pcw_mio_3_slew" />
+    <disable param="pcw_mio_3_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[4]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_4_direction" />
+    <disable param="pcw_mio_4_iotype" />
+    <disable param="pcw_mio_4_slew" />
+    <disable param="pcw_mio_4_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[5]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_5_direction" />
+    <disable param="pcw_mio_5_iotype" />
+    <disable param="pcw_mio_5_slew" />
+    <disable param="pcw_mio_5_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[6]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_6_direction" />
+    <disable param="pcw_mio_6_iotype" />
+    <disable param="pcw_mio_6_slew" />
+    <disable param="pcw_mio_6_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[7]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_7_direction" />
+    <disable param="pcw_mio_7_iotype" />
+    <disable param="pcw_mio_7_slew" />
+    <disable param="pcw_mio_7_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[8]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_8_direction" />
+    <disable param="pcw_mio_8_iotype" />
+    <disable param="pcw_mio_8_slew" />
+    <disable param="pcw_mio_8_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[9]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_9_direction" />
+    <disable param="pcw_mio_9_iotype" />
+    <disable param="pcw_mio_9_slew" />
+    <disable param="pcw_mio_9_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[10]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_10_direction" />
+    <disable param="pcw_mio_10_iotype" />
+    <disable param="pcw_mio_10_slew" />
+    <disable param="pcw_mio_10_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[11]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_11_direction" />
+    <disable param="pcw_mio_11_iotype" />
+    <disable param="pcw_mio_11_slew" />
+    <disable param="pcw_mio_11_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[12]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_12_direction" />
+    <disable param="pcw_mio_12_iotype" />
+    <disable param="pcw_mio_12_slew" />
+    <disable param="pcw_mio_12_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[13]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_13_direction" />
+    <disable param="pcw_mio_13_iotype" />
+    <disable param="pcw_mio_13_slew" />
+    <disable param="pcw_mio_13_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[14]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_14_direction" />
+    <disable param="pcw_mio_14_iotype" />
+    <disable param="pcw_mio_14_slew" />
+    <disable param="pcw_mio_14_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[15]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_15_direction" />
+    <disable param="pcw_mio_15_iotype" />
+    <disable param="pcw_mio_15_slew" />
+    <disable param="pcw_mio_15_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[16]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_16_direction" />
+    <disable param="pcw_mio_16_iotype" />
+    <disable param="pcw_mio_16_slew" />
+    <disable param="pcw_mio_16_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[17]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_17_direction" />
+    <disable param="pcw_mio_17_iotype" />
+    <disable param="pcw_mio_17_slew" />
+    <disable param="pcw_mio_17_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[18]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_18_direction" />
+    <disable param="pcw_mio_18_iotype" />
+    <disable param="pcw_mio_18_slew" />
+    <disable param="pcw_mio_18_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[19]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_19_direction" />
+    <disable param="pcw_mio_19_iotype" />
+    <disable param="pcw_mio_19_slew" />
+    <disable param="pcw_mio_19_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[20]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_20_direction" />
+    <disable param="pcw_mio_20_iotype" />
+    <disable param="pcw_mio_20_slew" />
+    <disable param="pcw_mio_20_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[21]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_21_direction" />
+    <disable param="pcw_mio_21_iotype" />
+    <disable param="pcw_mio_21_slew" />
+    <disable param="pcw_mio_21_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[22]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_22_direction" />
+    <disable param="pcw_mio_22_iotype" />
+    <disable param="pcw_mio_22_slew" />
+    <disable param="pcw_mio_22_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[23]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_23_direction" />
+    <disable param="pcw_mio_23_iotype" />
+    <disable param="pcw_mio_23_slew" />
+    <disable param="pcw_mio_23_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[24]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_24_direction" />
+    <disable param="pcw_mio_24_iotype" />
+    <disable param="pcw_mio_24_slew" />
+    <disable param="pcw_mio_24_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[25]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_25_direction" />
+    <disable param="pcw_mio_25_iotype" />
+    <disable param="pcw_mio_25_slew" />
+    <disable param="pcw_mio_25_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[26]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_26_direction" />
+    <disable param="pcw_mio_26_iotype" />
+    <disable param="pcw_mio_26_slew" />
+    <disable param="pcw_mio_26_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[27]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_27_direction" />
+    <disable param="pcw_mio_27_iotype" />
+    <disable param="pcw_mio_27_slew" />
+    <disable param="pcw_mio_27_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[28]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_28_direction" />
+    <disable param="pcw_mio_28_iotype" />
+    <disable param="pcw_mio_28_slew" />
+    <disable param="pcw_mio_28_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[29]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_29_direction" />
+    <disable param="pcw_mio_29_iotype" />
+    <disable param="pcw_mio_29_slew" />
+    <disable param="pcw_mio_29_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[30]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_30_direction" />
+    <disable param="pcw_mio_30_iotype" />
+    <disable param="pcw_mio_30_slew" />
+    <disable param="pcw_mio_30_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[31]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_31_direction" />
+    <disable param="pcw_mio_31_iotype" />
+    <disable param="pcw_mio_31_slew" />
+    <disable param="pcw_mio_31_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[32]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_32_direction" />
+    <disable param="pcw_mio_32_iotype" />
+    <disable param="pcw_mio_32_slew" />
+    <disable param="pcw_mio_32_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[33]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_33_direction" />
+    <disable param="pcw_mio_33_iotype" />
+    <disable param="pcw_mio_33_slew" />
+    <disable param="pcw_mio_33_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[34]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_34_direction" />
+    <disable param="pcw_mio_34_iotype" />
+    <disable param="pcw_mio_34_slew" />
+    <disable param="pcw_mio_34_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[35]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_35_direction" />
+    <disable param="pcw_mio_35_iotype" />
+    <disable param="pcw_mio_35_slew" />
+    <disable param="pcw_mio_35_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[36]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_36_direction" />
+    <disable param="pcw_mio_36_iotype" />
+    <disable param="pcw_mio_36_slew" />
+    <disable param="pcw_mio_36_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[37]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_37_direction" />
+    <disable param="pcw_mio_37_iotype" />
+    <disable param="pcw_mio_37_slew" />
+    <disable param="pcw_mio_37_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[38]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_38_direction" />
+    <disable param="pcw_mio_38_iotype" />
+    <disable param="pcw_mio_38_slew" />
+    <disable param="pcw_mio_38_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[39]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_39_direction" />
+    <disable param="pcw_mio_39_iotype" />
+    <disable param="pcw_mio_39_slew" />
+    <disable param="pcw_mio_39_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[40]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_40_direction" />
+    <disable param="pcw_mio_40_iotype" />
+    <disable param="pcw_mio_40_slew" />
+    <disable param="pcw_mio_40_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[41]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_41_direction" />
+    <disable param="pcw_mio_41_iotype" />
+    <disable param="pcw_mio_41_slew" />
+    <disable param="pcw_mio_41_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[42]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_42_direction" />
+    <disable param="pcw_mio_42_iotype" />
+    <disable param="pcw_mio_42_slew" />
+    <disable param="pcw_mio_42_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[43]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_43_direction" />
+    <disable param="pcw_mio_43_iotype" />
+    <disable param="pcw_mio_43_slew" />
+    <disable param="pcw_mio_43_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[44]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_44_direction" />
+    <disable param="pcw_mio_44_iotype" />
+    <disable param="pcw_mio_44_slew" />
+    <disable param="pcw_mio_44_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[45]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_45_direction" />
+    <disable param="pcw_mio_45_iotype" />
+    <disable param="pcw_mio_45_slew" />
+    <disable param="pcw_mio_45_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[46]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_46_direction" />
+    <disable param="pcw_mio_46_iotype" />
+    <disable param="pcw_mio_46_slew" />
+    <disable param="pcw_mio_46_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[47]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_47_direction" />
+    <disable param="pcw_mio_47_iotype" />
+    <disable param="pcw_mio_47_slew" />
+    <disable param="pcw_mio_47_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[48]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_48_direction" />
+    <disable param="pcw_mio_48_iotype" />
+    <disable param="pcw_mio_48_slew" />
+    <disable param="pcw_mio_48_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[49]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_49_direction" />
+    <disable param="pcw_mio_49_iotype" />
+    <disable param="pcw_mio_49_slew" />
+    <disable param="pcw_mio_49_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[50]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_50_direction" />
+    <disable param="pcw_mio_50_iotype" />
+    <disable param="pcw_mio_50_slew" />
+    <disable param="pcw_mio_50_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[51]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_51_direction" />
+    <disable param="pcw_mio_51_iotype" />
+    <disable param="pcw_mio_51_slew" />
+    <disable param="pcw_mio_51_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[52]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_52_direction" />
+    <disable param="pcw_mio_52_iotype" />
+    <disable param="pcw_mio_52_slew" />
+    <disable param="pcw_mio_52_pullup" />
+  </preset>
+
+  <preset param="pcw_mio_mio[53]_peripheral" name="unassigned" strength="7">
+    <disable param="pcw_mio_53_direction" />
+    <disable param="pcw_mio_53_iotype" />
+    <disable param="pcw_mio_53_slew" />
+    <disable param="pcw_mio_53_pullup" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 0" strength="5">
+    <set param="pcw_enet_reset_io" value="0"/>
+    <set param="pcw_preset_mio_0" value="ENET Reset" />
+    <set param="pcw_mio_mio[0]_signal" value="reset" />
+    <set param="pcw_mio_mio[0]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[0]_signalgroup" value="ENET Reset" />
+
+  </preset>
+
+  <preset param="pcw_enet0_reset_io" name="MIO 1" strength="5">
+    <set param="pcw_enet_reset_io" value="1"/>
+    <set param="pcw_preset_mio_1" value="ENET Reset" />
+    <set param="pcw_mio_mio[1]_signal" value="reset" />
+    <set param="pcw_mio_mio[1]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[1]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 2" strength="5">
+    <set param="pcw_enet_reset_io" value="2"/>
+    <set param="pcw_preset_mio_2" value="ENET Reset" />
+    <set param="pcw_mio_mio[2]_signal" value="reset" />
+    <set param="pcw_mio_mio[2]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[2]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 3" strength="5">
+    <set param="pcw_enet_reset_io" value="3"/>
+    <set param="pcw_preset_mio_3" value="ENET Reset" />
+    <set param="pcw_mio_mio[3]_signal" value="reset" />
+    <set param="pcw_mio_mio[3]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[3]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 4" strength="5">
+    <set param="pcw_enet_reset_io" value="4"/>
+    <set param="pcw_preset_mio_4" value="ENET Reset" />
+    <set param="pcw_mio_mio[4]_signal" value="reset" />
+    <set param="pcw_mio_mio[4]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[4]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 5" strength="5">
+    <set param="pcw_enet_reset_io" value="5"/>
+    <set param="pcw_preset_mio_5" value="ENET Reset" />
+    <set param="pcw_mio_mio[5]_signal" value="reset" />
+    <set param="pcw_mio_mio[5]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[5]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 6" strength="5">
+    <set param="pcw_enet_reset_io" value="6"/>
+    <set param="pcw_preset_mio_6" value="ENET Reset" />
+    <set param="pcw_mio_mio[6]_signal" value="reset" />
+    <set param="pcw_mio_mio[6]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[6]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 7" strength="5">
+    <set param="pcw_enet_reset_io" value="7"/>
+    <set param="pcw_preset_mio_7" value="ENET Reset" />
+    <set param="pcw_mio_mio[7]_signal" value="reset" />
+    <set param="pcw_mio_mio[7]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[7]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 8" strength="5">
+    <set param="pcw_enet_reset_io" value="8"/>
+    <set param="pcw_preset_mio_8" value="ENET Reset" />
+    <set param="pcw_mio_mio[8]_signal" value="reset" />
+    <set param="pcw_mio_mio[8]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[8]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 9" strength="5">
+    <set param="pcw_enet_reset_io" value="9"/>
+    <set param="pcw_preset_mio_9" value="ENET Reset" />
+    <set param="pcw_mio_mio[9]_signal" value="reset" />
+    <set param="pcw_mio_mio[9]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[9]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 10" strength="5">
+    <set param="pcw_enet_reset_io" value="10"/>
+    <set param="pcw_preset_mio_10" value="ENET Reset" />
+    <set param="pcw_mio_mio[10]_signal" value="reset" />
+    <set param="pcw_mio_mio[10]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[10]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 11" strength="5">
+    <set param="pcw_enet_reset_io" value="11"/>
+    <set param="pcw_preset_mio_11" value="ENET Reset" />
+    <set param="pcw_mio_mio[11]_signal" value="reset" />
+    <set param="pcw_mio_mio[11]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[11]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 12" strength="5">
+    <set param="pcw_enet_reset_io" value="12"/>
+    <set param="pcw_preset_mio_12" value="ENET Reset" />
+    <set param="pcw_mio_mio[12]_signal" value="reset" />
+    <set param="pcw_mio_mio[12]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[12]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 13" strength="5">
+    <set param="pcw_enet_reset_io" value="13"/>
+    <set param="pcw_preset_mio_13" value="ENET Reset" />
+    <set param="pcw_mio_mio[13]_signal" value="reset" />
+    <set param="pcw_mio_mio[13]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[13]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 14" strength="5">
+    <set param="pcw_enet_reset_io" value="14"/>
+    <set param="pcw_preset_mio_14" value="ENET Reset" />
+    <set param="pcw_mio_mio[14]_signal" value="reset" />
+    <set param="pcw_mio_mio[14]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[14]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 15" strength="5">
+    <set param="pcw_enet_reset_io" value="15"/>
+    <set param="pcw_preset_mio_15" value="ENET Reset" />
+    <set param="pcw_mio_mio[15]_signal" value="reset" />
+    <set param="pcw_mio_mio[15]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[15]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 16" strength="5">
+    <set param="pcw_enet_reset_io" value="16"/>
+    <set param="pcw_preset_mio_16" value="ENET Reset" />
+    <set param="pcw_mio_mio[16]_signal" value="reset" />
+    <set param="pcw_mio_mio[16]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[16]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 17" strength="5">
+    <set param="pcw_enet_reset_io" value="17"/>
+    <set param="pcw_preset_mio_17" value="ENET Reset" />
+    <set param="pcw_mio_mio[17]_signal" value="reset" />
+    <set param="pcw_mio_mio[17]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[17]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 18" strength="5">
+    <set param="pcw_enet_reset_io" value="18"/>
+    <set param="pcw_preset_mio_18" value="ENET Reset" />
+    <set param="pcw_mio_mio[18]_signal" value="reset" />
+    <set param="pcw_mio_mio[18]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[18]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 19" strength="5">
+    <set param="pcw_enet_reset_io" value="19"/>
+    <set param="pcw_preset_mio_19" value="ENET Reset" />
+    <set param="pcw_mio_mio[19]_signal" value="reset" />
+    <set param="pcw_mio_mio[19]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[19]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 20" strength="5">
+    <set param="pcw_enet_reset_io" value="20"/>
+    <set param="pcw_preset_mio_20" value="ENET Reset" />
+    <set param="pcw_mio_mio[20]_signal" value="reset" />
+    <set param="pcw_mio_mio[20]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[20]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 21" strength="5">
+    <set param="pcw_enet_reset_io" value="21"/>
+    <set param="pcw_preset_mio_21" value="ENET Reset" />
+    <set param="pcw_mio_mio[21]_signal" value="reset" />
+    <set param="pcw_mio_mio[21]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[21]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 22" strength="5">
+    <set param="pcw_enet_reset_io" value="22"/>
+    <set param="pcw_preset_mio_22" value="ENET Reset" />
+    <set param="pcw_mio_mio[22]_signal" value="reset" />
+    <set param="pcw_mio_mio[22]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[22]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 23" strength="5">
+    <set param="pcw_enet_reset_io" value="23"/>
+    <set param="pcw_preset_mio_23" value="ENET Reset" />
+    <set param="pcw_mio_mio[23]_signal" value="reset" />
+    <set param="pcw_mio_mio[23]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[23]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 24" strength="5">
+    <set param="pcw_enet_reset_io" value="24"/>
+    <set param="pcw_preset_mio_24" value="ENET Reset" />
+    <set param="pcw_mio_mio[24]_signal" value="reset" />
+    <set param="pcw_mio_mio[24]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[24]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 25" strength="5">
+    <set param="pcw_enet_reset_io" value="25"/>
+    <set param="pcw_preset_mio_25" value="ENET Reset" />
+    <set param="pcw_mio_mio[25]_signal" value="reset" />
+    <set param="pcw_mio_mio[25]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[25]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 26" strength="5">
+    <set param="pcw_enet_reset_io" value="26"/>
+    <set param="pcw_preset_mio_26" value="ENET Reset" />
+    <set param="pcw_mio_mio[26]_signal" value="reset" />
+    <set param="pcw_mio_mio[26]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[26]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 27" strength="5">
+    <set param="pcw_enet_reset_io" value="27"/>
+    <set param="pcw_preset_mio_27" value="ENET Reset" />
+    <set param="pcw_mio_mio[27]_signal" value="reset" />
+    <set param="pcw_mio_mio[27]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[27]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 28" strength="5">
+    <set param="pcw_enet_reset_io" value="28"/>
+    <set param="pcw_preset_mio_28" value="ENET Reset" />
+    <set param="pcw_mio_mio[28]_signal" value="reset" />
+    <set param="pcw_mio_mio[28]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[28]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 29" strength="5">
+    <set param="pcw_enet_reset_io" value="29"/>
+    <set param="pcw_preset_mio_29" value="ENET Reset" />
+    <set param="pcw_mio_mio[29]_signal" value="reset" />
+    <set param="pcw_mio_mio[29]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[29]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 30" strength="5">
+    <set param="pcw_enet_reset_io" value="30"/>
+    <set param="pcw_preset_mio_30" value="ENET Reset" />
+    <set param="pcw_mio_mio[30]_signal" value="reset" />
+    <set param="pcw_mio_mio[30]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[30]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 31" strength="5">
+    <set param="pcw_enet_reset_io" value="31"/>
+    <set param="pcw_preset_mio_31" value="ENET Reset" />
+    <set param="pcw_mio_mio[31]_signal" value="reset" />
+    <set param="pcw_mio_mio[31]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[31]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 32" strength="5">
+    <set param="pcw_enet_reset_io" value="32"/>
+    <set param="pcw_preset_mio_32" value="ENET Reset" />
+    <set param="pcw_mio_mio[32]_signal" value="reset" />
+    <set param="pcw_mio_mio[32]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[32]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 33" strength="5">
+    <set param="pcw_enet_reset_io" value="33"/>
+    <set param="pcw_preset_mio_33" value="ENET Reset" />
+    <set param="pcw_mio_mio[33]_signal" value="reset" />
+    <set param="pcw_mio_mio[33]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[33]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 34" strength="5">
+    <set param="pcw_enet_reset_io" value="34"/>
+    <set param="pcw_preset_mio_34" value="ENET Reset" />
+    <set param="pcw_mio_mio[34]_signal" value="reset" />
+    <set param="pcw_mio_mio[34]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[34]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 35" strength="5">
+    <set param="pcw_enet_reset_io" value="35"/>
+    <set param="pcw_preset_mio_35" value="ENET Reset" />
+    <set param="pcw_mio_mio[35]_signal" value="reset" />
+    <set param="pcw_mio_mio[35]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[35]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 36" strength="5">
+    <set param="pcw_enet_reset_io" value="36"/>
+    <set param="pcw_preset_mio_36" value="ENET Reset" />
+    <set param="pcw_mio_mio[36]_signal" value="reset" />
+    <set param="pcw_mio_mio[36]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[36]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 37" strength="5">
+    <set param="pcw_enet_reset_io" value="37"/>
+    <set param="pcw_preset_mio_37" value="ENET Reset" />
+    <set param="pcw_mio_mio[37]_signal" value="reset" />
+    <set param="pcw_mio_mio[37]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[37]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 38" strength="5">
+    <set param="pcw_enet_reset_io" value="38"/>
+    <set param="pcw_preset_mio_38" value="ENET Reset" />
+    <set param="pcw_mio_mio[38]_signal" value="reset" />
+    <set param="pcw_mio_mio[38]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[38]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 39" strength="5">
+    <set param="pcw_enet_reset_io" value="39"/>
+    <set param="pcw_preset_mio_39" value="ENET Reset" />
+    <set param="pcw_mio_mio[39]_signal" value="reset" />
+    <set param="pcw_mio_mio[39]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[39]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 40" strength="5">
+    <set param="pcw_enet_reset_io" value="40"/>
+    <set param="pcw_preset_mio_40" value="ENET Reset" />
+    <set param="pcw_mio_mio[40]_signal" value="reset" />
+    <set param="pcw_mio_mio[40]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[40]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 41" strength="5">
+    <set param="pcw_enet_reset_io" value="41"/>
+    <set param="pcw_preset_mio_41" value="ENET Reset" />
+    <set param="pcw_mio_mio[41]_signal" value="reset" />
+    <set param="pcw_mio_mio[41]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[41]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 42" strength="5">
+    <set param="pcw_enet_reset_io" value="42"/>
+    <set param="pcw_preset_mio_42" value="ENET Reset" />
+    <set param="pcw_mio_mio[42]_signal" value="reset" />
+    <set param="pcw_mio_mio[42]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[42]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 43" strength="5">
+    <set param="pcw_enet_reset_io" value="43"/>
+    <set param="pcw_preset_mio_43" value="ENET Reset" />
+    <set param="pcw_mio_mio[43]_signal" value="reset" />
+    <set param="pcw_mio_mio[43]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[43]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 44" strength="5">
+    <set param="pcw_enet_reset_io" value="44"/>
+    <set param="pcw_preset_mio_44" value="ENET Reset" />
+    <set param="pcw_mio_mio[44]_signal" value="reset" />
+    <set param="pcw_mio_mio[44]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[44]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 45" strength="5">
+    <set param="pcw_enet_reset_io" value="45"/>
+    <set param="pcw_preset_mio_45" value="ENET Reset" />
+    <set param="pcw_mio_mio[45]_signal" value="reset" />
+    <set param="pcw_mio_mio[45]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[45]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 46" strength="5">
+    <set param="pcw_enet_reset_io" value="46"/>
+    <set param="pcw_preset_mio_46" value="ENET Reset" />
+    <set param="pcw_mio_mio[46]_signal" value="reset" />
+    <set param="pcw_mio_mio[46]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[46]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 47" strength="5">
+    <set param="pcw_enet_reset_io" value="47"/>
+    <set param="pcw_preset_mio_47" value="ENET Reset" />
+    <set param="pcw_mio_mio[47]_signal" value="reset" />
+    <set param="pcw_mio_mio[47]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[47]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 48" strength="5">
+    <set param="pcw_enet_reset_io" value="48"/>
+    <set param="pcw_preset_mio_48" value="ENET Reset" />
+    <set param="pcw_mio_mio[48]_signal" value="reset" />
+    <set param="pcw_mio_mio[48]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[48]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 49" strength="5">
+    <set param="pcw_enet_reset_io" value="49"/>
+    <set param="pcw_preset_mio_49" value="ENET Reset" />
+    <set param="pcw_mio_mio[49]_signal" value="reset" />
+    <set param="pcw_mio_mio[49]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[49]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 50" strength="5">
+    <set param="pcw_enet_reset_io" value="50"/>
+    <set param="pcw_preset_mio_50" value="ENET Reset" />
+    <set param="pcw_mio_mio[50]_signal" value="reset" />
+    <set param="pcw_mio_mio[50]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[50]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 51" strength="5">
+    <set param="pcw_enet_reset_io" value="51"/>
+    <set param="pcw_preset_mio_51" value="ENET Reset" />
+    <set param="pcw_mio_mio[51]_signal" value="reset" />
+    <set param="pcw_mio_mio[51]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[51]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 52" strength="5">
+    <set param="pcw_enet_reset_io" value="52"/>
+    <set param="pcw_preset_mio_52" value="ENET Reset" />
+    <set param="pcw_mio_mio[52]_signal" value="reset" />
+    <set param="pcw_mio_mio[52]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[52]_signalgroup" value="ENET Reset" />
+  </preset>
+  <preset param="pcw_enet0_reset_io" name="MIO 53" strength="5">
+    <set param="pcw_enet_reset_io" value="53"/>
+    <set param="pcw_preset_mio_53" value="ENET Reset" />
+    <set param="pcw_mio_mio[53]_signal" value="reset" />
+    <set param="pcw_mio_mio[53]_peripheral" value="ENET Reset" />
+    <set param="pcw_mio_mio[53]_signalgroup" value="ENET Reset" />
+  </preset>
+
+
+  <preset param="pcw_usb0_reset_io" name="MIO 0" strength="5">
+    <set param="pcw_usb_reset_io" value="0"/>
+    <set param="pcw_preset_mio_0" value="USB Reset" />
+    <set param="pcw_mio_mio[0]_signal" value="reset" />
+    <set param="pcw_mio_mio[0]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[0]_signalgroup" value="USB Reset" />
+
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 1" strength="5">
+    <set param="pcw_usb_reset_io" value="1"/>
+    <set param="pcw_preset_mio_1" value="USB Reset" />
+    <set param="pcw_mio_mio[1]_signal" value="reset" />
+    <set param="pcw_mio_mio[1]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[1]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 2" strength="5">
+    <set param="pcw_usb_reset_io" value="2"/>
+    <set param="pcw_preset_mio_2" value="USB Reset" />
+    <set param="pcw_mio_mio[2]_signal" value="reset" />
+    <set param="pcw_mio_mio[2]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[2]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 3" strength="5">
+    <set param="pcw_usb_reset_io" value="3"/>
+    <set param="pcw_preset_mio_3" value="USB Reset" />
+    <set param="pcw_mio_mio[3]_signal" value="reset" />
+    <set param="pcw_mio_mio[3]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[3]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 4" strength="5">
+    <set param="pcw_usb_reset_io" value="4"/>
+    <set param="pcw_preset_mio_4" value="USB Reset" />
+    <set param="pcw_mio_mio[4]_signal" value="reset" />
+    <set param="pcw_mio_mio[4]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[4]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 5" strength="5">
+    <set param="pcw_usb_reset_io" value="5"/>
+    <set param="pcw_preset_mio_5" value="USB Reset" />
+    <set param="pcw_mio_mio[5]_signal" value="reset" />
+    <set param="pcw_mio_mio[5]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[5]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 6" strength="5">
+    <set param="pcw_usb_reset_io" value="6"/>
+    <set param="pcw_preset_mio_6" value="USB Reset" />
+    <set param="pcw_mio_mio[6]_signal" value="reset" />
+    <set param="pcw_mio_mio[6]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[6]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 7" strength="5">
+    <set param="pcw_usb_reset_io" value="7"/>
+    <set param="pcw_preset_mio_7" value="USB Reset" />
+    <set param="pcw_mio_mio[7]_signal" value="reset" />
+    <set param="pcw_mio_mio[7]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[7]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 8" strength="5">
+    <set param="pcw_usb_reset_io" value="8"/>
+    <set param="pcw_preset_mio_8" value="USB Reset" />
+    <set param="pcw_mio_mio[8]_signal" value="reset" />
+    <set param="pcw_mio_mio[8]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[8]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 9" strength="5">
+    <set param="pcw_usb_reset_io" value="9"/>
+    <set param="pcw_preset_mio_9" value="USB Reset" />
+    <set param="pcw_mio_mio[9]_signal" value="reset" />
+    <set param="pcw_mio_mio[9]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[9]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 10" strength="5">
+    <set param="pcw_usb_reset_io" value="10"/>
+    <set param="pcw_preset_mio_10" value="USB Reset" />
+    <set param="pcw_mio_mio[10]_signal" value="reset" />
+    <set param="pcw_mio_mio[10]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[10]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 11" strength="5">
+    <set param="pcw_usb_reset_io" value="11"/>
+    <set param="pcw_preset_mio_11" value="USB Reset" />
+    <set param="pcw_mio_mio[11]_signal" value="reset" />
+    <set param="pcw_mio_mio[11]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[11]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 12" strength="5">
+    <set param="pcw_usb_reset_io" value="12"/>
+    <set param="pcw_preset_mio_12" value="USB Reset" />
+    <set param="pcw_mio_mio[12]_signal" value="reset" />
+    <set param="pcw_mio_mio[12]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[12]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 13" strength="5">
+    <set param="pcw_usb_reset_io" value="13"/>
+    <set param="pcw_preset_mio_13" value="USB Reset" />
+    <set param="pcw_mio_mio[13]_signal" value="reset" />
+    <set param="pcw_mio_mio[13]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[13]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 14" strength="5">
+    <set param="pcw_usb_reset_io" value="14"/>
+    <set param="pcw_preset_mio_14" value="USB Reset" />
+    <set param="pcw_mio_mio[14]_signal" value="reset" />
+    <set param="pcw_mio_mio[14]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[14]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 15" strength="5">
+    <set param="pcw_usb_reset_io" value="15"/>
+    <set param="pcw_preset_mio_15" value="USB Reset" />
+    <set param="pcw_mio_mio[15]_signal" value="reset" />
+    <set param="pcw_mio_mio[15]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[15]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 16" strength="5">
+    <set param="pcw_usb_reset_io" value="16"/>
+    <set param="pcw_preset_mio_16" value="USB Reset" />
+    <set param="pcw_mio_mio[16]_signal" value="reset" />
+    <set param="pcw_mio_mio[16]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[16]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 17" strength="5">
+    <set param="pcw_usb_reset_io" value="17"/>
+    <set param="pcw_preset_mio_17" value="USB Reset" />
+    <set param="pcw_mio_mio[17]_signal" value="reset" />
+    <set param="pcw_mio_mio[17]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[17]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 18" strength="5">
+    <set param="pcw_usb_reset_io" value="18"/>
+    <set param="pcw_preset_mio_18" value="USB Reset" />
+    <set param="pcw_mio_mio[18]_signal" value="reset" />
+    <set param="pcw_mio_mio[18]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[18]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 19" strength="5">
+    <set param="pcw_usb_reset_io" value="19"/>
+    <set param="pcw_preset_mio_19" value="USB Reset" />
+    <set param="pcw_mio_mio[19]_signal" value="reset" />
+    <set param="pcw_mio_mio[19]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[19]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 20" strength="5">
+    <set param="pcw_usb_reset_io" value="20"/>
+    <set param="pcw_preset_mio_20" value="USB Reset" />
+    <set param="pcw_mio_mio[20]_signal" value="reset" />
+    <set param="pcw_mio_mio[20]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[20]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 21" strength="5">
+    <set param="pcw_usb_reset_io" value="21"/>
+    <set param="pcw_preset_mio_21" value="USB Reset" />
+    <set param="pcw_mio_mio[21]_signal" value="reset" />
+    <set param="pcw_mio_mio[21]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[21]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 22" strength="5">
+    <set param="pcw_usb_reset_io" value="22"/>
+    <set param="pcw_preset_mio_22" value="USB Reset" />
+    <set param="pcw_mio_mio[22]_signal" value="reset" />
+    <set param="pcw_mio_mio[22]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[22]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 23" strength="5">
+    <set param="pcw_usb_reset_io" value="23"/>
+    <set param="pcw_preset_mio_23" value="USB Reset" />
+    <set param="pcw_mio_mio[23]_signal" value="reset" />
+    <set param="pcw_mio_mio[23]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[23]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 24" strength="5">
+    <set param="pcw_usb_reset_io" value="24"/>
+    <set param="pcw_preset_mio_24" value="USB Reset" />
+    <set param="pcw_mio_mio[24]_signal" value="reset" />
+    <set param="pcw_mio_mio[24]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[24]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 25" strength="5">
+    <set param="pcw_usb_reset_io" value="25"/>
+    <set param="pcw_preset_mio_25" value="USB Reset" />
+    <set param="pcw_mio_mio[25]_signal" value="reset" />
+    <set param="pcw_mio_mio[25]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[25]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 26" strength="5">
+    <set param="pcw_usb_reset_io" value="26"/>
+    <set param="pcw_preset_mio_26" value="USB Reset" />
+    <set param="pcw_mio_mio[26]_signal" value="reset" />
+    <set param="pcw_mio_mio[26]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[26]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 27" strength="5">
+    <set param="pcw_usb_reset_io" value="27"/>
+    <set param="pcw_preset_mio_27" value="USB Reset" />
+    <set param="pcw_mio_mio[27]_signal" value="reset" />
+    <set param="pcw_mio_mio[27]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[27]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 28" strength="5">
+    <set param="pcw_usb_reset_io" value="28"/>
+    <set param="pcw_preset_mio_28" value="USB Reset" />
+    <set param="pcw_mio_mio[28]_signal" value="reset" />
+    <set param="pcw_mio_mio[28]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[28]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 29" strength="5">
+    <set param="pcw_usb_reset_io" value="29"/>
+    <set param="pcw_preset_mio_29" value="USB Reset" />
+    <set param="pcw_mio_mio[29]_signal" value="reset" />
+    <set param="pcw_mio_mio[29]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[29]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 30" strength="5">
+    <set param="pcw_usb_reset_io" value="30"/>
+    <set param="pcw_preset_mio_30" value="USB Reset" />
+    <set param="pcw_mio_mio[30]_signal" value="reset" />
+    <set param="pcw_mio_mio[30]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[30]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 31" strength="5">
+    <set param="pcw_usb_reset_io" value="31"/>
+    <set param="pcw_preset_mio_31" value="USB Reset" />
+    <set param="pcw_mio_mio[31]_signal" value="reset" />
+    <set param="pcw_mio_mio[31]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[31]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 32" strength="5">
+    <set param="pcw_usb_reset_io" value="32"/>
+    <set param="pcw_preset_mio_32" value="USB Reset" />
+    <set param="pcw_mio_mio[32]_signal" value="reset" />
+    <set param="pcw_mio_mio[32]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[32]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 33" strength="5">
+    <set param="pcw_usb_reset_io" value="33"/>
+    <set param="pcw_preset_mio_33" value="USB Reset" />
+    <set param="pcw_mio_mio[33]_signal" value="reset" />
+    <set param="pcw_mio_mio[33]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[33]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 34" strength="5">
+    <set param="pcw_usb_reset_io" value="34"/>
+    <set param="pcw_preset_mio_34" value="USB Reset" />
+    <set param="pcw_mio_mio[34]_signal" value="reset" />
+    <set param="pcw_mio_mio[34]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[34]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 35" strength="5">
+    <set param="pcw_usb_reset_io" value="35"/>
+    <set param="pcw_preset_mio_35" value="USB Reset" />
+    <set param="pcw_mio_mio[35]_signal" value="reset" />
+    <set param="pcw_mio_mio[35]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[35]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 36" strength="5">
+    <set param="pcw_usb_reset_io" value="36"/>
+    <set param="pcw_preset_mio_36" value="USB Reset" />
+    <set param="pcw_mio_mio[36]_signal" value="reset" />
+    <set param="pcw_mio_mio[36]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[36]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 37" strength="5">
+    <set param="pcw_usb_reset_io" value="37"/>
+    <set param="pcw_preset_mio_37" value="USB Reset" />
+    <set param="pcw_mio_mio[37]_signal" value="reset" />
+    <set param="pcw_mio_mio[37]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[37]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 38" strength="5">
+    <set param="pcw_usb_reset_io" value="38"/>
+    <set param="pcw_preset_mio_38" value="USB Reset" />
+    <set param="pcw_mio_mio[38]_signal" value="reset" />
+    <set param="pcw_mio_mio[38]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[38]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 39" strength="5">
+    <set param="pcw_usb_reset_io" value="39"/>
+    <set param="pcw_preset_mio_39" value="USB Reset" />
+    <set param="pcw_mio_mio[39]_signal" value="reset" />
+    <set param="pcw_mio_mio[39]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[39]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 40" strength="5">
+    <set param="pcw_usb_reset_io" value="40"/>
+    <set param="pcw_preset_mio_40" value="USB Reset" />
+    <set param="pcw_mio_mio[40]_signal" value="reset" />
+    <set param="pcw_mio_mio[40]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[40]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 41" strength="5">
+    <set param="pcw_usb_reset_io" value="41"/>
+    <set param="pcw_preset_mio_41" value="USB Reset" />
+    <set param="pcw_mio_mio[41]_signal" value="reset" />
+    <set param="pcw_mio_mio[41]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[41]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 42" strength="5">
+    <set param="pcw_usb_reset_io" value="42"/>
+    <set param="pcw_preset_mio_42" value="USB Reset" />
+    <set param="pcw_mio_mio[42]_signal" value="reset" />
+    <set param="pcw_mio_mio[42]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[42]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 43" strength="5">
+    <set param="pcw_usb_reset_io" value="43"/>
+    <set param="pcw_preset_mio_43" value="USB Reset" />
+    <set param="pcw_mio_mio[43]_signal" value="reset" />
+    <set param="pcw_mio_mio[43]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[43]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 44" strength="5">
+    <set param="pcw_usb_reset_io" value="44"/>
+    <set param="pcw_preset_mio_44" value="USB Reset" />
+    <set param="pcw_mio_mio[44]_signal" value="reset" />
+    <set param="pcw_mio_mio[44]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[44]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 45" strength="5">
+    <set param="pcw_usb_reset_io" value="45"/>
+    <set param="pcw_preset_mio_45" value="USB Reset" />
+    <set param="pcw_mio_mio[45]_signal" value="reset" />
+    <set param="pcw_mio_mio[45]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[45]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 46" strength="5">
+    <set param="pcw_usb_reset_io" value="46"/>
+    <set param="pcw_preset_mio_46" value="USB Reset" />
+    <set param="pcw_mio_mio[46]_signal" value="reset" />
+    <set param="pcw_mio_mio[46]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[46]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 47" strength="5">
+    <set param="pcw_usb_reset_io" value="47"/>
+    <set param="pcw_preset_mio_47" value="USB Reset" />
+    <set param="pcw_mio_mio[47]_signal" value="reset" />
+    <set param="pcw_mio_mio[47]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[47]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 48" strength="5">
+    <set param="pcw_usb_reset_io" value="48"/>
+    <set param="pcw_preset_mio_48" value="USB Reset" />
+    <set param="pcw_mio_mio[48]_signal" value="reset" />
+    <set param="pcw_mio_mio[48]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[48]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 49" strength="5">
+    <set param="pcw_usb_reset_io" value="49"/>
+    <set param="pcw_preset_mio_49" value="USB Reset" />
+    <set param="pcw_mio_mio[49]_signal" value="reset" />
+    <set param="pcw_mio_mio[49]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[49]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 50" strength="5">
+    <set param="pcw_usb_reset_io" value="50"/>
+    <set param="pcw_preset_mio_50" value="USB Reset" />
+    <set param="pcw_mio_mio[50]_signal" value="reset" />
+    <set param="pcw_mio_mio[50]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[50]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 51" strength="5">
+    <set param="pcw_usb_reset_io" value="51"/>
+    <set param="pcw_preset_mio_51" value="USB Reset" />
+    <set param="pcw_mio_mio[51]_signal" value="reset" />
+    <set param="pcw_mio_mio[51]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[51]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 52" strength="5">
+    <set param="pcw_usb_reset_io" value="52"/>
+    <set param="pcw_preset_mio_52" value="USB Reset" />
+    <set param="pcw_mio_mio[52]_signal" value="reset" />
+    <set param="pcw_mio_mio[52]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[52]_signalgroup" value="USB Reset" />
+  </preset>
+  <preset param="pcw_usb0_reset_io" name="MIO 53" strength="5">
+    <set param="pcw_usb_reset_io" value="53"/>
+    <set param="pcw_preset_mio_53" value="USB Reset" />
+    <set param="pcw_mio_mio[53]_signal" value="reset" />
+    <set param="pcw_mio_mio[53]_peripheral" value="USB Reset" />
+    <set param="pcw_mio_mio[53]_signalgroup" value="USB Reset" />
+  </preset>
+
+  <preset param="pcw_i2c0_reset_io" name="MIO 0" strength="5">
+    <set param="pcw_i2c_reset_io" value="0"/>
+    <set param="pcw_preset_mio_0" value="I2C Reset" />
+    <set param="pcw_mio_mio[0]_signal" value="reset" />
+    <set param="pcw_mio_mio[0]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[0]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 1" strength="5">
+    <set param="pcw_i2c_reset_io" value="1"/>
+    <set param="pcw_preset_mio_1" value="I2C Reset" />
+    <set param="pcw_mio_mio[1]_signal" value="reset" />
+    <set param="pcw_mio_mio[1]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[1]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 2" strength="5">
+    <set param="pcw_i2c_reset_io" value="2"/>
+    <set param="pcw_preset_mio_2" value="I2C Reset" />
+    <set param="pcw_mio_mio[2]_signal" value="reset" />
+    <set param="pcw_mio_mio[2]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[2]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 3" strength="5">
+    <set param="pcw_i2c_reset_io" value="3"/>
+    <set param="pcw_preset_mio_3" value="I2C Reset" />
+    <set param="pcw_mio_mio[3]_signal" value="reset" />
+    <set param="pcw_mio_mio[3]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[3]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 4" strength="5">
+    <set param="pcw_i2c_reset_io" value="4"/>
+    <set param="pcw_preset_mio_4" value="I2C Reset" />
+    <set param="pcw_mio_mio[4]_signal" value="reset" />
+    <set param="pcw_mio_mio[4]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[4]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 5" strength="5">
+    <set param="pcw_i2c_reset_io" value="5"/>
+    <set param="pcw_preset_mio_5" value="I2C Reset" />
+    <set param="pcw_mio_mio[5]_signal" value="reset" />
+    <set param="pcw_mio_mio[5]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[5]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 6" strength="5">
+    <set param="pcw_i2c_reset_io" value="6"/>
+    <set param="pcw_preset_mio_6" value="I2C Reset" />
+    <set param="pcw_mio_mio[6]_signal" value="reset" />
+    <set param="pcw_mio_mio[6]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[6]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 7" strength="5">
+    <set param="pcw_i2c_reset_io" value="7"/>
+    <set param="pcw_preset_mio_7" value="I2C Reset" />
+    <set param="pcw_mio_mio[7]_signal" value="reset" />
+    <set param="pcw_mio_mio[7]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[7]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 8" strength="5">
+    <set param="pcw_i2c_reset_io" value="8"/>
+    <set param="pcw_preset_mio_8" value="I2C Reset" />
+    <set param="pcw_mio_mio[8]_signal" value="reset" />
+    <set param="pcw_mio_mio[8]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[8]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 9" strength="5">
+    <set param="pcw_i2c_reset_io" value="9"/>
+    <set param="pcw_preset_mio_9" value="I2C Reset" />
+    <set param="pcw_mio_mio[9]_signal" value="reset" />
+    <set param="pcw_mio_mio[9]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[9]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 10" strength="5">
+    <set param="pcw_i2c_reset_io" value="10"/>
+    <set param="pcw_preset_mio_10" value="I2C Reset" />
+    <set param="pcw_mio_mio[10]_signal" value="reset" />
+    <set param="pcw_mio_mio[10]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[10]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 11" strength="5">
+    <set param="pcw_i2c_reset_io" value="11"/>
+    <set param="pcw_preset_mio_11" value="I2C Reset" />
+    <set param="pcw_mio_mio[11]_signal" value="reset" />
+    <set param="pcw_mio_mio[11]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[11]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 12" strength="5">
+    <set param="pcw_i2c_reset_io" value="12"/>
+    <set param="pcw_preset_mio_12" value="I2C Reset" />
+    <set param="pcw_mio_mio[12]_signal" value="reset" />
+    <set param="pcw_mio_mio[12]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[12]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 13" strength="5">
+    <set param="pcw_i2c_reset_io" value="13"/>
+    <set param="pcw_preset_mio_13" value="I2C Reset" />
+    <set param="pcw_mio_mio[13]_signal" value="reset" />
+    <set param="pcw_mio_mio[13]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[13]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 14" strength="5">
+    <set param="pcw_i2c_reset_io" value="14"/>
+    <set param="pcw_preset_mio_14" value="I2C Reset" />
+    <set param="pcw_mio_mio[14]_signal" value="reset" />
+    <set param="pcw_mio_mio[14]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[14]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 15" strength="5">
+    <set param="pcw_i2c_reset_io" value="15"/>
+    <set param="pcw_preset_mio_15" value="I2C Reset" />
+    <set param="pcw_mio_mio[15]_signal" value="reset" />
+    <set param="pcw_mio_mio[15]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[15]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 16" strength="5">
+    <set param="pcw_i2c_reset_io" value="16"/>
+    <set param="pcw_preset_mio_16" value="I2C Reset" />
+    <set param="pcw_mio_mio[16]_signal" value="reset" />
+    <set param="pcw_mio_mio[16]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[16]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 17" strength="5">
+    <set param="pcw_i2c_reset_io" value="17"/>
+    <set param="pcw_preset_mio_17" value="I2C Reset" />
+    <set param="pcw_mio_mio[17]_signal" value="reset" />
+    <set param="pcw_mio_mio[17]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[17]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 18" strength="5">
+    <set param="pcw_i2c_reset_io" value="18"/>
+    <set param="pcw_preset_mio_18" value="I2C Reset" />
+    <set param="pcw_mio_mio[18]_signal" value="reset" />
+    <set param="pcw_mio_mio[18]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[18]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 19" strength="5">
+    <set param="pcw_i2c_reset_io" value="19"/>
+    <set param="pcw_preset_mio_19" value="I2C Reset" />
+    <set param="pcw_mio_mio[19]_signal" value="reset" />
+    <set param="pcw_mio_mio[19]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[19]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 20" strength="5">
+    <set param="pcw_i2c_reset_io" value="20"/>
+    <set param="pcw_preset_mio_20" value="I2C Reset" />
+    <set param="pcw_mio_mio[20]_signal" value="reset" />
+    <set param="pcw_mio_mio[20]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[20]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 21" strength="5">
+    <set param="pcw_i2c_reset_io" value="21"/>
+    <set param="pcw_preset_mio_21" value="I2C Reset" />
+    <set param="pcw_mio_mio[21]_signal" value="reset" />
+    <set param="pcw_mio_mio[21]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[21]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 22" strength="5">
+    <set param="pcw_i2c_reset_io" value="22"/>
+    <set param="pcw_preset_mio_22" value="I2C Reset" />
+    <set param="pcw_mio_mio[22]_signal" value="reset" />
+    <set param="pcw_mio_mio[22]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[22]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 23" strength="5">
+    <set param="pcw_i2c_reset_io" value="23"/>
+    <set param="pcw_preset_mio_23" value="I2C Reset" />
+    <set param="pcw_mio_mio[23]_signal" value="reset" />
+    <set param="pcw_mio_mio[23]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[23]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 24" strength="5">
+    <set param="pcw_i2c_reset_io" value="24"/>
+    <set param="pcw_preset_mio_24" value="I2C Reset" />
+    <set param="pcw_mio_mio[24]_signal" value="reset" />
+    <set param="pcw_mio_mio[24]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[24]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 25" strength="5">
+    <set param="pcw_i2c_reset_io" value="25"/>
+    <set param="pcw_preset_mio_25" value="I2C Reset" />
+    <set param="pcw_mio_mio[25]_signal" value="reset" />
+    <set param="pcw_mio_mio[25]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[25]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 26" strength="5">
+    <set param="pcw_i2c_reset_io" value="26"/>
+    <set param="pcw_preset_mio_26" value="I2C Reset" />
+    <set param="pcw_mio_mio[26]_signal" value="reset" />
+    <set param="pcw_mio_mio[26]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[26]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 27" strength="5">
+    <set param="pcw_i2c_reset_io" value="27"/>
+    <set param="pcw_preset_mio_27" value="I2C Reset" />
+    <set param="pcw_mio_mio[27]_signal" value="reset" />
+    <set param="pcw_mio_mio[27]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[27]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 28" strength="5">
+    <set param="pcw_i2c_reset_io" value="28"/>
+    <set param="pcw_preset_mio_28" value="I2C Reset" />
+    <set param="pcw_mio_mio[28]_signal" value="reset" />
+    <set param="pcw_mio_mio[28]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[28]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 29" strength="5">
+    <set param="pcw_i2c_reset_io" value="29"/>
+    <set param="pcw_preset_mio_29" value="I2C Reset" />
+    <set param="pcw_mio_mio[29]_signal" value="reset" />
+    <set param="pcw_mio_mio[29]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[29]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 30" strength="5">
+    <set param="pcw_i2c_reset_io" value="30"/>
+    <set param="pcw_preset_mio_30" value="I2C Reset" />
+    <set param="pcw_mio_mio[30]_signal" value="reset" />
+    <set param="pcw_mio_mio[30]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[30]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 31" strength="5">
+    <set param="pcw_i2c_reset_io" value="31"/>
+    <set param="pcw_preset_mio_31" value="I2C Reset" />
+    <set param="pcw_mio_mio[31]_signal" value="reset" />
+    <set param="pcw_mio_mio[31]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[31]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 32" strength="5">
+    <set param="pcw_i2c_reset_io" value="32"/>
+    <set param="pcw_preset_mio_32" value="I2C Reset" />
+    <set param="pcw_mio_mio[32]_signal" value="reset" />
+    <set param="pcw_mio_mio[32]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[32]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 33" strength="5">
+    <set param="pcw_i2c_reset_io" value="33"/>
+    <set param="pcw_preset_mio_33" value="I2C Reset" />
+    <set param="pcw_mio_mio[33]_signal" value="reset" />
+    <set param="pcw_mio_mio[33]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[33]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 34" strength="5">
+    <set param="pcw_i2c_reset_io" value="34"/>
+    <set param="pcw_preset_mio_34" value="I2C Reset" />
+    <set param="pcw_mio_mio[34]_signal" value="reset" />
+    <set param="pcw_mio_mio[34]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[34]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 35" strength="5">
+    <set param="pcw_i2c_reset_io" value="35"/>
+    <set param="pcw_preset_mio_35" value="I2C Reset" />
+    <set param="pcw_mio_mio[35]_signal" value="reset" />
+    <set param="pcw_mio_mio[35]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[35]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 36" strength="5">
+    <set param="pcw_i2c_reset_io" value="36"/>
+    <set param="pcw_preset_mio_36" value="I2C Reset" />
+    <set param="pcw_mio_mio[36]_signal" value="reset" />
+    <set param="pcw_mio_mio[36]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[36]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 37" strength="5">
+    <set param="pcw_i2c_reset_io" value="37"/>
+    <set param="pcw_preset_mio_37" value="I2C Reset" />
+    <set param="pcw_mio_mio[37]_signal" value="reset" />
+    <set param="pcw_mio_mio[37]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[37]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 38" strength="5">
+    <set param="pcw_i2c_reset_io" value="38"/>
+    <set param="pcw_preset_mio_38" value="I2C Reset" />
+    <set param="pcw_mio_mio[38]_signal" value="reset" />
+    <set param="pcw_mio_mio[38]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[38]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 39" strength="5">
+    <set param="pcw_i2c_reset_io" value="39"/>
+    <set param="pcw_preset_mio_39" value="I2C Reset" />
+    <set param="pcw_mio_mio[39]_signal" value="reset" />
+    <set param="pcw_mio_mio[39]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[39]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 40" strength="5">
+    <set param="pcw_i2c_reset_io" value="40"/>
+    <set param="pcw_preset_mio_40" value="I2C Reset" />
+    <set param="pcw_mio_mio[40]_signal" value="reset" />
+    <set param="pcw_mio_mio[40]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[40]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 41" strength="5">
+    <set param="pcw_i2c_reset_io" value="41"/>
+    <set param="pcw_preset_mio_41" value="I2C Reset" />
+    <set param="pcw_mio_mio[41]_signal" value="reset" />
+    <set param="pcw_mio_mio[41]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[41]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 42" strength="5">
+    <set param="pcw_i2c_reset_io" value="42"/>
+    <set param="pcw_preset_mio_42" value="I2C Reset" />
+    <set param="pcw_mio_mio[42]_signal" value="reset" />
+    <set param="pcw_mio_mio[42]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[42]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 43" strength="5">
+    <set param="pcw_i2c_reset_io" value="43"/>
+    <set param="pcw_preset_mio_43" value="I2C Reset" />
+    <set param="pcw_mio_mio[43]_signal" value="reset" />
+    <set param="pcw_mio_mio[43]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[43]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 44" strength="5">
+    <set param="pcw_i2c_reset_io" value="44"/>
+    <set param="pcw_preset_mio_44" value="I2C Reset" />
+    <set param="pcw_mio_mio[44]_signal" value="reset" />
+    <set param="pcw_mio_mio[44]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[44]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 45" strength="5">
+    <set param="pcw_i2c_reset_io" value="45"/>
+    <set param="pcw_preset_mio_45" value="I2C Reset" />
+    <set param="pcw_mio_mio[45]_signal" value="reset" />
+    <set param="pcw_mio_mio[45]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[45]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 46" strength="5">
+    <set param="pcw_i2c_reset_io" value="46"/>
+    <set param="pcw_preset_mio_46" value="I2C Reset" />
+    <set param="pcw_mio_mio[46]_signal" value="reset" />
+    <set param="pcw_mio_mio[46]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[46]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 47" strength="5">
+    <set param="pcw_i2c_reset_io" value="47"/>
+    <set param="pcw_preset_mio_47" value="I2C Reset" />
+    <set param="pcw_mio_mio[47]_signal" value="reset" />
+    <set param="pcw_mio_mio[47]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[47]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 48" strength="5">
+    <set param="pcw_i2c_reset_io" value="48"/>
+    <set param="pcw_preset_mio_48" value="I2C Reset" />
+    <set param="pcw_mio_mio[48]_signal" value="reset" />
+    <set param="pcw_mio_mio[48]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[48]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 49" strength="5">
+    <set param="pcw_i2c_reset_io" value="49"/>
+    <set param="pcw_preset_mio_49" value="I2C Reset" />
+    <set param="pcw_mio_mio[49]_signal" value="reset" />
+    <set param="pcw_mio_mio[49]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[49]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 50" strength="5">
+    <set param="pcw_i2c_reset_io" value="50"/>
+    <set param="pcw_preset_mio_50" value="I2C Reset" />
+    <set param="pcw_mio_mio[50]_signal" value="reset" />
+    <set param="pcw_mio_mio[50]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[50]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 51" strength="5">
+    <set param="pcw_i2c_reset_io" value="51"/>
+    <set param="pcw_preset_mio_51" value="I2C Reset" />
+    <set param="pcw_mio_mio[51]_signal" value="reset" />
+    <set param="pcw_mio_mio[51]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[51]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 52" strength="5">
+    <set param="pcw_i2c_reset_io" value="52"/>
+    <set param="pcw_preset_mio_52" value="I2C Reset" />
+    <set param="pcw_mio_mio[52]_signal" value="reset" />
+    <set param="pcw_mio_mio[52]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[52]_signalgroup" value="I2C Reset" />
+  </preset>
+  <preset param="pcw_i2c0_reset_io" name="MIO 53" strength="5">
+    <set param="pcw_i2c_reset_io" value="53"/>
+    <set param="pcw_preset_mio_53" value="I2C Reset" />
+    <set param="pcw_mio_mio[53]_signal" value="reset" />
+    <set param="pcw_mio_mio[53]_peripheral" value="I2C Reset" />
+    <set param="pcw_mio_mio[53]_signalgroup" value="I2C Reset" />
+  </preset>
+
+
+
+</presets>
+

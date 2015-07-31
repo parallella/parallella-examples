@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE codegen PUBLIC "codegen" "codegen.dtd" >
+<codegen version="">
+  <funcname name="ps7_debug_1_0"/>  
+	<group cmt="Cross Trigger configurations">
+     <group cmt="Unlocking CTI Registers">
+      <force param="ps7_debug_cpu_cti0_LAR_KEY" value="0xC5ACCE55"/>
+	  <force param="ps7_debug_cpu_cti1_LAR_KEY" value="0xC5ACCE55"/>
+	  <force param="ps7_debug_cti_ftm_LAR_KEY" value="0xC5ACCE55"/>
+	 </group>
+	 <group cmt="Enabling CTI modules and channels">
+      <param param="ps7_debug_cpu_cti0_CTICONTROL_GLBEN"/>
+      <param param="ps7_debug_cpu_cti1_CTICONTROL_GLBEN"/>
+      <param param="ps7_debug_cti_ftm_CTICONTROL_GLBEN"/>
+	  <param param="ps7_debug_cpu_cti0_CTIGATE_CTIGATEEN3"/>
+	  <param param="ps7_debug_cpu_cti0_CTIGATE_CTIGATEEN2"/>
+	  <param param="ps7_debug_cpu_cti0_CTIGATE_CTIGATEEN1"/>
+	  <param param="ps7_debug_cpu_cti0_CTIGATE_CTIGATEEN0"/>
+	  <param param="ps7_debug_cpu_cti1_CTIGATE_CTIGATEEN3"/>
+	  <param param="ps7_debug_cpu_cti1_CTIGATE_CTIGATEEN2"/>
+	  <param param="ps7_debug_cpu_cti1_CTIGATE_CTIGATEEN1"/>
+	  <param param="ps7_debug_cpu_cti1_CTIGATE_CTIGATEEN0"/>
+	  <param param="ps7_debug_cti_ftm_CTIGATE_CTIGATEEN3"/>
+	  <param param="ps7_debug_cti_ftm_CTIGATE_CTIGATEEN2"/>
+	  <param param="ps7_debug_cti_ftm_CTIGATE_CTIGATEEN1"/>
+	  <param param="ps7_debug_cti_ftm_CTIGATE_CTIGATEEN0"/>
+	 </group>
+	 <group cmt="Mapping CPU0, CPU1 and FTM events to CTM channels">	 
+      <param param="ps7_debug_cpu_cti0_CTIINEN0_TRIGINEN"/>
+      <param param="ps7_debug_cpu_cti1_CTIINEN0_TRIGINEN"/>
+      <param param="ps7_debug_cpu_cti0_CTIOUTEN0_TRIGOUTEN"/>
+      <param param="ps7_debug_cpu_cti1_CTIOUTEN0_TRIGOUTEN"/>
+      <param param="ps7_debug_cti_ftm_CTIINEN0_TRIGINEN"/>
+      <param param="ps7_debug_cti_ftm_CTIINEN1_TRIGINEN"/>
+      <param param="ps7_debug_cti_ftm_CTIINEN2_TRIGINEN"/>
+      <param param="ps7_debug_cti_ftm_CTIINEN3_TRIGINEN"/>
+      <param param="ps7_debug_cti_ftm_CTIOUTEN0_TRIGOUTEN"/>
+      <param param="ps7_debug_cti_ftm_CTIOUTEN1_TRIGOUTEN"/>
+      <param param="ps7_debug_cti_ftm_CTIOUTEN2_TRIGOUTEN"/>
+      <param param="ps7_debug_cti_ftm_CTIOUTEN3_TRIGOUTEN"/>
+	 </group>
+	</group>
+ </codegen>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE parameters PUBLIC "presets" "presets.dtd" >
+<presets>
+
+  <preset param="pcw_nand_peripheral_enable" name="0" strength="7">
+      <disable param="pcw_nand_nand_io"/>
+      <disable param="pcw_nand_grp_d8_enable"/>
+      <disable param="pcw_nand_peripheral_freqmhz"/>
+  </preset>
+  <preset param="pcw_nand_peripheral_enable" name="" strength="7">
+      <disable param="pcw_nand_nand_io"/>
+      <disable param="pcw_nand_grp_d8_enable"/>
+      <disable param="pcw_nand_peripheral_freqmhz"/>
+  </preset>
+  <preset param="pcw_nand_peripheral_enable" name="1" strength="6">
+      <disable param="pcw_qspi_peripheral_enable"/>
+      <disable param="pcw_qspi_qspi_io"/>
+      <disable param="pcw_qspi_grp_ss1_enable"/>
+      <disable param="pcw_qspi_grp_io1_enable"/>
+      <disable param="pcw_qspi_grp_fbclk_enable"/>
+      <disable param="pcw_nor_peripheral_enable"/>
+      <disable param="pcw_nor_nor_io"/>
+      <disable param="pcw_nor_grp_a25_enable"/>
+      <disable param="pcw_nor_grp_cs0_enable"/>
+      <disable param="pcw_nor_grp_cs1_enable"/>
+      <disable param="pcw_nor_grp_sram_cs0_enable"/>
+      <disable param="pcw_nor_grp_sram_cs1_enable"/>
+      <disable param="pcw_nor_grp_sram_int_enable"/>
+      <set param="pcw_nand_nand_io" value="MIO 0 2.. 14" />   
+      <set param="pcw_smc_peripheral_valid" value="1"/>
+  </preset>
+
+
+
+  <preset param="pcw_nand_grp_d8_enable" name="0" strength="7">
+      <disable param="pcw_nand_grp_d8_io"/>
+  </preset>
+  <preset param="pcw_nand_grp_d8_enable" name="" strength="7">
+      <disable param="pcw_nand_grp_d8_io"/>
+  </preset>
+  <preset param="pcw_nand_grp_d8_enable" name="1" strength="4">
+      <set param="pcw_nand_grp_d8_io" value="MIO 16 .. 23" />   
+      <set param="pcw_nand_internal_mode" value="16"/>
+  </preset>
+
+
+  <preset param="pcw_smc_peripheral_valid" name="1" strength="4">
+    <set param="pcw_smc_peripheral_freqmhz" value="100"/>
+    <set param="pcw_EN_SMC" value="1" />
+  </preset>
+
+
+
+
+
+  <preset param="pcw_nand_nand_io" name="MIO 0 2.. 14" strength="5">
+
+      <set param="pcw_nand_cs_io" value="MIO 0" />
+      <set param="pcw_mio_mio[0]_signal" value="cs" />
+      <set param="pcw_mio_mio[0]_peripheral" value="NAND Flash" />
+      <set param="pcw_mio_mio[0]_signalgroup" value="NAND Flash" />
+      <set param="pcw_preset_mio_0" value="nand_cs" />
+
+      <set param="pcw_nand_ale_io" value="MIO 2" />
+      <set param="pcw_mio_mio[2]_signal" value="ale" />
+      <set param="pcw_mio_mio[2]_peripheral" value="NAND Flash" />
+      <set param="pcw_mio_mio[2]_signalgroup" value="NAND Flash" />
+      <set param="pcw_preset_mio_2" value="nand" />
+
+      <set param="pcw_nand_we_b_io" value="MIO 3" />
+      <set param="pcw_mio_mio[3]_signal" value="we_b" />
+      <set param="pcw_mio_mio[3]_peripheral" value="NAND Flash" />
+      <set param="pcw_mio_mio[3]_signalgroup" value="NAND Flash" />
+      <set param="pcw_preset_mio_3" value="nand" />
+
+      <set param="pcw_nand_data[2]_io" value="MIO 4" />
+      <set param="pcw_mio_mio[4]_signal" value="data[2]" />
+      <set param="pcw_mio_mio[4]_peripheral" value="NAND Flash" />
+      <set param="pcw_mio_mio[4]_signalgroup" value="NAND Flash" />
+      <set param="pcw_preset_mio_4" value="nand" />
+
+      <set param="pcw_nand_data[0]_io" value="MIO 5" />
+      <set param="pcw_mio_mio[5]_signal" value="data[0]" />
+      <set param="pcw_mio_mio[5]_peripheral" value="NAND Flash" />
+      <set param="pcw_mio_mio[5]_signalgroup" value="NAND Flash" />
+      <set param="pcw_preset_mio_5" value="nand" />
+
+      <set param="pcw_nand_data[1]_io" value="MIO 6" />
+      <set param="pcw_mio_mio[6]_signal" value="data[1]" />
+      <set param="pcw_mio_mio[6]_peripheral" value="NAND Flash" />
+      <set param="pcw_mio_mio[6]_signalgroup" value="NAND Flash" />
+      <set param="pcw_preset_mio_6" value="nand" />
+
+
+      <set param="pcw_nand_cle_io" value="MIO 7" />
+      <set param="pcw_mio_mio[7]_signal" value="cle" />
+      <set param="pcw_mio_mio[7]_peripheral" value="NAND Flash" />
+      <set param="pcw_mio_mio[7]_signalgroup" value="NAND Flash" />
+      <set param="pcw_preset_mio_7" value="nand" />
+
+      <set param="pcw_nand_re_b_io" value="MIO 8" />
+      <set param="pcw_mio_mio[8]_signal" value="re_b" />
+      <set param="pcw_mio_mio[8]_peripheral" value="NAND Flash" />
+      <set param="pcw_mio_mio[8]_signalgroup" value="NAND Flash" />
+      <set param="pcw_preset_mio_8" value="nand" />
+
+      <set param="pcw_nand_data[4]_io" value="MIO 9" />
+      <set param="pcw_mio_mio[9]_signal" value="data[4]" />
+      <set param="pcw_mio_mio[9]_peripheral" value="NAND Flash" />
+      <set param="pcw_mio_mio[9]_signalgroup" value="NAND Flash" />
+      <set param="pcw_preset_mio_9" value="nand" />
+
+      <set param="pcw_nand_data[5]_io" value="MIO 10" />
+      <set param="pcw_mio_mio[10]_signal" value="data[5]" />
+      <set param="pcw_mio_mio[10]_peripheral" value="NAND Flash" />
+      <set param="pcw_mio_mio[10]_signalgroup" value="NAND Flash" />
+      <set param="pcw_preset_mio_10" value="nand" />
+
+      <set param="pcw_nand_data[6]_io" value="MIO 11" />
+      <set param="pcw_mio_mio[11]_signal" value="data[6]" />
+      <set param="pcw_mio_mio[11]_peripheral" value="NAND Flash" />
+      <set param="pcw_mio_mio[11]_signalgroup" value="NAND Flash" />
+      <set param="pcw_preset_mio_11" value="nand" />
+
+      <set param="pcw_nand_data[7]_io" value="MIO 12" />
+      <set param="pcw_mio_mio[12]_signal" value="data[7]" />
+      <set param="pcw_mio_mio[12]_peripheral" value="NAND Flash" />
+      <set param="pcw_mio_mio[12]_signalgroup" value="NAND Flash" />
+      <set param="pcw_preset_mio_12" value="nand" />
+
+      <set param="pcw_nand_data[3]_io" value="MIO 13" />
+      <set param="pcw_mio_mio[13]_signal" value="data[3]" />
+      <set param="pcw_mio_mio[13]_peripheral" value="NAND Flash" />
+      <set param="pcw_mio_mio[13]_signalgroup" value="NAND Flash" />
+      <set param="pcw_preset_mio_13" value="nand" />
+
+      <set param="pcw_nand_busy_io" value="MIO 14" />
+      <set param="pcw_mio_mio[14]_signal" value="busy" />
+      <set param="pcw_mio_mio[14]_peripheral" value="NAND Flash" />
+      <set param="pcw_mio_mio[14]_signalgroup" value="NAND Flash" />
+      <set param="pcw_preset_mio_14" value="nand" />
+
+
+  </preset>
+
+
+    <preset param="pcw_nand_grp_d8_io" name="MIO 16 .. 23" >   
+
+      <set param="pcw_nand_data[8]_io" value="MIO 16" />
+      <set param="pcw_mio_mio[16]_signal" value="data[8]" />
+      <set param="pcw_mio_mio[16]_peripheral" value="NAND Flash" />
+      <set param="pcw_mio_mio[16]_signalgroup" value="NAND Flash" />
+      <set param="pcw_preset_mio_16" value="nand" />
+
+      <set param="pcw_nand_data[9]_io" value="MIO 17" />
+      <set param="pcw_mio_mio[17]_signal" value="data[9]" />
+      <set param="pcw_mio_mio[17]_peripheral" value="NAND Flash" />
+      <set param="pcw_mio_mio[17]_signalgroup" value="NAND Flash" />
+      <set param="pcw_preset_mio_17" value="nand" />
+
+      <set param="pcw_nand_data[10]_io" value="MIO 18" />
+      <set param="pcw_mio_mio[18]_signal" value="data[10]" />
+      <set param="pcw_mio_mio[18]_peripheral" value="NAND Flash" />
+      <set param="pcw_mio_mio[18]_signalgroup" value="NAND Flash" />
+      <set param="pcw_preset_mio_18" value="nand" />
+
+      <set param="pcw_nand_data[11]_io" value="MIO 19" />
+      <set param="pcw_mio_mio[19]_signal" value="data[11]" />
+      <set param="pcw_mio_mio[19]_peripheral" value="NAND Flash" />
+      <set param="pcw_mio_mio[19]_signalgroup" value="NAND Flash" />
+      <set param="pcw_preset_mio_19" value="nand" />
+
+      <set param="pcw_nand_data[12]_io" value="MIO 20" />
+      <set param="pcw_mio_mio[20]_signal" value="data[12]" />
+      <set param="pcw_mio_mio[20]_peripheral" value="NAND Flash" />
+      <set param="pcw_mio_mio[20]_signalgroup" value="NAND Flash" />
+      <set param="pcw_preset_mio_20" value="nand" />
+
+      <set param="pcw_nand_data[13]_io" value="MIO 21" />
+      <set param="pcw_mio_mio[21]_signal" value="data[13]" />
+      <set param="pcw_mio_mio[21]_peripheral" value="NAND Flash" />
+      <set param="pcw_mio_mio[21]_signalgroup" value="NAND Flash" />
+      <set param="pcw_preset_mio_21" value="nand" />
+
+      <set param="pcw_nand_data[14]_io" value="MIO 22" />
+      <set param="pcw_mio_mio[22]_signal" value="data[14]" />
+      <set param="pcw_mio_mio[22]_peripheral" value="NAND Flash" />
+      <set param="pcw_mio_mio[22]_signalgroup" value="NAND Flash" />
+      <set param="pcw_preset_mio_22" value="nand" />
+
+      <set param="pcw_nand_data[15]_io" value="MIO 23" />
+      <set param="pcw_mio_mio[23]_signal" value="data[15]" />
+      <set param="pcw_mio_mio[23]_peripheral" value="NAND Flash" />
+      <set param="pcw_mio_mio[23]_signalgroup" value="NAND Flash" />
+      <set param="pcw_preset_mio_23" value="nand" />
+      <set param="pcw_nand_opmode_set_mw" value="1">
+
+    </preset>
+
+</presets>
+

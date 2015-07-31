@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE parameters PUBLIC "parameters" "parameters.dtd" >
+<parameters>
+
+
+  <parameter uniqueid="pcw_uart0_peripheral_enable">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_uart0_uart0_io">
+    <name> UART 0 </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_uart0_grp_full_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_uart0_rx_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_uart0_tx_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_uart0_grp_full_enable">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_uart0_cts_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_uart0_rts_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_uart0_dsr_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_uart0_dtr_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_uart0_ri_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_uart0_dcd_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+
+
+  <parameter uniqueid="pcw_EN_EMIO_UART0">
+    <name> C_EN_EMIO_UART0</name>
+    <desc> </desc>
+    <choice value="0" >
+      <name> not on emio </name>
+    </choice>
+    <choice value="1" >
+      <name> on emio </name>
+    </choice>
+  </parameter>
+
+  <parameter uniqueid="pcw_EN_EMIO_MODEM_UART0">
+    <name> C_EN_EMIO_MODEM_UART0</name>
+    <desc> </desc>
+    <choice value="0" >
+      <name> not on emio </name>
+    </choice>
+    <choice value="1" >
+      <name> on emio </name>
+    </choice>
+  </parameter>
+
+  <parameter uniqueid="pcw_EN_UART0">
+    <name> C_EN_UART0 </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_EN_MODEM_UART0">
+    <name> C_EN_MODEM_UART0 </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_uart0_internal_modem">
+    <name> MODEM </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_uart0_baud_rate">
+    <name> UART0_BAUD_RATE </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+ 
+ <parameter uniqueid="pcw_internal_uart0_baud_rate">
+    <name> BAUD_RATE </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </paramete>
+</parameters>

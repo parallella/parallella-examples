@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="fifo_readinfo_synth_1" LaunchDir="/mnt/windowsC/Adapteva/Parallella/parallella-hwelink/fpga/src/emaxi/ip_prj/ip_prj.runs/fifo_readinfo_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

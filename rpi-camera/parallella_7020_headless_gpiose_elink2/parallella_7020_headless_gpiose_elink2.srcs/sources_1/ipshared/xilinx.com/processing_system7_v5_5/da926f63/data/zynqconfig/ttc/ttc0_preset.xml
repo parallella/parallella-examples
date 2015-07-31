@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE parameters PUBLIC "presets" "presets.dtd" >
+<presets>
+
+  <preset param="pcw_ttc0_peripheral_enable" name="0" strength="7">
+      <disable param="pcw_ttc0_peripheral_freqmhz"/>
+      <set param="pcw_ttc0_clk0_peripheral_freqmhz" value="133.333333"/>
+      <set param="pcw_ttc0_clk1_peripheral_freqmhz" value="133.333333"/>
+      <set param="pcw_ttc0_clk2_peripheral_freqmhz" value="133.333333"/>
+      <disable param="pcw_ttc0_clk0_peripheral_freqmhz"/>
+      <disable param="pcw_ttc0_clk1_peripheral_freqmhz"/>
+      <disable param="pcw_ttc0_clk2_peripheral_freqmhz"/>
+      <disable param="pcw_ttc0_ttc0_io"/>
+  </preset>
+
+  <preset param="pcw_ttc0_peripheral_enable" name="" strength="7">
+      <disable param="pcw_ttc0_peripheral_freqmhz"/>
+      <set param="pcw_ttc0_clk0_peripheral_freqmhz" value="133.333333"/>
+      <set param="pcw_ttc0_clk1_peripheral_freqmhz" value="133.333333"/>
+      <set param="pcw_ttc0_clk2_peripheral_freqmhz" value="133.333333"/>
+      <disable param="pcw_ttc0_clk0_peripheral_freqmhz"/>
+      <disable param="pcw_ttc0_clk1_peripheral_freqmhz"/>
+      <disable param="pcw_ttc0_clk2_peripheral_freqmhz"/>
+      <disable param="pcw_ttc0_ttc0_io"/>
+  </preset>
+
+  <preset param="pcw_ttc0_peripheral_enable" name="1" strength="4">
+      <set param="pcw_ttc0_ttc0_io" value="EMIO" />
+      <set param="pcw_EN_TTC0" value="1" />
+      <set param="pcw_ttc_peripheral_valid" value="1"/>
+      <set param="pcw_ttc0_clk0_peripheral_freqmhz" value="133.333333"/>
+      <set param="pcw_ttc0_clk1_peripheral_freqmhz" value="133.333333"/>
+      <set param="pcw_ttc0_clk2_peripheral_freqmhz" value="133.333333"/>
+  </preset>
+
+  <preset param="pcw_ttc_peripheral_valid" name="1" strength="4">
+    <set param="pcw_ttc_peripheral_freqmhz" value="50"/>
+  </preset>
+
+  <preset param="pcw_ttc0_ttc0_io" name="EMIO" strength="5">
+      <set param="pcw_ttc0_clk_in_io" value="EMIO" />
+      <set param="pcw_ttc0_wave_out_io" value="EMIO" />
+      <set param="pcw_EN_EMIO_TTC0" value="1" />
+  </preset>
+
+  <preset param="pcw_ttc0_ttc0_io" name="MIO 18 .. 19" strength="5">
+      <set param="pcw_ttc0_clk_in_io" value="MIO 18" />
+      <set param="pcw_mio_mio[18]_signal" value="wave_out" />
+      <set param="pcw_mio_mio[18]_peripheral" value="Timer 0" />
+      <set param="pcw_mio_mio[18]_signalgroup" value="Timer 0" />
+      <set param="pcw_preset_mio_18" value="ttc0" />
+      <set param="pcw_ttc0_wave_out_io" value="MIO 19" />
+      <set param="pcw_mio_mio[19]_signal" value="clk_in" />
+      <set param="pcw_mio_mio[19]_peripheral" value="Timer 0" />
+      <set param="pcw_mio_mio[19]_signalgroup" value="Timer 0" />
+      <set param="pcw_preset_mio_19" value="ttc0" />
+  </preset>
+
+  <preset param="pcw_ttc0_ttc0_io" name="MIO 30 .. 31" strength="5">
+      <set param="pcw_ttc0_clk_in_io" value="MIO 30" />
+      <set param="pcw_mio_mio[30]_signal" value="wave_out" />
+      <set param="pcw_mio_mio[30]_peripheral" value="Timer 0" />
+      <set param="pcw_mio_mio[30]_signalgroup" value="Timer 0" />
+      <set param="pcw_preset_mio_30" value="ttc0" />
+      <set param="pcw_ttc0_wave_out_io" value="MIO 31" />
+      <set param="pcw_mio_mio[31]_signal" value="clk_in" />
+      <set param="pcw_mio_mio[31]_peripheral" value="Timer 0" />
+      <set param="pcw_mio_mio[31]_signalgroup" value="Timer 0" />
+      <set param="pcw_preset_mio_31" value="ttc0" />
+  </preset>
+
+  <preset param="pcw_ttc0_ttc0_io" name="MIO 42 .. 43" strength="5">
+      <set param="pcw_ttc0_clk_in_io" value="MIO 42" />
+      <set param="pcw_mio_mio[42]_signal" value="wave_out" />
+      <set param="pcw_mio_mio[42]_peripheral" value="Timer 0" />
+      <set param="pcw_mio_mio[42]_signalgroup" value="Timer 0" />
+      <set param="pcw_preset_mio_42" value="ttc0" />
+      <set param="pcw_ttc0_wave_out_io" value="MIO 43" />
+      <set param="pcw_mio_mio[43]_signal" value="clk_in" />
+      <set param="pcw_mio_mio[43]_peripheral" value="Timer 0" />
+      <set param="pcw_mio_mio[43]_signalgroup" value="Timer 0" />
+      <set param="pcw_preset_mio_43" value="ttc0" />
+  </preset>
+
+
+</presets>
+

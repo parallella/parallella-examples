@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE codegen PUBLIC "codegen" "codegen.dtd" >
+<codegen version="">
+  <funcname name="ps7_post_config_2_0"/>  
+    <group cmt="SLCR Settings">
+      <force param="ps7_slcr_slcr_unlock_unlock_key" value="0xDF0D" />
+    </group>
+     <group cmt="Enabling Level Shifter">
+        <force param="ps7_slcr_LVL_SHFTR_EN_USER_INP_ICT_EN_0" value="3"/>
+        <force param="ps7_slcr_LVL_SHFTR_EN_USER_INP_ICT_EN_1" value="3"/>
+     </group>   
+    <group cmt="FPGA resets to 0">
+      <force param="ps7_slcr_FPGA_RST_CTRL_reserved_3" value="0"/>
+      <force param="ps7_slcr_FPGA_RST_CTRL_FPGA_ACP_RST" value="0"/>
+      <force param="ps7_slcr_FPGA_RST_CTRL_FPGA_AXDS3_RST" value="0"/>
+      <force param="ps7_slcr_FPGA_RST_CTRL_FPGA_AXDS2_RST" value="0"/>
+      <force param="ps7_slcr_FPGA_RST_CTRL_FPGA_AXDS1_RST" value="0"/>
+      <force param="ps7_slcr_FPGA_RST_CTRL_FPGA_AXDS0_RST" value="0"/>
+      <force param="ps7_slcr_FPGA_RST_CTRL_reserved_2" value="0"/>
+      <force param="ps7_slcr_FPGA_RST_CTRL_FSSW1_FPGA_RST" value="0"/>
+      <force param="ps7_slcr_FPGA_RST_CTRL_FSSW0_FPGA_RST" value="0"/>
+      <force param="ps7_slcr_FPGA_RST_CTRL_reserved_1" value="0"/>
+      <force param="ps7_slcr_FPGA_RST_CTRL_FPGA_FMSW1_RST" value="0"/>
+      <force param="ps7_slcr_FPGA_RST_CTRL_FPGA_FMSW0_RST" value="0"/>
+      <force param="ps7_slcr_FPGA_RST_CTRL_FPGA_DMA3_RST" value="0"/>
+      <force param="ps7_slcr_FPGA_RST_CTRL_FPGA_DMA2_RST" value="0"/>
+      <force param="ps7_slcr_FPGA_RST_CTRL_FPGA_DMA1_RST" value="0"/>
+      <force param="ps7_slcr_FPGA_RST_CTRL_FPGA_DMA0_RST" value="0"/>
+      <force param="ps7_slcr_FPGA_RST_CTRL_reserved" value="0"/>
+      <force param="ps7_slcr_FPGA_RST_CTRL_FPGA3_OUT_RST" value="0"/>
+      <force param="ps7_slcr_FPGA_RST_CTRL_FPGA2_OUT_RST" value="0"/>
+      <force param="ps7_slcr_FPGA_RST_CTRL_FPGA1_OUT_RST" value="0"/>
+      <force param="ps7_slcr_FPGA_RST_CTRL_FPGA0_OUT_RST" value="0"/>
+    </group>
+    <group cmt="AFI registers ">
+      <group cmt="AFI0 registers ">
+        <param param="ps7_afi0_AFI_RDCHAN_CTRL_QosHeadOfCmdQEn"/>
+        <param param="ps7_afi0_AFI_RDCHAN_CTRL_FabricOutCmdEn"/>
+        <param param="ps7_afi0_AFI_RDCHAN_CTRL_FabricQosEn"/>
+        <param param="ps7_afi0_AFI_RDCHAN_CTRL_n32BitEn"/>
+        <param param="ps7_afi0_AFI_WRCHAN_CTRL_WrDataThreshold"/>
+        <param param="ps7_afi0_AFI_WRCHAN_CTRL_WrCmdReleaseMode"/>
+        <param param="ps7_afi0_AFI_WRCHAN_CTRL_QosHeadOfCmdQEn"/>
+        <param param="ps7_afi0_AFI_WRCHAN_CTRL_FabricOutCmdEn"/>
+        <param param="ps7_afi0_AFI_WRCHAN_CTRL_FabricQosEn"/>
+        <param param="ps7_afi0_AFI_WRCHAN_CTRL_n32BitEn"/>
+      </group>
+
+      <group cmt="AFI1 registers ">
+        <param param="ps7_afi1_AFI_RDCHAN_CTRL_QosHeadOfCmdQEn"/>
+        <param param="ps7_afi1_AFI_RDCHAN_CTRL_FabricOutCmdEn"/>
+        <param param="ps7_afi1_AFI_RDCHAN_CTRL_FabricQosEn"/>
+        <param param="ps7_afi1_AFI_RDCHAN_CTRL_n32BitEn"/>
+        <param param="ps7_afi1_AFI_WRCHAN_CTRL_WrDataThreshold"/>
+        <param param="ps7_afi1_AFI_WRCHAN_CTRL_WrCmdReleaseMode"/>
+        <param param="ps7_afi1_AFI_WRCHAN_CTRL_QosHeadOfCmdQEn"/>
+        <param param="ps7_afi1_AFI_WRCHAN_CTRL_FabricOutCmdEn"/>
+        <param param="ps7_afi1_AFI_WRCHAN_CTRL_FabricQosEn"/>
+        <param param="ps7_afi1_AFI_WRCHAN_CTRL_n32BitEn"/>
+      </group>
+
+      <group cmt="AFI2 registers ">
+        <param param="ps7_afi2_AFI_RDCHAN_CTRL_QosHeadOfCmdQEn"/>
+        <param param="ps7_afi2_AFI_RDCHAN_CTRL_FabricOutCmdEn"/>
+        <param param="ps7_afi2_AFI_RDCHAN_CTRL_FabricQosEn"/>
+        <param param="ps7_afi2_AFI_RDCHAN_CTRL_n32BitEn"/>
+        <param param="ps7_afi2_AFI_WRCHAN_CTRL_WrDataThreshold"/>
+        <param param="ps7_afi2_AFI_WRCHAN_CTRL_WrCmdReleaseMode"/>
+        <param param="ps7_afi2_AFI_WRCHAN_CTRL_QosHeadOfCmdQEn"/>
+        <param param="ps7_afi2_AFI_WRCHAN_CTRL_FabricOutCmdEn"/>
+        <param param="ps7_afi2_AFI_WRCHAN_CTRL_FabricQosEn"/>
+        <param param="ps7_afi2_AFI_WRCHAN_CTRL_n32BitEn"/>
+      </group>
+
+      <group cmt="AFI3 registers ">
+        <param param="ps7_afi3_AFI_RDCHAN_CTRL_QosHeadOfCmdQEn"/>
+        <param param="ps7_afi3_AFI_RDCHAN_CTRL_FabricOutCmdEn"/>
+        <param param="ps7_afi3_AFI_RDCHAN_CTRL_FabricQosEn"/>
+        <param param="ps7_afi3_AFI_RDCHAN_CTRL_n32BitEn"/>
+        <param param="ps7_afi3_AFI_WRCHAN_CTRL_WrDataThreshold"/>
+        <param param="ps7_afi3_AFI_WRCHAN_CTRL_WrCmdReleaseMode"/>
+        <param param="ps7_afi3_AFI_WRCHAN_CTRL_QosHeadOfCmdQEn"/>
+        <param param="ps7_afi3_AFI_WRCHAN_CTRL_FabricOutCmdEn"/>
+        <param param="ps7_afi3_AFI_WRCHAN_CTRL_FabricQosEn"/>
+        <param param="ps7_afi3_AFI_WRCHAN_CTRL_n32BitEn"/>
+      </group>
+     </group>  
+    <group cmt="Lock it back">
+      <force param="ps7_slcr_slcr_lock_lock_key" value="0x767B"/>
+    </group>
+</codegen>

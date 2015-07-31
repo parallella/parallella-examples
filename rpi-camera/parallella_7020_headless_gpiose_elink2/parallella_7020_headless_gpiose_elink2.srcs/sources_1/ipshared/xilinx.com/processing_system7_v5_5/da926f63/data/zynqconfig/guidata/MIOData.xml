@@ -1,0 +1,301 @@
+<miodata>
+
+    <peripheral name="Quad SPI Flash" emio="false" e_param="PCW_QSPI_PERIPHERAL_ENABLE" io_param="PCW_QSPI_QSPI_IO">
+        <sig name="Quad SPI Flash" pin="1-6" />
+        <subsig name="Single SS 4bit IO" e_param="PCW_QSPI_GRP_SINGLE_SS_ENABLE" io_param="PCW_QSPI_GRP_SINGLE_SS_IO" editor="radioButton">
+            <pins name="Single SS 4bit IO" pin="1-6"/>
+        </subsig>
+        <subsig name="Dual Quad SPI(4bit)" e_param="PCW_QSPI_GRP_SS1_ENABLE" io_param="PCW_QSPI_GRP_SS1_IO" editor="radioButton">
+            <pins name="ss_b" pin="0-6" iovalue="MIO 0"/>
+        </subsig>
+        <subsig name="Dual Quad SPI (8bit)" e_param="PCW_QSPI_GRP_IO1_ENABLE" io_param="PCW_QSPI_GRP_IO1_IO" editor="radioButton">
+            <pins name="Dual Quad SPI (8bit)" pin="0-6" iovalue="MIO 0 9 .. 13"/>
+            <pins name="Dual Quad SPI (8bit)" pin="9-13" iovalue="MIO 0 9 .. 13"/>
+        </subsig>
+        <subsig name="Feedback Clock" e_param="PCW_QSPI_GRP_FBCLK_ENABLE" io_param="PCW_QSPI_GRP_FBCLK_IO">
+            <pins name="fb ck" pin="8-8" />
+        </subsig>
+    </peripheral>
+    <peripheral name="SRAM/NOR Flash" emio="false" e_param="PCW_NOR_PERIPHERAL_ENABLE" io_param="PCW_NOR_NOR_IO">
+        <sig name="SRAM/NOR Flash" pin="3-11" iovalue="MIO 3 .. 39" />
+        <sig name="" pin="13-13" iovalue="MIO 3 .. 39" />
+        <sig name="SRAM/NOR Flash, addr[0-24] " pin="15-39" iovalue="MIO 3 .. 39" />
+        <subsig name="addr[25]" e_param="PCW_NOR_GRP_A25_ENABLE" io_param="PCW_NOR_GRP_A25_IO" >
+            <pins name="addr [25]" pin="1-1" />
+        </subsig>
+        <subsig name="NOR CS0" e_param="PCW_NOR_GRP_CS0_ENABLE" io_param="PCW_NOR_GRP_CS0_IO">
+            <pins name="cs0" pin="0-0" />
+        </subsig>
+        <subsig name="NOR CS1" e_param="PCW_NOR_GRP_CS1_ENABLE" io_param="PCW_NOR_GRP_CS1_IO">
+            <pins name="cs1" pin="1-1" />
+        </subsig>
+        <subsig name="SRAM CS0" e_param="PCW_NOR_GRP_SRAM_CS0_ENABLE" io_param="PCW_NOR_GRP_SRAM_CS0_IO">
+            <pins name="cs0" pin="0-0" />
+        </subsig>
+        <subsig name="SRAM CS1" e_param="PCW_NOR_GRP_SRAM_CS1_ENABLE" io_param="PCW_NOR_GRP_SRAM_CS1_IO">
+            <pins name="cs1" pin="1-1" />
+        </subsig>
+        <subsig name="SRAM INT" emio="true" e_param="PCW_NOR_GRP_SRAM_INT_ENABLE" io_param="PCW_NOR_GRP_SRAM_INT_IO" />
+    </peripheral>
+    <peripheral name="NAND Flash" emio="false" e_param="PCW_NAND_PERIPHERAL_ENABLE" io_param="PCW_NAND_NAND_IO" >
+        <sig name="cs" pin="0-0" iovalue="MIO 0 2.. 14"/>
+        <sig name="NAND Flash" pin="2-14" iovalue="MIO 0 2.. 14" />
+        <subsig name="data[8:15]" e_param="PCW_NAND_GRP_D8_ENABLE" io_param="PCW_NAND_GRP_D8_IO">
+            <pins name="data[8:15]" pin="16-23" />
+        </subsig>
+    </peripheral>
+
+    <peripheral name="Ethernet 0" emio="true" e_param="PCW_ENET0_PERIPHERAL_ENABLE" io_param="PCW_ENET0_ENET0_IO">
+        <sig name="Enet0" pin="16-27" />
+        <subsig name="MDIO" emio="true" e_param="PCW_ENET0_GRP_MDIO_ENABLE" io_param="PCW_ENET0_GRP_MDIO_IO">
+            <pins name="MDIO" pin="52-53" />
+        </subsig>
+    </peripheral>
+    <peripheral name="Ethernet 1" emio="true" e_param="PCW_ENET1_PERIPHERAL_ENABLE" io_param="PCW_ENET1_ENET1_IO">
+        <sig name="Enet1" pin="28-39" />
+        <subsig name="MDIO" emio="true" e_param="PCW_ENET1_GRP_MDIO_ENABLE" io_param="PCW_ENET1_GRP_MDIO_IO">
+            <pins name="MDIO" pin="52-53" />
+        </subsig>
+    </peripheral>
+
+    <peripheral name="USB 0" emio="false" e_param="PCW_USB0_PERIPHERAL_ENABLE" io_param="PCW_USB0_USB0_IO">
+        <sig name="USB0" pin="28-39" />
+    </peripheral>
+    <peripheral name="USB 1" emio="false" e_param="PCW_USB1_PERIPHERAL_ENABLE" io_param="PCW_USB1_USB1_IO">
+        <sig name="USB1" pin="40-51" />
+    </peripheral>
+
+    <peripheral name="SD 0" emio="true" e_param="PCW_SD0_PERIPHERAL_ENABLE" io_param="PCW_SD0_SD0_IO">
+        <sig name="SD0" pin="16-21" />
+        <sig name="SD0" pin="28-33" />
+        <sig name="SD0" pin="40-45" />
+        <subsig name="Card Detect" emio="true" e_param="PCW_SD0_GRP_CD_ENABLE" io_param="PCW_SD0_GRP_CD_IO">
+            <pins name="NA" pin="0,1,2,3,4,5,6,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53" />
+        </subsig>
+        <subsig name="Write Protect" emio="true" e_param="PCW_SD0_GRP_WP_ENABLE" io_param="PCW_SD0_GRP_WP_IO">
+            <pins name="NA" pin="0,1,2,3,4,5,6,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53" />
+        </subsig>
+        <subsig name="Power Control" emio="false" e_param="PCW_SD0_GRP_POW_ENABLE" io_param="PCW_SD0_GRP_POW_IO">
+            <pins name="NA" pin="0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52" />
+        </subsig>
+    </peripheral>
+
+    <peripheral name="SD 1" emio="true" e_param="PCW_SD1_PERIPHERAL_ENABLE" io_param="PCW_SD1_SD1_IO">
+        <sig name="SD1" pin="10-15" />
+        <sig name="SD1" pin="22-27" />
+        <sig name="SD1" pin="34-39" />
+        <sig name="SD1" pin="46-51" />
+        <subsig name="Card Detect" emio="true" e_param="PCW_SD1_GRP_CD_ENABLE" io_param="PCW_SD1_GRP_CD_IO">
+            <pins name="NA" pin="0,1,2,3,4,5,6,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53" />
+
+        </subsig>
+        <subsig name="Write Protect" emio="true" e_param="PCW_SD1_GRP_WP_ENABLE" io_param="PCW_SD1_GRP_WP_IO">
+            <pins name="NA" pin="0,1,2,3,4,5,6,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53" />
+
+        </subsig>
+        <subsig name="Power Control" emio="false" e_param="PCW_SD1_GRP_POW_ENABLE" io_param="PCW_SD1_GRP_POW_IO">
+            <pins name="NA" pin="1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53" />
+
+        </subsig>
+    </peripheral>
+
+    <peripheral name="SPI 0" emio="true" e_param="PCW_SPI0_PERIPHERAL_ENABLE" io_param="PCW_SPI0_SPI0_IO">
+        <sig name="SPI0" pin="16-17" iovalue="MIO 16 .. 21"/>  <sig name="mos i" pin="21-21" iovalue="MIO 16 .. 21"/>
+        <sig name="SPI0" pin="28-29" iovalue="MIO 28 .. 33"/>  <sig name="mos i" pin="33-33" iovalue="MIO 28 .. 33"/>
+        <sig name="SPI0" pin="40-41" iovalue="MIO 40 .. 45"/>  <sig name="mos i" pin="45-45" iovalue="MIO 40 .. 45"/>
+        <subsig name="SS[0]" emio="true" e_param="PCW_SPI0_GRP_SS0_ENABLE" io_param="PCW_SPI0_GRP_SS0_IO">
+            <pins name="ss[0]" pin="18-18"/>
+            <pins name="ss[0]" pin="30-30" />
+            <pins name="ss[0]" pin="42-42" />
+        </subsig>
+        <subsig name="SS[1]"  emio="true" e_param="PCW_SPI0_GRP_SS1_ENABLE" io_param="PCW_SPI0_GRP_SS1_IO">
+            <pins name="ss[1]" pin="19-19" />
+            <pins name="ss[1]" pin="31-31" />
+            <pins name="ss[1]" pin="43-43" />
+        </subsig>
+        <subsig name="SS[2]" emio="true"  e_param="PCW_SPI0_GRP_SS2_ENABLE" io_param="PCW_SPI0_GRP_SS2_IO" >
+            <pins name="ss[2]" pin="20-20" />
+            <pins name="ss[2]" pin="32-32" />
+            <pins name="ss[2]" pin="44-44" />
+        </subsig>
+    </peripheral>
+    <peripheral name="SPI 1" emio="true" e_param="PCW_SPI1_PERIPHERAL_ENABLE" io_param="PCW_SPI1_SPI1_IO">
+        <sig name="SPI1" pin="10-12" iovalue="MIO 10 .. 15"/>
+        <sig name="SPI1" pin="22-24" iovalue="MIO 22 .. 27"/>
+        <sig name="SPI1" pin="34-36" iovalue="MIO 34 .. 39"/>
+        <sig name="SPI1" pin="46-48" iovalue="MIO 46 .. 51"/>
+        <subsig name="SS[0]" emio="true"  e_param="PCW_SPI1_GRP_SS0_ENABLE" io_param="PCW_SPI1_GRP_SS0_IO" >
+            <pins name="ss[0]" pin="13-13"/>
+            <pins name="ss[0]" pin="25-25"/>
+            <pins name="ss[0]" pin="37-37" />
+            <pins name="ss[0]" pin="49-49" />
+        </subsig>
+        <subsig name="SS[1]" emio="true"  e_param="PCW_SPI1_GRP_SS1_ENABLE" io_param="PCW_SPI1_GRP_SS1_IO" >
+            <pins name="ss[1]" pin="14-14"/>
+            <pins name="ss[1]" pin="26-26"/>
+            <pins name="ss[1]" pin="38-38"/>
+            <pins name="ss[1]" pin="50-50"/>
+        </subsig>
+        <subsig  name="SS[2]" emio="true"  e_param="PCW_SPI1_GRP_SS2_ENABLE" io_param="PCW_SPI1_GRP_SS2_IO" >
+            <pins name="ss[2]" pin="15-15"/>
+            <pins name="ss[2]" pin="27-27"/>
+            <pins name="ss[2]" pin="39-39"/>
+            <pins name="ss[2]" pin="51-51"/>
+        </subsig>
+    </peripheral>
+    <peripheral name="UART 0" emio="true" e_param="PCW_UART0_PERIPHERAL_ENABLE" io_param="PCW_UART0_UART0_IO">
+        <sig name="UART0" pin="10-11" />
+        <sig name="UART0" pin="14-15" />
+        <sig name="UART0" pin="18-19" />
+        <sig name="UART0" pin="22-23" />
+        <sig name="UART0" pin="26-27" />
+        <sig name="UART0" pin="30-31" />
+        <sig name="UART0" pin="34-35" />
+        <sig name="UART0" pin="38-39" />
+        <sig name="UART0" pin="42-43" />
+        <sig name="UART0" pin="46-47" />
+        <sig name="UART0" pin="50-51" />
+        <subsig name="Modem Signals" emio="true" e_param="PCW_UART0_GRP_FULL_ENABLE" io_param="PCW_UART0_GRP_FULL_IO" />
+    </peripheral>
+    <peripheral name="UART 1" emio="true" e_param="PCW_UART1_PERIPHERAL_ENABLE" io_param="PCW_UART1_UART1_IO">
+        <sig name="UART1" pin="8-9" />
+        <sig name="UART1" pin="12-13" />
+        <sig name="UART1" pin="16-17" />
+        <sig name="UART1" pin="20-21" />
+        <sig name="UART1" pin="24-25" />
+        <sig name="UART1" pin="28-29" />
+        <sig name="UART1" pin="32-33" />
+        <sig name="UART1" pin="36-37" />
+        <sig name="UART1" pin="40-41" />
+        <sig name="UART1" pin="44-45" />
+        <sig name="UART1" pin="48-49" />
+        <sig name="UART1" pin="52-53" />
+        <subsig name="Modem Signals" emio="true" e_param="PCW_UART1_GRP_FULL_ENABLE" io_param="PCW_UART1_GRP_FULL_IO" />
+    </peripheral>
+    <peripheral name="I2C 0" emio="true" e_param="PCW_I2C0_PERIPHERAL_ENABLE" io_param="PCW_I2C0_I2C0_IO">
+        <sig name="I2C0" pin="10-11" />
+        <sig name="I2C0" pin="14-15" />
+        <sig name="I2C0" pin="18-19" />
+        <sig name="I2C0" pin="22-23" />
+        <sig name="I2C0" pin="26-27" />
+        <sig name="I2C0" pin="30-31" />
+        <sig name="I2C0" pin="34-35" />
+        <sig name="I2C0" pin="38-39" />
+        <sig name="I2C0" pin="42-43" />
+        <sig name="I2C0" pin="46-47" />
+        <sig name="I2C0" pin="50-51" />
+        <subsig name="Interrupt" emio="true" e_param="PCW_I2C0_GRP_INT_ENABLE" io_param="PCW_I2C0_GRP_INT_IO">
+            <pins name="NA" pin="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53" />
+        </subsig>
+
+    </peripheral>
+    <peripheral name="I2C 1" emio="true" e_param="PCW_I2C1_PERIPHERAL_ENABLE" io_param="PCW_I2C1_I2C1_IO">
+        <sig name="I2C1" pin="12-13" />
+        <sig name="I2C1" pin="16-17" />
+        <sig name="I2C1" pin="20-21" />
+        <sig name="I2C1" pin="24-25" />
+        <sig name="I2C1" pin="28-29" />
+        <sig name="I2C1" pin="32-33" />
+        <sig name="I2C1" pin="36-37" />
+        <sig name="I2C1" pin="40-41" />
+        <sig name="I2C1" pin="44-45" />
+        <sig name="I2C1" pin="48-49" />
+        <sig name="I2C1" pin="52-53" />
+        <subsig name="Interrupt" emio="true" e_param="PCW_I2C1_GRP_INT_ENABLE" io_param="PCW_I2C1_GRP_INT_IO">
+            <pins name="NA" pin="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53" />
+        </subsig>
+    </peripheral>
+
+    <peripheral name="CAN 0" emio="true" e_param="PCW_CAN0_PERIPHERAL_ENABLE" io_param="PCW_CAN0_CAN0_IO">
+        <sig name="CAN0" pin="10-11" />
+        <sig name="CAN0" pin="14-15" />
+        <sig name="CAN0" pin="18-19" />
+        <sig name="CAN0" pin="22-23" />
+        <sig name="CAN0" pin="26-27" />
+        <sig name="CAN0" pin="30-31" />
+        <sig name="CAN0" pin="34-35" />
+        <sig name="CAN0" pin="38-39" />
+        <sig name="CAN0" pin="42-43" />
+        <sig name="CAN0" pin="46-47" />
+        <sig name="CAN0" pin="50-51" />
+        <subsig name="External Clock" emio="false" e_param="PCW_CAN0_GRP_CLK_ENABLE" io_param="PCW_CAN0_GRP_CLK_IO">
+            <pins name="NA" pin="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53" />
+        </subsig>
+    </peripheral>
+    <peripheral name="CAN 1" emio="true" e_param="PCW_CAN1_PERIPHERAL_ENABLE" io_param="PCW_CAN1_CAN1_IO">
+        <sig name="CAN1" pin="8-9" />
+        <sig name="CAN1" pin="12-13" />
+        <sig name="CAN1" pin="16-17" />
+        <sig name="CAN1" pin="20-21" />
+        <sig name="CAN1" pin="24-25" />
+        <sig name="CAN1" pin="28-29" />
+        <sig name="CAN1" pin="32-33" />
+        <sig name="CAN1" pin="36-37" />
+        <sig name="CAN1" pin="40-41" />
+        <sig name="CAN1" pin="44-45" />
+        <sig name="CAN1" pin="48-49" />
+        <sig name="CAN1" pin="52-53" />
+        <subsig name="External Clock" emio="false" e_param="PCW_CAN1_GRP_CLK_ENABLE" io_param="PCW_CAN1_GRP_CLK_IO">
+            <pins name="NA" pin="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53" />
+        </subsig>
+    </peripheral>
+
+    <peripheral name="TTC0" emio="true" e_param="PCW_TTC0_PERIPHERAL_ENABLE" io_param="PCW_TTC0_TTC0_IO">
+        <sig name="TTC0" pin="18-19" />
+        <sig name="TTC0" pin="30-31" />
+        <sig name="TTC0" pin="42-43" />
+    </peripheral>
+    <peripheral name="TTC1" emio="true" e_param="PCW_TTC1_PERIPHERAL_ENABLE" io_param="PCW_TTC1_TTC1_IO">
+        <sig name="TTC1" pin="16-17" />
+        <sig name="TTC1" pin="28-29" />
+        <sig name="TTC1" pin="40-41" />
+    </peripheral>
+    <peripheral name="SWDT" emio="true" e_param="PCW_WDT_PERIPHERAL_ENABLE" io_param="PCW_WDT_WDT_IO">
+        <sig name="SWDT" pin="14-15" />
+        <sig name="SWDT" pin="26-27" />
+        <sig name="SWDT" pin="38-39" />
+        <sig name="SWDT" pin="50-51" />
+        <sig name="SWDT" pin="52-53" />
+    </peripheral>
+    <peripheral name="PJTAG" emio="true" e_param="PCW_PJTAG_PERIPHERAL_ENABLE" io_param="PCW_PJTAG_PJTAG_IO">
+        <sig name="PJTAG" pin="10-13" />
+        <sig name="PJTAG" pin="22-25" />
+        <sig name="PJTAG" pin="34-37" />
+        <sig name="PJTAG" pin="46-49" />
+
+    </peripheral>
+    <peripheral name="TPIU" emio="true" e_param="PCW_TRACE_PERIPHERAL_ENABLE" io_param="PCW_TRACE_TRACE_IO">
+        <sig name="Trace" pin="12-13" />
+        <sig name="Trace" pin="24-25" />
+        <subsig name="d[0:1]" emio="true" e_param="PCW_TRACE_GRP_2BIT_ENABLE" io_param="PCW_TRACE_GRP_2BIT_IO">
+            <pins name="d[0:1]" pin="14-15" />
+            <pins name="d[0:1]" pin="26-27" />
+        </subsig>
+
+        <subsig name="d[8:15]" emio="true" e_param="PCW_TRACE_GRP_16BIT_ENABLE" io_param="PCW_TRACE_GRP_16BIT_IO">
+            <pins name="d[8:15]"  pin="2-9"/>
+        </subsig>
+        <subsig name="d[2:3]" emio="true" e_param="PCW_TRACE_GRP_4BIT_ENABLE" io_param="PCW_TRACE_GRP_4BIT_IO">
+            <pins name="d[2:3]"  pin="10-11"/>
+            <pins name="d[2:3]"  pin="22-23" />
+        </subsig>
+        <subsig name="d[4:7]" emio="true" e_param="PCW_TRACE_GRP_8BIT_ENABLE" io_param="PCW_TRACE_GRP_8BIT_IO">
+            <pins name="d[4:7]" pin="16-19"/>
+        </subsig>
+        <subsig name="d[16:31]" emio="true" e_param="PCW_TRACE_GRP_32BIT_ENABLE" io_param="PCW_TRACE_GRP_32BIT_IO">
+        </subsig>
+    </peripheral>
+    <peripheral name="GPIO MIO" e_param="PCW_GPIO_MIO_GPIO_ENABLE" io_param="PCW_GPIO_MIO_GPIO_IO" iovalue="MIO" >
+        <sig name="NA" pin="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53" tag="GPIO"/>
+        <subsig name="Ethernet PHY Reset" emio="false" e_param="PCW_ENET0_RESET_ENABLE" io_param="PCW_ENET0_RESET_IO">
+            <sig name="NA" pin="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53" e_param="PCW_ENET0_RESET_ENABLE" io_param="PCW_ENET0_RESET_IO"/>
+        </subsig>
+        <subsig name="USB PHY Reset" emio="false" e_param="PCW_USB0_RESET_ENABLE" io_param="PCW_USB0_RESET_IO">
+            <sig name="NA" pin="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53" e_param="PCW_USB0_RESET_ENABLE" io_param="PCW_USB0_RESET_IO"/>
+        </subsig>
+        <subsig name="I2C PHY Reset" emio="false" e_param="PCW_I2C0_RESET_ENABLE" io_param="PCW_I2C0_RESET_IO">
+            <sig name="NA" pin="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53" e_param="PCW_I2C0_RESET_ENABLE" io_param="PCW_I2C0_RESET_IO"/>
+        </subsig>
+    </peripheral>
+    <peripheral name="GPIO EMIO" emio="true" e_param="PCW_GPIO_EMIO_GPIO_ENABLE"  io_param="PCW_GPIO_EMIO_GPIO_ENABLE" iovalue="1"/>
+</miodata>

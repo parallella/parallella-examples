@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE parameters PUBLIC "presets" "presets.dtd" >
+<presets>
+
+  <preset param="pcw_wdt_peripheral_enable" name="0" strength="7">
+      <set param="pcw_wdt_peripheral_freqmhz" value="133.333333"/>
+      <disable param="pcw_wdt_peripheral_freqmhz"/>
+      <disable param="pcw_wdt_wdt_io"/>
+  </preset>
+
+  <preset param="pcw_wdt_peripheral_enable" name="" strength="7">
+      <set param="pcw_wdt_peripheral_freqmhz" value="133.333333"/>
+      <disable param="pcw_wdt_peripheral_freqmhz"/>
+      <disable param="pcw_wdt_wdt_io"/>
+  </preset>
+
+  <preset param="pcw_wdt_peripheral_enable" name="1" strength="4">
+      <set  param="pcw_wdt_wdt_io" value="EMIO" />
+      <set param="pcw_wdt_peripheral_freqmhz" value="133.333333"/>
+      <set param="pcw_EN_WDT" value="1" />
+  </preset>
+
+  <preset param="pcw_wdt_wdt_io" name="EMIO" strength="5">
+      <set param="pcw_wdt_clk_in_io" value="EMIO" />
+      <set param="pcw_wdt_rst_out_io" value="EMIO" />
+      <set param="pcw_EN_EMIO_WDT" value="1" />
+  </preset>
+
+  <preset param="pcw_wdt_wdt_io" name="MIO 14 .. 15" strength="5">
+      <set param="pcw_wdt_clk_in_io" value="MIO 14" />
+      <set param="pcw_mio_mio[14]_signal" value="clk_in" />
+      <set param="pcw_mio_mio[14]_peripheral" value="Watchdog" />
+      <set param="pcw_mio_mio[14]_signalgroup" value="Watchdog" />
+      <set param="pcw_preset_mio_14" value="wdt" />
+      <set param="pcw_wdt_rst_out_io" value="MIO 15" />
+      <set param="pcw_mio_mio[15]_signal" value="rst_out" />
+      <set param="pcw_mio_mio[15]_peripheral" value="Watchdog" />
+      <set param="pcw_mio_mio[15]_signalgroup" value="Watchdog" />
+      <set param="pcw_preset_mio_15" value="wdt" />
+  </preset>
+
+  <preset param="pcw_wdt_wdt_io" name="MIO 26 .. 27" strength="5">
+      <set param="pcw_wdt_clk_in_io" value="MIO 26" />
+      <set param="pcw_mio_mio[26]_signal" value="clk_in" />
+      <set param="pcw_mio_mio[26]_peripheral" value="Watchdog" />
+      <set param="pcw_mio_mio[26]_signalgroup" value="Watchdog" />
+      <set param="pcw_preset_mio_26" value="wdt" />
+      <set param="pcw_wdt_rst_out_io" value="MIO 27" />
+      <set param="pcw_mio_mio[27]_signal" value="rst_out" />
+      <set param="pcw_mio_mio[27]_peripheral" value="Watchdog" />
+      <set param="pcw_mio_mio[27]_signalgroup" value="Watchdog" />
+      <set param="pcw_preset_mio_27" value="wdt" />
+  </preset>
+
+  <preset param="pcw_wdt_wdt_io" name="MIO 38 .. 39" strength="5">
+      <set param="pcw_wdt_clk_in_io" value="MIO 38" />
+      <set param="pcw_mio_mio[38]_signal" value="clk_in" />
+      <set param="pcw_mio_mio[38]_peripheral" value="Watchdog" />
+      <set param="pcw_mio_mio[38]_signalgroup" value="Watchdog" />
+      <set param="pcw_preset_mio_38" value="wdt" />
+      <set param="pcw_wdt_rst_out_io" value="MIO 39" />
+      <set param="pcw_mio_mio[39]_signal" value="rst_out" />
+      <set param="pcw_mio_mio[39]_peripheral" value="Watchdog" />
+      <set param="pcw_mio_mio[39]_signalgroup" value="Watchdog" />
+      <set param="pcw_preset_mio_39" value="wdt" />
+  </preset>
+
+
+  <preset param="pcw_wdt_wdt_io" name="MIO 50 .. 51" strength="5">
+      <set param="pcw_wdt_clk_in_io" value="MIO 50" />
+      <set param="pcw_mio_mio[50]_signal" value="clk_in" />
+      <set param="pcw_mio_mio[50]_peripheral" value="Watchdog" />
+      <set param="pcw_mio_mio[50]_signalgroup" value="Watchdog" />
+      <set param="pcw_preset_mio_50" value="wdt" />
+      <set param="pcw_wdt_rst_out_io" value="MIO 51" />
+      <set param="pcw_mio_mio[51]_signal" value="rst_out" />
+      <set param="pcw_mio_mio[51]_peripheral" value="Watchdog" />
+      <set param="pcw_mio_mio[51]_signalgroup" value="Watchdog" />
+      <set param="pcw_preset_mio_51" value="wdt" />
+  </preset>
+
+  <preset param="pcw_wdt_wdt_io" name="MIO 52 .. 53" strength="5">
+      <set param="pcw_wdt_clk_in_io" value="MIO 52" />
+      <set param="pcw_mio_mio[52]_signal" value="clk_in" />
+      <set param="pcw_mio_mio[52]_peripheral" value="Watchdog" />
+      <set param="pcw_mio_mio[52]_signalgroup" value="Watchdog" />
+      <set param="pcw_preset_mio_52" value="wdt" />
+      <set param="pcw_wdt_rst_out_io" value="MIO 53" />
+      <set param="pcw_mio_mio[53]_signal" value="rst_out" />
+      <set param="pcw_mio_mio[53]_peripheral" value="Watchdog" />
+      <set param="pcw_mio_mio[53]_signalgroup" value="Watchdog" />
+      <set param="pcw_preset_mio_53" value="wdt" />
+  </preset>
+</presets>
+

@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE parameters PUBLIC "parameters" "parameters.dtd" >
+<parameters>
+
+  <parameter uniqueid="pcw_nor_peripheral_enable">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_grp_a25_enable">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_grp_cs0_enable">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_grp_cs1_enable">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_grp_sram_cs0_enable">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_grp_sram_cs1_enable">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_grp_sram_int_enable">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_nor_io">
+    <name> NOR </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_grp_a25_io">
+    <name> NOR (a25) </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_grp_cs0_io">
+    <name> NOR (cs0) </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_grp_cs1_io">
+    <name> NOR (cs1) </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_grp_sram_cs0_io">
+    <name> SRAM (cs0) </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_grp_sram_cs1_io">
+    <name> SRAM (cs1) </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_grp_sram_int_io">
+    <name> SRAM (int) </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+
+
+  <parameter uniqueid="pcw_nor_addr[0]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_addr[1]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_addr[2]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_addr[3]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_addr[4]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_addr[5]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_addr[6]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_addr[7]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_addr[8]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_addr[9]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_addr[10]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_addr[11]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_addr[12]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_addr[13]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_addr[14]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_addr[15]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_addr[16]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_addr[17]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_addr[18]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_addr[19]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_addr[20]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_addr[21]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_addr[22]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_addr[23]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_addr[24]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_addr[25]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+  <parameter uniqueid="pcw_nor_data[0]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_data[1]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_data[2]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_data[3]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_data[4]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_data[5]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_data[6]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_data[7]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_oe_b_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_wait_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_we_b_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_bls_b_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+  <parameter uniqueid="pcw_nor_cs_b[0]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_cs_b[1]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+
+
+
+  <parameter uniqueid="pcw_nor_peripheral_freqmhz">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_internal_sram_cs0">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_internal_sram_cs1">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_internal_cs0">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_internal_cs1">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_nor_internal_a25">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+ 
+ <parameter uniqueid="pcw_nor_cs0_t_tr">
+    <name> t_tr </name>
+    <desc> Turnaround time, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+ 
+ <parameter uniqueid="pcw_nor_cs0_t_pc">
+    <name> t_pc </name>
+    <desc> Page cycle time, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+ 
+ <parameter uniqueid="pcw_nor_cs0_t_wp">
+    <name> t_wp </name>
+    <desc> WE assertion delay, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+ 
+ <parameter uniqueid="pcw_nor_cs0_t_ceoe">
+    <name> t_ceoe </name>
+    <desc> OE assertion delay, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+ 
+ <parameter uniqueid="pcw_nor_cs0_t_wc">
+    <name> t_wc </name>
+    <desc> Write cycle time, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+ 
+ <parameter uniqueid="pcw_nor_cs0_t_rc">
+    <name> t_rc </name>
+    <desc> Read cycle time, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+ 
+ <parameter uniqueid="pcw_nor_cs0_we_time">
+    <name> we_time </name>
+    <desc> Asynchronous assertion, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+ <parameter uniqueid="pcw_nor_cs1_we_time">
+    <name> we_time </name>
+    <desc> Asynchronous assertion, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+
+ <parameter uniqueid="pcw_nor_cs1_t_tr">
+    <name> t_tr </name>
+    <desc> Turnaround time, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+ 
+ <parameter uniqueid="pcw_nor_cs1_t_pc">
+    <name> t_pc </name>
+    <desc> Page cycle time, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+ 
+ <parameter uniqueid="pcw_nor_cs1_t_wp">
+    <name> t_wp </name>
+    <desc> WE assertion delay, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+ 
+ <parameter uniqueid="pcw_nor_cs1_t_ceoe">
+    <name> t_ceoe </name>
+    <desc> OE assertion delay, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+ 
+ <parameter uniqueid="pcw_nor_cs1_t_wc">
+    <name> t_wc </name>
+    <desc> Write cycle time, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+ 
+ <parameter uniqueid="pcw_nor_cs1_t_rc">
+    <name> t_rc </name>
+    <desc> Read cycle time, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+ <parameter uniqueid="pcw_nor_sram_cs0_t_tr">
+    <name> t_tr </name>
+    <desc> Turnaround time, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+ 
+ <parameter uniqueid="pcw_nor_sram_cs0_t_pc">
+    <name> t_pc </name>
+    <desc> Page cycle time, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+ 
+ <parameter uniqueid="pcw_nor_sram_cs0_t_wp">
+    <name> t_wp </name>
+    <desc> WE assertion delay, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+ 
+ <parameter uniqueid="pcw_nor_sram_cs0_t_ceoe">
+    <name> t_ceoe </name>
+    <desc> OE assertion delay, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+ 
+ <parameter uniqueid="pcw_nor_sram_cs0_t_wc">
+    <name> t_wc </name>
+    <desc> Write cycle time, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+ 
+ <parameter uniqueid="pcw_nor_sram_cs0_t_rc">
+    <name> t_rc </name>
+    <desc> Read cycle time, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+ 
+ <parameter uniqueid="pcw_nor_sram_cs0_we_time">
+    <name> we_time </name>
+    <desc> Asynchronous assertion, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+ <parameter uniqueid="pcw_nor_sram_cs1_we_time">
+    <name> we_time </name>
+    <desc> Asynchronous assertion, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+ <parameter uniqueid="pcw_nor_sram_cs1_t_tr">
+    <name> t_tr </name>
+    <desc> Turnaround time, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+ 
+ <parameter uniqueid="pcw_nor_sram_cs1_t_pc">
+    <name> t_pc </name>
+    <desc> Page cycle time, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+ 
+ <parameter uniqueid="pcw_nor_sram_cs1_t_wp">
+    <name> t_wp </name>
+    <desc> WE assertion delay, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+ 
+ <parameter uniqueid="pcw_nor_sram_cs1_t_ceoe">
+    <name> t_ceoe </name>
+    <desc> OE assertion delay, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+ 
+ <parameter uniqueid="pcw_nor_sram_cs1_t_wc">
+    <name> t_wc </name>
+    <desc> Write cycle time, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+ 
+ <parameter uniqueid="pcw_nor_sram_cs1_t_rc">
+    <name> t_rc </name>
+    <desc> Read cycle time, refer to SET_CYCLES register </desc>
+    <ui_param/>
+  </parameter>
+
+<parameter uniqueid="pcw_EN_SMC">
+    <name>C_EN_SMC </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+</parameters>

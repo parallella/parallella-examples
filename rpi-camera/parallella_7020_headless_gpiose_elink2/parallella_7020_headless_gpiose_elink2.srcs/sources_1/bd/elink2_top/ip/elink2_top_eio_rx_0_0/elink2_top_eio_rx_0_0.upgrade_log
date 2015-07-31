@@ -1,0 +1,79 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.3 (lin64) Build 1034051 Fri Oct  3 16:31:15 MDT 2014
+| Date         : Fri Jan 16 16:56:36 2015
+| Host         : FredsLaptop running 64-bit Ubuntu 14.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'elink2_top_eio_rx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of elink2_top_eio_rx_0_0 (adapteva.com:Adapteva:eio_rx:1.0 (Rev. 9)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.3 (lin64) Build 1034051 Fri Oct  3 16:31:15 MDT 2014
+| Date         : Mon Dec 15 20:40:54 2014
+| Host         : FredsLaptop running 64-bit Ubuntu 14.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'elink2_top_eio_rx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of elink2_top_eio_rx_0_0 (adapteva.com:Adapteva:eio_rx:1.0 (Rev. 9)) to current project options.
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.3 (lin64) Build 1034051 Fri Oct  3 16:31:15 MDT 2014
+| Date         : Thu Nov 20 19:18:12 2014
+| Host         : FredsLaptop running 64-bit Ubuntu 14.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'elink2_top_eio_rx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of elink2_top_eio_rx_0_0 (adapteva.com:Adapteva:eio_rx:1.0) from (Rev. 8) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.3 (lin64) Build 1034051 Fri Oct  3 16:31:15 MDT 2014
+| Date         : Thu Nov 20 15:18:45 2014
+| Host         : FredsLaptop running 64-bit Ubuntu 14.04.1 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'elink2_top_eio_rx_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of elink2_top_eio_rx_0_0 (adapteva.com:Adapteva:eio_rx:1.0) from (Rev. 7) to (Rev. 8)
+

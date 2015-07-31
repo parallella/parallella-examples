@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE parameters PUBLIC "presets" "presets.dtd" >
+<presets>
+
+  <preset param="pcw_uart1_peripheral_enable" name="0" strength="7">
+      <disable param="pcw_uart1_grp_full_enable"/>
+      <disable param="pcw_uart1_peripheral_freqmhz"/>
+      <disable param="pcw_uart1_uart1_io"/>
+  </preset>
+  <preset param="pcw_uart1_peripheral_enable" name="" strength="7">
+      <disable param="pcw_uart1_grp_full_enable"/>
+      <disable param="pcw_uart1_peripheral_freqmhz"/>
+      <disable param="pcw_uart1_uart1_io"/>
+  </preset>
+  <preset param="pcw_uart1_peripheral_enable" name="1" strength="4">
+    <set param="pcw_uart1_uart1_io" value="MIO 48 .. 49"/>
+    <set param="pcw_uart_peripheral_valid" value="1"/>
+    <set param="pcw_EN_UART1" value="1" />
+  </preset>
+
+
+
+  <preset param="pcw_uart1_grp_full_enable" name="0" strength="7">
+      <disable param="pcw_uart1_grp_full_io"/>
+  </preset>
+  <preset param="pcw_uart1_grp_full_enable" name="" strength="7">
+      <disable param="pcw_uart1_grp_full_io"/>
+  </preset>
+  <preset param="pcw_uart1_grp_full_enable" name="1" strength="4">
+    <set param="pcw_uart1_grp_full_io" value="EMIO"/>
+    <set param="pcw_EN_MODEM_UART1" value="1" />
+    <set param="pcw_uart1_internal_modem" value="1" />
+  </preset>
+
+
+
+  <preset param="pcw_uart1_uart1_io" name="EMIO" strength="7">
+      <set param="pcw_uart1_tx_io" value="EMIO" />
+      <set param="pcw_uart1_rx_io" value="EMIO" />
+      <set param="pcw_EN_EMIO_UART1" value="1" />
+
+  </preset>
+
+
+
+  <preset param="pcw_uart1_grp_full_io" name="EMIO" strength="5">
+      <set param="pcw_uart1_cts_io" value="EMIO" />
+      <set param="pcw_uart1_rts_io" value="EMIO" />
+      <set param="pcw_uart1_dsr_io" value="EMIO" />
+      <set param="pcw_uart1_dtr_io" value="EMIO" />
+      <set param="pcw_uart1_ri_io" value="EMIO" />
+      <set param="pcw_uart1_dcd_io" value="EMIO" />
+      <set param="pcw_EN_EMIO_MODEM_UART1" value="1" />
+  </preset>
+
+
+
+
+
+
+
+  <preset param="pcw_uart1_uart1_io" name="MIO 8 .. 9" strength="5">
+      <set param="pcw_uart1_tx_io" value="MIO 8" />
+      <set param="pcw_mio_mio[8]_signal" value="tx" />
+      <set param="pcw_mio_mio[8]_peripheral" value="UART 1" />
+      <set param="pcw_mio_mio[8]_signalgroup" value="UART 1" />
+      <set param="pcw_preset_mio_8" value="uart1" />
+      <set param="pcw_uart1_rx_io" value="MIO 9" />
+      <set param="pcw_mio_mio[9]_signal" value="rx" />
+      <set param="pcw_mio_mio[9]_peripheral" value="UART 1" />
+      <set param="pcw_mio_mio[9]_signalgroup" value="UART 1" />
+      <set param="pcw_preset_mio_9" value="uart1" />
+  </preset>
+
+  <preset param="pcw_uart1_uart1_io" name="MIO 12 .. 13" strength="5">
+      <set param="pcw_uart1_tx_io" value="MIO 12" />
+      <set param="pcw_mio_mio[12]_signal" value="tx" />
+      <set param="pcw_mio_mio[12]_peripheral" value="UART 1" />
+      <set param="pcw_mio_mio[12]_signalgroup" value="UART 1" />
+      <set param="pcw_preset_mio_12" value="uart1" />
+      <set param="pcw_uart1_rx_io" value="MIO 13" />
+      <set param="pcw_mio_mio[13]_signal" value="rx" />
+      <set param="pcw_mio_mio[13]_peripheral" value="UART 1" />
+      <set param="pcw_mio_mio[13]_signalgroup" value="UART 1" />
+      <set param="pcw_preset_mio_13" value="uart1" />
+  </preset>
+
+  <preset param="pcw_uart1_uart1_io" name="MIO 16 .. 17" strength="5">
+      <set param="pcw_uart1_tx_io" value="MIO 16" />
+      <set param="pcw_mio_mio[16]_signal" value="tx" />
+      <set param="pcw_mio_mio[16]_peripheral" value="UART 1" />
+      <set param="pcw_mio_mio[16]_signalgroup" value="UART 1" />
+      <set param="pcw_preset_mio_16" value="uart1" />
+      <set param="pcw_uart1_rx_io" value="MIO 17" />
+      <set param="pcw_mio_mio[17]_signal" value="rx" />
+      <set param="pcw_mio_mio[17]_peripheral" value="UART 1" />
+      <set param="pcw_mio_mio[17]_signalgroup" value="UART 1" />
+      <set param="pcw_preset_mio_17" value="uart1" />
+  </preset>
+
+  <preset param="pcw_uart1_uart1_io" name="MIO 20 .. 21" strength="5">
+      <set param="pcw_uart1_tx_io" value="MIO 20" />
+      <set param="pcw_mio_mio[20]_signal" value="tx" />
+      <set param="pcw_mio_mio[20]_peripheral" value="UART 1" />
+      <set param="pcw_mio_mio[20]_signalgroup" value="UART 1" />
+      <set param="pcw_preset_mio_20" value="uart1" />
+      <set param="pcw_uart1_rx_io" value="MIO 21" />
+      <set param="pcw_mio_mio[21]_signal" value="rx" />
+      <set param="pcw_mio_mio[21]_peripheral" value="UART 1" />
+      <set param="pcw_mio_mio[21]_signalgroup" value="UART 1" />
+      <set param="pcw_preset_mio_21" value="uart1" />
+  </preset>
+
+  <preset param="pcw_uart1_uart1_io" name="MIO 24 .. 25" strength="5">
+      <set param="pcw_uart1_tx_io" value="MIO 24" />
+      <set param="pcw_mio_mio[24]_signal" value="tx" />
+      <set param="pcw_mio_mio[24]_peripheral" value="UART 1" />
+      <set param="pcw_mio_mio[24]_signalgroup" value="UART 1" />
+      <set param="pcw_preset_mio_24" value="uart1" />
+      <set param="pcw_uart1_rx_io" value="MIO 25" />
+      <set param="pcw_mio_mio[25]_signal" value="rx" />
+      <set param="pcw_mio_mio[25]_peripheral" value="UART 1" />
+      <set param="pcw_mio_mio[25]_signalgroup" value="UART 1" />
+      <set param="pcw_preset_mio_25" value="uart1" />
+  </preset>
+
+  <preset param="pcw_uart1_uart1_io" name="MIO 28 .. 29" strength="5">
+      <set param="pcw_uart1_tx_io" value="MIO 28" />
+      <set param="pcw_mio_mio[28]_signal" value="tx" />
+      <set param="pcw_mio_mio[28]_peripheral" value="UART 1" />
+      <set param="pcw_mio_mio[28]_signalgroup" value="UART 1" />
+      <set param="pcw_preset_mio_28" value="uart1" />
+      <set param="pcw_uart1_rx_io" value="MIO 29" />
+      <set param="pcw_mio_mio[29]_signal" value="rx" />
+      <set param="pcw_mio_mio[29]_peripheral" value="UART 1" />
+      <set param="pcw_mio_mio[29]_signalgroup" value="UART 1" />
+      <set param="pcw_preset_mio_29" value="uart1" />
+  </preset>
+
+  <preset param="pcw_uart1_uart1_io" name="MIO 32 .. 33" strength="5">
+      <set param="pcw_uart1_tx_io" value="MIO 32" />
+      <set param="pcw_mio_mio[32]_signal" value="tx" />
+      <set param="pcw_mio_mio[32]_peripheral" value="UART 1" />
+      <set param="pcw_mio_mio[32]_signalgroup" value="UART 1" />
+      <set param="pcw_preset_mio_32" value="uart1" />
+      <set param="pcw_uart1_rx_io" value="MIO 33" />
+      <set param="pcw_mio_mio[33]_signal" value="rx" />
+      <set param="pcw_mio_mio[33]_peripheral" value="UART 1" />
+      <set param="pcw_mio_mio[33]_signalgroup" value="UART 1" />
+      <set param="pcw_preset_mio_33" value="uart1" />
+  </preset>
+
+  <preset param="pcw_uart1_uart1_io" name="MIO 36 .. 37" strength="5">
+      <set param="pcw_uart1_tx_io" value="MIO 36" />
+      <set param="pcw_mio_mio[36]_signal" value="tx" />
+      <set param="pcw_mio_mio[36]_peripheral" value="UART 1" />
+      <set param="pcw_mio_mio[36]_signalgroup" value="UART 1" />
+      <set param="pcw_preset_mio_36" value="uart1" />
+      <set param="pcw_uart1_rx_io" value="MIO 37" />
+      <set param="pcw_mio_mio[37]_signal" value="rx" />
+      <set param="pcw_mio_mio[37]_peripheral" value="UART 1" />
+      <set param="pcw_mio_mio[37]_signalgroup" value="UART 1" />
+      <set param="pcw_preset_mio_37" value="uart1" />
+  </preset>
+
+  <preset param="pcw_uart1_uart1_io" name="MIO 40 .. 41" strength="5">
+      <set param="pcw_uart1_tx_io" value="MIO 40" />
+      <set param="pcw_mio_mio[40]_signal" value="tx" />
+      <set param="pcw_mio_mio[40]_peripheral" value="UART 1" />
+      <set param="pcw_mio_mio[40]_signalgroup" value="UART 1" />
+      <set param="pcw_preset_mio_40" value="uart1" />
+      <set param="pcw_uart1_rx_io" value="MIO 41" />
+      <set param="pcw_mio_mio[41]_signal" value="rx" />
+      <set param="pcw_mio_mio[41]_peripheral" value="UART 1" />
+      <set param="pcw_mio_mio[41]_signalgroup" value="UART 1" />
+      <set param="pcw_preset_mio_41" value="uart1" />
+  </preset>
+
+  <preset param="pcw_uart1_uart1_io" name="MIO 44 .. 45" strength="5">
+      <set param="pcw_uart1_tx_io" value="MIO 44" />
+      <set param="pcw_mio_mio[44]_signal" value="tx" />
+      <set param="pcw_mio_mio[44]_peripheral" value="UART 1" />
+      <set param="pcw_mio_mio[44]_signalgroup" value="UART 1" />
+      <set param="pcw_preset_mio_44" value="uart1" />
+      <set param="pcw_uart1_rx_io" value="MIO 45" />
+      <set param="pcw_mio_mio[45]_signal" value="rx" />
+      <set param="pcw_mio_mio[45]_peripheral" value="UART 1" />
+      <set param="pcw_mio_mio[45]_signalgroup" value="UART 1" />
+      <set param="pcw_preset_mio_45" value="uart1" />
+  </preset>
+
+  <preset param="pcw_uart1_uart1_io" name="MIO 48 .. 49" strength="5">
+      <set param="pcw_uart1_tx_io" value="MIO 48" />
+      <set param="pcw_mio_mio[48]_signal" value="tx" />
+      <set param="pcw_mio_mio[48]_peripheral" value="UART 1" />
+      <set param="pcw_mio_mio[48]_signalgroup" value="UART 1" />
+      <set param="pcw_preset_mio_48" value="uart1" />
+      <set param="pcw_uart1_rx_io" value="MIO 49" />
+      <set param="pcw_mio_mio[49]_signal" value="rx" />
+      <set param="pcw_mio_mio[49]_peripheral" value="UART 1" />
+      <set param="pcw_mio_mio[49]_signalgroup" value="UART 1" />
+      <set param="pcw_preset_mio_49" value="uart1" />
+  </preset>
+
+  <preset param="pcw_uart1_uart1_io" name="MIO 52 .. 53" strength="5">
+      <set param="pcw_uart1_tx_io" value="MIO 52" />
+      <set param="pcw_mio_mio[52]_signal" value="tx" />
+      <set param="pcw_mio_mio[52]_peripheral" value="UART 1" />
+      <set param="pcw_mio_mio[52]_signalgroup" value="UART 1" />
+      <set param="pcw_preset_mio_52" value="uart1" />
+      <set param="pcw_uart1_rx_io" value="MIO 53" />
+      <set param="pcw_mio_mio[53]_signal" value="rx" />
+      <set param="pcw_mio_mio[53]_peripheral" value="UART 1" />
+      <set param="pcw_mio_mio[53]_signalgroup" value="UART 1" />
+      <set param="pcw_preset_mio_53" value="uart1" />
+  </preset>
+
+ <preset param="pcw_uart1_baud_rate" name="110" strength="3">
+    <set param="pcw_internal_uart1_baud_rate" value="110"/>
+  </preset>
+
+  <preset param="pcw_uart1_baud_rate" name="300" strength="3">
+    <set param="pcw_internal_uart1_baud_rate" value="300"/>
+  </preset>
+
+  <preset param="pcw_uart1_baud_rate" name="1200" strength="3">
+    <set param="pcw_internal_uart1_baud_rate" value="1200"/>
+  </preset>
+
+  <preset param="pcw_uart1_baud_rate" name="2400" strength="3">
+    <set param="pcw_internal_uart1_baud_rate" value="2400"/>
+  </preset>
+
+  <preset param="pcw_uart1_baud_rate" name="4800" strength="3">
+    <set param="pcw_internal_uart1_baud_rate" value="4800"/>
+  </preset>
+
+  <preset param="pcw_uart1_baud_rate" name="9600" strength="3">
+    <set param="pcw_internal_uart1_baud_rate" value="9600"/>
+  </preset>
+
+  <preset param="pcw_uart1_baud_rate" name="19200" strength="3">
+    <set param="pcw_internal_uart1_baud_rate" value="19200"/>
+  </preset>
+
+  <preset param="pcw_uart1_baud_rate" name="38400" strength="3">
+    <set param="pcw_internal_uart1_baud_rate" value="38400"/>
+  </preset>
+
+  <preset param="pcw_uart1_baud_rate" name="57600" strength="3">
+    <set param="pcw_internal_uart1_baud_rate" value="57600"/>
+  </preset>
+
+  <preset param="pcw_uart1_baud_rate" name="115200" strength="3">
+    <set param="pcw_internal_uart1_baud_rate" value="115200"/>
+  </preset>
+
+  <preset param="pcw_uart1_baud_rate" name="128000" strength="3">
+    <set param="pcw_internal_uart1_baud_rate" value="128000"/>
+  </preset>
+
+  <preset param="pcw_uart1_baud_rate" name="230400" strength="3">
+    <set param="pcw_internal_uart1_baud_rate" value="230400"/>
+  </preset>
+
+  <preset param="pcw_uart1_baud_rate" name="460800" strength="3">
+    <set param="pcw_internal_uart1_baud_rate" value="460800"/>
+  </preset>
+
+  <preset param="pcw_uart1_baud_rate" name="921600" strength="3">
+    <set param="pcw_internal_uart1_baud_rate" value="921600"/>
+  </preset>
+
+</presets>
+

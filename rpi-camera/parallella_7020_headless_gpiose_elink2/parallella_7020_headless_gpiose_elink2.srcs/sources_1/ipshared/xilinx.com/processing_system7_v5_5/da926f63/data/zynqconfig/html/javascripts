@@ -1,0 +1,29 @@
+<script type="text/javascript" language="JavaScript">
+
+function ChangeSilRegLink(id) {
+        var ver=document.getElementById(id).value; 
+        if (ver == "Silicon3.0") {
+            document.getElementById("MIO_Registers").href="#ps7_mio_init_data_3_0";
+            document.getElementById("PLL_Registers").href="#ps7_pll_init_data_3_0";
+            document.getElementById("Clock_Registers").href="#ps7_clock_init_data_3_0";
+            document.getElementById("DDR_Registers").href="#ps7_ddr_init_data_3_0";
+            document.getElementById("Peri_Registers").href="#ps7_peripherals_init_data_3_0";
+            window.location = '#ps7_mio_init_data_3_0';
+        } else if (ver == "Silicon2.0") {
+            document.getElementById("MIO_Registers").href="#ps7_mio_init_data_2_0";
+            document.getElementById("PLL_Registers").href="#ps7_pll_init_data_2_0";
+            document.getElementById("Clock_Registers").href="#ps7_clock_init_data_2_0";
+            document.getElementById("DDR_Registers").href="#ps7_ddr_init_data_2_0";
+            document.getElementById("Peri_Registers").href="#ps7_peripherals_init_data_2_0";
+            window.location = '#ps7_mio_init_data_2_0';
+        } else {
+            document.getElementById("MIO_Registers").href="#ps7_mio_init_data_1_0";
+            document.getElementById("PLL_Registers").href="#ps7_pll_init_data_1_0";
+            document.getElementById("Clock_Registers").href="#ps7_clock_init_data_1_0";
+            document.getElementById("DDR_Registers").href="#ps7_ddr_init_data_1_0";
+            document.getElementById("Peri_Registers").href="#ps7_peripherals_init_data_1_0";
+            window.location = '#ps7_mio_init_data_1_0';
+        }
+}
+</script>
+

@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE parameters PUBLIC "presets" "presets.dtd" >
+<presets>
+
+  <preset param="pcw_trace_peripheral_enable" name="0" strength="8">
+      <set param="pcw_tpiu_peripheral_freqmhz" value="200"/>
+      <disable param="pcw_trace_grp_32bit_enable"/>
+      <disable param="pcw_trace_grp_16bit_enable"/>
+      <disable param="pcw_trace_grp_8bit_enable"/>
+      <disable param="pcw_trace_grp_4bit_enable"/>
+      <disable param="pcw_trace_grp_2bit_enable"/>
+      <disable param="pcw_tpiu_peripheral_freqmhz"/>
+      <disable param="pcw_trace_trace_io"/>
+  </preset>
+  <preset param="pcw_trace_peripheral_enable" name="" strength="8">
+      <set param="pcw_tpiu_peripheral_freqmhz" value="200"/>
+      <disable param="pcw_trace_grp_32bit_enable"/>
+      <disable param="pcw_trace_grp_16bit_enable"/>
+      <disable param="pcw_trace_grp_8bit_enable"/>
+      <disable param="pcw_trace_grp_4bit_enable"/>
+      <disable param="pcw_trace_grp_2bit_enable"/>
+      <disable param="pcw_tpiu_peripheral_freqmhz"/>
+      <disable param="pcw_trace_trace_io"/>
+  </preset>
+  <preset param="pcw_trace_peripheral_enable" name="1" strength="4">
+      <set param="pcw_trace_grp_2bit_enable" value="1"/>
+<!--      <disable param="pcw_trace_grp_2bit_enable" /> -->
+      <set param="pcw_trace_trace_io" value="EMIO"/>
+      <set param="pcw_EN_TRACE" value="1" />
+      <set param="pcw_tpiu_peripheral_freqmhz" value="200"/>
+  </preset>
+
+  <preset param="pcw_trace_internal_clksrc" name="1" strength="4">
+      <set param="pcw_tpiu_peripheral_clksrc" value="External" />
+  </preset>
+
+  <preset param="pcw_trace_grp_2bit_enable" name="0" strength="8">
+    <disable param="pcw_trace_grp_2bit_io" />
+    <disable param="pcw_trace_grp_4bit_enable"/>
+  </preset>
+  <preset param="pcw_trace_grp_2bit_enable" name="" strength="8">
+    <disable param="pcw_trace_grp_2bit_io" />
+    <disable param="pcw_trace_grp_4bit_enable"/>
+  </preset>
+  <preset param="pcw_trace_grp_2bit_enable" name="1" strength="2">
+      <set param="pcw_trace_grp_2bit_io" value="MIO 14 .. 15"/>
+      <set param="pcw_trace_internal_width" value="2" />
+  </preset>
+
+  <preset param="pcw_trace_grp_4bit_enable" name="0" strength="8">
+    <disable param="pcw_trace_grp_4bit_io" />
+    <disable param="pcw_trace_grp_8bit_enable"/>
+  </preset>
+  <preset param="pcw_trace_grp_4bit_enable" name="" strength="8">
+    <disable param="pcw_trace_grp_4bit_io" />
+    <disable param="pcw_trace_grp_8bit_enable"/>
+  </preset>
+  <preset param="pcw_trace_grp_4bit_enable" name="1" strength="3">
+      <set param="pcw_trace_grp_4bit_io" value="MIO 10 .. 11"/>
+      <set param="pcw_trace_internal_width" value="4" />
+  </preset>
+  
+  <preset param="pcw_trace_grp_8bit_enable" name="0" strength="8">
+    <disable param="pcw_trace_grp_8bit_io" />
+    <disable param="pcw_trace_grp_16bit_enable"/>
+  </preset>
+  <preset param="pcw_trace_grp_8bit_enable" name="" strength="8">
+    <disable param="pcw_trace_grp_8bit_io" />
+    <disable param="pcw_trace_grp_16bit_enable"/>
+  </preset>
+  <preset param="pcw_trace_grp_8bit_enable" name="1" strength="4">
+      <set param="pcw_trace_grp_8bit_io" value="MIO 16 .. 19"/>
+      <set param="pcw_trace_internal_width" value="8" />
+  </preset>
+
+  <preset param="pcw_trace_grp_16bit_enable" name="0" strength="8">
+    <disable param="pcw_trace_grp_16bit_io" />
+    <disable param="pcw_trace_grp_32bit_enable"/>
+  </preset>
+  <preset param="pcw_trace_grp_16bit_enable" name="" strength="8">
+    <disable param="pcw_trace_grp_16bit_io" />
+    <disable param="pcw_trace_grp_32bit_enable"/>
+  </preset>
+  <preset param="pcw_trace_grp_16bit_enable" name="1" strength="5">
+      <set param="pcw_trace_grp_16bit_io" value="MIO 2 .. 9"/>
+      <set param="pcw_trace_internal_width" value="16" />
+  </preset>
+
+  <preset param="pcw_trace_grp_32bit_enable" name="0" strength="8">
+    <disable param="pcw_trace_grp_32bit_io" />
+  </preset>
+  <preset param="pcw_trace_grp_32bit_enable" name="" strength="8">
+    <disable param="pcw_trace_grp_32bit_io" />
+  </preset>
+  <preset param="pcw_trace_grp_32bit_enable" name="1" strength="6">
+      <set param="pcw_trace_grp_32bit_io" value="EMIO"/>
+      <set param="pcw_trace_internal_width" value="32" />
+  </preset>
+
+
+  <preset param="pcw_trace_internal_width" name="2" strength="5">
+       <set param="ps7_debug_tpiu_CurrentSize_a" value="2" />
+  </preset>
+  <preset param="pcw_trace_internal_width" name="4" strength="5">
+       <set param="ps7_debug_tpiu_CurrentSize_a" value="8"/>
+  </preset>
+  <preset param="pcw_trace_internal_width" name="8" strength="5">
+       <set param="ps7_debug_tpiu_CurrentSize_a" value="128"/>
+  </preset>
+  <preset param="pcw_trace_internal_width" name="16" strength="5">
+       <set param="ps7_debug_tpiu_CurrentSize_a" value="32768"/>
+  </preset>
+  <preset param="pcw_trace_internal_width" name="32" strength="5">
+       <set param="ps7_debug_tpiu_CurrentSize_a" value="2147483648"/>
+  </preset>
+
+  <preset param="pcw_trace_trace_io" name="EMIO" strength="7">
+      <set param="pcw_trace_trace_clk_io" value="EMIO" />
+      <set param="pcw_trace_trace_ctl_io" value="EMIO" />
+
+      <set param="pcw_trace_grp_2bit_io" value="EMIO"/>
+      <set param="pcw_trace_grp_4bit_io" value="EMIO"/>
+      <set param="pcw_trace_grp_8bit_io" value="EMIO"/>
+      <set param="pcw_trace_grp_16bit_io" value="EMIO"/>
+      <set param="pcw_trace_grp_32bit_io" value="EMIO"/>
+      <dischoice param="pcw_trace_grp_16bit_io" value="MIO 2 .. 9" />
+      <dischoice param="pcw_trace_grp_8bit_io" value="MIO 16 .. 19" />
+      <dischoice param="pcw_trace_grp_4bit_io" value="MIO 10 .. 11" />
+      <dischoice param="pcw_trace_grp_4bit_io" value="MIO 22 .. 23" />
+      <dischoice param="pcw_trace_grp_2bit_io" value="MIO 14 .. 15" />
+      <dischoice param="pcw_trace_grp_2bit_io" value="MIO 26 .. 27" />
+      <disable param="pcw_trace_grp_2bit_io" />
+      <disable param="pcw_trace_grp_4bit_io" />
+      <disable param="pcw_trace_grp_8bit_io" />
+      <disable param="pcw_trace_grp_16bit_io" />
+      <disable param="pcw_trace_grp_32bit_io" />
+      <set param="pcw_EN_EMIO_TRACE" value="1" />
+      <set param="pcw_trace_internal_clksrc" value="1" />
+  </preset>
+
+
+  <preset param="pcw_trace_grp_2bit_io" name="EMIO" strength="5">
+      <set param="pcw_trace_data[0]_io" value="EMIO" />
+      <set param="pcw_trace_data[1]_io" value="EMIO" />
+  </preset>
+  <preset param="pcw_trace_grp_4bit_io" name="EMIO" strength="5">
+      <set param="pcw_trace_data[2]_io" value="EMIO" />
+      <set param="pcw_trace_data[3]_io" value="EMIO" />
+  </preset>
+  <preset param="pcw_trace_grp_8bit_io" name="EMIO" strength="5">
+      <set param="pcw_trace_data[4]_io" value="EMIO" />
+      <set param="pcw_trace_data[5]_io" value="EMIO" />
+      <set param="pcw_trace_data[6]_io" value="EMIO" />
+      <set param="pcw_trace_data[7]_io" value="EMIO" />
+  </preset>
+  <preset param="pcw_trace_grp_16bit_io" name="EMIO" strength="5">
+      <set param="pcw_trace_data[8]_io" value="EMIO" />
+      <set param="pcw_trace_data[9]_io" value="EMIO" />
+      <set param="pcw_trace_data[10]_io" value="EMIO" />
+      <set param="pcw_trace_data[11]_io" value="EMIO" />
+      <set param="pcw_trace_data[12]_io" value="EMIO" />
+      <set param="pcw_trace_data[13]_io" value="EMIO" />
+      <set param="pcw_trace_data[14]_io" value="EMIO" />
+      <set param="pcw_trace_data[15]_io" value="EMIO" />
+  </preset>
+  <preset param="pcw_trace_grp_32bit_io" name="EMIO" strength="5">
+      <set param="pcw_trace_data[16]_io" value="EMIO" />
+      <set param="pcw_trace_data[17]_io" value="EMIO" />
+      <set param="pcw_trace_data[18]_io" value="EMIO" />
+      <set param="pcw_trace_data[19]_io" value="EMIO" />
+      <set param="pcw_trace_data[20]_io" value="EMIO" />
+      <set param="pcw_trace_data[21]_io" value="EMIO" />
+      <set param="pcw_trace_data[22]_io" value="EMIO" />
+      <set param="pcw_trace_data[23]_io" value="EMIO" />
+      <set param="pcw_trace_data[24]_io" value="EMIO" />
+      <set param="pcw_trace_data[25]_io" value="EMIO" />
+      <set param="pcw_trace_data[26]_io" value="EMIO" />
+      <set param="pcw_trace_data[27]_io" value="EMIO" />
+      <set param="pcw_trace_data[28]_io" value="EMIO" />
+      <set param="pcw_trace_data[29]_io" value="EMIO" />
+      <set param="pcw_trace_data[30]_io" value="EMIO" />
+      <set param="pcw_trace_data[31]_io" value="EMIO" />
+  </preset>
+
+
+
+  <preset param="pcw_trace_trace_io" name="MIO 12 .. 13" strength="5">
+
+      <set param="pcw_trace_trace_clk_io" value="MIO 12" />
+      <set param="pcw_mio_mio[12]_signal" value="trace_clk" />
+      <set param="pcw_mio_mio[12]_peripheral" value="Trace" />
+      <set param="pcw_mio_mio[12]_signalgroup" value="Trace" />
+      <set param="pcw_preset_mio_12" value="trace" />
+
+      <set param="pcw_trace_trace_ctl_io" value="MIO 13" />
+      <set param="pcw_mio_mio[13]_signal" value="trace_ctl" />
+      <set param="pcw_mio_mio[13]_peripheral" value="Trace" />
+      <set param="pcw_mio_mio[13]_signalgroup" value="Trace" />
+      <set param="pcw_preset_mio_13" value="trace" />
+      <set param="pcw_trace_grp_32bit_enable" value="0"/>
+      <disable param="pcw_trace_grp_32bit_enable"/>
+      <disable param="pcw_trace_grp_32bit_io"/>
+      <dischoice param="pcw_trace_grp_16bit_io" value="EMIO" />
+      <dischoice param="pcw_trace_grp_8bit_io" value="EMIO" />
+      <dischoice param="pcw_trace_grp_4bit_io" value="EMIO" />
+      <dischoice param="pcw_trace_grp_2bit_io" value="EMIO" />
+
+  </preset>
+
+  <preset param="pcw_trace_trace_io" name="MIO 24 .. 25" strength="5">
+
+      <set param="pcw_trace_trace_clk_io" value="MIO 24" />
+      <set param="pcw_mio_mio[24]_signal" value="trace_clk" />
+      <set param="pcw_mio_mio[24]_peripheral" value="Trace" />
+      <set param="pcw_mio_mio[24]_signalgroup" value="Trace" />
+      <set param="pcw_preset_mio_24" value="trace" />
+
+      <set param="pcw_trace_trace_ctl_io" value="MIO 25" />
+      <set param="pcw_mio_mio[25]_signal" value="trace_ctl" />
+      <set param="pcw_mio_mio[25]_peripheral" value="Trace" />
+      <set param="pcw_mio_mio[25]_signalgroup" value="Trace" />
+      <set param="pcw_preset_mio_25" value="trace" />
+      <set param="pcw_trace_grp_32bit_enable" value="0"/>
+      <disable param="pcw_trace_grp_32bit_enable"/>
+      <dischoice param="pcw_trace_grp_16bit_io" value="EMIO" />
+      <dischoice param="pcw_trace_grp_8bit_io" value="EMIO" />
+      <dischoice param="pcw_trace_grp_4bit_io" value="EMIO" />
+      <dischoice param="pcw_trace_grp_2bit_io" value="EMIO" />
+
+  </preset>
+
+
+
+  <preset param="pcw_trace_grp_2bit_io" name="MIO 14 .. 15" strength="5">
+
+      <set param="pcw_trace_data[0]_io" value="MIO 14" />
+      <set param="pcw_mio_mio[14]_signal" value="data[0]" />
+      <set param="pcw_mio_mio[14]_peripheral" value="Trace" />
+      <set param="pcw_mio_mio[14]_signalgroup" value="Trace" />
+      <set param="pcw_preset_mio_14" value="trace" />
+
+      <set param="pcw_trace_data[1]_io" value="MIO 15" />
+      <set param="pcw_mio_mio[15]_signal" value="data[1]" />
+      <set param="pcw_mio_mio[15]_peripheral" value="Trace" />
+      <set param="pcw_mio_mio[15]_signalgroup" value="Trace" />
+      <set param="pcw_preset_mio_15" value="trace" />
+
+  </preset>
+
+  <preset param="pcw_trace_grp_2bit_io" name="MIO 26 .. 27" strength="5">
+
+      <set param="pcw_trace_data[0]_io" value="MIO 26" />
+      <set param="pcw_mio_mio[26]_signal" value="data[0]" />
+      <set param="pcw_mio_mio[26]_peripheral" value="Trace" />
+      <set param="pcw_mio_mio[26]_signalgroup" value="Trace" />
+      <set param="pcw_preset_mio_26" value="trace" />
+
+      <set param="pcw_trace_data[1]_io" value="MIO 27" />
+      <set param="pcw_mio_mio[27]_signal" value="data[1]" />
+      <set param="pcw_mio_mio[27]_peripheral" value="Trace" />
+      <set param="pcw_mio_mio[27]_signalgroup" value="Trace" />
+      <set param="pcw_preset_mio_27" value="trace" />
+
+  </preset>
+
+
+
+
+  <preset param="pcw_trace_grp_4bit_io" name="MIO 10 .. 11" strength="5">
+
+      <set param="pcw_trace_data[2]_io" value="MIO 10" />
+      <set param="pcw_mio_mio[10]_signal" value="data[2]" />
+      <set param="pcw_mio_mio[10]_peripheral" value="Trace" />
+      <set param="pcw_mio_mio[10]_signalgroup" value="4 Bit Data" />
+      <set param="pcw_preset_mio_10" value="trace" />
+
+      <set param="pcw_trace_data[3]_io" value="MIO 11" />
+      <set param="pcw_mio_mio[11]_signal" value="data[3]" />
+      <set param="pcw_mio_mio[11]_peripheral" value="Trace" />
+      <set param="pcw_mio_mio[11]_signalgroup" value="4 Bit Data" />
+      <set param="pcw_preset_mio_11" value="trace" />
+
+  </preset>
+
+  <preset param="pcw_trace_grp_4bit_io" name="MIO 22 .. 23" strength="5">
+
+      <set param="pcw_trace_data[2]_io" value="MIO 22" />
+      <set param="pcw_mio_mio[22]_signal" value="data[2]" />
+      <set param="pcw_mio_mio[22]_peripheral" value="Trace" />
+      <set param="pcw_mio_mio[22]_signalgroup" value="4 Bit Data" />
+      <set param="pcw_preset_mio_22" value="trace" />
+
+      <set param="pcw_trace_data[3]_io" value="MIO 23" />
+      <set param="pcw_mio_mio[23]_signal" value="data[3]" />
+      <set param="pcw_mio_mio[23]_peripheral" value="Trace" />
+      <set param="pcw_mio_mio[23]_signalgroup" value="4 Bit Data" />
+      <set param="pcw_preset_mio_23" value="trace" />
+
+  </preset>
+
+
+  <preset param="pcw_trace_grp_8bit_io" name="MIO 16 .. 19" strength="5">
+
+      <set param="pcw_trace_data[4]_io" value="MIO 16" />
+      <set param="pcw_mio_mio[16]_signal" value="data[4]" />
+      <set param="pcw_mio_mio[16]_peripheral" value="Trace" />
+      <set param="pcw_mio_mio[16]_signalgroup" value="8 Bit Data" />
+      <set param="pcw_preset_mio_16" value="trace" />
+
+      <set param="pcw_trace_data[5]_io" value="MIO 17" />
+      <set param="pcw_mio_mio[17]_signal" value="data[5]" />
+      <set param="pcw_mio_mio[17]_peripheral" value="Trace" />
+      <set param="pcw_mio_mio[17]_signalgroup" value="8 Bit Data" />
+      <set param="pcw_preset_mio_17" value="trace" />
+
+      <set param="pcw_trace_data[6]_io" value="MIO 18" />
+      <set param="pcw_mio_mio[18]_signal" value="data[6]" />
+      <set param="pcw_mio_mio[18]_peripheral" value="Trace" />
+      <set param="pcw_mio_mio[18]_signalgroup" value="8 Bit Data" />
+      <set param="pcw_preset_mio_18" value="trace" />
+
+      <set param="pcw_trace_data[7]_io" value="MIO 19" />
+      <set param="pcw_mio_mio[19]_signal" value="data[7]" />
+      <set param="pcw_mio_mio[19]_peripheral" value="Trace" />
+      <set param="pcw_mio_mio[19]_signalgroup" value="8 Bit Data" />
+      <set param="pcw_preset_mio_19" value="trace" />
+
+  </preset>
+
+  <preset param="pcw_trace_grp_16bit_io" name="MIO 2 .. 9" strength="5">
+
+      <set param="pcw_trace_data[8]_io" value="MIO 2" />
+      <set param="pcw_mio_mio[2]_signal" value="data[8]" />
+      <set param="pcw_mio_mio[2]_peripheral" value="Trace" />
+      <set param="pcw_mio_mio[2]_signalgroup" value="16 Bit Data" />
+      <set param="pcw_preset_mio_2" value="trace" />
+
+      <set param="pcw_trace_data[9]_io" value="MIO 3" />
+      <set param="pcw_mio_mio[3]_signal" value="data[9]" />
+      <set param="pcw_mio_mio[3]_peripheral" value="Trace" />
+      <set param="pcw_mio_mio[3]_signalgroup" value="16 Bit Data" />
+      <set param="pcw_preset_mio_3" value="trace" />
+
+      <set param="pcw_trace_data[10]_io" value="MIO 4" />
+      <set param="pcw_mio_mio[4]_signal" value="data[10]" />
+      <set param="pcw_mio_mio[4]_peripheral" value="Trace" />
+      <set param="pcw_mio_mio[4]_signalgroup" value="16 Bit Data" />
+      <set param="pcw_preset_mio_4" value="trace" />
+
+      <set param="pcw_trace_data[11]_io" value="MIO 5" />
+      <set param="pcw_mio_mio[5]_signal" value="data[11]" />
+      <set param="pcw_mio_mio[5]_peripheral" value="Trace" />
+      <set param="pcw_mio_mio[5]_signalgroup" value="16 Bit Data" />
+      <set param="pcw_preset_mio_5" value="trace" />
+
+      <set param="pcw_trace_data[12]_io" value="MIO 6" />
+      <set param="pcw_mio_mio[6]_signal" value="data[12]" />
+      <set param="pcw_mio_mio[6]_peripheral" value="Trace" />
+      <set param="pcw_mio_mio[6]_signalgroup" value="16 Bit Data" />
+      <set param="pcw_preset_mio_6" value="trace" />
+
+      <set param="pcw_trace_data[13]_io" value="MIO 7" />
+      <set param="pcw_mio_mio[7]_signal" value="data[13]" />
+      <set param="pcw_mio_mio[7]_peripheral" value="Trace" />
+      <set param="pcw_mio_mio[7]_signalgroup" value="16 Bit Data" />
+      <set param="pcw_preset_mio_7" value="trace" />
+
+      <set param="pcw_trace_data[14]_io" value="MIO 8" />
+      <set param="pcw_mio_mio[8]_signal" value="data[14]" />
+      <set param="pcw_mio_mio[8]_peripheral" value="Trace" />
+      <set param="pcw_mio_mio[8]_signalgroup" value="16 Bit Data" />
+      <set param="pcw_preset_mio_8" value="trace" />
+
+      <set param="pcw_trace_data[15]_io" value="MIO 9" />
+      <set param="pcw_mio_mio[9]_signal" value="data[15]" />
+      <set param="pcw_mio_mio[9]_peripheral" value="Trace" />
+      <set param="pcw_mio_mio[9]_signalgroup" value="16 Bit Data" />
+      <set param="pcw_preset_mio_9" value="trace" />
+
+  </preset>
+
+
+
+
+</presets>
+

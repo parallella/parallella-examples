@@ -1,0 +1,5 @@
+the_ROM_image:
+{
+	[bootloader]dummy.elf
+	elink2_top_wrapper.bit
+}

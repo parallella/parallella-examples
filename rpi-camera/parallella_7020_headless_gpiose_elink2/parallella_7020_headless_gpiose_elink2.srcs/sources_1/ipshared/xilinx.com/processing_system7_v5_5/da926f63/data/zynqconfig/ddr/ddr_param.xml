@@ -1,0 +1,3857 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE parameters PUBLIC "parameters" "parameters.dtd" >
+<parameters>
+
+
+
+  <parameter uniqueid="pcw_uiparam_ddr_memory_type">
+    <name> Memory Type </name>
+    <desc> Select the type of memory interface/types. Please refer to the TRM for a detailed list of supported memory controllers for Zynq family </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_internal_ddr_memory_type">
+    <name> Memory Type </name>
+    <choice value="1"> <name> LPDDR2 </name> </choice> 
+    <choice value="2"> <name> DDR2 </name> </choice>      
+    <choice value="3"> <name> DDR3 </name> </choice>      
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_internal_hasecc">
+    <name> HAS ECC </name>
+    <ui_param/>
+  </parameter>
+  
+  <parameter uniqueid="pcw_uiparam_ddr_enable">
+    <name> Enable DDR </name>
+    <desc> Enable DDR Controller of Zynq PS </desc>
+    <ui_param/>
+  </parameter>
+  
+  <parameter uniqueid="pcw_uiparam_ddr_ecc">
+    <name> ECC </name>
+    <desc> ECC is supported only for data width of 16-bit </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_internal_ddr_ecc">
+    <name> ECC </name>
+    <choice value="0"> <name> Disabled </name> </choice> 
+    <choice value="1"> <name> Enabled </name> </choice> 
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_bus_width">
+    <name> DRAM bus width </name>
+    <desc> Select the desired data width. Refer to the Thechnical Reference Manual(TRM) for a detailed list of supported DDR data widths </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_internal_ddr_bus_width">
+    <name> DRAM bus width </name>
+    <choice value="16"> <name> 16 bit </name> </choice> 
+    <choice value="32"> <name> 32 bit </name> </choice>      
+  </parameter>
+
+
+  <parameter uniqueid="pcw_uiparam_ddr_bl">
+    <name> BURST Length (lppdr only) </name>
+    <desc> Select the burst Length. It refers to the amount of data read/written after a read/write command is presented to the controller  </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_internal_ddr_bl">
+    <name> BURST Length (lppdr only) </name>
+    <choice value="4"> <name> 4 Clocks </name> </choice> 
+    <choice value="8"> <name> 8 Clocks </name> </choice> 
+    <choice value="16"> <name> 16 Clocks </name> </choice> 
+  </parameter>
+
+
+  <parameter uniqueid="pcw_uiparam_ddr_high_temp">
+    <name> HIGH temperature </name>
+    <desc> Select the operating temparature </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_internal_ddr_high_temp">
+    <name> HIGH temperature </name>
+    <choice value="0"> <name>NORMAL (0-85) </name> </choice> 
+    <choice value="1"> <name>HIGH (95 max) </name> </choice>      
+  </parameter>
+
+
+  <parameter uniqueid="pcw_uiparam_ddr_dram_width">
+    <name> DRAM IC bus width </name>
+    <desc> Provide the width of the DRAM chip </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_internal_ddr_dram_width">
+    <name> DRAM IC bus width </name>
+    <choice value="4"> <name> 4 bit </name> </choice>
+    <choice value="8"> <name> 8 bit </name> </choice>
+    <choice value="16"> <name> 16 bit </name> </choice>
+    <choice value="32"> <name> 32 bit </name> </choice>      
+  </parameter>
+
+  <parameter uniqueid="pcw_internal_ddr_ddr3slew">
+    <name> SLEW </name>
+    <choice value="0"> <name> SLOW </name> </choice>
+    <choice value="1"> <name> FAST </name> </choice>      
+  </parameter>
+
+  <parameter uniqueid="pcw_internal_ddr_ddr3l">
+    <name> SLEW </name>
+    <choice value="0"> <name> LOW </name> </choice>
+    <choice value="1"> <name> HIGH </name> </choice>      
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_device_capacity">
+    <name> DRAM Device Capacity </name>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_internal_ddr_device_capacity">
+    <name> DRAM Device Capacity </name>
+    <choice value="128"> <name> 128 Mbits </name> </choice> 
+    <choice value="256"> <name> 256 Mbits </name> </choice>      
+    <choice value="512"> <name> 512 Mbits </name> </choice>      
+    <choice value="1024"> <name> 1024 Mbits </name> </choice>      
+    <choice value="2048"> <name> 2048 Mbits </name> </choice>      
+    <choice value="4096"> <name> 4096 Mbits </name> </choice>      
+    <choice value="8192"> <name> 8192 Mbits </name> </choice>      
+  </parameter>
+  
+
+  <parameter uniqueid="pcw_uiparam_ddr_speed_bin">
+    <name> Speed Bin </name>
+    <desc> Provide the Speed Bin </desc>
+    <ui_param/>
+  </parameter>
+  <parameter uniqueid="pcw_internal_ddr_speed_bin">
+    <name> Speed Bin </name>
+    <choice value="1 " > <name> SB_DDR2_400B  </name> </choice>
+    <choice value="2 " > <name> SB_DDR2_400C  </name> </choice>
+    <choice value="3 " > <name> SB_DDR2_533B  </name> </choice>
+    <choice value="4 " > <name> SB_DDR2_533C  </name> </choice>
+    <choice value="5 " > <name> SB_DDR2_667C  </name> </choice>
+    <choice value="6 " > <name> SB_DDR2_667D  </name> </choice>
+    <choice value="7 " > <name> SB_DDR2_800C  </name> </choice>
+    <choice value="8 " > <name> SB_DDR2_800D  </name> </choice>
+    <choice value="9 " > <name> SB_DDR2_800E  </name> </choice>
+    <choice value="10" > <name> SB_DDR3_800D   </name> </choice>
+    <choice value="11" > <name> SB_DDR3_800E   </name> </choice>
+    <choice value="12" > <name> SB_DDR3_1066E  </name> </choice>
+    <choice value="13" > <name> SB_DDR3_1066F  </name> </choice>
+    <choice value="14" > <name> SB_DDR3_1066G  </name> </choice>
+    <choice value="15" > <name> SB_DDR3_1333F  </name> </choice>
+    <choice value="16" > <name> SB_DDR3_1333G  </name> </choice>
+    <choice value="17" > <name> SB_DDR3_1333H  </name> </choice>
+    <choice value="18" > <name> SB_DDR3_1333J  </name> </choice>
+    <choice value="19" > <name> SB_DDR3_1600G  </name> </choice>
+    <choice value="20" > <name> SB_DDR3_1600H  </name> </choice>
+    <choice value="21" > <name> SB_DDR3_1600J  </name> </choice>
+    <choice value="22" > <name> SB_DDR3_1600K  </name> </choice>
+    <choice value="23" > <name> SB_LPDDR2_333  </name> </choice>
+    <choice value="24" > <name> SB_LPDDR2_400  </name> </choice>
+    <choice value="25" > <name> SB_LPDDR2_533  </name> </choice>
+    <choice value="26" > <name> SB_LPDDR2_667  </name> </choice>
+    <choice value="27" > <name> SB_LPDDR2_800  </name> </choice>
+    <choice value="28" > <name> SB_LPDDR2_933  </name> </choice>
+    <choice value="29" > <name> SB_LPDDR2_1066 </name> </choice>   
+
+  </parameter>
+
+
+  <parameter uniqueid="pcw_uiparam_ddr_freq_mhz">
+    <name> Operating Frequency (MHz) </name>
+    <desc> Chose the clock period for the desired frequency. The allowed freq range (200 - 667 MHz) is a function of FPGA part and FPGA speed grade </desc>
+    <range min="200" max="667" />
+    <dynrange min="pcw_ddr_freqrange_min" max="pcw_ddr_freqrange_max" />
+  </parameter>
+
+
+  <parameter uniqueid="pcw_uiparam_act_ddr_freq_mhz">
+    <name> Operating Frequency (MHz) </name>
+    <desc> Chose the clock period for the desired frequency. The allowed freq range (200 - 667 MHz) is a function of FPGA part and FPGA speed grade </desc>
+    <range min="200" max="667" />
+    <dynrange min="pcw_ddr_freqrange_min" max="pcw_ddr_freqrange_max" />
+  </parameter>
+
+
+  <parameter uniqueid="pcw_uiparam_ddr_bank_addr_count">
+    <name> BANK Address Count </name>
+    <desc> Defines the bank to which an active an ACTIVE, READ, WRITE, or Precharge Command is being applied  </desc>
+    <range min="2" max="3" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_row_addr_count">
+    <name> ROW Address Count </name>
+    <desc> Provide the Row address for ACTIVE commands </desc>
+    <range min="12" max="15" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_col_addr_count">
+    <name> COLUMN Address Count </name>
+    <desc> Provide the Row address for READ/WRITE commands  </desc>
+    <range min="8" max="13" />
+  </parameter>
+
+
+
+  <parameter uniqueid="pcw_uiparam_ddr_cl">
+    <name> CAS Latency </name>
+    <desc> Select the Column Access Strobe (CAS) Latency. It refers to the amount
+    of time it takes for data to appear on the pins of the memory module </desc>
+    <range min="0" max="16" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_cwl">
+    <name> CAS Write Latency </name>
+    <desc> Select the CAS Write Latency  </desc>
+    <range min="0" max="16" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_t_rcd">
+    <name> RAS to CAS Delay </name>
+    <desc> Provide the row address to column address delay time. tRCD is t
+    he time required between the memory controller asserting a row address strobe (RAS), and then asserting the column address strobe (CAS)</desc>
+    <range min="0" max="16" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_t_rp">
+    <name> RECHARGE Time </name>
+    <desc> Precharge Time (tRP) is the number of clock cycles needed o terminate acces
+    s to an open row of memory, and open access to the next row </desc>
+    <range min="0" max="16" />
+  </parameter>
+
+
+
+  <parameter uniqueid="pcw_uiparam_ddr_t_rc">
+    <name> tRC (ns ) </name>
+    <desc> Provide the Row cycle time tRC (ns)</desc>
+    <range min="0" max="100" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_t_ras_min">
+    <name> tRASmin ( ns ) </name>
+    <desc> tRASmin (ns) is the minimum number of clock cycles required between an Active command and issuing the Precharge command</desc>
+    <range min="0" max="100" />
+  </parameter>
+
+
+  <parameter uniqueid="pcw_uiparam_ddr_t_faw">
+    <name> tFAW </name>
+    <desc>  It restricts the number of activates that can be done within a certain window of time </desc>
+    <range min="0" max="100" />
+  </parameter>
+
+
+  <parameter uniqueid="pcw_uiparam_ddr_al">
+    <name> ADDITIVE Latency  </name>
+    <desc> Provide the Additive Latency (ns). Increases the efficiency of the command and data bus for sustainable bandwidths </desc>
+    <range min="0" max="20" />
+  </parameter>
+
+
+
+
+  <parameter uniqueid="pcw_uiparam_ddr_dqs_to_clk_delay_0">
+    <name> DQS to Clock delay [0] (ns) </name>
+    <desc> The daly difference of each DQS path delay subtracted from the clock path delay </desc>
+    <range min="-0.1" max="100" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_dqs_to_clk_delay_1">
+    <name> DQS to Clock delay [1] (ns) </name>
+    <desc> The daly difference of each DQS path delay subtracted from the clock path delay </desc>
+    <range min="-0.1" max="100" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_dqs_to_clk_delay_2">
+    <name> DQS to Clock delay [2] (ns)  </name>
+    <desc> The daly difference of each DQS path delay subtracted from the clock path delay </desc>
+    <range min="-0.1" max="100" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_dqs_to_clk_delay_3">
+    <name> DQS to Clock delay [3] (ns) </name>
+    <desc> The daly difference of each DQS path delay subtracted from the clock path delay </desc>
+    <range min="-0.1" max="100" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_config">
+    <name> Controller Configuration </name>
+    <ui_param/>
+  </parameter>
+
+
+  <parameter uniqueid="pcw_uiparam_ddr_clock_period">
+    <name> Clock Period (ns)  </name>
+    <range min="1000" max="5000" />        
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_partno">
+    <name> Memory Part </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_max_freq">
+    <name> Max freq of Device </name>
+    <desc> Select the desired memory part. For unlisted parts choose "Custom". This will enable user changes in the "Memory Part Configuration" section </desc>
+    <range min="200" max="800" />    
+  </parameter>
+
+
+
+  <parameter uniqueid="pcw_ddr_peripheral_freqmhz">
+    <name> - </name>
+    <desc>  </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ck_p_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ck_p_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ck_p_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ck_p_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ck_p_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ck_p_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ckp_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ckp_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ckp_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ckp_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ckp_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ckp_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ck_n_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ck_n_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ck_n_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ck_n_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ck_n_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ck_n_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ckn_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ckn_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ckn_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ckn_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ckn_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ckn_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_cke_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_cke_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_cke_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_cke_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_cke_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_cke_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_cs_b_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_cs_b_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_cs_b_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_cs_b_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_cs_b_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_cs_b_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ras_b_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ras_b_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ras_b_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ras_b_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ras_b_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ras_b_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_cas_b_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_cas_b_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_cas_b_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_cas_b_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_cas_b_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_cas_b_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_we_b_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_we_b_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_we_b_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_we_b_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_we_b_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_we_b_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_odt_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_odt_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_odt_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_odt_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_odt_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_odt_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_drst_b_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_drst_b_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_drst_b_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_drst_b_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_drst_b_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_drst_b_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vrp_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vrp_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vrp_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vrp_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vrp_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vrp_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vrn_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vrn_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vrn_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vrn_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vrn_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vrn_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vref[0]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vref[0]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vref[0]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vref[0]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vref[0]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vref[0]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vref[1]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vref[1]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vref[1]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vref[1]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vref[1]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vref[1]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vref[2]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vref[2]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vref[2]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vref[2]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vref[2]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vref[2]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vref[3]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vref[3]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vref[3]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vref[3]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vref[3]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_vref[3]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[0]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[0]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[0]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[0]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[0]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[0]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[1]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[1]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[1]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[1]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[1]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[1]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[2]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[2]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[2]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[2]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[2]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[2]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[3]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[3]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[3]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[3]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[3]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[3]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[4]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[4]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[4]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[4]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[4]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[4]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[5]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[5]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[5]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[5]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[5]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[5]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[6]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[6]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[6]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[6]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[6]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[6]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[7]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[7]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[7]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[7]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[7]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[7]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[8]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[8]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[8]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[8]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[8]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[8]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[9]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[9]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[9]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[9]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[9]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[9]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[10]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[10]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[10]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[10]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[10]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[10]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[11]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[11]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[11]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[11]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[11]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[11]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[12]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[12]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[12]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[12]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[12]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[12]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[13]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[13]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[13]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[13]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[13]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[13]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[14]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[14]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[14]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[14]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[14]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[14]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[15]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[15]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[15]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[15]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[15]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[15]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[16]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[16]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[16]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[16]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[16]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[16]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[17]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[17]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[17]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[17]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[17]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[17]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[18]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[18]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[18]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[18]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[18]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[18]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[19]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[19]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[19]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[19]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[19]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[19]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[20]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[20]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[20]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[20]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[20]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[20]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[21]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[21]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[21]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[21]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[21]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[21]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[22]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[22]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[22]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[22]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[22]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[22]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[23]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[23]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[23]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[23]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[23]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[23]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[24]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[24]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[24]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[24]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[24]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[24]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[25]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[25]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[25]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[25]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[25]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[26]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[25]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[26]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[26]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[26]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[26]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[26]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[27]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[27]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[27]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[27]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[27]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[27]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[28]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[28]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[28]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[28]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[28]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[28]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[29]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[29]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[29]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[29]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[29]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[29]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[30]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[30]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[30]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[30]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[30]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[30]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[31]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[31]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[31]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[31]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[31]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dq[31]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dm[0]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dm[0]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dm[0]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dm[0]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dm[0]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dm[0]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dm[1]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dm[1]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dm[1]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dm[1]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dm[1]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dm[1]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dm[2]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dm[2]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dm[2]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dm[2]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dm[2]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dm[2]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dm[3]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dm[3]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dm[3]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dm[3]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dm[3]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dm[3]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_p[0]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_p[0]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_p[0]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_p[0]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_p[0]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_p[0]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_p[1]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_p[1]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_p[1]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_p[1]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_p[1]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_p[1]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_p[2]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_p[2]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_p[2]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_p[2]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_p[2]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_p[2]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_p[3]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_p[3]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_p[3]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_p[3]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_p[3]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_p[3]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_n[0]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_n[0]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_n[0]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_n[0]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_n[0]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_n[0]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_n[1]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_n[1]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_n[1]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_n[1]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_n[1]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_n[1]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_n[2]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_n[2]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_n[2]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_n[2]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_n[2]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_n[2]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_n[3]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_n[3]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_n[3]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_n[3]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_n[3]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_dqs_n[3]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ba[0]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ba[0]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ba[0]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ba[0]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ba[0]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ba[0]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ba[1]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ba[1]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ba[1]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ba[1]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ba[1]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ba[1]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ba[2]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ba[2]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ba[2]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ba[2]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ba[2]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_ba[2]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[0]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[0]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[0]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[0]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[0]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[0]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[1]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[1]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[1]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[1]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[1]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[1]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[2]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[2]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[2]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[2]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[2]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[2]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[3]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[3]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[3]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[3]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[3]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[3]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[4]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[4]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[4]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[4]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[4]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[4]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[5]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[5]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[5]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[5]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[5]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[5]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[6]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[6]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[6]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[6]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[6]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[6]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[7]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[7]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[7]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[7]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[7]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[7]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[8]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[8]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[8]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[8]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[8]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[8]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[9]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[9]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[9]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[9]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[9]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[9]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[10]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[10]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[10]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[10]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[10]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[10]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[11]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[11]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[11]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[11]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[11]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[11]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[12]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[12]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[12]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[12]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[12]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[12]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[13]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[13]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[13]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[13]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[13]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[13]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[14]_slew">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[14]_voltage">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[14]_drive">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[14]_io">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[14]_loc">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_a[14]_pullup">
+    <name> - </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+
+
+  <parameter uniqueid="pcw_ddr_ram_highaddr">
+    <name> C_DDR_RAM_HIGHADDR </name>
+    <desc> -- </desc>
+    <hw_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_internal_ddr_sim_mode">
+    <name> Sim mode </name>
+    <choice value="0"> <name> Disabled </name> </choice> 
+    <choice value="1"> <name> Enabled </name> </choice> 
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_sim_mode">
+    <name> Sim mode </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_train">
+    <name> Train </name>
+    <range min="0" max="7" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_train_write_level">
+    <name> Write levelling </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_train_read_gate">
+    <name> Read gate </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_train_data_eye">
+    <name> Read data eye </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_use_internal_vref">
+    <name> Internal Vref </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_internal_ddr_use_internal_vref">
+    <name> Internal Vref </name>
+    <choice value="0"> <name> External </name> </choice> 
+    <choice value="1"> <name> Internal </name> </choice> 
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_clock_stop_en">
+    <name> Clock Stop </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_internal_ddr_clock_stop_en">
+    <name> clock_stop_en </name>
+    <choice value="0"> <name> Disabled </name> </choice> 
+    <choice value="1"> <name> Enabled </name> </choice> 
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_board_delay0">
+    <name> Board delay [0] (ns) </name>
+    <desc> The average of the data midpoint delay, of the data delays associated with a byte lane (DDR_DQ, DDR_DM) averaged with the midpoint of the cloc kdelays (DDR_CK, DR_CK_N) </desc>
+    <range min="0.0" max="100" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_board_delay1">
+    <name> Board delay [1] (ns) </name>
+    <desc> The average of the data midpoint delay, of the data delays associated with a byte lane (DDR_DQ, DDR_DM) averaged with the midpoint of the cloc kdelays (DDR_CK, DR_CK_N) </desc>
+    <range min="0.0" max="100" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_board_delay2">
+    <name> Board delay [2] (ns) </name>
+    <desc> The average of the data midpoint delay, of the data delays associated with a byte lane (DDR_DQ, DDR_DM) averaged with the midpoint of the cloc kdelays (DDR_CK, DR_CK_N) </desc>
+    <range min="0.0" max="100" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_board_delay3">
+    <name> Board delay [3] (ns) </name>
+    <desc> The average of the data midpoint delay, of the data delays associated with a byte lane (DDR_DQ, DDR_DM) averaged with the midpoint of the cloc kdelays (DDR_CK, DR_CK_N) </desc>
+    <range min="0.0" max="100" />
+  </parameter>
+
+  <parameter uniqueid="pcw_internal_ddr_ddriob_addr0">
+    <name> DDRIOB addr0 </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_internal_ddr_ddriob_addr1">
+    <name> DDRIOB addr1 </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_internal_ddr_ddriob_data0">
+    <name> DDRIOB data0 </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_internal_ddr_ddriob_data1">
+    <name> DDRIOB data1 </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_internal_ddr_ddriob_diff0">
+    <name> DDRIOB diff0 </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_internal_ddr_ddriob_diff1">
+    <name> DDRIOB diff1 </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_internal_ddr_ddriob_clock">
+    <name> DDRIOB clock </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_internal_ddr_ddriob_ddrctrl">
+    <name> DDRIOB clock </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_internal_ddr_slew">
+    <name> DDRIOB slew </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_internal_ddriob_addr0">
+    <name> DDRIOB addr0 </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_internal_ddriob_data0">
+    <name> DDRIOB addr0 </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_internal_ddriob_diff0">
+    <name> DDRIOB addr0 </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_internal_ddriob_clock">
+    <name> DDRIOB addr0 </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_internal_ddriob_addr1">
+    <name> DDRIOB addr0 </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_internal_ddriob_data1">
+    <name> DDRIOB addr0 </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_internal_ddriob_diff1">
+    <name> DDRIOB addr0 </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_internal_ddr_iotypeout">
+    <name> DDR out rule </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_internal_ddr_mempartsout">
+    <name> DDR out rule </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_v4.00.a_c_s_axi_hp0_baseaddr">
+    <name> C_S_AXI_HP0_BASEADDR</name>
+    <desc> -- </desc>
+    <hw_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_v4.00.a_c_s_axi_hp0_highaddr">
+    <name> C_S_AXI_HP0_HIGHADDR</name>
+    <desc> -- </desc>
+    <hw_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_v4.00.a_c_s_axi_hp1_baseaddr">
+    <name> C_S_AXI_HP1_BASEADDR</name>
+    <desc> -- </desc>
+    <hw_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_v4.00.a_c_s_axi_hp1_highaddr">
+    <name> C_S_AXI_HP1_HIGHADDR</name>
+    <desc> -- </desc>
+    <hw_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_v4.00.a_c_s_axi_hp2_baseaddr">
+    <name> C_S_AXI_HP2_BASEADDR</name>
+    <desc> -- </desc>
+    <hw_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_v4.00.a_c_s_axi_hp2_highaddr">
+    <name> C_S_AXI_HP2_HIGHADDR</name>
+    <desc> -- </desc>
+    <hw_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_v4.00.a_c_s_axi_hp3_baseaddr">
+    <name> C_S_AXI_HP3_BASEADDR</name>
+    <desc> -- </desc>
+    <hw_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_v4.00.a_c_s_axi_hp3_highaddr">
+    <name> C_S_AXI_HP3_HIGHADDR</name>
+    <desc> -- </desc>
+    <hw_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_s_axi_hp0_data_width">
+    <name> C_S_AXI_HP0_DATA_WIDTH </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_s_axi_hp1_data_width">
+    <name> C_S_AXI_HP1_DATA_WIDTH </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_s_axi_hp2_data_width">
+    <name> C_S_AXI_HP2_DATA_WIDTH </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_s_axi_hp3_data_width">
+    <name> C_S_AXI_HP3_DATA_WIDTH </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_axi_hp0_datawidth">
+    <name> C_S_AXI_HP0_DATA_WIDTH </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_axi_hp1_datawidth">
+    <name> C_S_AXI_HP1_DATA_WIDTH </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_axi_hp2_datawidth">
+    <name> C_S_AXI_HP2_DATA_WIDTH </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_axi_hp3_datawidth">
+    <name> C_S_AXI_HP3_DATA_WIDTH </name>
+    <desc> -- </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_dqs_0_length_mm">
+    <name> Length </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_dqs_1_length_mm">
+    <name> Length </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_dqs_2_length_mm">
+    <name> Length </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_dqs_3_length_mm">
+    <name> Length </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_dq_0_length_mm">
+    <name> Length </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_dq_1_length_mm">
+    <name> Length </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_dq_2_length_mm">
+    <name> Length </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_dq_3_length_mm">
+    <name> Length </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_clock_0_length_mm">
+    <name> Length </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_clock_1_length_mm">
+    <name> Length </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_clock_2_length_mm">
+    <name> Length </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_clock_3_length_mm">
+    <name> Length </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_dqs_0_package_length">
+    <name> Package Length </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_dqs_1_package_length">
+    <name> Package Length </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_dqs_2_package_length">
+    <name> Package Length </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_dqs_3_package_length">
+    <name> Package Length </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_dq_0_package_length">
+    <name> Package Length </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_dq_1_package_length">
+    <name> Package Length </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_dq_2_package_length">
+    <name> Package Length </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_dq_3_package_length">
+    <name> Package Length </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_clock_0_package_length">
+    <name> Package Length </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_clock_1_package_length">
+    <name> Package Length </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_clock_2_package_length">
+    <name> Package Length </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_clock_3_package_length">
+    <name> Package Length </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_dqs_0_propogation_delay">
+    <name> Propogation delay </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_dqs_1_propogation_delay">
+    <name> Propogation delay </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_dqs_2_propogation_delay">
+    <name> Propogation delay </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_dqs_3_propogation_delay">
+    <name> Propogation delay </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_dq_0_propogation_delay">
+    <name> Propogation delay </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_dq_1_propogation_delay">
+    <name> Propogation delay </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_dq_2_propogation_delay">
+    <name> Propogation delay </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_dq_3_propogation_delay">
+    <name> Propogation delay </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_clock_0_propogation_delay">
+    <name> Propogation delay </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_clock_1_propogation_delay">
+    <name> Propogation delay </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_clock_2_propogation_delay">
+    <name> Propogation delay </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_clock_3_propogation_delay">
+    <name> Propogation delay </name>
+    <range min="0" max="10000" />
+  </parameter>
+
+  <parameter uniqueid="pcw_package_ddr_dqs_to_clk_delay_0">
+    <name> DQS to Clock delay [0] (ns) </name>
+    <range min="-0.1" max="100" />
+  </parameter>
+
+  <parameter uniqueid="pcw_package_ddr_dqs_to_clk_delay_1">
+    <name> DQS to Clock delay [0] (ns) </name>
+    <range min="-0.1" max="100" />
+  </parameter>
+
+  <parameter uniqueid="pcw_package_ddr_dqs_to_clk_delay_2">
+    <name> DQS to Clock delay [0] (ns) </name>
+    <range min="-0.1" max="100" />
+  </parameter>
+
+  <parameter uniqueid="pcw_package_ddr_dqs_to_clk_delay_3">
+    <name> DQS to Clock delay [0] (ns) </name>
+    <range min="-0.1" max="100" />
+  </parameter>
+
+  <parameter uniqueid="pcw_package_ddr_board_delay0">
+    <name> Board delay [0] (ns) </name>
+    <range min="0.0" max="100" />
+  </parameter>
+
+  <parameter uniqueid="pcw_package_ddr_board_delay1">
+    <name> Board delay [1] (ns) </name>
+    <range min="0.0" max="100" />
+  </parameter>
+
+  <parameter uniqueid="pcw_package_ddr_board_delay2">
+    <name> Board delay [2] (ns) </name>
+    <range min="0.0" max="100" />
+  </parameter>
+
+  <parameter uniqueid="pcw_package_ddr_board_delay3">
+    <name> Board delay [3] (ns) </name>
+    <range min="0.0" max="100" />
+  </parameter>
+
+  <parameter uniqueid="pcw_internal_ddr_use_lpddr2_workaround">
+    <name> LPDDR2 workaround rule </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_package_value">
+    <name> package length, propagation delay etc. </name>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="PCW_DDR_PRIORITY_READPORT_0">
+    <name> PCW DDR PRIORITY READPORT 0 </name>
+    <desc>  </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="PCW_DDR_PRIORITY_READPORT_1">
+    <name> PCW DDR PRIORITY READPORT 1 </name>
+    <desc>  </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="PCW_DDR_PRIORITY_READPORT_2">
+    <name> PCW DDR PRIORITY READPORT 2 </name>
+    <desc>  </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="PCW_DDR_PRIORITY_READPORT_3">
+    <name> PCW DDR PRIORITY READPORT 3 </name>
+    <desc>  </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="PCW_DDR_PRIORITY_WRITEPORT_0">
+    <name> PCW DDR PRIORITY WRITEPORT 0 </name>
+    <desc>  </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="PCW_DDR_PRIORITY_WRITEPORT_1">
+    <name> PCW DDR PRIORITY WRITEPORT 1 </name>
+    <desc>  </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="PCW_DDR_PRIORITY_WRITEPORT_2">
+    <name> PCW DDR PRIORITY WRITEPORT 2 </name>
+    <desc>  </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="PCW_DDR_PRIORITY_WRITEPORT_3">
+    <name> PCW DDR PRIORITY WRITEPORT 3 </name>
+    <desc>  </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="PCW_DDR_PORT0_HPR_ENABLE">
+    <name> PCW DDR PORT0 HPR ENABLE </name>
+    <desc>  </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="PCW_DDR_PORT1_HPR_ENABLE">
+    <name> PCW DDR PORT1 HPR ENABLE </name>
+    <desc>  </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="PCW_DDR_PORT2_HPR_ENABLE">
+    <name> PCW DDR PORT2 HPR ENABLE </name>
+    <desc>  </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="PCW_DDR_PORT3_HPR_ENABLE">
+    <name> PCW DDR PORT3 HPR ENABLE </name>
+    <desc>  </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="PCW_DDR_HPRLPR_QUEUE_PARTITION">
+    <name> PCW DDR PORT3 HPR ENABLE </name>
+    <desc>  </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="PCW_DDR_LPR_TO_CRITICAL_PRIORITY_LEVEL">
+    <name> PCW DDR PORT3 HPR ENABLE </name>
+    <desc>  </desc>
+    <range min="0" max="2047" />
+  </parameter>
+
+  <parameter uniqueid="PCW_DDR_HPR_TO_CRITICAL_PRIORITY_LEVEL">
+    <name> PCW DDR PORT3 HPR ENABLE </name>
+    <desc>  </desc>
+    <range min="0" max="2047" />
+  </parameter>
+
+  <parameter uniqueid="PCW_DDR_WRITE_TO_CRITICAL_PRIORITY_LEVEL">
+    <name> PCW DDR PORT3 HPR ENABLE </name>
+    <desc>  </desc>
+    <range min="0" max="2047" />
+  </parameter>
+
+  <parameter uniqueid="PCW_INTERNAL_DDR_PRIORITY_READPORT_0">
+    <name> PCW DDR PRIORITY READPORT 0 </name>
+    <desc>  </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="PCW_INTERNAL_DDR_PRIORITY_READPORT_1">
+    <name> PCW DDR PRIORITY READPORT 1 </name>
+    <desc>  </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="PCW_INTERNAL_DDR_PRIORITY_READPORT_2">
+    <name> PCW DDR PRIORITY READPORT 2 </name>
+    <desc>  </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="PCW_INTERNAL_DDR_PRIORITY_READPORT_3">
+    <name> PCW DDR PRIORITY READPORT 3 </name>
+    <desc>  </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="PCW_INTERNAL_DDR_PRIORITY_WRITEPORT_0">
+    <name> PCW DDR PRIORITY WRITEPORT 0 </name>
+    <desc>  </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="PCW_INTERNAL_DDR_PRIORITY_WRITEPORT_1">
+    <name> PCW DDR PRIORITY WRITEPORT 1 </name>
+    <desc>  </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="PCW_INTERNAL_DDR_PRIORITY_WRITEPORT_2">
+    <name> PCW DDR PRIORITY WRITEPORT 2 </name>
+    <desc>  </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="PCW_INTERNAL_DDR_PRIORITY_WRITEPORT_3">
+    <name> PCW DDR PRIORITY WRITEPORT 3 </name>
+    <desc>  </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="PCW_INTERNAL_DDR_PORT0_HPR_ENABLE">
+    <name> PCW DDR PORT0 HPR ENABLE </name>
+    <desc>  </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="PCW_INTERNAL_DDR_PORT1_HPR_ENABLE">
+    <name> PCW DDR PORT1 HPR ENABLE </name>
+    <desc>  </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="PCW_INTERNAL_DDR_PORT2_HPR_ENABLE">
+    <name> PCW DDR PORT2 HPR ENABLE </name>
+    <desc>  </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="PCW_INTERNAL_DDR_PORT3_HPR_ENABLE">
+    <name> PCW DDR PORT3 HPR ENABLE </name>
+    <desc>  </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="PCW_INTERNAL_DDR_HPRLPR_QUEUE_PARTITION">
+    <name> PCW DDR PORT3 HPR ENABLE </name>
+    <desc>  </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="PCW_INTERNAL_DDR_LPR_TO_CRITICAL_PRIORITY_LEVEL">
+    <name> PCW DDR PORT3 HPR ENABLE </name>
+    <desc>  </desc>
+    <range min="0" max="2047" />
+  </parameter>
+
+  <parameter uniqueid="PCW_INTERNAL_DDR_HPR_TO_CRITICAL_PRIORITY_LEVEL">
+    <name> PCW DDR PORT3 HPR ENABLE </name>
+    <desc>  </desc>
+    <range min="0" max="2047" />
+  </parameter>
+
+  <parameter uniqueid="PCW_INTERNAL_DDR_WRITE_TO_CRITICAL_PRIORITY_LEVEL">
+    <name> PCW DDR PORT3 HPR ENABLE </name>
+    <desc>  </desc>
+    <range min="0" max="2047" />
+  </parameter>
+
+  <parameter uniqueid="pcw_uiparam_ddr_adv_enable">
+    <name> Enable Adv DDR </name>
+    <desc> Enable Adv DDR Controller of Zynq PS </desc>
+    <ui_param/>
+  </parameter>
+
+  <parameter uniqueid="pcw_ddr_hprlpr_partition_valid">
+    <name> Enable Adv DDR </name>
+    <desc> Enable Adv DDR Controller of Zynq PS </desc>
+    <ui_param/>
+  </parameter>
+
+
+</parameters>
