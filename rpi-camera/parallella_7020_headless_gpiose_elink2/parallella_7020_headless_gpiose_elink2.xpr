@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="2" Path="/tmp/v/parviv/.Xil/Vivado-4998-lain/PrjAr/_X_/parallella_7020_headless_gpiose_elink2.xpr">
+<Project Version="7" Minor="2" Path="/tmp/v/parviv/.Xil/Vivado-12386-lain/PrjAr/_X_/parallella_7020_headless_gpiose_elink2.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="d7ca58a825dc4acb9f6a0040d30ebf36"/>
+    <Option Name="Id" Val="1afbaaf2a7fe418b9a37f2f1c6ab1ac3"/>
     <Option Name="Part" Val="xc7z020clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="SimulatorLanguage" Val="Verilog"/>
@@ -95,7 +95,15 @@
       <File Path="$PSRCDIR/sources_1/imports/ome/tnt/tmp/parallella/mipi_csi/hdl/mipi_csi_pkg.vhd">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../home/tnt/tmp/parallella/mipi_csi/hdl/mipi_csi_pkg.vhd"/>
-          <Attr Name="ImportTime" Val="1435406349"/>
+          <Attr Name="ImportTime" Val="1437493103"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/ome/tnt/tmp/parallella/mipi_csi/hdl/vid_crop.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../home/tnt/tmp/parallella/mipi_csi/hdl/vid_crop.vhd"/>
+          <Attr Name="ImportTime" Val="1437498969"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -111,7 +119,7 @@
       <File Path="$PSRCDIR/sources_1/imports/ome/tnt/tmp/parallella/mipi_csi/hdl/vid_pipeline.vhd">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../home/tnt/tmp/parallella/mipi_csi/hdl/vid_pipeline.vhd"/>
-          <Attr Name="ImportTime" Val="1435340936"/>
+          <Attr Name="ImportTime" Val="1436996464"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -606,7 +614,7 @@
       <File Path="$PSRCDIR/constrs_1/imports/constraints/parallella_rpi_cam.xdc">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../../parallella_7020_headless_gpiose_elink2.srcs/constrs_1/imports/constraints/parallella_rpi_cam.xdc"/>
-          <Attr Name="ImportTime" Val="1435392179"/>
+          <Attr Name="ImportTime" Val="1438532955"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
@@ -624,6 +632,14 @@
           <Attr Name="ImportTime" Val="1415594873"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/hdl_sim/vid_crop_tb.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../home/tnt/tmp/parallella/mipi_csi/hdl_sim/vid_crop_tb.vhd"/>
+          <Attr Name="ImportTime" Val="1437498959"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
