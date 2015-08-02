@@ -2,12 +2,24 @@
 # Vivado v2014.4 (64-bit)
 # SW Build 1071353 on Tue Nov 18 16:47:07 MST 2014
 # IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
-# Start of session at: Tue Jun 30 22:14:28 2015
-# Process ID: 4998
+# Start of session at: Sun Aug  2 18:17:01 2015
+# Process ID: 12386
 # Log file: /tmp/v/parviv/vivado.log
 # Journal file: /tmp/v/parviv/vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project /tmp/v/parviv/parallella_7020_headless_gpiose_elink2.xpr
 update_compile_order -fileset sources_1
-archive_project /tmp/v/parallella_rpicam.xpr.zip -force -exclude_run_results
+add_files -norecurse /home/tnt/tmp/parallella/mipi_csi/hdl/vid_crop.vhd
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse /home/tnt/tmp/parallella/mipi_csi/hdl_sim/vid_crop_tb.vhd
+update_compile_order -fileset sim_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+archive_project /tmp/parallella_7020_headless_gpiose_elink2.xpr.zip -force -exclude_run_results

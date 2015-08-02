@@ -47,15 +47,29 @@ Getting started
     In one terminal, launch the video conversion using the FIFO as source:
     (apt-get install libav-tools if not already installed)
 
-      bash# avconv -s 1296x972 -f rawvideo -pix_fmt rgba -r 3 -i image.raw -vf scale=640:480 -g 4 -coder 0 -y out.mp4
+      bash# avconv -s 1280x960 -f rawvideo -pix_fmt rgba -r 3 -i /tmp/image.raw -vf scale=640:480 -g 4 -coder 0 -y /tmp/out.mp4
 
     In another start the capture (0 here means capture until CTRL-C is pressed)
 
-      bash# sudo ./rpi_cam rgbz32 /tmp/image.raw 0
+      bash# sudo ./rpi_cam rgbz32 -o 1280x960 -p rgbz32 -f /tmp/image.raw
 
     Note that because encoding speed is limited you'll get 2/3 fps only.
     You can record a few second of RAW video on a RAM disk and then encode
     but given it takes a _lot_ of space you can't do much of it.
+
+    You can also try to stream stuff over the network and view it on your PC.
+    To lower the bandwidth you can also stream the raw bayer pattern and let
+    ffmpeg do the debayering.
+
+    On your PC launch this :
+
+     bash# nc -l -p 1234 | ffplay -f rawvideo -pixel_format bayer_bggr8 -video_size 1280x960 -i /dev/stdin
+
+   And on the parallella :
+
+     bash# sudo ./rpi_cam -o 1280x960 -p sbggr8 -n 192.168.1.2:1234
+
+     (assuming 192.168.1.2 is the IP of your PC)
 
 
 Content
