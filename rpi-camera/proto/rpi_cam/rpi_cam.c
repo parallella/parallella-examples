@@ -813,7 +813,7 @@ write_opt(int fd, void *data, int n)
 
 /* Signal handling -------------------------------------------------------- */
 
-static int g_active = 1;
+static volatile sig_atomic_t g_active = 1;
 
 static void
 _signal_done(int dummy)
