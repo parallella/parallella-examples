@@ -1,0 +1,156 @@
+
+LIBCOPRTHR_MPI Preview SOFTWARE LICENSE AGREEMENT
+
+IMPORTANT: Read the Following SOFTWARE LICENSE AGREEMENT CAREFULLY.
+
+This license agreement ("Agreement") is a legal agreement between you as an 
+individual or entity (you or "Licensee") and Brown Deer Technology, LLC ("BDT")
+for the 'libcoprthr_mpi preview' software and associated materials ("Software").
+By installing or otherwise using this Software and associated materials or any
+portion thereof you acknowledge that you have carefully read and agree to be
+bound by all terms and conditions of the Agreement.  The Software is protected
+by copyright and other intellectual property laws.  If upon careful reading of
+this Agreement you do not agree to these terms and conditions do not install,
+copy, or otherwise use the Software.
+
+1. License.  By entering into this Agreement BDT grants the Licensee a
+non-exclusive, non-commercial, non-transferrable, restricted license to use
+the Software under the terms and conditions of this Agreement.  The Software
+is licensed to you by BDT regardless of the form in which it is distributed.
+Licensee owns the medium on which the Software is recorded, but BDT retains
+title to the Software and related documentation.  You may: a) make a copy of
+the Software for back-up purposes, and b) make and distribute copies of the
+Software within your organization provided that you agree to include all
+copyright notices and other legal notices that may appear in the Software, as 
+well as this Agreement in its entirety, in each copy of the Software that is 
+made or distributed.
+
+2. Restrictions.  The Software contains copyrighted material, trade secrets and
+other proprietary material.  In order to protect them, and except as permitted
+by applicable legislation, you may not: a) decompile, reverse engineer, 
+disassemble or otherwise reduce the Software to a human-perceivable form; 
+b) modify, network, rent, lend, loan, distribute or create derivative works 
+based upon the Software in whole or in part; or c) electronically transmit the
+Software from one computer to another or over a network or otherwise transfer
+the Software except as permitted by the License contained within this Agreement.
+
+3. Ownership of Software.  The Software is proprietary to BDT and BDT owns all
+right, titile, and interest in the Software.  The Software is protected by
+copyright and other intellectual property laws and international treaty
+provisions.  Licensee agrees to retain and not remove any copyright notices or
+other legal notices from the Software.  All title and copyrights in and to the
+Software, and all copies thereof (in whole or in part, and in any form), and all
+rights therein shall remain vested in BDT.  Except as expressly provided herein,
+BDT does not grant any express or implied right to Licensee of any protected
+proprietary material, including copyrights, trademarks and trade secret
+information, contained within the Software.  All rights in and to the Software
+not expressly granted to Licensee in this Agreement are reserved to BDT.
+
+4. Support.  Under this Agreement BDT has no obligation to provide support or
+otherwise assist in the use of the Software, or to provide maintenence, 
+corrections, modifications, upgrades, or enhancements to the Software.  BDT may
+at its sole discretion provide such support, maintenance, corrections,
+modifications, upgrades or enhancements as determined by BDT, and with no
+obligation of notice to the Licensee.  Any such support, maintenence, 
+corrections, modifications, upgrades or enhancements made to the Software shall
+be subject to this Agreement.
+
+5. Termination.  This license remains in effect until terminated.  Licensee may
+terminate this Agreement at any time by destroying the Software and related
+material, and all copies thereof.  This License will be terminated by BDT 
+without notice upon failure of the Licensee to comply with any provision of the
+Agreement.  Upon termination of the Agreement, Licensee must destroy the
+Software and associated media, and all copies thereof.  Termination of this
+Agreement does not remove from the Licensee prior obligations of compliance with
+this Agreement.
+
+6. Commercial Use.  Commercial use of the Software REQUIRES A COMMERCIAL
+LICENSE, and is expressly prohibited under this Agreement.  Examples of
+commercial use would be licensing, leasing, or selling the Software,
+distributing the Software with commercial products, using the Software in the
+creation or use of commercial products, or any other activity for which the
+purpose is to procure a commercial gain directly by the Licensee or indirectly
+by a third party.  Should the Licensee or a third party wish to obtain a
+commercial license, BDT has the exclusive right, but no obligation, to grant
+such a license under the terms and conditions determined by BDT.
+
+7. Government Use.  If you are acquiring the Software on behalf of any
+unit or agency of the United States Government, the following provisions
+apply. The Government agrees the Software and documentation were developed
+at private expense and are provided with "RESTRICTED RIGHTS".  Use,
+duplication, or disclosure by the Government is subject to restrictions as
+set forth in DFARS 227.7202-1(a) and 227.7202-3(a) (1995), DFARS
+252.227-7013(c)(1)(ii) (Oct 1988), FAR 12.212(a)(1995), FAR 52.227-19, (June
+1987) or FAR 52.227-14(ALT III) (June 1987),as amended from time to time.
+In the event that this License, or any part thereof, is deemed inconsistent
+with the minimum rights identified in the Restricted Rights provisions, the
+minimum rights shall prevail.
+
+8. Export Control.  Licensee agrees that the Software, in whole or in part, willnot be exported or otherwise transfered, directly or indirectly, into any
+country prohibited by the United States Export Administration Act and the
+regulations thereunder without the required authorization from the United States
+government nor will it be used for any purpose prohibited by the same.
+
+9. Disclaimer of Warranty.  The Software and related material is provided
+"AS IS" and BDT does not represent or extend any warranty of any kind, and BDT
+EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+PARTICULAR PURPOSE.  BDT DOES NOT WARRANT THAT THE FUNCTIONS CONTAINED IN THE
+SOFTWARE WILL MEET YOUR REQUIREMENTS, OR THAT THE OPERATION OF THE SOFTWARE
+WILL BE UNINTERRUPTED OR ERROR-FREE, OR THAT DEFECTS IN THE SOFTWARE WILL BE
+CORRECTED.  THE ENTIRE RISK AS TO THE RESULTS AND PERFORMANCE OF THE
+SOFTWARE IS ASSUMED BY YOU.  FURTHERMORE, BDT DOES NOT WARRANT OR MAKE ANY
+REPRESENTATIONS REGARDING THE USE OR THE RESULTS OF THE USE OF THE SOFTWARE
+OR RELATED DOCUMENTATION IN TERMS OF CORRECTNESS, ACCURACY, RELIABILITY, 
+CURRENTNESS, OR OTHERWISE.  NO ORAL OR WRITTEN INFORMATION OR ADVICE PROVIDED
+BY BDT SHALL CREATE A WARRANTY OR IN ANY WAY INCREASE THE SCOPE OF THIS
+WARRANTY.  SHOULD THE SOFTWARE PROVE DEFECTIVE, YOU ASSUME THE ENTIRE COST OF
+ALL NECESSARY SERVICING, REPAIR OR CORRECTION.  THE SOFTWARE IS NOT INTENDED
+FOR USE IN MEDICAL, LIFE SAVING OR LIFE SUSTAINING APPLICATIONS.  SOME
+JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES, SO THE ABOVE
+EXCLUSION MAY NOT APPLY TO YOU.
+
+10. Limitation of Liability.  Licensee agrees that the use of the Software is at
+the sole risk of the Licensee.  UNDER NO CIRCUMSTANCES, INCLUDING NEGLIGENCE,
+SHALL BDT, OR EMPLOYEES OR AGENTS THEREOF, BE LIABLE TO YOU FOR ANY INCIDENTAL,
+INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES (INCLUDING DAMAGES FOR LOSS OF
+BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION, AND THE
+LIKE) ARISING OUT OF THE USE, MISUSE OR INABILITY TO USE THE SOFTWARE OR
+RELATED DOCUMENTATION, BREACH OR DEFAULT, INCLUDING THOSE ARISING FROM
+INFRINGEMENT OR ALLEGED INFRINGEMENT OF ANY PATENT, TRADEMARK, COPYRIGHT OR
+OTHER INTELLECTUAL PROPERTY RIGHT, BY BDT, EVEN IF BDT, OR AN EMPLOYEE OR AGENT
+THEREOF, HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  SOME 
+JURISDICTIONS DO NOT ALLOW THE LIMITATION OR EXCLUSION OF LIABILITY FOR 
+INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATION OR EXCLUSION MAY 
+NOT APPLY TO YOU.  Licensee agrees that BDT shall not be held liable for loss or
+damage to records or data, or any damages claimed by Licensee based on a third
+party claim.  Under no circumstance shall the total liability of BDT to you for
+all damages, losses, and causes of action (whether in contract, tort, including
+negligence, or otherwise) exceed the amount paid by you for the Software.
+
+11. Controlling Law and Severability.  This Agreement shall be governed by and
+construed under the laws of the state of Maryland, without regard to its
+conflict of law principles.  In the event of any conflicts between foreign
+law, rules, and regulations, and United States law, rules, and regulations,
+United States rules and regulations shall prevail and govern.  The United
+Nations Convention on Contracts for the International Sale of Goods shall not
+apply to this License.  If for any reason a court of competent jurisdiction
+finds any provision of this Agreement or portion thereof, to be unenforceable,
+that provision of the License shall be enforced to the maximum extent
+permissible so as to effect the intent of the parties, and the remainder of
+this License shall continue in full force and effect.
+
+12. Complete Agreement.  This License constitutes the entire agreement
+between the parties with respect to the use of the Software and the related
+documentation, and supersedes all prior or contemporaneous understandings or
+agreements, written or oral, regarding such subject matter.  No amendment to 
+or modification of this License will be binding unless in writing and signed
+by a duly authorized representative of BDT.
+
+For further information regarding this Agreement or the Software contact:
+
+Brown Deer Technology, LLC
+1641 Denwright Court
+Forest Hill, Maryland 21050
+info@browndeertechnology.com
+
