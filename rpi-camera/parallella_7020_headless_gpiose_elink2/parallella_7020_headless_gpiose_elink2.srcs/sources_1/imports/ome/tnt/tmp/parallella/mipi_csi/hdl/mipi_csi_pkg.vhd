@@ -313,6 +313,36 @@ package mipi_csi_pkg is
 		);
 	end component;
 
+	component vid_crop is
+		generic (
+			DATA_WIDTH	: integer := 32;
+			CNT_WIDTH	: integer := 12
+		);
+		port (
+			-- Input
+			in_data		: in  std_logic_vector(DATA_WIDTH-1 downto 0);
+			in_last		: in  std_logic;
+			in_sof		: in  std_logic;
+			in_valid	: in  std_logic;
+
+			-- Output
+			out_data	: out std_logic_vector(DATA_WIDTH-1 downto 0);
+			out_last	: out std_logic;
+			out_sof		: out std_logic;
+			out_valid	: out std_logic;
+
+			-- Config
+			win_cs		: in  std_logic_vector(CNT_WIDTH-1 downto 0);
+			win_ce		: in  std_logic_vector(CNT_WIDTH-1 downto 0);
+			win_ls		: in  std_logic_vector(CNT_WIDTH-1 downto 0);
+			win_le		: in  std_logic_vector(CNT_WIDTH-1 downto 0);
+
+			-- Clock / Reset
+			clk			: in  std_logic;
+			rst			: in  std_logic
+		);
+	end component;
+
 	component vid_packer
 		port (
 			-- Input

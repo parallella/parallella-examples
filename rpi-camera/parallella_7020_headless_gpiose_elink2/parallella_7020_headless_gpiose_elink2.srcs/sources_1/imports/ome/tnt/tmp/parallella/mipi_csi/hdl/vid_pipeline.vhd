@@ -309,11 +309,27 @@ begin
 	end process;
 
 	-- Cropping
-		-- FIXME: TODO
-	vcrop_data  <= vfm_data;
-	vcrop_last  <= vfm_last;
-	vcrop_sof   <= vfm_sof;
-	vcrop_valid <= vfm_valid;
+	crop_I: vid_crop
+		generic map (
+			DATA_WIDTH	=> 32,
+			CNT_WIDTH	=> 12
+		)
+		port map (
+			in_data		=> vfm_data,
+			in_last		=> vfm_last,
+			in_sof		=> vfm_sof,
+			in_valid	=> vfm_valid,
+			out_data	=> vcrop_data,
+			out_last	=> vcrop_last,
+			out_sof		=> vcrop_sof,
+			out_valid	=> vcrop_valid,
+			win_cs		=> ctrl_crp_cs,
+			win_ce		=> ctrl_crp_ce,
+			win_ls		=> ctrl_crp_ls,
+			win_le		=> ctrl_crp_le,
+			clk			=> clk,
+			rst			=> rst
+		);
 
 	-- Packing
 	packer_I: vid_packer
