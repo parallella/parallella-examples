@@ -1,3 +1,5 @@
+This presentation was created from 129 lines of simple markdown formatted text using the publishing tool from Jurgen Leschner called [pub-server](https://github.com/jldec).  
+
 #Install node installation  
 ```sh  
 $ curl -sL https://deb.nodesource.com/setup_0.10 | sudo -E bash -
