@@ -1,0 +1,22 @@
+# Emacs
+*~
+
+# Vim
+*.swp
+
+#log files/tmps
+*.rdb
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.swp
+*.swo
+
+#Node modules
+node_modules/
+
+#HTML output
+out/
