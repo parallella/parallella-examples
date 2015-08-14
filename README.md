@@ -5,29 +5,29 @@ Community created example Parallella projects.
 ## Contents
 
 ---------------------------- |-------------------------------
-[aobench](aobench)           | An ambient occlusion renderer  
-[blobluska](blobluska)       | A real-time ray tracing visual music generator  
-[dac-wavegen](dac-wavegen)   | A sine and sawtooth waveform generator using an I2C DAC  
-[digital-pot](digital-pot)   | Fading an LED using an 8-bit digital potentiometer  
+[aobench](aobench)           | Ambient occlusion renderer  
+[blobluska](blobluska)       | Real-time ray tracing visual music generator  
+[dac-wavegen](dac-wavegen)   | Sine/sawtooth waveform generator using I2C DAC   
+[digital-pot](digital-pot)   | LED fader using 8-bit digital potentiometer  
 [mpi-fft2d](mpi-fft2d)       | Threaded MPI to implement a 2D FFT for Epiphany  
 [eprime](eprime)             | Testing for prime numbers using Epiphany  
-[fft-xcorr](fft-xcorr)       | A 2D image correlator demo using fast convolution (FFT)  
-[heat_stencil](heat_stencil) | 5-point star shaped stencil for solving heat equation  
-[john](john)                 | John the Ripper password cracker with Parallella support    
-[kinect_test](kinect_test)   | Kinect demo that uses Epiphany to colorize/scale image  
+[fft-xcorr](fft-xcorr)       | 2D image correlator demo  
+[heat_stencil](heat_stencil) | 5-point star shaped heat equation stencil  
+[john](john)                 | JohnTheRipper password cracker for Parallella   
+[kinect_test](kinect_test)   | Kinect demo that uses Epiphany  
 [lena](lena)                 | 2D FFT based filter running on Epiphany  
-[mandelbrot](mandelbrot)     | A real time Mandelbrot zoomer  
-[assembly-opt](assembly-opt) | Assembly optimized parallel matrix multiplication  
+[mandelbrot](mandelbrot)     | Real time Mandelbrot zoomer  
+[assembly-opt](assembly-opt) | Assembly optimized matrix multiplication  
 [mini-nbody](mini-nbody)     | Nbody simulation  
-[motion-cap](motion-cap)     | Turning the Parallella into a motion capture camera   
+[motion-cap](motion-cap)     | Motion capture camera project for Parallella  
 [nbody_mpi](nbody_mpi)       | Nbody example using the Epiphany MPI  
 [para-para](para-para)       | "hello world" apps in OpenMP, MPI and OpenCL  
-[riecoin](riecoin)           | A riecoin miner  
-[r-opencl](r-opencl)         | An example showing R with OpenCL running on Parallella  
-[rpi-camera](rpi-camera)     | Drivers and implementation of raspberry pi camera module    
-[slides](slides)             | Example showing how to crate presentation from Markdown   
-[sobel](sobel)               | A sobel filter demo application using the PAL sobel function  
-[vfft](vfft)                 | A very fast FFT for the Epiphany core  
+[riecoin](riecoin)           | Riecoin miner    
+[r-opencl](r-opencl)         | R with OpenCL running on Parallella  
+[rpi-camera](rpi-camera)     | Raspberry pi camera module bounty project      
+[slides](slides)             | Creating slide decks from Markdown  
+[sobel](sobel)               | Sobel filter example  
+[vfft](vfft)                 | Very fast FFT for the Epiphany core  
 
 ## Contributing
 
