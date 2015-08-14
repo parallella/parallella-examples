@@ -3,20 +3,76 @@
 Community created example Parallella projects.
 
 ## Contents
-```
-* aobench/         - An ambient occlusion renderer 
-* blobubska/       - A real-time ray tracing visual music generator
-* dac-wavegen/     - A sine and sawtooth waveform generator using an I2C DAC
-* digital-pot/     - Fading an LED using an 8-bit digital potentiometer
-* heat_stencil/    - 5-point star shaped stencil for solving heat equation on a 2 dimensional rectangular grid 
-* john/            - John the Ripper password cracker with Parallella support
-* kinect_test/     - Kinect demo that uses Epiphany to colorize, scale and render
-* lena/            - 2D FFT based filter on famous Lena image running on Epiphany
-* mandelbrot/      - A real time Mandelbrot zoomer
-* matmul_optimized/- Parallel Matrix multiplication of two matrices following Cannon's algorithm
-* para-para/       - Simple "hello world" apps in OpenMP, MPI and OpenCL
-* r-opencl/        - An example showing R with OpenCL running on Parallella
-```
+
+##aobench  
+An ambient occlusion renderer  
+
+##blobluska  
+A real-time ray tracing visual music generator  
+
+##dac-wavegen  
+A sine and sawtooth waveform generator using an I2C DAC  
+
+##digital-pot  
+Fading an LED using an 8-bit digital potentiometer
+
+##epiphany-mpi-fft2d  
+This example shows the use of threaded MPI to implement a 2D FFT for an Epiphany coprocessor  
+
+##eprime  
+Testing for prime numbers using Epiphany
+
+##fft-xcorr  
+A 2D image correlator demo using fast convolution (FFT)  
+
+##heat_stencil  
+5-point star shaped stencil for solving heat equation on a 2 dimensional rectangular grid optimized in assembly   
+
+##john  
+John the Ripper password cracker with Parallella support  
+
+##kinect_test 
+Kinect demo that uses Epiphany to colorize, scale and render  
+
+##lena  
+2D FFT based filter on famous Lena image running on Epiphany
+
+##mandelbrot  
+A real time Mandelbrot zoomer
+
+##matmul_optimized 
+Assembly optimized parallel matrix multiplication
+
+##mini-nbody  
+Nbody simulation  
+
+##motion-cap  
+Turning the Parallella into a motion capture camera  
+
+##nbody_mpi  
+Nbody example using the Epiphany MPI  
+
+##para-para  
+"hello world" apps in OpenMP, MPI and OpenCL  
+
+##riecoin-miner  
+A riecoin miner
+
+##r-opencl  
+An example showing R with OpenCL running on Parallella
+
+##rpi-camera  
+Drivers and implementation of raspberry pi camera module  
+
+##slides  
+Example showing how to crate presentation from Markdown  
+
+##sobel  
+A sobel filter demo application using the PAL sobel function
+
+##vfft
+A very fast FFT for the Epiphany core  
+
 ## Contributing
 
 Contributions to this repository are welcomed.
