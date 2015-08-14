@@ -3,7 +3,7 @@
 Community created example Parallella projects.
 
 ## Contents
-
+NAME                         | CONTENT  
 ---------------------------- |-------------------------------
 [aobench](aobench)           | An ambient occlusion renderer  
 [blobluska](blobluska)       | A real-time ray tracing visual music generator  
