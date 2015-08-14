@@ -6,7 +6,7 @@ Community created example Parallella projects.
 NAME                         | CONTENT  
 ---------------------------- |-------------------------------
 [aobench](aobench)           | An ambient occlusion renderer  
-[blobluska](blobluska)       | A real-time ray tracing visual music generator  
+[blobuska](blobuska)         | A real-time ray tracing visual music generator  
 [dac-wavegen](dac-wavegen)   | A sine and sawtooth waveform generator using an I2C DAC  
 [digital-pot](digital-pot)   | Fading an LED using an 8-bit digital potentiometer  
 [mpi-fft2d](mpi-fft2d)       | Threaded MPI to implement a 2D FFT for Epiphany  
