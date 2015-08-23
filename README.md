@@ -3,12 +3,19 @@
 Community created example Parallella projects.
 
 ## Contents
-
+NAME                         | CONTENT  
 ---------------------------- |-------------------------------
+<<<<<<< HEAD
 [aobench](aobench)           | Ambient occlusion renderer  
 [blobluska](blobluska)       | Real-time ray tracing visual music generator  
 [dac-wavegen](dac-wavegen)   | Sine/sawtooth waveform generator using I2C DAC   
 [digital-pot](digital-pot)   | LED fader using 8-bit digital potentiometer  
+=======
+[aobench](aobench)           | An ambient occlusion renderer  
+[blobuska](blobuska)         | A real-time ray tracing visual music generator  
+[dac-wavegen](dac-wavegen)   | A sine and sawtooth waveform generator using an I2C DAC  
+[digital-pot](digital-pot)   | Fading an LED using an 8-bit digital potentiometer  
+>>>>>>> 086d694b3b2fad814e7fe1c5254cfe529d322c86
 [mpi-fft2d](mpi-fft2d)       | Threaded MPI to implement a 2D FFT for Epiphany  
 [eprime](eprime)             | Testing for prime numbers using Epiphany  
 [fft-xcorr](fft-xcorr)       | 2D image correlator demo  
