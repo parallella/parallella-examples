@@ -1,0 +1,10 @@
+The application is tested on esdk 4.13 and works fine. The results are given in the paper "An evaluation of code generation of dataflow languages on manycore architectures"
+link: http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=6910501&url=http%3A%2F%2Fieeexplore.ieee.org%2Fstamp%2Fstamp.jsp%3Ftp%3D%26arnumber%3D6910501
+
+build.sh builds the host and e-core files and creates srec files which will be loaded onto the cores. run.sh runs the host code thus the whole application.  br.sh = build+run
+
+
+If you have any questions/comments or suggestions, you can send them to suleyman_savas@hotmail.com
+
+
+We can write to the input buffer and access this buffer from rowSort.c . However there is a problem with writing to the scale actor from rowsort actor. We need to fix it.

@@ -1,0 +1,4 @@
+
+./build.sh
+
+./run.sh

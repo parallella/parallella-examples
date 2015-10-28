@@ -1,0 +1,38 @@
+Number of iterations: 10 
+
+Timer0 - Average setup cycles  
+
+Timer0[0]: 2494498
+Timer0[1]: 2490175
+Timer0[2]: 2485440
+Timer0[3]: 2473919
+Timer0[4]: 2457187
+Timer0[5]: 2460748
+Timer0[6]: 2465511
+Timer0[7]: 2469370
+Timer0[8]: 2453013
+Timer0[9]: 2449151
+Timer0[10]: 2444770
+Timer0[11]: 2440604
+Timer0[12]: 2428283
+Timer0[13]: 2432097
+Timer0[14]: 2436519
+
+
+Timer1 - Average computation + communication cycles
+
+Timer1[0]: 55690
+Timer1[1]: 55814
+Timer1[2]: 56023
+Timer1[3]: 56033
+Timer1[4]: 67871
+Timer1[5]: 67687
+Timer1[6]: 56539
+Timer1[7]: 56475
+Timer1[8]: 67946
+Timer1[9]: 67916
+Timer1[10]: 68287
+Timer1[11]: 68500
+Timer1[12]: 79904
+Timer1[13]: 79801
+Timer1[14]: 68602

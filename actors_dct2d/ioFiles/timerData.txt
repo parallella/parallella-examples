@@ -1,0 +1,38 @@
+The structure is serpentine, array indices do not follow the actor order.
+
+Timer 0 - Setup time 
+
+Timer0[0] value = 2272738
+Timer0[1] value = 2269007
+Timer0[2] value = 2263966
+Timer0[3] value = 2259682
+Timer0[4] value = 2243231
+Timer0[5] value = 2247549
+Timer0[6] value = 2252178
+Timer0[7] value = 2255696
+Timer0[8] value = 2239150
+Timer0[9] value = 2235138
+Timer0[10] value = 2230672
+Timer0[11] value = 2226562
+Timer0[12] value = 2213743
+Timer0[13] value = 2217612
+Timer0[14] value = 2222401
+
+
+Timer 1 - Computation + communication
+
+Timer1[0] value = 55922
+Timer1[1] value = 55366
+Timer1[2] value = 56084
+Timer1[3] value = 56309
+Timer1[4] value = 68058
+Timer1[5] value = 67179
+Timer1[6] value = 56234
+Timer1[7] value = 56521
+Timer1[8] value = 68037
+Timer1[9] value = 68002
+Timer1[10] value = 68196
+Timer1[11] value = 68505
+Timer1[12] value = 79984
+Timer1[13] value = 79840
+Timer1[14] value = 68548
