@@ -3,38 +3,36 @@
 Community created example Parallella projects.
 
 ## Contents
-NAME                         | CONTENT  
----------------------------- |-------------------------------
-<<<<<<< HEAD
-[aobench](aobench)           | Ambient occlusion renderer  
-[blobluska](blobluska)       | Real-time ray tracing visual music generator  
-[dac-wavegen](dac-wavegen)   | Sine/sawtooth waveform generator using I2C DAC   
-[digital-pot](digital-pot)   | LED fader using 8-bit digital potentiometer  
-=======
-[aobench](aobench)           | An ambient occlusion renderer  
-[blobuska](blobuska)         | A real-time ray tracing visual music generator  
-[dac-wavegen](dac-wavegen)   | A sine and sawtooth waveform generator using an I2C DAC  
-[digital-pot](digital-pot)   | Fading an LED using an 8-bit digital potentiometer  
->>>>>>> 086d694b3b2fad814e7fe1c5254cfe529d322c86
-[mpi-fft2d](mpi-fft2d)       | Threaded MPI to implement a 2D FFT for Epiphany  
-[eprime](eprime)             | Testing for prime numbers using Epiphany  
-[fft-xcorr](fft-xcorr)       | 2D image correlator demo  
-[heat_stencil](heat_stencil) | 5-point star shaped heat equation stencil  
-[john](john)                 | JohnTheRipper password cracker for Parallella   
-[kinect_test](kinect_test)   | Kinect demo that uses Epiphany  
-[lena](lena)                 | 2D FFT based filter running on Epiphany  
-[mandelbrot](mandelbrot)     | Real time Mandelbrot zoomer  
-[assembly-opt](assembly-opt) | Assembly optimized matrix multiplication  
-[mini-nbody](mini-nbody)     | Nbody simulation  
-[motion-cap](motion-cap)     | Motion capture camera project for Parallella  
-[nbody_mpi](nbody_mpi)       | Nbody example using the Epiphany MPI  
-[para-para](para-para)       | "hello world" apps in OpenMP, MPI and OpenCL  
-[riecoin](riecoin)           | Riecoin miner    
-[r-opencl](r-opencl)         | R with OpenCL running on Parallella  
-[rpi-camera](rpi-camera)     | Raspberry pi camera module bounty project      
-[slides](slides)             | Creating slide decks from Markdown  
-[sobel](sobel)               | Sobel filter example  
-[vfft](vfft)                 | Very fast FFT for the Epiphany core  
+NAME                         | CONTENT                        |
+---------------------------- |------------------------------- |
+[actors_dct2d](actors_dct2d) | Actor based 2D DCT
+[aobench](aobench)           | Ambient occlusion renderer
+[blobluska](blobluska)       | Real-time ray tracing visual music generator
+[dac-wavegen](dac-wavegen)   | Sine/sawtooth waveform generator using I2C DAC
+[digital-pot](digital-pot)   | LED fader using 8-bit digital potentiometer
+[aobench](aobench)           | Ambient occlusion renderer
+[blobuska](blobuska)         | Real-time ray tracing visual music generator
+[dac-wavegen](dac-wavegen)   | Sine and sawtooth waveform generator using DAC
+[digital-pot](digital-pot)   | Fading an LED using 8-bit digital POT
+[mpi-fft2d](mpi-fft2d)       | Threaded MPI to implement a 2D FFT for Epiphany
+[eprime](eprime)             | Testing for prime numbers using Epiphany
+[fft-xcorr](fft-xcorr)       | 2D image correlator demo
+[heat_stencil](heat_stencil) | 5-point star shaped heat equation stencil
+[john](john)                 | JohnTheRipper password cracker for Parallella
+[kinect_test](kinect_test)   | Kinect demo that uses Epiphany
+[lena](lena)                 | 2D FFT based filter running on Epiphany
+[mandelbrot](mandelbrot)     | Real time Mandelbrot zoomer
+[assembly-opt](assembly-opt) | Assembly optimized matrix multiplication
+[mini-nbody](mini-nbody)     | Nbody simulation
+[motion-cap](motion-cap)     | Motion capture camera project for Parallella
+[nbody_mpi](nbody_mpi)       | Nbody example using the Epiphany MPI
+[para-para](para-para)       | "hello world" apps in OpenMP, MPI and OpenCL
+[riecoin](riecoin)           | Riecoin miner
+[r-opencl](r-opencl)         | R with OpenCL running on Parallella
+[rpi-camera](rpi-camera)     | Raspberry pi camera module bounty project
+[slides](slides)             | Creating slide decks from Markdown
+[sobel](sobel)               | Sobel filter example
+[vfft](vfft)                 | Very fast FFT for the Epiphany core
 
 ## Contributing
 
