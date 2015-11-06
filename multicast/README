@@ -1,0 +1,24 @@
+This project offers an example to utilize the hardware multicast
+facility via regular load/stores of the Adapteva Epiphany accelerator.
+To this, faster methods are available, which can read the status,
+config and timer registers without any overhead of method calling
+(compared to the default epiphany library).
+Last, an barrier was implemented, able to utilize the hardware barrier
+capability.
+
+Contains:
+- light-weight implementation of the hardware barrier
+- light-weight inline-methods for the config/status/counter registers
+- ... and as descriped, the support of the multicast
+
+Minor issue:
+- The example is optimized for the 16 core version, but can also be
+  modified to run on the 64 core variant (see config_t.h, also
+  e_methods.h -> get_remote_ptr needs to be modified!)
+
+Mayor issue:
+- The hardware multicast can only be issued by the cores of the first
+  column (0, 1, 2, 3), otherwise a hardware bug is triggered, leading
+  to a freeze of the application! This is a known issue of the Epiphany
+  III chip.
+  See also: http://forums.parallella.org/viewtopic.php?f=9&t=650#p4087
