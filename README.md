@@ -14,6 +14,7 @@ NAME                         | CONTENT                        |
 [blobuska](blobuska)         | Real-time ray tracing visual music generator
 [dac-wavegen](dac-wavegen)   | Sine and sawtooth waveform generator using DAC
 [digital-pot](digital-pot)   | Fading an LED using 8-bit digital POT
+[ebsp-hello](ebsp-hello)     | "Hello world!" example using Epiphany BSP
 [mpi-fft2d](mpi-fft2d)       | Threaded MPI to implement a 2D FFT for Epiphany
 [eprime](eprime)             | Testing for prime numbers using Epiphany
 [fft-xcorr](fft-xcorr)       | 2D image correlator demo
