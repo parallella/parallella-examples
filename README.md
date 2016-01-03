@@ -1,8 +1,6 @@
-# parallella-examples
-
 Community created example Parallella projects.
+===================================================
 
-## Contents
 NAME                         | CONTENT                        |
 ---------------------------- |------------------------------- |
 [actors_dct2d](actors_dct2d) | Actor based 2D DCT
