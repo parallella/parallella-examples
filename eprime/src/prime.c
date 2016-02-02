@@ -74,11 +74,21 @@ int main(int argc, char *argv[])
 	uint64_t total_primes = 0;
 	uint64_t last = 0;
 
+	// line-count for formatting the console output without paging
+	const unsigned linecount = (platform.rows * platform.cols) + 2;
+
+	// Make some empty space for the output to display
+	for (row=0; row < linecount; row++)
+		fputs("\n", stderr);
+
 	while(1)
 	{
 		sum = 0;
 		total_primes = 0;
 		usleep(100000);
+
+		// Reset the cursor position every iteration
+		fprintf(stderr, "\e[%dA", linecount);
 
 		// Read the stats values from each core
 		for(row=0;row<platform.rows;row++)
