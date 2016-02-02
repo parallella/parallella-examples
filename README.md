@@ -16,6 +16,7 @@ NAME                         | CONTENT                        |
 [mpi-fft2d](mpi-fft2d)       | Threaded MPI to implement a 2D FFT for Epiphany
 [eprime](eprime)             | Testing for prime numbers using Epiphany
 [fft-xcorr](fft-xcorr)       | 2D image correlator demo
+[game-of-life](game-of-life) | Conway's game of life, each eCore is a cell
 [heat_stencil](heat_stencil) | 5-point star shaped heat equation stencil
 [john](john)                 | JohnTheRipper password cracker for Parallella
 [kinect_test](kinect_test)   | Kinect demo that uses Epiphany
@@ -26,6 +27,7 @@ NAME                         | CONTENT                        |
 [motion-cap](motion-cap)     | Motion capture camera project for Parallella
 [nbody_mpi](nbody_mpi)       | Nbody example using the Epiphany MPI
 [para-para](para-para)       | "hello world" apps in OpenMP, MPI and OpenCL
+[pi-machin-like](pi-machin-like) | Approximation of π using machin-like formula
 [riecoin](riecoin)           | Riecoin miner
 [r-opencl](r-opencl)         | R with OpenCL running on Parallella
 [rpi-camera](rpi-camera)     | Raspberry pi camera module bounty project
@@ -41,10 +43,10 @@ To submit a project for inclusion:
 
 1. Fork this repository to your personal github account using the 'fork' button above
 2. Clone your 'parallella-examples' fork to a local computer using 'git clone'
-2. Create a new sub-directory at the root of the repo 
+2. Create a new sub-directory at the root of the repo
 3. Add your project files with the appropriate license clearly stated
 4. Add a README.md file (see the .skeleton directory for a template)
-5. Use git add-->git commit-->git push to add changes to your fork of 'parallella-examples' 
+5. Use git add-->git commit-->git push to add changes to your fork of 'parallella-examples'
 6. Submit a pull request by clicking the 'pull request' button on YOUR github 'parallella-examples' repo.
 
 
