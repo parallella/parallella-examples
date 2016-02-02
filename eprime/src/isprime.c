@@ -23,6 +23,10 @@ inline int isprime(unsigned long number)
 {
 	unsigned long i;
 	unsigned long s = sqrt(number);
+	if(number > 2 && number % 2 == 0)
+	{
+        	return 0;
+    	}
 	for(i=3;i<=s;i+=2)
 	{
 		if(number % i == 0)
