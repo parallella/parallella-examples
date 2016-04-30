@@ -1,0 +1,9 @@
+github does not allow empty folders.
+This is the only use of this file ^^
+
+Since we both get bored reading this,
+please notice the executables built by ../build.sh e2 and run by time ../run.sh e2
+will be placed here,
+in this "Debug" directory.
+
+:)
