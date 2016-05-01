@@ -27,6 +27,7 @@ NAME                         | CONTENT                        |
 [motion-cap](motion-cap)     | Motion capture camera project for Parallella
 [nbody_mpi](nbody_mpi)       | Nbody example using the Epiphany MPI
 [para-para](para-para)       | "hello world" apps in OpenMP, MPI and OpenCL
+[paralle2](paralle2)         | Pseudo Eternity II solver
 [pi-machin-like](pi-machin-like) | Approximation of π using machin-like formula
 [riecoin](riecoin)           | Riecoin miner
 [r-opencl](r-opencl)         | R with OpenCL running on Parallella
