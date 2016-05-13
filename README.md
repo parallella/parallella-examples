@@ -35,6 +35,7 @@ NAME                         | CONTENT                        |
 [slides](slides)             | Creating slide decks from Markdown
 [sobel](sobel)               | Sobel filter example
 [vfft](vfft)                 | Very fast FFT for the Epiphany core
+[raymarch](raymarch)         | Raymarching OpenCL framework with examples
 
 ## Contributing
 
