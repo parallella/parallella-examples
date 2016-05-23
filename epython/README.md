@@ -32,7 +32,7 @@ This will execute hello.py on each Epiphany core and every core will display its
 
    [device 1] Hello world from core 1 out of 16 cores
    [device 2] Hello world from core 2 out of 16 cores
-   [device 3] Hello world from core 3 out of 16 cores 
+   [device 3] Hello world from core 3 out of 16 cores
    ......
 
 This illustrates how simple it is to write and run code on the Epiphany chip, more advanced examples which explore parallel capabilities of the chip along with some real world computation examples are in epython/docs/examples
