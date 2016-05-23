@@ -13,6 +13,7 @@ NAME                         | CONTENT                        |
 [dac-wavegen](dac-wavegen)   | Sine and sawtooth waveform generator using DAC
 [digital-pot](digital-pot)   | Fading an LED using 8-bit digital POT
 [ebsp-hello](ebsp-hello)     | "Hello world!" example using Epiphany BSP
+[epython](epython)           | Write Python code to run on the Epiphany
 [mpi-fft2d](mpi-fft2d)       | Threaded MPI to implement a 2D FFT for Epiphany
 [eprime](eprime)             | Testing for prime numbers using Epiphany
 [fft-xcorr](fft-xcorr)       | 2D image correlator demo
