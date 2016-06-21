@@ -61,6 +61,7 @@
 
 typedef unsigned int e_coreid_t;
 #include <e-hal.h>
+#include <e-loader.h>
 #include "fft2dlib.h"
 #include "fft2d.h"
 #include "dram_buffers.h"
