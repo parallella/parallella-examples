@@ -61,6 +61,7 @@ ${CROSS_PREFIX}g++ \
 	-o "./host/${Config}/fft2d_host.elf" \
 	"./host/src/fft2d_host.c" \
 	-le-hal \
+	-le-loader \
 	-lIL \
 	-lILU \
 	-lILUT \
