@@ -16,10 +16,10 @@ ompicc nqueens.c
 To run the application, execute the following command:
 
 ```Shell
-./run.sh [number-of-queens]
+./run.sh
 ```
 
-```2 <= [number-of-queens] <= 14```
+Please note that the number of queens should be at most 14.
 
 # License
 

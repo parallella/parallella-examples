@@ -22,10 +22,10 @@ To run the application, execute the following command:
 ./run.sh
 ```
 
-To target the Zynq or the Epiphany set the value of ```OMP_DEFAULT_DEVICE``` environmental variable to
-match ```0``` or ```1``` subsequently.
+To target the Zynq or the Epiphany set the value of ```OMP_DEFAULT_DEVICE``` environmental variable
+to ```0``` or ```1``` correspondingly.
 
-In the default shell you can execute:
+For example:
 
 ```Shell
 export OMP_DEFAULT_DEVICE="0"
