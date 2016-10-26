@@ -15,7 +15,13 @@ ompicc gol_fast.c
 
 # Usage
 
-To run the application, execute the following command:
+On `esdk.2015.1`, run the application executing the following command:
+
+```Shell
+./a.out
+```
+
+For older e-SDK versions:
 
 ```Shell
 ./run.sh

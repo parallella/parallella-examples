@@ -6,15 +6,18 @@ You need to have [OMPi v2.0.0](http://paragroup.cse.uoi.gr/wpsite/software/ompi)
 
 # Included examples
 
-NAME                         | DESCRIPTION                    |
----------------------------- |------------------------------- |
-[demo1](demo1)               | Simple OpemMP4 device demo
-[demo2](demo2)               | Another OpenMP4 device demo
-[gol](gol)                   | Conway's Game of Life using OpenMP4
+NAME                             | DESCRIPTION                     |
+-------------------------------- |-------------------------------- |
+[demo1](demo1)                   | Simple OpemMP4 device demo
+[demo2](demo2)                   | Another OpenMP4 device demo
+[gol](gol)                       | Conway's Game of Life using OpenMP4
 [mandelbrot_omp](mandelbrot_omp) | Parallella Mandelbrot example using OpenMP4
-[nqueens](nqueens)           | Solving the N-Queens problem on Epiphany using OpenMP4
-[pi_kernel](pi_kernel)       | Simple pi calculation using an OpenMP4 kernel
+[nqueens](nqueens)               | Solving the N-Queens problem on Epiphany using OpenMP4
+[pi_kernel](pi_kernel)           | Simple pi calculation using an OpenMP4 kernel
 
+# Notes
+
+The examples contained here have been tested on e-SDK versions ```5.13.09.10``` and ```2015.1```.
 
 # Author
 
