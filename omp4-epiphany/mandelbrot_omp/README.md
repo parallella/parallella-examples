@@ -20,7 +20,8 @@ ompicc mandelbrot_omp4.c
 
 # Usage
 
-To run the application, execute the following command:
+Note that this application can not be executed on headless systems. To run it on e-SDK `5.13.09.10`,
+execute the following command:
 
 ```Shell
 ./run.sh
