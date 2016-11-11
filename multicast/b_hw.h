@@ -19,7 +19,7 @@
 
 #define WAND_BIT (1 << 3)
 
-static void __attribute__((interrupt)) wand_isr( int signum )
+static void __attribute__((interrupt)) wand_isr()
 {
 }
 

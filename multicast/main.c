@@ -49,7 +49,7 @@ void epiphany_init( e_info_t * e_info )
 
   e_reset_group(&e_info->Epiphany);
 
-  if (e_load_group("e_main.srec", &e_info->Epiphany, 0, 0, 4, 4, E_FALSE ) == E_ERR) {
+  if (e_load_group("e_main.elf", &e_info->Epiphany, 0, 0, 4, 4, E_FALSE ) == E_ERR) {
     printf( "\nERROR: loading Epiphany program.\n");
     exit(1);
   }
@@ -90,8 +90,6 @@ int main( int argc, char * argv[] )
   mbox->go = 1; // let cores run!
   while( mbox->go );
 
-  epiphany_finalize( &e_info );
-
   unsigned i, sum = 0;
   for( i = 0; i < _NUM_CORES; i++ ) {
     printf("core %2d lat.: %2d cycles\n", i, mbox->clocks[i] );
@@ -99,6 +97,8 @@ int main( int argc, char * argv[] )
   }
 
   printf("\nMulticast average overhead: %d cycles\n\n", sum / _NUM_CORES );
+
+  epiphany_finalize( &e_info );
 
   return 0;
 }

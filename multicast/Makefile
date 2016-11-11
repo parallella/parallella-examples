@@ -14,7 +14,7 @@
 # limitations under the License.
 # 
 
-TARGET	:= main.elf e_main.srec
+TARGET	:= main.elf e_main.elf
 default: $(TARGET)
 
 DEPS := $(shell ls .dep_*)
@@ -30,9 +30,6 @@ L_SIZE := -Wl,-static -Wl,-s -Wl,--gc-sections
 e_%.elf: e_%.o
 	e-gcc -T $(EPIPHANY_HOME)/bsps/current/internal.ldf ${L_SIZE} -o $@ $< -le-lib
 	@e-size $@
-
-e_%.srec: e_%.elf
-	e-objcopy --srec-forceS3 --output-target srec $^ $@
 
 ## HOST #################
 %.elf: %.o
