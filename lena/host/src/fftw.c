@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <sys/time.h>
+#include <time.h>
 #include <fftw3.h>
-
-typedef struct timeval timeval_t;
 
 #define TIMERS (4)
 #define N (128)   // Size of FFT
@@ -16,7 +14,7 @@ int main(int argc, char *argv[])
 	fftwf_plan p;
 	int i, j;
 	float *fpi, *fpo;
-	timeval_t timer[TIMERS];
+	struct timespec timer[TIMERS];
 	double time_d[TIMERS];
 
 	fprintf(stderr, "Allocating...\n");
@@ -24,11 +22,11 @@ int main(int argc, char *argv[])
 	out = (fftwf_complex *) fftwf_malloc(sizeof(fftwf_complex) * N * N);
 
 	fprintf(stderr, "Planning... ");
-	gettimeofday(&timer[0], NULL);
+	clock_gettime(CLOCK_THREAD_CPUTIME_ID, &timer[0]);
 //	p = fftwf_plan_dft_2d(N, N, in, out, FFTW_FORWARD, FFTW_MEASURE);
 	p = fftwf_plan_dft_2d(N, N, in, out, FFTW_FORWARD, FFTW_ESTIMATE);
-	gettimeofday(&timer[1], NULL);
-	time_d[0] = (timer[1].tv_sec - timer[0].tv_sec) * 1000 + ((double) (timer[1].tv_usec - timer[0].tv_usec) / 1000.0);
+	clock_gettime(CLOCK_THREAD_CPUTIME_ID, &timer[1]);
+	time_d[0] = (timer[1].tv_sec - timer[0].tv_sec) * 1000 + ((double) (timer[1].tv_nsec - timer[0].tv_nsec) / 1000000.0);
 	fprintf(stderr, "%5.3f msec\n", time_d[0]);
 
 	fprintf(stderr, "Initializing...\n");
@@ -41,12 +39,12 @@ int main(int argc, char *argv[])
 	}
 
 	fprintf(stderr, "Executing... ");
-	gettimeofday(&timer[2], NULL);
+	clock_gettime(CLOCK_THREAD_CPUTIME_ID, &timer[2]);
 	for (i=0; i<Q; i++)
 		fftwf_execute(p);
-	gettimeofday(&timer[3], NULL);
+	clock_gettime(CLOCK_THREAD_CPUTIME_ID, &timer[3]);
 
-	time_d[1] = (timer[3].tv_sec - timer[2].tv_sec) * 1000 + ((double) (timer[3].tv_usec - timer[2].tv_usec) / 1000.0);
+	time_d[1] = (timer[3].tv_sec - timer[2].tv_sec) * 1000 + ((double) (timer[3].tv_nsec - timer[2].tv_nsec) / 1000000.0);
 	time_d[1] = time_d[1] / Q;
 	fprintf(stderr, "%5.3f msec\n", time_d[1]);
 

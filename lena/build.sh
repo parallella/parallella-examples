@@ -22,31 +22,29 @@ if [[ "${BUILD_DEVICE}" == "yes" ]]; then
 	fi
 	popd >& /dev/null
 
-	echo "*** Creating srec file"
-	rm -rf device/${Config}/e_fft2d.*.srec
 	pushd device/${Config} >& /dev/null
-	e-objcopy --srec-forceS3 --output-target srec e_fft2d.elf e_fft2d.srec
 	popd >& /dev/null
 fi
 
 
-
+mkdir -p ./host/${Config}
 rm -f ./host/${Config}/fft2d_host.elf
 
-CROSS_PREFIX=
+if [ -z "${CROSS_COMPILE+xxx}" ]; then
 case $(uname -p) in
     arm*)
         # Use native arm compiler (no cross prefix)
-        CROSS_PREFIX=
+        CROSS_COMPILE=
         ;;
        *)
         # Use cross compiler
-        CROSS_PREFIX="arm-linux-gnueabihf-"
+        CROSS_COMPILE="arm-linux-gnueabihf-"
         ;;
 esac
+fi
 
 # Build HOST side application
-${CROSS_PREFIX}g++ \
+${CROSS_COMPILE}g++ \
 	-Ofast -Wall -g0 \
 	-D__HOST__ \
 	-Dasm=__asm__ \
@@ -65,7 +63,9 @@ ${CROSS_PREFIX}g++ \
 	-lIL \
 	-lILU \
 	-lILUT \
-	-ljpeg
+	-ljpeg \
+	-lpthread \
+	-lrt
 
 
 #echo "=== Building FFTW bemchmark program ==="

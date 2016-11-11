@@ -14,12 +14,10 @@ else
 	Ing=$@
 fi
 
-ELIBS="${EPIPHANY_HOME}/tools/host/lib"
-EHDF="${EPIPHANY_HOME}/bsps/current/platform.hdf"
 
 cd host/${Config}
 
-sudo -E LD_LIBRARY_PATH=${ELIBS} EPIPHANY_HDF=${EHDF} ./fft2d_host.elf ${Img}
+./fft2d_host.elf ${Img} ../../device/Release/e_fft2d.elf
 
 cd ../../
 

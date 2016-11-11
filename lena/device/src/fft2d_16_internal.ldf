@@ -41,7 +41,8 @@ __CORE_COL_ = DEFINED(__CORE_COL_) ? __CORE_COL_ : __FIRST_CORE_COL_;
 /* used to calculate the slice address in the external memory */
 __CORE_NUM_ = (__CORE_ROW_ - __FIRST_CORE_ROW_) * __NUM_COLS_IN_CHIP_ + (__CORE_COL_ - __FIRST_CORE_COL_);
 
-__SHARED_DRAM_ = 0x8e000000;
+_SHARED_DRAM_ = 0x8e000000;
+PROVIDE(__SHARED_DRAM_ = _SHARED_DRAM_);
 
 MEMORY
 {
@@ -52,7 +53,7 @@ MEMORY
 	IVT_RAM (WXAI) : ORIGIN = 0, LENGTH = 0x28
 
 	/* user program, continuous placement */
-	WORKGROUP_RAM (WXAI)     : ORIGIN = LENGTH(IVT_RAM), LENGTH = 0x30
+	WORKGROUP_RAM (WXAI)     : ORIGIN = LENGTH(IVT_RAM), LENGTH = 0x40
 
 	/* user program, continuous placement */
 	INTERNAL_RAM (WXAI)      : ORIGIN = LENGTH(IVT_RAM) + LENGTH(WORKGROUP_RAM), LENGTH = 32K - LENGTH(IVT_RAM) - LENGTH(WORKGROUP_RAM)
@@ -103,9 +104,30 @@ SECTIONS
 	ivt_dma1                0x1c : {*.o(ivt_entry_dma1)}               > IVT_RAM
 	ivt_wand                0x20 : {*.o(ivt_entry_wand)}               > IVT_RAM
 	ivt_user                0x24 : {*.o(ivt_entry_user)}               > IVT_RAM
-	
-	workgroup_config        0x28 : {*.o(workgroup_cfg)}                > WORKGROUP_RAM /* 28 2c 30 34 38 3c 40 44 48 (4c) */
-	external_mem_config     0x50 : {*.o(ext_mem_cfg)}                  > WORKGROUP_RAM /* 50 54 */
+
+	/* section filled in by loader */
+	workgroup_cfg           0x28 :
+	  {
+	    *(workgroup_cfg)
+	    ASSERT(. <= 0x28, "workgroup_cfg section overflow");
+	    . = 0x28; /* force allocation */
+	  } > WORKGROUP_RAM /* 28 2c 30 34 38 3c 40 44 48 (4c) */
+
+	/* section filled in by loader */
+	ext_mem_cfg             0x50 :
+	  {
+	    *(ext_mem_cfg);
+	    ASSERT(. <= 0x8, "ext_mem_cfg section overflow");
+	    . = 0x8; /* force allocation */
+	  } > WORKGROUP_RAM /* 50 54 */
+
+	/* section filled in by loader */
+	loader_cfg             0x58 :
+	  {
+	    *(loader_cfg);
+	    ASSERT(. <= 0x10, "loader_cfg section overflow");
+	    . = 0x10; /* force allocation */
+	  } > WORKGROUP_RAM /* 58 5C 60 64 */
 
 	/* place the ISR handlers after workgroup-configuration */
 	.reserved_crt0  ORIGIN(IVT_RAM) + LENGTH(IVT_RAM) + LENGTH(WORKGROUP_RAM) : {*.o(RESERVED_CRT0) *.o(reserved_crt0)} > INTERNAL_RAM
@@ -353,7 +375,8 @@ SECTIONS
 
   /**/
   PROVIDE (__stack_start_ = ORIGIN(INTERNAL_RAM) + LENGTH(INTERNAL_RAM) - 0x10);
-  .stack __stack_start_ : { ___stack = .; *(.stack) }
+  .stack __stack_start_ : { __stack = .; *(.stack) }
+  PROVIDE ( ___stack = __stack );
   PROVIDE (___heap_start = ORIGIN(EXTERNAL_DRAM_1) + __HEAP_SIZE_FOR_CORE_ * __CORE_NUM_);
   /*.heap_start __heap_start_ :  { _heap_start_ = .; *(.heap_start) } */
   PROVIDE (___heap_end   = ORIGIN(EXTERNAL_DRAM_1) + __HEAP_SIZE_FOR_CORE_ * __CORE_NUM_ + __HEAP_SIZE_FOR_CORE_ - 4);
