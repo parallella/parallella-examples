@@ -27,6 +27,3 @@ ${CROSS_PREFIX}gcc main.c -o main.elf  ${EINCS} ${ELIBS} -le-hal -le-loader -lpt
 # -O0 reduce compilation time, specifies optimization level
 OPT=0
 e-gcc -T ${ELDF} -O${OPT} emain.c -o emain.elf -le-lib
-
-# Convert ebinary to SREC file
-e-objcopy --srec-forceS3 --output-target srec emain.elf emain.srec

@@ -41,7 +41,7 @@ init_workgroup(e_epiphany_t * dev) {
   e_open(dev, 0, 0, rows, cols); // Create an epiphany cores workgroup
   e_reset_group(dev);
   // load programs into cores workgroup, do not execute it immediately
-  result = e_load_group("emain.srec", dev, 0, 0, rows, cols, E_FALSE);
+  result = e_load_group("emain.elf", dev, 0, 0, rows, cols, E_FALSE);
   if(result != E_OK) {
     printf("Error Loading the Epiphany Application %i\n", result);
   }
