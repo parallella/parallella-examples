@@ -4,6 +4,15 @@ This directory contains OpenMP 4.x examples where Epiphany is treated as a devic
 
 You need to have [OMPi v2.0.0](http://paragroup.cse.uoi.gr/wpsite/software/ompi) or later installed.
 
+## Check if OMPi is already installed
+
+Newer Pubuntu / ESDK images ship with OMPi. Use this to check if you already have OMPi installed.
+
+```sh
+$ ompicc --version
+2.0.0
+```
+
 # Included examples
 
 NAME                             | DESCRIPTION                     |
@@ -17,7 +26,7 @@ NAME                             | DESCRIPTION                     |
 
 # Notes
 
-The examples contained here have been tested on e-SDK versions ```5.13.09.10``` and ```2015.1```.
+The examples contained here have been tested on e-SDK versions ```5.13.09.10```, ```2015.1```, and ```2016.11```.
 
 # Author
 

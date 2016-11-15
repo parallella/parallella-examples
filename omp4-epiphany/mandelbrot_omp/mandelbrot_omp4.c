@@ -136,6 +136,11 @@ int main(int argc, char *argv[])
 
 		close(fb);
 	}
+	else
+	{
+		printf("Error opening frame buffer\n");
+		exit(EXIT_FAILURE);
+	}
 
 	printf("\n\nCalculating Mandelbrot set for image %d x %d...\n", xres_virtual,
 	       yres_virtual);

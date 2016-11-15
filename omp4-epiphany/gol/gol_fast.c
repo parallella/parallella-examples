@@ -33,7 +33,7 @@
 #define NCORES  16    /* Number of cores used (16 for Epiphany-16) */
 
 #define ROWS    16    /* Number of rows */
-#define COLS    100   /* Number of columns */
+#define COLS    90    /* Number of columns */
 
 #define RPC     ((ROWS + NCORES-1) / NCORES) /* Rows per core */
 
