@@ -97,15 +97,9 @@ int main(int argc, char *argv[])
     fprintf(stderr,"\nRows: %d Columns: %d\n",group_rows,group_cols);
     fprintf(stderr,"\nOverall Grid size: %d X %d\n\n",CHIP_GRID_X, CHIP_GRID_Y);
     
-    for ( i=0 ; i < group_rows; i++ ) {
-        for ( j=0 ; j < group_cols ; j++ ) {
-            e_reset_core(&dev, i, j);
-        }
-    }
-
     // Load the device program onto the selected eCore group
     // and launch after loading.
-    e_load_group("e_dev_main.srec", &dev, 0, 0, group_rows, group_cols, E_FALSE);
+    e_load_group("e_dev_main.elf", &dev, 0, 0, group_rows, group_cols, E_FALSE);
 
     e_write(&emem, 0, 0, (off_t) (0x0000), (void *) &mailbox, sizeof(Mailbox)); 
     

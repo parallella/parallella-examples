@@ -1,3 +1,9 @@
+/* ANSI concatenation macros.  */
+#define CONCAT1(a, b) CONCAT2(a, b)
+#define CONCAT2(a, b) a ## b
+/* Use the right prefix for global labels.  */
+#define SYM(x) CONCAT1 (__USER_LABEL_PREFIX__, x)
+
 ;
 ; stencil_body
 ;
@@ -23,7 +29,7 @@
 	.file	"stencil20_5_star.S"
 	.section	.text
 	.balign	4
-	.global	_stencil_20n
+	.global	SYM(stencil_20n)
     .set stride, 62
 
     .macro dogrid0 a0,a1,a2,a3,a4,b0,b1,b2,b3,b4,b5,b6,o0,o1,o2,o3,o4,i0,i1,i2,i3,i4
@@ -112,7 +118,7 @@
 	fmadd r14,r\a4,r7
     .endm
 
-_stencil_20n:
+SYM(stencil_20n):
 ; save the 26 registers (13 dual) we are using that need callee saving
 	add	sp,sp,#-104
 	strd r4,[sp,#0]
@@ -241,7 +247,7 @@ _stencil_20n:
 ;    ldr r11,[sp,#7]
 	add	sp,sp,#104
 	rts
-	.size	_stencil_20n, .-_stencil_20n
+	.size	SYM(stencil_20n), .-SYM(stencil_20n)
 	.ident	"Bob the Assembler, v0.1"
     .end
 

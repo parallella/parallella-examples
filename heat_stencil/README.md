@@ -20,7 +20,7 @@ Tested on the Epiphany-IV evaluation module
 
 ## Building
 
-Configure the parameters accordingly in src/defs.h and run:
+Configure the parameters (defaults are fore Epiphany-IV) accordingly in src/defs.h and run:
 
 ```bash
 $ ./build.sh

@@ -25,13 +25,13 @@ DEV_O_FLAG="-Dasm=__asm__ -funroll-loops -falign-loops=8 -falign-functions=8 -fm
 echo -e "\n***Start build***\n"
 # Build HOST side application
 echo "Building host program"
-echo "gcc src/host_main.c -o Debug/host_main.elf -I ${EINCS} -L ${ELIBS} -le-hal"
-gcc src/host_main.c -o Debug/host_main.elf -I ${EINCS} -L ${ELIBS} -le-hal
+echo "gcc src/host_main.c -o Debug/host_main.elf -I ${EINCS} -L ${ELIBS} -le-hal -le-loader"
+gcc src/host_main.c -o Debug/host_main.elf -I ${EINCS} -L ${ELIBS} -le-hal -le-loader
 
 #Build device side application
 echo -e "\nBuilding stencil_lib"
-echo "e-as src/stencil20_5.S -defsym _righty=1 -o Debug/stencil20_lib.o"
-e-as src/stencil20_5.S -defsym _righty=1 -o Debug/stencil20_lib.o
+echo "e-gcc src/stencil20_5.S -defsym _righty=1 -c -o Debug/stencil20_lib.o"
+e-gcc src/stencil20_5.S -Wa,-defsym -Wa,_righty=1 -c -o Debug/stencil20_lib.o
 
 echo -e "\nBuilding e_dev_main"
 echo "e-gcc -g -c src/e_dev_main.c -D_righty=1 -o Debug/e_dev_main.o" $DEV_O_FLAG 
