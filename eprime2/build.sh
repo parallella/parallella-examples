@@ -28,6 +28,3 @@ ${CROSS_PREFIX}gcc src/prime.c -o bin/prime.elf -I ${EINCS} -L ${ELIBS} -le-hal 
 
 # Build DEVICE side program
 e-gcc -O2 -T ${ELDF} src/isprime.c src/e_prime.c -o bin/e_prime.elf -le-lib -lm
-
-# Convert ebinary to SREC file
-e-objcopy --srec-forceS3 --output-target srec bin/e_prime.elf bin/e_prime.srec

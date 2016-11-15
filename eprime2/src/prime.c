@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
 	e_reset_group(&dev);
 
 	// Load the device code into each core of the chip, and don't start it yet
-	e_load_group("bin/e_prime.srec", &dev, 0, 0, platform.rows, platform.cols, E_FALSE);
+	e_load_group("bin/e_prime.elf", &dev, 0, 0, platform.rows, platform.cols, E_FALSE);
 
 	// Set the maximum per core test value on each core at address 0x7020
 	for(row=0;row<platform.rows;row++)
