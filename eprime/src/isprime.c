@@ -19,7 +19,7 @@
 
 #include <math.h>
 
-inline int isprime(unsigned long number)
+int isprime(unsigned long number)
 {
 	unsigned long i;
 	unsigned long s = sqrt(number);
