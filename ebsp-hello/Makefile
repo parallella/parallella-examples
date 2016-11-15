@@ -24,14 +24,14 @@ all: ebsp_source ebsp example
 ########################################################
 
 ebsp_source:
-	git clone https://github.com/coduin/epiphany-bsp
+	[ -d epiphany-bsp ] || git clone https://github.com/coduin/epiphany-bsp
 
 ebsp:
 	cd epiphany-bsp && make
 
 ########################################################
 
-example: bin bin/host_hello bin/ecore_hello.srec
+example: bin bin/host_hello bin/ecore_hello.elf
 
 bin:
 	@mkdir -p bin
@@ -43,9 +43,6 @@ bin/host_hello: src/host_hello.c
 bin/ecore_hello.elf: src/ecore_hello.c
 	@echo "CC $<"
 	@e-gcc $(CFLAGS) -T ${ELDF} $(INCLUDES) -o $@ $< $(E_LIBS) $(E_LIB_NAMES)
-
-bin/%.srec: bin/%.elf
-	@e-objcopy --srec-forceS3 --output-target srec $< $@
 
 ########################################################
 
