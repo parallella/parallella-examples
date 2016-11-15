@@ -12,12 +12,14 @@ This release has supported added for the Parallella board, with implementation o
 
 For Epiphany support:
 ```bash
+$ cd src
 $ make linux-parallella
 ```
 
 To test bcrypt on Epiphany run:
 ```bash
-$ sudo -E LD_LIBRARY_PATH=$LD_LIBRARY_PATH ./john -te -form=bcrypt-parallella
+$ cd run
+$ ./john -te -form=bcrypt-parallella
 ```
 
 ### Zynq-7020

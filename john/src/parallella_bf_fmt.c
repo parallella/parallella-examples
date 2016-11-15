@@ -182,7 +182,7 @@ static void init(struct fmt_main *self)
 	ERR(e_get_platform_info(&platform), "Get platform info failed!\n");
 	ERR(e_alloc(&emem, _BufOffset, _BufSize), "Epiphany memory allocation failed!\n");
 	ERR(e_open(&dev, 0, 0, platform.rows, platform.cols), "e_open() failed!\n");
-	ERR(e_load_group("parallella_e_bcrypt.srec", &dev, 0, 0, 
+	ERR(e_load_group("parallella_e_bcrypt.elf", &dev, 0, 0,
 		platform.rows, platform.cols, E_TRUE), "Load failed!\n");
 }
 

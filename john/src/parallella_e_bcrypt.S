@@ -6,6 +6,13 @@
  * with or without modification, are permitted.
  */
 
+/* ANSI concatenation macros.  */
+#define CONCAT1(a, b) CONCAT2(a, b)
+#define CONCAT2(a, b) a ## b
+/* Use the right prefix for global labels.  */
+#define SYM(x) CONCAT1 (__USER_LABEL_PREFIX__, x)
+
+
 #define ctx0		r0
 #define ctx1		r1
 #define L0		r23
@@ -39,8 +46,8 @@
 #define end		r3
 
 .text
-.global _BF_encrypt2
-.type _BF_encrypt2, @function
+.global SYM(BF_encrypt2)
+.type SYM(BF_encrypt2), @function
 
 .macro BF2_2ROUND_A
 	and tmpa1, L0, c1
@@ -188,7 +195,7 @@
 	eor L1, L1, tmpb3
 .endm
 
-_BF_encrypt2:		
+SYM(BF_encrypt2):
 	isub r52, ctx1, ctx0
 	mov S11, 0x448
 	mov S12, 0x848
@@ -354,5 +361,5 @@ loop2:
 	ldrd P14, [sp, -0xc]
 	ldrd P16, [sp, -0xd]
 	rts
-	.size	_BF_encrypt2, .-_BF_encrypt2
+	.size	SYM(BF_encrypt2), .-SYM(BF_encrypt2)
 	.balign 8

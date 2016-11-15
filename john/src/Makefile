@@ -265,9 +265,8 @@ linux-parallella:
 	$(MAKE) $(PROJ) \
 		JOHN_OBJS="$(JOHN_OBJS) $(PARALLELLA_OBJS) c3_fmt.o" \
 		CFLAGS="$(CFLAGS) -mfpu=neon -DHAVE_CRYPT -DHAVE_PARALLELLA -DFPGA" \
-		LDFLAGS="$(LDFLAGS) -L${ELIBS} -lcrypt -le-hal"
+		LDFLAGS="$(LDFLAGS) -L${ELIBS} -lcrypt -le-hal -le-loader"
 	e-gcc -std=c99 -T ${ELDF} -O2 -mfp-mode=int parallella_e_bcrypt.c parallella_e_bcrypt.S -o ../run/parallella_e_bcrypt.elf -le-lib
-	e-objcopy --srec-forceS3 --output-target srec ../run/parallella_e_bcrypt.elf ../run/parallella_e_bcrypt.srec
 
 linux-arm32le:
 	$(LN) arm32le.h arch.h
