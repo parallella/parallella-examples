@@ -79,21 +79,14 @@ int main(int argc, char *argv[])
     fprintf(stderr,"\n\nMultiplying A[%d][%d] x B[%d][%d] = C[%d][%d]\n",_Smtx,_Smtx,_Smtx,_Smtx,_Smtx,_Smtx);
     fprintf(stderr, "\nGroup rows: %d Group_cols: %d. Starting row: %d col : %d\n",group_rows_num,group_cols_num,row,col);
 
-    // Open the single-core workgroup and reset the core, in
-    // case a previous process is running. Note that we used
+    // Open the single-core workgroup. Note that we used
     // core coordinates relative to the workgroup.
     e_open(&dev, row, col, group_rows_num, group_cols_num);
-    for ( i=0 ; i < group_rows_num; i++ ) {     
-        for ( j=0 ; j < group_cols_num ; j++ ) {
-            e_reset_core(&dev, i, j);       
-        }                                   
-    }                                       
-
 
     // Load the device program onto the selected eCore
     // and launch after loading.
 
-    int load_err=e_load_group("matmul_multi.srec", &dev, 0, 0, group_rows_num, group_cols_num, E_FALSE);
+    int load_err=e_load_group("matmul_multi.elf", &dev, 0, 0, group_rows_num, group_cols_num, E_FALSE);
     char load_result[5];
     if (load_err == E_OK) strcpy(load_result,"E_OK");
     if (load_err == E_ERR) strcpy(load_result,"E_ERR");

@@ -29,20 +29,33 @@ ENTRY(_start)
 PROVIDE (___bss_start = __bss_start);
 
 /* BSP specific */
-__PROG_SIZE_FOR_CORE_ = 1M;
-__HEAP_SIZE_FOR_CORE_ = 2K;
-__HALF_BANK_SIZE_     = 4K;
-__NUM_ROWS_IN_CHIP_   = 8;
-__NUM_COLS_IN_CHIP_   = 8;
-__FIRST_CORE_ROW_     = 32;
-__FIRST_CORE_COL_     = 8;
-__CORE_ROW_ = DEFINED(__CORE_ROW_) ? __CORE_ROW_ : __FIRST_CORE_ROW_;
-__CORE_COL_ = DEFINED(__CORE_COL_) ? __CORE_COL_ : __FIRST_CORE_COL_;
+_PROG_SIZE_FOR_CORE_ = 1M;
+_HEAP_SIZE_FOR_CORE_ = 2K;
+_HALF_BANK_SIZE_     = 4K;
+_NUM_ROWS_IN_CHIP_   = 4;
+_NUM_COLS_IN_CHIP_   = 4;
+_FIRST_CORE_ROW_     = 32;
+_FIRST_CORE_COL_     = 8;
+_CORE_ROW_ = DEFINED(_CORE_ROW_) ? _CORE_ROW_ : _FIRST_CORE_ROW_;
+_CORE_COL_ = DEFINED(_CORE_COL_) ? _CORE_COL_ : _FIRST_CORE_COL_;
 /* generic don't touch */
 /* used to calculate the slice address in the external memory */
-__CORE_NUM_ = (__CORE_ROW_ - __FIRST_CORE_ROW_) * __NUM_COLS_IN_CHIP_ + (__CORE_COL_ - __FIRST_CORE_COL_);
+_CORE_NUM_ = (_CORE_ROW_ - _FIRST_CORE_ROW_) * _NUM_COLS_IN_CHIP_ + (_CORE_COL_ - _FIRST_CORE_COL_);
 
-__SHARED_DRAM_ = 0x8e000000;
+_SHARED_DRAM_ = 0x8e000000;
+
+/* Forwards compatibility for USER_LABEL_PREFIX change in ESDK 2016.3 */
+PROVIDE(__PROG_SIZE_FOR_CORE_ = _PROG_SIZE_FOR_CORE_);
+PROVIDE(__HEAP_SIZE_FOR_CORE_ = _HEAP_SIZE_FOR_CORE_);
+PROVIDE(__HALF_BANK_SIZE_ = _HALF_BANK_SIZE_);
+PROVIDE(__NUM_ROWS_IN_CHIP_ = _NUM_ROWS_IN_CHIP_);
+PROVIDE(__NUM_COLS_IN_CHIP_ = _NUM_COLS_IN_CHIP_);
+PROVIDE(__FIRST_CORE_ROW_ = _FIRST_CORE_ROW_);
+PROVIDE(__FIRST_CORE_COL_ = _FIRST_CORE_COL_);
+PROVIDE(__CORE_ROW_ = _CORE_ROW_);
+PROVIDE(__CORE_COL_ = _CORE_COL_);
+PROVIDE(__CORE_NUM_ = _CORE_NUM_);
+PROVIDE(__SHARED_DRAM_ = _SHARED_DRAM_);
 
 MEMORY
 {
@@ -53,7 +66,7 @@ MEMORY
 	IVT_RAM (WXAI) : ORIGIN = 0, LENGTH = 0x28
 
 	/* user program, continuous placement */
-	WORKGROUP_RAM (WXAI)     : ORIGIN = LENGTH(IVT_RAM), LENGTH = 0x30
+	WORKGROUP_RAM (WXAI)     : ORIGIN = LENGTH(IVT_RAM), LENGTH = 0x100 - LENGTH(IVT_RAM)
 
 	/* user program, continuous placement */
 	INTERNAL_RAM (WXAI)      : ORIGIN = LENGTH(IVT_RAM) + LENGTH(WORKGROUP_RAM), LENGTH = 32K - LENGTH(IVT_RAM) - LENGTH(WORKGROUP_RAM)
@@ -163,10 +176,32 @@ SECTIONS
 	ivt_dma0                0x18 : {*.o(ivt_entry_dma0)}               > IVT_RAM
 	ivt_dma1                0x1c : {*.o(ivt_entry_dma1)}               > IVT_RAM
 	ivt_wand                0x20 : {*.o(ivt_entry_wand)}               > IVT_RAM
-	ivt_uirq                0x24 : {*.o(ivt_entry_uirq)}               > IVT_RAM
-	
-	workgroup_config        0x28 : {*.o(workgroup_cfg)}                > WORKGROUP_RAM /* 28 2c 30 34 38 3c 40 44 48 (4c) */
-	external_mem_config     0x50 : {*.o(ext_mem_cfg)}                  > WORKGROUP_RAM /* 50 54 */
+	ivt_user                0x24 : {*.o(ivt_entry_user)}               > IVT_RAM
+
+	/* section filled in by loader */
+	workgroup_cfg           0x28 :
+	  {
+	    *(workgroup_cfg)
+	    ASSERT(. <= 0x28, "workgroup_cfg section overflow");
+	    . = 0x28; /* force allocation */
+	  } > WORKGROUP_RAM /* 28 2c 30 34 38 3c 40 44 48 (4c) */
+
+	/* section filled in by loader */
+	ext_mem_cfg             0x50 :
+	  {
+	    *(ext_mem_cfg);
+	    ASSERT(. <= 0x8, "ext_mem_cfg section overflow");
+	    . = 0x8; /* force allocation */
+	  } > WORKGROUP_RAM /* 50 54 */
+
+	/* section filled in by loader */
+	loader_cfg             0x58 :
+	  {
+	    *(loader_cfg);
+	    ASSERT(. <= 0x10, "loader_cfg section overflow");
+	    . = 0x10; /* force allocation */
+	  } > WORKGROUP_RAM /* 58 5C 60 64 */
+
 
 	/* place the ISR handlers after workgroup-configuration */
 	.reserved_crt0  ORIGIN(IVT_RAM) + LENGTH(IVT_RAM) + LENGTH(WORKGROUP_RAM) : {*.o(RESERVED_CRT0) *.o(reserved_crt0)} > INTERNAL_RAM
@@ -185,9 +220,9 @@ SECTIONS
 	.data_bank3   : {*.o(.data_bank3)} > BANK3_SRAM
 	.text_bank3   : {*.o(.text_bank3)} > BANK3_SRAM
 
-	.code_dram    : {*.o(code_dram)  } > EXTERNAL_DRAM_0
-	.shared_dram  : {*.o(shared_dram)} > EXTERNAL_DRAM_1
-	.heap_dram   ORIGIN(EXTERNAL_DRAM_1) + LENGTH(EXTERNAL_DRAM_1) - __HEAP_SIZE_FOR_CORE_ * __NUM_ROWS_IN_CHIP_ * __NUM_COLS_IN_CHIP_ : {*.o(heap_dram)} > EXTERNAL_DRAM_1
+	.code_dram    : {*.o(code_dram)   *.o(.code_dram)  } > EXTERNAL_DRAM_0
+	.shared_dram  : {*.o(shared_dram) *.o(.shared_dram)} > EXTERNAL_DRAM_1
+	.heap_dram   ORIGIN(EXTERNAL_DRAM_1) + LENGTH(EXTERNAL_DRAM_1) - _HEAP_SIZE_FOR_CORE_ * _NUM_ROWS_IN_CHIP_ * _NUM_COLS_IN_CHIP_ : {*.o(heap_dram) *.o(.heap_dram)} > EXTERNAL_DRAM_1
 
 	NEW_LIB_RO  ADDR(.data_bank0) + SIZEOF(.data_bank0) : {lib_a-*.o(.text  .rodata)  *.o(libgloss_epiphany) } > INTERNAL_RAM
 	NEW_LIB_WR                                          : {lib_a-*.o(.data)                                  } > INTERNAL_RAM
@@ -413,12 +448,14 @@ SECTIONS
   .gnu.attributes 0 : { KEEP (*(.gnu.attributes)) }
 
   /**/
-  PROVIDE (__stack_start_ = 0x3ff0);
-  /*PROVIDE (__stack_start_ = ORIGIN(INTERNAL_RAM) + LENGTH(INTERNAL_RAM) - 0x10);*/
-  .stack __stack_start_ : { ___stack = .; *(.stack) }
-  PROVIDE (___heap_start = ORIGIN(EXTERNAL_DRAM_1) + __HEAP_SIZE_FOR_CORE_ * __CORE_NUM_);
+  PROVIDE (__stack_start_ = ORIGIN(INTERNAL_RAM) + LENGTH(INTERNAL_RAM) - 0x10);
+  .stack __stack_start_ : { __stack = .; *(.stack) }
+  PROVIDE (___stack = __stack);
+  PROVIDE (__heap_start = ORIGIN(EXTERNAL_DRAM_1) + _HEAP_SIZE_FOR_CORE_ * _CORE_NUM_);
+  PROVIDE (___heap_start = __heap_start);
   /*.heap_start __heap_start_ :  { _heap_start_ = .; *(.heap_start) } */
-  PROVIDE (___heap_end   = ORIGIN(EXTERNAL_DRAM_1) + __HEAP_SIZE_FOR_CORE_ * __CORE_NUM_ + __HEAP_SIZE_FOR_CORE_ - 4);
+  PROVIDE (__heap_end   = ORIGIN(EXTERNAL_DRAM_1) + _HEAP_SIZE_FOR_CORE_ * _CORE_NUM_ + _HEAP_SIZE_FOR_CORE_ - 4);
+  PROVIDE (___heap_end = __heap_end);
   /* .heap_end __heap_end_ : { _heap_end_ = .; *(.heap_end) } */
 
   /DISCARD/ : { *(.note.GNU-stack) *(.gnu_debuglink) *(.gnu.lto_*) }

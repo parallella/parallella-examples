@@ -8,9 +8,7 @@ EHDF=${EPIPHANY_HDF}
 
 cd Debug
 
-COMMAND="sudo -E LD_LIBRARY_PATH=${ELIBS} EPIPHANY_HDF=${EHDF} ./host_main.elf"
-echo ${COMMAND}
-eval ${COMMAND}
+./host_main.elf
 
 cd ..
 

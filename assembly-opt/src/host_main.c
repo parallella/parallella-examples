@@ -63,16 +63,14 @@ int main(int argc, char *argv[])
     coreid = (row + platform.row) * 64 + col + platform.col;
     fprintf(stderr,"\n\nMultiplying A[%d][%d] x B[%d][%d] = C[%d][%d]\n",N,ROWS,N,ROWS,N,ROWS);
 
-    // Open the single-core workgroup and reset the core, in
-    // case a previous process is running. Note that we used
+    // Open the single-core workgroup Note that we used
     // core coordinates relative to the workgroup.
     e_open(&dev, row, col, 1, 1);
-    e_reset_core(&dev, 0, 0);
 
     // Load the device program onto the selected eCore
     // and launch after loading.
 
-    e_load("e_dev_main.srec", &dev, 0, 0, E_FALSE);
+    e_load("e_dev_main.elf", &dev, 0, 0, E_FALSE);
     e_start_group(&dev);
 
 

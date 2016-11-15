@@ -1,3 +1,10 @@
+/* ANSI concatenation macros.  */
+#define CONCAT1(a, b) CONCAT2(a, b)
+#define CONCAT2(a, b) a ## b
+/* Use the right prefix for global labels.  */
+#define SYM(x) CONCAT1 (__USER_LABEL_PREFIX__, x)
+
+
 ; Per-core Matrix multiplication
 ; Author: Anish Varghese <anish.varghese@anu.edu.au>, May 2014
 ; License: GPL v3
@@ -14,7 +21,7 @@
     .file   "matmul_assembly.S"
     .section    .text
     .balign 4
-    .global _matmul_assembly
+    .global SYM(matmul_assembly)
     .set stride, 32 
 
     .macro doMult areg,index,aprev,inc
@@ -177,7 +184,7 @@
     .endm
 
 
-_matmul_assembly:
+SYM(matmul_assembly):
 ; save the 26 registers (13 dual) we are using that need callee saving
     add sp,sp,#-120
     strd r0,[sp,#0]
@@ -439,7 +446,7 @@ _matmul_assembly:
     ldrd r42,[sp,#14]
     add sp,sp,#120
     rts
-    .size   _matmul_assembly, .-_matmul_assembly
+    .size   SYM(matmul_assembly), .-SYM(matmul_assembly)
     .ident  "Anish V, v0.1"
     .end
 
