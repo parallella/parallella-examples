@@ -5,14 +5,14 @@ OBJS :=
 C_DEPS :=
 C_SRCS :=
 
-EPIPHANY_HOME := /opt/adapteva/esdk.4.13.03.30
+EPIPHANY_HOME ?= /opt/adapteva/esdk
 
-INCS := -I /home/suleyman/workspace/idct2d/host/include \
--I /home/suleyman/workspace/idct2d/device/include \
--I /home/suleyman/workspace/idct2d/commonlib/include \
+INCS := -I include \
+-I device/include \
+-I commonlib/include \
 -I ${EPIPHANY_HOME}/tools/host.arm7l/include
 
-LDF := ${EPIPHANY_HOME}/bsps/zed_E16G3_512mb/fast.ldf
+LDF := ${EPIPHANY_HOME}/bsps/current/internal.ldf
 
 OBJECTS := 	device/src/rowSort.o \
 			device/src/scale.o \
@@ -82,7 +82,7 @@ host/src/idct_host.o: host/src/idct_host.c
 idct_host.elf: host/src/idct_host.o
 	@echo 'Building target: $@'
 	@echo 'Invoking GCC arm Linker'
-	gcc -L${EPIPHANY_HOME}/tools/host/lib  "$<" -o "$@"  -le-hal -lrt
+	gcc -L${EPIPHANY_HOME}/tools/host/lib  "$<" -o "$@" -le-loader -le-hal -lrt
 
 ##########################################################
 
@@ -107,19 +107,13 @@ device: $(OBJECTS) $(EXECS)
 	@echo 'Invoking Epiphany linker'
 	e-gcc -L"/commonlib" -L/commonlib -T $(LDF)  "$<" -o "$@" libcommonlib.a -le-lib 
 
-###########################################################################
-
-# Creating srec files
-%.srec: %.elf
-	@echo 'Creating the srec files'
-	e-objcopy --srec-forceS3 -R .shared_dram --output-target srec "$<" "$@"
-
-
 	@echo 'End of make'
 
+###########################################################################
+
 clean:
-	@echo 'Cleaning the .o, .d, .elf and .srec files...'
-	-$(RM) ./commonlib/src/*.o commonlib/src/*.d ./host/src/*.o ./host/src/*.d ./device/src/*.o ./device/src/*.d libcommonlib.a *.elf *.srec
+	@echo 'Cleaning the .o, .d, and .elf ...'
+	-$(RM) ./commonlib/src/*.o commonlib/src/*.d ./host/src/*.o ./host/src/*.d ./device/src/*.o ./device/src/*.d libcommonlib.a *.elf
 	@echo 'End of clean'
 
 

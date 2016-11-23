@@ -192,11 +192,11 @@ int main(int argc, char *argv[])
 
         fprintf(fo,"\nHere are the definitions:\nsuccessfull: %d\nfailed: %d\n\n", E_OK, E_ERR);
 
-	result = e_load("rowSort.srec", pEpiphany, 0, 0, e_false);
+	result = e_load("rowSort.elf", pEpiphany, 0, 0, E_FALSE);
 	fprintf(fo,"rowsort load result: %d\n", result);
 	//e_start(pEpiphany, 0, 0);	
 
-	result = e_load("scale.srec", pEpiphany, 0, 1, e_false);
+	result = e_load("scale.elf", pEpiphany, 0, 1, E_FALSE);
 	fprintf(fo,"scaleRow load result: %d\n", result);
 
 	/* 
@@ -208,43 +208,43 @@ int main(int argc, char *argv[])
 	*/
 
 #ifdef FULL
-        result = e_load("reTrans.srec", pEpiphany, 3, 2, e_false);
+        result = e_load("reTrans.elf", pEpiphany, 3, 2, E_FALSE);
         fprintf(fo,"reTrans load result: %d\n", result);
 
-	result = e_load("shift.srec", pEpiphany, 3, 3, e_false);
+	result = e_load("shift.elf", pEpiphany, 3, 3, E_FALSE);
         fprintf(fo,"shift load result: %d\n", result);
 
-        result = e_load("clip.srec", pEpiphany, 3, 1, e_false);
+        result = e_load("clip.elf", pEpiphany, 3, 1, E_FALSE);
         fprintf(fo,"clip load result: %d\n", result);
  
-	result = e_load("finalCol.srec", pEpiphany, 2, 3, e_false);
+	result = e_load("finalCol.elf", pEpiphany, 2, 3, E_FALSE);
         fprintf(fo,"finalCol load result: %d\n", result);
 
-	result = e_load("combineRow.srec", pEpiphany, 0, 2, e_false);
+	result = e_load("combineRow.elf", pEpiphany, 0, 2, E_FALSE);
 	fprintf(fo,"combineRow load result: %d\n", result);
 
-	result = e_load("shuffleFlyRow.srec", pEpiphany, 0, 3, e_false);
+	result = e_load("shuffleFlyRow.elf", pEpiphany, 0, 3, E_FALSE);
 	fprintf(fo,"shuffleFlyRow load result: %d\n", result);
 
-	result = e_load("shuffleRow.srec", pEpiphany, 1, 3, e_false);
+	result = e_load("shuffleRow.elf", pEpiphany, 1, 3, E_FALSE);
 	fprintf(fo,"shuffleRow load result: %d\n", result);
 
-	result = e_load("finalRow.srec", pEpiphany, 1, 2, e_false);
+	result = e_load("finalRow.elf", pEpiphany, 1, 2, E_FALSE);
 	fprintf(fo,"finalRow load result: %d\n", result);
 
-	result = e_load("transpose.srec", pEpiphany, 1, 1, e_false);
+	result = e_load("transpose.elf", pEpiphany, 1, 1, E_FALSE);
 	fprintf(fo,"transpose load result: %d\n", result);
 
-	result = e_load("scaleCol.srec", pEpiphany, 1, 0, e_false);
+	result = e_load("scaleCol.elf", pEpiphany, 1, 0, E_FALSE);
 	fprintf(fo,"scaleCol load result: %d\n", result);
 
-	result = e_load("combineCol.srec", pEpiphany, 2, 0, e_false);
+	result = e_load("combineCol.elf", pEpiphany, 2, 0, E_FALSE);
 	fprintf(fo,"combineCol load result: %d\n", result);
 
-	result = e_load("shuffleFlyCol.srec", pEpiphany, 2, 1, e_false);
+	result = e_load("shuffleFlyCol.elf", pEpiphany, 2, 1, E_FALSE);
 	fprintf(fo,"shuffleFlyCol load result: %d\n", result);
 
-        result = e_load("shuffleCol.srec", pEpiphany, 2, 2, e_false);
+        result = e_load("shuffleCol.elf", pEpiphany, 2, 2, E_FALSE);
         fprintf(fo,"shuffleCol load result: %d\n", result);
 
 #endif

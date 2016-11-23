@@ -31,7 +31,7 @@ void init();
 void main()
 {
   // Configure the timers
- e_ctimer_set(E_CTIMER_0, E_CTIMER_CLK, E_CTIMER_MAX); 
+ e_ctimer_set(E_CTIMER_0, E_CTIMER_MAX); 
 
  // Start the timer (countdown from 0xFFFFFFFF)
  e_ctimer_start(E_CTIMER_0, E_CTIMER_CLK);
@@ -57,7 +57,7 @@ timerValue = e_ctimer_get(E_CTIMER_0);
 Mailbox.pTimer0[me.corenum] = E_CTIMER_MAX - timerValue;
 e_ctimer_stop(E_CTIMER_0);
 
-e_ctimer_set(E_CTIMER_1, E_CTIMER_CLK, E_CTIMER_MAX); 
+e_ctimer_set(E_CTIMER_1, E_CTIMER_MAX); 
 e_ctimer_start(E_CTIMER_1, E_CTIMER_CLK);
 	while(i < IN_BUFFER_SIZE)
 	{
@@ -116,14 +116,14 @@ e_ctimer_stop(E_CTIMER_1);
 	
 void init()
 {
+    unsigned next_row, next_col;
 	// Init core enumerations
 	me.coreID  = e_get_coreid();
 	e_coords_from_coreid(me.coreID, &me.row, &me.col);
-	me.row     = me.row - E_FIRST_CORE_ROW;
-	me.col     = me.col - E_FIRST_CORE_COL;
-	me.corenum = me.row * E_COLS_IN_CHIP + me.col;
-	me.coreIDn = me.coreID;
-	e_neighbor_id((e_coreid_t *) &me.coreIDn, E_NEXT_CORE, E_CHIP_WRAP);
+    me.corenum = me.row * e_group_config.group_cols + me.col;
+	//e_neighbor_id(E_NEXT_CORE, E_GROUP_WRAP, &next_row, &next_col);
+	//me.coreIDn = next_row * e_group_config.group_cols + next_col;
+	////e_neighbor_id(E_NEXT_CORE, E_GROUP_WRAP, (e_coreid_t *) &me.coreIDn);
 
 	// Initialize the mailbox shared buffer pointers
 	Mailbox.pBase = (void *) MAILBOX_ADDRESS;//(void*) SHARED_DRAM;
