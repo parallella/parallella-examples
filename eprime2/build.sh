@@ -23,6 +23,9 @@ case $(uname -p) in
 		;;
 esac
 
+# Create output dir
+mkdir -p bin
+
 # Build HOST side application
 ${CROSS_PREFIX}gcc src/prime.c -o bin/prime.elf -I ${EINCS} -L ${ELIBS} -le-hal -le-loader
 
