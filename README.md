@@ -4,26 +4,27 @@ Community created example Parallella projects.
 NAME                             | CONTENT                                          | Builds | Works |
 ---------------------------------|--------------------------------------------------|--------|-------|
 [actors_dct2d](actors_dct2d)     | Actor based 2D DCT                               | YES | YES? |
-[aobench](aobench)               | Ambient occlusion renderer                       | ?   | NO |
-[blobluska](blobluska)           | Real-time ray tracing visual music generator     | ?   | ?  |
-[dac-wavegen](dac-wavegen)       | Sine/sawtooth waveform generator using I2C DAC   | ?   | ?  |
-[digital-pot](digital-pot)       | LED fader using 8-bit digital potentiometer      | ?   | ?  |
+[aobench](aobench)               | Ambient occlusion renderer                       | YES | NO 1 |
+[blobluska](blobluska)           | Real-time ray tracing visual music generator     | YES | NO 1 |
+[dac-wavegen](dac-wavegen)       | Sine/sawtooth waveform generator using I2C DAC   | YES | MAYBE 2 |
+[digital-pot](digital-pot)       | LED fader using 8-bit digital potentiometer      | YES | MAYBE 2 |
 [ebsp-hello](ebsp-hello)         | "Hello world!" example using Epiphany BSP        | YES | YES |
 [epython](epython)               | Write Python code to run on the Epiphany         | YES | YES |
-[mpi-fft2d](mpi-fft2d)           | Threaded MPI to implement a 2D FFT for Epiphany  | ?   | ?  |
+[mpi-fft2d](mpi-fft2d)           | Threaded MPI to implement a 2D FFT for Epiphany  | NO 3 | NO 3 |
 [eprime](eprime)                 | Testing for prime numbers using Epiphany         | YES | YES |
-[fft-xcorr](fft-xcorr)           | 2D image correlator demo                         | ?   | ?  |
+[eprime2](eprime2)               | Testing for prime numbers using Epiphany         | YES | YES |
+[fft-xcorr](fft-xcorr)           | 2D image correlator demo                         | NO 3  | NO 3 |
 [game-of-life](game-of-life)     | Conway's game of life, each eCore is a cell      | YES | YES |
-[heat_stencil](heat_stencil)     | 5-point star shaped heat equation stencil        | ?   | ?  |
+[heat_stencil](heat_stencil)     | 5-point star shaped heat equation stencil        | YES | YES |
 [john](john)                     | JohnTheRipper password cracker for Parallella    | YES | YES |
 [kinect_test](kinect_test)       | Kinect demo that uses Epiphany                   | ?   | ?  |
 [lena](lena)                     | 2D FFT based filter running on Epiphany          | YES | YES |
 [mandelbrot](mandelbrot)         | Real time Mandelbrot zoomer                      | YES | NO |
-[assembly-opt](assembly-opt)     | Assembly optimized matrix multiplication         | YES | NO |
-[mini-nbody](mini-nbody)         | Nbody simulation                                 | ?   | ?  |
+[assembly-opt](assembly-opt)     | Assembly optimized matrix multiplication         | YES | NO 4 |
+[mini-nbody](mini-nbody)         | Nbody simulation                                 | NO 3 | NO 3  |
 [motion-cap](motion-cap)         | Motion capture camera project for Parallella     | ?   | ?  |
-[nbody_mpi](nbody_mpi)           | Nbody example using the Epiphany MPI             | ?   | ?  |
-[omp4-epiphany](omp4-epiphany)   | OpenMP4.x examples where Epiphany is a device    | YES | YES |
+[nbody_mpi](nbody_mpi)           | Nbody example using the Epiphany MPI             | NO 3  | NO 3 |
+[omp4-epiphany](omp4-epiphany)   | OpenMP4.x examples where Epiphany is a device    | YES | YES 5|
 [para-para](para-para)           | "hello world" apps in OpenMP, MPI and OpenCL     | YES | YES |
 [paralle2](paralle2)             | Pseudo Eternity II solver                        | YES | NO |
 [pi-machin-like](pi-machin-like) | Approximation of π using machin-like formula     | YES | YES |
@@ -34,6 +35,13 @@ NAME                             | CONTENT                                      
 [sobel](sobel)                   | Sobel filter example                             | ?   | ?  |
 [vfft](vfft)                     | Very fast FFT for the Epiphany core              | YES | YES |
 [raymarch](raymarch)             | Raymarching OpenCL framework with examples       | YES | YES |
+
+Footnotes:
+1: Need OH RX elink MMU remapping (or intermediate host buffer as workaround)
+2: Requires special hardware
+3: Requires COPRTHR MPI library compatible with ESDK 2016.3+
+4: Requires Epiphany-IV
+5: Except mandelbrot_omp
 
 ## Contributing
 
