@@ -36,12 +36,12 @@ NAME                             | CONTENT                                      
 [vfft](vfft)                     | Very fast FFT for the Epiphany core              | YES | YES |
 [raymarch](raymarch)             | Raymarching OpenCL framework with examples       | YES | YES |
 
-Footnotes:
-1: Need OH RX elink MMU remapping (or intermediate host buffer as workaround)
-2: Requires special hardware
-3: Requires COPRTHR MPI library compatible with ESDK 2016.3+
-4: Requires Epiphany-IV
-5: Except mandelbrot_omp
+Footnotes:  
+1: Need OH RX elink MMU remapping (or intermediate host buffer as workaround)  
+2: Requires special hardware  
+3: Requires COPRTHR MPI library compatible with ESDK 2016.3+  
+4: Requires Epiphany-IV  
+5: Except mandelbrot_omp  
 
 ## Contributing
 
