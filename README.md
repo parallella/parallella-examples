@@ -1,43 +1,39 @@
 Community created example Parallella projects.
 ===================================================
 
-NAME                             | CONTENT                         |
--------------------------------- |-------------------------------- |
-[actors_dct2d](actors_dct2d)     | Actor based 2D DCT
-[aobench](aobench)               | Ambient occlusion renderer
-[blobluska](blobluska)           | Real-time ray tracing visual music generator
-[dac-wavegen](dac-wavegen)       | Sine/sawtooth waveform generator using I2C DAC
-[digital-pot](digital-pot)       | LED fader using 8-bit digital potentiometer
-[aobench](aobench)               | Ambient occlusion renderer
-[blobuska](blobuska)             | Real-time ray tracing visual music generator
-[dac-wavegen](dac-wavegen)       | Sine and sawtooth waveform generator using DAC
-[digital-pot](digital-pot)       | Fading an LED using 8-bit digital POT
-[ebsp-hello](ebsp-hello)         | "Hello world!" example using Epiphany BSP
-[epython](epython)               | Write Python code to run on the Epiphany
-[mpi-fft2d](mpi-fft2d)           | Threaded MPI to implement a 2D FFT for Epiphany
-[eprime](eprime)                 | Testing for prime numbers using Epiphany
-[fft-xcorr](fft-xcorr)           | 2D image correlator demo
-[game-of-life](game-of-life)     | Conway's game of life, each eCore is a cell
-[heat_stencil](heat_stencil)     | 5-point star shaped heat equation stencil
-[john](john)                     | JohnTheRipper password cracker for Parallella
-[kinect_test](kinect_test)       | Kinect demo that uses Epiphany
-[lena](lena)                     | 2D FFT based filter running on Epiphany
-[mandelbrot](mandelbrot)         | Real time Mandelbrot zoomer
-[assembly-opt](assembly-opt)     | Assembly optimized matrix multiplication
-[mini-nbody](mini-nbody)         | Nbody simulation
-[motion-cap](motion-cap)         | Motion capture camera project for Parallella
-[nbody_mpi](nbody_mpi)           | Nbody example using the Epiphany MPI
-[omp4-epiphany](omp4-epiphany)   | OpenMP4.x examples where Epiphany is a device
-[para-para](para-para)           | "hello world" apps in OpenMP, MPI and OpenCL
-[paralle2](paralle2)             | Pseudo Eternity II solver
-[pi-machin-like](pi-machin-like) | Approximation of π using machin-like formula
-[riecoin](riecoin)               | Riecoin miner
-[r-opencl](r-opencl)             | R with OpenCL running on Parallella
-[rpi-camera](rpi-camera)         | Raspberry pi camera module bounty project
-[slides](slides)                 | Creating slide decks from Markdown
-[sobel](sobel)                   | Sobel filter example
-[vfft](vfft)                     | Very fast FFT for the Epiphany core
-[raymarch](raymarch)             | Raymarching OpenCL framework with examples
+NAME                             | CONTENT                                          | Builds | Works
+-------------------------------- |--------------------------------                  | - | -  |
+[actors_dct2d](actors_dct2d)     | Actor based 2D DCT                               | YES | YES? |
+[aobench](aobench)               | Ambient occlusion renderer                       | ?   | NO   |
+[blobluska](blobluska)           | Real-time ray tracing visual music generator     | ?   | ?    |
+[dac-wavegen](dac-wavegen)       | Sine/sawtooth waveform generator using I2C DAC   | ?   | ?    |
+[digital-pot](digital-pot)       | LED fader using 8-bit digital potentiometer      | ?   | ?    |
+[ebsp-hello](ebsp-hello)         | "Hello world!" example using Epiphany BSP        | YES | YES  |
+[epython](epython)               | Write Python code to run on the Epiphany         | YES | YES  |
+[mpi-fft2d](mpi-fft2d)           | Threaded MPI to implement a 2D FFT for Epiphany  | ?   | ?    |
+[eprime](eprime)                 | Testing for prime numbers using Epiphany         | YES | YES  |
+[fft-xcorr](fft-xcorr)           | 2D image correlator demo                         | ?   | ?    |
+[game-of-life](game-of-life)     | Conway's game of life, each eCore is a cell      | YES | YES  |
+[heat_stencil](heat_stencil)     | 5-point star shaped heat equation stencil        | ?   | ?    |
+[john](john)                     | JohnTheRipper password cracker for Parallella    | YES | YES  |
+[kinect_test](kinect_test)       | Kinect demo that uses Epiphany                   | ?   | ?    |
+[lena](lena)                     | 2D FFT based filter running on Epiphany          | YES | YES  |
+[mandelbrot](mandelbrot)         | Real time Mandelbrot zoomer                      | YES | NO   |
+[assembly-opt](assembly-opt)     | Assembly optimized matrix multiplication         | YES | NO   |
+[mini-nbody](mini-nbody)         | Nbody simulation                                 | ?   | ?    |
+[motion-cap](motion-cap)         | Motion capture camera project for Parallella     | ?   | ?    |
+[nbody_mpi](nbody_mpi)           | Nbody example using the Epiphany MPI             | ?   | ?    |
+[omp4-epiphany](omp4-epiphany)   | OpenMP4.x examples where Epiphany is a device    | YES | YES  |
+[para-para](para-para)           | "hello world" apps in OpenMP, MPI and OpenCL     | YES | YES  |
+[paralle2](paralle2)             | Pseudo Eternity II solver                        | YES | NO   |
+[pi-machin-like](pi-machin-like) | Approximation of π using machin-like formula     | YES | YES  |
+[riecoin](riecoin)               | Riecoin miner                                    | YES | NO?  |
+[r-opencl](r-opencl)             | R with OpenCL running on Parallella              | ?   | ?    |
+[rpi-camera](rpi-camera)         | Raspberry pi camera module bounty project        | ?   | ?    |
+[slides](slides)                 | Creating slide decks from Markdown               | N/A | N/A  |
+[sobel](sobel)                   | Sobel filter example                             | ?   | ?    |
+[vfft](vfft)                     | Very fast FFT for the Epiphany core              | YES | YES  |
+[raymarch](raymarch)             | Raymarching OpenCL framework with examples       | YES | YES  |
 
 ## Contributing
 
