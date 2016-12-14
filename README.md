@@ -4,7 +4,7 @@ Community created example Parallella projects.
 NAME                             | CONTENT                                          | Builds | Works |
 ---------------------------------|--------------------------------------------------|--------|-------|
 [actors_dct2d](actors_dct2d)     | Actor based 2D DCT                               | YES | YES? |
-[aobench](aobench)               | Ambient occlusion renderer                       | YES | NO 1 |
+[aobench](aobench)               | Ambient occlusion renderer                       | YES | YES |
 [blobluska](blobluska)           | Real-time ray tracing visual music generator     | YES | NO 1 |
 [dac-wavegen](dac-wavegen)       | Sine/sawtooth waveform generator using I2C DAC   | YES | MAYBE 2 |
 [digital-pot](digital-pot)       | LED fader using 8-bit digital potentiometer      | YES | MAYBE 2 |

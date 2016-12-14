@@ -2,15 +2,13 @@
 #include "shared_data.h"
 #include "fastmath.h"
 
-#define BUF_ADDRESS 0x8f000000
+#define BUF_ADDRESS 0x8e000000
+#define FRAME_ADDRESS (BUF_ADDRESS + sizeof(msg_block_t))
 #define PAGE_OFFSET 0x2000
 #define PAGE_SIZE 0x2000
 #define ROWS 4
 #define COLS 4
-#define BPP 4
 
-#define WIDTH 256
-#define HEIGHT 256
 #define NSUBSAMPLES 1
 #define NAO_SAMPLES 4
 
@@ -361,10 +359,20 @@ int main(void) {
   unsigned int frame = 1;
   unsigned int page = 0;
   volatile msg_block_t *msg = (msg_block_t *)BUF_ADDRESS;
+  fbinfo_t fbinfo;
   unsigned int w = WIDTH;
   unsigned int h = HEIGHT;
+#ifdef FB_DIRECT_COPY
   unsigned int xoff = 0;
-  unsigned int yoff = 32;
+  unsigned int yoff = 0;
+
+  /* Cache local copy of fbinfo */
+  e_dma_copy(&fbinfo, (void *) &msg->fbinfo, sizeof(fbinfo));
+
+  /* Paint in lower right corner */
+  xoff = fbinfo.xres - w - 32;
+  yoff = fbinfo.yres - h - 32;
+#endif
 
   setseed(wang_hash(cores));
 
@@ -432,10 +440,17 @@ int main(void) {
         *(unsigned int *)(PAGE_OFFSET + page *PAGE_SIZE + x *BPP) = rgba;
       }
 
-      // send scanline
-      e_dma_copy((char *)(msg->fbinfo.smem_start + xoff * BPP +
-                          (y + core + yoff) * msg->fbinfo.line_length),
+#ifdef FB_DIRECT_COPY
+      // send scanline directly to framebuffer
+      e_dma_copy((char *)(fbinfo.smem_start + xoff * BPP +
+                          (y + core + yoff) * fbinfo.line_length),
                  (char *)(PAGE_OFFSET + page * PAGE_SIZE), w * BPP);
+#else
+      // send line to intermediate host buffer
+      e_dma_copy((char *)(FRAME_ADDRESS + (y + core) * w * BPP),
+                 (char *)(PAGE_OFFSET + page * PAGE_SIZE), w * BPP);
+#endif
+
       page = page ^ 1;
     }
   }

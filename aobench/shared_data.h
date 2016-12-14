@@ -33,6 +33,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define CORES 16
 #define CACHELINE 32
 
+#define BPP 4
+#define WIDTH 256
+#define HEIGHT 256
+
 typedef struct __attribute__((aligned(CACHELINE)))
 {
   uint32_t value;

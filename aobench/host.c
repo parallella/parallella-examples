@@ -41,7 +41,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <e-hal.h>
 #include "shared_data.h"
 
-#define BUF_OFFSET 0x01000000
+#define BUF_OFFSET 0x00000000
 #define MAXCORES 16
 #define FBDEV "/dev/fb0"
 #define ROWS 4
@@ -51,46 +51,82 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 int main(int argc, char *argv[]) {
   e_platform_t eplat;
   e_epiphany_t edev;
-  e_mem_t emem;
+  e_mem_t emem, eframe;
   static msg_block_t msg;
   memset(&msg, 0, sizeof(msg));
   struct timespec time;
   double time0, time1;
+  uint8_t *fbptr;
+  const unsigned w = WIDTH;
+  const unsigned h = HEIGHT;
+  const unsigned framesize = WIDTH * HEIGHT * BPP;
+  unsigned xoffs, yoffs;
 
-  int fb = open(FBDEV, O_RDWR);
-  if (fb > 0) {
-    struct fb_fix_screeninfo fbfsi;
-    struct fb_var_screeninfo fbvsi;
-    if (ioctl(fb, FBIOGET_FSCREENINFO, &fbfsi) == 0) {
-      msg.fbinfo.smem_start = fbfsi.smem_start;
-      printf("smem_start: %x\n", msg.fbinfo.smem_start);
-      msg.fbinfo.smem_len = fbfsi.smem_len;
-      printf("smem_len: %d\n", msg.fbinfo.smem_len);
-      msg.fbinfo.line_length = fbfsi.line_length;
-      printf("line_length: %d\n", msg.fbinfo.line_length);
-    }
-    if (ioctl(fb, FBIOGET_VSCREENINFO, &fbvsi) == 0) {
-      msg.fbinfo.xres = fbvsi.xres;
-      printf("xres: %d\n", msg.fbinfo.xres);
-      msg.fbinfo.yres = fbvsi.yres;
-      printf("yres: %d\n", msg.fbinfo.yres);
-      msg.fbinfo.xres_virtual = fbvsi.xres_virtual;
-      printf("xres_virtual: %d\n", msg.fbinfo.xres_virtual);
-      msg.fbinfo.yres_virtual = fbvsi.yres_virtual;
-      printf("yres_virtual: %d\n", msg.fbinfo.yres_virtual);
-      msg.fbinfo.xoffset = fbvsi.xoffset;
-      printf("xoffset: %d\n", msg.fbinfo.xoffset);
-      msg.fbinfo.yoffset = fbvsi.yoffset;
-      printf("yoffset: %d\n", msg.fbinfo.yoffset);
-      msg.fbinfo.bits_per_pixel = fbvsi.bits_per_pixel;
-    }
-    close(fb);
+  struct fb_fix_screeninfo fbfsi;
+  struct fb_var_screeninfo fbvsi;
+  int fbfd = open(FBDEV, O_RDWR);
+  if (fbfd < 0) {
+    perror("open");
+    fprintf(stderr, "Do you have write access to " FBDEV "?\n");
+    exit(EXIT_FAILURE);
   }
+
+  if (ioctl(fbfd, FBIOGET_FSCREENINFO, &fbfsi) == 0) {
+    msg.fbinfo.smem_start = fbfsi.smem_start;
+    printf("smem_start: %#x\n", msg.fbinfo.smem_start);
+    msg.fbinfo.smem_len = fbfsi.smem_len;
+    printf("smem_len: %d\n", msg.fbinfo.smem_len);
+    msg.fbinfo.line_length = fbfsi.line_length;
+    printf("line_length: %d\n", msg.fbinfo.line_length);
+  } else {
+    perror("ioctl(FBIOGET_FSCREENINFO)");
+    exit(EXIT_FAILURE);
+  }
+  if (ioctl(fbfd, FBIOGET_VSCREENINFO, &fbvsi) == 0) {
+    msg.fbinfo.xres = fbvsi.xres;
+    printf("xres: %d\n", msg.fbinfo.xres);
+    msg.fbinfo.yres = fbvsi.yres;
+    printf("yres: %d\n", msg.fbinfo.yres);
+    msg.fbinfo.xres_virtual = fbvsi.xres_virtual;
+    printf("xres_virtual: %d\n", msg.fbinfo.xres_virtual);
+    msg.fbinfo.yres_virtual = fbvsi.yres_virtual;
+    printf("yres_virtual: %d\n", msg.fbinfo.yres_virtual);
+    msg.fbinfo.xoffset = fbvsi.xoffset;
+    printf("xoffset: %d\n", msg.fbinfo.xoffset);
+    msg.fbinfo.yoffset = fbvsi.yoffset;
+    printf("yoffset: %d\n", msg.fbinfo.yoffset);
+    msg.fbinfo.bits_per_pixel = fbvsi.bits_per_pixel;
+  } else {
+    perror("ioctl(FBIOGET_VSCREENINFO)");
+    exit(EXIT_FAILURE);
+  }
+#ifndef FB_DIRECT_COPY
+  fbptr = mmap(NULL, fbfsi.smem_len, PROT_READ | PROT_WRITE,
+               MAP_SHARED, fbfd, 0);
+  if (fbptr == MAP_FAILED) {
+    perror("mmap");
+    exit(EXIT_FAILURE);
+  }
+#endif
+
+#ifndef FB_DIRECT_COPY
+  /* Paint in lower right corner */
+  xoffs = (fbvsi.xres - w - 32);
+  yoffs = (fbvsi.yres - h - 32);
+
+  printf("xoffs: %d\n", xoffs);
+  printf("yoffs: %d\n", yoffs);
+
+  // /* Clear screen */
+  // memset(fbptr, 0, fbfsi.smem_len);
+#endif
+
 
   e_init(NULL);
   e_reset_system();
   e_get_platform_info(&eplat);
   e_alloc(&emem, BUF_OFFSET, sizeof(msg_block_t));
+  e_alloc(&eframe, sizeof(msg_block_t), framesize);
   unsigned int row = 0;
   unsigned int col = 0;
   volatile unsigned int vepiphany[MAXCORES];
@@ -133,6 +169,20 @@ int main(int argc, char *argv[]) {
         // (vcoreid & 0x3f));
       }
     }
+
+#ifndef FB_DIRECT_COPY
+    size_t fboffs = yoffs * fbfsi.line_length
+                  + xoffs * fbvsi.bits_per_pixel / 8;
+    size_t frameoffs = 0;
+    int y;
+    for (y = 0; y < h; y++) {
+      e_read(&eframe, 0, 0, frameoffs, fbptr + fboffs, w * BPP);
+
+      fboffs += fbfsi.line_length;
+      frameoffs += w * BPP;
+    }
+#endif
+
     frame++;
     printf(".");
     fflush(stdout);
