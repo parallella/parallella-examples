@@ -19,7 +19,5 @@ $MPIRUN -np 4 --host $HOST ./hello-mpi.elf
 echo -------------------------
 echo Running OpenCL Example
 echo -------------------------
-sudo -s <<EOF
 ./hello-opencl.elf
-EOF
 
