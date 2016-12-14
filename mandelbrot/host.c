@@ -110,9 +110,10 @@ int main(int argc, char *argv[])
   volatile unsigned int vcoreid = 0;
   unsigned int vhost[MAXCORES];
   e_open(&edev, 0, 0, ROWS, COLS);
-  e_write(&emem, 0, 0, 0, &msg, sizeof(msg));
   e_reset_group(&edev);
-  e_load_group("epiphany.srec", &edev, 0, 0, ROWS, COLS, E_TRUE);
+  e_load_group("epiphany.elf", &edev, 0, 0, E_FALSE);
+  e_write(&emem, 0, 0, 0, &msg, sizeof(msg));
+  e_start_group(&edev);
   for (row = 0; row < ROWS; row++)
   {
     for (col = 0; col < COLS; col++)
