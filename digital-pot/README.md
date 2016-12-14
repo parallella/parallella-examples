@@ -41,7 +41,7 @@ Instead, please use my updated version, which can be found [here](https://github
 Compiling Code (assuming ProgramName.cpp is in the same directory as the  
 parallella-utils you downlaoded earlier)
 ```bash
-$ gcc -o [OutputName] [ProgramName].cpp para_spi.cpp para_gpio.cpp para_gpio.c -lstdc++ -Wall
+$ ./build.sh
 ```
 
 ##Usage
