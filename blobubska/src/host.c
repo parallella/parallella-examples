@@ -39,6 +39,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <stdint.h>
 #include <time.h>
 #include <e-hal.h>
+#include <e-loader.h>
 #include <fluidsynth.h>
 #include <linux/input.h>
 #include "common.h"
@@ -188,15 +189,16 @@ int init_epiphany(ep_context_t *e, msg_block_t *msg, rt_context_t *rtx)
   e_init(NULL);
   e_reset_system();
   e_get_platform_info(&e->eplat);
-  e_alloc(&e->emem, BUF_OFFSET, sizeof(msg_block_t) + sizeof(rt_context_t));
-  e_write(&e->emem, 0, 0, 0, (void *)msg, sizeof(msg_block_t));
-  e_write(&e->emem, 0, 0, sizeof(msg_block_t), (void *)rtx, sizeof(rt_context_t));
   e_open(&e->edev, 0, 0, ROWS, COLS);
-  if (e_load_group("epiphany.srec", &e->edev, 0, 0, ROWS, COLS, E_TRUE) == E_ERR)
+  e_alloc(&e->emem, BUF_OFFSET, sizeof(msg_block_t) + sizeof(rt_context_t));
+  if (e_load_group("epiphany.elf", &e->edev, 0, 0, ROWS, COLS, E_FALSE) == E_ERR)
   {
     perror("e_load failed");
     return FALSE;
   }
+  e_write(&e->emem, 0, 0, 0, (void *)msg, sizeof(msg_block_t));
+  e_write(&e->emem, 0, 0, sizeof(msg_block_t), (void *)rtx, sizeof(rt_context_t));
+  e_start_group(&e->edev);
   return TRUE;
 }
 
