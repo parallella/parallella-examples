@@ -756,7 +756,7 @@ my_fermat_test (const mp_srcptr msp, mp_size_t mn)
   return rp[0] == 1;
 }
 
-void null_isr(int);
+void null_isr();
 
 int main()
 {
@@ -829,7 +829,7 @@ int main()
   return 0;
 }
 
-void __attribute__((interrupt)) null_isr(int x)
+void __attribute__((interrupt)) null_isr()
 {
   wait_flag = 0;
   return;

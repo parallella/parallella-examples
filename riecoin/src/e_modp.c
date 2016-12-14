@@ -372,7 +372,7 @@ static unsigned mulmod(mp_limb_t a, mp_limb_t b, struct gmp_div_inverse* inv)
   return r >> inv->shift;
 }
 
-void null_isr(int);
+void null_isr();
 
 static void doshift(mp_ptr nshifted, mp_size_t* nshiftedn, 
                     mp_ptr qshifted, mp_size_t* qshiftedn, unsigned shift)
@@ -553,7 +553,7 @@ int main()
   return 0;
 }
 
-void __attribute__((interrupt)) null_isr(int x) 
+void __attribute__((interrupt)) null_isr() 
 { 
   wait_flag = 0;
   return;
