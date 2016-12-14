@@ -8,10 +8,10 @@
 #define PRINT                   
 
 // Uncomment for Epiphany-IV
-#define CONFIG_60_60_64
+//#define CONFIG_60_60_64
 
 // Uncomment for Epiphany-III
-//#define CONFIG_60_60_16
+#define CONFIG_60_60_16
 
 #define CLOCK 600
 
