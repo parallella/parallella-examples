@@ -18,6 +18,12 @@
  * You should have received a copy of the GNU General Public License
  */
 
+/* ANSI concatenation macros.  */
+#define CONCAT1(a, b) CONCAT2(a, b)
+#define CONCAT2(a, b) a ## b
+/* Use the right prefix for global labels.  */
+#define SYM(x) CONCAT1 (__USER_LABEL_PREFIX__, x)
+
 /* Macro for easy hw loop setup */
 .macro hwloop start, end, tmp_reg
 	mov	\tmp_reg, %low(\start)
@@ -44,8 +50,8 @@
 	/* First stage                                                       */
 	/* ----------------------------------------------------------------- */
 
-	.global _fft_1d_r2_dit_asm_first_stage
-_fft_1d_r2_dit_asm_first_stage:
+	.global SYM(fft_1d_r2_dit_asm_first_stage)
+SYM(fft_1d_r2_dit_asm_first_stage):
 
 	// Register assignement
 	// r0  = buf
@@ -172,8 +178,8 @@ _fft_1d_r2_dit_asm_first_stage:
 	/* Middle stages                                                     */
 	/* ----------------------------------------------------------------- */
 
-	.global _fft_1d_r2_dit_asm_mid_stages
-_fft_1d_r2_dit_asm_mid_stages:
+	.global SYM(fft_1d_r2_dit_asm_mid_stages)
+SYM(fft_1d_r2_dit_asm_mid_stages):
 
 	// Register assignement
 	// r0 = buf
@@ -416,8 +422,8 @@ mid_inner_end:
 	/* Last stage                                                        */
 	/* ----------------------------------------------------------------- */
 
-	.global _fft_1d_r2_dit_asm_last_stage
-_fft_1d_r2_dit_asm_last_stage:
+	.global SYM(fft_1d_r2_dit_asm_last_stage)
+SYM(fft_1d_r2_dit_asm_last_stage):
 
 	// Last stage
 	// ----------
@@ -624,10 +630,10 @@ _fft_1d_r2_dit_asm_last_stage:
 	/* Complete FFT                                                      */
 	/* ----------------------------------------------------------------- */
 
-	.global _fft_1d_r2_dit_asm
-_fft_1d_r2_dit_asm:
+	.global SYM(fft_1d_r2_dit_asm)
+SYM(fft_1d_r2_dit_asm):
 	mov	r12, lr
-	bl	_fft_1d_r2_dit_asm_first_stage
-	bl	_fft_1d_r2_dit_asm_mid_stages
-	bl	_fft_1d_r2_dit_asm_last_stage
+	bl	SYM(fft_1d_r2_dit_asm_first_stage)
+	bl	SYM(fft_1d_r2_dit_asm_mid_stages)
+	bl	SYM(fft_1d_r2_dit_asm_last_stage)
 	jr	r12

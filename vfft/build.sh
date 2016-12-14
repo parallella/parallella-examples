@@ -32,5 +32,5 @@ ${CROSS_PREFIX}gcc src/fft.c -o bin/fft.elf ${EINCS} ${ELIBS} -le-hal -le-loader
 # Build DEVICE side program
 e-gcc -O3 -T ${ELDF} src/e_fft_asm.S src/e_fft_buf.S src/e_fft.c -o bin/e_fft.elf -le-lib -lm -std=c99 -ffast-math
 
-# Convert ebinary to SREC file
-e-objcopy --srec-forceS3 --output-target srec bin/e_fft.elf bin/e_fft.srec
+## Convert ebinary to SREC file
+#e-objcopy --srec-forceS3 --output-target srec bin/e_fft.elf bin/e_fft.srec

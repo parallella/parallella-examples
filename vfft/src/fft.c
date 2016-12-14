@@ -165,7 +165,7 @@ epiphany_init(struct epiphany_state *state, const int logN)
 	e_write(&state->dev, 0, 0, CMD, &cmd, sizeof(uint32_t));
 
 	/* Load software */
-	e_load_group("bin/e_fft.srec", &state->dev, 0, 0, 1, 1, E_TRUE);
+	e_load_group("bin/e_fft.elf", &state->dev, 0, 0, 1, 1, E_TRUE);
 
 	/* Load the input data and twiddle factors */
 	srandom(0);

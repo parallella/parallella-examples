@@ -18,20 +18,27 @@
  * You should have received a copy of the GNU General Public License
  */
 
+/* ANSI concatenation macros.  */
+#define CONCAT1(a, b) CONCAT2(a, b)
+#define CONCAT2(a, b) a ## b
+/* Use the right prefix for global labels.  */
+#define SYM(x) CONCAT1 (__USER_LABEL_PREFIX__, x)
+
+
 /* Define the static arrays */
 
 	/* Shared API struct: lower half of bank 1 */
-	.global _api
-	.equ _api, 0x2000
+	.global SYM(api)
+	.equ SYM(api), 0x2000
 
 	/* Twiddle factors: upper half of bank 1 */
-	.global _twiddle
-	.equ _twiddle, 0x3000
+	.global SYM(twiddle)
+	.equ SYM(twiddle), 0x3000
 
 	/* Data0 buffer: all of bank 2 */
-	.global _data0
-	.equ _data0, 0x4000
+	.global SYM(data0)
+	.equ SYM(data0), 0x4000
 
 	/* Data1 buffer: all of bank 3 */
-	.global _data1
-	.equ _data1, 0x6000
+	.global SYM(data1)
+	.equ SYM(data1), 0x6000
