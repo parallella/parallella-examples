@@ -3,7 +3,19 @@
 This example shows how to run a simple "hello world" application on the
 Parallella using three popular frameworks: OpenMP, MPI, OpenCL
 
+
+## Building
+
+
+``$ make``
+
+## Usage
+
+``$ ./run.sh``
+
 ## Pre-requisites
+
+NOTE: This applies only to Parabuntu releases older than 2015.11.  
 
 System requirements:
 
@@ -71,15 +83,6 @@ cd openmpi-1.8.1
 make all
 sudo make install
 ```
-
-## Building
-
-
-``$ make``
-
-## Usage
-
-``$ ./run.sh``
 
 ## License
 
