@@ -15,6 +15,7 @@ NAME                             | CONTENT                                      
 [eprime2](eprime2)               | Testing for prime numbers using Epiphany         | YES | YES |
 [fft-xcorr](fft-xcorr)           | 2D image correlator demo                         | NO 3  | NO 3 |
 [game-of-life](game-of-life)     | Conway's game of life, each eCore is a cell      | YES | YES |
+[gdb-tutorial](gdb-tutorial)     | Epiphany multicore GDB debugging tutorial        | N/A | N/A |
 [heat_stencil](heat_stencil)     | 5-point star shaped heat equation stencil        | YES | YES |
 [john](john)                     | JohnTheRipper password cracker for Parallella    | YES | YES |
 [kinect_test](kinect_test)       | Kinect demo that uses Epiphany                   | ?   | ?  |
