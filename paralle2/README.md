@@ -12,8 +12,8 @@ This kind of problem would be a good candidate to run under the unused parts of 
 ***
 
 How to run the demo under a 16-core Parallella:
-./build.sh e2
-time ./run.sh e2
+./build.sh
+time ./run.sh
 
 Please check you use a 16-core Epiphany like mine: E16G301, a Kickstarter model with Zynq 7020 and a 'headless' configuration.
 If not the case, you may adapt the sources: src/e2.c and src/e_e2.c

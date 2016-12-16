@@ -24,13 +24,9 @@ case $(uname -p) in
 esac
 
 # Build HOST side application
-${CROSS_PREFIX}gcc -Ofast src/$1.c -o Debug/$1.elf ${EINCS} ${ELIBS} -le-hal -le-loader -lpthread
+${CROSS_PREFIX}gcc -Ofast src/e2.c -o Debug/e2.elf ${EINCS} ${ELIBS} -le-hal -le-loader -lpthread
 
 # Build DEVICE side program
 #for speed optimization replace $2... with -Ofast
 #e-gcc --help=optimizers gives you hints
-e-gcc -T ${ELDF} -Ofast $2 $3 $4 $5 $6 $7 $8 $9 src/e_$1.c -o Debug/e_$1.elf -le-lib
-
-# Convert ebinary to SREC file
-e-objcopy --srec-forceS3 --output-target srec Debug/e_$1.elf Debug/e_$1.srec
-
+e-gcc -T ${ELDF} -Ofast src/e_e2.c -o Debug/e_e2.elf -le-lib

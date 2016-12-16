@@ -16,15 +16,15 @@ void Epiphany_Boot(e_platform_t *epiphany) {
 }
 
 // GOAL: avoid copy paste errors ; this automation can only work with the associated build.sh&run.sh batches, facilitating maintenance. 
-//       Other said: automation process for the name of the SREC file
+//       Other said: automation process for the name of the ELF file
 // IN:   arg is argv[0], example: "something.elf"
-// OUT:  "e_something.srec"
-void Epiphany_Srec_Format(char *str, char *arg) {
+// OUT:  "e_something.elf"
+void Epiphany_Elf_Format(char *str, char *arg) {
   uint fn1=2, fn2=2;
 	str[0]='e'; str[1]='_';
 	while(arg[fn1] != '.') { str[fn2++]=arg[fn1++]; }
 	str[fn2]=0;
-	strcat(str, ".srec");
+	strcat(str, ".elf");
 }
 
 //#######################################
@@ -74,7 +74,7 @@ uint64_t Output_Print(Soutput out) {
 
 int main(int argc, char *argv[]){
   e_platform_t epiphany;// Epiphany platform configuration
-	char str_srec[64]; // Epiphany knows only "srec" format ; automation of the name of the loading application for Epiphany
+	char str_elf[64]; // Epiphany knows only "srec" format ; automation of the name of the loading application for Epiphany
   e_epiphany_t tdev[CORE_N];
   e_mem_t io;
   e_return_stat_t res;
@@ -110,7 +110,8 @@ const uc tbench[16][17]={
   printf("Eternity II running under Parallella :) \n\n\n");
 
 	Epiphany_Boot(&epiphany);
-	Epiphany_Srec_Format(str_srec, argv[0]);// automation process for the name of the SREC file -- facilitating maintenance 
+
+	Epiphany_Elf_Format(str_elf, argv[0]);// automation process for the name of the SREC file -- facilitating maintenance 
 
   //a safe way for passing data to eCore is thru the SDRAM ; let's do it for giving orders to the eCore, its input too
   e_alloc(&io, SHARED_RAM, sizeof(Sio));//<!> e_alloc(): NEVER, NEVER BEFORE e_init(NULL), i.e. Epiphany's boot <!>
@@ -159,7 +160,7 @@ const uc tbench[16][17]={
       e_open(&tdev[k], i, j, 1, 1); //open a single core workgroup, core position (i,j)
       e_reset_group(&tdev[k]);
       pf("Let's load the workgroup, eCore (%u,%u)...\n", i, j);
-      res=e_load(str_srec, &tdev[k], 0, 0, E_FALSE);
+      res=e_load(str_elf, &tdev[k], 0, 0, E_FALSE);
       if(res != E_OK) {
         printf("Error loading the Epiphany application, core (%u,%u)\n", i, j);
       }
