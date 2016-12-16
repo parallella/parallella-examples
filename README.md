@@ -26,13 +26,12 @@ NAME                             | CONTENT                                      
 [nbody_mpi](nbody_mpi)           | Nbody example using the Epiphany MPI             | NO 3  | NO 3 |
 [omp4-epiphany](omp4-epiphany)   | OpenMP4.x examples where Epiphany is a device    | YES | YES 5|
 [para-para](para-para)           | "hello world" apps in OpenMP, MPI and OpenCL     | YES | YES |
-[paralle2](paralle2)             | Pseudo Eternity II solver                        | YES | NO |
+[paralle2](paralle2)             | Pseudo Eternity II solver                        | YES | YES |
 [pi-machin-like](pi-machin-like) | Approximation of π using machin-like formula     | YES | YES |
 [riecoin](riecoin)               | Riecoin miner                                    | YES | NO? |
 [r-opencl](r-opencl)             | R with OpenCL running on Parallella              | ?   | ?  |
 [rpi-camera](rpi-camera)         | Raspberry pi camera module bounty project        | ?   | ?  |
 [slides](slides)                 | Creating slide decks from Markdown               | N/A | N/A |
-[sobel](sobel)                   | Sobel filter example                             | ?   | ?  |
 [vfft](vfft)                     | Very fast FFT for the Epiphany core              | YES | YES |
 [raymarch](raymarch)             | Raymarching OpenCL framework with examples       | YES | YES |
 
@@ -41,7 +40,7 @@ Footnotes:
 2: Requires special hardware  
 3: Requires COPRTHR MPI library compatible with ESDK 2016.3+  
 4: Requires Epiphany-IV  
-5: Except mandelbrot_omp  
+5: Except mandelbrot_omp, which requires 1  
 
 ## Contributing
 
