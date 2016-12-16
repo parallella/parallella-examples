@@ -3,7 +3,7 @@ Community created example Parallella projects.
 
 NAME                             | CONTENT                                          | Builds | Works |
 ---------------------------------|--------------------------------------------------|--------|-------|
-[actors_dct2d](actors_dct2d)     | Actor based 2D DCT                               | YES | YES? |
+[actors_idct2d](actors_idct2d)   | Actor based 2D inverse DCT                       | YES | YES? |
 [aobench](aobench)               | Ambient occlusion renderer                       | YES | YES |
 [blobluska](blobluska)           | Real-time ray tracing visual music generator     | YES | NO 1 |
 [dac-wavegen](dac-wavegen)       | Sine/sawtooth waveform generator using I2C DAC   | YES | MAYBE 2 |
