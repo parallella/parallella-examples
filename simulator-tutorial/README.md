@@ -39,7 +39,9 @@ $ cd domino
 $ CROSS_COMPILE= ./build.sh
 ```
 
-Run against simulator:
+### Simulating a Parallella-1K
+
+Use the parallella1k preset to simulate a Parallella board with a 1024 Epiphany-V chip
 
 ```
 $ e-sim --preset parallella1k --host ./run.sh
@@ -53,6 +55,36 @@ Message path:
 |▼—————————————————————————————◀
 |▶—————————————————————————————▼
 ▲——————————————————————————————◀
+```
+
+### Other presets
+
+The domino example is dynamic and will adopt to any size you give it.
+
+Simulating a Parallella-16:  
+```
+$ e-sim --preset parallella16 --host ./run.sh
+Got 16 messages
+Message path:
+○——▼
+⚫▼—◀
+|▶—▼
+▲——◀
+```
+
+Simulating a Parallella-64:  
+```
+$ e-sim --preset parallella64 --host ./run.sh
+Got 64 messages
+Message path:
+○——————▼
+⚫▼—————◀
+|▶—————▼
+|▼—————◀
+|▶—————▼
+|▼—————◀
+|▶—————▼
+▲——————◀
 ```
 
 ## Stand alone domino
