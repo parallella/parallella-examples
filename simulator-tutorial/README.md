@@ -18,7 +18,7 @@ Download the "-nocross" version
 
 Build:  
 ```
-$ cd helloworld
+$ cd hello-world
 $ CROSS_COMPILE= ./build.sh
 ```
 
