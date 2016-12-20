@@ -4,7 +4,8 @@ This tutorial gives a brief introduction on how to use the Epiphany multicore
 simulator. The simulator is included in Parabuntu 2016.11 and can be used to
 run basic programs on a Parallella board.
 
-For performance reasons we recommend to run the simulator on a x86_64 machine.
+For performance reasons we recommend to run the simulator on a x86_64 machine with.
+You can download ESDK 2016.11 from here:  
 https://github.com/adapteva/epiphany-sdk/releases/tag/esdk-2016.11
 
 ## Installing ESDK 2016.11 for testing the simulator
@@ -59,12 +60,13 @@ Message path:
 Example for Epiphany-V. 1024 cores. Epiphany only no host. Requires 5GB RAM.
 The simulator supports system calls (traps), so thinks like `printf()` work.
 
+Building:  
 ```
-$ cd domino
+$ cd domino-standalone
 $ CROSS_COMPILE= ./build.sh
 ```
 
-Run against simulator:
+Run against simulator:  
 
 ```
 $ e-sim --preset parallella1k --external-fetch ./domino
@@ -83,7 +85,7 @@ Message path:
 ## Epiphany examples
 
 You can run most of
-(epiphany-examples)[https://github.com/parallella/epiphany-examples] against
+[epiphany-examples](https://github.com/parallella/epiphany-examples) against
 `e-sim` in host mode. Examples that use slave DMA will not work (not
 implemented in simulator), and a few examples that rely on implicit timing
 might fail.
