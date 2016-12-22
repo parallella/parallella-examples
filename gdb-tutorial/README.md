@@ -9,6 +9,8 @@ Start e-server in one terminal.
 
 ```
 $ e-server --multiprocess
+Using the HDF file: /opt/adapteva/esdk/bsps/current/parallella_E16G3_1GB.xml
+Listening for RSP on port 51000
 ```
 
 # Start a program
@@ -102,15 +104,15 @@ Show status for all threads:
 ```
 
 The `*` in front of thread id 1 indicates the current thread.  
-
+  
 Ah, all theeads are stopped. This is because we started the host program with
 `EHAL_GDBSERVER=yes`.  That's why eprime reports zero primes/s. You'll notice
 that all threads are stopped in `_start()`. This is the low level program entry
 point, which is called even before `main()`. So it's possible to set a
 breakpoint on any early function call in the epiphany program, even `main()`.
-
-
-Now, let's continue the *current thread* and see what happens in the eprime
+  
+  
+Let's continue the *current thread* and see what happens in the eprime
 terminal.
 
 ```
@@ -144,7 +146,7 @@ Continuing.
 ```
 
 Now it's possible to issue commands to gdb while the thread is running in the
-background.  Let's verify that the thread is really running.
+background. Let's verify that the thread is really running.
 
 ```
 (gdb) info threads
