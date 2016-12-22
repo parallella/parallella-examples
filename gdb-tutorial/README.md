@@ -1,7 +1,7 @@
 # e-server
 
-(Work in progress)  
 Epiphany GDB multicore debugging tutorial.
+This tutorial assumes basic knowledge of GDB.
 
 # Start e-server
 
@@ -14,12 +14,12 @@ $ e-server --multiprocess
 # Start a program
 
 In a second terminal start a host program:  
-Let's use e-prime from epiphany-examples for this tutorial.  
+Let's use eprime from parallella-examples for this tutorial.  
   
-Build e-prime:
+Build eprime:
 
 ```
-$ cd ~/epiphany-examples/apps/e-prime
+$ cd ~/parallella-examples/apps/eprime
 $ git pull
 $ ./build.sh
 ```
@@ -32,7 +32,7 @@ a program from the beginning.
 $ EHAL_GDBSERVER=yes ./run.sh
 ```
 
-You will notice that e-prime reports 0 primes factored / s. This is because the
+You will notice that eprime reports 0 primes factored / s. This is because the
 epiphany cores are not running yet, because of `EHAL_GDBSERVER`. The next step
 is to attach with the e-gdb client and start debugging.
 
@@ -42,8 +42,9 @@ In a third terminal, start `e-gdb`. You can either do this on your parallella
 or on your local computer if you have esdk-2016.11.x86_64 installed.  
 
 ```
-$ cd ~/epiphany-examples/apps/e-prime
+$ cd ~/epiphany-examples/apps/eprime
 $ epiphany-elf-gdb e_prime.elf
+Reading symbols from e_prime.elf...done.
 ```
 
 Enable
@@ -61,47 +62,76 @@ Connect to the e-server. You'll need to adjust `localhost` to
 
 ```
 (gdb) target extended-remote localhost:51000
+Remote debugging using localhost:51000
 ```
 
 List processes:
 
 ```
 (gdb) info os processes
+pid        user       command    cores
+1          root                  0000,0001,0002,0003,0100,0101,0102,0103,0200,0201,0202,0203,0300,0301,0302,0303
 ```
 
-Attach to the default process (workgroup). The default process contains all
+The default process contains all
 cores that have not yet been manually assigned to a workgroup. To create a new
 workgroup, use the `monitor workgroup` command. The syntax is `monitor
 workgroup [ROW0] [COL0] [ROWS] [COLS]`.
 
+Attach to the default process (workgroup).
 ```
 (gdb) attach 1
+[New Thread 1.101]
+...
+[New Thread 1.404]
+0x00000000 in _start ()
+...
+Thread 16 stopped.
+0x00000000 in _start ()
 ```
 
 Show status for all threads:
 
 ```
 (gdb) info threads
+  Id   Target Id         Frame
+* 1    Thread 1.101 (Core: 0000: halted, interruptible) 0x00000000 in _start ()
+  2    Thread 1.102 (Core: 0001: halted, interruptible) 0x00000000 in _start ()
+...
+  16   Thread 1.404 (Core: 0303: halted, interruptible) 0x00000000 in _start ()
 ```
 
-Ah, all threads are stopped. This is because we started the host program with
-`EHAL_GDBSERVER=yes`.  That's why e-prime reports zero primes/s. You'll notice
+The `*` in front of thread id 1 indicates the current thread.  
+
+Ah, all theeads are stopped. This is because we started the host program with
+`EHAL_GDBSERVER=yes`.  That's why eprime reports zero primes/s. You'll notice
 that all threads are stopped in `_start()`. This is the low level program entry
 point, which is called even before `main()`. So it's possible to set a
 breakpoint on any early function call in the epiphany program, even `main()`.
 
 
-Now, let's continue the *current thread* and see what happens in the e-prime
+Now, let's continue the *current thread* and see what happens in the eprime
 terminal.
 
 ```
 (gdb) continue
+Continuing.
 ```
 
-Finally we can see some primes being generated in the e-prime terminal.
+Now we can see some primes being generated in the eprime terminal.
+```
+Core (00,00) Tests: 818032 Primes: 102391 Current: 26177027 SQ: 5116
+...
+Total tests: 1298458 Found primes: 157629
+Iterations/sec: 12840.000000
+```
+
+Go back to the gdb terminal and stop the thread by pressing Ctrl-C.
 
 ```
-Press Ctrl-C to stop the thread
+^C
+Thread 1 stopped.
+0x00002210 in __umodsi3 ()
 ```
 
 It's also possible to continue a thread in the background. Append `&` to
@@ -109,6 +139,8 @@ continue a thread asynchronously.
 
 ```
 (gdb) continue &
+Continuing.
+(gdb)
 ```
 
 Now it's possible to issue commands to gdb while the thread is running in the
@@ -116,46 +148,92 @@ background.  Let's verify that the thread is really running.
 
 ```
 (gdb) info threads
+* 1    Thread 1.101 (Core: 0000: running, interruptible) (running)
+  2    Thread 1.102 (Core: 0001: halted, interruptible) 0x00000000 in _start ()
+...
+  16   Thread 1.404 (Core: 0303: halted, interruptible) 0x00000000 in _start ()
 ```
 
 Use the `interrupt` command to stop a thread that was started asynchronously:
 
 ```
 (gdb) interrupt
+Thread 1 stopped.
+0x0000221c in __umodsi3 ()
 ```
 
 Verify that the thread is stopped:
 
 ```
-(gdb) info threads
+(gdb) info thread 1
+  Id   Target Id         Frame
+* 1    Thread 1.101 (Core: 0000: halted, interruptible) 0x0000221c in __umodsi3 ()
 ```
 
 The `-a` flag is a shortcut to continue all threads:
 
 ```
+(gdb) continue -a
+Continuing.
+```
+In the eprime terminal you will now see that all cores are generating primes.  
+  
+Press Ctrl-C to get back to the gdb prompt.  
+  
+Similarly, appending an `&` continues the threads in the background.
+
+```
 (gdb) continue -a &
+Continuing.
+(gdb)
 ```
 
-Similarly `-a` can also be used to interrupt all threads:
+Use `info threads` to verify that the threads are running.
+```
+(gdb) info threads
+  Id   Target Id         Frame 
+* 1    Thread 1.101 (Core: 0000: running, interruptible) (running)
+  2    Thread 1.102 (Core: 0001: running, interruptible) (running)
+...
+```
+
+To stop all threads, use `interrupt -a`:
 
 ```
 (gdb) interrupt -a
+Thread 1 stopped.
+28                      if(number % i == 0)
+Thread 2 stopped.
+...
 ```
 
 Set a breakpoint (will be applied to *all* threads):
 
 ```
 (gdb) break is_prime
+Breakpoint 1 at 0x2048: file src/isprime.c, line 23.
+(gdb)
 ```
 
 Continue all threads asynchronously:
 
 ```
 (gdb) continue -a &
+Continuing.
+(gdb)
 ```
 
-Finally when you're done debugging, detach from process:
-
+All threads are running in the background. When a breakpoint is hit, GDB will
+report it:
+```
+Thread 2 hit Breakpoint 1, is_prime (number=608719203) at src/isprime.c:23
+23      {
+...
+```
+  
+Finally when done debugging, detach from the process. A detach will resume
+all threads:
 ```
 (gdb) detach
+Detaching from program: e_prime.elf, process 1
 ```
