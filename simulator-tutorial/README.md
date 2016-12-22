@@ -205,8 +205,10 @@ Avoid this:
 Instead:
 
 `shared.h`:
+```c
 #define FLAG_OFFSET 0
 #define FLAG_ADDR 0x8e000000
+```
 
 `main.c`:
 ```c
