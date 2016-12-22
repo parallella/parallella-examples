@@ -42,7 +42,7 @@ In a third terminal, start `e-gdb`. You can either do this on your parallella
 or on your local computer if you have esdk-2016.11.x86_64 installed.  
 
 ```
-$ cd ~/epiphany-examples/apps/eprime
+$ cd ~/parallella-examples/apps/eprime
 $ epiphany-elf-gdb e_prime.elf
 Reading symbols from e_prime.elf...done.
 ```
