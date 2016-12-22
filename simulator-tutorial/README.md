@@ -151,7 +151,7 @@ The `--host` flag instructs e-sim to. Use `--host` to run e-hal or PAL programs.
 
 
 ```sh
-$ cd ~/epiphany-examples/apps/hello-world
+$ cd hello-world
 $ CROSS_COMPILE= ./build.sh
 $ e-sim -p parallella16 --host ./run.sh
   0: Message from eCore 0x8ca ( 3, 2): "Hello World from core 0x8ca!"
