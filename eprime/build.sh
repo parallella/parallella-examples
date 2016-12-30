@@ -24,8 +24,7 @@ case $(uname -p) in
 esac
 
 # Build HOST side application
-${CROSS_PREFIX}gcc src/prime.c -o prime.elf -I ${EINCS} -L ${ELIBS} -le-hal -le-loader
+${CROSS_PREFIX}gcc -g src/prime.c -o prime.elf -I ${EINCS} -L ${ELIBS} -le-hal -le-loader
 
 # Build DEVICE side program
-e-gcc -O2 -T ${ELDF} src/e_prime.c src/isprime.c -o e_prime.elf -le-lib -lm
-
+e-gcc -g -O2 -T ${ELDF} src/e_prime.c src/isprime.c -o e_prime.elf -le-lib -lm
