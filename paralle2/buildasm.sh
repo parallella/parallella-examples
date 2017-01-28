@@ -37,11 +37,4 @@ ${CROSS_PREFIX}gcc src/e2g.c -o bin/e2g.elf -I ${EINCS} -L ${ELIBS} -le-hal -le-
 #e-gcc 5.4 makes poor use of the option -mfp-mode=int
 #  the option -mfp-iarith slows DOWN my program -- more than 20 % :/ 
 
- e-gcc -Ofast -T ${ELDF} -mfp-mode=int -mshort-calls -m1reg-r63 src/e_e2g.c -o bin/e_e2g.elf -le-lib
-
-# trick to get the spare room usage: epiphany-elf-size your_program.elf ; with internal.ldf the value of 'dec' cannot be beyond 32767
-#
-#parallella@parallella:~/parallella-examples/tmp$ epiphany-elf-size bin/e_e2g.elf 
-#   text	   data	    bss	    dec	    hex	filename
-#  18730	   2148	   2808	  23686	   5c86	bin/e_e2g.elf
-#
+ e-gcc -Ofast -T ${ELDF} -mfp-mode=int -mshort-calls -m1reg-r63 -mfp-iarith src/e_e2g.c -S -le-lib

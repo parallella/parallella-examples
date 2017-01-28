@@ -1,22 +1,45 @@
-Pseudo Eternity II solver under Parallella !
+# A 10x10 Eternity II solver
 
-Demo with a 10x10 subproblem with 16 cores running in parallel.
+## Build and Run
 
-A single eCore reaches 3 Mn/s, that's a tremendous 48 Mn/s for 4.7 W !
-My high-end computer reaches 130 Mn/s with a single core and heavy optimizations, but it consumes 72 W.
+#data BEFORE ; will create bin/bench.bin - a bunch of benchs
 
-This is only the beginning with a basic algorithm, I'm confident we can reach 80 Mn/s with a single 16-core Parallella :D
-For your information a single ARM core with the same basic algorithm reaches 6 Mn/s.
-This kind of problem would be a good candidate to run under the unused parts of the FPGA... that's another story. For experts.
+ ./build_data.sh
+ ./run_data.sh
 
-***
+ ./build.sh
+ ./run.sh value
 
-How to run the demo under a 16-core Parallella:
-./build.sh e2
-time ./run.sh e2
+ Wanting an assembly output ? Use ./buildasm.sh
+ Cross compiling for an x86_64 platform ? You can use ./x86*.sh  
+ 
+## Benchmarks
 
-Please check you use a 16-core Epiphany like mine: E16G301, a Kickstarter model with Zynq 7020 and a 'headless' configuration.
-If not the case, you may adapt the sources: src/e2.c and src/e_e2.c
-This kind of problem is a perfect candidate for clusters too.
-You can easily tweak this code if you have a 64-core Parallella (if you don't know how to code it, just sell it to me lol)
+All programs are full C, sometimes with some assembly.
+Mn/s/W = Million nodes per second per Watt
+
+
+GPU OpenCL                      : not even a tenth of a modest x86 core with a Radeon 5770 graphics card. The numerous branches are a dead end, not to talk about the watts.
+Parallella, one ARM A9 core     :    6 Mn/s ;   3.0 W ;  2    Mn/s/W
+My high-end computer, one core  :  166 Mn/s ;  72.0 W ;  2.3  Mn/s/W ; x86_64, Fedora Core 23, i7 5820k
+Raspberry Pi 3                  :                        8-10 Mn/s/W iirc ; A53, 4-core, 1.2 GHz
+My high-end computer, 12 threads: 1470 Mn/s ; 140.0 W ; 10.0  Mn/s/W
+Odroid XU4                      :  245 Mn/s ;  15.7 W ; 15.6 Mn/s/W ; 8-core ; deeply optimized, not much margin
+Parallella 16-core Epiphany     :  103 Mn/s ;   5.0 W ; 20.6 Mn/s/W ; remove the Ethernet cable to earn 0.6 W due to ssh with the headless Parabuntu distro
+
+
+So...
+To my knowledge, Parallella is today the most energy-efficient platform for this highly recursive task...
+although it does *not* use any float !
+
+Eagerly waiting the 1024-core Epiphany V...
+
+## Author
+
+DonQuichotteComputers at gmail dot com
+2017
+
+## License
+
+BSD-3 clause.
 
