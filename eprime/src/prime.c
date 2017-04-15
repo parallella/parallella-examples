@@ -81,7 +81,7 @@ int main(int argc, char *argv[])
 	for (row=0; row < linecount; row++)
 		fputs("\n", stderr);
 
-	while(1)
+	while(sum < max_tests * 16)
 	{
 		sum = 0;
 		total_primes = 0;
