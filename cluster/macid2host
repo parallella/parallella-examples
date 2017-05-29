@@ -1,0 +1,38 @@
+#!/usr/bin/perl
+#use strict
+use Getopt::Long;
+my $Usage =<<EOF;
+#####################################################################
+#Function  : Finds hostname from macid
+#Copyright : Copyright (C) Andreas Olofsson
+#License   : MIT
+#####################################################################
+#Usage      : macid2host -i   <macid>
+#####################################################################
+EOF
+my $result=GetOptions('i:s');
+if((!defined $opt_i)){
+    print "$Usage";               
+    exit;
+}   
+
+############################## 
+### Map MACID to Hostnames ###
+##############################
+@hosts=`arp | grep host | grep ether`;
+foreach $line (@hosts){
+    @list=split(' ', $line);
+    $macid=$list[2];
+    $hash{$macid}=$list[0];
+}
+
+############################## 
+### Map MACID to Hostnames ###
+##############################
+$macid=$opt_i;
+if($macid=~/^\w\w\:\w\w$/){
+  $macid="04:4f:8b:00:".$macid;
+}	
+
+$hostname= $hash{$macid};
+print "$macid $hostname\n";
