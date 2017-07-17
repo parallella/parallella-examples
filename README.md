@@ -32,7 +32,7 @@ NAME                             | CONTENT                                      
 [riecoin](riecoin)               | Riecoin miner                                    |          |
 [r-opencl](r-opencl)             | R with OpenCL running on Parallella              |          |
 [rpi-camera](rpi-camera)         | Raspberry pi camera module bounty project        |          |
-[simulator-tutorial](simulatortutorial) | Epiphany multicore simulator tutorial     | YES      |
+[simulator-tutorial](simulator-tutorial) | Epiphany multicore simulator tutorial    | YES      |
 [slides](slides)                 | Creating slide decks from Markdown               | YES      |
 [vfft](vfft)                     | Very fast FFT for the Epiphany core              | YES      |
 [raymarch](raymarch)             | Raymarching OpenCL framework with examples       | YES      |
